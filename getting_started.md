@@ -24,13 +24,14 @@ Now that you have finished steps 1-3, report into Raj or Wolfgang. New steps wil
 
 2. Argonne Collaborator Account
 Skip this if you already have a Argonne Domain or Argonne Collaborator account.
+
 https://apps.anl.gov/registration/collaborators
 
 3. LCRC Account
 Needed to get access to our data store ( https://www.lcrc.anl.gov/for-users/getting-started/getting-an-account/ )
 
-  a) Request membership to the `waggle` project by clicking "Join Project" on the right and then searching for waggle. Also add yourself to the `lcrc` project by doing the same thing. You should automatically be added to `lcrc`, but you will need to contact Raj or Pete when you request access to waggle, since they will need to accept the request.
-  b) Add your public SSH key to the LCRC account.
+  1. Request membership to the `waggle` project by clicking "Join Project" on the right and then searching for waggle. Also add yourself to the `lcrc` project by doing the same thing. You should automatically be added to `lcrc`, but you will need to contact Raj or Pete when you request access to waggle, since they will need to accept the request.
+  2. Add your public SSH key to the LCRC account.
 
 
 4. JLSE account (Edge Testbed)
@@ -39,10 +40,10 @@ Sage software and hardware will be accessible this summer within an "Edge Testbe
 
 https://accounts.jlse.anl.gov/
 
-All of the above will ask for a few details -
+All of the above will ask for a few details:
 
-Sponsor Email: `ozorob@...`
-Reason for the Account: `Write AI@Edge code for Waggle nodes.`
+- Sponsor Email: `ozorob@...`
+- Reason for the Account: `Write AI@Edge code for Waggle nodes.`
 
 Please feel free to reach out to Omar or Rajesh if you have any further questions.
 
