@@ -17,35 +17,51 @@ Now that you have finished steps 1-3, report into Raj or Wolfgang. New steps wil
 
 ## Argonne Server Access Guide
 
-### Account Setup
+### Account(s) Setup
 
 1. Generate an SSH public key. This must be the form of authentication that you use to SSH into any Argonne server. There is a good guide to generating a key [here](https://kb.iu.edu/d/aews).
-2. Make an MCS account at https://accounts.mcs.anl.gov/. Under "reason for request", write what you will be using the server to do and specifically mention that you are working with Raj and Pete for the Waggle project. Enter a security question and finish up your new account request. (Note: eventually you will need to add your SSH public key this account, but in the request stage, I do not believe this is possible. Come back to it later.)
-3. While you are waiting for your MCS account to be activated, create an LCRC account. This is the account that you will use to access services like Bebop (if you are assigned to that task). You can create one here: https://accounts.lcrc.anl.gov.
-   1. Request membership to the `waggle` project by clicking "Join Project" on the right and then searching for waggle. Also add yourself to the `lcrc` project by doing the same thing. You should automatically be added to `lcrc`, but you will need to contact Raj or Pete when you request access to waggle, since they will need to accept the request.
-   2. Add your public SSH key to the LCRC account. This should be the same one as you add to MCS.
-4. Add your public SSH key to MCS when your account has been activated.
+
+
+2. Argonne Collaborator Account
+Skip this if you already have a Argonne Domain or Argonne Collaborator account.
+https://apps.anl.gov/registration/collaborators
+
+3. LCRC Account
+Needed to get access to our data store ( https://www.lcrc.anl.gov/for-users/getting-started/getting-an-account/ )
+
+  a) Request membership to the `waggle` project by clicking "Join Project" on the right and then searching for waggle. Also add yourself to the `lcrc` project by doing the same thing. You should automatically be added to `lcrc`, but you will need to contact Raj or Pete when you request access to waggle, since they will need to accept the request.
+  b) Add your public SSH key to the LCRC account.
+
+
+4. JLSE account (Edge Testbed)
+
+Sage software and hardware will be accessible this summer within an "Edge Testbed", so students and scientists can write AI@Edge code for Sage nodes deployed in the field. Initially, the platforms will be open in "friends and family" mode. We hope to open it up more broadly after we gain some experience with running the Edge Testbed. The initial configuration of the Edge Testbed will be hosted at Argonne through JLSE (thanks Mike!!). Developers and students should sign up for accounts if they do not already have one. These processes take time (particularly for students and mentors who are non-US citizens or PR), so please get started now.
+
+https://accounts.jlse.anl.gov/
+
+All of the above will ask for a few details -
+
+Sponsor Email: `ozorob@...`
+Reason for the Account: `Write AI@Edge code for Waggle nodes.`
+
+Please feel free to reach out to Omar or Rajesh if you have any further questions.
+
+
 
 ### SSH Setup
 
-5. Add the configuration file `config` to your home `.ssh` folder on the machine that you will be using to login from. Paste this into that file:
+5. Add the following configuration to the file `~/.ssh/config` in you home folder on the machine that you will be using to login from: (It the file does not exist, create it.)
 
-   ```
+   ```text
    Host lcrc
-           ProxyCommand ssh -q mcs nc -q0 bebop.lcrc.anl.gov 22
-           User USERNAME
-   Host mcs
-           hostname login.mcs.anl.gov
-           User USERNAME
-           port 22
+      Hostname bebop.lcrc.anl.gov
+      User USERNAME
    ```
 
-   Replace USERNAME with your LCRC and MCS usernames (ideally should be the same). This defines two hosts, lcrc and mcs. MCS is the outward-facing host that you should be able to access through a simple SSH connection. LCRC/Bebop is an internal host, so that is why we need to use MCS as a proxy to get to it.
+   Replace `USERNAME` with your LCRC username. This defines the host `lcrc`.
 
 6. Place your RSA private key (the one that came with your public key) into the `~/.ssh/rsa_id` file. This is where SSH will automatically pull your key from when you login.
 
-7. Run the command `ssh mcs` to test your ability to log in to MCS. IMPORTANT: If it asks you for a password in a prompt that looks like `Password:`, you have done something wrong (likely you did not setup an `id_rsa` file correctly). The server should only need your private key, not an additional password. If you try your MCS or Argonne password, it will reject it, and in my case, block me from very essential Argonne services.
+7. Run the command `ssh lcrc` to test your ability to log in to Bebop. IMPORTANT: If it asks you for a password in a prompt that looks like `Password:`, you have done something wrong (likely you did not setup an `id_rsa` file correctly). The server should only need your private key, not an additional password. If you try your Argonne password, it will reject it, and in my case, block me from very essential Argonne services.
 
-8. Run the command `ssh lcrc` to test your ability to login to Bebop. This should tunnel your connection through MCS and allow you to access Bebop.
-
-9. In the Bebop SSH terminal, see if you can access the folder `/lcrc/project/waggle`. If you cannot, Raj or Pete have not accepted your request to join the waggle project on LCRC.
+8. In the Bebop SSH terminal, see if you can access the folder `/lcrc/project/waggle`. If you cannot, Raj or Pete have not accepted your request to join the waggle project on LCRC.
