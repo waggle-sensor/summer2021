@@ -15,28 +15,28 @@ Now that you have finished steps 1-3, report into Raj or Wolfgang. New steps wil
 
 
 
-## Part 5: Argonne Server Access Guide
+## Part 5:  Account(s) Setup
 
-### Account(s) Setup
 
-1. Generate an SSH public key.  
+### 1. Generate an SSH public key 
 This must be the form of authentication that you use to SSH into any Argonne server. There is a good guide to generating a key [here](https://kb.iu.edu/d/aews).
 
 
-2. Argonne Collaborator Account  
+### 2. Argonne Collaborator Account  
 
 Skip this if you already have a Argonne Domain or Argonne Collaborator account.
 
 https://apps.anl.gov/registration/collaborators
 
-3. LCRC Account  
+### 3. LCRC Account  
+
 Needed to get access to our data store ( https://www.lcrc.anl.gov/for-users/getting-started/getting-an-account/ )
 
   1. Request membership to the `waggle` project by clicking "Join Project" on the right and then searching for waggle. Also add yourself to the `lcrc` project by doing the same thing. You should automatically be added to `lcrc`, but you will need to contact Raj or Pete when you request access to waggle, since they will need to accept the request.
   2. Add your public SSH key to the LCRC account.
 
 
-4. JLSE account (Edge Testbed)  
+### 4. JLSE account (Edge Testbed)  
 Sage software and hardware will be accessible this summer within an "Edge Testbed", so students and scientists can write AI@Edge code for Sage nodes deployed in the field. Initially, the platforms will be open in "friends and family" mode. We hope to open it up more broadly after we gain some experience with running the Edge Testbed. The initial configuration of the Edge Testbed will be hosted at Argonne through JLSE (thanks Mike!!). Developers and students should sign up for accounts if they do not already have one. These processes take time (particularly for students and mentors who are non-US citizens or PR), so please get started now.
 
 https://accounts.jlse.anl.gov/
@@ -50,9 +50,9 @@ Please feel free to reach out to Omar or Rajesh if you have any further question
 
 
 
-### SSH Setup
+## Part 6: SSH Setup
 
-1. .ssh/config  
+### 1. Configure ./.ssh/config  
 
 Add the following configuration to the file `~/.ssh/config` in you home folder on the machine that you will be using to login from: (It the file does not exist, create it.)
 
@@ -64,14 +64,14 @@ Add the following configuration to the file `~/.ssh/config` in you home folder o
 
    Replace `USERNAME` with your LCRC username. This defines the host `lcrc`.
 
-2. .ssh/rsa_id  
+### 2. Create .ssh/rsa_id  
 
 Place your RSA private key (the one that came with your public key) into the `~/.ssh/rsa_id` file. This is where SSH will automatically pull your key from when you login.
 
-3. test ssh  
+### 3. Test ssh  
 
 Run the command `ssh lcrc` to test your ability to log in to Bebop. IMPORTANT: If it asks you for a password in a prompt that looks like `Password:`, you have done something wrong (likely you did not setup an `id_rsa` file correctly). The server should only need your private key, not an additional password. If you try your Argonne password, it will reject it, and in my case, block me from very essential Argonne services.
 
-4. test waggle folder access  
+### 4. Test waggle folder access  
 
 In the Bebop SSH terminal, see if you can access the folder `/lcrc/project/waggle`. If you cannot, Raj or Pete have not accepted your request to join the waggle project on LCRC.
