@@ -10,12 +10,8 @@ Upon overviewing the repository, the next step is to go over the Agile Scrum fra
 ## Part 3: Docker
 For the SAGE project, the application [Docker](https://www.docker.com/) is being used extensively. Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Take some time to learn the fundamentals of Docker. Here's a link to a short and friendly tutorial: https://www.youtube.com/watch?v=7S73WERRqO4. Feel free to watch or use any resources to learn about Docker (ex. [https://docs.docker.com/](https://docs.docker.com/)). You will want to have [Docker Desktop](https://www.docker.com/get-started) installed to your computer.
 
-## Part 4: ...
-Now that you have finished steps 1-3, report into Raj or Wolfgang. New steps will be added as we figure out what's going on :)
 
-
-
-## Part 5:  Account(s) Setup
+## Part 4:  Account(s) Setup
 
 
 ### 1. Generate an SSH public key 
@@ -50,7 +46,7 @@ Please feel free to reach out to Omar or Rajesh if you have any further question
 
 
 
-## Part 6: SSH Setup
+## Part 5: SSH Setup
 
 ### 1. Configure ./.ssh/config  
 
