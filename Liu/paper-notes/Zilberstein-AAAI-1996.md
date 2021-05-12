@@ -14,10 +14,10 @@ Author: Shlomo Zilberstein
  - **specificity**: a metric of the level of detail of the result
 
 #### Desired Properties of Anytime Algorithms
- - 1. **measurable quality**: The quality of an approximate result can be determined precisely.
- - 2. **recognizable quality**: The quality of an approximate result can easily be determined at run time (that is, within a constant time).
- - 3. **monotonicity**: The quality of the result is a nondecreasing function of time and input quality.
- - 4. **consistency**: The quality of the result is correlated with computation time and input quality.
- - 5. **diminishing returns**: The improvement in solution quality is larger at the early stages of the computation, and it diminishes over time.
- - 6. **interruptibility**: The algorithm can be stopped at any time and provide some answer.
- - 7. **preemptability**: The algorithm can be suspended and resumed with minimal overhead.
+ - **measurable quality**: The quality of an approximate result can be determined precisely.
+ - **recognizable quality**: The quality of an approximate result can easily be determined at run time (that is, within a constant time).
+ - **monotonicity**: The quality of the result is a nondecreasing function of time and input quality.
+ - **consistency**: The quality of the result is correlated with computation time and input quality.
+ - **diminishing returns**: The improvement in solution quality is larger at the early stages of the computation, and it diminishes over time.
+ - **interruptibility**: The algorithm can be stopped at any time and provide some answer.
+ - **preemptability**: The algorithm can be suspended and resumed with minimal overhead.
