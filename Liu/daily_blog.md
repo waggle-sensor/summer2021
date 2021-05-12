@@ -12,4 +12,8 @@
 ### May 11, 2020
 #### Work Done:
  - Set up account access to LCRC and JLSE 
- - Pytorch tutorials
+ - Pytorch tutorial
+ - Read papers on anytime DNN
+ - Training anytime NN provided from "Anytime Neural Prediction via Slicing Networks Vertically"
+
+![image](images/anytime-training.jpg)
