@@ -14,6 +14,7 @@
  - Set up account access to LCRC and JLSE 
  - Pytorch tutorial
  - Read papers on anytime DNN
- - Training anytime NN provided from "Anytime Neural Prediction via Slicing Networks Vertically"
+ - Training anytime NN provided from "Anytime Neural Prediction via Slicing Networks Vertically" 
 
+Github: https://github.com/hankook/IResNeXt
 ![image](images/anytime-training.jpg)
