@@ -17,4 +17,13 @@
  - Training anytime NN provided from "Anytime Neural Prediction via Slicing Networks Vertically" 
 
 Github: https://github.com/hankook/IResNeXt
-![image](images/anytime-training.jpg)
+<img src="images/anytime-training.jpg" width="200">
+
+### May 12, 2020
+#### Work Done:
+ - Read papers on anytime DNN ([Zilberstein-AAAI-1996](../Liu/paper-notes/Zilberstein-AAAI-1996.md), [Dietterich-MCS-2000](paper-notes/Dietterich-MCS-2000.md), and [Lee-Arxiv-2018](paper-notes/Lee-Arxiv-2018.md))
+ - Get anytime NN models for CIFAR10 and CIFAR100 provided from "Anytime Neural Prediction via Slicing Networks Vertically" 
+
+CIFAR10:             |  CIFAR100:
+:-------------------------:|:-------------------------:
+![](images/cifar10.png)  |  ![](images/cifar100.png)
