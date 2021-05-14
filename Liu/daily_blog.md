@@ -17,6 +17,7 @@
  - Training anytime NN provided from "Anytime Neural Prediction via Slicing Networks Vertically" 
 
 Github: https://github.com/hankook/IResNeXt
+
 <img src="images/anytime-training.jpg" width="200">
 
 ### May 12, 2020
