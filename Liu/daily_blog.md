@@ -27,3 +27,9 @@ Github: https://github.com/hankook/IResNeXt
 CIFAR10:             |  CIFAR100:
 :-------------------------:|:-------------------------:
 ![](images/cifar10.png)  |  ![](images/cifar100.png)
+
+
+### May 13, 2020
+#### Work Done:
+ - Read papers on anytime DNN ([Dietterich-MCS-2000](paper-notes/Dietterich-MCS-2000.md), and [Lee-Arxiv-2018](paper-notes/Lee-Arxiv-2018.md))
+ - Implement the code from BranchyNet (https://github.com/kunglab/branchynet) and Distributed DNN (https://github.com/kunglab/ddnn).
