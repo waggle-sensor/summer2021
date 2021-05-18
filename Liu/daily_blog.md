@@ -117,10 +117,17 @@ stdout/stderr:
  - Walk through Pytorch tutorials
  - Read papers on anytime DNN ([BranchNet-ICPP-2016](paper-notes/BranchNet-ICPP-2016.md), and [DistributedDNN-ICDCS-2017](paper-notes/DistributedDNN-ICDCS-2017.md))
  - Work through the [Neural Networks and Deep Learning book's](http://neuralnetworksanddeeplearning.com/) chapter 2 and chapter 3
-   - stochastic gredient decent
-   - backpropogation's 
+   - how stochastic gredient decent works
+   - backpropogation's prove
+   - Implementation codes using SGD and backpropogation
 
 #### Questions and Thoughs for Anytime DNN:
+<<<<<<< HEAD
  - Motivation of Anytime DNN: Compared with research activities in building more powerful hardware/accelerators and architectures to speed up the DNN’s inference time, anytime DNN seems to be less competitive. The usage of it seems to be limited to **resource-constraint scenarios** and there is **no penalty for performance degradation**.
  - Contradictions in building anytime DNN: According to Zilberstein’s paper (AAAI-1996), I think one of the core part of anytime algorithm is to set up the relationship between time/resources and results qualities, statistically or theoretically. On the other hand, as a black-box based approach, it is hard to explain how DNN learns, especially **the impact of intermediate results from sub layers**, which makes it hard to set up this kind of relationship between time/resources and results qualities for DNN. 
  - Decompose with applications and dataset: Customized designs for specific application and dataset to make it possible to be anytime is feasible. **The real challenge is to propose a general approach which decomposes with applications and datasets**.
+=======
+ - Motivation of Anytime DNN: Compared with research activities in building more powerful hardware/accelerators and architectures to speed up the DNN’s inference time, anytime DNN seems to be less competitive. The usage of it seems to be limited to resource-constraint scenarios and there is no penalty for performance degradation.
+ - Contradictions in building anytime DNN: According to Zilberstein’s paper (AAAI-1996), I think one of the core part of anytime algorithm is to set up the relationship between time/resources and results qualities, statistically or theoretically. On the other hand, as a black-box based approach, it is hard to explain how DNN learns, especially the impact of intermediate results from sub layers, which makes it hard to set up this kind of relationship between time/resources and results qualities for DNN. 
+ - Decompose with applications and dataset: Customized designs for specific application and dataset to make it possible to be anytime is feasible. The real challenge is to propose a general approach which decomposes with applications and datasets.
+>>>>>>> f50979bf5be5f632733f6114aa7fe0c81c0fa5f5
