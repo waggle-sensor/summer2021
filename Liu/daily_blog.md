@@ -117,8 +117,9 @@ stdout/stderr:
  - Walk through Pytorch tutorials
  - Read papers on anytime DNN ([BranchNet-ICPP-2016](paper-notes/BranchNet-ICPP-2016.md), and [DistributedDNN-ICDCS-2017](paper-notes/DistributedDNN-ICDCS-2017.md))
  - Work through the [Neural Networks and Deep Learning book's](http://neuralnetworksanddeeplearning.com/) chapter 2 and chapter 3
-   - stochastic gredient decent
-   - backpropogation's 
+   - how stochastic gredient decent works
+   - backpropogation's prove
+   - Implementation codes using SGD and backpropogation
 
 #### Questions and Thoughs for Anytime DNN:
  - Motivation of Anytime DNN: Compared with research activities in building more powerful hardware/accelerators and architectures to speed up the DNN’s inference time, anytime DNN seems to be less competitive. The usage of it seems to be limited to resource-constraint scenarios and there is no penalty for performance degradation.
