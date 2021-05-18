@@ -39,6 +39,23 @@
 -----------------
 
 
-### Tuesday, May 18
+### Tuesday, 5/18 (7 Hours worked)
+
+**Some more info on fault tolerance**
+
+*Running in lockstep:* Performing the same set of actions/load twice in parallel. If one fails, there is no halting and the other load can fill in. This is accomplished by just copying everything required to run the load- even virtual components like memory or CPU cores. 
+
+*Pre-emptive monitoring:* Monitors the state of the CPU and memory and compares it against some arbitary set of criteria(usually somewhat defined by the user). 
+
+**Today's non-technological work:**
+* Met with Joe and Wolfgang to discuss general fault tolerance practices(see notes from monday). 
+* Set up ANL computer with proper SSH keys, can now access lcrc and github 
+* Had first scrum
+* Looked over SAGE software provisioning doc
+* Ran [docker hello-world](https://hub.docker.com/_/hello-world) application
+* Went to all hands meeting, listened to Raj's great telecommuting lecture.
+* Tried running [this](https://medium.com/oceanize-geeks/basic-docker-installation-with-simple-project-using-docker-and-pushed-to-docker-hub-d319a9a7bc5b) simple docker project, and failed. Will try again tomorrow morning. 
+
+
 
 
