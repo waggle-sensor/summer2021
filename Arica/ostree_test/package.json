@@ -1,0 +1,14 @@
+{
+  "name": "ostree_test",
+  "version": "1.0.0",
+  "description": "Testing OSTree functionality in line with what I ~think~ the fault tolerance for SAGE is needed. This is going to be VASTLY simplified, and will not represent any specific task in the actual job.  The steps to the process are:",
+  "main": "daemon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "shelljs": "^0.8.4"
+  }
+}

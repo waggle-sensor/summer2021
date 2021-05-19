@@ -56,6 +56,18 @@
 * Went to all hands meeting, listened to Raj's great telecommuting lecture.
 * Tried running [this](https://medium.com/oceanize-geeks/basic-docker-installation-with-simple-project-using-docker-and-pushed-to-docker-hub-d319a9a7bc5b) simple docker project, and failed. Will try again tomorrow morning. 
 
+-------------
+### Wednesday, 5/19
+
+**Today's non-technological work:**
+* Missed Scrum (note: it starts at 10:30 on wednesdays)
+* Meeting with Wolfgang and Joe about in-depth SAGE software implementation
+
+
+**Today's technological work:**
+* Installed docker on ANL rig, did OSTree helloworld on stock ubuntu image
+* Created [ostree-test](./ostree_test/README.md), which simulates the most basic faults. I'm not sure if it even applies to SAGE faulting, but it was good practice for `ostree`.
+
 
 
 
