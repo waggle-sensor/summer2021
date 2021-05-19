@@ -111,7 +111,7 @@ stdout/stderr:
 
 ## Week 2 (May 17 to May 21)
 
-### May 17, 2020
+### Monday May 17, 2020
 #### Work Done:
  - Paperwork on Tax files
  - Walk through Pytorch tutorials
@@ -127,7 +127,7 @@ stdout/stderr:
  - Contradictions in building anytime DNN: According to Zilberstein’s paper (AAAI-1996), I think one of the core part of anytime algorithm is to set up the relationship between time/resources and results qualities, statistically or theoretically. On the other hand, as a black-box based approach, it is hard to explain how DNN learns, especially **the impact of intermediate results from sub layers**, which makes it hard to set up this kind of relationship between time/resources and results qualities for DNN. 
  - Decompose with applications and dataset: Customized designs for specific application and dataset to make it possible to be anytime is feasible. **The real challenge is to propose a general approach which decomposes with applications and datasets**.
 
-### May 17, 2020
+### Tuesday May 18, 2020
 #### Work Done:
  - Set up and understand the code and prove of SGD and backpropogation
  - Read the chapter 3 on methods to imporve the performance of Neural Networks; understand the function of cross-entropy and softmax with code
