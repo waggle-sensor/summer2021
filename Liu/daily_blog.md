@@ -136,10 +136,34 @@ stdout/stderr:
  - Finish training IResNext on GPU cluster 
  - Meeting with Raj to discuss the overall plan and how to integrate the anytime DNN project into the PhD disertation
 
-### Wednesday May 18, 2020
+### Wednesday May 19, 2020
 #### Work Done:
  - Read research papers on anytime DNN ([IResNext](paper-notes/Lee-Arxiv-2018.md),[BranchNet-ICPP-2016](paper-notes/BranchNet-ICPP-2016.md), and [DistributedDNN-ICDCS-2017](paper-notes/DistributedDNN-ICDCS-2017.md)) 
  - Contine to learn the chapter3 of machine learning book
    - The problem of slow learning for quadratic cost
    - The prove of cross-entropy's impact to solve the slow learning problem
    - The prove of using softmax function with log-likelihood cost to sovle the slow learning problem
+
+### Thursday May 20, 2020
+#### Work Done:
+ - Finish the chapter3 of machine learning book
+   - The problem of overfitting in DNN training, using regulariztion to overcome this problem
+     - understand why regularization could reduce overfitting; the impact of using smaller weights than larger weights (weight decay)
+     - L1 regularization: the weights shrink by a constant amount toward 0
+     - L2 regularization: the weights shrink by an amount which is proportional to weights
+   - Dropout: randomly (and temporarily) deleting half the hidden neurons in the network, while leaving the input and output neurons untouched
+   - Artificially expanding the training data
+     - MNIST: rotations, translating and skewing the images of the dataset
+     - speech recognition: adding noisy
+ - Learn weight initialization techniques
+   - weights and bias: Gaussian random variabales with mean 0 and standard deviation 1
+   - modified weights initialization
+   - turns out to only accelerate the training process, not improve the model performance
+ - How to choose a neural network’s hyper-parameters
+ - Variations on stochastic gradient descent
+   - Hessian techniques: incorporating information about second-order changes in the cost function
+   - Momentum-based gradient descent: introduces a notion of “velocity”
+ - Other models of artificial neuron:
+   - sigmoid: stop learning when they saturate, i.e., when their output is near either 0 or 1
+   - tanh: compute any function39 mapping inputs to the range −1 to 1; stop learning when they saturate 
+   - ReLU: increasing the weighted input to a rectified linear unit will never cause it to saturate, and so there is no corresponding learning slowdown. On the other hand, when the weighted input to a rectified linear unit is negative, the gradient vanishes, and so the neuron stops learning entirely.
