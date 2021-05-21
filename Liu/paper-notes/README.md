@@ -11,7 +11,7 @@
       - Hu et al 2019, Huang et al 2017, Teerapittayanon et al 2016, McGill 2017, Wan et al
 
 ## Updates from 05/11/21 to 05/21/21
- - Read papers on anytime DNN ([Zilberstein-AAAI-1996](../Liu/paper-notes/Zilberstein-AAAI-1996.md), [Dietterich-MCS-2000](paper-notes/Dietterich-MCS-2000.md), [BranchNet-ICPP-2016](paper-notes/BranchNet-ICPP-2016.md), [DistributedDNN-ICDCS-2017](paper-notes/DistributedDNN-ICDCS-2017.md), and [Lee-Arxiv-2018](paper-notes/Lee-Arxiv-2018.md))
+ - Read papers on anytime DNN ([Zilberstein-AAAI-1996](Zilberstein-AAAI-1996.md), [Dietterich-MCS-2000](Dietterich-MCS-2000.md), [BranchNet-ICPP-2016](BranchNet-ICPP-2016.md), [DistributedDNN-ICDCS-2017](DistributedDNN-ICDCS-2017.md), and [Lee-Arxiv-2018](Lee-Arxiv-2018.md))
  - Train the Anytime DNN model for IResNext and BranchNet based on their codes
  - Pick up neural network and deep learning knowledges by reviewing the [book](http://neuralnetworksanddeeplearning.com/) chapter1 to chapter3
    - stochastic gredient decent, backpropogation's prove
