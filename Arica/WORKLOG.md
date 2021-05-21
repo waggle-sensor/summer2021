@@ -4,7 +4,7 @@
 ---------
 ### Monday, 5/17 (8 Hours worked)
 
-**Today's non-technological work:** 
+**Today's non-technical work:** 
 * Had Orientation meeting
 * Filled out some HR forms
 * Went through the HR presentations
@@ -47,7 +47,7 @@
 
 *Pre-emptive monitoring:* Monitors the state of the CPU and memory and compares it against some arbitary set of criteria(usually somewhat defined by the user). 
 
-**Today's non-technological work:**
+**Today's non-technical work:**
 * Met with Joe and Wolfgang to discuss general fault tolerance practices(see notes from monday). 
 * Set up ANL computer with proper SSH keys, can now access lcrc and github 
 * Had first scrum
@@ -57,16 +57,75 @@
 * Tried running [this](https://medium.com/oceanize-geeks/basic-docker-installation-with-simple-project-using-docker-and-pushed-to-docker-hub-d319a9a7bc5b) simple docker project, and failed. Will try again tomorrow morning. 
 
 -------------
-### Wednesday, 5/19
+### Wednesday, 5/19(8 Hours worked)
 
-**Today's non-technological work:**
+**Today's non-technical work:**
 * Missed Scrum (note: it starts at 10:30 on wednesdays)
 * Meeting with Wolfgang and Joe about in-depth SAGE software implementation
+* Read more about Docker/containers
 
 
-**Today's technological work:**
-* Installed docker on ANL rig, did OSTree helloworld on stock ubuntu image
+**Today's technical work:**
+* Installed docker on ANL rig, did OSTree 'helloworld' on stock ubuntu image
 * Created [ostree-test](./ostree_test/README.md), which simulates the most basic faults. I'm not sure if it even applies to SAGE faulting, but it was good practice for `ostree`.
+
+---------
+### Thursday, 5/20 (6 Hours worked)
+
+**Today's non-technical work**
+* No scrum, tuned in to the research meeting brielfly
+* Read the following papers: 
+    - G. Muller, M. Banatre, N. Peyrouze and B. Rochat, "Lessons from FTM: an experiment in design and implementation of a low-cost fault tolerant system," in IEEE Transactions on Reliability, vol. 45, no. 2, pp. 332-340, June 1996, doi: 10.1109/24.510822.
+    - J. Grover and R. M. Garimella, "Reliable and Fault-Tolerant IoT-Edge Architecture," 2018 IEEE SENSORS, 2018, pp. 1-4, doi: 10.1109/ICSENS.2018.8589624.
+    - I. Lee, D. Tang, R. K. Iyer and M. -. Hsueh, "Measurement-based evaluation of operating system fault tolerance," in IEEE Transactions on Reliability, vol. 42, no. 2, pp. 238-249, June 1993, doi: 10.1109/24.229493.
+
+    I did not gain a ton of insight from these papers, as the widespread definition of fault tolerance for IoT is for the entire network, and not the OS specifically. 
+
+**Today's takeaways and notes, transcribed**: 
+
+Big idea: have different 'levels' of faults, kind of like DEFCON levels.
+* All faults are inherently critical. However, some faults are far more complicated to recover from than others. This means that some faults are more critical than others. For example, a fault preventing booting > a fault from an AI/ML package
+
+Following this principle, the most efficient process of work is to focus on recovery from the widest and most critical faults, and work our way down from there. 
+
+Currently known/concieved faults are: 
+* Can't boot from emmc 
+* Power being pulled during update
+* Software fault
+    - To generalize 'Software fault' means any fault that stops the main functions of the Wild SAGE nodes. 
+    - Side note- when rolling back faulting software, all processes currently using files included in the rollback need to be identified, stopped, and restarted, as not doing so may lead to undefined behavior. 
+
+Misc. but still relevant notes: In the cited paper above [*Reliable and Fault-Tolerant IoT-Edge Architecture*](https://www.researchgate.net/publication/330487694_Reliable_and_Fault-Tolerant_IoT-Edge_Architecture), there is mention of using some kind of neural network to detect faults preemptively. While their implementation was referencing a 4-layer cloud, fog, mist, & dew computing system, the idea piqued my interest, as we have plenty of AI talent. 
+
+A common technique of fault tolerance seems to state monitoring in tandem with dual booting. State monitoring seems like a no-brainer, but it might be worth looking into to maintain a set of encoded states that might make monitoring easier. 
+
+-----------
+### Friday, 5/21 (7 Hours Worked)
+
+**Today's non-technical work:**
+* Attended scrum
+* Had meeting with Joe and gained insight into SAGE software implementation. Further specificed what my main task is this summer. 
+* Attended Demo meeting
+* Read the following papers: 
+    - Tracy A. Neilson, James A. Donaldson,
+Curiosity's Fault Tolerant Wakeup and Shutdown Design,
+Procedia Computer Science,
+Volume 28,
+2014,
+Pages 441-448,
+ISSN 1877-0509,
+https://doi.org/10.1016/j.procs.2014.03.054.
+
+    - Javed, A., Robert, J., Heljanko, K. et al. IoTEF: A Federated Edge-Cloud Architecture for Fault-Tolerant IoT Applications. J Grid Computing 18, 57–80 (2020). https://doi.org/10.1007/s10723-019-09498-8
+    - Sander van der Burg, Eelco Dolstra, and Merijn de Jonge. 2008. Atomic upgrading of distributed systems. In Proceedings of the 1st International Workshop on Hot Topics in Software Upgrades (HotSWUp '08). Association for Computing Machinery, New York, NY, USA, Article 8, 1–5. DOI:https://doi.org/10.1145/1490283.1490294
+    - Rajat Verma, Anton Ajay Mendez, Stan Park, Sandya Mannarswamy, Terence Kelly, and Charles B. Morrey. 2015. Failure-atomic updates of application data in a linux file system. In Proceedings of the 13th USENIX Conference on File and Storage Technologies (FAST'15). USENIX Association, USA, 203–211.
+    - (And several other non-academic articles I didn't feel necessary to include)
+
+Today I tried to broaden my view of other fault tolerant systems, which is why one of the listed papers is about the mars rover. Conversely, I met with Joe to get a concise definition of the rollbacks, upgrades, and tolerance required for the Wild SAGE nodes. It was a ton of information, and I'll need to rewatch the meeting on monday. 
+
+My first week was a little bit slower than I thought it would be. It has been strange to dial it back and just read about stuff, especially because in the past I've never cared this much about theory or doing articulate research before diving in. Nonetheless, I had a good week. I'm happy to be here on the SAGE grant. I think I'll grow a lot this summer, especially in terms of stress management, patience, and OS systems knowledge. 
+
+---------
 
 
 
