@@ -167,3 +167,15 @@ stdout/stderr:
    - sigmoid: stop learning when they saturate, i.e., when their output is near either 0 or 1
    - tanh: compute any function39 mapping inputs to the range −1 to 1; stop learning when they saturate 
    - ReLU: increasing the weighted input to a rectified linear unit will never cause it to saturate, and so there is no corresponding learning slowdown. On the other hand, when the weighted input to a rectified linear unit is negative, the gradient vanishes, and so the neuron stops learning entirely.
+
+### Friday May 21, 2020
+#### Work Done:
+ - Have a meeting with Nicola and Sean to discuss the anytime project progress
+   - update on the research papers and knowledges about DNN's training
+   - open challenges for building anytime system for SAGE project
+     - target applications
+     - how to set up the relationship for anytime/anywhere's impact to performance
+ - To do list for Anytime DNN project
+   - understand the entropy's usage in BranchNet paper
+   - continue reading research papers on anytime DNNs
+   - read papers about explainable AI
