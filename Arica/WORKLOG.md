@@ -127,6 +127,26 @@ My first week was a little bit slower than I thought it would be. It has been st
 
 ---------
 
+## Week 2: 5/24 to 5/28
+------------
+### Monday, 5/24 (7 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum
+* Finished TMS training modules
+* Met with Wolfgang and talked about deliverables
+* Wrote outline for fault-tolerant technology overview, will complete tomorrow
+
+**Today's technical work:**
+* Tried to use Btrfs, need a partition or physical media
+
+
+**Links to hold onto:**
+* [F2FS](https://f2fs.wiki.kernel.org/perf)
+
+**For tomorrow**:
+* Write overview of FT technologies while paying attention to academic style. Remember to include AB booting.
+* Try to make partition in a docker container and use Btrfs
 
 
 
