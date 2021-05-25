@@ -149,4 +149,16 @@ My first week was a little bit slower than I thought it would be. It has been st
 * Try to make partition in a docker container and use Btrfs
 
 
+------------
+### Tuesday, 5/25
 
+**Today's non-technical work:**
+* Attended Scrum
+* Got acquainted with Overleaf
+
+**Today's technical work:**
+* Learned OverlayFS basic usage
+* Wrote very primitive 'commit' system with OverlayFS. I'll commit it tomorrow. 
+    - OverlayFS does not support more than two layers of overlays. I haven't tried the nested overlay functionality because it makes the 'version control' aspect of the application more complicated. I'll try it tomorrow before scrum.
+
+Today, I did not write any kind of paper like I said I would. But, I got lost in using OverlayFS and I had a lot of fun trying to make sense of it. I learned a lot today, and it was refreshing to have my brain feel like it's on fire(in a good way).  I'll talk to Joe tomorrow about my findings and we'll come up with a plan from there. 
