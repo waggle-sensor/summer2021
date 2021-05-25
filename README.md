@@ -37,8 +37,8 @@ For all other interns we expect at the end of their internship:
 
 1. Oral presentation
 2. Abstract for General Audience (on github)
-3. A white paper OR a real publication. In either case the daily blog on github can serve as a basis for the content.
-
+3. A white paper OR a real publication. In either case the daily blog on github can serve as a basis for the content. 4-8 pages, [https://www.ieee.org/conferences/publishing/templates.html](https://www.ieee.org/conferences/publishing/templates.html)
+    
 
 
 
