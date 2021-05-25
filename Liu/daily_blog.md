@@ -179,3 +179,15 @@ stdout/stderr:
    - understand the entropy's usage in BranchNet paper
    - continue reading research papers on anytime DNNs
    - read papers about explainable AI
+
+## Week 3 (May 24 to May 28)
+
+### Monday May 24, 2020
+#### Work Done:
+ - Search and read explainable artificial intelligence papers ([https://drive.google.com/drive/folders/155rW_8v6oM7f7ulN8S5Bh-OAGnjR8_C1?usp=sharing](https://drive.google.com/drive/folders/155rW_8v6oM7f7ulN8S5Bh-OAGnjR8_C1?usp=sharing))
+ - Finish Chapter 4 and 5 of neural network and deep learning book
+   - Prove of the universal approximation theorem
+   - deep neural network hard to train
+     - vanishing gradient problem
+       - illustration for sigmoid function
+     - exploding gredient problem: weights and bias setting
