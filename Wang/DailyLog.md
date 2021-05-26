@@ -1,6 +1,6 @@
 **May 24th**
 1. Orientation
-2. TMS training
+2. Completed JHQ100, ESH100, ESH140, ESH196, ESH196A training course
 
 **May 25th**
 1. Audio team meeting
@@ -20,6 +20,7 @@
    ~ Result -> 1-2 weeks
    ~ Conclusion 1-2 weeks
    ~ Actual writting -> 1-2 weeks
+   6. Completed SEC101 training course
 
 **May 27th**
 
