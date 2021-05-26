@@ -191,3 +191,13 @@ stdout/stderr:
      - vanishing gradient problem
        - illustration for sigmoid function
      - exploding gredient problem: weights and bias setting
+
+### Tuesday May 25, 2020
+#### Work Done:
+ - Finish Chapter 6 of neural network and deep learning book
+   - the structure of convolutional neural network: 
+     - local receptive fields; shared weights; pooling
+   - prove of backpropogation in convolutional neural network
+     - derivations for pooling operation
+     - derivations for convolution operation
+ - Read anytime DNN paper and XAI papers
