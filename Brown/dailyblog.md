@@ -16,3 +16,8 @@ Contains daily updates on work done each day.
 - Completed more training items.
 - Familiarized myself with Waggle-Sensor github.
 - Organized my thoughts, plans, and workspace, laying out my goals and tasks for the rest of the week and beyond.
+
+### Wednesday 5/26
+- Met with Mia to discuss plans for bird song project.
+- Began researching existing literature / knowledgebase on bird song classification.
+- Began tinkering with my previous music genre classification notebooks, following guides to convert from ANN to CNN.
