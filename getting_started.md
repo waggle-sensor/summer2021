@@ -39,7 +39,7 @@ https://accounts.jlse.anl.gov/
 
 All of the above will ask for a few details:
 
-- Sponsor Email: `ozorob@...`
+- Sponsor: `Omar`
 - Reason for the Account: `Write AI@Edge code for Waggle nodes.`
 
 Please feel free to reach out to Omar or Rajesh if you have any further questions.
