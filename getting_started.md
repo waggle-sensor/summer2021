@@ -28,7 +28,7 @@ https://apps.anl.gov/registration/collaborators
 
 Needed to get access to our data store ( https://www.lcrc.anl.gov/for-users/getting-started/getting-an-account/ )
 
-  1. Request membership to the `waggle` project by clicking "Join Project" on the right and then searching for waggle. Also add yourself to the `lcrc` project by doing the same thing. You should automatically be added to `lcrc`, but you will need to contact Raj or Pete when you request access to waggle, since they will need to accept the request.
+  1. Request membership to the `waggle` project by clicking "Join Project" on the right and then searching for waggle. Once your request has been approved (takes minutes or a few hours), you will also added automatically to the `lcrc` project. If not, let us know.
   2. Add your public SSH key to the LCRC account.
 
 
