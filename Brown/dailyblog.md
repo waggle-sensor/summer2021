@@ -21,3 +21,7 @@ Contains daily updates on work done each day.
 - Met with Mia to discuss plans for bird song project.
 - Began researching existing literature / knowledgebase on bird song classification.
 - Began tinkering with my previous music genre classification notebooks, following guides to convert from ANN to CNN.
+
+### Thursday 5/27
+- ALCF vizualisation meeting.
+- Continued working with music genre classification notebooks, trying and troubleshooting multiple online examples as starting points for converting existing notebooks from ANN to CNN.
