@@ -1,0 +1,1 @@
+print("This is our pandas plugin, installed in snapshot-v2.1")
