@@ -29,3 +29,18 @@
    - How can we explain the DNN's learning?
    - Can we set up this relationship based on **explainable machine learning algorithms** (or ensembling explanable algorithms)
  - Decompose with applications and dataset: Customized designs for specific application and dataset to make it possible to be anytime is feasible. **The real challenge is to propose a general approach which decomposes with applications and datasets**.
+
+## Anytime/Adaptive Prediction Algorithms
+ - **use intermediate features of DNN**:
+   - Branchynet: Fast inference via early exiting from deep neural networks, ICPR 2016.
+   - Deciding How to Decide: Dynamic Routing in Artificial Neural Networks, ICML 2017.
+   - Adaptive Neural Networks for Efficient Inference, ICML 2017.
+   - Spatially Adaptive Computation Time for Residual Networks, CVPR 2017.
+   - NestedNet: Learning Nested Sparse Structures in Deep Neural Networks, CVPR 2018.
+   - Multi-scale dense convolutional networks for efficient prediction, ICLR 2018.
+   - <span style="color:red">However, joint-training all such sub-networks together is not easy since shallower ones cannot capture level features, and deeper ones might be badly trained if one forces intermediate layers to produce the final outputs.</span>.
+ - **multi-scale inputs/features**:
+   - Deciding How to Decide: Dynamic Routing in Artificial Neural Networks, ICML 2017.
+   - Multi-scale dense convolutional networks for efficient prediction, ICLR 2018.
+ - **dense connections**:
+   - Multi-scale dense convolutional networks for efficient prediction, ICLR 2018.
