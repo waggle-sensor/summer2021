@@ -162,3 +162,24 @@ My first week was a little bit slower than I thought it would be. It has been st
     - OverlayFS does not support more than two layers of overlays. I haven't tried the nested overlay functionality because it makes the 'version control' aspect of the application more complicated. I'll try it tomorrow before scrum.
 
 Today, I did not write any kind of paper like I said I would. But, I got lost in using OverlayFS and I had a lot of fun trying to make sense of it. I learned a lot today, and it was refreshing to have my brain feel like it's on fire(in a good way).  I'll talk to Joe tomorrow about my findings and we'll come up with a plan from there. 
+
+--------
+
+### Wednesday, 5/26 (8 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum
+* Met with Joe to discuss potential updates and rollbacks in the context of Nested OverlayFS overlays
+* Started Paper introduction, will complete tomorrow morning
+
+**Today's technical work**:
+* Started new OverlayFS research project
+* Wrote out nested OverlayFS versioning structure, coded some of it
+
+I think OverlayFS shows a fair amount of promise in terms of being viable for usage. It's built-in, and exists as a 'feature', if that makes sense. All of the alternatives are third-party(but open source), which increases the margin of error, if only a little bit. If we decide that we value as a solution as close to baremetal as possible, OverlayFS provides a ton of value. 
+
+
+
+I helped my dad unclog our plumbing today around 5:00. Boy, was it hard. No wonder plumbers have crazy strength. 
+
+----------
