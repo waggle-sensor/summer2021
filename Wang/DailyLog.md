@@ -23,4 +23,7 @@
    6. Completed SEC101 training course
 
 **May 27th**
+1. Create a shared overleaf file and share it with Emily. 
+2. Look into the Xeno-canto database and how to use the API from their website
+3. 
 
