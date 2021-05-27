@@ -170,16 +170,26 @@ Today, I did not write any kind of paper like I said I would. But, I got lost in
 **Today's non-technical work:**
 * Attended Scrum
 * Met with Joe to discuss potential updates and rollbacks in the context of Nested OverlayFS overlays
-* Started Paper introduction, will complete tomorrow morning
+* Started Paper introduction, will complete tomorrow morning/midday. 
 
 **Today's technical work**:
 * Started new OverlayFS research project
-* Wrote out nested OverlayFS versioning structure, coded some of it
+* Wrote out nested OverlayFS versioning structure, coded some of it. Will continue work on it tomorrow and friday.
 
-I think OverlayFS shows a fair amount of promise in terms of being viable for usage. It's built-in, and exists as a 'feature', if that makes sense. All of the alternatives are third-party(but open source), which increases the margin of error, if only a little bit. If we decide that we value as a solution as close to baremetal as possible, OverlayFS provides a ton of value. 
+I think OverlayFS shows a fair amount of promise in terms of being viable for usage. It's built-in, and exists as a 'feature', if that makes sense. All of the alternatives are third-party(but open source), which increases the margin of error, if only a little bit. If we decide that we value a solution as close to baremetal as possible, OverlayFS provides a ton of value. 
 
 
 
 I helped my dad unclog our plumbing today around 5:00. Boy, was it hard. No wonder plumbers have crazy strength. 
 
 ----------
+### Thursday, 5/27 (8 hours worked)
+
+**Today's non-techical work:**
+* Attended Scrum
+* Wrote more of FT techologies summary for paper
+
+**Today's technical work:**
+* Wrote the brunt of OverlayFS versioning system, now on github. Tomorrow I'll implement the whitelist function.
+
+---------
