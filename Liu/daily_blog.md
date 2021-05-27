@@ -201,3 +201,12 @@ stdout/stderr:
      - derivations for pooling operation
      - derivations for convolution operation
  - Read anytime DNN paper and XAI papers
+
+### Wednesday May 26, 2020
+#### Work Done:
+ - Understand the meaning of Knowledge and its usage in BranchyNet paper
+   - entropy is used as a measure of how confident the calssifier at en exit point is about the sample
+     - computed probabilities for all possible class labels
+     - screen over T (threshold) and pick a setting that satisfies the constraints (accuracy)
+ - Understand the backpropogation of convolutional neural network with implementation code
+   - [https://github.com/MichalDanielDobrzanski/DeepLearningPython/blob/master/network3.py](https://github.com/MichalDanielDobrzanski/DeepLearningPython/blob/master/network3.py)
