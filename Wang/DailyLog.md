@@ -25,5 +25,5 @@
 **May 27th**
 1. Create a shared overleaf file and share it with Emily. 
 2. Look into the Xeno-canto database and how to use the API from their website
-3. 
+3. Completed SEC152 and ESH223 training courses
 
