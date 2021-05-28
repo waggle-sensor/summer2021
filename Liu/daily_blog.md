@@ -210,3 +210,15 @@ stdout/stderr:
      - screen over T (threshold) and pick a setting that satisfies the constraints (accuracy)
  - Understand the backpropogation of convolutional neural network with implementation code
    - [https://github.com/MichalDanielDobrzanski/DeepLearningPython/blob/master/network3.py](https://github.com/MichalDanielDobrzanski/DeepLearningPython/blob/master/network3.py)
+
+### Thursday May 27, 2020
+#### Work Done:
+ - Read anytime DNN IResNeXt [Lee-Arxiv-2018](paper-notes/anytime-dnn/Lee-Arxiv-2018.md)
+ - Read paper [Figurnov-CVPR-2017](paper-notes/anytime-dnn/Figurnov-CVPR-2017.md)
+   - Read Resnet paper to understand its design
+   - Spatially adaptive computation time to stops computation in a spatial position as soon as the features become “good enough”
+   - maintains the alignment between the image and the feature maps
+ - look into implementation code of convolutional layers in PyTorch
+   - the key of implementation on CPU & GPU
+   - General Matrix Multiply (GEMM)
+   - BLAS, Intel MKL with CPU; CUDA on GPU
