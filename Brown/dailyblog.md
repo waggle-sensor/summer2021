@@ -25,3 +25,8 @@ Contains daily updates on work done each day.
 ### Thursday 5/27
 - ALCF vizualisation meeting.
 - Continued working with music genre classification notebooks, trying and troubleshooting multiple online examples as starting points for converting existing notebooks from ANN to CNN.
+
+### Friday 5/38
+- Continued bird song classification research.
+- Met with John Domyancich to discuss ideas, plans, and goals for AI summer camp.
+- Began working on notebooks for week 1 of summer camp.
