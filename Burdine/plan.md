@@ -19,5 +19,13 @@
 ## Week 0 ##
 ------------
 ### Tuesday June 1, 2021 ###
-- Completed Workday tasks.
+- Completed Pending Workday tasks.
 - Attended Day 1 of virtual orientation.
+- Finished the following TMS traning modules:
+    * SEC152 (OUO Training)
+    * HR498  (Ethics Training)
+    * HR720  (Employee Conflict of Interest)
+    * HR497  (Sexual Harassment Prevention) 
+
+- Met with Sean, Nicola, and Scott to discuss project assignments for the summer
+    * (My project assignment is still TBD)
