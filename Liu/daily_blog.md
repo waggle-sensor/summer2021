@@ -222,3 +222,16 @@ stdout/stderr:
    - the key of implementation on CPU & GPU
    - General Matrix Multiply (GEMM)
    - BLAS, Intel MKL with CPU; CUDA on GPU
+
+
+### Friday May 28, 2020
+#### Work Done:
+ - Read anytime paper [Lee-Arxiv-2018](paper-notes/anytime-dnn/Lee-Arxiv-2018.md)
+ - Understand and use ResNet in PyTorch
+   - [torchvision models](https://pytorch.org/vision/stable/models.html)
+   - gradients can flow directly through the skip connections backwards from later layers to initial filters
+   - solve vanishing gradients for deeper DNNs
+ - Understand the using of Batch Normalization
+   - [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf)
+   - **Internal Covariate Shift (ICS)** is defined as the change in the distribution of network activations due to the change in network parameters during training
+   - BN can help to reduce the ICS
