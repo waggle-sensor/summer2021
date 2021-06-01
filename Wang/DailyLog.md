@@ -1,3 +1,11 @@
+# Week 2
+**June 1st**
+1. Audio group meeting
+2. Read papers
+3. TMS traning course
+
+
+# Week 1
 **May 24th**
 1. Orientation
 2. Completed JHQ100, ESH100, ESH140, ESH196, ESH196A training course
@@ -27,3 +35,6 @@
 2. Look into the Xeno-canto database and how to use the API from their website
 3. Completed SEC152 and ESH223 training courses
 
+**May 27th**
+1. Study Xeno-canto dataset and write a script to parse it.
+2. Find papers about audio processing and bird song classificaation
