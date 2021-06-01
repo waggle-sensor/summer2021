@@ -28,7 +28,25 @@ sudo umount overlay/
 # we're pretending that our lower partitions are all RO, which should be implemented tbd
 
 cd upper
+# grab the whitelisted stuff
+while read line; do
+    echo $line
+    # echo $(pwd)
+    if [ -d $line ]; 
+    then
+        mv $line ../whitelist_tmp/
+    
+    else
+        cp --parents $line ../whitelist_tmp
+    fi
+
+done < "../whitelist"
+
+# wipe the RW layer
+
 rm -rf ./*
+
+
 cd ..
 # mount our new folder 
 # generate the mount string for the nested mount command based off the mount_order file and 
@@ -63,8 +81,22 @@ sudo mount -t overlay -o lowerdir=${mount_string},upperdir=./upper/,workdir=./wo
 
 # copy our whitelist from the tmpfs into our target
 
+# copy everything in the whitelist back into the overlay
+cd whitelist_tmp
 
+while read line; do
+    echo $line
+    # echo $(pwd)
+    if [ -d $line ]; 
+    then
+        mv $line ../overlay/
+    
+    else
+        cp --parents $line ../overlay/
+    fi
+
+done < "../whitelist"
 
 # add our new boot arg to our mount_order file
-
+cd ..
 echo "$1" >> mount_order 

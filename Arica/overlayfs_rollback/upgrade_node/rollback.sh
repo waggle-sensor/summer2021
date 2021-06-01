@@ -16,10 +16,29 @@ if [ $# -eq 1 ];
         sed -i '$ d' mount_order
 fi
 
+cd upper
+# grab the whitelisted stuff
+while read line; do
+    echo $line
+    # echo $(pwd)
+    if [ -d $line ]; 
+    then
+        mv $line ../whitelist_tmp/
+    
+    else
+        cp --parents $line ../whitelist_tmp
+    fi
 
+done < "../whitelist"
+
+# wipe the RW layer
+
+rm -rf ./*
+
+
+cd ..
 
 # copied from upgrade.sh, remounting
-
 mount_file="mount_order"
 mount_string=""
 
@@ -46,3 +65,27 @@ echo "Remounting list: $mount_string"
 
 sudo mount -t overlay -o lowerdir=${mount_string},upperdir=./upper/,workdir=./workdir/ none overlay/
 
+# copy everything in the whitelist back into the overlay
+cd whitelist_tmp
+
+# while read line; do
+#     # cp -R $line ../overlay/
+#     echo $(pwd)
+#     mkdir -p $line ../whitelist_tmp/
+#     mv $line ../overlay/
+# done < "../whitelist"
+
+while read line; do
+    echo $line
+    # echo $(pwd)
+    if [ -d $line ]; 
+    then
+        mv $line ../overlay/
+    
+    else
+        cp --parents $line ../overlay/
+    fi
+
+done < "../whitelist"
+
+rm -rf ./*
