@@ -4,7 +4,15 @@
 2. Read papers
 3. TMS traning course
 
+**June 2nd**
+1. Meeting with Rick
+2. Research in audio data processing
 
+**June 3rd**
+
+**June 4th**
+
+**June 5th**
 # Week 1
 **May 24th**
 1. Orientation
