@@ -30,3 +30,9 @@ Contains daily updates on work done each day.
 - Continued bird song classification research.
 - Met with John Domyancich to discuss ideas, plans, and goals for AI summer camp.
 - Began working on notebooks for week 1 of summer camp.
+
+## Week 2 (6/1 - 6/4)
+
+### Tuesday 6/1
+- Attended AI/ML team meeting.
+- Produced working prototype for summer camp day 1 notebook.
