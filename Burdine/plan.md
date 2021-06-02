@@ -36,5 +36,7 @@
 [this repository](https://github.com/waggle-sensor/plugin-helloworld-ml).
 - Attended Day 2 of virtual orientation.
 - Finished the SEC101 (CounterIntelligence Training)
-- Spoke with Sean about work on object tracking
+- Spoke with Sean about work on object tracking with OpenCV
 - Began [notes on OpenCV Object Tracking](notes/opencv_tracking.pdf)
+- Started work on an experimental OpenCV image tracking plugin: [plugin-motion-detector](https://github.com/waggle-sensor/plugin-motion-detector)
+
