@@ -1,1 +1,19 @@
+## Tasks:
 
+-Today's Non-Technical Tasks
+1. Check the schedule of TMS
+2. Set up Raspberry Pi and sensors for checking
+3. Discussion with Sean, Wolfgang, and Joe about filtered data in the SDR (finally figured out!)
+   (Feedback: In the cloud case, we only have the HTTP/JSON API. Because we can filter data using the API, we can still do something similar to subscribing to only specific kind of data.)
+   So, in current progress, MQTT is not required. (might be future plan)
+   
+
+-Today's Technical Tasks
+1. Use HTTP request to get data from a REST endpoint on Node-RED (External REST API  - https://restcountries.eu) - Success!!
+2. Read the doc of REST API more. (Also check other relevant video as well)
+
+-Things to do
+1. Test the HTTP request again with SDR.
+  1) Read example query data from SDR using HTTP / JSON request. (I think we talked about a couple of these examples.)
+  2) Start with a simple “print value” node.
+  3) Add a “filter when name = sys.uptime” node and add a trigger when that is < 1800.
