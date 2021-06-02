@@ -212,7 +212,16 @@ Did not complete as much work as I would have liked, as I felt sick at the start
 * Met with Joe about SAGE-883 and joining the software team
 
 **Today's technical work:**
-* Finished OverlayFS versioning system
+* Finished OverlayFS versioning system with whitelist
 * Looked over sanity test suite code and began writing SAGE-883
+
+---------
+### Wednesday 6/2 (7 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum
+* Started writing slides for friday's demo
+
+**Today's technical work:**
+* Finished first version of SAGE-883 static PSU check. Wrote PR for it, as well. Awaiting feedback from Joe.
 
 ---------
