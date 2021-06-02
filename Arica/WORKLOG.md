@@ -193,3 +193,26 @@ I helped my dad unclog our plumbing today around 5:00. Boy, was it hard. No wond
 * Wrote the brunt of OverlayFS versioning system, now on github. Tomorrow I'll implement the whitelist function.
 
 ---------
+### Friday, 5/28 (5.5 hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum
+
+**Today's technical work:**
+* Finished all of the non-whitelist functions for the OverlayFS versioning system
+
+Did not complete as much work as I would have liked, as I felt sick at the start of the day. 
+
+----------------
+## Week 3: 6/1 to 6/4
+---------------
+### Tuesday, 6/1 (8 hours worked)
+**Today's non-technical work:**
+* Attended Scrum
+* Met with Joe about SAGE-883 and joining the software team
+
+**Today's technical work:**
+* Finished OverlayFS versioning system
+* Looked over sanity test suite code and began writing SAGE-883
+
+---------
