@@ -2,14 +2,14 @@
 
 ## Week 1 (May 10 to May 14)
 
-### May 10, 2020
+### May 10, 2021
 #### Work Done:
  - I-20 CPT paperwork modification
  - Remote I-9 E-verify
  - Background check
  - Walk through Pytorch tutorials
 
-### May 11, 2020
+### May 11, 2021
 #### Work Done:
  - Set up account access to LCRC and JLSE 
  - Pytorch tutorial
@@ -20,7 +20,7 @@ Github: https://github.com/hankook/IResNeXt
 
 <img src="images/anytime-training.jpg" width="200">
 
-### May 12, 2020
+### May 12, 2021
 #### Work Done:
  - Read papers on anytime DNN ([Zilberstein-AAAI-1996](../Liu/paper-notes/Zilberstein-AAAI-1996.md), [Dietterich-MCS-2000](paper-notes/Dietterich-MCS-2000.md), and [Lee-Arxiv-2018](paper-notes/Lee-Arxiv-2018.md))
  - Get anytime NN models for CIFAR10 and CIFAR100 provided from "Anytime Neural Prediction via Slicing Networks Vertically" 
@@ -29,12 +29,12 @@ CIFAR10:             |  CIFAR100:
 :-------------------------:|:-------------------------:
 ![](images/cifar10.png)  |  ![](images/cifar100.png)
 
-### May 13, 2020
+### May 13, 2021
 #### Work Done:
  - Read papers on anytime DNN ([Dietterich-MCS-2000](paper-notes/Dietterich-MCS-2000.md), and [Lee-Arxiv-2018](paper-notes/Lee-Arxiv-2018.md))
  - Implement the code from BranchyNet (https://github.com/kunglab/branchynet) and Distributed DNN (https://github.com/kunglab/ddnn).
 
-### May 14, 2020
+### May 14, 2021
 #### Work Done:
  - Read papers on anytime DNN ([BranchNet-ICPP-2016](paper-notes/BranchNet-ICPP-2016.md), and [DistributedDNN-ICDCS-2017](paper-notes/DistributedDNN-ICDCS-2017.md))
  - Set up access to Chameleon cluster and implement BranchyNet (https://github.com/kunglab/branchynet)
@@ -111,7 +111,7 @@ stdout/stderr:
 
 ## Week 2 (May 17 to May 21)
 
-### Monday May 17, 2020
+### Monday May 17, 2021
 #### Work Done:
  - Paperwork on Tax files
  - Walk through Pytorch tutorials
@@ -127,7 +127,7 @@ stdout/stderr:
  - Contradictions in building anytime DNN: According to Zilberstein’s paper (AAAI-1996), I think one of the core part of anytime algorithm is to set up the relationship between time/resources and results qualities, statistically or theoretically. On the other hand, as a black-box based approach, it is hard to explain how DNN learns, especially **the impact of intermediate results from sub layers**, which makes it hard to set up this kind of relationship between time/resources and results qualities for DNN. 
  - Decompose with applications and dataset: Customized designs for specific application and dataset to make it possible to be anytime is feasible. **The real challenge is to propose a general approach which decomposes with applications and datasets**.
 
-### Tuesday May 18, 2020
+### Tuesday May 18, 2021
 #### Work Done:
  - Set up and understand the code and prove of SGD and backpropogation
  - Read the chapter 3 on methods to imporve the performance of Neural Networks; understand the function of cross-entropy and softmax with code
@@ -136,7 +136,7 @@ stdout/stderr:
  - Finish training IResNext on GPU cluster 
  - Meeting with Raj to discuss the overall plan and how to integrate the anytime DNN project into the PhD disertation
 
-### Wednesday May 19, 2020
+### Wednesday May 19, 2021
 #### Work Done:
  - Read research papers on anytime DNN ([IResNext](paper-notes/Lee-Arxiv-2018.md),[BranchNet-ICPP-2016](paper-notes/BranchNet-ICPP-2016.md), and [DistributedDNN-ICDCS-2017](paper-notes/DistributedDNN-ICDCS-2017.md)) 
  - Contine to learn the chapter3 of machine learning book
@@ -144,7 +144,7 @@ stdout/stderr:
    - The prove of cross-entropy's impact to solve the slow learning problem
    - The prove of using softmax function with log-likelihood cost to sovle the slow learning problem
 
-### Thursday May 20, 2020
+### Thursday May 20, 2021
 #### Work Done:
  - Finish the chapter3 of machine learning book
    - The problem of overfitting in DNN training, using regulariztion to overcome this problem
@@ -168,7 +168,7 @@ stdout/stderr:
    - tanh: compute any function39 mapping inputs to the range −1 to 1; stop learning when they saturate 
    - ReLU: increasing the weighted input to a rectified linear unit will never cause it to saturate, and so there is no corresponding learning slowdown. On the other hand, when the weighted input to a rectified linear unit is negative, the gradient vanishes, and so the neuron stops learning entirely.
 
-### Friday May 21, 2020
+### Friday May 21, 2021
 #### Work Done:
  - Have a meeting with Nicola and Sean to discuss the anytime project progress
    - update on the research papers and knowledges about DNN's training
@@ -182,7 +182,7 @@ stdout/stderr:
 
 ## Week 3 (May 24 to May 28)
 
-### Monday May 24, 2020
+### Monday May 24, 2021
 #### Work Done:
  - Search and read explainable artificial intelligence papers ([https://drive.google.com/drive/folders/155rW_8v6oM7f7ulN8S5Bh-OAGnjR8_C1?usp=sharing](https://drive.google.com/drive/folders/155rW_8v6oM7f7ulN8S5Bh-OAGnjR8_C1?usp=sharing))
  - Finish Chapter 4 and 5 of neural network and deep learning book
@@ -192,7 +192,7 @@ stdout/stderr:
        - illustration for sigmoid function
      - exploding gredient problem: weights and bias setting
 
-### Tuesday May 25, 2020
+### Tuesday May 25, 2021
 #### Work Done:
  - Finish Chapter 6 of neural network and deep learning book
    - the structure of convolutional neural network: 
@@ -202,7 +202,7 @@ stdout/stderr:
      - derivations for convolution operation
  - Read anytime DNN paper and XAI papers
 
-### Wednesday May 26, 2020
+### Wednesday May 26, 2021
 #### Work Done:
  - Understand the meaning of Knowledge and its usage in BranchyNet paper
    - entropy is used as a measure of how confident the calssifier at en exit point is about the sample
@@ -211,7 +211,7 @@ stdout/stderr:
  - Understand the backpropogation of convolutional neural network with implementation code
    - [https://github.com/MichalDanielDobrzanski/DeepLearningPython/blob/master/network3.py](https://github.com/MichalDanielDobrzanski/DeepLearningPython/blob/master/network3.py)
 
-### Thursday May 27, 2020
+### Thursday May 27, 2021
 #### Work Done:
  - Read anytime DNN IResNeXt [Lee-Arxiv-2018](paper-notes/anytime-dnn/Lee-Arxiv-2018.md)
  - Read paper [Figurnov-CVPR-2017](paper-notes/anytime-dnn/Figurnov-CVPR-2017.md)
@@ -224,7 +224,7 @@ stdout/stderr:
    - BLAS, Intel MKL with CPU; CUDA on GPU
 
 
-### Friday May 28, 2020
+### Friday May 28, 2021
 #### Work Done:
  - Read anytime paper [Lee-Arxiv-2018](paper-notes/anytime-dnn/Lee-Arxiv-2018.md)
  - Understand and use ResNet in PyTorch
@@ -235,3 +235,32 @@ stdout/stderr:
    - [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf)
    - **Internal Covariate Shift (ICS)** is defined as the change in the distribution of network activations due to the change in network parameters during training
    - BN can help to reduce the ICS
+
+## Week 4 (June 1 to June 4)
+
+### Tuesday June 1, 2021
+#### Work Done:
+ - Computation complexity for CNN models in Pytorch
+   - [ptflops](https://github.com/sovrasov/flops-counter.pytorch)
+     - Benchmark results for object classification/detection, segmentation models
+     - [Example code](codes/cnn-flpos.py)
+     - CNN's FLOPS (MACs), number of parameters; affected by the input image size
+ - [Measure the inference time of Deep Neural Networks](https://towardsdatascience.com/the-correct-way-to-measure-inference-time-of-deep-neural-networks-304a54e5187f)
+   - GPU execution mechanism: asynchronous execution; computations executed in parallel
+   - GPU warm-up
+     - GPU has several power states
+     - In lower power state, the GPU shuts down different pieces of hardware, including memory subsystems, internal subsystems, or even compute cores and caches.
+     - [Examples code](codes/dnn-time-measure.py)
+   - Common mistakes when measuring time
+     - Transferring data between the host and the device
+       - usually done when a tensor is created on the CPU and inference is then performed on the GPU. 
+       - this memory allocation takes a considerable amount of time, which subsequently enlarges the time for inference
+     - Not using GPU warm-up
+       - GPU initialization can take up to 3 seconds, which makes a huge difference when the timing is in terms of milliseconds.
+     - Using standard CPU timing
+       - The most common mistake made is to measure time **without synchronization**.
+       - ```torch.cuda.synchronize()```
+     - Taking one sample
+   - Measure throughput
+     - estimate the optimal batch size that allows for maximum parallelism
+     - given this optimal batch size, we measure the number of instances the network can process in one second.
