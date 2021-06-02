@@ -25,7 +25,16 @@
     * SEC152 (OUO Training)
     * HR498  (Ethics Training)
     * HR720  (Employee Conflict of Interest)
-    * HR497  (Sexual Harassment Prevention) 
+    * HR497  (Sexual Harassment Prevention)
+    * JHQ100 (Job & Hazard Questionnaire)
 
-- Met with Sean, Nicola, and Scott to discuss project assignments for the summer
+- Met with Sean, Nicola, and Scott to discuss project assignments for the summer.
     * (My project assignment is still TBD)
+
+### Wednesday June 2, 2021 ###
+- Successfully built and trained the facemask identification 'hello world' waggle plugin from 
+[this repository](https://github.com/waggle-sensor/plugin-helloworld-ml).
+- Attended Day 2 of virtual orientation.
+- Finished the SEC101 (CounterIntelligence Training)
+- Spoke with Sean about work on object tracking
+- Began [notes on OpenCV Object Tracking](notes/opencv_tracking.pdf)
