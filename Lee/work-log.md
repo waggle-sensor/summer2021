@@ -1,4 +1,4 @@
-# Minji Daily Work-Logs
+# Minji Daily Work-Log
 
 ## 1st Week 05/24-05/28
 
@@ -90,6 +90,7 @@
 -Today's Non-Technical Tasks
 * done with Indiana & Illinois tax (to HR)
 * Re-installed Docker on Mac (bc my RPI not enough memory)
+* Completed 1 required course in TMS
 
 -Today's Technical Tasks
 * Built up Email Notification from Node-RED: https://flows.nodered.org/node/node-red-node-email
@@ -102,6 +103,10 @@
 -Today's Non-Technical Tasks
 * Attended the ANL seminar 10-11AM (CST)
 * Prepared presentation for tomorrow (Approximately 10 min)
+* Completed 2 required courses in TMS
+* Read the chapter 2 of "Practical Node-RED Programming"
+* Scheduling Machine Learning study group @Purdue (start 7th this month)
 
 -Today's Technical Tasks
+*
 
