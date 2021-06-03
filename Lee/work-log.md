@@ -70,24 +70,38 @@
 ### Tuesday, 1th
 -Today's Non-Technical Tasks
 * Checked the schedule of TMS
-* Set up Raspberry Pi and sensors for checking
+* Set up Raspberry Pi and sensors for checking (RPI)
 * Discussion with Sean, Wolfgang, and Joe about filtered data in the SDR (finally figured out!)
    (Feedback: In the cloud case, we only have the HTTP/JSON API. Because we can filter data using the API, we can still do something similar to subscribing to only specific kind of data.)
    So, in current progress, MQTT is not required. (might be future plan)
    
 -Today's Technical Tasks
-1. Use HTTP request to get data from a REST endpoint on Node-RED (External REST API  - https://restcountries.eu) - Success!!
-2. Read the doc of REST API more. (Also check other relevant video as well)
+* Use HTTP request to get data from a REST endpoint on Node-RED (External REST API  - https://restcountries.eu) - Success!!
+* Read the doc of REST API more. (Also check other relevant video as well)
 
 -Things to do
-1. Test the HTTP request again with SDR.
-  1) Read example query data from SDR using HTTP / JSON request. (I think we talked about a couple of these examples.)
+* Test the HTTP request again with SDR.
+  1) Read example query data from SDR using HTTP / JSON request.
   2) Start with a simple “print value” node.
   3) Add a “filter when name = sys.uptime” node and add a trigger when that is < 1800.
   
 
 ### Wednesday, 2th
 -Today's Non-Technical Tasks
-*
+* done with Indiana & Illinois tax (to HR)
+* Re-installed Docker on Mac (bc my RPI not enough memory)
+
 -Today's Technical Tasks
-*
+* Built up Email Notification from Node-RED: https://flows.nodered.org/node/node-red-node-email
+  description: It is set up on the Raspberry Pi connected temperature sensors. If temp > 30, sent the alarm via email
+
+- Things to do
+* Read Slack API: https://flows.nodered.org/node/node-red-contrib-slack and Alarm Notification on Slack...
+
+### Thursday, 3th
+-Today's Non-Technical Tasks
+* Attended the ANL seminar 10-11AM (CST)
+* Prepared presentation for tomorrow (Approximately 10 min)
+
+-Today's Technical Tasks
+
