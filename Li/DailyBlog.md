@@ -18,16 +18,26 @@ Thoughts:
 Updates:
 * Finished Day 2 of orientation.
 * Met with Dr. Todd Munson and student group.
+* PyImage is expensive. Found an alternative to learn OpenCV through YT tutorials. Currently binging those.
+* Managed to run Docker on Windows 10 Home. Confirmed this through following shared YT tutorial.
 
+To Do:
+* Pre-SULI Survey, other Argonne forms/trainings, finish Getting Started portion of Waggle GitHub.
+* Crash course through OpenCV.
 
+Thoughts:
+* Still getting accustomed to remote work and SULI/Argonne.
+
+### June 3, 2021 (Day 3)
+
+Updates:
+* Attended welcome meeting by Dr. Rick Stevens and CELS Student Lecture by Dr. Sarah Owens.
+* Approved of LCRC account. Set up SSH successfully (after lots of trial and error).
 To Do:
 * 
 
 Thoughts:
 * 
-
-
-
 
 <!-- ## Heading 2
 ### Heading 3
