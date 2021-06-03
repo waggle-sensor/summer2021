@@ -225,3 +225,14 @@ Did not complete as much work as I would have liked, as I felt sick at the start
 * Finished first version of SAGE-883 static PSU check. Wrote PR for it, as well. Awaiting feedback from Joe.
 
 ---------
+
+### Thursday, 6/3 (7 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum
+* Looked over SAGE-856 issue
+* Attended CELS talk
+
+**Today's technical work:**
+* Overhauled SAGE-883 with revisions
+* learned how to squash commits
+----------
