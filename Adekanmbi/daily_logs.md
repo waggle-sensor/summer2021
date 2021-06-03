@@ -23,3 +23,11 @@
 - Attended student connect
 - Started JHQ training (3/8)
 - Request for LCRC access permission
+
+### Thursday June 3, 2021 ### 
+
+- Filled Dayforce time log
+- Attended CELS Student Lecture Series on "Detecting COVID in wastewater"
+- Can connect to LCRC
+- Completed JHQ training (8/8)
+- Studying the SAGE ECR source code
