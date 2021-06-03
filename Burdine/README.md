@@ -5,5 +5,6 @@ A table of contents for the content of this directory is given below.
 
 ## Table of Contents ##
 ----------------------
-* [plan.md](plan.md): A file containing my daily progress reports.
+* [plan.md](plan.md):   A file containing my daily progress reports.
+* [notes/](notes/):   A directory containing some of my LaTeX notes organized by topic
 

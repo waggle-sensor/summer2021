@@ -25,7 +25,24 @@
     * SEC152 (OUO Training)
     * HR498  (Ethics Training)
     * HR720  (Employee Conflict of Interest)
-    * HR497  (Sexual Harassment Prevention) 
+    * HR497  (Sexual Harassment Prevention)
+    * JHQ100 (Job & Hazard Questionnaire)
 
-- Met with Sean, Nicola, and Scott to discuss project assignments for the summer
+- Met with Sean, Nicola, and Scott to discuss project assignments for the summer.
     * (My project assignment is still TBD)
+
+### Wednesday June 2, 2021 ###
+- Successfully built and trained the facemask identification 'hello world' waggle plugin from 
+[this repository](https://github.com/waggle-sensor/plugin-helloworld-ml).
+- Attended Day 2 of virtual orientation.
+- Finished the SEC101 (CounterIntelligence Training)
+- Spoke with Sean about work on object tracking with OpenCV
+- Began [notes on OpenCV Object Tracking](notes/opencv_tracking.pdf)
+- Started work on an experimental OpenCV image tracking plugin: [plugin-motion-detector](https://github.com/waggle-sensor/plugin-motion-detector)
+
+### Thursday June 3, 2021 ###
+- Completed ESH100 (ES&H Orientation)
+- Completed ESH196A (Hazard Communication)
+- Read through the [Bolme paper on MOSSE filters](https://www.cs.colostate.edu/~draper/papers/bolme_cvpr10.pdf) for object tracking.
+- Did a brief review of FFT (convolution and correlation theorems, as shown [here](http://ugastro.berkeley.edu/infrared/ir_clusters/convolution.pdf)).
+

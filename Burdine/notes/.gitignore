@@ -1,0 +1,6 @@
+# ignore texmaker build artefacts
+*.log
+*.synctex.gz
+*.aux
+*.bbl
+*.blg

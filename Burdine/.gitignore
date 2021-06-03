@@ -1,3 +1,6 @@
 # ignore any editor files
 .vscode
 
+# ignore the directory with paper downloads:
+papers/
+

@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in,footskip=0.25in]{geometry}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\author{Colin Burdine}
+\title{OpenCV Object Tracking Notes}
+\date{}
+
+
+% math macros:
+\newcommand{\bv}[1]{\ensuremath\mathbf{#1}}
+
+\begin{document}
+\maketitle
+
+\section{Existing Methods}
+
+\subsection{Minimum Output Sum of Squares Error (MOSSE) Filters \cite{bolme_mosse}}
+
+\begin{itemize}
+\item \textit{Filter-Based} trackers work by initially selecting a target that is centered within a trackign window in the first frame.
+
+\item The target is then tracked by correlating the filter over a search window in the next frame, and the location that maximizes the correlation is considered the location in the next frame.
+
+\item The principle virtue of the MOSSE Filter is that it is fast, and can perform real-time tracking at high frame rates, making it suitable for edge computing purposes.
+
+\item The correlation is computed using the \textit{Fast Fourier Transform} (FFT; denoted by $\mathcal{F}$). The correlation $\sigma$ is given by the element-wise complex inner product of the filter matrix $h$ and the frame image $f$:
+
+$$\sigma = \mathcal{F}^{-1}(F \odot H^*)\quad \text{ where }\quad F = \mathcal{F}(f),\ H = \mathcal{F}(h)$$
+
+\item The most computationally expensive operation in this process is the 2D FFT and inverse 2D FFT, which can be performed in $\mathcal{O}(n^2\log(n))$ for an $n\times n$ filter.
+
+\item We shall break down the operation of MOSSE filters into some critical sections:
+
+\subsubsection*{Preprocessing}
+
+\item For simplicity, the MOSSE algorithm first reduces the image to a log grayscale. Then, the image is normalized to have pixel intensity values with mean $0$ and std. dev. $1$.
+
+\item Since the 2D FFT projects a rectangular region onto a torus shape, connecting the top with the bottom and the left side with the right side, we want to avoid a filter ``wrapping around" the edges of the image. This is remedied by multiplying the image by a cosine window.
+
+\subsubsection*{Applying the MOSSE Filter}
+
+Ideally, a desired MOSSE filter $H$ satisfies the condition $G = F \odot H^*$, however, we can find the filter $H$ that is closest to this equality in the $L^2$ sense by solving the optimization problem that minimizes the residue.
+
+$$\min_{H^*}\sum_{i}|F_i \odot H_i^* - G_i|^2$$
+
+Since the set of possible filters forms a Hilbert space, the solution (given by the Hilbert projection Theorem) is simply the projection of $G$ onto the basis of $F$, given by:
+
+$$H^* = \frac{\sum_{i} G_i \odot F_i^*}{\sum_{i} F_i \odot F_i^*}$$
+
+\subsubsection*{Regularization}
+
+\item A Mosse filter can fit a single image (e.g. $f_1$) perfectly, which is not desirable in general. Thus, we use the average of the filter trained across all of the images to produce a filter that generalizes better. This averaging is motivated by the idea of \textit{Bootstrap Aggregation}:
+
+$$H^* = \frac{1}{N}\sum_{i} \frac{G_i \odot F_i^*}{F_i \odot F_i^*}$$
+
+\item MOSSE filters can sometimes be unstable for a low number of images; however, we can apply regularization by replacing the denominator $(F_i \odot F_i^*)$ with $(F_i \odot F_i^*) + (\epsilon\bv{1})$, where $\epsilon$ is the regularization parameter and $\bv{1}$ is the matrix of ones. 
+
+\item (Note: Figure 4 in \cite{bolme_mosse} seems to indicate that regularization is not necessary, though it is unclear what the number of images $N$ is.)
+
+
+\subsubsection*{Initializing and Updating the MOSSE Filter}
+
+\item The MOSSE filters are initialized as described in the previous section, with an initial value of $\epsilon$. According to Figure 4 in \cite{bolme_mosse}, $\epsilon = 0.1$ seems to be a good choice.
+
+\item To update the filter as tracking progresses, a moving average with ``forgetfulness" parameter $\eta \in [0,1]$ is used in both the numerator and denominator. This results in the formula:
+
+$$H_i^* = \frac{A_i}{B_i},\quad \text{ where } \quad A_i = \eta(G_i \odot F_i^*) + (1-\eta)A_{i-1},\ B_i = \eta(F_i \odot F_i^*) + (1-\eta)B_{i-1}$$
+
+\item \cite{bolme_mosse} recommends selecting $\eta = 0.125$.
+
+\subsubsection*{Failure Detection}
+
+\item In order to detect if a tracked object has been lost, we determine a threshold value for the \textit{Peak to Sidelobe Ratio} (PSR). The PSR is computed for a correlation output $G$ as $$PSR(G) = \frac{g_{max} - \mu_{sl}}{\sigma_{sl}}$$ where $g_{max}$ is the point where the correlation is maximized (the object's estimated location), and $(\mu_{sl},\sigma_{sl})$ are the mean and std. dev. of the sidelobe region, which is the region of all pixels excluding those within some window centered about $g_{max}$. Typically, this window size is $11\times 11$ pixels.
+
+\item \cite{bolme_mosse} recommends that when the PSR drops below the threshold of 7.0, the object is lost.
+
+\end{itemize}
+
+
+\subsection{Generic Object Tracking Using Regression Networks (GOTURN)}
+
+\subsection{MedianFlow Tracking}
+
+\subsection{Discriminative Correlation Filters with Channel and Spatial Reliability (CSRT)}
+
+\subsection{Kernelized Correlation Filters (KCF)}
+
+\bibliographystyle{unsrt}
+\bibliography{opencv_tracking}
+\end{document}
