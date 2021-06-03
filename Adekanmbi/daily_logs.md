@@ -15,3 +15,11 @@
 
 - Completed new student orientation day 1
 - Completed new student tile
+
+
+### Wednesday June 2,2021 ###
+
+- Completed new student orientation day 2
+- Attended student connect
+- Started JHQ training (3/8)
+- Request for LCRC access permission

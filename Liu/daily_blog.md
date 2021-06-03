@@ -264,3 +264,12 @@ stdout/stderr:
    - Measure throughput
      - estimate the optimal batch size that allows for maximum parallelism
      - given this optimal batch size, we measure the number of instances the network can process in one second.
+
+### Wednesday June 2, 2021
+#### Work Done:
+ - Read papers about explainable artificial intelligence (XAI)
+   - [Learning Deep Features for Discriminative Localization](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf)
+     - [Demo in Pytorch](codes/pytorch_CAM.py) to show the most informative image regions relevant to the predicted class
+ - Read and understand Transformer
+   - Encoder and decoder
+   - [Object Detection with Transformers](https://medium.com/swlh/object-detection-with-transformers-437217a3d62e)
