@@ -1,7 +1,7 @@
 # Personal Directory - Yau
 
 ## Week 1
-### 06/02
+### 06/03
 - read about S3 and Go.
 - tested SAGE storage API on my computer.
 - went through tests in `handlers_test.go`.
