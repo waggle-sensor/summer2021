@@ -40,3 +40,9 @@
 - Began [notes on OpenCV Object Tracking](notes/opencv_tracking.pdf)
 - Started work on an experimental OpenCV image tracking plugin: [plugin-motion-detector](https://github.com/waggle-sensor/plugin-motion-detector)
 
+### Thursday June 3, 2021 ###
+- Completed ESH100 (ES&H Orientation)
+- Completed ESH196A (Hazard Communication)
+- Read through the [Bolme paper on MOSSE filters](https://www.cs.colostate.edu/~draper/papers/bolme_cvpr10.pdf) for object tracking.
+- Did a brief review of FFT (convolution and correlation theorems, as shown [here](http://ugastro.berkeley.edu/infrared/ir_clusters/convolution.pdf)).
+
