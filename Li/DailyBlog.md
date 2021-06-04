@@ -1,5 +1,8 @@
 # Heading 1
 ## Week 1 
+
+<br />
+
 ### June 1, 2021 (Day 1)
 
 Updates:
@@ -12,6 +15,8 @@ To Do:
 
 Thoughts:
 * Very excited to work with my new team and to learn new material!
+
+<br />
 
 ### June 2, 2021 (Day 2)
 
@@ -28,13 +33,30 @@ To Do:
 Thoughts:
 * Still getting accustomed to remote work and SULI/Argonne.
 
+<br />
+
 ### June 3, 2021 (Day 3)
 
 Updates:
 * Attended welcome meeting by Dr. Rick Stevens and CELS Student Lecture by Dr. Sarah Owens.
 * Approved of LCRC account. Set up SSH successfully (after lots of trial and error).
 To Do:
-* 
+* Training modules for working at Argonne. Lots of them.
+* Look at past SAGE projects.
+
+Thoughts:
+* xx
+
+<br />
+
+### June 4, 2021 (Day 4)
+
+Updates:
+* Met with Dr. Nicola Ferrier to discuss project topic. Will be tinkering around with OpenCV and other derivatives of it, finding ways to measure snow using sticks. For greater applications, finding how to do a more semi-supervised approach to machine learning in terms of training data.
+
+To Do:
+* Training modules for working at Argonne. Lots of them.
+* Acquire greater proficiency in computer vision / ML packages and seek inspiration from tutorials and online repositories.
 
 Thoughts:
 * 
