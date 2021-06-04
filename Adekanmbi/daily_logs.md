@@ -6,6 +6,7 @@
 - [ ] Trigger app profiling per app/input
 - [ ] Send defined profile metric to scheduler
 - [ ] Integrate app profiler into ECR
+- [ ] Send App profile to scheduler
 
 ## Week 1 ##
 
@@ -16,18 +17,22 @@
 - Completed new student orientation day 1
 - Completed new student tile
 
-
-### Wednesday June 2,2021 ###
+### Wednesday June 2, 2021 ###
 
 - Completed new student orientation day 2
 - Attended student connect
 - Started JHQ training (3/8)
 - Request for LCRC access permission
 
-### Thursday June 3, 2021 ### 
+### Thursday June 3, 2021 ###
 
 - Filled Dayforce time log
 - Attended CELS Student Lecture Series on "Detecting COVID in wastewater"
 - Can connect to LCRC
 - Completed JHQ training (8/8)
 - Studying the SAGE ECR source code
+
+### Thursday June 4, 2021 ###
+
+- Attended SAGE Sprint Demo and Retrospective
+- Ran successfully Sage ECR Locally as well as trying out API specifications
