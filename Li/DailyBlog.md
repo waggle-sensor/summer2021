@@ -1,4 +1,3 @@
-# Heading 1
 ## Week 1 
 
 <br />
