@@ -236,3 +236,14 @@ Did not complete as much work as I would have liked, as I felt sick at the start
 * Overhauled SAGE-883 with revisions
 * learned how to squash commits
 ----------
+
+### Friday, 6/4 (8 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum
+* Looked over SAGE-856 issue
+* Demo'd OverlayFS miniproject
+* Met with Joe about SAGE issues and planning for next week
+
+Good week. I mostly spent my time working on software issues, which was fun. 
+
+-----------------
