@@ -158,7 +158,6 @@
 
 ## 3st Week 06/07-06/11
 
-### Tuesday, 1th
 ### Monday, 7th
 -Today's Non-Technical Tasks
 * Enrolled CPT course (Purdue University)
