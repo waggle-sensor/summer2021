@@ -151,8 +151,8 @@
 -Today's Technical Tasks
 * After demo video prsentation, discussion for next steps.
 
-- Things to do:
-* need to query (ask some question to Sean)
+-Things to do:
+* Need to query in Sage Data Repo (ask some question to Sean)
 
 ************************************************************
 
@@ -164,7 +164,7 @@
 * Entorlled OEPT course (Purdue University)
 
 -Today's Technical Tasks
-
+* Database vs Cloud
 
 
   
