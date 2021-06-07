@@ -273,3 +273,22 @@ stdout/stderr:
  - Read and understand Transformer
    - Encoder and decoder
    - [Object Detection with Transformers](https://medium.com/swlh/object-detection-with-transformers-437217a3d62e)
+
+### Thursday June 3, 2021
+#### Work Done:
+ - Have a meeting with Rick to discuss how Transformer works
+   - NLP application, object detection
+   - Difference with RNN, LSTM
+   - Try the [example code](https://github.com/EnriqueNueve/TF_Toolbox/blob/main/TransformerBlock_2.5.0/TransformerExample.ipynb)
+ - Doing some experiments on ResNet-based models for understanding of the residual link
+   - [Pytorch with CIFAR10](https://github.com/kuangliu/pytorch-cifar)
+   - Train and evaluate the testing with/without residual link
+
+
+### Friday June 4, 2021
+#### Work Done:
+ - Read Transformer paper and the usage of Tranformer in Object detection
+ - Doing some experiments on ResNet-based models 
+   - Get results for the testing with/without residual link in ResNet18, ResNet50
+     - Inference time (average, variation), accuracy
+     - Understand the impact of residual link for CNN training and inference
