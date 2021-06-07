@@ -108,5 +108,25 @@
 * Scheduling Machine Learning study group @Purdue (start 7th this month)
 
 -Today's Technical Tasks
-*
+* Read FBP documents, and Node-RED Summary (PPT slides will be updated)
+  Node-RED is one of the FBP tools, which is Flow-Based Programming. FBP has a high-level, functional style so that the behavior of the system can be easily defined,
+  and Node-RED also inheritated to those advantages. The system contains "Nodes" which look simply to be icons that you drag and drop on to the canvas and wire together.
+  
+  Each Node offers different functionality, which can range from a simple debug node to be able to see what's going on in your flow.
+  there are 6 core nodes: inject, debug, function, change, switch, and template.
+
+  1) Inject Node literally, is to manual trigger, which is input.
+  2) On the other hands, debug, is output. This node can be used to display messages.
+  3) Function node allows JavaScript code to be run against the messages that are passed through it.
+  4) The change node can be used to modify a message’s properties and set context properties without having to resort to a Function node. 
+  5) The Switch node allows messages to be routed to different branches of a flow by evaluating a set of rules against each message.
+  6) The Template node can be used to generate text using a message’s properties to fill out a template.
+
+  Plus, Http Rest endpoint are used. Restcountries API are used to get countries dataset from https://restcountries.eu/rest/v2.
+  It includes the countries name, their languages, population, and capital and so on. But my goal this testing was that when I enter the capital, then country name pops up, which is filtered data by using its API service.
+  In the http request node, when the url is attched, debug(msg.payload) and country (format) will show the output. Node-RED UI shows the result of country. (X case sensitive)
+  ![image](https://user-images.githubusercontent.com/56851781/121044395-84f19480-c783-11eb-8b7a-8ae01156312a.png)
+
+
+
 
