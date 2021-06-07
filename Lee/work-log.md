@@ -122,10 +122,30 @@
   5) The Switch node allows messages to be routed to different branches of a flow by evaluating a set of rules against each message.
   6) The Template node can be used to generate text using a message’s properties to fill out a template.
 
-  Plus, Http Rest endpoint are used. Restcountries API are used to get countries dataset from https://restcountries.eu/rest/v2.
+  1. Http Rest endpoint
+  Restcountries API are used to get countries dataset from https://restcountries.eu/rest/v2.
   It includes the countries name, their languages, population, and capital and so on. But my goal this testing was that when I enter the capital, then country name pops up, which is filtered data by using its API service.
-  In the http request node, when the url is attched, debug(msg.payload) and country (format) will show the output. Node-RED UI shows the result of country. (X case sensitive)
-  ![image](https://user-images.githubusercontent.com/56851781/121044395-84f19480-c783-11eb-8b7a-8ae01156312a.png)
+  In the http request node, when the url is attched, debug(msg.payload) and country (format) will show the output.
+  
+  ![image](https://user-images.githubusercontent.com/56851781/121045789-d732b580-c783-11eb-93b8-9f1c24176dad.png)
+
+  Node-RED UI shows the result of country. (X case sensitive)
+  ![image](https://user-images.githubusercontent.com/56851781/121046031-e580d180-c783-11eb-9664-38107ed29cb6.png)
+
+  2. Alarm notification (email and slack)
+  When temperature value is higher than 20, In this case, temp 30 buttom, for example, and click the temp trigger, I could get HIGH Temperature Alarm. Warning sign as well as debug notification. If I click the temp 20, which is normal temperature, it sent normal temperature notification to my gmail. Of course, other email address is also possible to be used.
+
+  ![image](https://user-images.githubusercontent.com/56851781/121046438-fe898280-c783-11eb-9489-7d856bab4e00.png)
+  
+  For Slack notification, Webhook is required to send my JSON payload to the URL to my NODE-RED.
+  
+  ![image](https://user-images.githubusercontent.com/56851781/121047210-2ed12100-c784-11eb-837b-8d67359a184d.png)
+  ![image](https://user-images.githubusercontent.com/56851781/121047560-45777800-c784-11eb-89fc-7353b32f669b.png)
+
+
+
+  
+
 
 
 
