@@ -36,3 +36,18 @@ Contains daily updates on work done each day.
 ### Tuesday 6/1
 - Attended AI/ML team meeting.
 - Produced working prototype for summer camp day 1 notebook.
+
+### Wednesday 6/2
+- Birdsong research meeting w/ Mia.
+- Continued working on day 1 summer camp notebook and began day 3 notebook.
+
+### Thursday 
+- CELS student seminar.
+- ACLF visualization meeting.
+- Summer camp notebook check-in with John.
+- Continued day 1 and day 3 notebook work.
+
+### Friday
+- Birdsong research.
+- Education team meeting.
+- Continued day 1 and day 3 notebook work.
