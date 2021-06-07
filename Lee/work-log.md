@@ -115,14 +115,15 @@
   Each Node offers different functionality, which can range from a simple debug node to be able to see what's going on in your flow.
   there are 6 core nodes: inject, debug, function, change, switch, and template.
 
-  1) Inject Node literally, is to manual trigger, which is input.
-  2) On the other hands, debug, is output. This node can be used to display messages.
-  3) Function node allows JavaScript code to be run against the messages that are passed through it.
-  4) The change node can be used to modify a message’s properties and set context properties without having to resort to a Function node. 
-  5) The Switch node allows messages to be routed to different branches of a flow by evaluating a set of rules against each message.
-  6) The Template node can be used to generate text using a message’s properties to fill out a template.
+  * Inject Node literally, is to manual trigger, which is input.
+  * On the other hands, debug, is output. This node can be used to display messages.
+  * Function node allows JavaScript code to be run against the messages that are passed through it.
+  * The change node can be used to modify a message’s properties and set context properties without having to resort to a Function node. 
+  * The Switch node allows messages to be routed to different branches of a flow by evaluating a set of rules against each message.
+  * The Template node can be used to generate text using a message’s properties to fill out a template.
 
-  1. Http Rest endpoint
+  Note. my RPI is set up (turn on) and my laptop is used with my RPI IP address/port number - http://192.168.20.15:1880/ and http://192.168.20.15:1880/ui
+  ## 1. Http Rest endpoint
   Restcountries API are used to get countries dataset from https://restcountries.eu/rest/v2.
   It includes the countries name, their languages, population, and capital and so on. But my goal this testing was that when I enter the capital, then country name pops up, which is filtered data by using its API service.
   In the http request node, when the url is attched, debug(msg.payload) and country (format) will show the output.
@@ -132,7 +133,7 @@
   Node-RED UI shows the result of country. (X case sensitive)
   ![image](https://user-images.githubusercontent.com/56851781/121046031-e580d180-c783-11eb-9664-38107ed29cb6.png)
 
-  2. Alarm notification (email and slack)
+  ## 2. Alarm notification (email and slack)
   When temperature value is higher than 20, In this case, temp 30 buttom, for example, and click the temp trigger, I could get HIGH Temperature Alarm. Warning sign as well as debug notification. If I click the temp 20, which is normal temperature, it sent normal temperature notification to my gmail. Of course, other email address is also possible to be used.
 
   ![image](https://user-images.githubusercontent.com/56851781/121046438-fe898280-c783-11eb-9489-7d856bab4e00.png)
@@ -141,6 +142,29 @@
   
   ![image](https://user-images.githubusercontent.com/56851781/121047210-2ed12100-c784-11eb-837b-8d67359a184d.png)
   ![image](https://user-images.githubusercontent.com/56851781/121047560-45777800-c784-11eb-89fc-7353b32f669b.png)
+  
+  
+### Friday, 4th
+-Today's Non-Technical Tasks
+* Contacted with HR (Northwestern University) need to complete payment process
+
+-Today's Technical Tasks
+* After demo video prsentation, discussion for next steps.
+
+- Things to do:
+* need to query (ask some question to Sean)
+
+************************************************************
+
+## 3st Week 06/07-06/11
+
+### Tuesday, 1th
+### Monday, 7th
+-Today's Non-Technical Tasks
+* Enrolled CPT course (Purdue University)
+* Entorlled OEPT course (Purdue University)
+
+-Today's Technical Tasks
 
 
 
