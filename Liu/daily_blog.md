@@ -283,3 +283,12 @@ stdout/stderr:
  - Doing some experiments on ResNet-based models for understanding of the residual link
    - [Pytorch with CIFAR10](https://github.com/kuangliu/pytorch-cifar)
    - Train and evaluate the testing with/without residual link
+
+
+### Friday June 4, 2021
+#### Work Done:
+ - Read Transformer paper and the usage of Tranformer in Object detection
+ - Doing some experiments on ResNet-based models 
+   - Get results for the testing with/without residual link in ResNet18, ResNet50
+     - Inference time (average, variation), accuracy
+     - Understand the impact of residual link for CNN training and inference
