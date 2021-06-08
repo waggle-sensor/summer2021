@@ -169,3 +169,12 @@
   SHOW DATABASES, USE (database_name, ex. world), SHOW TABLES, SHOW TABLE STATUS, DESCRIBE (or DESC) (ex. city, or country, or countrylanguage), SELECT (* (all or Name, Population) from city), WHERE, BETWEEN, IN, LIKE, Sub Query, ANY(SOME), ALL, ORDER BY, DISTINCT, LIMIT.
 * All are not case-sensitive.
 * It will be eventually used for Node-RED with SageDataRepo.
+* Machine Learning group study - Tensor Flow with Python (easy/simple examples)
+
+
+### Tuesday, 8th
+-Today's Non-Technical Tasks
+* SEC course 2-245PM
+
+-Today's Technical Tasks
+* still learning MySQL
