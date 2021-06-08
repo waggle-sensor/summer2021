@@ -162,7 +162,7 @@
 -Today's Non-Technical Tasks
 * Enrolled CPT course (Purdue University)
 * Entorlled OEPT course (Purdue University)
-* Installed MySQL
+* Installed MySQL on Window
 
 -Today's Technical Tasks
 * Performed manipulation of the world sample database using MySQL
@@ -177,4 +177,4 @@
 * SEC course 2-245PM
 
 -Today's Technical Tasks
-* still learning MySQL
+* Still learning MySQL
