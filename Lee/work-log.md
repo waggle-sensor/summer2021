@@ -151,8 +151,8 @@
 -Today's Technical Tasks
 * After demo video prsentation, discussion for next steps.
 
-- Things to do:
-* need to query (ask some question to Sean)
+-Things to do:
+* Need to query in Sage Data Repo (ask some question to Sean)
 
 ************************************************************
 
@@ -162,14 +162,19 @@
 -Today's Non-Technical Tasks
 * Enrolled CPT course (Purdue University)
 * Entorlled OEPT course (Purdue University)
+* Installed MySQL on Window
 
 -Today's Technical Tasks
+* Performed manipulation of the world sample database using MySQL
+  SHOW DATABASES, USE (database_name, ex. world), SHOW TABLES, SHOW TABLE STATUS, DESCRIBE (or DESC) (ex. city, or country, or countrylanguage), SELECT (* (all or Name, Population) from city), WHERE, BETWEEN, IN, LIKE, Sub Query, ANY(SOME), ALL, ORDER BY, DISTINCT, LIMIT.
+* All are not case-sensitive.
+* It will be eventually used for Node-RED with SageDataRepo.
+* Machine Learning group study - Tensor Flow with Python (easy/simple examples)
 
 
+### Tuesday, 8th
+-Today's Non-Technical Tasks
+* SEC course 2-245PM
 
-  
-
-
-
-
-
+-Today's Technical Tasks
+* Still learning MySQL

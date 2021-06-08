@@ -247,3 +247,24 @@ Did not complete as much work as I would have liked, as I felt sick at the start
 Good week. I mostly spent my time working on software issues, which was fun. 
 
 -----------------
+## Week 4: 6/7 to 6/11
+-----------
+### Monday, 6/7 (4 Hours worked)
+**Today's non-technical work:**
+* Went to DMV and it consumed half my workday
+* Met with Yongho about peripheral configuration manager details
+* Brainstormed peripheral configuration manager framework
+
+------------
+### Tuesday, 6/7 (8 Hours worked)
+**Today's non-technical work:**
+* Met with Yongho about peripheral configuration manager details, & he demoed his camera Ansible script
+* Met with Omar about finer details of SAGE-856
+* Did some more brainstorming for peripheral management mechanism
+
+**Today's technical work:**
+* Wrote nx-core tests for SAGE-856
+
+--------------
+
+
