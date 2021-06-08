@@ -292,3 +292,16 @@ stdout/stderr:
    - Get results for the testing with/without residual link in ResNet18, ResNet50
      - Inference time (average, variation), accuracy
      - Understand the impact of residual link for CNN training and inference
+
+## Week 5 (June 7 to June 11)
+
+### Friday June 4, 2021
+#### Work Done:
+ - Summarize state-of-the-art anytime DNN works 
+ - Experiments with trained ResNet18 and ResNet50 on CIFAR10
+   - cutting residual links from different block to see its impact to accuracy and time
+ - Prepare for [slides of the Anytime DNN project](https://drive.google.com/file/d/1p1rqAe3iS5ijXcOPZ6lsYloKk6zcpjMa/view?usp=sharing)
+ - Have a meeting with Raj to discuss the update and next steps
+   - Observations:
+     - In ResNet18, cutting residual links of higer-layers causes little performance degradation (from 95.5% to 95.04%)
+     - In ResNet50, cutting residual links of higer-layers causes high performance degradation (from 95.88% to 35.45%) 

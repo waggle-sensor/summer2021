@@ -115,18 +115,66 @@
   Each Node offers different functionality, which can range from a simple debug node to be able to see what's going on in your flow.
   there are 6 core nodes: inject, debug, function, change, switch, and template.
 
-  1) Inject Node literally, is to manual trigger, which is input.
-  2) On the other hands, debug, is output. This node can be used to display messages.
-  3) Function node allows JavaScript code to be run against the messages that are passed through it.
-  4) The change node can be used to modify a message’s properties and set context properties without having to resort to a Function node. 
-  5) The Switch node allows messages to be routed to different branches of a flow by evaluating a set of rules against each message.
-  6) The Template node can be used to generate text using a message’s properties to fill out a template.
+  * Inject Node literally, is to manual trigger, which is input.
+  * On the other hands, debug, is output. This node can be used to display messages.
+  * Function node allows JavaScript code to be run against the messages that are passed through it.
+  * The change node can be used to modify a message’s properties and set context properties without having to resort to a Function node. 
+  * The Switch node allows messages to be routed to different branches of a flow by evaluating a set of rules against each message.
+  * The Template node can be used to generate text using a message’s properties to fill out a template.
 
-  Plus, Http Rest endpoint are used. Restcountries API are used to get countries dataset from https://restcountries.eu/rest/v2.
+  Note. my RPI is set up (turn on) and my laptop is used with my RPI IP address/port number - http://192.168.20.15:1880/ and http://192.168.20.15:1880/ui
+  ## 1. Http Rest endpoint
+  Restcountries API are used to get countries dataset from https://restcountries.eu/rest/v2.
   It includes the countries name, their languages, population, and capital and so on. But my goal this testing was that when I enter the capital, then country name pops up, which is filtered data by using its API service.
-  In the http request node, when the url is attched, debug(msg.payload) and country (format) will show the output. Node-RED UI shows the result of country. (X case sensitive)
-  ![image](https://user-images.githubusercontent.com/56851781/121044395-84f19480-c783-11eb-8b7a-8ae01156312a.png)
+  In the http request node, when the url is attched, debug(msg.payload) and country (format) will show the output.
+  
+  ![image](https://user-images.githubusercontent.com/56851781/121045789-d732b580-c783-11eb-93b8-9f1c24176dad.png)
+
+  Node-RED UI shows the result of country. (X case sensitive)
+  ![image](https://user-images.githubusercontent.com/56851781/121046031-e580d180-c783-11eb-9664-38107ed29cb6.png)
+
+  ## 2. Alarm notification (email and slack)
+  When temperature value is higher than 20, In this case, temp 30 buttom, for example, and click the temp trigger, I could get HIGH Temperature Alarm. Warning sign as well as debug notification. If I click the temp 20, which is normal temperature, it sent normal temperature notification to my gmail. Of course, other email address is also possible to be used.
+
+  ![image](https://user-images.githubusercontent.com/56851781/121046438-fe898280-c783-11eb-9489-7d856bab4e00.png)
+  
+  For Slack notification, Webhook is required to send my JSON payload to the URL to my NODE-RED.
+  
+  ![image](https://user-images.githubusercontent.com/56851781/121047210-2ed12100-c784-11eb-837b-8d67359a184d.png)
+  ![image](https://user-images.githubusercontent.com/56851781/121047560-45777800-c784-11eb-89fc-7353b32f669b.png)
+  
+  
+### Friday, 4th
+-Today's Non-Technical Tasks
+* Contacted with HR (Northwestern University) need to complete payment process
+
+-Today's Technical Tasks
+* After demo video prsentation, discussion for next steps.
+
+-Things to do:
+* Need to query in Sage Data Repo (ask some question to Sean)
+
+************************************************************
+
+## 3st Week 06/07-06/11
+
+### Monday, 7th
+-Today's Non-Technical Tasks
+* Enrolled CPT course (Purdue University)
+* Entorlled OEPT course (Purdue University)
+* Installed MySQL on Window
+
+-Today's Technical Tasks
+* Performed manipulation of the world sample database using MySQL
+  SHOW DATABASES, USE (database_name, ex. world), SHOW TABLES, SHOW TABLE STATUS, DESCRIBE (or DESC) (ex. city, or country, or countrylanguage), SELECT (* (all or Name, Population) from city), WHERE, BETWEEN, IN, LIKE, Sub Query, ANY(SOME), ALL, ORDER BY, DISTINCT, LIMIT.
+* All are not case-sensitive.
+* It will be eventually used for Node-RED with SageDataRepo.
+* Machine Learning group study - Tensor Flow with Python (easy/simple examples)
 
 
+### Tuesday, 8th
+-Today's Non-Technical Tasks
+* SEC course 2-245PM
 
-
+-Today's Technical Tasks
+* Still learning MySQL
