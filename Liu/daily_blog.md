@@ -295,7 +295,7 @@ stdout/stderr:
 
 ## Week 5 (June 7 to June 11)
 
-### Friday June 4, 2021
+### Monday June 7, 2021
 #### Work Done:
  - Summarize state-of-the-art anytime DNN works 
  - Experiments with trained ResNet18 and ResNet50 on CIFAR10
@@ -304,4 +304,19 @@ stdout/stderr:
  - Have a meeting with Raj to discuss the update and next steps
    - Observations:
      - In ResNet18, cutting residual links of higer-layers causes little performance degradation (from 95.5% to 95.04%)
-     - In ResNet50, cutting residual links of higer-layers causes high performance degradation (from 95.88% to 35.45%) 
+     - In ResNet50, cutting residual links of higer-layers causes high performance degradation (from 95.88% to 35.45%)
+
+### Tuesday June 8, 2021
+#### Work Done:
+ - Have a meeting with Nicola and Sean to discuss the Anytime DNN progress
+   - Motivations for anytime DNN: 
+     - efficiency of DNN's deployment
+     - flexible of multi-tenant DNNs' execution
+   - State-of-the-art Anytime DNN works
+     - early exit-based model
+     - ensemble based model
+     - nested network
+   - Experiments on removing residual links in ResNet model
+   - Next steps:
+     - try methods in spatial adptive, interest of range of images
+     - adjust resolution of images
