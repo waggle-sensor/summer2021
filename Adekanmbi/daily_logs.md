@@ -47,4 +47,11 @@
 - Studied how to use and implement pytest to test apps/plugins on ECR
 - Used jenkins to create CI tasks
 
+### Tuesday June 8, 2021 ###
+
+- Meeting on App Scheduling and Profiling
+- Wrote a function to run a docker app using a dockerfile
+
+
+
 
