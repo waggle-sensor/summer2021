@@ -32,7 +32,26 @@
 - Completed JHQ training (8/8)
 - Studying the SAGE ECR source code
 
-### Thursday June 4, 2021 ###
+### Friday June 4, 2021 ###
 
 - Attended SAGE Sprint Demo and Retrospective
 - Ran successfully Sage ECR Locally as well as trying out API specifications
+
+
+## Week 2 ##
+
+------------
+
+### Monday June 7, 2021 ###
+
+- Studied how to use and implement pytest to test apps/plugins on ECR
+- Used jenkins to create CI tasks
+
+### Tuesday June 8, 2021 ###
+
+- Meeting on App Scheduling and Profiling
+- Wrote a function to run a docker app using a dockerfile
+
+
+
+

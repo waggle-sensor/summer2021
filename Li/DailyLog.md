@@ -21,9 +21,9 @@ Thoughts:
 
 Updates:
 * Finished Day 2 of orientation.
-* Met with Dr. Todd Munson and student group.
-* PyImage is expensive. Found an alternative to learn OpenCV through YT tutorials. Currently binging those.
-* Managed to run Docker on Windows 10 Home. Confirmed this through following shared YT tutorial.
+* Met with Dr. Todd Munson and student connect group - aka .
+* PyImage is expensive. Found an alternative to learn OpenCV through [YT tutorials](https://www.youtube.com/watch?v=kdLM6AOd2vc&list=PLS1QulWo1RIa7D1O6skqDQ-JZ1GGHKK-K). Will be binging those.
+* Managed to run Docker on Windows 10 Home. Confirmed this through following shared [Docker YT tutorial](https://www.youtube.com/watch?v=7S73WERRqO4).
 
 To Do:
 * Pre-SULI Survey, other Argonne forms/trainings, finish Getting Started portion of Waggle GitHub.
@@ -39,12 +39,11 @@ Thoughts:
 Updates:
 * Attended welcome meeting by Dr. Rick Stevens and CELS Student Lecture by Dr. Sarah Owens.
 * Approved of LCRC account. Set up SSH successfully (after lots of trial and error).
+
 To Do:
 * Training modules for working at Argonne. Lots of them.
 * Look at past SAGE projects.
 
-Thoughts:
-* xx
 
 <br />
 
@@ -52,13 +51,29 @@ Thoughts:
 
 Updates:
 * Met with Dr. Nicola Ferrier to discuss project topic. Will be tinkering around with OpenCV and other derivatives of it, finding ways to measure snow using sticks. For greater applications, finding how to do a more semi-supervised approach to machine learning in terms of training data.
+* Project Guiding Question: Can we use ML but reduce the human effort required for training?
+* Project Goal: Snow level detection with NEON poles.
 
 To Do:
-* Training modules for working at Argonne. Lots of them.
-* Acquire greater proficiency in computer vision / ML packages and seek inspiration from tutorials and online repositories.
+* Complete training modules for working at Argonne. Lots of them.
+* Seek inspiration for OpenCV ideas from online repositories and literature. 
+* Look into CVAT.
+* Find educational sources for ML packages, specifically Deep Learning and/or PyTorch for OpenCV.
 
 Thoughts:
-* 
+* Excited and nervous to have project idea and goals laid out. Will be a big learning curve for computer vision, but I am confident I will overcome it.
+
+### June 47, 2021 (Day 5)
+
+Updates:
+* Finished most or all of training.
+* Forked Summer 2021 Waggle GitHub repository and cloned onto my PC.
+* Completed OpenCV YT tutorials up to 13. YT user generously provided his code, and I have been tinkering around with them. They can be found in Summer 2021 repository as [open_cv_demo](https://github.com/thejeffreyli/summer2021/tree/main/Li/opencv_demos).
+
+To Do:
+* Continue studying and working on OpenCV tutorials.
+
+
 
 <!-- ## Heading 2
 ### Heading 3
