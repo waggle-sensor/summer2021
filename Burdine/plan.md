@@ -53,4 +53,17 @@
 
 ## Week 1 ##
 ### Monday June 7, 2021 ###
+- Wrote some manual logic to handle the detection of occluded objects in `plugin-motion-detector`
+- Did some reading on the YOLO model paper
+    * The YOLO model seems to yield good results, but may not perform well in a general object detection setting, so custom models may need to be trained to detect "canonical" objects in the deployment setting
 
+    * 
+### Tuesday June 8, 2021 ###
+- Imported part of the KITTI multi-object tracking dataset for autonomous vehicles
+    * This dataset is quite large (and the image aspect ratios are non-standard), so it requires a lot of cleaning.
+    * This dataset may serve as a good proof-of-concept for tranferring the YOLO model to a specific use case, given a clean, labeled dataset.
+
+- Obtained push permissions for the `plugin-motion-detector` repository.
+
+### Wednesday, June 9, 2021 ###
+- Continued work on training YOLO on the KITTI vehicle detection dataset
