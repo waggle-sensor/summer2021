@@ -32,43 +32,35 @@ def detect_hsv(hsv_image, image):
     display(res)
 
 def find_mean_hsv(hsv_image):
+
+    # hsv_image[...,0] is all the values that represent the hue
+    # same for saturation and value
     mean_hue = hsv_image[..., 0].mean() # a measure of the avg color appearance of a scene
     mean_sat = hsv_image[..., 1].mean() # a measure of how intense or pure the colors of the scene are on avg
     mean_val = hsv_image[...,2].mean() # a measure of the avg luminance of a scene
 
     mean_hsv = [mean_hue, mean_sat, mean_val]
 
-    return mean_hsv
-    print("Mean hue:", mean_hue, "Mean sat:", mean_sat, "Mean val:", mean_val)
+    print("Mean actual:", mean_hue)
 
-    print("Hue SD:", hue_SD)
+    return mean_hsv
+
+def computeSD(list):
+    return np.std(list)
+
 def find_standard_deviation_hsv(hsv_image):
 
-    mean_hsv = find_mean_hsv(hsv_image)
+    hue_1D = hsv_image[...,0].flatten()
+    sat_1D = hsv_image[...,1].flatten()
+    val_1D = hsv_image[...,2].flatten()
 
-    mean_hue = mean_hsv[0]
+    hue_SD = computeSD(hue_1D)
+    sat_SD = computeSD(sat_1D)
+    val_SD = computeSD(val_1D)
 
-    print("Mean h:", mean_hue)
+    SD_hsv = [hue_SD, sat_SD, val_SD]
 
-
-    #
-    # sum = 0
-    #
-    # for i in range(len(hsv_image[...,0])):
-    #     sub_mean = hsv_image[i] - mean_hue
-    #
-    #     sum += (sub_mean ** 2)
-
-    # hue_SD = math.sqrt(sum)
-    #
-    # print("sum:", sum)
-    #
-    #
-    # stat_hue_SD = statistics.stdev(hsv_image[...,0])
-    #
-    # print("Stat_hue_SD:", stat_hue_SD)
-    #
-    # print("Find standard deviation hsv")
+    return SD_hsv
 
 def detect_edges(image):
     # figure out correct thresholds (use track bar?)
@@ -100,8 +92,14 @@ def main():
     detect_edges(image) # using canny edge detection
     detect_curved_contours()
 
-    print("image:", image)
-    print("hsv_image:", hsv_image)
+    ''' [x, y, hsv]  
+        
+    '''
+    px = image[100, 0, 2]
+    print(px)
+
+    #print("image:", image)
+   # print("hsv_image:", hsv_image)
 
 
 if __name__ == '__main__':
