@@ -44,7 +44,7 @@
   
 ### 6/8/2021 ###
 * Started Udacity course on Computer Vision
-  * Watched introduction, ...., lectures
+  * Watched introduction lectures
 * Computed mean hsv of image
 * Used Canny Edge Detection to detect the edges of given images
     * TODO: use this to detect density of edges
@@ -55,5 +55,17 @@
 * TODO:
     * Find Standard Deviations of hsv
     * Add Track bars
+    
+## 6/9/2021 ### 
+* Attended seminar on "How and When Do I Go To Graduate School" (9- 10am)
+* Had meeting with Writing coach                                (10:30 - 11:30 am)
+* Continued Watching Udacity videos on Computer Vision
+    * "Images as Functions" lecture
+* Updated Payroll information on Workday
+* Found standard deviations of hsv 
+* Wrote test cases
+    * Computing mean of hsv
+    * Computing Standard Deviation of hsv
+      * Still need to work on finding best way to test the standard deviation function
   
     
