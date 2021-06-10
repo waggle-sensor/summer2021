@@ -1,8 +1,6 @@
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
-import math
-import statistics
 
 
 def display(image_to_display):
@@ -12,6 +10,7 @@ def display(image_to_display):
 
 
 def detect_hsv(hsv_image, image):
+    # TODO: create track bar
     # Default values that can be used for lower and upper limit of hsv
     lower_hue = 90
     upper_hue = 130
@@ -41,8 +40,6 @@ def find_mean_hsv(hsv_image):
 
     mean_hsv = [mean_hue, mean_sat, mean_val]
 
-    print("Mean actual:", mean_hue)
-
     return mean_hsv
 
 def computeSD(list):
@@ -66,6 +63,7 @@ def detect_edges(image):
     # figure out correct thresholds (use track bar?)
     canny_image = cv2.Canny(image, 100, 200)
     display(canny_image)
+    return canny_image
 
 '''
     "Research suggests that people prefer curve contours to sharp contours" 
@@ -75,10 +73,23 @@ def detect_edges(image):
 def detect_curved_contours():
     print("Detect curved contours")
 
-def detect_edge_density():
-    print("Detect edge density")
+'''How much of the image is edges
+  (total num of edge pixels / total num of pixels) ----> confirm if this is the correct idea
 
+  Am I supposed to measure the length of the edges?
+  
+  Write more test cases so I can make sure this is accurate
+'''
+def find_edge_density(image):
 
+    edges_image = detect_edges(image)
+
+    total_pixels = edges_image.shape[0] * edges_image.shape[1] # rows times columns
+    white_pixels = cv2.countNonZero(edges_image)
+
+    edge_density_percentage = (white_pixels / total_pixels) * 100
+
+    return edge_density_percentage
 
 def main():
     file_path = 'images/image1.jpg'
@@ -89,18 +100,14 @@ def main():
     detect_hsv(hsv_image, image)
     find_mean_hsv(hsv_image)
     find_standard_deviation_hsv(hsv_image)
-    detect_edges(image) # using canny edge detection
     detect_curved_contours()
+    find_edge_density(image)
 
     ''' [x, y, hsv]  
         
     '''
     px = image[100, 0, 2]
     print(px)
-
-    #print("image:", image)
-   # print("hsv_image:", hsv_image)
-
 
 if __name__ == '__main__':
     main()

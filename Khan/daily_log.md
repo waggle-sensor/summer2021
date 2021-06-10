@@ -67,5 +67,21 @@
     * Computing mean of hsv
     * Computing Standard Deviation of hsv
       * Still need to work on finding best way to test the standard deviation function
-  
     
+### 6/10/2021 ###
+* Attended student connect meeting
+* Wrote more test cases for standard deviation
+* Watched Udacity video on canny edge detection
+* Debugged logging into lcrc and was finally able to correcty log into lcrc through PuTTY :)
+    * On Windows I should be using PuTTY instead of Command Prompt
+      to log into lcrc
+* Wrote method on finding edge density
+    * Wrote test cases for finding edge density to make sure I calculated it correctly
+    * Failed one test case where both images had very high edge densities
+    * TODO:
+        * Need to debug edge density calculations
+        * Also need to contact Nicola to make sure I am understanding edge density 
+          correctly and my thought process is correct about that for clarification
+    
+
+        
