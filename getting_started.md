@@ -48,6 +48,8 @@ Please feel free to reach out to Omar or Rajesh if you have any further question
 
 ## Part 5: SSH Setup
 
+Platform-specific instructions for configuing ssh clients can also be found here: [https://www.lcrc.anl.gov/for-users/getting-started/ssh/](https://www.lcrc.anl.gov/for-users/getting-started/ssh/)
+
 ### 1. Configure ./.ssh/config  
 
 Add the following configuration to the file `~/.ssh/config` in you home folder on the machine that you will be using to login from: (It the file does not exist, create it.)
