@@ -276,3 +276,12 @@ Good week. I mostly spent my time working on software issues, which was fun.
 * Wrote the rest of the doable tests for SAGE-856
 
 ----------
+
+### Thursday, 6/8 (7 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum
+
+**Today's technical work:**
+* Started learning flask for my peripheral configuration manager. For now, I'm calling it honeycomb. 
+* Started planning out honeycomb
+---------
