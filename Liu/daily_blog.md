@@ -320,3 +320,11 @@ stdout/stderr:
    - Next steps:
      - try methods in spatial adptive, interest of range of images
      - adjust resolution of images
+
+### Wednesday June 9, 2021
+#### Work Done:
+ - Train ResNet101 on CIFAR10 dataset and try to remove the residual links for each block
+ - Train ResNet50 on CIFAR100 dataset
+ - Read paper [Spatially Adaptive Computation Time for Residual Networks](paper-notes/anytime-dnn/Spatial-Adaptive-CVPR-2017.md) and deploy the code
+   - solve the issue of python version issue: original code is based on Python2.7, now can use with python3
+   - run the experiments to show the effect of resolution and input sparsity
