@@ -285,3 +285,11 @@ Good week. I mostly spent my time working on software issues, which was fun.
 * Started learning flask for my peripheral configuration manager. For now, I'm calling it honeycomb. 
 * Started planning out honeycomb
 ---------
+### Friday, 6/9 (7 Hours worked)
+**Today's non-technical work:**
+* Wrote presentation for monday 
+* Compared and wrote about Pros and Cons of different FT technologies in [list_of_ft_tech.md](./list_of_tech.md)
+
+**Today's technical work:**
+* Separated SAGE-856 into separate files
+----------
