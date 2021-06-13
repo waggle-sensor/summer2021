@@ -25,6 +25,9 @@ class Test(unittest.TestCase):
         mean_hue_actual = find_mean_hsv(hsv_test_image)[0]
         mean_hue_expected = hsv_test_image[25, 100, 0]
 
+        print("Actual:", mean_hue_actual)
+        print("Expected:", mean_hue_expected)
+
         self.assertEqual(mean_hue_actual ,mean_hue_expected)
 
     def test_mean_sat(self):

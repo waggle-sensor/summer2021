@@ -1,6 +1,9 @@
+import statistics
+
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
+import math
 
 
 def display(image_to_display):
@@ -34,11 +37,56 @@ def find_mean_hsv(hsv_image):
 
     # hsv_image[...,0] is all the values that represent the hue
     # same for saturation and value
-    mean_hue = hsv_image[..., 0].mean() # a measure of the avg color appearance of a scene
+    '''
+        Hue is in a circle [0, 180] because of this
+        so,
+        convert hue angles to a set of vectors from polar to cartesian coordinates
+        after taking mean of those coordinates, convert back to polar form
+    '''
+
+    hsv_1D = hsv_image[...,0].flatten()
+
+    x_list = []
+    y_list = []
+
+    for i in range(len(hsv_1D)):
+
+        # convert to a [0, 360] hue range
+        hsv_1D[i] *= 2
+
+        angle_x = math.radians(hsv_1D[i])
+        angle_y = math.radians(hsv_1D[i])
+
+        # convert to rectangular cartesian coordinates
+        x = math.cos(angle_x)
+        y = math.sin(angle_y)
+
+        x_list.append(x)
+        y_list.append(y)
+
+    x_mean = statistics.mean(x_list)
+    y_mean = statistics.mean(y_list)
+
+    # convert back to polar coordinates
+    mean_angle = ((math.atan(y_mean / x_mean)) * 180) / math.pi
+
+    # check quadrant
+    if ((x_mean < 0 and y_mean < 0) | (x_mean < 0 and y_mean > 0)):
+        mean_angle += 180
+    elif (x_mean > 0 and y_mean < 0):
+        mean_angle += 360
+
+    # convert back to hsv scale
+    mean_hue = mean_angle / 2
+
     mean_sat = hsv_image[..., 1].mean() # a measure of how intense or pure the colors of the scene are on avg
     mean_val = hsv_image[...,2].mean() # a measure of the avg luminance of a scene
 
     mean_hsv = [mean_hue, mean_sat, mean_val]
+
+    hsv_image[...,0] = mean_hue
+    hsv_image[...,1] = mean_sat
+    hsv_image[...,2] = mean_val
 
     return mean_hsv
 
