@@ -62,6 +62,17 @@
 - Created a [Test-Plugin](https://github.com/aabayomi/test-plugin)
 - Read Docker documentation on running containers and shell commands
 
+#### Friday June 11, 2021 ####
+
+- Completed the implementation for ECR App testing in Jenkins pipeline.
+
+
+
+
+
+
+
+
 
 
 

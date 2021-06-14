@@ -335,3 +335,11 @@ stdout/stderr:
    - tensorflow version issues: originally using TF 1.0.1
    - CUDA & CUDNN issue: cannot find the libcudart.so file, rebuild the instance with another image on Chameleon
  - [Pytorch tutorial](https://github.com/TingsongYu/PyTorch_Tutorial)
+
+### Friday June 11, 2021
+
+#### Work Done:
+ - Deploy the code for [Spatially Adaptive Computation Time for Residual Networks](paper-notes/anytime-dnn/Spatial-Adaptive-CVPR-2017.md) 
+   - train the CAT and SCAT model
+ - study **Feature Pyramids** and start to deploy the code 
+ - Prepare for the presentation on Anytime DNN project
