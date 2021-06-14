@@ -197,17 +197,17 @@
       }
   }
 vi Dockerfile
-# Linux image
+// Linux image
 FROM alpine
 WORKDIR /root/hello-world
 COPY HelloWorld.java /root/hello-world
 
-# Install JDK
+// Install JDK
 RUN apk add openjdk8
 ENV JAVA_HOME /usr/lib/jvm/java-1.8-oepnjdk
 ENV PATH $PATH:$JAVA_HOME/bin
 
-# Compile HelloWorld
+// Compile HelloWorld
 RUN javac HelloWorld.java
 
 ENTRYPOINT java HelloWorld
