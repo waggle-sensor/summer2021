@@ -44,7 +44,7 @@
   
 ### 6/8/2021 ###
 * Started Udacity course on Computer Vision
-  * Watched introduction, ...., lectures
+  * Watched introduction lectures
 * Computed mean hsv of image
 * Used Canny Edge Detection to detect the edges of given images
     * TODO: use this to detect density of edges
@@ -55,5 +55,40 @@
 * TODO:
     * Find Standard Deviations of hsv
     * Add Track bars
-  
     
+### 6/9/2021 ### 
+* Attended seminar on "How and When Do I Go To Graduate School" (9- 10am)
+* Had meeting with Writing coach                                (10:30 - 11:30 am)
+* Continued Watching Udacity videos on Computer Vision
+    * "Images as Functions" lecture
+* Updated Payroll information on Workday
+* Found standard deviations of hsv 
+* Wrote test cases
+    * Computing mean of hsv
+    * Computing Standard Deviation of hsv
+      * Still need to work on finding best way to test the standard deviation function
+    
+### 6/10/2021 ###
+* Attended student connect meeting
+* Wrote more test cases for standard deviation
+* Watched Udacity video on canny edge detection
+* Debugged logging into lcrc and was finally able to correcty log into lcrc through PuTTY :)
+    * On Windows I should be using PuTTY instead of Command Prompt
+      to log into lcrc
+* Wrote method on finding edge density
+    * Wrote test cases for finding edge density to make sure I calculated it correctly
+    * Failed one test case where both images had very high edge densities
+    * TODO:
+        * Need to debug edge density calculations
+        * Also need to contact Nicola to make sure I am understanding edge density 
+          correctly and my thought process is correct about that for clarification
+    
+### 6/11/2021 ###
+* Prepare presentation about project for Monday
+* Attend meeting with team
+* Research machine learning techniques I can use, and watch 
+ videos introducing machine learning so I can start preparing for the second part of the project
+  after detecting features
+* Corrected issues with mean hue so that caluclations took into account that hue is in a circle 
+* TODO:
+    * Look back at how I did canny edge detection and make sure I understand it and the threshholds

@@ -256,7 +256,7 @@ Good week. I mostly spent my time working on software issues, which was fun.
 * Brainstormed peripheral configuration manager framework
 
 ------------
-### Tuesday, 6/7 (8 Hours worked)
+### Tuesday, 6/8 (8 Hours worked)
 **Today's non-technical work:**
 * Met with Yongho about peripheral configuration manager details, & he demoed his camera Ansible script
 * Met with Omar about finer details of SAGE-856
@@ -267,4 +267,29 @@ Good week. I mostly spent my time working on software issues, which was fun.
 
 --------------
 
+### Wednesday, 6/7 (7 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum
 
+**Today's technical work:**
+* Troubleshot the SAGE-833 test. It does not work on either nodes I tested it on, but did last week. I have yet to figure out why I can't export the GPIOs. 
+* Wrote the rest of the doable tests for SAGE-856
+
+----------
+
+### Thursday, 6/8 (7 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum
+
+**Today's technical work:**
+* Started learning flask for my peripheral configuration manager. For now, I'm calling it honeycomb. 
+* Started planning out honeycomb
+---------
+### Friday, 6/9 (7 Hours worked)
+**Today's non-technical work:**
+* Wrote presentation for monday 
+* Compared and wrote about Pros and Cons of different FT technologies in [list_of_ft_tech.md](./list_of_tech.md)
+
+**Today's technical work:**
+* Separated SAGE-856 into separate files
+----------
