@@ -8,4 +8,6 @@
 *.vrb
 *.bbl
 *.blg
+*.zip
+*.pdf
 figures/
