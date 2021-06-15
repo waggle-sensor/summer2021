@@ -288,8 +288,20 @@ Good week. I mostly spent my time working on software issues, which was fun.
 ### Friday, 6/9 (7 Hours worked)
 **Today's non-technical work:**
 * Wrote presentation for monday 
-* Compared and wrote about Pros and Cons of different FT technologies in [list_of_ft_tech.md](./list_of_tech.md)
+* Compared and wrote about Pros and Cons of different FT technologies in [list_of_ft_tech.md](./list_of_ft_tech.md)
 
 **Today's technical work:**
 * Separated SAGE-856 into separate files
 ----------
+## Week 5, 6/14 to 6/18
+---------
+### Monday, 6/14 (8 Hours worked)
+**Today's non-technical work:**
+* Attended part 1 of student presentations 
+* Presented at part 1 of student presentations
+* Met with Joe to catch up
+
+**Today's technical work:**
+* Wrote Unit tests for SAGE-883
+-----------
+

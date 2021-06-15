@@ -343,3 +343,13 @@ stdout/stderr:
    - train the CAT and SCAT model
  - study **Feature Pyramids** and start to deploy the code 
  - Prepare for the presentation on Anytime DNN project
+
+## Week 6 (June 14 to June 18)
+### Monday June 14, 2021
+#### Work Done:
+ - Prepare for the slides about anytime DNN project and present it
+ - Have a meeting with the ML group to discuss some potential optimization techniques
+   - link-wise connection cutting, pruning-based approach
+   - **Feature Pyramids** and start to deploy the code 
+   - quantization-based approach
+ - Have a meeting with Aji and Yongho to discuss about the anytime DNNs project
