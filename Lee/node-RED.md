@@ -4,7 +4,6 @@
 * exchanges data across pre-defined connections by message passing, where the connections are specified externally to the processes.
 * can continue executing and functioning, as long as there is data to work on and destination for the output.
 * generally runs in less elapsed time than conventional programs, and make optimal use of many processors on a machine, with no special programming required to achieve this. 
-* A useful tool for building web applications and the Internet of Things (IoT) data handling.
 
 ## 6 core Nodes: inject, debug, function, change, switch, and template.
 * Each Node offers different functionality, which can range from a simple debug node to be able to see what's going on in your flow.
