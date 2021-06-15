@@ -16,5 +16,9 @@
 4. Function node allows JavaScript code to be run against the messages that are passed through it.
 ![image](https://user-images.githubusercontent.com/56851781/122111629-f669bc80-cded-11eb-8c0d-853dc4104993.png)
 
-6. Switch node allows messages to be routed to different branches of a flow by evaluating a set of rules against each message.
-7. Template node can be used to generate text using a message’s properties to fill out a template.
+5. Switch node allows messages to be routed to different branches of a flow by evaluating a set of rules against each message.
+6. Template node can be used to generate text using a message’s properties to fill out a template.
+
+* Plus, sub-flow:
+![image](https://user-images.githubusercontent.com/56851781/122114092-e43d4d80-cdf0-11eb-8431-b25f25301a56.png)
+
