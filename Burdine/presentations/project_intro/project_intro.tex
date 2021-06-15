@@ -84,319 +84,205 @@
 %  \tableofcontents%[hideallsubsections]
 %\end{frame}
 
-\section[Introduction]{Introduction}
+\section{Introduction}
 
-\begin{frame}[fragile]{Metropolis}
-
-  The \themename theme is a Beamer theme with minimal visual noise
-  inspired by the \href{https://github.com/hsrmbeamertheme/hsrmbeamertheme}{\textsc{hsrm} Beamer
-  Theme} by Benjamin Weiss.
-
-  Enable the theme by loading
-
-  \begin{verbatim}    \documentclass{beamer}
-    \usetheme{metropolis}\end{verbatim}
-
-  Note, that you have to have Mozilla's \emph{Fira Sans} font and XeTeX
-  installed to enjoy this wonderful typography.
-\end{frame}
-\begin{frame}[fragile]{Sections}
-  Sections group slides of the same topic
-
-  \begin{verbatim}    \section{Elements}\end{verbatim}
-
-  for which \themename provides a nice progress indicator \ldots
-  
+\begin{frame}{About Myself}
+\begin{center}
+\includegraphics[scale=0.25]{figures/me}
+\end{center}
+\begin{itemize}
+\item I am a recent graduate of Baylor University (Sic 'Em Bears!)
+\item I majored in Mathematics and Computer Science.
+\item I am currently working on my Master's at Baylor, doing research in the field of quantum computing.
+\end{itemize}
 \end{frame}
 
-\section{Titleformats}
+\begin{frame}{Problem Statement}
 
-\begin{frame}{Metropolis titleformats}
-	\themename supports 4 different titleformats:
-	\begin{itemize}
-		\item Regular
-		\item \textsc{Smallcaps}
-		\item \textsc{allsmallcaps}
-		\item ALLCAPS
-	\end{itemize}
-	They can either be set at once for every title type or individually.
+\begin{itemize}
+\item Over the past three to four decades, advances in computer vision systems and machine learning have enabled high-fidelity object detection, classification, and tracking.
+
+\item However, these computer vision models and methods are often quite complex and perform poorly on small computing devices.
+
+\pause 
+\item This poses a challenge if we want to integrate these methods into an \alert{edge computing} system like Waggle:\\[4mm]
+\begin{center}
+\includegraphics[scale=0.4]{figures/waggle_devs}
+\end{center}
+
+\end{itemize}
 \end{frame}
 
-\subsection{Tricks}
+\begin{frame}{Problem Statement}
 
-{
-    \metroset{titleformat frame=smallcaps}
-\begin{frame}{Small caps}
-	This frame uses the \texttt{smallcaps} titleformat.
+\begin{itemize}
+\item This summer, I will be working on a general-purpose plugin for Waggle that is capable of real-time detection of moving objects.
 
-	\begin{alertblock}{Potential Problems}
-		Be aware, that not every font supports small caps. If for example you typeset your presentation with pdfTeX and the Computer Modern Sans Serif font, every text in smallcaps will be typeset with the Computer Modern Serif font instead.
-	\end{alertblock}
-\end{frame}
-}
+\item There are a few constraints I will be operating within when developing this plugin:\\[4mm]
 
-{
-\metroset{titleformat frame=allsmallcaps}
-\begin{frame}{All small caps}
-	This frame uses the \texttt{allsmallcaps} titleformat.
+\begin{alertblock}{Requirements and Constraints}
+\begin{enumerate}
+\item Must be able to detect movement of reasonably large objects, but not background movements (e.g. waving branches).
 
-	\begin{alertblock}{Potential problems}
-		As this titleformat also uses smallcaps you face the same problems as with the \texttt{smallcaps} titleformat. Additionally this format can cause some other problems. Please refer to the documentation if you consider using it.
+\item Must be able to detect multiple objects at once and identify their bounding box in the scene.
 
-		As a rule of thumb: Just use it for plaintext-only titles.
-	\end{alertblock}
-\end{frame}
-}
+\item Must be able to optimize the system across a \alert{trade-off of resource utilization versus accuracy}.
+\end{enumerate}
+\end{alertblock}
 
-{
-\metroset{titleformat frame=allcaps}
-\begin{frame}{All caps}
-	This frame uses the \texttt{allcaps} titleformat.
-
-	\begin{alertblock}{Potential Problems}
-		This titleformat is not as problematic as the \texttt{allsmallcaps} format, but basically suffers from the same deficiencies. So please have a look at the documentation if you want to use it.
-	\end{alertblock}
-\end{frame}
-}
-
-\section{Elements}
-
-\begin{frame}[fragile]{Typography}
-      \begin{verbatim}The theme provides sensible defaults to
-\emph{emphasize} text, \alert{accent} parts
-or show \textbf{bold} results.\end{verbatim}
-
-  \begin{center}becomes\end{center}
-
-  The theme provides sensible defaults to \emph{emphasize} text,
-  \alert{accent} parts or show \textbf{bold} results.
+\end{itemize}
 \end{frame}
 
-\begin{frame}{Font feature test}
-  \begin{itemize}
-    \item Regular
-    \item \textit{Italic}
-    \item \textsc{SmallCaps}
-    \item \textbf{Bold}
-    \item \textbf{\textit{Bold Italic}}
-    \item \textbf{\textsc{Bold SmallCaps}}
-    \item \texttt{Monospace}
-    \item \texttt{\textit{Monospace Italic}}
-    \item \texttt{\textbf{Monospace Bold}}
-    \item \texttt{\textbf{\textit{Monospace Bold Italic}}}
-  \end{itemize}
+\section{Proposed Methods}
+
+\begin{frame}{Proposed Methods}
+\begin{itemize}
+
+\item I have already written a prototype motion detector system that uses a few different methods of varying complexity.
+
+\item These methods use OpenCV's Python3 API and Tensorflow2.
+
+\item In the plugin, these methods are realized as Python classes that conform to a common interface.\\[2mm]
+
+\pause
+
+\begin{exampleblock}{Motion Detector Methods}
+\begin{enumerate}
+\item Background Subtraction (via K-nearest Neighbors \cite{zivkovic_efficient_2006})\\[2mm]
+
+\item Dense Optical Flow (Farneb\"ack's method \cite{farneback})\\[2mm]
+
+\item TinyYOLOv2 (CNN-based object classifier \cite{YOLO}).\\[2mm]
+\end{enumerate}
+\end{exampleblock}
+\end{itemize}
 \end{frame}
 
-\begin{frame}{Lists}
-  \begin{columns}[T,onlytextwidth]
-    \column{0.33\textwidth}
-      Items
-      \begin{itemize}
-        \item Milk \item Eggs \item Potatos
-      \end{itemize}
+\begin{frame}{Background Subtraction}
 
-    \column{0.33\textwidth}
-      Enumerations
-      \begin{enumerate}
-        \item First, \item Second and \item Last.
-      \end{enumerate}
+\begin{itemize}
 
-    \column{0.33\textwidth}
-      Descriptions
-      \begin{description}
-        \item[PowerPoint] Meeh. \item[Beamer] Yeeeha.
-      \end{description}
-  \end{columns}
+\item Background Subtraction is performed by constructing a probability distribution representing the background pixels of an image \cite{zivkovic_efficient_2006}.\\[2mm]
+
+There are several implementations available in OpenCV:
+
+\begin{enumerate}
+\item Gaussian Mixture Model
+\item Kernel Density Estimation
+\item K-Nearest Neighbors\\[4mm]
+\end{enumerate}
+
+\end{itemize}
+
+\begin{exampleblock}{Example (TAU Urban A/V Scenes Dataset \cite{wang_curated_2021})}
+\begin{center}
+\includegraphics[scale=0.1]{figures/helsinki_bgsub}\includegraphics[scale=0.1]{figures/helsinki_bgsub_filtered}
+\end{center}
+\end{exampleblock}
+
 \end{frame}
 
-\begin{frame}{Animation}
-  \begin{itemize}[<+- | alert@+>]
-    \item \alert<4>{This is\only<4>{ really} important}
-    \item Now this
-    \item And now this
-  \end{itemize}
+\begin{frame}{Dense Optical Flow}
+
+\begin{itemize}
+\item In addition to where motion is occurring, Dense Optical Flow estimates the \alert{direction and velocity} of motion relative to the 2D image.
+
+\item Optical Flow is more computationally demanding, but can handle occluded objects with different trajectories.
+
+\item Optical Flow can be computed efficiently through \alert{Farneb\"ack's method} \cite{farnemack}.\\[4mm]
+\end{itemize}
+
+\begin{exampleblock}{Example (TAU Urban A/V Scenes Dataset \cite{wang_curated_2021})}
+\begin{center}
+\includegraphics[scale=0.1]{figures/helsinki_optflow}\includegraphics[scale=0.1]{figures/helsinki_optflow_filtered}
+\end{center}
+\end{exampleblock}
+
 \end{frame}
 
-\begin{frame}{Figures}
-  \begin{figure}
-    \newcounter{density}
-    \setcounter{density}{20}
-    \begin{tikzpicture}
-      \def\couleur{alerted text.fg}
-      \path[coordinate] (0,0)  coordinate(A)
-                  ++( 90:5cm) coordinate(B)
-                  ++(0:5cm) coordinate(C)
-                  ++(-90:5cm) coordinate(D);
-      \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) --(D) -- cycle;
-      \foreach \x in {1,...,40}{%
-          \pgfmathsetcounter{density}{\thedensity+20}
-          \setcounter{density}{\thedensity}
-          \path[coordinate] coordinate(X) at (A){};
-          \path[coordinate] (A) -- (B) coordinate[pos=.10](A)
-                              -- (C) coordinate[pos=.10](B)
-                              -- (D) coordinate[pos=.10](C)
-                              -- (X) coordinate[pos=.10](D);
-          \draw[fill=\couleur!\thedensity] (A)--(B)--(C)-- (D) -- cycle;
-      }
-    \end{tikzpicture}
-    \caption{Rotated square from
-    \href{http://www.texample.net/tikz/examples/rotated-polygons/}{texample.net}.}
-  \end{figure}
+\begin{frame}{TinyYOLO (CNN Object Detector)}
+
+\begin{itemize}
+
+\item The YOLO Model (``\textit{You Only Look Once}") is a Convolution Neural Network (CNN) that can identify and classify objects in a scene.
+
+\item It is computationally demanding, but can be trained to identify only moving objects that are of interest in the scene.
+
+\item The plugin prototype currently uses the pre-trained ``TinyYOLOv2" network, which has 9 layers, and over 15,000,000 trainable parameters.\\[4mm]
+
+\end{itemize}
+
+\begin{exampleblock}{Example (TAU Urban A/V Scenes Dataset \cite{wang_curated_2021})}
+\begin{center}
+\includegraphics[scale=0.1]{figures/helsinki_yolo}
+\end{center}
+\end{exampleblock}
+
 \end{frame}
 
-\begin{frame}{Tables}
-  \begin{table}
-    \caption{Largest cities in the world (source: Wikipedia)}
-    \begin{tabular}{lr}
-      \toprule
-      City & Population\\
-      \midrule
-      Mexico City & 20,116,842\\
-      Shanghai & 19,210,000\\
-      Peking & 15,796,450\\
-      Istanbul & 14,160,467\\
-      \bottomrule
-    \end{tabular}
-  \end{table}
+\section{Goals and Future Work}
+
+\begin{frame}{Goals}
+My Goals for this internship are the following:
+
+\begin{enumerate}
+\item I have little experience with computer vision, so I want to learn as much as possible about some of tools used in this field (OpenCV, etc.)
+
+\item I'd like to produce a usable final product that will contribute to the Waggle project in a meaningful way.
+
+\item I'd like to learn more about the mathematics of computer vision.
+
+\item I want to meet some great people at Argonne and learn as much as I can from them.
+
+\item I also want to be a great person to work with. 
+\end{enumerate}
 \end{frame}
 
-\begin{frame}{Blocks}
-  Three different block environments are pre-defined and may be styled with an
-  optional background color.
+\begin{frame}{Future Work}
 
-  \begin{columns}[T,onlytextwidth]
-    \column{0.5\textwidth}
-      \begin{block}{Default}
-        Block content.
-      \end{block}
 
-      \begin{alertblock}{Alert}
-        Block content.
-      \end{alertblock}
+My current priority list for my Waggle plugin project is the following:
 
-      \begin{exampleblock}{Example}
-        Block content.
-      \end{exampleblock}
+\begin{enumerate}
+\item Integrate the plugin prototype with PyWaggle so that it can publish object data to other plugins.
 
-    \column{0.5\textwidth}
+\item Begin work on more thorough documentation of the plugin.
 
-      \metroset{block=fill}
+\item Explore some ways of improving upon the aforementioned methods.
 
-      \begin{block}{Default}
-        Block content.
-      \end{block}
+\item Allow for the plugin to import custom-trained object detection models.
 
-      \begin{alertblock}{Alert}
-        Block content.
-      \end{alertblock}
-
-      \begin{exampleblock}{Example}
-        Block content.
-      \end{exampleblock}
-
-  \end{columns}
-\end{frame}
-\begin{frame}{Math}
-  \begin{equation*}
-    e = \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^n
-  \end{equation*}
-\end{frame}
-
-\begin{frame}{Line plots}
-  \begin{figure}
-    \begin{tikzpicture}
-      \begin{axis}[
-        mlineplot,
-        width=0.9\textwidth,
-        height=6cm,
-      ]
-
-        \addplot {sin(deg(x))};
-        \addplot+[samples=100] {sin(deg(2*x))};
-
-      \end{axis}
-    \end{tikzpicture}
-  \end{figure}
-\end{frame}
-\begin{frame}{Bar charts}
-  \begin{figure}
-    \begin{tikzpicture}
-      \begin{axis}[
-        mbarplot,
-        xlabel={Foo},
-        ylabel={Bar},
-        width=0.9\textwidth,
-        height=6cm,
-      ]
-
-      \addplot plot coordinates {(1, 20) (2, 25) (3, 22.4) (4, 12.4)};
-      \addplot plot coordinates {(1, 18) (2, 24) (3, 23.5) (4, 13.2)};
-      \addplot plot coordinates {(1, 10) (2, 19) (3, 25) (4, 15.2)};
-
-      \legend{lorem, ipsum, dolor}
-
-      \end{axis}
-    \end{tikzpicture}
-  \end{figure}
-\end{frame}
-\begin{frame}{Quotes}
-  \begin{quote}
-    Veni, Vidi, Vici
-  \end{quote}
-\end{frame}
-
-{%
-\setbeamertemplate{frame footer}{My custom footer}
-\begin{frame}[fragile]{Frame footer}
-    \themename defines a custom beamer template to add a text to the footer. It can be set via
-    \begin{verbatim}\setbeamertemplate{frame footer}{My custom footer}\end{verbatim}
-\end{frame}
-}
-
-\begin{frame}{References}
-  Some references to showcase [allowframebreaks] \cite{knuth92,ConcreteMath,Simpson,Er01,greenwade93}
-\end{frame}
-
-\section{Conclusion}
-
-\begin{frame}{Summary}
-
-  Get the source of this theme and the demo presentation from
-
-  \begin{center}\url{github.com/matze/mtheme}\end{center}
-
-  The theme \emph{itself} is licensed under a
-  \href{http://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons
-  Attribution-ShareAlike 4.0 International License}.
-
-  \begin{center}\ccbysa\end{center}
+\item Implement any suggestions and feedback from my mentors!
+\end{enumerate}
 
 \end{frame}
 
 {\setbeamercolor{palette primary}{fg=White, bg=Meteorite}
 \begin{frame}[standout]
-  Questions?
+  Questions?\\[10mm]
+  \small{
+  My Daily Progress Log:
+  \href{https://github.com/waggle-sensor/summer2021/tree/main/Burdine}{https://github.com/waggle-sensor/summer2021/tree/main/Burdine}\\[6mm]
+  Motion Detector Plugin:\\[2mm]
+  \href{https://github.com/waggle-sensor/plugin-motion-detector}{https://github.com/waggle-sensor/plugin-motion-detector}}
 \end{frame}
 }
 
-\appendix
-
-\begin{frame}[fragile]{Backup slides}
-  Sometimes, it is useful to add slides at the end of your presentation to
-  refer to during audience questions.
-
-  The best way to do this is to include the \verb|appendixnumberbeamer|
-  package in your preamble and call \verb|\appendix| before your backup slides.
-
-  \themename will automatically turn off slide numbering and progress bars for
-  slides in the appendix.
+\begin{frame}[allowframebreaks]
+\frametitle{References}
+\bibliographystyle{amsalpha}
+\bibliography{project_intro}
 \end{frame}
 
-\begin{frame}[allowframebreaks]{References}
+\appendix
 
-  \bibliography{demo}
-  \bibliographystyle{abbrv}
+\section{Appendix}
 
+\begin{frame}{YOLOv1 Architecture}
+\begin{center}
+\includegraphics[scale=0.3]{figures/yolo_cnn}\\
+(This image is from the original YOLO paper \cite{YOLO})
+\end{center}
 \end{frame}
 
 \end{document}
