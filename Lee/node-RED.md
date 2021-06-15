@@ -32,6 +32,8 @@
 
 * while these global variables are universally accessible, some applications may be better off using a link node to share data between flows. (cause link nodes not only share variables but also trigger different flows across projects in a sequences predictable way.) 
 ![image](https://user-images.githubusercontent.com/56851781/122117817-52840f00-cdf5-11eb-8888-89f795e5fbcc.png)
+![image](https://user-images.githubusercontent.com/56851781/122118684-4d738f80-cdf6-11eb-9094-d3952a2e88ea.png)
+
 
 
 
