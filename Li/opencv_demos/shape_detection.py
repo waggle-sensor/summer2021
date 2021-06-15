@@ -1,3 +1,13 @@
+'''
+
+Sources: 
+OpenCV Python Tutorial For Beginners 25
+https://www.youtube.com/watch?v=mVWQNeY1Pb4&list=PLS1QulWo1RIa7D1O6skqDQ-JZ1GGHKK-K&index=29
+
+More Readings:
+
+    
+'''
 import numpy as np
 import cv2
 
