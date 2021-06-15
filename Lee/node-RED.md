@@ -30,5 +30,8 @@
 * to fix "undefined", can increase the scope of count by going into the function and changing 'context' to 'flow'
 ![image](https://user-images.githubusercontent.com/56851781/122117136-814db580-cdf4-11eb-94d0-4e2194dc3631.png)
 
+* while these global variables are universally accessible, some applications may be better off using a link node to share data between flows. (cause link nodes not only share variables but also trigger different flows across projects in a sequences predictable way.) 
+![image](https://user-images.githubusercontent.com/56851781/122117817-52840f00-cdf5-11eb-8888-89f795e5fbcc.png)
+
 
 
