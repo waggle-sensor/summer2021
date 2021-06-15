@@ -19,6 +19,6 @@
 5. Switch node allows messages to be routed to different branches of a flow by evaluating a set of rules against each message.
 6. Template node can be used to generate text using a message’s properties to fill out a template.
 
-* Plus, sub-flow:
+* Plus, sub-flow: (all from the one source, want to change all in the Subflows-Selection to Subflow)
 ![image](https://user-images.githubusercontent.com/56851781/122114092-e43d4d80-cdf0-11eb-8431-b25f25301a56.png)
 
