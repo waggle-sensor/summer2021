@@ -1,4 +1,4 @@
-:### Node-RED
+### Node-RED
 
 * Node-RED inherits general functionality from FBP tools, which is Flow-Based-Programming.
 * exchanges data across pre-defined connections by message passing, where the connections are specified externally to the processes.
