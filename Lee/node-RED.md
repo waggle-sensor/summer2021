@@ -22,3 +22,13 @@
 * Plus, sub-flow: (all from the one source, want to change all in the Subflows-Selection to Subflow)
 ![image](https://user-images.githubusercontent.com/56851781/122114092-e43d4d80-cdf0-11eb-8431-b25f25301a56.png)
 
+
+## context, flow and global
+* 3 different levels to set/modify persistent variables with the range of their access is referred to as variable scope.
+![image](https://user-images.githubusercontent.com/56851781/122116772-01bfe680-cdf4-11eb-8083-0b03d3bb09bf.png)
+
+* to fix "undefined", can increase the scope of count by going into the function and changing 'context' to 'flow'
+![image](https://user-images.githubusercontent.com/56851781/122117136-814db580-cdf4-11eb-94d0-4e2194dc3631.png)
+
+
+
