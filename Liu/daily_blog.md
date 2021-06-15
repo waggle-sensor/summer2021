@@ -328,3 +328,28 @@ stdout/stderr:
  - Read paper [Spatially Adaptive Computation Time for Residual Networks](paper-notes/anytime-dnn/Spatial-Adaptive-CVPR-2017.md) and deploy the code
    - solve the issue of python version issue: original code is based on Python2.7, now can use with python3
    - run the experiments to show the effect of resolution and input sparsity
+
+### Thursday June 10, 2021
+#### Work Done:
+ - Deploy the code and solve issues from [Spatially Adaptive Computation Time for Residual Networks](paper-notes/anytime-dnn/Spatial-Adaptive-CVPR-2017.md) and  
+   - tensorflow version issues: originally using TF 1.0.1
+   - CUDA & CUDNN issue: cannot find the libcudart.so file, rebuild the instance with another image on Chameleon
+ - [Pytorch tutorial](https://github.com/TingsongYu/PyTorch_Tutorial)
+
+### Friday June 11, 2021
+
+#### Work Done:
+ - Deploy the code for [Spatially Adaptive Computation Time for Residual Networks](paper-notes/anytime-dnn/Spatial-Adaptive-CVPR-2017.md) 
+   - train the CAT and SCAT model
+ - study **Feature Pyramids** and start to deploy the code 
+ - Prepare for the presentation on Anytime DNN project
+
+## Week 6 (June 14 to June 18)
+### Monday June 14, 2021
+#### Work Done:
+ - Prepare for the slides about anytime DNN project and present it
+ - Have a meeting with the ML group to discuss some potential optimization techniques
+   - link-wise connection cutting, pruning-based approach
+   - **Feature Pyramids** and start to deploy the code 
+   - quantization-based approach
+ - Have a meeting with Aji and Yongho to discuss about the anytime DNNs project

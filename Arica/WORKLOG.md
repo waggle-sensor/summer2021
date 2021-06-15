@@ -276,3 +276,32 @@ Good week. I mostly spent my time working on software issues, which was fun.
 * Wrote the rest of the doable tests for SAGE-856
 
 ----------
+
+### Thursday, 6/8 (7 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum
+
+**Today's technical work:**
+* Started learning flask for my peripheral configuration manager. For now, I'm calling it honeycomb. 
+* Started planning out honeycomb
+---------
+### Friday, 6/9 (7 Hours worked)
+**Today's non-technical work:**
+* Wrote presentation for monday 
+* Compared and wrote about Pros and Cons of different FT technologies in [list_of_ft_tech.md](./list_of_ft_tech.md)
+
+**Today's technical work:**
+* Separated SAGE-856 into separate files
+----------
+## Week 5, 6/14 to 6/18
+---------
+### Monday, 6/14 (8 Hours worked)
+**Today's non-technical work:**
+* Attended part 1 of student presentations 
+* Presented at part 1 of student presentations
+* Met with Joe to catch up
+
+**Today's technical work:**
+* Wrote Unit tests for SAGE-883
+-----------
+

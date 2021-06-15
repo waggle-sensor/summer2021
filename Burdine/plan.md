@@ -65,5 +65,29 @@
 
 - Obtained push permissions for the `plugin-motion-detector` repository.
 
-### Wednesday, June 9, 2021 ###
+### Wednesday June 9, 2021 ###
 - Continued work on training YOLO on the KITTI vehicle detection dataset
+- Read Farneback's paper on fast dense optical flow
+
+### Thursday June 10, 2021 ###
+- Cleaned up the YOLO implementation in `plugin-motion-detector`
+    * It would be great to investigate training a custom YOLO model, assuming we have field data to do so.
+- Attended CELS lecture
+
+### Friday June 11, 2021 ###
+- Met with Sean and Nicola to discuss research progress and answer questions
+- Began work on documenting `plugin-motion-detector`
+- Began work on my [Introductory Presentation](https://drive.google.com/file/d/16wMCOGvX0aUp60ZUvsId03z5qRBw1jx-/view?usp=sharing).
+    * The LaTeX source can be found [here](presentations/project_intro/project_intro.tex).
+
+## Week 2 ##
+### Monday June 14, 2021 ###
+- Completed and proofread my introductory presentation.
+- Attended Weekly Team Meeting
+- Presented my introductory presentation.
+- Caught the end of the Quantum Computing Tutorial (day 1)
+
+### Tuesday June 15, 2021 ###
+- Attended weekly CV intern check-in.
+- Attended Quantum Computing Tutorial (day 2)
+
