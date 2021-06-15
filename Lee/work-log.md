@@ -220,3 +220,12 @@ ENTRYPOINT java HelloWorld
 
 -Today's Technical Tasks
 * Kubernetes/Cloud
+
+
+### Monday, 14th
+-Today's Non-Technical Tasks
+* Presentation of goal for internship
+* OEPT test
+
+-Today's Technical Tasks
+* JSON from W3school
