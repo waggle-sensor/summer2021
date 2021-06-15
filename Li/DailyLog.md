@@ -63,16 +63,74 @@ To Do:
 Thoughts:
 * Excited and nervous to have project idea and goals laid out. Will be a big learning curve for computer vision, but I am confident I will overcome it.
 
-### June 47, 2021 (Day 5)
+### June 7, 2021 (Day 5)
 
 Updates:
 * Finished most or all of training.
 * Forked Summer 2021 Waggle GitHub repository and cloned onto my PC.
 * Completed OpenCV YT tutorials up to 13. YT user generously provided his code, and I have been tinkering around with them. They can be found in Summer 2021 repository as [open_cv_demo](https://github.com/thejeffreyli/summer2021/tree/main/Li/opencv_demos).
+* Topics Covered: Reading Images (3), Reading Input Videos (4), Drawing Shapes (5), Setting Camera Parameters (6), Setting Text (7), Mouse Events (8-9), Image Operations (10), Bitwise Operations (11), Trackbar (12), Object Detection and Tracking with HSV (13)
 
 To Do:
 * Continue studying and working on OpenCV tutorials.
 
+### June 8, 2021 (Day 6)
+Updates:
+* Completed OpenCV YT tutorials up to 16.
+* Topics Covered: Simple Image Thresholding (14), Adaptive Thresholding (15), matplotlib (16)
+
+To Do:
+* Continue studying and working on OpenCV tutorials.
+
+### June 9, 2021 (Day 7)
+Updates:
+* Attended seminar 'When and How Do I Go to Graduate School?' by Dr. Bruce A. Lindvall, Assistant Dean of Graduate Admissions at Northwestern McCormick School of Engineering
+* Attended student connect session with 'Caffeinated Camels'
+* Attended introductory writing coach session led by Dr. Robert Boomsma. Talked about scientific writing, story telling, and resources. 
+* Felt feverish throughout the day and wanted to rest. Did not get much work done on tutorial.
+
+To Do:
+* Continue studying and working on OpenCV tutorials.
+
+### June 10, 2021 (Day 8)
+Updates:
+* Completed OpenCV YT tutorials up to 20.
+* Topics Covered: Morphological Transformations (17), Smoothing Images (18), Image Gradients and Edge Detection (19), Canny Edge Detection (20).
+* Started developing code for the NEON poles. Worked with object detection with HSV first, results were very unclear. Then I applied edge detection methods. After adjustments, Canny appeared best.
+
+To Do:
+* Continue studying and working on OpenCV tutorials.
+* Gather more image data from NEON.
+
+### June 11, 2021 (Day 9)
+Updates:
+* Meeting with Computer Vision Group. Discussed results from initial tests on NEON poles. Next steps will be line detection and image segmentation.
+* Acquired access to repository of NEON poles images. Will be useful for training models.
+* Worked and finalized PowerPoint Presentation for Monday.
+
+To Do:
+* Continue studying and working on OpenCV tutorials.
+* Look into deep learning and other tools, potentially. 
+
+### June 14, 2021 (Day 10)
+Updates:
+* Meeting with entire group. Presented introdutory research project PowerPoint.
+* Completed OpenCV YT tutorials up to 24.
+* Topics Covered: Image Pyramid (21), Image Blending (22), Find and Draw Contours (23), Motion Detection and Tracking with Contours (24).
+
+To Do:
+* Continue studying and working on OpenCV tutorials.
+* Need to ramp up project pace! Exciting things ahead.
+
+### June 15, 2021 (Day 11)
+Updates:
+* Meeting with Computer Vision Group. Discussed plans for this week: line detection and template matching.
+* Completed OpenCV YT tutorials up to ___.
+
+To Do:
+* Continue studying and working on OpenCV tutorials.
+* Look into annotation tools and deep learning with CV.
+* Read up on math behind CV.
 
 
 <!-- ## Heading 2
