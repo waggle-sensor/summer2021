@@ -92,3 +92,33 @@
 * Corrected issues with mean hue so that caluclations took into account that hue is in a circle 
 * TODO:
     * Look back at how I did canny edge detection and make sure I understand it and the threshholds
+    
+###  6/14/2021 ###
+* Practiced Presentation
+* Attended meeting where I learned about other projects and gave presentation on my project
+* Understand the canny edge detection threshold thing and understand canny edge detection
+* Update presentation for what I understand so far
+* Researched and calculated Entropy. Need to research more on finding the best way to do so.
+    * There should be an easy function call for it, cant find it?
+* GOAL for end of week:
+    * Be completely done computing features
+    * Have a good grasp on how to use Support Vector Machines
+    
+### 6/15/2021 ###
+* Attended meeting with CV team
+* Used Hough Line Transform to detect straight edges and compute straight edge density.
+    * Am running into issues about finding the best threshold values to use in order to 
+      detect all the straight lines
+* Wrote a couple of test cases for straight edge density computation
+* Wrote test cases for entropy -> Need to debug find_entropy function
+
+
+-----
+* Need to finish all of this before Thursday
+    * Straight Edge Density 
+    * Edge Density -> canny edge detection
+    * Entropy
+    * Symmetry
+    
+* On friday get more famililar with vector support machines
+

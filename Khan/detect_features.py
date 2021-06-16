@@ -3,6 +3,9 @@ import statistics
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
+from skimage.color import rgb2gray
+from skimage.filters.rank import entropy
+from skimage.morphology import disk
 import math
 
 
@@ -107,11 +110,17 @@ def find_standard_deviation_hsv(hsv_image):
 
     return SD_hsv
 
+# When using canny edge detection you have to take into account the thresholds
 def detect_edges(image):
     # figure out correct thresholds (use track bar?)
-    canny_image = cv2.Canny(image, 100, 200)
-    display(canny_image)
-    return canny_image
+    canny = cv2.Canny(image, 200, 0, 200)
+    canny_image_0_200 = cv2.Canny(image, 0, 200)
+    canny_image_199_300 = cv2.Canny(image, 0, 1000)
+    #display(canny_image_0_200)
+   # display(canny_image_199_300)
+    #display(canny)
+
+    return canny_image_199_300
 
 '''
     "Research suggests that people prefer curve contours to sharp contours" 
@@ -120,6 +129,32 @@ def detect_edges(image):
 '''
 def detect_curved_contours():
     print("Detect curved contours")
+
+
+def find_straight_edge_density(image):
+  '''
+  Find a measure of how many straight edges are in the scene image
+  uses Hough Line Transform method
+  :return: number of lines
+  '''
+
+  gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+  edges = cv2.Canny(gray_image,100 ,200)
+  cv2.imshow('img', image)
+  cv2.imshow('edges', edges)
+
+  hough_lines = cv2.HoughLinesP(edges, 1, np.pi / 180, 100, minLineLength = 80, maxLineGap = 4)
+
+  for line in hough_lines:
+      x1, y1, x2, y2 = line[0]
+      cv2.line(image, (x1, y1), (x2, y2), (0, 255, 0), 1)
+
+  display(image)
+
+  print(len(hough_lines))
+  return len(hough_lines)
+
 
 '''How much of the image is edges
   (total num of edge pixels / total num of pixels) ----> confirm if this is the correct idea
@@ -137,7 +172,41 @@ def find_edge_density(image):
 
     edge_density_percentage = (white_pixels / total_pixels) * 100
 
+
     return edge_density_percentage
+
+# The entropy or average information of an image is a measure of the degree of randomness in the image.
+def find_entropy(image):
+    p = np.array([(image--v).sum() for v in range(256)])
+    p = p / p.sum()
+
+    e = - (p * np.log2(p)).sum()
+
+    # entr_img = entropy(hsv_image, disk(10))
+    # display(entr_img)
+
+    # entropy = []
+    #
+    # hist = cv2.calcHist([hsv_image], [0], None, [256], [0, 255])
+    # total_pixel = hsv_image.shape[0] * hsv_image.shape[1]
+    #
+    # for item in hist:
+    #     probability = item / total_pixel
+    #     if probability == 0:
+    #         en = 0
+    #     else:
+    #         en = -1 * probability * (np.log(probability) / np.log(2))
+    #     entropy.append(en)
+    #
+    # sum_en = np.sum(entropy)
+
+    # gray_image = rgb2gray(image)
+    # entropy_image = entropy(gray_image, disk(5))
+
+    print("Entropy:", e)
+
+    return e
+
 
 def main():
     file_path = 'images/image1.jpg'
@@ -145,11 +214,13 @@ def main():
     image = cv2.imread(file_path, 1)    # hue --> [0, 180], sat/val --> [0, 255]
     hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
-    detect_hsv(hsv_image, image)
-    find_mean_hsv(hsv_image)
-    find_standard_deviation_hsv(hsv_image)
-    detect_curved_contours()
-    find_edge_density(image)
+    #detect_hsv(hsv_image, image)
+    #find_mean_hsv(hsv_image)
+    #find_standard_deviation_hsv(hsv_image)
+    #detect_curved_contours()
+    #find_edge_density(image)
+    find_straight_edge_density(image)
+    find_entropy(image)
 
     ''' [x, y, hsv]  
         

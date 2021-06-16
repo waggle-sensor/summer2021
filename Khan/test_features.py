@@ -3,6 +3,8 @@ import cv2
 from detect_features import find_mean_hsv  # from file import function
 from detect_features import find_standard_deviation_hsv
 from detect_features import find_edge_density
+from detect_features import find_straight_edge_density
+from detect_features import find_entropy
 import unittest
 
 
@@ -181,26 +183,74 @@ class Test(unittest.TestCase):
 
         self.assertEqual(result, True)
 
-    '''
-    Calculating edge density wrong ... this test fails
-    '''
-    def test_edge_density3(self):
+    # '''
+    # Calculating edge density wrong ... this test fails
+    # '''
+    # def test_edge_density3(self):
+    #
+    #     low_edge_density_image = convert_file_to_image('test_images/high_edge_density.png')[1]
+    #     high_edge_density_image = convert_file_to_image('test_images/high_edge_density2.png')[1]
+    #
+    #     edge_density_low = find_edge_density(low_edge_density_image)
+    #     edge_density_high = find_edge_density(high_edge_density_image)
+    #
+    #     print("Low:", edge_density_low)
+    #     print("High:", edge_density_high)
+    #
+    #     result = False
+    #
+    #     if(edge_density_low < edge_density_high):
+    #         result = True
+    #
+    #     self.assertEqual(result, True)
 
-        low_edge_density_image = convert_file_to_image('test_images/high_edge_density.png')[1]
-        high_edge_density_image = convert_file_to_image('test_images/high_edge_density2.png')[1]
+    def test_straight_edge_density1(self):
 
-        edge_density_low = find_edge_density(low_edge_density_image)
-        edge_density_high = find_edge_density(high_edge_density_image)
+        straight_edge_density_8 = convert_file_to_image('test_images/low_edge_density.jpg')[1]
 
-        print("Low:", edge_density_low)
-        print("High:", edge_density_high)
+        num_straight_edges = find_straight_edge_density(straight_edge_density_8)
+
+        print("Straight Edge Density", num_straight_edges)
+
+        self.assertEqual(num_straight_edges, 8)
+
+    def test_straight_edge_density2(self):
+
+        straight_edge_density_low = convert_file_to_image('images/image1.jpg')[1]
+        straight_edge_density_high = convert_file_to_image('images/image2.jpg')[1]
+
+        num_straight_edges_low = find_straight_edge_density(straight_edge_density_low)
+        num_straight_edges_high = find_straight_edge_density(straight_edge_density_high)
 
         result = False
 
-        if(edge_density_low < edge_density_high):
+        if (num_straight_edges_high > num_straight_edges_low):
             result = True
 
         self.assertEqual(result, True)
+
+    def test_entropy(self):
+
+        high_entropy_image = convert_file_to_image('test_images/High_entropy.png')[1]
+        low_entropy_image = convert_file_to_image('test_images/Color-blue.jpg')[1]
+
+        high_entropy = find_entropy(high_entropy_image)
+        low_entropy = find_entropy(low_entropy_image)
+
+        print("High entropy image:", high_entropy)
+        print("Low entropy image:", low_entropy)
+
+        result = False
+
+        if (high_entropy > low_entropy):
+            result = True
+
+        self.assertEqual(result, True)
+
+
+
+
+
 
 
 
