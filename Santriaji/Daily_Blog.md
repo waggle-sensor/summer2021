@@ -8,3 +8,7 @@ Contains daily updates on work done each day.
 - Attended group's presentation.
 - Meeting with Yongho and Liangkai.
 
+### Tuesday 06/15
+- Attended erc meeting.
+- Discussing how to get NX devices.
+- Setting the github for waggle-sensor/summer2021.
