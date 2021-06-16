@@ -40,3 +40,21 @@ For keeping records of progress.
 
 ### Friday 6/11
 - Experimenting with Valgrind
+- [An Automated Tool Profiling Service for the Cloud](https://dl-acm-org.turing.library.northwestern.edu/doi/10.1109/CCGrid.2016.57)
+- Perforamce Co-Pilot
+
+## Week 2 (6/14-6/18)
+
+### Monday 6/14
+- Big Group Presentations
+
+### Tuesday 6/15
+- ECR meeting
+
+### Wednesday 6/16
+- Developed Sample python ml script(just something simple to begin profiling)
+- Looking into NVidia NGC catalog
+- Trying to get TAU or PAPI to work with example script, plan to build up from there
+- A simple wrapper should be doable this week
+
+
