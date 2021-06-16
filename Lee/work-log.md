@@ -178,3 +178,54 @@
 
 -Today's Technical Tasks
 * Still learning MySQL
+
+
+### Wednesday, 9th
+-Today's Non-Technical Tasks
+* 
+
+-Today's Technical Tasks
+* 
+
+
+### Thursday, 10th
+-Today's Technical Tasks
+* Docker - Java Hello World
+  public class HellowWorld {
+    public static void main(String[] args){
+      System.out.println("Hello World!");
+      }
+  }
+vi Dockerfile
+// Linux image
+FROM alpine
+WORKDIR /root/hello-world
+COPY HelloWorld.java /root/hello-world
+
+// Install JDK
+RUN apk add openjdk8
+ENV JAVA_HOME /usr/lib/jvm/java-1.8-oepnjdk
+ENV PATH $PATH:$JAVA_HOME/bin
+
+// Compile HelloWorld
+RUN javac HelloWorld.java
+
+ENTRYPOINT java HelloWorld
+
+
+### Friday, 11th
+-Today's Non-Technical Tasks
+* Preparation presentation of goal for internship on Next Monday
+* Completed all the process on Northwestern Kronos System
+
+-Today's Technical Tasks
+* Kubernetes/Cloud
+
+
+### Monday, 14th
+-Today's Non-Technical Tasks
+* Presentation of goal for internship
+* OEPT test
+
+-Today's Technical Tasks
+* JSON from W3school
