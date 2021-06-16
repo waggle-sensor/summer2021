@@ -313,3 +313,11 @@ Good week. I mostly spent my time working on software issues, which was fun.
 **Today's technical work:**
 * Created tftp server and exchanged files from my linux and mac machines
 ------------
+### Wednesday, 6/16 (7 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum 
+
+**Today's technical work:**
+* Wrote some endpoints relating to node creation for honeycomb
+-------------
