@@ -12,3 +12,10 @@ Contains daily updates on work done each day.
 - Attended erc meeting.
 - Discussing how to get NX devices.
 - Setting the github for waggle-sensor/summer2021.
+
+### Tuesday 06/15
+- Attended impostor seminar.
+- Attended DOE seminar.
+- Ordered NX devices.
+- Learning Jenkins.
+- Preparing slides for ERC group feedback.
