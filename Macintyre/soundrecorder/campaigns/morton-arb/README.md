@@ -2,6 +2,8 @@
 
 ## Deployment Site
 
+Currently there is one device in Morton Arboretum.  The location of this device is 41.823762906651645, -88.04643457521607.
+
 
 
 ## Plan
@@ -14,6 +16,8 @@ Finally, the devices will be installed in the selected locations to record audio
 If the device's estimation for how long the storage and batteries will last is accurate, then the devices will all need to be inspected approximately every 17 days to charge the batteries and download the audio files off of the SD cards.
 
 ## Devices
+There is currently one BAR-LT deployed in Morton Arboretum.
+6 more BAR-LT devices are available to be deployed, along with 3 Solar BAR devices.
 #### BAR-LT
 The BAR-LT is a battery-powered device.  Each device has dimensions of 150 x 115 x 70 (mm) and weighs 900 grams if all 6 batteries are inside.
 Straps can be used to secure the BAR-LT to trees for recording.  The microphone can be configured to connect to the bottom of the recorder or to the side.
