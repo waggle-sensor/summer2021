@@ -32,10 +32,6 @@ def detect_hsv(hsv_image, image):
 
     res = cv2.bitwise_and(image, image, mask = mask)
 
-    display(image)
-    display(mask)
-    display(res)
-
 def find_mean_hsv(hsv_image):
 
     # hsv_image[...,0] is all the values that represent the hue
@@ -113,14 +109,10 @@ def find_standard_deviation_hsv(hsv_image):
 # When using canny edge detection you have to take into account the thresholds
 def detect_edges(image):
     # figure out correct thresholds (use track bar?)
-    canny = cv2.Canny(image, 200, 0, 200)
-    canny_image_0_200 = cv2.Canny(image, 0, 200)
-    canny_image_199_300 = cv2.Canny(image, 0, 1000)
-    #display(canny_image_0_200)
-   # display(canny_image_199_300)
+    canny= cv2.Canny(image, 250, 400)
     #display(canny)
 
-    return canny_image_199_300
+    return canny
 
 '''
     "Research suggests that people prefer curve contours to sharp contours" 
@@ -139,12 +131,18 @@ def find_straight_edge_density(image):
   '''
 
   gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+  #gray_image = image
 
-  edges = cv2.Canny(gray_image,100 ,200)
-  cv2.imshow('img', image)
-  cv2.imshow('edges', edges)
+  # blur the image while keeping the edges sharp
+  gray_image = cv2.bilateralFilter(gray_image, 9, 75, 75)
 
-  hough_lines = cv2.HoughLinesP(edges, 1, np.pi / 180, 100, minLineLength = 80, maxLineGap = 4)
+  display(gray_image)
+
+  edges = cv2.Canny(gray_image,0 ,40)
+
+  display(edges)
+
+  hough_lines = cv2.HoughLinesP(edges, 1, np.pi / 180, 100, minLineLength = 50, maxLineGap = 3)
 
   for line in hough_lines:
       x1, y1, x2, y2 = line[0]
@@ -177,10 +175,10 @@ def find_edge_density(image):
 
 # The entropy or average information of an image is a measure of the degree of randomness in the image.
 def find_entropy(image):
-    p = np.array([(image--v).sum() for v in range(256)])
-    p = p / p.sum()
-
-    e = - (p * np.log2(p)).sum()
+    # p = np.array([(image--v).sum() for v in range(256)])
+    # p = p / p.sum()
+    #
+    # e = - (p * np.log2(p)).sum()
 
     # entr_img = entropy(hsv_image, disk(10))
     # display(entr_img)
@@ -203,9 +201,65 @@ def find_entropy(image):
     # gray_image = rgb2gray(image)
     # entropy_image = entropy(gray_image, disk(5))
 
-    print("Entropy:", e)
+    gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    image_1D = gray_image.flatten()
+
+    length = image_1D.size
+    symset = list(set(image_1D))
+    nymsym = len(symset)
+    propab = [np.size(image_1D[image_1D == i]) / (1.0 * length) for i in symset]
+    e = np.sum([p * np.log2(1.0/p) for p in propab])
 
     return e
+
+def remove_one_col_pixels(image):
+
+    split = image.shape[1] - 1
+    image = image[:, :split]
+
+    return image
+
+def calculate_symmetry(image):
+
+    #split image into two equal left and right parts
+
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    ncols = image.shape[1]
+    csplit = ncols // 2
+
+    quadrants = [
+        image[:, :csplit],  # left
+        image[:, csplit:],  # right
+    ]
+
+    #quadrants[1] = np.flip(quadrants[1], axis = 1)
+
+    # make sure both sides of image are same size
+    if (quadrants[0].shape[1] < quadrants[1].shape[1]):
+        quadrants[1] = remove_one_col_pixels(quadrants[1])
+
+    elif (quadrants[0].shape[1] > quadrants[1].shape[1]):
+        quadrants[0] = remove_one_col_pixels(quadrants[0])
+
+    # calculate symmetry
+    intersection = cv2.bitwise_and(quadrants[0], quadrants[1])
+    union = cv2.bitwise_or(quadrants[0], quadrants[1])
+    symmetry = cv2.countNonZero(intersection) / cv2.countNonZero(union)
+
+    symmetry = cv2.countNonZero(intersection) / (quadrants[0].shape[0] * quadrants[0].shape[1])
+
+
+    '''
+    another way to test:
+        check if each each pixel is within a range for hsv for pixel on other image
+        
+        divide by half the total amount of pixels
+    
+    '''
+
+    return symmetry
 
 
 def main():
@@ -214,13 +268,14 @@ def main():
     image = cv2.imread(file_path, 1)    # hue --> [0, 180], sat/val --> [0, 255]
     hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
-    #detect_hsv(hsv_image, image)
-    #find_mean_hsv(hsv_image)
-    #find_standard_deviation_hsv(hsv_image)
-    #detect_curved_contours()
-    #find_edge_density(image)
+    detect_hsv(hsv_image, image)
+    find_mean_hsv(hsv_image)
+    find_standard_deviation_hsv(hsv_image)
+    detect_curved_contours()
+    find_edge_density(image)
     find_straight_edge_density(image)
     find_entropy(image)
+    calculate_symmetry(image)
 
     ''' [x, y, hsv]  
         

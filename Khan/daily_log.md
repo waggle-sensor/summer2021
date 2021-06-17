@@ -30,7 +30,7 @@
 ----
 
 ## Week 2 ##
-### 6/7/2021
+### 6/7/2021 ###
 * Watched Youtube tutorials on OpenCV
     * Downloaded openCV library and set up local enviroment
     * learned how to read and write to files on openCV
@@ -93,6 +93,10 @@
 * TODO:
     * Look back at how I did canny edge detection and make sure I understand it and the threshholds
     
+----
+
+## Week 3 ##
+    
 ###  6/14/2021 ###
 * Practiced Presentation
 * Attended meeting where I learned about other projects and gave presentation on my project
@@ -112,13 +116,16 @@
 * Wrote a couple of test cases for straight edge density computation
 * Wrote test cases for entropy -> Need to debug find_entropy function
 
-
+### 6/16/2021 ###
+* Attended seminar on "Overcoming Imposter Syndrome"
+* Accurately calculated entropy that passed test cases
+* Computed vertical reflectional symmetry of image
+* Wrote test cases for vertical reflectional symmetry of image
+* Strengthened Hough Line Transform by using bilateralFilter which blurs the image while keeping
+    edges sharp. Was able to more accurately compute the straight edge density this way
 -----
-* Need to finish all of this before Thursday
-    * Straight Edge Density 
-    * Edge Density -> canny edge detection
-    * Entropy
-    * Symmetry
     
-* On friday get more famililar with vector support machines
+* TODO:
+    * get more famililar with vector support machines and outline how you will go about
+    the second part of the project
 
