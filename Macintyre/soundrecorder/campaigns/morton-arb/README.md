@@ -2,6 +2,7 @@
 
 ## Deployment Site
 
+
 ## Plan
 
 The default settings for the Frontier Labs BAR work well, but the Gain is set to 40 dB, and it can be increased to 45 dB for better results.
