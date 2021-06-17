@@ -3,6 +3,7 @@
 ## Deployment Site
 
 Currently there is one device in Morton Arboretum.  The location of this device is 41.823762906651645, -88.04643457521607.
+The other available devices will be deployed along a line that goes through the location of the device that is already recording.
 
 
 
