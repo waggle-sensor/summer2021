@@ -13,7 +13,7 @@ Contains daily updates on work done each day.
 - Discussing how to get NX devices.
 - Setting the github for waggle-sensor/summer2021.
 
-### Tuesday 06/15
+### Tuesday 06/16
 - Attended impostor seminar.
 - Attended DOE seminar.
 - Ordered NX devices.
