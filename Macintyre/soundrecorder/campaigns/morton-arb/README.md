@@ -13,6 +13,7 @@ Once I receive locations in Morton Arboretum that we want the devices to be depl
 ### BAR-LT
 The BAR-LT is a battery-powered device.  Each device has dimensions of 150 x 115 x 70 (mm) and weighs 900 grams if all 6 batteries are inside.
 Straps can be used to secure the BAR-LT to trees for recording.  The microphone can be configured to connect to the bottom of the recorder or to the side.
+4 SD cards can be used in the device, but right now each device only has one SD card in it.
 
 
 ### Solar-BAR
