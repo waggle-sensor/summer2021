@@ -85,6 +85,15 @@
 - DOE OFfice of Science Seminar
 - 
 
+### June 17 
+- Group meeting
+    * Progress since the last meeting
+- CELS Student Lecture Series
+- Finally think I figured out how to read in GOES 16 data from AWS
+    * 13 micron brightness = band 16?
+    * Albedo from vis = ?
+
+
 
 
 
