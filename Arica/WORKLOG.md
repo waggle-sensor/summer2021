@@ -304,4 +304,29 @@ Good week. I mostly spent my time working on software issues, which was fun.
 **Today's technical work:**
 * Wrote Unit tests for SAGE-883
 -----------
+### Tuesday, 6/15 (7 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum 
+* Met with Joe to merge SAGE-856
+* Looked into network switch docs
 
+**Today's technical work:**
+* Created tftp server and exchanged files from my linux and mac machines
+------------
+### Wednesday, 6/16 (7 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum 
+
+**Today's technical work:**
+* Wrote some endpoints relating to node creation for honeycomb
+-------------
+### Thursday, 6/16 (8 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum
+* Met with Joe to discuss SAGE-883
+
+**Today's technical work:**
+* Worked on SDCard sanity tests for SAGE-883
+-------------

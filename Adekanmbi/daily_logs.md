@@ -68,6 +68,23 @@
 
 
 
+### Week 3 ###
+
+------------
+
+#### Monday June 15, 2021 ####
+
+- Completed First intern presentation
+- Read about Docker in Docker virtualization
+
+
+#### Tuesday June 15, 2021 ####
+
+- Got feedback on the implementation of app testing in Jenkins
+- Read the [Flock](https://dl.acm.org/doi/abs/10.1145/2461381.2461402) paper
+
+
+
 
 
 
