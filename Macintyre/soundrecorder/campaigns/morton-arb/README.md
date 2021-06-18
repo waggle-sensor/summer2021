@@ -61,3 +61,4 @@ woodpeckers (including a pileated woodpecker nest).
 The device that is currently deployed in the arboretum is in the largest purple region in the provided map. 
 
 ## Final Deployment
+The deployment of the devices is largely dependent on decisions that must be made about which devices will be used and where they will be deployed.  Once these decisions have been made, a timeline for the final deployment of the recorders can be determined. 
