@@ -82,16 +82,26 @@
 
 ### June 16
 - Weekly Student Seminar: Imposter Syndrome
-- DOE OFfice of Science Seminar
-- 
+- DOE Office of Science Seminar
+- NEXRAD plots
+- Searched for relevant literature
 
 ### June 17 
 - Group meeting
     * Progress since the last meeting
 - CELS Student Lecture Series
-- Finally think I figured out how to read in GOES 16 data from AWS
+- Fixed (I think) code to read in GOES 16 data from AWS
     * 13 micron brightness = band 16?
     * Albedo from vis = ?
+
+### June 18
+- Made introduction presentation for Monday
+- Made/updated this daily log 
+- Tile in google slides
+- Next week: 
+    * Get the time-height plots done
+    * Figure out what I need to grab from the satellite data
+    * 
 
 
 
