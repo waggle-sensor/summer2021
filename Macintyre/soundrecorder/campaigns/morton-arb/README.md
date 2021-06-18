@@ -2,7 +2,7 @@
 
 ## Deployment Site
 
-Currently there is one [BAR-LT](https://github.com/waggle-sensor/summer2021/tree/main/Macintyre/soundrecorder/campaigns/morton-arb#bar-lt) device in Morton Arboretum.  The location of this device is [41.823763, -88.046435](https://goo.gl/maps/CfyDaEhXZEYDkoFR8). The goal is to deploy upto a dozen recording devices in the arb, including 
+Currently there is one [BAR-LT](https://github.com/waggle-sensor/summer2021/tree/main/Macintyre/soundrecorder/campaigns/morton-arb#bar-lt) device in Morton Arboretum.  The location of this device is [41.823763, -88.046435](https://goo.gl/maps/CfyDaEhXZEYDkoFR8). The goal is to deploy up to a dozen recording devices in the arboretum, including 
 transects for studying the animal and bird species. 
 
 ## Plan
@@ -13,7 +13,7 @@ The plan for the Morton Arboretum Campaign consists of 4 parts.
 * Third, approval for the installation of devices in the selected locations must be received from someone at Morton Arboretum.
 * Finally, the devices will be installed in the selected locations to record audio.
 
-If the device's estimation for how long the storage and batteries will last is accurate, then the devices will all need to be inspected approximately every 17 days to charge the batteries and download the audio files off of the SD cards.
+If the device's estimation for how long the storage and batteries will last is accurate, then the devices will all need to be inspected approximately every two weeks to charge the batteries and download the audio files off of the SD cards.
 
 ## Devices
 There is currently one BAR-LT deployed in Morton Arboretum.
