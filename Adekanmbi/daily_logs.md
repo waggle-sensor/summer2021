@@ -72,7 +72,7 @@
 
 ------------
 
-#### Monday June 15, 2021 ####
+#### Monday June 14, 2021 ####
 
 - Completed First intern presentation
 - Read about Docker in Docker virtualization
@@ -84,9 +84,23 @@
 - Read the [Flock](https://dl.acm.org/doi/abs/10.1145/2461381.2461402) paper
 
 
+#### Wednesday June 16, 2021 ####
+
+- Attended the EDU Weekly Seminar
+- Attended DOE Office of Science Seminar
 
 
 
+#### Thursday June 17, 2021 ####
+
+- Read the paper on [Image Classification on IoT Edge Devices: Profiling and Modeling](https://arxiv.org/abs/1902.11119)
+- Attended Quantum Computing tutorial
+
+
+
+#### Friday June 18, 2021 ####
+
+- Modifying ECR code accept docker entrypoints in application specification YAML
 
 
 
