@@ -57,4 +57,8 @@ For keeping records of progress.
 - Trying to get TAU or PAPI to work with example script, plan to build up from there
 - A simple wrapper should be doable this week
 
+### Thursday 6/17
+- Still trying to get TAU working... Not sure of the problem
+- Tomorrow I will just try using pytau instead of the automatic instrumentation
+- This should at least give me some stats
 
