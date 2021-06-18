@@ -5,8 +5,6 @@ The Morton Arboretum Campaign is one of six pilot campaigns being used to monito
 These pilot campaigns will focus on using bioacoustic recordings and soundscape ecology to better understand these landscapes and the biodiversity within them.
 The six campaigns will serve as a demonstrations that the methods for data collection and analysis are feasible and ready for approval to be implemented on a broader scale.
 
-More information on the overall project can be found [here](https://github.com/waggle-sensor/summer2021/blob/main/Macintyre/soundrecorder/campaigns/morton-arb/resources/Beckman%20et%20al.pdf).
-
 
 ## Deployment Site
 
