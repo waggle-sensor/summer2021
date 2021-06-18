@@ -26,3 +26,4 @@ Contains daily updates on work done each day.
 
 ### Friday 06/18
 - Meeting with Yongho about integration between controller and profiler.
+- Meeting material https://docs.google.com/presentation/d/1cXbZWSa0d4oAzT6KGRvQu6rgubJJSXWwwxvnpMKEZUQ/edit?usp=sharing
