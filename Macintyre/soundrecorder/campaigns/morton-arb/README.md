@@ -30,6 +30,9 @@ If the device is set to record 24/7 with 6 fully charged batteries and one 128 G
 
 
 #### Solar-BAR
+![solar_bar_panel](https://user-images.githubusercontent.com/84532371/122607708-9ae33d00-d040-11eb-99f7-0d6bb4eebeaa.jpg)
+
+
 The Solar BAR has a built in solar panel and battery charger to 24/7 recording capabilites over long periods of time.
 Each device has dimensions of 250 x 305 x 115 (mm) and weighs 4 kg (including the 12V 7.2Ah battery).
 The devices can be mounted on a star picket, but they cannot be fixed to a tree in any way.
