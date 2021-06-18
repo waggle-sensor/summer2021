@@ -41,6 +41,8 @@ If the device is set to record 24/7 with the solar panel positioned to get consi
 
 <img src="./resources/morton-arb-birds.jpg" width=500 />
 
+Staff at the arboretum has provided this map, which breaks down different areas and the wildlife that can be found in them.
+
 * Red: Migratory birds visit these locations often (i.e warblers) to feed on the evergreen berries.
 There are also plenty of recurring cardinal and blue jay sightings at these locations.
 * Blue: Best location to spot water fowl is along the river. I’ve recorded sandhill cranes, blue
