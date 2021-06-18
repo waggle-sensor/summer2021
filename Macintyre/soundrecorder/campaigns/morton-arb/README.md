@@ -1,7 +1,7 @@
 # Morton Arboretum Campaign
 
 ## Overview
-The Morton Arboretum Campaign is one of six pilot campaigns being used to monitor biodiversity using acoustic data in the United States.
+The Morton Arboretum Campaign is one of six pilot campaigns being used in a study called Monitoring Biodiversity Using Acoustic Data in the United States.
 These pilot campaigns will focus on using bioacoustic recordings and soundscape ecology to better understand these landscapes and the biodiversity within them.
 The six campaigns will serve as a demonstrations that the methods for data collection and analysis are feasible and ready for approval to be implemented on a broader scale.
 
