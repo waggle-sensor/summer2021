@@ -321,7 +321,7 @@ Good week. I mostly spent my time working on software issues, which was fun.
 **Today's technical work:**
 * Wrote some endpoints relating to node creation for honeycomb
 -------------
-### Thursday, 6/16 (8 Hours worked)
+### Thursday, 6/17 (8 Hours worked)
 
 **Today's non-technical work:**
 * Attended Scrum
@@ -329,4 +329,14 @@ Good week. I mostly spent my time working on software issues, which was fun.
 
 **Today's technical work:**
 * Worked on SDCard sanity tests for SAGE-883
+-------------
+### Friday, 6/18 (7 Hours worked)
+
+**Today's non-technical work:**
+* Attended Demo meeting
+
+**Today's technical work:**
+* Worked on SDCard sanity tests for SAGE-883
+* Worked on RPI Sanity tests for SAGE-883
+* Looked into GPG signature verification
 -------------
