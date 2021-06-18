@@ -383,6 +383,9 @@ stdout/stderr:
  - [Notes about quantization-based model compression for anytime DNN design](https://www.notion.so/Pytorch-a37f4b66cafb43dc83f551d26009d090)
    - Post-Training Static/Dynamic Quantization
    - Quantization-aware training
+ - Train the Orthogonalized SGD model with Depth-nested network
+   - compatibility of TF1 with CUDA 10.1
+     - TF1 supports CUDA 10.0 at most
  - Have a meeting with Rick to discuss the progress of anytime project
    - quantization tends out to work better than prunning
    - try to observe some real challenges for methodology design
