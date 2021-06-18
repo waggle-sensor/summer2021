@@ -123,9 +123,18 @@
 * Wrote test cases for vertical reflectional symmetry of image
 * Strengthened Hough Line Transform by using bilateralFilter which blurs the image while keeping
     edges sharp. Was able to more accurately compute the straight edge density this way
------
-    
-* TODO:
-    * get more famililar with vector support machines and outline how you will go about
-    the second part of the project
+  
+### 6/17/2021 ###
+* Attended meeting with CV team
+* Attended student connect meeting
+* Instead of using Hough, changed my code to use opencv's Line Segment Detector in order to
+    compute straight edge density because this more accurately finds straight edges and 
+    runs much faster.
+* Computed total length of all line segments combined in order to compute the straight edge density
+* Watched videos on vector support machines
+
+### 6/18/2021 ###
+* Watched videos on machine learning and different machinen learning models
+* I am a little confused on what machine learning algorithm to use and how to go about the second part of the project
+
 
