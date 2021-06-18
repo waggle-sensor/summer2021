@@ -19,6 +19,9 @@ If the device's estimation for how long the storage and batteries will last is a
 There is currently one BAR-LT deployed in Morton Arboretum.
 6 more BAR-LT devices are available to be deployed, along with 3 Solar BAR devices.
 #### BAR-LT
+
+<img src="https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/b/a/bar-lt_-_standard_-_closed_small.jpg" width=500 />
+
 The BAR-LT is a battery-powered device.  Each device has dimensions of 150 x 115 x 70 (mm) and weighs 900 grams if all 6 batteries are inside.
 Straps can be used to secure the BAR-LT to trees for recording.  The microphone can be configured to connect to the bottom of the recorder or to the side.
 4 SD cards can be used in the device, but right now each device only has one SD card in it.
@@ -48,6 +51,13 @@ https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274
 
 ## Locations of Interest
 
-<img src="./resources/morton-arb-birds.jpg" width=350 />
+<img src="./resources/morton-arb-birds.jpg" width=500 />
+
+* Red: Migratory birds visit these locations often (i.e warblers) to feed on the evergreen berries.
+There are also plenty of recurring cardinal and blue jay sightings at these locations.
+* Blue: Best location to spot water fowl is along the river. I’ve recorded sandhill cranes, blue
+herons, and white egrets here more often than other water sources on the arb grounds.
+* Purple: Most remote / forested location of the arb grounds. Abundance of hawks and
+woodpeckers (including a pileated woodpecker nest).
 
 ## Final Deployment
