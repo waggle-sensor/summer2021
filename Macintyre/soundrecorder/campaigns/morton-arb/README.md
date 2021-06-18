@@ -32,7 +32,19 @@ Each device has dimensions of 250 x 305 x 115 (mm) and weighs 4 kg (including th
 The devices can be mounted on a star picket, but they cannot be fixed to a tree in any way.
 If the device is set to record 24/7 with the solar panel positioned to get consistent sunlight with a 128 GB SD card in it, the storage will fill up after 17 days.
 
-
+#### Images
+###### BAR-LT External
+https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/b/a/bar-lt_-_standard_-_closed_small.jpg
+###### BAR-LT Internal
+https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/b/a/bar-lt_new_small.jpg
+###### BAR-LT Deployed
+https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/i/m/img_20190117_172959.jpg
+###### SOLAR-BAR External
+https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/s/o/solar_bar_short.png
+###### SOLAR-BAR Internal
+https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/s/o/solar_bar_open_web_1.jpg
+###### SOLAR-BAR Deployed
+https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/h/a/hamelin_station_reserve_western_australia_deployment_1_1080.jpg
 
 ## Locations of Interest
 
