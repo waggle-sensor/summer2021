@@ -16,7 +16,7 @@ transects for studying the animal and bird species.
 ## Plan
 
 The plan for the Morton Arboretum Campaign consists of 4 parts.
-* First, locations need to be selected for inspection.
+* First, [locations](https://github.com/waggle-sensor/summer2021/blob/main/Macintyre/soundrecorder/campaigns/morton-arb/README.md#locations-of-interest) need to be selected for inspection.
 * Second, the selected locations need to be inspected to determine if a device can be installed there, and if one can be installed, it must be determined if the BAR-LT or the Solar BAR should be used.
 * Third, approval for the installation of devices in the selected locations must be received from someone at Morton Arboretum.
 * Finally, the devices will be installed in the selected locations to record audio.
