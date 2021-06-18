@@ -19,9 +19,7 @@ If the device's estimation for how long the storage and batteries will last is a
 There is currently one BAR-LT deployed in Morton Arboretum.
 6 more BAR-LT devices are available to be deployed, along with 3 Solar BAR devices.
 #### BAR-LT
-
-<img src="./user-images.githubusercontent.com/84532371/122603110-7fc0ff00-d039-11eb-9c92-27d7d900bae1.jpg" width=500 />
-
+![bar-lt_panel](https://user-images.githubusercontent.com/84532371/122607875-de3dab80-d040-11eb-9aae-be4236eb35d7.jpg)
 
 The BAR-LT is a battery-powered device.  Each device has dimensions of 150 x 115 x 70 (mm) and weighs 900 grams if all 6 batteries are inside.
 Straps can be used to secure the BAR-LT to trees for recording.  The microphone can be configured to connect to the bottom of the recorder or to the side.
@@ -31,7 +29,6 @@ If the device is set to record 24/7 with 6 fully charged batteries and one 128 G
 
 #### Solar-BAR
 ![solar_bar_panel](https://user-images.githubusercontent.com/84532371/122607708-9ae33d00-d040-11eb-99f7-0d6bb4eebeaa.jpg)
-
 
 The Solar BAR has a built in solar panel and battery charger to 24/7 recording capabilites over long periods of time.
 Each device has dimensions of 250 x 305 x 115 (mm) and weighs 4 kg (including the 12V 7.2Ah battery).
