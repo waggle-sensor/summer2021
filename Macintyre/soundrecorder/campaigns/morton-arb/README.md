@@ -20,7 +20,7 @@ There is currently one BAR-LT deployed in Morton Arboretum.
 6 more BAR-LT devices are available to be deployed, along with 3 Solar BAR devices.
 #### BAR-LT
 
-<img src="https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/b/a/bar-lt_-_standard_-_closed_small.jpg" width=500 />
+<img src="![bar-lt_panel](https://user-images.githubusercontent.com/84532371/122603110-7fc0ff00-d039-11eb-9c92-27d7d900bae1.jpg)" width=500 />
 
 The BAR-LT is a battery-powered device.  Each device has dimensions of 150 x 115 x 70 (mm) and weighs 900 grams if all 6 batteries are inside.
 Straps can be used to secure the BAR-LT to trees for recording.  The microphone can be configured to connect to the bottom of the recorder or to the side.
