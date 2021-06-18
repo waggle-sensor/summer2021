@@ -13,7 +13,7 @@ The plan for the Morton Arboretum Campaign consists of 4 parts.
 * Third, approval for the installation of devices in the selected locations must be received from someone at Morton Arboretum.
 * Finally, the devices will be installed in the selected locations to record audio.
 
-If the device's estimation for how long the storage and batteries will last is accurate, then the devices will all need to be inspected approximately every two weeks to charge the batteries and download the audio files off of the SD cards.
+If the device's estimation for how long the storage and batteries will last is accurate, then the devices will all need to be inspected approximately every two weeks to charge the batteries and download the audio files off of the SD cards.  These two week intervals will allow data to be analyzed and batteries to be charged while new data is being recorded.
 
 ## Devices
 There is currently one BAR-LT deployed in Morton Arboretum.
@@ -35,20 +35,7 @@ Each device has dimensions of 250 x 305 x 115 (mm) and weighs 4 kg (including th
 The devices can be mounted on a star picket, but they cannot be fixed to a tree in any way.
 If the device is set to record 24/7 with the solar panel positioned to get consistent sunlight with a 128 GB SD card in it, the storage will fill up after 17 days.
 
-#### Images
-###### BAR-LT External
-[test](https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/b/a/bar-lt_-_standard_-_closed_small.jpg)
-https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/b/a/bar-lt_-_standard_-_closed_small.jpg
-###### BAR-LT Internal
-https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/b/a/bar-lt_new_small.jpg
-###### BAR-LT Deployed
-https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/i/m/img_20190117_172959.jpg
-###### SOLAR-BAR External
-https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/s/o/solar_bar_short.png
-###### SOLAR-BAR Internal
-https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/s/o/solar_bar_open_web_1.jpg
-###### SOLAR-BAR Deployed
-https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/h/a/hamelin_station_reserve_western_australia_deployment_1_1080.jpg
+
 
 ## Locations of Interest
 
