@@ -377,3 +377,12 @@ stdout/stderr:
    - read source code and [tutorial](https://pytorch.org/tutorials/advanced/static_quantization_tutorial.html) to understand the Post-Training Static Quantization in Pytorch
  - Train the Orthogonalized SGD model with Depth-nested network
    - Virtual environment, Python2 with Tensorflow-gpu 1.14.0
+
+### Thursday June 17, 2021
+#### Work Done:
+ - [Notes about quantization-based model compression for anytime DNN design](https://www.notion.so/Pytorch-a37f4b66cafb43dc83f551d26009d090)
+   - Post-Training Static/Dynamic Quantization
+   - Quantization-aware training
+ - Have a meeting with Rick to discuss the progress of anytime project
+   - quantization tends out to work better than prunning
+   - try to observe some real challenges for methodology design
