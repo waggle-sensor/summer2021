@@ -34,6 +34,7 @@ If the device is set to record 24/7 with the solar panel positioned to get consi
 
 #### Images
 ###### BAR-LT External
+(test)[https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/b/a/bar-lt_-_standard_-_closed_small.jpg]
 https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/b/a/bar-lt_-_standard_-_closed_small.jpg
 ###### BAR-LT Internal
 https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274eb0a42f4/b/a/bar-lt_new_small.jpg
