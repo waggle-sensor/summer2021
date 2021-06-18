@@ -48,4 +48,6 @@ https://frontierlabs.com.au/media/catalog/product/cache/78fe0bae2c70c112230b4274
 
 ## Locations of Interest
 
+<img src="./resources/morton-arb-birds.jpg" width=350 />
+
 ## Final Deployment
