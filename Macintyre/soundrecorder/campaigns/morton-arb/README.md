@@ -2,7 +2,7 @@
 
 ## Deployment Site
 
-Currently there is one [BAR-LT](https://github.com/waggle-sensor/summer2021/tree/main/Macintyre/soundrecorder/campaigns/morton-arb#bar-lt) device in Morton Arboretum.  The location of this device is [41.823763, -88.046435](https://goo.gl/maps/CfyDaEhXZEYDkoFR8). The goal is to deploy up to a dozen recording devices in the arboretum, including 
+The [Morton Arboretum](https://mortonarb.org/) is located in Lisle, Illinois, and it contains 1,700 acres of land and over 222,000 live plants. Currently there is one [BAR-LT](https://github.com/waggle-sensor/summer2021/tree/main/Macintyre/soundrecorder/campaigns/morton-arb#bar-lt) device in Morton Arboretum.  The location of this device is [41.823763, -88.046435](https://goo.gl/maps/CfyDaEhXZEYDkoFR8). The goal is to deploy up to a dozen recording devices in the arboretum, including 
 transects for studying the animal and bird species. 
 
 ## Plan
