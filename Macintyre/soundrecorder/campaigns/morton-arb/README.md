@@ -58,4 +58,6 @@ herons, and white egrets here more often than other water sources on the arb gro
 * Purple: Most remote / forested location of the arb grounds. Abundance of hawks and
 woodpeckers (including a pileated woodpecker nest).
 
+The device that is currently deployed in the arboretum is in the largest purple region in the provided map. 
+
 ## Final Deployment
