@@ -221,7 +221,9 @@ ENTRYPOINT java HelloWorld
 -Today's Technical Tasks
 * Kubernetes/Cloud
 
+************************************************************
 
+## 4st Week 06/14-06/18
 ### Monday, 14th
 -Today's Non-Technical Tasks
 * Presentation of goal for internship
@@ -229,3 +231,39 @@ ENTRYPOINT java HelloWorld
 
 -Today's Technical Tasks
 * JSON from W3school
+
+
+### Tuesday, 15th
+-Today's Non-Technical Tasks
+* Presentation of goal for internship
+* OEPT test
+
+-Today's Technical Tasks
+* JSON from W3school
+
+
+### Wednesday, 16th
+-Today's Non-Technical Tasks
+* Presentation of goal for internship
+* OEPT test
+
+-Today's Technical Tasks
+* JSON from W3school
+
+
+### Thursday, 17th
+-Today's Non-Technical Tasks
+* Presentation of goal for internship
+* OEPT test
+
+-Today's Technical Tasks
+* JSON from W3school
+
+
+### Friday, 18th
+-Today's Non-Technical Tasks
+* SAGE sprint demo & retrospective (DHT real time data handling, and query from SDR on Node-RED presentation)
+* Linked-IN updated, Northwestern Kronos time entry system updated
+
+-Today's Technical Tasks
+*
