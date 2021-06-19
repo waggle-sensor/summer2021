@@ -182,10 +182,7 @@
 
 ### Wednesday, 9th
 -Today's Non-Technical Tasks
-* 
-
--Today's Technical Tasks
-* 
+-Today's Technical Tasks 
 
 
 ### Thursday, 10th
