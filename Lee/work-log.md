@@ -1,6 +1,7 @@
 # Minji Daily Work-Log
+************************************************************
 
-## 1st Week 05/24-05/28
+## 1st Week 05/24-05/28 (Main Goal: Set Up Environments)
 
 ### Monday, 24th
 -Today's Non-Technical Tasks
@@ -65,7 +66,7 @@
          
 ************************************************************
 
-## 2st Week 06/01-06/04
+## 2st Week 06/01-06/04 (Main Goal: Node-RED)
 
 ### Tuesday, 1th
 -Today's Non-Technical Tasks
@@ -156,7 +157,7 @@
 
 ************************************************************
 
-## 3st Week 06/07-06/11
+## 3st Week 06/07-06/11 (Main Goal: MySQL)
 
 ### Monday, 7th
 -Today's Non-Technical Tasks
@@ -213,28 +214,33 @@ ENTRYPOINT java HelloWorld
 ### Friday, 11th
 -Today's Non-Technical Tasks
 * Preparation presentation of goal for internship on Next Monday
-* Completed all the process on Northwestern Kronos System
+* Completed all the process on Northwestern Kronos System time entry system
 
 -Today's Technical Tasks
 * Kubernetes/Cloud
 
 ************************************************************
 
-## 4st Week 06/14-06/18
+## 4st Week 06/14-06/18 (Main Goal: JavaScript)
 ### Monday, 14th
 -Today's Non-Technical Tasks
 * Presentation of goal for internship
 * OEPT test
 
 -Today's Technical Tasks
-* JSON from W3school
-
-
+* started learning JavaScript with W3school basic tutorials
+* JavaScript is the programming language of the Web.
+* HTML to define the content of web pages (backbone),
+* CSS to specify the layout of web pages (design),
+* and JavaScript to program the "behavior" of web pages (action).
+* getElementById(): can change HTML content. e) document.getElementById("demo").innerHTML = "Hello JavaScript"
+* also possible to change HTML attribute values. e) src att of an <img> tag.
+* In HTML, JS code is inserted between <script> and </script> tags.
+* and scripts can be placed in the <body> or in the <head>, but placing it at the bottom of the <body> recommended due to the display speed.
+* External JS has several advantages: seperates HTML and code, easier to read and maintain, and can speed up page loads. (full URL, specific folder...)
+  
+  
 ### Tuesday, 15th
--Today's Non-Technical Tasks
-* Presentation of goal for internship
-* OEPT test
-
 -Today's Technical Tasks
 * JSON from W3school
 
