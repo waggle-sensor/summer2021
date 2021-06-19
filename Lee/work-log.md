@@ -251,21 +251,16 @@ ENTRYPOINT java HelloWorld
   
 
 ### Wednesday, 16th
--Today's Non-Technical Tasks
-* Presentation of goal for internship
-* OEPT test
-
 -Today's Technical Tasks
-* JSON from W3school
+*
 
 
 ### Thursday, 17th
 -Today's Non-Technical Tasks
-* Presentation of goal for internship
-* OEPT test
+* short meeting with Joe
 
 -Today's Technical Tasks
-* JSON from W3school
+*
 
 
 ### Friday, 18th
@@ -274,4 +269,6 @@ ENTRYPOINT java HelloWorld
 * Linked-IN updated, Northwestern Kronos time entry system updated
 
 -Today's Technical Tasks
-*
+* complete basic JavaScript W3school tutorials.
+
+-Things to do: Next week will focus on using Docker
