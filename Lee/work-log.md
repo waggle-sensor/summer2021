@@ -237,13 +237,18 @@ ENTRYPOINT java HelloWorld
 * also possible to change HTML attribute values. e) src att of an <img> tag.
 * In HTML, JS code is inserted between <script> and </script> tags.
 * and scripts can be placed in the <body> or in the <head>, but placing it at the bottom of the <body> recommended due to the display speed.
-* External JS has several advantages: seperates HTML and code, easier to read and maintain, and can speed up page loads. (full URL, specific folder...)
+* External JS has several advantages: seperates HTML and code, easier to read and maintain, and can speed up page loads. (full URL or specific folder either is ok.)
   
   
 ### Tuesday, 15th
 -Today's Technical Tasks
-* JSON from W3school
-
+* Still learning JavaScript with same tutorials as yesterday's one.
+* JavaScript can display data 4 different ways: innerHTML, document.write(), window.alert(), console.log()
+* innerHTML
+* document.write() - but will delete all existing HTML. so for testing recommended
+* window.alert()   - only OK button | prompt() two button, and string type
+* console.log()    - debugging purposes
+  
 
 ### Wednesday, 16th
 -Today's Non-Technical Tasks
