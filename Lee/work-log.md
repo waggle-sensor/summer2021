@@ -229,9 +229,7 @@ ENTRYPOINT java HelloWorld
 -Today's Technical Tasks
 * started learning JavaScript with W3school basic tutorials in https://www.w3schools.com/js/default.asp
 * JavaScript is the programming language of the Web. (In HTML, JavaScript programs are executed by the web browser.)
-* HTML to define the content of web pages (backbone),
-* CSS to specify the layout of web pages (design),
-* and JavaScript to program the "behavior" of web pages (action).
+* HTML to define the content of web pages (backbone), CSS to specify the layout of web pages (design), and JavaScript to program the "behavior" of web pages (action).
 * getElementById(): can change HTML content. e) document.getElementById("demo").innerHTML = "Hello JavaScript"
 * also possible to change HTML attribute values. e) src att of an <img> tag.
 * In HTML, JS code is inserted between <script> and </script> tags.
@@ -249,12 +247,12 @@ ENTRYPOINT java HelloWorld
 * console.log()    - debugging purposes
 * syntax
 * var: { var y = 2; } // y can be used here
-* let: { let y = 2; } // y can NOT be used here. Also, cannot be Redeclared. but redeclaring a variable with let, in another block, is allowed.
-* const: cannot be Reassigned, can change the properties of a constant object, but can not reassign the object. Declaring a variable with const is similar to let when it comes to Block Scope.
+* let: { let y = 2; } // y can NOT be used here. Also, cannot be redeclared. but redeclaring a variable with let, in another block, is allowed.
+* const: cannot be reassigned, can change the properties of a constant object, but can not reassign the object. Declaring a variable with const is similar to let when it comes to block scope.
 * If put a number in quotes, the rest of the numbers will be treated as "strings", and concatenated. e) x = 2 + 3 + "0"; x = 50; (str)
 * JavaScript has dynamic types, which means that the same variable can be used to hold different data types.
 * note: e) var x = {firstName:"John", lastName:"Doe"}; // Object | var cars = ["Saab", "Volvo", "BMW"]; //array (similart to list in Python I guess)
-  
+* However, the typeof operator returns "object" for arrays because in JavaScript arrays are objects.
   
 ### Wednesday, 16th
 -Today's Technical Tasks
