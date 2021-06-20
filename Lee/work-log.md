@@ -253,11 +253,15 @@ ENTRYPOINT java HelloWorld
 * JavaScript has dynamic types, which means that the same variable can be used to hold different data types.
 * note: e) var x = {firstName:"John", lastName:"Doe"}; // Object | var cars = ["Saab", "Volvo", "BMW"]; //array (similart to list in Python I guess)
 * However, the typeof operator returns "object" for arrays because in JavaScript arrays are objects.
-  
+
 ### Wednesday, 16th
 -Today's Technical Tasks
-*
-
+* Still learning JavaScript with same tutorials as yesterday's one.
+* functions, objects, and events
+* JavaScript objects are containers for named values called properties or methods.
+* Objects are variables too. But objects can contain many values.
+* can access object properties in two ways: objectName.propertyName or objectName["propertyName"]
+* "this" keyword
 
 ### Thursday, 17th
 -Today's Non-Technical Tasks
