@@ -9,3 +9,10 @@
 * Met with Raj about final changes to the Morton Arboretum Campaign
 * Spent most of the day finishing the campaign README and learning some tools in GIMP
 * Sent the final README to the group to ask for locations that I should inspect next week
+
+## Week 4
+### Monday, June 21
+* Meeting with the whole group for the rest of the presentations
+* Created the one slide summary of myself to put into the google drive
+* Learned some more about using GIMP
+* Tomorrow we will most likely meet to discuss which locations I should go check out at Morton
