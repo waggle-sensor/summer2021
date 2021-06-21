@@ -11,6 +11,13 @@ PyTorch supports the following backends for running quantized operators efficien
  - ARM CPUs (typically found in mobile/embedded devices)
 
 
+|         Metrics        | ResNet-50 | ResNet-50-Quant |
+|:----------------------:|:---------:|:---------------:|
+|      Average Time      |    34ms   |       9ms       |
+|        Accuracy        |   95.33%  |      89.19%     |
+| Computation Complexity |  1.3 GMac |    0.09 GMac    |
+|       Parameters       |  23.52 M  |     25.56 M     |
+
 ### Reference
  - https://pytorch.org/docs/stable/quantization.html
  - https://pytorch.org/blog/introduction-to-quantization-on-pytorch/
