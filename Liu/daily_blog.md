@@ -394,8 +394,13 @@ stdout/stderr:
 #### Work Done:
  - Solve the issue of compatibility of TF1 with CUDA 10.1
    - cannot find the NVIDIA driver after install CUDA 9.2 and update GPU driver
+   - not work after soft reboot Chameleon instance
 ```
 cc@llk-adnn:~$ nvidia-smi
 NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
 ```
-   - not work after soft reboot Chameleon instance 
+ - Implement the post-optimization based methods for anytime DNN
+   - adjust image resolution
+   - interests of range
+   - pruning network structure during inferece
+   - post static/dynamic quantization
