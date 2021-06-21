@@ -299,9 +299,14 @@ ENTRYPOINT java HelloWorld
 
 
 * Presentation Contents 2: Query SDR on Node-RED
-Trouble: Accessing and Querying SDR no problem on the terminal like this:![image](https://user-images.githubusercontent.com/56851781/122793311-0c153100-d289-11eb-814f-c3d49d6c64c4.png) but couldn't get access to do that on Node-RED. The issue was that everything sent to ignore, so http request ignores everything from inject,
+* Trouble: Accessing and Querying SDR no problem on the terminal like this:![image](https://user-images.githubusercontent.com/56851781/122793311-0c153100-d289-11eb-814f-c3d49d6c64c4.png) but couldn't get access to do that on Node-RED. The issue was that everything sent to ignore, so http request ignores everything from inject,
 which is EOF, end of file, that is specifially what they gave me back. which means, this works.
   
+  ![image](https://user-images.githubusercontent.com/56851781/122794063-d9b80380-d289-11eb-8dc9-6800135f6792.png)
+* Also changed JSON formatting in inject node like this:
+  ![image](https://user-images.githubusercontent.com/56851781/122794204-010ed080-d28a-11eb-9f8b-874d16a51b00.png)
+
+
 
 
 
