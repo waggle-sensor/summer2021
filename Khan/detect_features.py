@@ -1,13 +1,7 @@
 import statistics
-
 import cv2
 import numpy as np
-from matplotlib import pyplot as plt
-from skimage.color import rgb2gray
-from skimage.filters.rank import entropy
-from skimage.morphology import disk
 import math
-
 
 def display(image_to_display):
     '''
@@ -19,32 +13,8 @@ def display(image_to_display):
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
-
-def detect_hsv(hsv_image, image):
-    '''
-    Detects a certain color in image
-    :param hsv_image: HSV image
-    :param image:     BGR image
-    :return: void
-    '''
-    # Default values that can be used for lower and upper limit of hsv
-    lower_hue = 90
-    upper_hue = 130
-    lower_sat = 0
-    upper_sat = 255
-    lower_val = 0
-    upper_val = 255
-
-    lower_limit = np.array([lower_hue, lower_sat, lower_val])
-    upper_limit = np.array([upper_hue, upper_sat, upper_val])
-
-    mask = cv2.inRange(hsv_image, lower_limit, upper_limit)
-
-    res = cv2.bitwise_and(image, image, mask = mask)
-
 def find_mean_hue(hsv_image):
     '''
-
     Hue is in a circle [0, 180] because of this
     convert hue angles to a set of vectors from polar to cartesian coordinates
     after taking mean of those coordinates, convert back to polar form
@@ -112,6 +82,11 @@ def find_mean_hsv(hsv_image):
     return mean_hsv
 
 def find_standard_deviation_hsv(hsv_image):
+    '''
+    computed standard deviation of hsv in image
+    :param hsv_image:
+    :return: array of hsv standard deviation
+    '''
 
     hue_1D = hsv_image[...,0].flatten()
     sat_1D = hsv_image[...,1].flatten()
@@ -126,10 +101,13 @@ def find_standard_deviation_hsv(hsv_image):
     return SD_hsv
 
 # When using canny edge detection you have to take into account the thresholds
-def detect_edges(image):
-    # figure out correct thresholds (use track bar?)
-    canny= cv2.Canny(image, 250, 400)
-    #display(canny)
+def detect_edges(image, lower_threshold, upper_threshold):
+
+    # use a blurring thing to reduce noise
+    image = cv2.bilateralFilter(image, 9, 75, 75)
+
+    canny = cv2.Canny(image, lower_threshold, upper_threshold)
+    display(canny)
 
     return canny
 
@@ -143,17 +121,14 @@ def find_straight_edge_density(image):
   gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
   # Guassian blur
-
   # kernel = np.ones((5, 5), np.float32) / 25
   # gray_image = cv2.filter2D(gray_image, -1, kernel)
 
-  # # blur the image while keeping the edges sharp
-  #gray_image = cv2.bilateralFilter(gray_image, 9, 75, 75)
+  # blur the image while keeping the edges sharp (bilateral filter)
+  gray_image = cv2.bilateralFilter(gray_image, 9, 75, 75)
 
   fld = cv2.ximgproc.createFastLineDetector()
-
   lines = fld.detect(gray_image)
-
   draw_image = fld.drawSegments(image, lines)
 
   '''[
@@ -198,13 +173,12 @@ def find_straight_edge_density(image):
 '''
 def find_edge_density(image):
 
-    edges_image = detect_edges(image)
+    edges_image = detect_edges(image, 100, 200)
 
     total_pixels = edges_image.shape[0] * edges_image.shape[1] # rows times columns
     white_pixels = cv2.countNonZero(edges_image)
 
     edge_density_percentage = (white_pixels / total_pixels) * 100
-
 
     return edge_density_percentage
 
@@ -221,60 +195,10 @@ def find_entropy(image):
 
     length = image_1D.size
     symset = list(set(image_1D))
-    nymsym = len(symset)
     propab = [np.size(image_1D[image_1D == i]) / (1.0 * length) for i in symset]
     entropy = np.sum([p * np.log2(1.0/p) for p in propab])
 
     return entropy
-
-def remove_one_col_pixels(image):
-    '''
-    Helper method that removes one column of pixels from the right
-    :param image: BGR image
-    :return: the image with one column of pixels removed
-    '''
-
-    split = image.shape[1] - 1
-    image = image[:, :split]
-
-    return image
-
-def calculate_symmetry(image):
-    '''
-    Calculates vertical reflectional symmetry
-    :param image: BGR image
-    :return: returns a decimal between 0 and 1, closer to 1 being more symmetry, closer to 0 being less symmetry
-    '''
-
-    #split image into two equal left and right parts
-
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
-    ncols = image.shape[1]
-    csplit = ncols // 2
-
-    quadrants = [
-        image[:, :csplit],  # left
-        image[:, csplit:],  # right
-    ]
-
-    quadrants[1] = np.flip(quadrants[1], axis = 1)
-
-    # make sure both sides of image are same size
-    if (quadrants[0].shape[1] < quadrants[1].shape[1]):
-        quadrants[1] = remove_one_col_pixels(quadrants[1])
-
-    elif (quadrants[0].shape[1] > quadrants[1].shape[1]):
-        quadrants[0] = remove_one_col_pixels(quadrants[0])
-
-    # calculate symmetry
-    intersection = cv2.bitwise_and(quadrants[0], quadrants[1])
-    union = cv2.bitwise_or(quadrants[0], quadrants[1])
-    symmetry = cv2.countNonZero(intersection) / cv2.countNonZero(union)
-
-    symmetry = cv2.countNonZero(intersection) / (quadrants[0].shape[0] * quadrants[0].shape[1])
-
-    return symmetry
 
 def main():
     '''
@@ -287,19 +211,11 @@ def main():
     image = cv2.imread(file_path, 1)    # hue --> [0, 180], sat/val --> [0, 255]
     hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
-    detect_hsv(hsv_image, image)
     find_mean_hsv(hsv_image)
     find_standard_deviation_hsv(hsv_image)
     find_edge_density(image)
     find_straight_edge_density(image)
     find_entropy(image)
-    calculate_symmetry(image)
-
-    ''' [x, y, hsv]  
-        
-    '''
-    px = image[100, 0, 2]
-    print(px)
 
 if __name__ == '__main__':
     main()

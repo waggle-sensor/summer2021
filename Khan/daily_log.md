@@ -137,4 +137,16 @@
 * Watched videos on machine learning and different machinen learning models
 * I am a little confused on what machine learning algorithm to use and how to go about the second part of the project
 
+---
+
+## Week 4 ##
+
+### 6/21/2021 ###
+* Attended zoom meeting where I learned about other projects 
+* Prepared slides for mid - point progress presentation on parts of the project that I have 
+  already completed
+* Researched and understood the math behind canny edge detection through Udacity computer vision videos
+* Wrote additional test cases 
+* Need to gt started on second part of project, came up with a couple of questions to ask in tomorrows meeting
+  about that
 
