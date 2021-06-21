@@ -1,4 +1,4 @@
-### Integer Quantization for Deep Learning Inference: Principles and Empirical Evaluation
+### [Integer Quantization for Deep Learning Inference: Principles and Empirical Evaluation](https://arxiv.org/abs/2004.09602)
 
 Authors: Hao Wu, Patrick Judd, Xiaojie Zhang, Mikhail Isaev, Paulius Micikevicius1 (NVIDIA)
 
