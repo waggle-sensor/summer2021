@@ -6,4 +6,25 @@ Monday, June 14:
    - Got information on what my task was, started to look into React.js, JSON, and other javascript libraries 
 
 Tuesday, June 15: 
-   - Met with my mentor again and 
+   - Met with my mentor again and researched more about my heat maps and the UI. Looked at the Neon website for inspiration and thought about how I could. . 
+   - improve it for Sage 
+   - Did more research on heat maps and what functions 
+   
+Wednesday, June 16: 
+   - Watched Youtube Videos to try and gain a better understanding of JSON, terminal, and InfluxDB 
+   - My knowledge of terminal and JSON improved
+   - went through the Sage data and tested some functions for influxDB
+
+Thursday, June 17: 
+   - Finished some paperwork for new hires 
+   - Met with my mentor to discuss what I should try to focus my next research on 
+   - Finished my slide and worked on my week 1 summary and presentation for Monday
+   
+Friday, June 18: 
+   - Started a doc that had what I learned from influxDB
+   - Started learning about React.js and d3.js 
+   
+Monday, June 21: 
+   - Gave my presentation 
+   - Got good feedback
+      - consider the question, what happens with the data during night, when the sensors aren't gathering information (like how should the UI be formatted to accomdate for that)
