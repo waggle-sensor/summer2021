@@ -389,3 +389,13 @@ stdout/stderr:
  - Have a meeting with Rick to discuss the progress of anytime project
    - quantization tends out to work better than prunning
    - try to observe some real challenges for methodology design
+
+### Friday June 18, 2021
+#### Work Done:
+ - Solve the issue of compatibility of TF1 with CUDA 10.1
+   - cannot find the NVIDIA driver after install CUDA 9.2 and update GPU driver
+```
+cc@llk-adnn:~$ nvidia-smi
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+```
+   - not work after soft reboot Chameleon instance 
