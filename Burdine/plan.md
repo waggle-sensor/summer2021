@@ -84,10 +84,45 @@
 ### Monday June 14, 2021 ###
 - Completed and proofread my introductory presentation.
 - Attended Weekly Team Meeting
+- Attended Intern Presentation Meeting (part I)
 - Presented my introductory presentation.
 - Caught the end of the Quantum Computing Tutorial (day 1)
 
 ### Tuesday June 15, 2021 ###
-- Attended weekly CV intern check-in.
+- Attended CV intern check-in.
 - Attended Quantum Computing Tutorial (day 2)
+- Began work on PCA-based anomaly detection of static images
 
+### Wednesday June 16, 2021 ###
+- Attended SULI EDU Seminar
+- Attended Quantum Computing Tutorial (day 3)
+- Continued work on PCA-based anomaly detection
+    * I have been experimenting with kernel-based PCA, which gives okay results but
+      is very memory hungry, as it requires the model to be deployed along with its training       dataset.
+
+### Thursday June 17, 2021 ###
+- Attended CV intern check-in.
+- Attended Quantum Computing Tutorial (day 4)
+- Finished exploration of PCA-based anomaly detection
+    * I have concluded that PCA-based anomaly detection only seems to pick up on
+      color-based anomalies, and does a poor job of picking up on shape-based anomalies,
+      even under the discrete cosine transform (i.e. JPEG-style compression).
+    * In order to obtain more robust, non-linear anomaly detection, it might be worthwhile 
+      to investigate the use of convolutional autoencoders (CAEs).
+- Attended CELS Lecture (featuring Scott Collis!)
+
+### Friday June 18, 2021 ###
+- Attended Quantum Computing Tutorial (day 5)
+- Download and annotated a "fake" anomaly detection dataset based on the NEON site datasets.
+    * The data portal for NEON can be found here:
+- Began work on a convolutional autoencoder model for anomaly detection
+
+## Week 3 ##
+- Attended Weekly Team Meeting
+- Attended Intern Presentation Meeting (part II)
+- Continued work on Convolutional Autoencoder
+    * Since I built the model in the latest Tensorflow container, I needed to update my Nvidia
+      drivers. Since driver updates come with my OS updates, I updated my OS, which messed up
+      my GRUB bootloader. Fixing this took a significant chunk of both my afternoon and my 
+      sanity. Just another exciting tale from the *Linux Experience* :)
+- Eventually got the model training on my GPU! Woot!
