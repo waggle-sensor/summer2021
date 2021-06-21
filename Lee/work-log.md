@@ -277,6 +277,23 @@ ENTRYPOINT java HelloWorld
 * Linked-IN updated, Northwestern Kronos time entry system updated
 
 -Today's Technical Tasks
-* complete basic JavaScript W3school tutorials.
+* Complete basic JavaScript W3school tutorials.
+* Presentation Contents:
+  ![image](https://user-images.githubusercontent.com/56851781/122779792-3a404400-d27c-11eb-88b5-8427b24df7ea.png)
+* (if you want to get real time data every 1 second, change like this:
+  ![image](https://user-images.githubusercontent.com/56851781/122779945-5c39c680-d27c-11eb-8a28-860ff4fc4b6d.png)
+![image](https://user-images.githubusercontent.com/56851781/122780019-6f4c9680-d27c-11eb-99d9-b45d86bb5adb.png)
+![image](https://user-images.githubusercontent.com/56851781/122780452-d9fdd200-d27c-11eb-8664-b6f74379acb1.png)
+![image](https://user-images.githubusercontent.com/56851781/122780611-fef24500-d27c-11eb-8cc3-712e4d2b1e75.png)
+![image](https://user-images.githubusercontent.com/56851781/122780732-1c271380-d27d-11eb-870e-a97903cc6037.png)
+  
+  
+  ![KakaoTalk_20210621_102635621_011](https://user-images.githubusercontent.com/56851781/122781041-6c9e7100-d27d-11eb-910f-3e7a8ac8cf53.jpg)
+  
+  
+  ![KakaoTalk_20210621_102635621](https://user-images.githubusercontent.com/56851781/122781078-76c06f80-d27d-11eb-9bbe-879e6e1be648.jpg)
+
+
+
 
 -Things to do: Next week will focus on using Docker
