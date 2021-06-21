@@ -1,3 +1,10 @@
+# Week 5
+**June 21st**
+1. Finish converting the ogg files into wav.
+2. Study more about the feature extraction tools. 
+3. Meet with Rick.
+
+
 # Week 4
 **June 14th**
 1. Get data ready for training
