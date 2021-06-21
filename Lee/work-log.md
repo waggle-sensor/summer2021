@@ -1,6 +1,6 @@
 # Minji Daily Work-Log
 
-## 1st Week 05/24-05/28
+## 1st Week 05/24-05/28 (Main Goal: Set Up Environments)
 
 ### Monday, 24th
 -Today's Non-Technical Tasks
@@ -65,7 +65,7 @@
          
 ************************************************************
 
-## 2st Week 06/01-06/04
+## 2st Week 06/01-06/04 (Main Goal: Node-RED)
 
 ### Tuesday, 1th
 -Today's Non-Technical Tasks
@@ -156,7 +156,7 @@
 
 ************************************************************
 
-## 3st Week 06/07-06/11
+## 3st Week 06/07-06/11 (Main Goal: MySQL)
 
 ### Monday, 7th
 -Today's Non-Technical Tasks
@@ -182,10 +182,7 @@
 
 ### Wednesday, 9th
 -Today's Non-Technical Tasks
-* 
-
--Today's Technical Tasks
-* 
+-Today's Technical Tasks 
 
 
 ### Thursday, 10th
@@ -216,7 +213,110 @@ ENTRYPOINT java HelloWorld
 ### Friday, 11th
 -Today's Non-Technical Tasks
 * Preparation presentation of goal for internship on Next Monday
-* Completed all the process on Northwestern Kronos System
+* Completed all the process on Northwestern Kronos System time entry system
 
 -Today's Technical Tasks
-* Kubernetes/Cloud
+* read Kubernetes/Cloud documents
+
+************************************************************
+
+## 4st Week 06/14-06/18 (Main Goal: JavaScript)
+### Monday, 14th
+-Today's Non-Technical Tasks
+* Presentation of goal for internship
+* OEPT test
+
+-Today's Technical Tasks
+* started learning JavaScript with W3school basic tutorials in https://www.w3schools.com/js/default.asp
+* JavaScript is the programming language of the Web. (In HTML, JavaScript programs are executed by the web browser.)
+* HTML to define the content of web pages (backbone), CSS to specify the layout of web pages (design), and JavaScript to program the "behavior" of web pages (action).
+* getElementById(): can change HTML content. e) document.getElementById("demo").innerHTML = "Hello JavaScript"
+* also possible to change HTML attribute values. e) src att of an <img> tag.
+* In HTML, JS code is inserted between <script> and </script> tags.
+* and scripts can be placed in the <body> or in the <head>, but placing it at the bottom of the <body> recommended due to the display speed.
+* External JS has several advantages: seperates HTML and code, easier to read and maintain, and can speed up page loads. (full URL or specific folder either is ok.)
+  
+  
+### Tuesday, 15th
+-Today's Technical Tasks
+* Still learning JavaScript with same tutorials as yesterday's one.
+* JavaScript can display data 4 different ways: innerHTML, document.write(), window.alert(), console.log()
+* innerHTML
+* document.write() - but will delete all existing HTML. so for testing recommended
+* window.alert()   - only OK button | prompt() two button, and string type
+* console.log()    - debugging purposes
+* syntax
+* var: { var y = 2; } // y can be used here
+* let: { let y = 2; } // y can NOT be used here. Also, cannot be redeclared. but redeclaring a variable with let, in another block, is allowed.
+* const: cannot be reassigned, can change the properties of a constant object, but can not reassign the object. Declaring a variable with const is similar to let when it comes to block scope.
+* If put a number in quotes, the rest of the numbers will be treated as "strings", and concatenated. e) x = 2 + 3 + "0"; x = 50; (str)
+* JavaScript has dynamic types, which means that the same variable can be used to hold different data types.
+* note: e) var x = {firstName:"John", lastName:"Doe"}; // Object | var cars = ["Saab", "Volvo", "BMW"]; //array (similart to list in Python I guess)
+* However, the typeof operator returns "object" for arrays because in JavaScript arrays are objects.
+
+### Wednesday, 16th
+-Today's Technical Tasks
+* Still learning JavaScript with same tutorials as yesterday's one.
+* functions, objects, and events
+* JavaScript objects are containers for named values called properties or methods.
+* Objects are variables too. But objects can contain many values.
+* can access object properties in two ways: objectName.propertyName or objectName["propertyName"]
+* "this" keyword
+
+### Thursday, 17th
+-Today's Non-Technical Tasks
+* short meeting with Joe
+
+-Today's Technical Tasks
+*
+
+
+### Friday, 18th
+-Today's Non-Technical Tasks
+* SAGE sprint demo & retrospective (DHT real time data handling, and query from SDR on Node-RED presentation)
+* Linked-IN updated, Northwestern Kronos time entry system updated
+
+-Today's Technical Tasks
+* Complete basic JavaScript W3school tutorials.
+* Presentation Contents 1: DHT sensor read (real time data) from RPI on Node-RED
+  
+  ![KakaoTalk_20210621_102635621_011](https://user-images.githubusercontent.com/56851781/122781041-6c9e7100-d27d-11eb-910f-3e7a8ac8cf53.jpg) ![KakaoTalk_20210621_102635621](https://user-images.githubusercontent.com/56851781/122781078-76c06f80-d27d-11eb-9bbe-879e6e1be648.jpg)
+  ![image](https://user-images.githubusercontent.com/56851781/122780732-1c271380-d27d-11eb-870e-a97903cc6037.png)
+  
+  ![image](https://user-images.githubusercontent.com/56851781/122779792-3a404400-d27c-11eb-88b5-8427b24df7ea.png)
+  
+* if you want to get real time data every 1 second, change like this:
+  ![image](https://user-images.githubusercontent.com/56851781/122779945-5c39c680-d27c-11eb-8a28-860ff4fc4b6d.png)
+ 
+* You can see on the debug node for example, {"_msgid":"63bb3921.ad62e8","topic":"rpi-dht22","payload":"28.00","humidity":"81.00","isValid":true,"errors":0,"location":"DHT","sensorid":"dht11"}, which means that need to change "payload" to "msg.payload = msg.payload and return msg;" in the temp function nodes as shown like this:
+![image](https://user-images.githubusercontent.com/56851781/122780611-fef24500-d27c-11eb-8cc3-712e4d2b1e75.png)
+  
+* can check the output on terminal as well as the debug node + UI (e. hostIPAddress with ui http://192.168.1.53:1880/ui)
+![image](https://user-images.githubusercontent.com/56851781/122780019-6f4c9680-d27c-11eb-99d9-b45d86bb5adb.png)
+![image](https://user-images.githubusercontent.com/56851781/122780452-d9fdd200-d27c-11eb-8664-b6f74379acb1.png)
+
+* Presentation Contents 2: Query SDR on Node-RED
+* Trouble: Accessing and Querying SDR no problem on the terminal like this:![image](https://user-images.githubusercontent.com/56851781/122793311-0c153100-d289-11eb-814f-c3d49d6c64c4.png) but couldn't get access to do that on Node-RED. The issue was that everything sent to ignore, so http request ignores everything from inject,
+which is EOF, end of file, that is specifially what they gave me back. which means, this works.
+  
+  ![image](https://user-images.githubusercontent.com/56851781/122794063-d9b80380-d289-11eb-8dc9-6800135f6792.png)
+* payload should be changed from ignore(default) to "Sent as the body of the requst. Also changed JSON formatting in inject node like this:
+  ![image](https://user-images.githubusercontent.com/56851781/122794204-010ed080-d28a-11eb-9f8b-874d16a51b00.png)
+
+* result: ![image](https://user-images.githubusercontent.com/56851781/122794583-695db200-d28a-11eb-8b99-fcf5eab7e22e.png)
+
+-Things to do: Next week will focus on using Docker
+  
+************************************************************
+
+## 5st Week 06/21-06/25 (Main Goal: Docker / Kubernetes)
+### Monday, 21th
+-Today's Non-Technical Tasks
+* Attended presentation of goal for internship
+  
+-Today's Technical Tasks
+* Learning docker from https://www.44bits.io/ko/post/why-should-i-use-docker-container
+* Basic concept: Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.
+  Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.
+* Docker components: software, objects, and registries.
+* WHY used? Containers are technologies that run applications regardless of their environment. (do not need to go through the complex installation process that exists for each operating system.)

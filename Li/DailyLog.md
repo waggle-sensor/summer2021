@@ -63,6 +63,8 @@ To Do:
 Thoughts:
 * Excited and nervous to have project idea and goals laid out. Will be a big learning curve for computer vision, but I am confident I will overcome it.
 
+<br />
+
 ### June 7, 2021 (Day 5)
 
 Updates:
@@ -74,6 +76,8 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials.
 
+<br />
+
 ### June 8, 2021 (Day 6)
 Updates:
 * Completed OpenCV YT tutorials up to 16.
@@ -81,6 +85,8 @@ Updates:
 
 To Do:
 * Continue studying and working on OpenCV tutorials.
+
+<br />
 
 ### June 9, 2021 (Day 7)
 Updates:
@@ -92,8 +98,11 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials.
 
+<br />
+
 ### June 10, 2021 (Day 8)
 Updates:
+* Attended seminar on 'Tensor Contraction' by Dr. Victor Anisimov.
 * Completed OpenCV YT tutorials up to 20.
 * Topics Covered: Morphological Transformations (17), Smoothing Images (18), Image Gradients and Edge Detection (19), Canny Edge Detection (20).
 * Started developing code for the NEON poles. Worked with object detection with HSV first, results were very unclear. Then I applied edge detection methods. After adjustments, Canny appeared best.
@@ -101,6 +110,8 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials.
 * Gather more image data from NEON.
+
+<br />
 
 ### June 11, 2021 (Day 9)
 Updates:
@@ -112,6 +123,8 @@ To Do:
 * Continue studying and working on OpenCV tutorials.
 * Look into deep learning and other tools, potentially. 
 
+<br />
+
 ### June 14, 2021 (Day 10)
 Updates:
 * Meeting with entire group. Presented introdutory research project PowerPoint.
@@ -122,16 +135,66 @@ To Do:
 * Continue studying and working on OpenCV tutorials.
 * Need to ramp up project pace! Exciting things ahead.
 
+<br />
+
 ### June 15, 2021 (Day 11)
 Updates:
 * Meeting with Computer Vision Group. Discussed plans for this week: line detection and template matching.
-* Completed OpenCV YT tutorials up to ___.
+* Completed OpenCV YT tutorials up to 29.
+* Topics Covered: Detect Simple Geometric Shapes (25), Histograms (26), Template Matching (27), Hough Line Transform (28), HoughLines Method (29).
 
 To Do:
 * Continue studying and working on OpenCV tutorials.
 * Look into annotation tools and deep learning with CV.
 * Read up on math behind CV.
 
+<br />
+
+### June 16, 2021 (Day 12)
+Updates:
+* Meeting with Student Connects Group. Created 'Caffeinated Camels' backgroup wallpaper.
+* Completed OpenCV YT tutorials up to 33.
+* Topics Covered: Probablistic Hough Line Transform (30), Road Lane Line Detection (31-33).
+* Studied the math behind Hough Line Transformation.
+* Created Jupyter Notebook for cleaner and more readable program for project. 
+
+To Do:
+* Continue studying and working on OpenCV tutorials.
+
+<br />
+
+### June 17, 2021 (Day 13)
+Updates:
+* Meeting with Computer Vision Group. Discussed progress for this week.
+* Readings:
+    (1) [GitHub: Snow Depth Measurement](https://github.com/NRCANTerry/snow-depth). 
+    (2) [Python 60 lines of code use OpenCV to identify snow depth](https://programmer.help/blogs/python-60-lines-of-code-use-opencv-to-identify-snow-depth.html). 
+    (3) [python,opencv,Line 60 of Python USES OpenCV to identify snow depths](https://www.codestudyblog.com/sfb2002b1/0225213741.html). 
+    (4) [Fully automated snow depth measurements from time-lapse images applying a convolutional neural network](https://www.sciencedirect.com/science/article/abs/pii/S0048969719341907).             
+* PyImageSearch Computer Vision and Deep Learning Crash Course, [Day 1: Face detection with OpenCV and deep learning](https://www.pyimagesearch.com/2018/02/26/face-detection-with-opencv-and-deep-learning/)
+
+To Do:
+* Continue studying and working on OpenCV tutorials.
+
+
+<!-- 
+https://github.com/dloperab/PyImageSearch-CV-DL-CrashCourse
+[Day 1: Face detection with OpenCV and deep learning](https://www.pyimagesearch.com/2018/02/26/face-detection-with-opencv-and-deep-learning/)
+[Day 2: OpenCV Tutorial: A Guide to Learn OpenCV](https://www.pyimagesearch.com/2018/07/19/opencv-tutorial-a-guide-to-learn-opencv/)
+[Day 3: How to Build a Kick-Ass Mobile Document Scanner in Just 5 Minutes](https://www.pyimagesearch.com/2014/09/01/build-kick-ass-mobile-document-scanner-just-5-minutes/)
+[Day 4: Bubble sheet multiple choice scanner and test grader using OMR, Python and OpenCV](https://www.pyimagesearch.com/2016/10/03/bubble-sheet-multiple-choice-scanner-and-test-grader-using-omr-python-and-opencv/)
+[Day 5: Ball Tracking with OpenCV](https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/)
+[Day 6: Measuring size of objects in an image with OpenCV](https://www.pyimagesearch.com/2016/03/28/measuring-size-of-objects-in-an-image-with-opencv/)
+[Day 8: Facial landmarks with dlib, OpenCV, and Python](https://www.pyimagesearch.com/2017/04/03/facial-landmarks-dlib-opencv-python/)
+[Day 9: Eye blink detection with OpenCV, Python, and dlib](https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/)
+[Day 10: Drowsiness detection with OpenCV](https://www.pyimagesearch.com/2017/05/08/drowsiness-detection-opencv/)
+[Day 12: A simple neural network with Python and Keras](https://www.pyimagesearch.com/2016/09/26/a-simple-neural-network-with-python-and-keras/)
+[Day 13: Deep Learning with OpenCV](https://www.pyimagesearch.com/2017/08/21/deep-learning-with-opencv/)
+[Day 14: How to (quickly) build a deep learning image dataset](https://www.pyimagesearch.com/2018/04/09/how-to-quickly-build-a-deep-learning-image-dataset/)
+[Day 15: Keras and Convolutional Neural Networks (CNNs)](https://www.pyimagesearch.com/2018/04/16/keras-and-convolutional-neural-networks-cnns/)
+[Day 16: Real-time object detection with deep learning and OpenCV](https://www.pyimagesearch.com/2017/09/18/real-time-object-detection-with-deep-learning-and-opencv/)
+
+-->
 
 <!-- ## Heading 2
 ### Heading 3

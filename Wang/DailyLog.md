@@ -1,3 +1,24 @@
+# Week 5
+**June 21st**
+1. Finish converting the ogg files into wav.
+2. Study more about the feature extraction tools. 
+3. Meet with Rick.
+
+
+# Week 4
+**June 14th**
+1. Get data ready for training
+2. Finish the data preparation script
+3. Research for the audio data preprocessing tools
+
+# Week 3
+**June 7th**
+1. Get the kaggle dataset ready
+2. Keep working on the literature review part of the paper with Emily
+3. Prepare the presentation on Next Monday
+4. Meet with Rick to discuss potential collaboration
+
+
 # Week 2
 **June 1st**
 1. Audio group meeting
@@ -9,10 +30,14 @@
 2. Research in audio data processing
 
 **June 3rd**
+Research
 
 **June 4th**
-
+1. Team meeting
+2. research
 **June 5th**
+research
+
 # Week 1
 **May 24th**
 1. Orientation

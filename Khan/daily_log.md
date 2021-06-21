@@ -30,7 +30,7 @@
 ----
 
 ## Week 2 ##
-### 6/7/2021
+### 6/7/2021 ###
 * Watched Youtube tutorials on OpenCV
     * Downloaded openCV library and set up local enviroment
     * learned how to read and write to files on openCV
@@ -92,3 +92,49 @@
 * Corrected issues with mean hue so that caluclations took into account that hue is in a circle 
 * TODO:
     * Look back at how I did canny edge detection and make sure I understand it and the threshholds
+    
+----
+
+## Week 3 ##
+    
+###  6/14/2021 ###
+* Practiced Presentation
+* Attended meeting where I learned about other projects and gave presentation on my project
+* Understand the canny edge detection threshold thing and understand canny edge detection
+* Update presentation for what I understand so far
+* Researched and calculated Entropy. Need to research more on finding the best way to do so.
+    * There should be an easy function call for it, cant find it?
+* GOAL for end of week:
+    * Be completely done computing features
+    * Have a good grasp on how to use Support Vector Machines
+    
+### 6/15/2021 ###
+* Attended meeting with CV team
+* Used Hough Line Transform to detect straight edges and compute straight edge density.
+    * Am running into issues about finding the best threshold values to use in order to 
+      detect all the straight lines
+* Wrote a couple of test cases for straight edge density computation
+* Wrote test cases for entropy -> Need to debug find_entropy function
+
+### 6/16/2021 ###
+* Attended seminar on "Overcoming Imposter Syndrome"
+* Accurately calculated entropy that passed test cases
+* Computed vertical reflectional symmetry of image
+* Wrote test cases for vertical reflectional symmetry of image
+* Strengthened Hough Line Transform by using bilateralFilter which blurs the image while keeping
+    edges sharp. Was able to more accurately compute the straight edge density this way
+  
+### 6/17/2021 ###
+* Attended meeting with CV team
+* Attended student connect meeting
+* Instead of using Hough, changed my code to use opencv's Line Segment Detector in order to
+    compute straight edge density because this more accurately finds straight edges and 
+    runs much faster.
+* Computed total length of all line segments combined in order to compute the straight edge density
+* Watched videos on vector support machines
+
+### 6/18/2021 ###
+* Watched videos on machine learning and different machinen learning models
+* I am a little confused on what machine learning algorithm to use and how to go about the second part of the project
+
+
