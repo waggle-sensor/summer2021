@@ -62,3 +62,16 @@ For keeping records of progress.
 - Tomorrow I will just try using pytau instead of the automatic instrumentation
 - This should at least give me some stats
 
+### Friday 6/18
+- Got TAU working after much trial and error
+- TAU works manually and with automatic instrumentation in python
+
+## Week 3 (6/21-6/25)
+- Sucussfully built a TAU wrapper for Python
+  - tau.run calls main in the example program
+  - speaking of which, is there an example ml program I can test on
+- Morning presentation went well, need to fill out my one page slide/card thing
+- Met with Aji to define/discuss the profiler and how knobs will interact
+- Installed cuda on my local vm to connect that with TAU
+- Reconfiguring TAU to work with -PROFILEMEMORY arg
+
