@@ -340,3 +340,17 @@ Good week. I mostly spent my time working on software issues, which was fun.
 * Worked on RPI Sanity tests for SAGE-883
 * Looked into GPG signature verification
 -------------
+## Week 6
+-------
+### Monday, 6/21 (7 Hours worked)
+
+**Today's non-technical work:**
+* Attended Intern introductory meeting
+* Met with Joe and Wolfgang to discuss internship path
+
+
+
+**Today's technical work:**
+* Looked into GPG signature verification with no fruitfulness
+* Read up on ramdisks and waggle's create_ramdisk functionality
+-------------
