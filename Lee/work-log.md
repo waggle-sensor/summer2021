@@ -303,7 +303,7 @@ ENTRYPOINT java HelloWorld
 which is EOF, end of file, that is specifially what they gave me back. which means, this works.
   
   ![image](https://user-images.githubusercontent.com/56851781/122794063-d9b80380-d289-11eb-8dc9-6800135f6792.png)
-* Also changed JSON formatting in inject node like this:
+* payload should be changed from ignore(default) to "Sent as the body of the requst. Also changed JSON formatting in inject node like this:
   ![image](https://user-images.githubusercontent.com/56851781/122794204-010ed080-d28a-11eb-9f8b-874d16a51b00.png)
 
 * result: ![image](https://user-images.githubusercontent.com/56851781/122794583-695db200-d28a-11eb-8b99-fcf5eab7e22e.png)
