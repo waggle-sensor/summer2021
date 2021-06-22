@@ -20,10 +20,11 @@ Soundscape ecology is the branch of science that analyzes acoustic data from sou
 ## Devices
 ### BAR-LT
 ![bar-lt_panel](https://user-images.githubusercontent.com/84532371/122977932-8ca46200-d35b-11eb-9d7d-bd94d73b785d.jpg)
-
+The first type of device that is being used is the battery powered bioacoustic audio recorder (BAR).
+These recorders can be easily fastened to trees where they blend in and constantly record audio.
 ### Solar BAR
 ![solar_bar_panel](https://user-images.githubusercontent.com/84532371/122977989-9f1e9b80-d35b-11eb-8366-8d3009f617df.jpg)
-
+The second type of device that is being used is the solar powered BAR.  
 
 ## Benefits of the Project
 
