@@ -14,6 +14,7 @@ Week 2: 6/21–6/25
   - started looking at ARM data, code in python
   - looked into optical flow
 - Tuesday
-  - finishing TMS tasks
-  - setting up Docker
-  - looking into neural networks, more on optical flow
+  - finishing TMS tasks/courses
+  - setting up Docker, ssh
+  - looking into neural networks, more on optical flow from reflectivity images
+  - parsing zsherman Python code some more
