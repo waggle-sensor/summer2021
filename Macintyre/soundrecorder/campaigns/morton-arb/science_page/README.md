@@ -18,15 +18,17 @@ All of these sounds contribute to what is called a soundscape.
 Soundscape ecology is the branch of science that analyzes acoustic data from soundscapes to understand the relationships between biodiversity, landscapes, and anthropogenic pressures.
 
 ## Devices
-### BAR-LT
+#### BAR-LT
 ![bar-lt_panel](https://user-images.githubusercontent.com/84532371/122977932-8ca46200-d35b-11eb-9d7d-bd94d73b785d.jpg)
 The first type of device that is being used is the battery powered bioacoustic audio recorder (BAR).
 These recorders can be easily fastened to trees where they blend in and constantly record audio.
-### Solar BAR
+#### Solar BAR
 ![solar_bar_panel](https://user-images.githubusercontent.com/84532371/122977989-9f1e9b80-d35b-11eb-8366-8d3009f617df.jpg)
 The second type of device that is being used is the Solar BAR.
 These recorders have the same recording capabilites as the BAR-LT, but their battery is charged by a solar panel.
 If the are deployed in a place with consistent sunlight, they can record continuously for long periods of time.
 
 ## Benefits of the Project
+The United States does not currently have a baseline for different measurements of biodiversity that cover large areas and many species of animals.
+This project would allow for the development of such a baseline across the country, which would have many benefits.
 
