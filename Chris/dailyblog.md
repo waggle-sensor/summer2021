@@ -67,6 +67,8 @@ For keeping records of progress.
 - TAU works manually and with automatic instrumentation in python
 
 ## Week 3 (6/21-6/25)
+
+### Monday 6/21
 - Sucussfully built a TAU wrapper for Python
   - tau.run calls main in the example program
   - speaking of which, is there an example ml program I can test on
@@ -74,4 +76,20 @@ For keeping records of progress.
 - Met with Aji to define/discuss the profiler and how knobs will interact
 - Installed cuda on my local vm to connect that with TAU
 - Reconfiguring TAU to work with -PROFILEMEMORY arg
+
+### Tuesday 6/22
+- ECR meeting with Yomi, Aji, Luke, and Yongho
+- Built simple, custom stress test in python(CPU), now for a RAM one
+- Wrapper works for this new test
+- Some trouble getting the -PROFILEMEMORY TAU option to work
+- After some time working with cuda/tau, I think it needs to be installed separately and use tau_exec
+- export TAU_TRACK_MEMORY_FOOTPRINT=1 seems to give some memory sampling
+- tau setup
+  - download and unzip tau
+  - download and unzip pdt and etc
+- my commands:
+  - ./configure  -bfd=download -dwarf=download -unwind=download -iowrapper -pdt=/home/ckraemer/Documents/Argonne/pdtoolkit-3.25.1 -pythoninc=/usr/include/python3.8 -pythonlib=/usr/lib/x86_64-linux-gnu
+  - make install
+  - export TAU_TRACK_MEMORY_FOOTPRINT=1
+
 
