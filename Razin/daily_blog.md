@@ -9,3 +9,11 @@ Week 1: 6/14–6/18
 
 
 Week 2: 6/21–6/25
+- Monday
+  - student presentations
+  - started looking at ARM data, code in python
+  - looked into optical flow
+- Tuesday
+  - finishing TMS tasks
+  - setting up Docker
+  - looking into neural networks, more on optical flow
