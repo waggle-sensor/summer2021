@@ -31,4 +31,8 @@ If the are deployed in a place with consistent sunlight, they can record continu
 ## Benefits of the Project
 The United States does not currently have a baseline for different measurements of biodiversity that cover large areas and many species of animals.
 This project would allow for the development of such a baseline across the country, which would have many benefits.
-
+Such benfits include:
+* Analysis of the acoustic data will allow for quantifying the differences between protected and non-protected areas.
+* Better estimates of land-use restriction's effect on the conservation of certain species will be possible.
+* Comparing data in the future with the baseline measurements will provide information on the migration of a species and what might have caused it.
+These are just a few of the benefits that this project might yield.  
