@@ -354,3 +354,21 @@ Good week. I mostly spent my time working on software issues, which was fun.
 * Looked into GPG signature verification with no fruitfulness
 * Read up on ramdisks and waggle's create_ramdisk functionality
 -------------
+### Tuesday, 6/22 (8 Hours worked)
+
+**Today's non-technical work:**
+* Attended the sprint planning meeting
+
+All nodes were down from the second half of the day, so I couldn't write the media tests(SAGE-856)
+**Today's technical work:**
+* Researched ways to verify health of ramdisk, mostly looking into `initramfs` processes and how the `create_initrd` script works
+* Read up on initramfs hooks
+
+I should really provide more information in my daily logs, so I'll start doing that with relevant links. 
+* https://wiki.archlinux.org/title/mkinitcpio#HOOKS
+* https://manpages.debian.org/testing/initramfs-tools-core/initramfs-tools.7.en.html
+* https://wiki.debian.org/initramfs
+* https://salsa.debian.org/cloud-team/cloud-initramfs-tools
+* https://salsa.debian.org/kernel-team/initramfs-tools/-/blob/master/hooks/fsck
+
+-------------
