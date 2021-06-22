@@ -9,12 +9,14 @@ Long-term analysis of [soundscapes](https://github.com/waggle-sensor/summer2021/
 ## Morton Arboretum Campaign
 So where does the Morton Arboretum fit into all of this?
 Before this new method for studying animal biodiversity can be deployed nationwide, it must be tested to prove that it is an effectice and feasible solution.
-In order to demonstrate the effectiveness of this process, six pilot sites have been selected to test this method of acoustic data analysis.
+In order to demonstrate the effectiveness of this process, six pilot sites have been selected to test this method of acoustic data analysis, and the Morton Arboretum is one of those six pilot sites.
+Bioacoustic audio recording [devices](https://github.com/waggle-sensor/summer2021/tree/main/Macintyre/soundrecorder/campaigns/morton-arb/science_page#devices) have been deployed in the arboretum to collect acoustic data that will be used to understand the soundscape and biodiversity in the area.
 
 ## Soundscape Ecology
 
+
 ## Devices
+
 
 ## Benefits of the Project
 
-##
