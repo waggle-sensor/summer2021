@@ -13,11 +13,16 @@ In order to demonstrate the effectiveness of this process, six pilot sites have 
 Bioacoustic audio recording [devices](https://github.com/waggle-sensor/summer2021/tree/main/Macintyre/soundrecorder/campaigns/morton-arb/science_page#devices) have been deployed in the arboretum to collect acoustic data that will be used to understand the soundscape and biodiversity in the area.
 
 ## Soundscape Ecology
-Animals make sounds for a wide variety of reasons.  They use sounds to communicate about territory, food, predators, and mating.
+Animals make sounds for a wide variety of reasons.  They use sounds to communicate about territory, food, predators, mating, and much more.
 All of these sounds contribute to what is called a soundscape.
 Soundscape ecology is the branch of science that analyzes acoustic data from soundscapes to understand the relationships between biodiversity, landscapes, and anthropogenic pressures.
 
 ## Devices
+### BAR-LT
+![bar-lt_panel](https://user-images.githubusercontent.com/84532371/122977932-8ca46200-d35b-11eb-9d7d-bd94d73b785d.jpg)
+
+### Solar BAR
+![solar_bar_panel](https://user-images.githubusercontent.com/84532371/122977989-9f1e9b80-d35b-11eb-8366-8d3009f617df.jpg)
 
 
 ## Benefits of the Project
