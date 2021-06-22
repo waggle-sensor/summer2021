@@ -36,4 +36,4 @@ Such benfits include:
 * Better estimates of land-use restriction's effect on the conservation of certain species will be possible.
 * Comparing data in the future with the baseline measurements will provide information on the migration of a species and what might have caused it.
 
-These are just a few of the benefits that this project might yield.  But in order for the deployment of recording devices nationwide, the process must be tested in places such as the Morton Arboretum.
+These are just a few of the benefits that this project might yield.  But in order for the deployment of recording devices to be possible nationwide, the process must be tested in places such as the Morton Arboretum first.
