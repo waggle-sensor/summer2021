@@ -35,4 +35,5 @@ Such benfits include:
 * Analysis of the acoustic data will allow for quantifying the differences between protected and non-protected areas.
 * Better estimates of land-use restriction's effect on the conservation of certain species will be possible.
 * Comparing data in the future with the baseline measurements will provide information on the migration of a species and what might have caused it.
-These are just a few of the benefits that this project might yield.  
+
+These are just a few of the benefits that this project might yield.  But in order for the deployment of recording devices nationwide, the process must be tested in places such as the Morton Arboretum.
