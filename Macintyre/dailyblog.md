@@ -16,3 +16,15 @@
 * Created the one slide summary of myself to put into the google drive
 * Learned some more about using GIMP
 * Tomorrow we will most likely meet to discuss which locations I should go check out at Morton
+
+### Tuesday, June 22
+
+
+### Wednesday, June 23
+
+
+### Thursday, June 24
+
+
+### Friday, June 25
+
