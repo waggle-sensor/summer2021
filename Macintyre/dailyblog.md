@@ -21,7 +21,7 @@
 * Met with Raj in the morning about creating a science page that will be linked to the QR code on the recorders
 * Created a first draft of the science page in Github
 * Met with Raj and Eyal to discuss deployment locations in Morton
-* Went to Raj's to get the kit
+* Got in touch with Samantha at Morton and planned a time on Friday to go and inspect deployment locations
 
 ### Wednesday, June 23
 
