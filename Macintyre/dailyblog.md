@@ -18,7 +18,10 @@
 * Tomorrow we will most likely meet to discuss which locations I should go check out at Morton
 
 ### Tuesday, June 22
-
+* Met with Raj in the morning about creating a science page that will be linked to the QR code on the recorders
+* Created a first draft of the science page in Github
+* Met with Raj and Eyal to discuss deployment locations in Morton
+* Went to Raj's to get the kit
 
 ### Wednesday, June 23
 
