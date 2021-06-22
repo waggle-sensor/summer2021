@@ -7,12 +7,10 @@ Week 1: 6/14–6/18
 - wrote project summary
 - prepared student presentation
 
-
 Week 2: 6/21–6/25
 - Monday
-  - student presentations
-  - started looking at ARM data, code in python
-  - looked into optical flow
+  - delivered, watched student presentations
+  - got assignment scaffolding from Scott: started looking at ARM data, code in python, looked more into optical flow
 - Tuesday
   - finishing TMS tasks/courses
   - setting up Docker, ssh
