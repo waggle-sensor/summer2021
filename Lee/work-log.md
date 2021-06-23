@@ -59,7 +59,6 @@
    Five DHT22 sensors were used and those data was sent to the HiveMQ cloud. (https://www.hivemq.com/mqtt-cloud-broker/)
 
 -Things to do
-* Remind SQL
 * Set up HiveMQ cloud active states
 * Watch other Node-RED demo videos relevant SAGE project
          
@@ -268,8 +267,7 @@ ENTRYPOINT java HelloWorld
 * short meeting with Joe
 
 -Today's Technical Tasks
-*
-
+* prepared for tmr demo
 
 ### Friday, 18th
 -Today's Non-Technical Tasks
