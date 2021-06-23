@@ -329,4 +329,4 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   
 -Today's Technical Tasks
 * Read up Node-RED instances examples exisiting industrial world
-* If have multiple instances of node red on same machine with different port numbers, different flows: For the same user based on the role defined - flows and palette controls will be displayed,"
+* If have multiple instances of node red on same machine with different port numbers, different flows: For the same user based on the role defined - flows and palette controls will be displayed: https://nodered.org/docs/getting-started/local
