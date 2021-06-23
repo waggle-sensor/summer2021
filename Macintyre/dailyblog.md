@@ -24,7 +24,10 @@
 * Got in touch with Samantha at Morton and planned a time on Friday to go and inspect deployment locations
 
 ### Wednesday, June 23
-
+* Attended the virtual seminar on creating a LinkedIn profile
+* Did some research on soundscape ecology so that I have a better understanding of that process after the data has been collected
+* Met people from the group in person and got a bag of new devices from Raj
+* Spent the afternoon doing a bit more research on the project and looking through the bag of devices that Raj gave me
 
 ### Thursday, June 24
 
