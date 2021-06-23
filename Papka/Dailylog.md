@@ -1,2 +1,3 @@
 Week of 6/21
-- Look into Jupyter Notebook and audio editing software
+- begin work on bee detector by working through cloud detection example
+- work on tutorial to train AI for ML/AI beginners. 
