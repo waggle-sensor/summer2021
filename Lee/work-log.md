@@ -9,6 +9,7 @@
 * Computer Request for CELS
 * Enrolled the required course in TMS
 * Read up the guidelines and instructions on Github
+
 -Today's Technical Tasks
 * Read Scrum Reference Card
 * Read SAGE Agile Scrum Software Development Process
@@ -20,6 +21,7 @@
 * Followed up simple tutorials of Github
 * Sign in MIRO / JIRA
   (I guess MIRO is for planning, and JIRA is for process management. I need to read the guidelines again this week, especially calculating team capacities.)
+
 -Today's Technical Tasks
 * Watched Docker tutorial videos and build up on my RPI / Mac OS
 * Read Scrum Reference Card. Summary:
@@ -36,6 +38,7 @@
 -Today's Non-Technical Tasks
 * Double checked to complete I-9 and FNIS including all relevant tax forms 
 * Signed in https://getsmarter.io/ for weekly meeting (need to figure out how to use it)
+
 -Today's Technical Tasks
 * Watched the Node-RED demo video shared by Josh/relevant videos
 * Set up RPI and remind my previous zipper robot project with RPI.
@@ -52,6 +55,7 @@
 * Checked my personal IoT project for growing plants
    Ran on RPI, simple Node-RED design.
    Five DHT22 sensors were used and those data was sent to the HiveMQ cloud. (https://www.hivemq.com/mqtt-cloud-broker/)
+
 -Things to do
 * Set up HiveMQ cloud active states
 * Watch other Node-RED demo videos relevant SAGE project
@@ -65,6 +69,7 @@
 * Set up Raspberry Pi and sensors for checking (RPI)
 * Discussion with Sean, Wolfgang, and Joe about filtered data in the SDR (finally figured out!)
    (Feedback: In the cloud case, we only have the HTTP/JSON API. Because we can filter data using the API, we can still do something similar to subscribing to only specific kind of data). So, in current progress, MQTT is not required. (might be future plan)
+
 -Today's Technical Tasks
 * Use HTTP request to get data from a REST endpoint on Node-RED (External REST API  - https://restcountries.eu) - Success!!
 * Read the doc of REST API more. (Also check other relevant video as well)
@@ -80,6 +85,7 @@
 * done with Indiana & Illinois tax (to HR)
 * Re-installed Docker on Mac (bc RPI not enough memory)
 * Completed 1 required course in TMS
+
 -Today's Technical Tasks
 * Built up Email Notification from Node-RED: https://flows.nodered.org/node/node-red-node-email
   description: It is set up on the Raspberry Pi connected temperature sensors. If temp > 30, sent the alarm via email
@@ -135,6 +141,7 @@
 ### Friday, 4th
 -Today's Non-Technical Tasks
 * Contacted with HR (Northwestern University) need to complete payment process
+
 -Today's Technical Tasks
 * After demo video prsentation, build up with feedback that I got, discussion for next steps.
 
@@ -150,6 +157,7 @@
 * Enrolled CPT course (Purdue University)
 * Entorlled OEPT course (Purdue University)
 * Re-installed MySQL on Window
+
 -Today's Technical Tasks
 * Performed manipulation of the world sample database using MySQL
   SHOW DATABASES, USE (database_name, ex. world), SHOW TABLES, SHOW TABLE STATUS, DESCRIBE (or DESC) (ex. city, or country, or countrylanguage), SELECT (* (all or Name, Population) from city), WHERE, BETWEEN, IN, LIKE, Sub Query, ANY(SOME), ALL, ORDER BY, DISTINCT, LIMIT.
@@ -164,10 +172,11 @@
 
 -Today's Technical Tasks
 * Still learning MySQL
-
+* 
 
 ### Wednesday, 9th
 -Today's Non-Technical Tasks
+
 -Today's Technical Tasks 
 
 
@@ -316,6 +325,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * Signed up remote work form v1 and sent it back to Deneen
 * Completed all require/elective courses in TMS (need to sign from Raj)
 * Attended sprint planning meeting
+
 -Today's Technical Tasks
 * Read up Node-RED instances examples exisiting industrial world
 * If have multiple instances of node red on same machine with different port numbers, different flows: For the same user based on the role defined - flows and palette controls will be displayed: https://nodered.org/docs/getting-started/local
@@ -325,6 +335,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 -Today's Non-Technical Tasks
 * Scheduled for July 13th: Reply to Mary summer get-together with students and mentors
 * Attended mid-break social meeting
+
 -Today's Technical Tasks
 * Clarified node-red instance per user. First step: if have multiple instances of node red on same machine with different port numbers, different flows
 * https://nodered.org/docs/getting-started/local
