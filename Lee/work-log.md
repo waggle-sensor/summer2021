@@ -363,3 +363,5 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * Clarified node-red instance per user. First step: if have multiple instances of node red on same machine with different port numbers, different flows
 * https://nodered.org/docs/getting-started/local
 * https://discourse.nodered.org/t/how-can-we-run-multiple-node-red-applications-in-the-same-machine-system/40805/16
+* https://developer.ibm.com/ko/technologies/iot/
+* https://www.python2.net/questions-1144056.html
