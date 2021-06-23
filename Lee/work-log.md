@@ -4,30 +4,26 @@
 
 ### Monday, 24th
 -Today's Non-Technical Tasks
-* Attended Orientation at 9AM (CST)
+* Attended ANL Orientation at 9AM (CST)
 * Joined the Slack
 * Computer Request for CELS
 * Enrolled the required course in TMS
-* Read the guidelines and instructions on Github
-
+* Read up the guidelines and instructions on Github
 -Today's Technical Tasks
-* Learned Docker/kubernetes cluster json
 * Read Scrum Reference Card
 * Read SAGE Agile Scrum Software Development Process
 
 
 ### Tuesday, 25th
 -Today's Non-Technical Tasks
-* Read the guidelines and instructions on Github
+* Meeting with Sean (Query into SDR)
+* Followed up simple tutorials of Github
 * Sign in MIRO / JIRA
   (I guess MIRO is for planning, and JIRA is for process management. I need to read the guidelines again this week, especially calculating team capacities.)
-
 -Today's Technical Tasks
-* Watched Docker tutorial videos and build up on my RPI and Mac
-* Read Scrum Reference Card
-* Read SAGE Agile Scrum Software Development Process
+* Watched Docker tutorial videos and build up on my RPI / Mac OS
+* Read Scrum Reference Card. Summary:
 
-  What I learn/understand is:
   Agile: Software Developer Methodology (less document-oriented, practical code-oriented compared to Waterfall model)
          Unlike previous methodologies that have been led through planning, agile method constantly creates prototypes with constant cycles,
          modifies the needs of each time and develops a single large piece of software.
@@ -38,9 +34,8 @@
          
 ### Wednesday, 26th
 -Today's Non-Technical Tasks
-* Double checked to complete I-9 and FNIS including all tax forms 
+* Double checked to complete I-9 and FNIS including all relevant tax forms 
 * Signed in https://getsmarter.io/ for weekly meeting (need to figure out how to use it)
-
 -Today's Technical Tasks
 * Watched the Node-RED demo video shared by Josh/relevant videos
 * Set up RPI and remind my previous zipper robot project with RPI.
@@ -57,7 +52,6 @@
 * Checked my personal IoT project for growing plants
    Ran on RPI, simple Node-RED design.
    Five DHT22 sensors were used and those data was sent to the HiveMQ cloud. (https://www.hivemq.com/mqtt-cloud-broker/)
-
 -Things to do
 * Set up HiveMQ cloud active states
 * Watch other Node-RED demo videos relevant SAGE project
@@ -65,38 +59,33 @@
 ************************************************************
 
 ## 2st Week 06/01-06/04 (Main Goal: Node-RED)
-
 ### Tuesday, 1th
 -Today's Non-Technical Tasks
 * Checked the schedule of TMS
 * Set up Raspberry Pi and sensors for checking (RPI)
 * Discussion with Sean, Wolfgang, and Joe about filtered data in the SDR (finally figured out!)
-   (Feedback: In the cloud case, we only have the HTTP/JSON API. Because we can filter data using the API, we can still do something similar to subscribing to only specific kind of data.)
-   So, in current progress, MQTT is not required. (might be future plan)
-   
+   (Feedback: In the cloud case, we only have the HTTP/JSON API. Because we can filter data using the API, we can still do something similar to subscribing to only specific kind of data). So, in current progress, MQTT is not required. (might be future plan)
 -Today's Technical Tasks
 * Use HTTP request to get data from a REST endpoint on Node-RED (External REST API  - https://restcountries.eu) - Success!!
 * Read the doc of REST API more. (Also check other relevant video as well)
-
 -Things to do
 * Test the HTTP request again with SDR.
-  1) Read example query data from SDR using HTTP / JSON request.
-  2) Start with a simple “print value” node.
-  3) Add a “filter when name = sys.uptime” node and add a trigger when that is < 1800.
-  
+  1) Read up example query data from SDR using HTTP / JSON request
+  2) Start with a simple “print value” node
+  3) Add a “filter when name = sys.uptime” node and add a trigger when that is < 1800
+ 
 
 ### Wednesday, 2th
 -Today's Non-Technical Tasks
 * done with Indiana & Illinois tax (to HR)
-* Re-installed Docker on Mac (bc my RPI not enough memory)
+* Re-installed Docker on Mac (bc RPI not enough memory)
 * Completed 1 required course in TMS
-
 -Today's Technical Tasks
 * Built up Email Notification from Node-RED: https://flows.nodered.org/node/node-red-node-email
   description: It is set up on the Raspberry Pi connected temperature sensors. If temp > 30, sent the alarm via email
-
 - Things to do
 * Read Slack API: https://flows.nodered.org/node/node-red-contrib-slack and Alarm Notification on Slack...
+
 
 ### Thursday, 3th
 -Today's Non-Technical Tasks
@@ -146,12 +135,11 @@
 ### Friday, 4th
 -Today's Non-Technical Tasks
 * Contacted with HR (Northwestern University) need to complete payment process
-
 -Today's Technical Tasks
-* After demo video prsentation, discussion for next steps.
+* After demo video prsentation, build up with feedback that I got, discussion for next steps.
 
 -Things to do:
-* Need to query in Sage Data Repo (ask some question to Sean)
+* Need to query in Sage Data Repo (ask some question about API to Sean)
 
 ************************************************************
 
@@ -161,8 +149,7 @@
 -Today's Non-Technical Tasks
 * Enrolled CPT course (Purdue University)
 * Entorlled OEPT course (Purdue University)
-* Installed MySQL on Window
-
+* Re-installed MySQL on Window
 -Today's Technical Tasks
 * Performed manipulation of the world sample database using MySQL
   SHOW DATABASES, USE (database_name, ex. world), SHOW TABLES, SHOW TABLE STATUS, DESCRIBE (or DESC) (ex. city, or country, or countrylanguage), SELECT (* (all or Name, Population) from city), WHERE, BETWEEN, IN, LIKE, Sub Query, ANY(SOME), ALL, ORDER BY, DISTINCT, LIMIT.
@@ -253,6 +240,7 @@ ENTRYPOINT java HelloWorld
 * note: e) var x = {firstName:"John", lastName:"Doe"}; // Object | var cars = ["Saab", "Volvo", "BMW"]; //array (similart to list in Python I guess)
 * However, the typeof operator returns "object" for arrays because in JavaScript arrays are objects.
 
+  
 ### Wednesday, 16th
 -Today's Technical Tasks
 * Still learning JavaScript with same tutorials as yesterday's one.
@@ -262,6 +250,7 @@ ENTRYPOINT java HelloWorld
 * can access object properties in two ways: objectName.propertyName or objectName["propertyName"]
 * "this" keyword
 
+  
 ### Thursday, 17th
 -Today's Non-Technical Tasks
 * short meeting with Joe
@@ -269,6 +258,7 @@ ENTRYPOINT java HelloWorld
 -Today's Technical Tasks
 * prepared for tmr demo
 
+  
 ### Friday, 18th
 -Today's Non-Technical Tasks
 * SAGE sprint demo & retrospective (DHT real time data handling, and query from SDR on Node-RED presentation)
@@ -311,7 +301,6 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 ### Monday, 21th
 -Today's Non-Technical Tasks
 * Attended presentation of goal for internship
-  
 -Today's Technical Tasks
 * Learning docker from https://www.44bits.io/ko/post/why-should-i-use-docker-container
 * Basic concept: Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.
@@ -321,12 +310,22 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * tested with simple tutorial: https://www.youtube.com/watch?v=hWPv9LMlme8&t=587s
 -Things to do: join to Kubernetes with Docker
 
+  
 ### Tuesday, 22th
 -Today's Non-Technical Tasks
 * Signed up remote work form v1 and sent it back to Deneen
 * Completed all require/elective courses in TMS (need to sign from Raj)
 * Attended sprint planning meeting
-  
 -Today's Technical Tasks
 * Read up Node-RED instances examples exisiting industrial world
 * If have multiple instances of node red on same machine with different port numbers, different flows: For the same user based on the role defined - flows and palette controls will be displayed: https://nodered.org/docs/getting-started/local
+  
+  
+### Wednesday, 23th
+-Today's Non-Technical Tasks
+* Scheduled for July 13th: Reply to Mary summer get-together with students and mentors
+* Attended mid-break social meeting
+-Today's Technical Tasks
+* Clarified node-red instance per user. First step: if have multiple instances of node red on same machine with different port numbers, different flows
+* https://nodered.org/docs/getting-started/local
+* https://discourse.nodered.org/t/how-can-we-run-multiple-node-red-applications-in-the-same-machine-system/40805/16
