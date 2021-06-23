@@ -9,3 +9,25 @@
 * Met with Raj about final changes to the Morton Arboretum Campaign
 * Spent most of the day finishing the campaign README and learning some tools in GIMP
 * Sent the final README to the group to ask for locations that I should inspect next week
+
+## Week 4
+### Monday, June 21
+* Meeting with the whole group for the rest of the presentations
+* Created the one slide summary of myself to put into the google drive
+* Learned some more about using GIMP
+* Tomorrow we will most likely meet to discuss which locations I should go check out at Morton
+
+### Tuesday, June 22
+* Met with Raj in the morning about creating a science page that will be linked to the QR code on the recorders
+* Created a first draft of the science page in Github
+* Met with Raj and Eyal to discuss deployment locations in Morton
+* Got in touch with Samantha at Morton and planned a time on Friday to go and inspect deployment locations
+
+### Wednesday, June 23
+
+
+### Thursday, June 24
+
+
+### Friday, June 25
+

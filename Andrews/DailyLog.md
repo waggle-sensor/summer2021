@@ -103,7 +103,14 @@
     * Figure out what I need to grab from the satellite data
     * 
 
+## Week 4 
+### June 21
+- Practiced/gave intro presentation
+- 5 newly assigned TMS training modules
+- Thought I may have finally figured out time-height plots but I didn't
 
+### June 22
+-
 
 
 
