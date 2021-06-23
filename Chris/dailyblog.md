@@ -92,4 +92,20 @@ For keeping records of progress.
   - make install
   - export TAU_TRACK_MEMORY_FOOTPRINT=1
 
+### Wednesday 6/23
+- Updated TAU wrapper to take filename.py as input
+- Met with Luke to discuss plans for the profiler
+  - build MVP(minimum viable profiler) first
+  - Get black box profiler that
+    - Gives min, max, avg, std dev of:
+      - GPU (luke, NVidia tool)
+      - CPU (Chris, tau)
+      - RAM (Chris, tau)
+    - Input and Outputs args and profile data in JSON key, value pairs
+- Trying to get the object dectection test to work
+  - Made need access to an NX
+  - Not having much luck building locally (linux/amd64)
+  
+    
+
 
