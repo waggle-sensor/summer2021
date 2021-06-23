@@ -59,7 +59,30 @@
 -Things to do
 * Set up HiveMQ cloud active states
 * Watch other Node-RED demo videos relevant SAGE project
-         
+
+### Wednesday, 27th
+-Today's Non-Technical Tasks
+* Attended first team-meeting
+* Emailed to Deneen (need to check tax/paycheck process)
+
+-Today's Technical Tasks
+* Read up Sage: A distributed software-defined sensor network: https://github.com/sagecontinuum/sage
+* https://github.com/sagecontinuum/sage/blob/master/architecture_overview.md
+
+
+### Thursday, 28th
+-Today's Non-Technical Tasks
+* Meeting with Joe and Wolfgang about my node-red json format
+* Attended daily meeting
+
+### Friday, 29th
+-Today's Non-Technical Tasks
+* Attended daily meeting
+
+-Today's Non-Technical Tasks
+* Read up: Running Node-RED locally - https://nodered.org/docs/getting-started/local
+* Simple node test with json formatting
+
 ************************************************************
 
 ## 2st Week 06/01-06/04 (Main Goal: Node-RED)
