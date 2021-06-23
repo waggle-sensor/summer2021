@@ -39,3 +39,6 @@ Goal : Codesign profiling block with ECR Team (Week 2 and Week 3).
 - Meeting with Chris for profiling clarification.
 - Preparing the profiler-controller design presentation for ECR meeting on the next day.
 
+### Tuesday 06/22
+- Meeting with ECR Team.
+- Presentation material https://docs.google.com/presentation/d/1JwYcgYLhDVcX99O0ihHhzI8Yi3zKG0zDJZVXwpS8VlU/edit?usp=sharing
