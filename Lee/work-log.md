@@ -59,7 +59,6 @@
    Five DHT22 sensors were used and those data was sent to the HiveMQ cloud. (https://www.hivemq.com/mqtt-cloud-broker/)
 
 -Things to do
-* Remind SQL
 * Set up HiveMQ cloud active states
 * Watch other Node-RED demo videos relevant SAGE project
          
@@ -268,8 +267,7 @@ ENTRYPOINT java HelloWorld
 * short meeting with Joe
 
 -Today's Technical Tasks
-*
-
+* prepared for tmr demo
 
 ### Friday, 18th
 -Today's Non-Technical Tasks
@@ -320,3 +318,15 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.
 * Docker components: software, objects, and registries.
 * WHY used? Containers are technologies that run applications regardless of their environment. (do not need to go through the complex installation process that exists for each operating system.)
+* tested with simple tutorial: https://www.youtube.com/watch?v=hWPv9LMlme8&t=587s
+-Things to do: join to Kubernetes with Docker
+
+### Tuesday, 22th
+-Today's Non-Technical Tasks
+* Signed up remote work form v1 and sent it back to Deneen
+* Completed all require/elective courses in TMS (need to sign from Raj)
+* Attended sprint planning meeting
+  
+-Today's Technical Tasks
+* Read up Node-RED instances examples exisiting industrial world
+* If have multiple instances of node red on same machine with different port numbers, different flows: For the same user based on the role defined - flows and palette controls will be displayed: https://nodered.org/docs/getting-started/local
