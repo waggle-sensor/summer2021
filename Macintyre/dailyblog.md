@@ -28,6 +28,7 @@
 * Did some research on soundscape ecology so that I have a better understanding of that process after the data has been collected
 * Met people from the group in person and got a bag of new devices from Raj
 * Spent the afternoon doing a bit more research on the project and looking through the bag of devices that Raj gave me
+* Contacted Samantha to ask if I am allowed to mark locations that I pick on Friday, and if it is allowed, what is the best way to go about that
 
 ### Thursday, June 24
 
