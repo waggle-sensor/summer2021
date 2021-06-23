@@ -321,11 +321,11 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * Docker components: software, objects, and registries.
 * WHY used? Containers are technologies that run applications regardless of their environment. (do not need to go through the complex installation process that exists for each operating system.)
 * tested with simple tutorial: https://www.youtube.com/watch?v=hWPv9LMlme8&t=587s
--Things to do: join to Kubernetes
+-Things to do: join to Kubernetes with Docker
 
 ### Tuesday, 22th
 -Today's Non-Technical Tasks
-* Signed up remote work form v1 to Deneen
+* Signed up remote work form v1 and sent it back to Deneen
 * Completed all require/elective courses in TMS (need to sign from Raj)
 * Attended sprint planning meeting
   
