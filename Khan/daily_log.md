@@ -147,6 +147,23 @@
   already completed
 * Researched and understood the math behind canny edge detection through Udacity computer vision videos
 * Wrote additional test cases 
-* Need to gt started on second part of project, came up with a couple of questions to ask in tomorrows meeting
+* Need to get started on second part of project, came up with a couple of questions to ask in tomorrows meeting
   about that
+  
+### 6/22/2021 ###
+* Attended meeting with computer vision team
+* Researched random forests machine learning model to use in project
+* Fixed an issue with straight line detection
+
+### 6/23/2021 ###
+* Attended zoom meeting on "Connecting to a Career through Linkedln"
+* Watched a couple more videos on random forests and decision trees.
+* Wrote a simple program using random forests involving classifying different
+  types of flowers in order to get a better grasp on random forests for project.
+* Recieved images for data in project.
+
+
+
+
+
 

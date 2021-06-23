@@ -189,7 +189,7 @@ class Test(unittest.TestCase):
     def test_straight_edge_density1(self):
 
         straight_edge_density_low = convert_file_to_image('test_images/low_edge_density.jpg')[1]
-        straight_edge_density_high = convert_file_to_image('test_images/high_edge_density.png')[1]
+        straight_edge_density_high = convert_file_to_image('test_images/medium_edge_density.jpg')[1]
 
         straight_edges_length_low = find_straight_edge_density(straight_edge_density_low)
         straight_edges_length_high = find_straight_edge_density(straight_edge_density_high)

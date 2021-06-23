@@ -107,7 +107,6 @@ def detect_edges(image, lower_threshold, upper_threshold):
     image = cv2.bilateralFilter(image, 9, 75, 75)
 
     canny = cv2.Canny(image, lower_threshold, upper_threshold)
-    display(canny)
 
     return canny
 
@@ -151,17 +150,24 @@ def find_straight_edge_density(image):
 
       length_line_segment = math.sqrt(((x2 - x1) ** 2) +  ((y2 - y1) ** 2))
 
-      if (length_line_segment > 50):        # ignore line segments that are very small
-          sum_length += length_line_segment
-      else:
-          lines[i][0][0] = 0
-          lines[i][0][1] = 0
-          lines[i][0][2] = 0
-          lines[i][0][3] = 0
+      #if (length_line_segment > 50):        # ignore line segments that are very small
+      sum_length += length_line_segment
+      # else:
+      #     lines[i][0][0] = 0
+      #     lines[i][0][1] = 0
+      #     lines[i][0][2] = 0
+      #     lines[i][0][3] = 0
 
   # len(lines) will give you the number of lines
 
   display(draw_image)
+
+  '''
+  TODO: After getting data set and running all the images throuugh this, 
+  normalize straight edge density to be between [0, 1]
+  1 -> high straight edge density
+  0 -> low straight edge density
+  '''
   return sum_length
 
 '''How much of the image is edges
