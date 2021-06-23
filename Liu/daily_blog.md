@@ -414,3 +414,14 @@ NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Ma
  - Learn the toturial in PyTorch about quantization with [notes](paper-notes/anytime-dnn/pytorch-quantization.md)
  - Have a meeting with the ML team and discuss the usage of quantization with anytime DNN design
    - try more models to show the effectiveness of quantization
+
+### Tuesday June 22, 2021
+#### Work Done:
+ - Look into the implementation of quantization in Pytorch and torchvision library
+   - [Pytorch 1.7 quantization APIs](https://pytorch.org/docs/stable/torch.quantization.html)
+ - Keras support for DNN quantization
+   - [qkeras](https://github.com/google/qkeras)
+     - Deploy and test the project with GPU
+     - read papers about qkeras
+       - https://www.nature.com/articles/s42256-021-00356-5
+       - http://arxiv.org/abs/2006.10159v1
