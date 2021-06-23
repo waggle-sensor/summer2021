@@ -36,7 +36,7 @@
 ![image](https://user-images.githubusercontent.com/56851781/122118684-4d738f80-cdf6-11eb-9094-d3952a2e88ea.png)
 
 
-## Tutorials:
+## Tutorials https://nodered.org/docs/tutorials/
 * 1. This flow demonstrates the basic concept of creating a flow. It shows how the Inject node can be used to manually trigger a flow, and how the Debug node displays messages in the sidebar. It also shows how the Function node can be used to write custom JavaScript to run against messages. You can compared two different inject nodes.
 ![image](https://user-images.githubusercontent.com/56851781/123179651-d6727280-d457-11eb-8640-504c3279edaa.png)
 
