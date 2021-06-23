@@ -320,3 +320,14 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.
 * Docker components: software, objects, and registries.
 * WHY used? Containers are technologies that run applications regardless of their environment. (do not need to go through the complex installation process that exists for each operating system.)
+* tested with simple tutorial: https://www.youtube.com/watch?v=hWPv9LMlme8&t=587s
+-Things to do: join to Kubernetes
+
+### Tuesday, 22th
+-Today's Non-Technical Tasks
+* Signed up remote work form v1 to Deneen
+* Completed all require/elective courses in TMS (need to sign from Raj)
+* Attended sprint planning meeting
+  
+-Today's Technical Tasks
+* Read up Node-RED instances examples exisiting industrial world
