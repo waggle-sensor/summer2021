@@ -105,6 +105,32 @@
 
 
 
+### Week 4 ###
+
+------------
+
+#### Monday June 21, 2021 ####
+
+- Modifying ECR code accept docker entrypoints in application specification YAML
+
+#### Tuesday June 22, 2021 ####
+
+- Attended DOE Seminar
+- Worked on adding test command in application specification YAML to prevent Shell Injection.
+
+#### Wednesday June 23, 2021 ####
+
+- Attended Student EDU Weekly seminar series 
+- Worked on implementing multi-platform build in Jenkins
+
+
+
+
+
+
+
+
+
 
 
 ### Learning Resources and References ###
