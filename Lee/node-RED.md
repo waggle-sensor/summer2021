@@ -1,5 +1,6 @@
 ### Node-RED
 
+
 * Node-RED inherits general functionality from FBP tools, which is Flow-Based-Programming.
 * exchanges data across pre-defined connections by message passing, where the connections are specified externally to the processes.
 * can continue executing and functioning, as long as there is data to work on and destination for the output.
@@ -35,5 +36,13 @@
 ![image](https://user-images.githubusercontent.com/56851781/122118684-4d738f80-cdf6-11eb-9094-d3952a2e88ea.png)
 
 
+## Tutorials https://nodered.org/docs/tutorials/
+* 1. This flow demonstrates the basic concept of creating a flow. It shows how the Inject node can be used to manually trigger a flow, and how the Debug node displays messages in the sidebar. It also shows how the Function node can be used to write custom JavaScript to run against messages. You can compared two different inject nodes.
+![image](https://user-images.githubusercontent.com/56851781/123179651-d6727280-d457-11eb-8640-504c3279edaa.png)
 
+* 2. This flow is automatically triggered every 5 minutes and retrieves data from https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.csv. It parses the data and displays in the Debug sidebar. It also checks the magnitude value in the data and branches the flow for any messages with a magnitude greater than, or equal to, 7. The payloads of such messages are modified and displayed in the Debug sidebar.
+![image](https://user-images.githubusercontent.com/56851781/123179781-15082d00-d458-11eb-9891-a819a3b9f6ff.png)
+
+
+ 
 

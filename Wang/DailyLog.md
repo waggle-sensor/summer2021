@@ -1,3 +1,25 @@
+# Week 5
+**June 21st**
+1. Finish converting the ogg files into wav.
+2. Study more about the feature extraction tools. 
+3. Meet with Rick.
+
+**June 22nd**
+1. Audio group meeting.
+2. NOT converiting anymore... will use ogg files directly.
+3. Study more about the feature extraction tools. 
+4. Had initial result for a neural net model with mfcc.
+![Screen Shot 2021-06-23 at 11 13 20 AM](https://user-images.githubusercontent.com/44412313/123178229-bf7e5100-d454-11eb-8d15-876c409bfed7.png)
+
+**June 23rd**
+1. Meet with Emily.
+2. Ran the NN model with chroma
+![Screen Shot 2021-06-23 at 12 41 57 PM](https://user-images.githubusercontent.com/44412313/123178408-1edc6100-d455-11eb-971d-5460ee3161e2.png)
+3. Study more about the feature extraction tools. 
+![Screen Shot 2021-06-23 at 6 57 58 PM](https://user-images.githubusercontent.com/44412313/123178328-f81e2a80-d454-11eb-89f1-9e2f13b59bf2.png)
+
+
+
 # Week 4
 **June 14th**
 1. Get data ready for training

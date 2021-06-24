@@ -321,7 +321,7 @@ Good week. I mostly spent my time working on software issues, which was fun.
 **Today's technical work:**
 * Wrote some endpoints relating to node creation for honeycomb
 -------------
-### Thursday, 6/16 (8 Hours worked)
+### Thursday, 6/17 (8 Hours worked)
 
 **Today's non-technical work:**
 * Attended Scrum
@@ -329,4 +329,46 @@ Good week. I mostly spent my time working on software issues, which was fun.
 
 **Today's technical work:**
 * Worked on SDCard sanity tests for SAGE-883
+-------------
+### Friday, 6/18 (7 Hours worked)
+
+**Today's non-technical work:**
+* Attended Demo meeting
+
+**Today's technical work:**
+* Worked on SDCard sanity tests for SAGE-883
+* Worked on RPI Sanity tests for SAGE-883
+* Looked into GPG signature verification
+-------------
+## Week 6
+-------
+### Monday, 6/21 (7 Hours worked)
+
+**Today's non-technical work:**
+* Attended Intern introductory meeting
+* Met with Joe and Wolfgang to discuss internship path
+
+
+
+**Today's technical work:**
+* Looked into GPG signature verification with no fruitfulness
+* Read up on ramdisks and waggle's create_ramdisk functionality
+-------------
+### Tuesday, 6/22 (8 Hours worked)
+
+**Today's non-technical work:**
+* Attended the sprint planning meeting
+
+All nodes were down from the second half of the day, so I couldn't write the media tests(SAGE-856)
+**Today's technical work:**
+* Researched ways to verify health of ramdisk, mostly looking into `initramfs` processes and how the `create_initrd` script works
+* Read up on initramfs hooks
+
+I should really provide more information in my daily logs, so I'll start doing that with relevant links. 
+* https://wiki.archlinux.org/title/mkinitcpio#HOOKS
+* https://manpages.debian.org/testing/initramfs-tools-core/initramfs-tools.7.en.html
+* https://wiki.debian.org/initramfs
+* https://salsa.debian.org/cloud-team/cloud-initramfs-tools
+* https://salsa.debian.org/kernel-team/initramfs-tools/-/blob/master/hooks/fsck
+
 -------------
