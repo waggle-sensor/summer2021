@@ -18,6 +18,10 @@
 3. Study more about the feature extraction tools. 
 ![Screen Shot 2021-06-23 at 6 57 58 PM](https://user-images.githubusercontent.com/44412313/123178328-f81e2a80-d454-11eb-89f1-9e2f13b59bf2.png)
 
+**June 24th**
+1. AI-ML group meeting
+2. Neural Networks; SVM; KNN
+3. Ran the NN model with chroma
 
 
 # Week 4
