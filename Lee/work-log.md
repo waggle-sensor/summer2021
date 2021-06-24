@@ -204,7 +204,10 @@
 
 
 ### Thursday, 10th
--Today's Technical Tasks
+-Today's Non-Technical Tasks
+* Attended 2021 CELS Student Lecture
+
+-Today's Technical Tasks: Docker
 * Docker - Java Hello World
   public class HellowWorld {
     public static void main(String[] args){
@@ -285,10 +288,11 @@ ENTRYPOINT java HelloWorld
   
 ### Thursday, 17th
 -Today's Non-Technical Tasks
-* short meeting with Joe
+* Short meeting with Joe
+* Attended 2021 CELS Student Lecture
 
 -Today's Technical Tasks
-* prepared for tmr demo
+* Prepared for tmr demo
 
   
 ### Friday, 18th
@@ -365,3 +369,12 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * https://discourse.nodered.org/t/how-can-we-run-multiple-node-red-applications-in-the-same-machine-system/40805/16
 * https://developer.ibm.com/ko/technologies/iot/
 * https://www.python2.net/questions-1144056.htm
+  
+### Thursday, 24th
+-Today's Non-Technical Tasks
+* Attended 2021 CELS Student Lecture
+* Attended daily sage scrum meeting
+* Tutorial on writing plugins (code) for the Waggle nodes by Sean
+  
+-Today's Non-Technical Tasks
+* a
