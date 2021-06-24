@@ -353,3 +353,27 @@ stdout/stderr:
    - **Feature Pyramids** and start to deploy the code 
    - quantization-based approach
  - Have a meeting with Aji and Yongho to discuss about the anytime DNNs project
+
+### Tuesday June 15, 2021
+#### Work Done:
+ - Do experiments on quantization-based model compression for anytime DNN design
+   - Train ResNet50 and quantized ResNet50 on CIFAR-10 dataset
+   - collect the computation complexity, number of parameters, average latency, accuracy of these two models
+   - Results:
+
+|         Metrics        | ResNet-50 | ResNet-50-Quant |
+|:----------------------:|:---------:|:---------------:|
+|      Average Time      |    34ms   |       9ms       |
+|        Accuracy        |   95.33%  |      89.19%     |
+| Computation Complexity |  1.3 GMac |    0.09 GMac    |
+|       Parameters       |  23.52 M  |     25.56 M     |
+
+ - Debug the code shared from Chengcheng on Orthogonalized SGD
+   - Dataset preparation, Python/Python3 configuration, Tensorflow 1.9.0-based
+
+### Wednesday June 16, 2021
+#### Work Done:
+ - Do experiments on quantization-based model compression for anytime DNN design
+   - read source code and [tutorial](https://pytorch.org/tutorials/advanced/static_quantization_tutorial.html) to understand the Post-Training Static Quantization in Pytorch
+ - Train the Orthogonalized SGD model with Depth-nested network
+   - Virtual environment, Python2 with Tensorflow-gpu 1.14.0
