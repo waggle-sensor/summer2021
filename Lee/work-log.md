@@ -380,6 +380,10 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 -Today's Technical Tasks
 * Tested on SAGE endpoint-nodeRED instances hookup
   
-  ### Friday, 25th
+### Friday, 25th
 -Today's Non-Technical Tasks
 * Updated Linked-in profiles/experiences
+* Attended daily sage scrum meeting
+  
+-Today's Technical Tasks
+* Research how to set NSSM to run two separate instances at boot in windows 10
