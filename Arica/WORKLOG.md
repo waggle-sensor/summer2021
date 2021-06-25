@@ -400,3 +400,15 @@ I was a bit blocked today, as I was waiting for a node to be provisioned to me t
 * Wrote several failure tests for SAGE-856, updated the ticket with my progress
 
 -------------
+
+### Friday, 6/25 (8 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum
+* Met with Joe to help push SAGE-856 code
+
+**Today's technical work:**
+* Finished failure testing for SAGE-856, commited, and rebased code
+* Messed around with an edgeswitch. Very confusing : (
+
+-------------
