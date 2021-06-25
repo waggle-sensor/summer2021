@@ -114,6 +114,16 @@ For keeping records of progress.
 - Found a python script for stress testing ram
   - Couldn't get this to work with my wrapper for some reason, lots of NameErrors
 
+### Friday 6/25
+- Updated wrapper to work with new custom memory and cpu stress test
+  - wrapper can handle CLI args now too
+- Met with Luke, Sean, and Yongho
+  - discussed pywaggle instrumentation
+  - Mapped out how ECR team will collab with pywaggle
+  - On the radar -> unix socket and JSON
+- Got access to NXs (thank you Yongho!)
+  - setting up object counter plugin to begin experimenting with TAU on it
+
     
 
 
