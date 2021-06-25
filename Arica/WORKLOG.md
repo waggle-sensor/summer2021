@@ -340,3 +340,63 @@ Good week. I mostly spent my time working on software issues, which was fun.
 * Worked on RPI Sanity tests for SAGE-883
 * Looked into GPG signature verification
 -------------
+## Week 6
+-------
+### Monday, 6/21 (7 Hours worked)
+
+**Today's non-technical work:**
+* Attended Intern introductory meeting
+* Met with Joe and Wolfgang to discuss internship path
+
+
+
+**Today's technical work:**
+* Looked into GPG signature verification with no fruitfulness
+* Read up on ramdisks and waggle's create_ramdisk functionality
+-------------
+### Tuesday, 6/22 (8 Hours worked)
+
+**Today's non-technical work:**
+* Attended the sprint planning meeting
+
+All nodes were down from the second half of the day, so I couldn't write the media tests(SAGE-856)
+**Today's technical work:**
+* Researched ways to verify health of ramdisk, mostly looking into `initramfs` processes and how the `create_initrd` script works
+* Read up on initramfs hooks
+
+I should really provide more information in my daily logs, so I'll start doing that with relevant links. 
+* https://wiki.archlinux.org/title/mkinitcpio#HOOKS
+* https://manpages.debian.org/testing/initramfs-tools-core/initramfs-tools.7.en.html
+* https://wiki.debian.org/initramfs
+* https://salsa.debian.org/cloud-team/cloud-initramfs-tools
+* https://salsa.debian.org/kernel-team/initramfs-tools/-/blob/master/hooks/fsck
+
+-------------
+
+### Wednesday, 6/23 (8 Hours worked)
+
+**Today's non-technical work:**
+* No scrum today!
+* Read up some more on hooks and how they work in `initramfs`
+
+
+**Today's technical work:**
+* Finished up the ramdisk media tests
+* Did some planning for honeycomb on my Miro board
+
+
+I was a bit blocked today, as I was waiting for a node to be provisioned to me that I could run failure testing on for SAGE-856. I didn't end up getting it today, but it was all good. I learned some more about hooks!
+
+-------------
+
+### Thursday, 6/24 (8 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum
+* Attended Sean's great lecture on plugins and how to deploy them to ECR
+
+
+**Today's technical work:**
+* Wrote several failure tests for SAGE-856, updated the ticket with my progress
+
+-------------

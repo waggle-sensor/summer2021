@@ -4,6 +4,26 @@
 2. Study more about the feature extraction tools. 
 3. Meet with Rick.
 
+**June 22nd**
+1. Audio group meeting.
+2. NOT converiting anymore... will use ogg files directly.
+3. Study more about the feature extraction tools. 
+4. Had initial result for a neural net model with mfcc.
+![mfcc](https://user-images.githubusercontent.com/44412313/123275940-c186f500-d4d2-11eb-8390-f363b06cf71b.png)
+
+
+**June 23rd**
+1. Meet with Emily.
+2. Ran the NN model with chroma
+![choma](https://user-images.githubusercontent.com/44412313/123275979-c8ae0300-d4d2-11eb-9618-78715c2d5452.png)
+3. Study more about the feature extraction tools and implement them in the code. 
+![Screen Shot 2021-06-23 at 6 57 58 PM](https://user-images.githubusercontent.com/44412313/123178328-f81e2a80-d454-11eb-89f1-9e2f13b59bf2.png)
+
+**June 24th**
+1. AI-ML group meeting
+2. Neural Networks; SVM; KNN
+3. Ran the NN model with chroma
+
 
 # Week 4
 **June 14th**

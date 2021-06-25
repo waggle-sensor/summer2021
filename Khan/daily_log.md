@@ -137,4 +137,33 @@
 * Watched videos on machine learning and different machinen learning models
 * I am a little confused on what machine learning algorithm to use and how to go about the second part of the project
 
+---
+
+## Week 4 ##
+
+### 6/21/2021 ###
+* Attended zoom meeting where I learned about other projects 
+* Prepared slides for mid - point progress presentation on parts of the project that I have 
+  already completed
+* Researched and understood the math behind canny edge detection through Udacity computer vision videos
+* Wrote additional test cases 
+* Need to get started on second part of project, came up with a couple of questions to ask in tomorrows meeting
+  about that
+  
+### 6/22/2021 ###
+* Attended meeting with computer vision team
+* Researched random forests machine learning model to use in project
+* Fixed an issue with straight line detection
+
+### 6/23/2021 ###
+* Attended zoom meeting on "Connecting to a Career through Linkedln"
+* Watched a couple more videos on random forests and decision trees.
+* Wrote a simple program using random forests involving classifying different
+  types of flowers in order to get a better grasp on random forests for project.
+* Recieved images for data in project.
+
+
+
+
+
 
