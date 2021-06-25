@@ -42,3 +42,13 @@ Goal : Codesign profiling block with ECR Team (Week 2 and Week 3).
 ### Tuesday 06/22
 - Meeting with ECR Team.
 - Presentation material https://docs.google.com/presentation/d/1JwYcgYLhDVcX99O0ihHhzI8Yi3zKG0zDJZVXwpS8VlU/edit?usp=sharing
+
+### Wednesday 06/23
+- Went to Lemont to socialize.
+- Read documents from Pete about Live, History and Spesific monitoring.
+
+### Thursday 06/24
+- Attended student seminar.
+- Read paper about Real Time System in Docker.
+- Attended plugin tutorial.
+- Decided to start the scheduler with batch and time sharing knobs.
