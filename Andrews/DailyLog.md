@@ -107,7 +107,7 @@
 ### June 21
 - Practiced/gave intro presentation
 - 5 newly assigned TMS training courses
-- Thought I may have finally figured out time-height plots but I didn't
+- Thought I may have figured out time-height plots but I didn't
 
 ### June 22
 - Finish last four newly assigned training courses in TMS
@@ -121,8 +121,19 @@
 - EDU Weekly Seminar: LinkedIn
 - Student Connects Meeting
 - Meeting with Bobby about his code
-- Modified some of his code to work for the reflectivity time-height arrays I need
-- 
+- Started modifying some of his code to work for the reflectivity time-height arrays I need
 
+### June 24
+- Sage CV and Clouds Group Meeting
+- CELS Student Lecture Series
+- Writing Coach Meeting: Principles of Scientific Communication
+- Writing plugins for Waggle nodes Tutorial
+- Reflectivity time-height arrays: 
+    * Code mostly works for 1 volume scan
+    * Running into an issue with the xarray dimensions
 
+### June 25
+- Fixed code for the time-height arrays with Bobby's help
+    * Finally able to get a usable xarray dataset for the reflectivity, lat, lon, and height of the gates closest to a select site for x number of volume scans
+- Next week: make/clean up a few plots (xarray vs. pyart?), probably switch axis from sweeps to gate height, remove double sweeps at low levels due to SAILS
 
