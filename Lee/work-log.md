@@ -337,7 +337,8 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 ### Monday, 21th
 -Today's Non-Technical Tasks
 * Attended presentation of goal for internship
--Today's Technical Tasks
+
+  -Today's Technical Tasks
 * Learning docker from https://www.44bits.io/ko/post/why-should-i-use-docker-container
 * Basic concept: Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.
   Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.
@@ -374,7 +375,11 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 -Today's Non-Technical Tasks
 * Attended 2021 CELS Student Lecture
 * Attended daily sage scrum meeting
-* Tutorial on writing plugins (code) for the Waggle nodes by Sean
+* Attended Sean's tutorial on writing plugins (code) for the Waggle nodes
   
+-Today's Technical Tasks
+* Tested on SAGE endpoint-nodeRED instances hookup
+  
+  ### Friday, 25th
 -Today's Non-Technical Tasks
-* a
+* A
