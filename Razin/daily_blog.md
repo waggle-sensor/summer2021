@@ -10,9 +10,17 @@ Week 1: 6/14–6/18
 Week 2: 6/21–6/25
 - Monday
   - delivered, watched student presentations
-  - got assignment scaffolding from Scott: started looking at ARM data, code in python, looked more into optical flow
+  - got assignment scaffolding from Dr. Collis: started looking at ARM data, code in python, looked more into optical flow
 - Tuesday
   - finishing TMS tasks/courses
   - setting up Docker, ssh
   - looking into neural networks, more on optical flow from reflectivity images
   - parsing zsherman Python code some more
+- Wednesday
+    - finished TMS tasks/courses
+    - looked in to OpenCV code on optical flow
+- Thursday
+    - lab meeting with Dr. Collis, Dr. Ferrier, Dr. Sankaran, and rest of team
+    - attended Dr. Bessac's lecture on statistical practices
+    - met with Zach to go over code that generates .gif images of reflectivity data; built code to generate .png's instead
+    - attended Sean's lecture on plug-ins for Waggle nodes
