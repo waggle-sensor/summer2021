@@ -384,6 +384,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 -Today's Non-Technical Tasks
 * Updated Linked-in profiles/experiences
 * Attended daily sage scrum meeting
+* Created IBM cloud (cloudant service) to test i/o data from Node-RED
   
 -Today's Technical Tasks
 * Research how to set NSSM to run two separate instances at boot in windows 10
