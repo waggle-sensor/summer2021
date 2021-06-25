@@ -40,4 +40,15 @@
 * Finished the web page for the science page and got the QR code that links to it
 
 ### Friday, June 25
+* Went to Morton to check out locations for the sound recorders
+* Created a map with the locations that the devices will be deployed in
+* Met with Raj to discuss the locations and make sure I have what I need to deploy them on Monday
+* Met with Michael and Valerie for the weekly meeting about the nodes that we are setting up
+* Began the setup of the node
 
+## Week 5
+### Monday, June 28
+### Tuesday, June 29
+### Wednesday, June 30
+### Thursday, July 1
+### Friday, July 2
