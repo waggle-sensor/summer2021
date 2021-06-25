@@ -382,4 +382,4 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   
   ### Friday, 25th
 -Today's Non-Technical Tasks
-* A
+* Updated Linked-in profiles/experiences
