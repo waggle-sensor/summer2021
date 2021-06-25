@@ -425,3 +425,19 @@ NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Ma
      - read papers about qkeras
        - https://www.nature.com/articles/s42256-021-00356-5
        - http://arxiv.org/abs/2006.10159v1
+
+### Wednesday June 23, 2021
+#### Work Done:
+ - [Notes about integer quantizatio](paper-notes/anytime-dnn/Integer-quantization.md)
+ - Continue work on QKeras (Keras support for DNN quantization)
+   - [qkeras](https://github.com/google/qkeras)
+     - Deploy and test the project with GPU
+     - read papers about qkeras
+       - https://www.nature.com/articles/s42256-021-00356-5
+       - http://arxiv.org/abs/2006.10159v1
+
+### Thursday June 24, 2021
+#### Work Done:
+ - QKeras tutorial and code (Keras support for DNN quantization)
+   - [qkeras](https://github.com/google/qkeras)
+     - Deploy and test the project with GPU
