@@ -31,7 +31,13 @@
 * Contacted Samantha to ask if I am allowed to mark locations that I pick on Friday, and if it is allowed, what is the best way to go about that
 
 ### Thursday, June 24
-
+* Met with the Student Connects Group about strategies for staying productive while working remotely
+* Created a PowerPoint about my project for next week's student connects group meeting
+* Prepared all of the recorders for deployment, they are all ready to go for next week
+* Got connected with the group who is working on the kit that Raj gave me and began looking through those devices
+* Attended Sean's talk on plugins for Waggle nodes
+* Met with Raj about what I should be working on next
+* Finished the web page for the science page and got the QR code that links to it
 
 ### Friday, June 25
 

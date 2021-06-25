@@ -105,7 +105,15 @@ For keeping records of progress.
 - Trying to get the object dectection test to work
   - Made need access to an NX
   - Not having much luck building locally (linux/amd64)
-  
+
+### Thursday 6/24
+- Not as much progress as I would have hoped for today
+  - Spent most of the day trying to configure the object detector plugin to work locally on my linux/amd64 machine
+    - I was able to build the docker container with some modifications to the dockerfile, but it fails when it uses the RUN command(/bin/sh vs /bin/bash)
+- Modified wrapper to test ram by loading in a large file
+- Found a python script for stress testing ram
+  - Couldn't get this to work with my wrapper for some reason, lots of NameErrors
+
     
 
 
