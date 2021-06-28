@@ -26,7 +26,7 @@
     - attended Sean's lecture on plug-ins for Waggle nodes
 - Friday
     - worked on integrating OpenCV optical flow code into existing radar code data
-    - attended student social
+    - attended CELS student social
 
 ## Week 3: 6/28–7/2
 - Monday
