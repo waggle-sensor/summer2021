@@ -16,4 +16,5 @@
  - What are the pros and cons of each of OpenCV's two optical flow methods, particularly in this use case?
     - the Lucas-Kanade method may be less suited for this application because we're not really tracking a single object but instead shifts in color (?).
  - On Optimizations
-    - How do we reduce noise? In the case of the dense optical flow images, ...
+    - How do we reduce noise? In the case of the dense optical flow images, how do we reduce the number of colors used and their spread?
+    - How much should we zoom into the area of interest in the images?
