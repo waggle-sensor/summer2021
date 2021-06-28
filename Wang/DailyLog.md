@@ -9,15 +9,20 @@
 2. NOT converiting anymore... will use ogg files directly.
 3. Study more about the feature extraction tools. 
 4. Had initial result for a neural net model with mfcc.
-![Screen Shot 2021-06-23 at 11 13 20 AM](https://user-images.githubusercontent.com/44412313/123178229-bf7e5100-d454-11eb-8d15-876c409bfed7.png)
+![mfcc](https://user-images.githubusercontent.com/44412313/123275940-c186f500-d4d2-11eb-8390-f363b06cf71b.png)
+
 
 **June 23rd**
 1. Meet with Emily.
 2. Ran the NN model with chroma
-![Screen Shot 2021-06-23 at 12 41 57 PM](https://user-images.githubusercontent.com/44412313/123178408-1edc6100-d455-11eb-971d-5460ee3161e2.png)
-3. Study more about the feature extraction tools. 
+![choma](https://user-images.githubusercontent.com/44412313/123275979-c8ae0300-d4d2-11eb-9618-78715c2d5452.png)
+3. Study more about the feature extraction tools and implement them in the code. 
 ![Screen Shot 2021-06-23 at 6 57 58 PM](https://user-images.githubusercontent.com/44412313/123178328-f81e2a80-d454-11eb-89f1-9e2f13b59bf2.png)
 
+**June 24th**
+1. AI-ML group meeting
+2. Neural Networks; SVM; KNN
+3. Ran the NN model with chroma
 
 
 # Week 4

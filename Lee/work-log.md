@@ -195,16 +195,19 @@
 
 -Today's Technical Tasks
 * Still learning MySQL
-* 
 
 ### Wednesday, 9th
 -Today's Non-Technical Tasks
+* Updated Linked-in profiles/experiences
 
 -Today's Technical Tasks 
-
+* Still learning MySQL
 
 ### Thursday, 10th
--Today's Technical Tasks
+-Today's Non-Technical Tasks
+* Attended 2021 CELS Student Lecture
+
+-Today's Technical Tasks: Docker
 * Docker - Java Hello World
   public class HellowWorld {
     public static void main(String[] args){
@@ -285,10 +288,11 @@ ENTRYPOINT java HelloWorld
   
 ### Thursday, 17th
 -Today's Non-Technical Tasks
-* short meeting with Joe
+* Short meeting with Joe
+* Attended 2021 CELS Student Lecture
 
 -Today's Technical Tasks
-* prepared for tmr demo
+* Prepared for tmr demo
 
   
 ### Friday, 18th
@@ -333,7 +337,8 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 ### Monday, 21th
 -Today's Non-Technical Tasks
 * Attended presentation of goal for internship
--Today's Technical Tasks
+
+  -Today's Technical Tasks
 * Learning docker from https://www.44bits.io/ko/post/why-should-i-use-docker-container
 * Basic concept: Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.
   Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.
@@ -365,3 +370,31 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * https://discourse.nodered.org/t/how-can-we-run-multiple-node-red-applications-in-the-same-machine-system/40805/16
 * https://developer.ibm.com/ko/technologies/iot/
 * https://www.python2.net/questions-1144056.htm
+  
+### Thursday, 24th
+-Today's Non-Technical Tasks
+* Attended 2021 CELS Student Lecture
+* Attended daily sage scrum meeting
+* Attended Sean's tutorial on writing plugins (code) for the Waggle nodes
+  
+-Today's Technical Tasks
+* Tested on SAGE endpoint-nodeRED instances hookup
+  
+### Friday, 25th
+-Today's Non-Technical Tasks
+* Updated Linked-in profiles/experiences
+* Attended daily sage scrum meeting
+* Created IBM cloud (cloudant service) to test i/o data from Node-RED
+  
+-Today's Technical Tasks
+* Research how to set NSSM to run two separate instances at boot in windows 10
+  
+************************************************************
+  
+## 6st Week 06/28-07/02 (Main Goal: Node-RED Deploy)
+### Monday, 28th
+-Today's Non-Technical Tasks
+* 
+  
+-Today's Technical Tasks
+* https://nodered.org/docs/api/admin/

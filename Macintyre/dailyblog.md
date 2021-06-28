@@ -31,7 +31,27 @@
 * Contacted Samantha to ask if I am allowed to mark locations that I pick on Friday, and if it is allowed, what is the best way to go about that
 
 ### Thursday, June 24
-
+* Met with the Student Connects Group about strategies for staying productive while working remotely
+* Created a PowerPoint about my project for next week's student connects group meeting
+* Prepared all of the recorders for deployment, they are all ready to go for next week
+* Got connected with the group who is working on the kit that Raj gave me and began looking through those devices
+* Attended Sean's talk on plugins for Waggle nodes
+* Met with Raj about what I should be working on next
+* Finished the web page for the science page and got the QR code that links to it
 
 ### Friday, June 25
+* Went to Morton to check out locations for the sound recorders
+* Created a map with the locations that the devices will be deployed in
+* Met with Raj to discuss the locations and make sure I have what I need to deploy them on Monday
+* Met with Michael and Valerie for the weekly meeting about the nodes that we are setting up
+* Began the setup of the node
 
+## Week 5
+### Monday, June 28
+* Met with Michael and Valerie about the node kit and discussed next steps for using the kit and documenting the setup of it
+* Prepared the BAR-LT devices for deployment later today
+
+### Tuesday, June 29
+### Wednesday, June 30
+### Thursday, July 1
+### Friday, July 2
