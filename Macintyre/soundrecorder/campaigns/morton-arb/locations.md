@@ -30,5 +30,8 @@
 ### BAR-LT 6
 [41.819593, -88.042330](https://www.google.com/maps/place/41%C2%B049'10.5%22N+88%C2%B002'32.4%22W/@41.819597,-88.0445187,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d41.819593!4d-88.04233)
 
+![image](https://user-images.githubusercontent.com/84532371/123710209-f2995980-d833-11eb-94c0-4de66827768c.png)
+![image](https://user-images.githubusercontent.com/84532371/123710233-fcbb5800-d833-11eb-9f16-6cca8c6b49e1.png)
+![image](https://user-images.githubusercontent.com/84532371/123710250-03e26600-d834-11eb-9b0d-64526fca4f25.png)
 
 
