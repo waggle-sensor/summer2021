@@ -372,3 +372,43 @@ I should really provide more information in my daily logs, so I'll start doing t
 * https://salsa.debian.org/kernel-team/initramfs-tools/-/blob/master/hooks/fsck
 
 -------------
+
+### Wednesday, 6/23 (8 Hours worked)
+
+**Today's non-technical work:**
+* No scrum today!
+* Read up some more on hooks and how they work in `initramfs`
+
+
+**Today's technical work:**
+* Finished up the ramdisk media tests
+* Did some planning for honeycomb on my Miro board
+
+
+I was a bit blocked today, as I was waiting for a node to be provisioned to me that I could run failure testing on for SAGE-856. I didn't end up getting it today, but it was all good. I learned some more about hooks!
+
+-------------
+
+### Thursday, 6/24 (8 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum
+* Attended Sean's great lecture on plugins and how to deploy them to ECR
+
+
+**Today's technical work:**
+* Wrote several failure tests for SAGE-856, updated the ticket with my progress
+
+-------------
+
+### Friday, 6/25 (8 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum
+* Met with Joe to help push SAGE-856 code
+
+**Today's technical work:**
+* Finished failure testing for SAGE-856, commited, and rebased code
+* Messed around with an edgeswitch. Very confusing : (
+
+-------------

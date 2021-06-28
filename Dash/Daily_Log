@@ -10,6 +10,26 @@ June 20th
 Gave presentation
 Re-learned Pytorch
 June 21st
+Gave student presentation on my topic
 worked on converting the RAW files to jpg
 continued learning Pytorch
 Started to write the code
+June 22nd
+continued to learn more Pytorch
+Implemented the Pytorch model on the images
+48.8% accuracy
+worked on improving model
+June 23rd
+Implemented the Pytorch model on just the trees
+Lower accuracy
+worked on moving ASOS data 
+June 24th:
+Attended Clouds meeting
+Attended plugin seminar
+Continued learning regression through Pytorch
+June 25th:
+Implemented the ASOS data into the Pytorch model 
+Obtained 62% accuracy
+Continued to implement the regression model
+Investigated the possibility of calculating LCL 
+Read literature into forecasting LCL

@@ -425,3 +425,48 @@ NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Ma
      - read papers about qkeras
        - https://www.nature.com/articles/s42256-021-00356-5
        - http://arxiv.org/abs/2006.10159v1
+
+### Wednesday June 23, 2021
+#### Work Done:
+ - [Notes about integer quantizatio](paper-notes/anytime-dnn/Integer-quantization.md)
+ - Continue work on QKeras (Keras support for DNN quantization)
+   - [qkeras](https://github.com/google/qkeras)
+     - Deploy and test the project with GPU
+     - read papers about qkeras
+       - https://www.nature.com/articles/s42256-021-00356-5
+       - http://arxiv.org/abs/2006.10159v1
+
+### Thursday June 24, 2021
+#### Work Done:
+ - QKeras tutorial and code (Keras support for DNN quantization)
+   - [qkeras](https://github.com/google/qkeras)
+
+### Friday June 25, 2021
+#### Work Done:
+ - Pytorch quantization experiments
+   - Error: cannot recognize the quantization operation, the DNN becomes empty
+```
+Warning: module ConvReLU2d is treated as a zero-op.
+Warning: module Identity is treated as a zero-op.
+Warning: module Conv2d is treated as a zero-op.
+Warning: module ReLU is treated as a zero-op.
+Warning: module QFunctional is treated as a zero-op.
+Warning: module QuantizableBottleneck is treated as a zero-op.
+Warning: module LinearPackedParams is treated as a zero-op.
+Warning: module Linear is treated as a zero-op.
+Warning: module Quantize is treated as a zero-op.
+Warning: module DeQuantize is treated as a zero-op.
+Warning: module QuantizableResNet is treated as a zero-op.
+Computational complexity:       0.0 GMac
+Number of parameters:           0
+Traceback (most recent call last):
+  File "train_quant.py", line 108, in <module>
+    optimizer = optim.SGD(net.parameters(), lr=args.lr, momentum=0.9, weight_decay=5e-4)
+  File "/home/cc/venv-adnn/lib/python3.6/site-packages/torch/optim/sgd.py", line 68, in __init__
+    super(SGD, self).__init__(params, defaults)
+  File "/home/cc/venv-adnn/lib/python3.6/site-packages/torch/optim/optimizer.py", line 47, in __init__
+    raise ValueError("optimizer got an empty parameter list")
+ValueError: optimizer got an empty parameter list
+```
+ - [TensorFlow model optimization](https://www.tensorflow.org/model_optimization/guide/get_started)
+   - Quantization aware training: [MNIST quantiztion example](codes/tf-quantization-example.py)

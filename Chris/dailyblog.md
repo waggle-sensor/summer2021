@@ -92,4 +92,38 @@ For keeping records of progress.
   - make install
   - export TAU_TRACK_MEMORY_FOOTPRINT=1
 
+### Wednesday 6/23
+- Updated TAU wrapper to take filename.py as input
+- Met with Luke to discuss plans for the profiler
+  - build MVP(minimum viable profiler) first
+  - Get black box profiler that
+    - Gives min, max, avg, std dev of:
+      - GPU (luke, NVidia tool)
+      - CPU (Chris, tau)
+      - RAM (Chris, tau)
+    - Input and Outputs args and profile data in JSON key, value pairs
+- Trying to get the object dectection test to work
+  - Made need access to an NX
+  - Not having much luck building locally (linux/amd64)
+
+### Thursday 6/24
+- Not as much progress as I would have hoped for today
+  - Spent most of the day trying to configure the object detector plugin to work locally on my linux/amd64 machine
+    - I was able to build the docker container with some modifications to the dockerfile, but it fails when it uses the RUN command(/bin/sh vs /bin/bash)
+- Modified wrapper to test ram by loading in a large file
+- Found a python script for stress testing ram
+  - Couldn't get this to work with my wrapper for some reason, lots of NameErrors
+
+### Friday 6/25
+- Updated wrapper to work with new custom memory and cpu stress test
+  - wrapper can handle CLI args now too
+- Met with Luke, Sean, and Yongho
+  - discussed pywaggle instrumentation
+  - Mapped out how ECR team will collab with pywaggle
+  - On the radar -> unix socket and JSON
+- Got access to NXs (thank you Yongho!)
+  - setting up object counter plugin to begin experimenting with TAU on it
+
+    
+
 

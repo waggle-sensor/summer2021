@@ -118,11 +118,38 @@
 - Began work on a convolutional autoencoder model for anomaly detection
 
 ## Week 3 ##
+### Monday June 21, 2021 ###
 - Attended Weekly Team Meeting
 - Attended Intern Presentation Meeting (part II)
 - Continued work on Convolutional Autoencoder
     * Since I built the model in the latest Tensorflow container, I needed to update my Nvidia
       drivers. Since driver updates come with my OS updates, I updated my OS, which messed up
-      my GRUB bootloader. Fixing this took a significant chunk of both my afternoon and my 
+      my GRUB bootloader. Fixing this took a significant chunk out of both my afternoon and my 
       sanity. Just another exciting tale from the *Linux Experience* :)
 - Eventually got the model training on my GPU! Woot!
+
+### Tuesday June 22, 2021 ###
+- Began generating data for the CAE (using photoshop, etc. to create more anomalies)
+- Continued reading papers on the use of CAEs and AAEs to detect anomalies
+- Attended CV intern check-in
+
+### Wednesday June 23, 2021 ###
+- Began investigating methods for filtering out background noise of convolutional autoencoders.
+    * I found a method (using gamma distributions) to better account for differing variations
+      in a still-frane image at the per-pixel level. It seems that most of the literature simply
+      uses thresholding of the loss function to determine where anomalies exist in the frame.
+      This method entails determining a sort-of "per-pixel p-value", which for a specified low
+      alpha value (the estimated "likelihood") can be used as a more robust filter to either
+      "accept" or "reject" each pixel as anomalous based on the reconstruction loss.
+- Attended EDU Weekly Seminar (on how to optimize my LinkedIn profile)
+- Attended the "Mid-week CELS social hour"
+
+### Thursday June 24, 2021 ###
+- Attended CV intern check-in
+- Attended CELS Lecture Series (on classical methods for predictive modeling)
+- Finished Neon CAE model and plotted relevant metrics (like ROC curve, AUC, etc.)
+    * I may see if it is worthwhile adapting this model into a Waggle plugin.
+
+### Friday June 25, 2021 ###
+- Did some recommended reading (some great paper recommendations by Nicola!)
+- Pushed anomaly detection notebooks to a [waggle-sensor repository](https://github.com/waggle-sensor/anomaly-detection).

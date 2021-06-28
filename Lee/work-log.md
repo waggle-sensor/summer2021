@@ -4,30 +4,28 @@
 
 ### Monday, 24th
 -Today's Non-Technical Tasks
-* Attended Orientation at 9AM (CST)
+* Attended ANL Orientation at 9AM (CST)
 * Joined the Slack
 * Computer Request for CELS
 * Enrolled the required course in TMS
-* Read the guidelines and instructions on Github
+* Read up the guidelines and instructions on Github
 
 -Today's Technical Tasks
-* Learned Docker/kubernetes cluster json
 * Read Scrum Reference Card
 * Read SAGE Agile Scrum Software Development Process
 
 
 ### Tuesday, 25th
 -Today's Non-Technical Tasks
-* Read the guidelines and instructions on Github
+* Meeting with Sean (Query into SDR)
+* Followed up simple tutorials of Github
 * Sign in MIRO / JIRA
   (I guess MIRO is for planning, and JIRA is for process management. I need to read the guidelines again this week, especially calculating team capacities.)
 
 -Today's Technical Tasks
-* Watched Docker tutorial videos and build up on my RPI and Mac
-* Read Scrum Reference Card
-* Read SAGE Agile Scrum Software Development Process
+* Watched Docker tutorial videos and build up on my RPI / Mac OS
+* Read Scrum Reference Card. Summary:
 
-  What I learn/understand is:
   Agile: Software Developer Methodology (less document-oriented, practical code-oriented compared to Waterfall model)
          Unlike previous methodologies that have been led through planning, agile method constantly creates prototypes with constant cycles,
          modifies the needs of each time and develops a single large piece of software.
@@ -38,7 +36,7 @@
          
 ### Wednesday, 26th
 -Today's Non-Technical Tasks
-* Double checked to complete I-9 and FNIS including all tax forms 
+* Double checked to complete I-9 and FNIS including all relevant tax forms 
 * Signed in https://getsmarter.io/ for weekly meeting (need to figure out how to use it)
 
 -Today's Technical Tasks
@@ -61,42 +59,62 @@
 -Things to do
 * Set up HiveMQ cloud active states
 * Watch other Node-RED demo videos relevant SAGE project
-         
+
+### Wednesday, 27th
+-Today's Non-Technical Tasks
+* Attended first team-meeting
+* Emailed to Deneen (need to check tax/paycheck process)
+
+-Today's Technical Tasks
+* Read up Sage: A distributed software-defined sensor network: https://github.com/sagecontinuum/sage
+* https://github.com/sagecontinuum/sage/blob/master/architecture_overview.md
+
+
+### Thursday, 28th
+-Today's Non-Technical Tasks
+* Meeting with Joe and Wolfgang about my node-red json format
+* Attended daily meeting
+
+### Friday, 29th
+-Today's Non-Technical Tasks
+* Attended daily meeting
+
+-Today's Non-Technical Tasks
+* Read up: Running Node-RED locally - https://nodered.org/docs/getting-started/local
+* Simple node test with json formatting
+
 ************************************************************
 
 ## 2st Week 06/01-06/04 (Main Goal: Node-RED)
-
 ### Tuesday, 1th
 -Today's Non-Technical Tasks
 * Checked the schedule of TMS
 * Set up Raspberry Pi and sensors for checking (RPI)
 * Discussion with Sean, Wolfgang, and Joe about filtered data in the SDR (finally figured out!)
-   (Feedback: In the cloud case, we only have the HTTP/JSON API. Because we can filter data using the API, we can still do something similar to subscribing to only specific kind of data.)
-   So, in current progress, MQTT is not required. (might be future plan)
-   
+   (Feedback: In the cloud case, we only have the HTTP/JSON API. Because we can filter data using the API, we can still do something similar to subscribing to only specific kind of data). So, in current progress, MQTT is not required. (might be future plan)
+
 -Today's Technical Tasks
 * Use HTTP request to get data from a REST endpoint on Node-RED (External REST API  - https://restcountries.eu) - Success!!
 * Read the doc of REST API more. (Also check other relevant video as well)
-
 -Things to do
 * Test the HTTP request again with SDR.
-  1) Read example query data from SDR using HTTP / JSON request.
-  2) Start with a simple “print value” node.
-  3) Add a “filter when name = sys.uptime” node and add a trigger when that is < 1800.
-  
+  1) Read up example query data from SDR using HTTP / JSON request
+  2) Start with a simple “print value” node
+  3) Add a “filter when name = sys.uptime” node and add a trigger when that is < 1800
+ 
 
 ### Wednesday, 2th
 -Today's Non-Technical Tasks
 * done with Indiana & Illinois tax (to HR)
-* Re-installed Docker on Mac (bc my RPI not enough memory)
+* Re-installed Docker on Mac (bc RPI not enough memory)
 * Completed 1 required course in TMS
 
 -Today's Technical Tasks
 * Built up Email Notification from Node-RED: https://flows.nodered.org/node/node-red-node-email
   description: It is set up on the Raspberry Pi connected temperature sensors. If temp > 30, sent the alarm via email
-
 - Things to do
 * Read Slack API: https://flows.nodered.org/node/node-red-contrib-slack and Alarm Notification on Slack...
+
 
 ### Thursday, 3th
 -Today's Non-Technical Tasks
@@ -148,10 +166,10 @@
 * Contacted with HR (Northwestern University) need to complete payment process
 
 -Today's Technical Tasks
-* After demo video prsentation, discussion for next steps.
+* After demo video prsentation, build up with feedback that I got, discussion for next steps.
 
 -Things to do:
-* Need to query in Sage Data Repo (ask some question to Sean)
+* Need to query in Sage Data Repo (ask some question about API to Sean)
 
 ************************************************************
 
@@ -161,7 +179,7 @@
 -Today's Non-Technical Tasks
 * Enrolled CPT course (Purdue University)
 * Entorlled OEPT course (Purdue University)
-* Installed MySQL on Window
+* Re-installed MySQL on Window
 
 -Today's Technical Tasks
 * Performed manipulation of the world sample database using MySQL
@@ -178,14 +196,18 @@
 -Today's Technical Tasks
 * Still learning MySQL
 
-
 ### Wednesday, 9th
 -Today's Non-Technical Tasks
--Today's Technical Tasks 
+* Updated Linked-in profiles/experiences
 
+-Today's Technical Tasks 
+* Still learning MySQL
 
 ### Thursday, 10th
--Today's Technical Tasks
+-Today's Non-Technical Tasks
+* Attended 2021 CELS Student Lecture
+
+-Today's Technical Tasks: Docker
 * Docker - Java Hello World
   public class HellowWorld {
     public static void main(String[] args){
@@ -253,6 +275,7 @@ ENTRYPOINT java HelloWorld
 * note: e) var x = {firstName:"John", lastName:"Doe"}; // Object | var cars = ["Saab", "Volvo", "BMW"]; //array (similart to list in Python I guess)
 * However, the typeof operator returns "object" for arrays because in JavaScript arrays are objects.
 
+  
 ### Wednesday, 16th
 -Today's Technical Tasks
 * Still learning JavaScript with same tutorials as yesterday's one.
@@ -262,13 +285,16 @@ ENTRYPOINT java HelloWorld
 * can access object properties in two ways: objectName.propertyName or objectName["propertyName"]
 * "this" keyword
 
+  
 ### Thursday, 17th
 -Today's Non-Technical Tasks
-* short meeting with Joe
+* Short meeting with Joe
+* Attended 2021 CELS Student Lecture
 
 -Today's Technical Tasks
-* prepared for tmr demo
+* Prepared for tmr demo
 
+  
 ### Friday, 18th
 -Today's Non-Technical Tasks
 * SAGE sprint demo & retrospective (DHT real time data handling, and query from SDR on Node-RED presentation)
@@ -311,8 +337,8 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 ### Monday, 21th
 -Today's Non-Technical Tasks
 * Attended presentation of goal for internship
-  
--Today's Technical Tasks
+
+  -Today's Technical Tasks
 * Learning docker from https://www.44bits.io/ko/post/why-should-i-use-docker-container
 * Basic concept: Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.
   Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.
@@ -321,12 +347,54 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * tested with simple tutorial: https://www.youtube.com/watch?v=hWPv9LMlme8&t=587s
 -Things to do: join to Kubernetes with Docker
 
+  
 ### Tuesday, 22th
 -Today's Non-Technical Tasks
 * Signed up remote work form v1 and sent it back to Deneen
 * Completed all require/elective courses in TMS (need to sign from Raj)
 * Attended sprint planning meeting
-  
+
 -Today's Technical Tasks
 * Read up Node-RED instances examples exisiting industrial world
 * If have multiple instances of node red on same machine with different port numbers, different flows: For the same user based on the role defined - flows and palette controls will be displayed: https://nodered.org/docs/getting-started/local
+  
+  
+### Wednesday, 23th
+-Today's Non-Technical Tasks
+* Scheduled for July 13th: Reply to Mary summer get-together with students and mentors
+* Attended mid-break social meeting
+
+-Today's Technical Tasks
+* Clarified node-red instance per user. First step: if have multiple instances of node red on same machine with different port numbers, different flows
+* https://nodered.org/docs/getting-started/local
+* https://discourse.nodered.org/t/how-can-we-run-multiple-node-red-applications-in-the-same-machine-system/40805/16
+* https://developer.ibm.com/ko/technologies/iot/
+* https://www.python2.net/questions-1144056.htm
+  
+### Thursday, 24th
+-Today's Non-Technical Tasks
+* Attended 2021 CELS Student Lecture
+* Attended daily sage scrum meeting
+* Attended Sean's tutorial on writing plugins (code) for the Waggle nodes
+  
+-Today's Technical Tasks
+* Tested on SAGE endpoint-nodeRED instances hookup
+  
+### Friday, 25th
+-Today's Non-Technical Tasks
+* Updated Linked-in profiles/experiences
+* Attended daily sage scrum meeting
+* Created IBM cloud (cloudant service) to test i/o data from Node-RED
+  
+-Today's Technical Tasks
+* Research how to set NSSM to run two separate instances at boot in windows 10
+  
+************************************************************
+  
+## 6st Week 06/28-07/02 (Main Goal: Node-RED Deploy)
+### Monday, 28th
+-Today's Non-Technical Tasks
+* 
+  
+-Today's Technical Tasks
+* https://nodered.org/docs/api/admin/
