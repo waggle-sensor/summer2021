@@ -48,6 +48,9 @@
 
 ## Week 5
 ### Monday, June 28
+* Met with Michael and Valerie about the node kit and discussed next steps for using the kit and documenting the setup of it
+* Prepared the BAR-LT devices for deployment later today
+
 ### Tuesday, June 29
 ### Wednesday, June 30
 ### Thursday, July 1
