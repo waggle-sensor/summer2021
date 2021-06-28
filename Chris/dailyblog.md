@@ -124,6 +124,24 @@ For keeping records of progress.
 - Got access to NXs (thank you Yongho!)
   - setting up object counter plugin to begin experimenting with TAU on it
 
+## Week 4 (6/28 - 7/2)
+
+How is it week 4 already!?
+
+### Monday (6/28)
+- Troubleshooting and trial and error to setup object detector plugin on NX
+- Makefile didn't work
+- Pulling didn't work
+- Messaged Luke and Aji for help
+  - need to run playback server
+- Messaged Yongho
+  - config.json had to be changed on the nx
+- I can sucussfully run the object detector plugin docker image now! Ready to be profiled
+- Installing TAU
+  - everything is downloaded on NX
+  - weird install bug after make install(configure was fine)
+  - Hopefully I can fix this tomorrow
+
     
 
 
