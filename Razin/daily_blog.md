@@ -37,7 +37,7 @@
 - Monday
   - continued working on optical flow code
        - uploaded images of Dense Optical Flow generations to GitHub
-         - experimented with different "zooms" (how zoomed-in we are to areas of interest in radar scans) and different numbers of frames (optical from from just two consecutive radar images vs. five) 
-         - included readMe.txt with questions, thoughts
-         - also working on these generations for other the data, i.e., differential reflectivity and velocity, in addition to the reflectivity data
+             - experimented with different "zooms" (how zoomed-in we are to areas of interest in radar scans) and different numbers of frames (optical from from just two consecutive radar images vs. five) 
+             - included readMe.txt with questions, thoughts
+             - also working on these generations for other the data, i.e., differential reflectivity and velocity, in addition to the reflectivity data
        - starting to transition to method of [Lucas-Kanade Optical Flow in OpenCV](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html) 
