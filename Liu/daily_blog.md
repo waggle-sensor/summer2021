@@ -470,4 +470,3 @@ ValueError: optimizer got an empty parameter list
 ```
  - [TensorFlow model optimization](https://www.tensorflow.org/model_optimization/guide/get_started)
    - Quantization aware training: [MNIST quantiztion example](codes/tf-quantization-example.py)
-   - 
