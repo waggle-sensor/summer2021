@@ -162,8 +162,36 @@
   types of flowers in order to get a better grasp on random forests for project.
 * Recieved images for data in project.
 
+### 6/24/2021 ###
+* Attended meeting with computer vision team 
+* Attended student connect meeting           
+* Attended Seans meeting on plugins
+* Wrote random forest model using data given
+    * Need to confirm if I am using the data correctly
+    
+### 6/25/2021 ###
+* Finish Random Forest Tree Classifier
+* Accuracy low, so researched on ways to improve accuracy of model
+* Ask if I should be using computed features already in data given
+  or if I should use features I computed
+* TODO:
+  * Need to use this to find out which faetures matter the most 
+        towards visual disorder and which features matter the least
+  * Still need to find out ways to improve accuracy for model
+    
+--- 
+## Week 5 ##
 
-
+### 6/28/2021 ###
+* Need to ask: there were some images that were not urban, do I remove them from dataset
+* Used images given to compute features and create own dataframe with my computed features
+    and used this in random forest classifier --> still need to clarify if I am using my computed features
+    or the ones given
+* Spent most of the time debugging why some images were running into errors when trying to compute features
+  I am still working on fixing some of those errors so that I can use my computed features in random forest 
+* Need to work on fixing accuracy of random forest, will check what accuracy is after using my own features too.
+  * Should check that training images have some from each classifications
+    
 
 
 
