@@ -195,13 +195,13 @@
 
 -Today's Technical Tasks
 * Still learning MySQL
-* 
 
 ### Wednesday, 9th
 -Today's Non-Technical Tasks
+* Updated Linked-in profiles/experiences
 
 -Today's Technical Tasks 
-
+* Still learning MySQL
 
 ### Thursday, 10th
 -Today's Non-Technical Tasks
@@ -388,3 +388,13 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   
 -Today's Technical Tasks
 * Research how to set NSSM to run two separate instances at boot in windows 10
+  
+************************************************************
+  
+## 6st Week 06/28-07/02 (Main Goal: Node-RED Deploy)
+### Monday, 28th
+-Today's Non-Technical Tasks
+* 
+  
+-Today's Technical Tasks
+* https://nodered.org/docs/api/admin/
