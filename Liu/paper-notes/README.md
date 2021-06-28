@@ -44,3 +44,10 @@
    - Multi-scale dense convolutional networks for efficient prediction, ICLR 2018.
  - **dense connections**:
    - Multi-scale dense convolutional networks for efficient prediction, ICLR 2018.
+
+## Anytime DNN Design
+ - Challenges for state-of-the-art and our solutions
+   - Requires huge training of the original DNN model to support anytime behavior
+     - post-optimization based: network pruning/compression, quantization
+   - Limited support for spartial-adaptive and system-adaptive
+     - adptive to input sparsity and system profiling results

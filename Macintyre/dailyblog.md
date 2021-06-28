@@ -6,3 +6,32 @@
 * Worked on the Campaign plan that will be shared with Zuzana and Pete
 
 ### Friday, June 18
+* Met with Raj about final changes to the Morton Arboretum Campaign
+* Spent most of the day finishing the campaign README and learning some tools in GIMP
+* Sent the final README to the group to ask for locations that I should inspect next week
+
+## Week 4
+### Monday, June 21
+* Meeting with the whole group for the rest of the presentations
+* Created the one slide summary of myself to put into the google drive
+* Learned some more about using GIMP
+* Tomorrow we will most likely meet to discuss which locations I should go check out at Morton
+
+### Tuesday, June 22
+* Met with Raj in the morning about creating a science page that will be linked to the QR code on the recorders
+* Created a first draft of the science page in Github
+* Met with Raj and Eyal to discuss deployment locations in Morton
+* Got in touch with Samantha at Morton and planned a time on Friday to go and inspect deployment locations
+
+### Wednesday, June 23
+* Attended the virtual seminar on creating a LinkedIn profile
+* Did some research on soundscape ecology so that I have a better understanding of that process after the data has been collected
+* Met people from the group in person and got a bag of new devices from Raj
+* Spent the afternoon doing a bit more research on the project and looking through the bag of devices that Raj gave me
+* Contacted Samantha to ask if I am allowed to mark locations that I pick on Friday, and if it is allowed, what is the best way to go about that
+
+### Thursday, June 24
+
+
+### Friday, June 25
+

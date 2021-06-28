@@ -377,3 +377,51 @@ stdout/stderr:
    - read source code and [tutorial](https://pytorch.org/tutorials/advanced/static_quantization_tutorial.html) to understand the Post-Training Static Quantization in Pytorch
  - Train the Orthogonalized SGD model with Depth-nested network
    - Virtual environment, Python2 with Tensorflow-gpu 1.14.0
+
+### Thursday June 17, 2021
+#### Work Done:
+ - [Notes about quantization-based model compression for anytime DNN design](https://www.notion.so/Pytorch-a37f4b66cafb43dc83f551d26009d090)
+   - Post-Training Static/Dynamic Quantization
+   - Quantization-aware training
+ - Train the Orthogonalized SGD model with Depth-nested network
+   - compatibility of TF1 with CUDA 10.1
+     - TF1 supports CUDA 10.0 at most
+ - Have a meeting with Rick to discuss the progress of anytime project
+   - quantization tends out to work better than prunning
+   - try to observe some real challenges for methodology design
+
+### Friday June 18, 2021
+#### Work Done:
+ - Solve the issue of compatibility of TF1 with CUDA 10.1
+   - cannot find the NVIDIA driver after install CUDA 9.2 and update GPU driver
+   - not work after soft reboot Chameleon instance
+```
+cc@llk-adnn:~$ nvidia-smi
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+```
+ - Implement the post-optimization based methods for anytime DNN
+   - adjust image resolution
+   - interests of range
+   - pruning network structure during inferece
+   - post static/dynamic quantization
+
+## Week 7 (June 21 to June 25)
+
+### Monday June 21, 2021
+#### Work Done:
+ - The issue of NVIDIA driver remain exist and launch a new instance on Chameleon for model training
+ - Read paper [Integer Quantization for Deep Learning Inference: Principles and Empirical Evaluation](https://arxiv.org/abs/2004.09602) and make [notes](paper-notes/anytime-dnn/Integer-quantization.md) about how quantization work
+ - Learn the toturial in PyTorch about quantization with [notes](paper-notes/anytime-dnn/pytorch-quantization.md)
+ - Have a meeting with the ML team and discuss the usage of quantization with anytime DNN design
+   - try more models to show the effectiveness of quantization
+
+### Tuesday June 22, 2021
+#### Work Done:
+ - Look into the implementation of quantization in Pytorch and torchvision library
+   - [Pytorch 1.7 quantization APIs](https://pytorch.org/docs/stable/torch.quantization.html)
+ - Keras support for DNN quantization
+   - [qkeras](https://github.com/google/qkeras)
+     - Deploy and test the project with GPU
+     - read papers about qkeras
+       - https://www.nature.com/articles/s42256-021-00356-5
+       - http://arxiv.org/abs/2006.10159v1

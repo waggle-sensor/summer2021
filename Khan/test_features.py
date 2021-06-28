@@ -1,11 +1,10 @@
 import cv2
 
-from detect_features import find_mean_hsv  # from file import function
+from detect_features import find_mean_hsv
 from detect_features import find_standard_deviation_hsv
 from detect_features import find_edge_density
 from detect_features import find_straight_edge_density
 from detect_features import find_entropy
-from detect_features import calculate_symmetry
 import unittest
 
 
@@ -22,13 +21,27 @@ class Test(unittest.TestCase):
 
     # Add more tests with different solid colors
     # Generate a random x, y spot instead of picking it yourself randomly
-    def test_mean_hue(self):
-        hsv_test_image = convert_file_to_image('test_images/Color-blue.jpg')[0]
+    def test_mean_hue1(self):
+        hsv_test_image = convert_file_to_image('test_images\Color-blue.jpg')[0]
 
         mean_hue_actual = find_mean_hsv(hsv_test_image)[0]
         mean_hue_expected = hsv_test_image[25, 100, 0]
 
         self.assertEqual(mean_hue_actual ,mean_hue_expected)
+
+    def test_mean_hue2(self):
+        hsv_test_image = convert_file_to_image('test_images\diff_shades_red.png')[0]
+
+        hue_mean = find_mean_hsv(hsv_test_image)[0]
+
+        result = False
+
+        if ((hue_mean >= 0 and hue_mean <= 20) or (hue_mean >= 160 and hue_mean <= 180)):
+            result = True
+
+        print("Hue mean:", hue_mean)
+
+        self.assertEqual(result, True)
 
     def test_mean_sat(self):
         hsv_test_image = convert_file_to_image('test_images/Color-blue.jpg')[0]
@@ -173,34 +186,20 @@ class Test(unittest.TestCase):
 
         self.assertEqual(result, True)
 
-    # '''
-    # Calculating edge density wrong ... this test fails
-    # '''
-    # def test_edge_density3(self):
-    #
-    #     low_edge_density_image = convert_file_to_image('test_images/high_edge_density.png')[1]
-    #     high_edge_density_image = convert_file_to_image('test_images/high_edge_density2.png')[1]
-    #
-    #     edge_density_low = find_edge_density(low_edge_density_image)
-    #     edge_density_high = find_edge_density(high_edge_density_image)
-    #
-    #     print("Low:", edge_density_low)
-    #     print("High:", edge_density_high)
-    #
-    #     result = False
-    #
-    #     if(edge_density_low < edge_density_high):
-    #         result = True
-    #
-    #     self.assertEqual(result, True)
-
     def test_straight_edge_density1(self):
 
-        straight_edge_density_8 = convert_file_to_image('test_images/low_edge_density.jpg')[1]
+        straight_edge_density_low = convert_file_to_image('test_images/low_edge_density.jpg')[1]
+        straight_edge_density_high = convert_file_to_image('test_images/medium_edge_density.jpg')[1]
 
-        num_straight_edges = find_straight_edge_density(straight_edge_density_8)
+        straight_edges_length_low = find_straight_edge_density(straight_edge_density_low)
+        straight_edges_length_high = find_straight_edge_density(straight_edge_density_high)
 
-        self.assertEqual(num_straight_edges, 8)
+        result = False
+
+        if (straight_edges_length_high > straight_edges_length_low):
+            result = True
+
+        self.assertEqual(result, True)
 
     def test_straight_edge_density2(self):
 
@@ -257,70 +256,6 @@ class Test(unittest.TestCase):
         entropy_zero = find_entropy(entropy_zero_image)
 
         self.assertEqual(entropy_zero, 0)
-
-
-    def test_symmetry(self):
-
-        high_symmetry_image = convert_file_to_image('test_images/high_symmetry.png')[1]
-        medium_symmetry_image = convert_file_to_image('test_images/medium_symmetry.jpg')[1]
-        low_symmetry_image = convert_file_to_image('test_images/low_symmetry.jpg')[1]
-
-        high_symmetry = calculate_symmetry(high_symmetry_image)
-        medium_symmetry = calculate_symmetry(medium_symmetry_image)
-        low_symmetry = calculate_symmetry(low_symmetry_image)
-
-        result = False
-
-        if (high_symmetry > medium_symmetry > low_symmetry):
-            result = True
-
-        self.assertEqual(result, True)
-
-    def test_symmetry1(self):
-
-        high_symmetry_image = convert_file_to_image('test_images/high_symmetry1.png')[1]
-        medium_symmetry_image = convert_file_to_image('test_images/medium_symmetry1.png')[1]
-        low_symmetry_image = convert_file_to_image('test_images/low_symmetry1.jpg')[1]
-
-        high_symmetry = calculate_symmetry(high_symmetry_image)
-        medium_symmetry = calculate_symmetry(medium_symmetry_image)
-        low_symmetry = calculate_symmetry(low_symmetry_image)
-
-        print("High symmetry:", high_symmetry)
-        print("medium symmetry:", medium_symmetry)
-        print("Low symmetry:", low_symmetry)
-
-        result = False
-
-        if (high_symmetry > medium_symmetry > low_symmetry):
-            result = True
-
-        self.assertEqual(result, True)
-
-    def test_symmetry2(self):
-
-        high_symmetry_image = convert_file_to_image('test_images/high_symmetry2.jpg')[1]
-        medium_symmetry_image = convert_file_to_image('test_images/medium_symmetry2.png')[1]
-        low_symmetry_image = convert_file_to_image('test_images/low_symmetry2.jpg')[1]
-
-        high_symmetry = calculate_symmetry(high_symmetry_image)
-        medium_symmetry = calculate_symmetry(medium_symmetry_image)
-        low_symmetry = calculate_symmetry(low_symmetry_image)
-
-        print("High symmetry:", high_symmetry)
-        print("medium symmetry:", medium_symmetry)
-        print("Low symmetry:", low_symmetry)
-
-        result = False
-
-        if (high_symmetry > medium_symmetry > low_symmetry):
-            result = True
-
-        self.assertEqual(result, True)
-
-
-
-
 
 
 
