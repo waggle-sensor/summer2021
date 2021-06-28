@@ -1,10 +1,10 @@
-### Node-RED
-
+### Overview
 
 * Node-RED inherits general functionality from FBP tools, which is Flow-Based-Programming.
 * exchanges data across pre-defined connections by message passing, where the connections are specified externally to the processes.
 * can continue executing and functioning, as long as there is data to work on and destination for the output.
 * generally runs in less elapsed time than conventional programs, and make optimal use of many processors on a machine, with no special programming required to achieve this. 
+
 
 ## 6 core Nodes: inject, debug, function, change, switch, and template.
 * Each Node offers different functionality, which can range from a simple debug node to be able to see what's going on in your flow.
