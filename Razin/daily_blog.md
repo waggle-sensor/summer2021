@@ -1,4 +1,4 @@
-Week 1: 6/14–6/18
+# Week 1: 6/14–6/18
 - completed onboarding forms
 - attended Dr. Collis' student lecture
 - explored Waggle github
@@ -7,7 +7,7 @@ Week 1: 6/14–6/18
 - wrote project summary
 - prepared student presentation
 
-Week 2: 6/21–6/25
+#Week 2: 6/21–6/25
 - Monday
     - delivered, watched student presentations
     - got assignment scaffolding from Dr. Collis: started looking at ARM data, code in python, looked more into optical flow
@@ -28,6 +28,6 @@ Week 2: 6/21–6/25
     - worked on integrating OpenCV optical flow code into existing radar code data
     - attended student social
 
-Week 3: 6/28–7/2
+#Week 3: 6/28–7/2
 - Monday
-  - 
+  - continued
