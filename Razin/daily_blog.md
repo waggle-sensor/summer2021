@@ -28,11 +28,11 @@
 - Friday
     - worked on integrating [OpenCV optical flow code](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html) into existing radar code data
         - don't understand the [cv.waitkey() code](https://stackoverflow.com/questions/35372700/whats-0xff-for-in-cv2-waitkey1) // and [here](https://technicalmasterblog.wordpress.com/2019/07/03/whats-0xff-for-in-cv2-waitkey1/)
-        - began generating some images with similar features (i.e., color blobs) to the ones on OpenCV
+        - began generating some images with similar features (i.e., color blobs) to the ones on OpenCV's Dense Optical Flow example
         - reviewed documentation associated with [color space conversions](https://docs.opencv.org/3.4/d8/d01/group__imgproc__color__conversions.html)
+        - [Common OpenCV Methods](https://medium.com/analytics-vidhya/top-5-inevitable-methods-for-beginners-in-opencv-using-python-9ff8e7ddb5ae)
     - attended CELS student social
-    - [Common OpenCV Methods](https://medium.com/analytics-vidhya/top-5-inevitable-methods-for-beginners-in-opencv-using-python-9ff8e7ddb5ae)
 
 ## Week 3: 6/28–7/2
 - Monday
-  - continued
+  - continued working on optical flow code, now transitioning to [Lucas-Kanade Optical Flow in OpenCV](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html) 
