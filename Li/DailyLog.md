@@ -65,6 +65,11 @@ Thoughts:
 
 <br />
 
+## Week 2 
+
+<br />
+
+
 ### June 7, 2021 (Day 5)
 
 Updates:
@@ -124,6 +129,11 @@ To Do:
 * Look into deep learning and other tools, potentially. 
 
 <br />
+
+## Week 3 
+
+<br />
+
 
 ### June 14, 2021 (Day 10)
 Updates:
@@ -198,6 +208,11 @@ To Do:
 
 <br />
 
+## Week 4 
+
+<br />
+
+
 ### June 21, 2021 (Day 15)
 Updates:
 * Meeting with entire group. Viewed presentations of rest of the group members.
@@ -269,6 +284,11 @@ To Do:
 * Continue studying and working on OpenCV tutorials.
 
 <br />
+
+## Week 5 
+
+<br />
+
 
 ### June 28, 2021 (Day 20)
 Updates:
