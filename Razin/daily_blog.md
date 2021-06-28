@@ -1,4 +1,4 @@
-## Week 1: 6/14–6/18
+### Week 1: 6/14–6/18
 - completed onboarding forms
 - attended Dr. Collis' student lecture
 - explored Waggle github
@@ -8,7 +8,7 @@
 - prepared student presentation
 - [Wavelet-Based Optical Flow for Two-Component Wind Field Estimation from Single Aerosol Lidar Data](https://journals.ametsoc.org/view/journals/atot/32/10/jtech-d-15-0010_1.xml)
 
-## Week 2: 6/21–6/25
+### Week 2: 6/21–6/25
 - Monday
     - delivered, watched student presentations
     - got assignment scaffolding from Dr. Collis: started looking at ARM data, code in python, looked more into optical flow
@@ -33,6 +33,11 @@
         - [Common OpenCV Methods](https://medium.com/analytics-vidhya/top-5-inevitable-methods-for-beginners-in-opencv-using-python-9ff8e7ddb5ae)
     - attended CELS student social
 
-## Week 3: 6/28–7/2
+### Week 3: 6/28–7/2
 - Monday
-  - continued working on optical flow code, now transitioning to [Lucas-Kanade Optical Flow in OpenCV](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html) 
+  - continued working on optical flow code
+       - uploaded images of Dense Optical Flow generations to GitHub
+         - experimented with different "zooms" (how zoomed-in we are to areas of interest in radar scans) and different numbers of frames (optical from from just two consecutive radar images vs. five) 
+         - included readMe.txt with questions, thoughts
+         - also working on these generations for other the data, i.e., differential reflectivity and velocity, in addition to the reflectivity data
+       - starting to transition to method of [Lucas-Kanade Optical Flow in OpenCV](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html) 
