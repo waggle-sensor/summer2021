@@ -20,7 +20,7 @@
     - looked into [neural networks](https://www.youtube.com/watch?v=aircAruvnKk), more on optical flow from reflectivity/[radar images](https://www.scitepress.org/papers/2011/33326/33326.pdf)
     - parsed zsherman's Python code some more
 - Wednesday
-    - finished TMS tasks/courses
+    - finished TMS tasks/courses (within 10 days of start date)
     - looked in to [OpenCV code](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html) on optical flow
 - Thursday
     - lab meeting with Dr. Collis, Dr. Ferrier, Dr. Sankaran, and rest of team
@@ -33,6 +33,7 @@
         - began generating some images with similar features (i.e., color blobs) to the ones on OpenCV's Dense Optical Flow example, OpenCV's second optical flow example
         - reviewed documentation associated with [color space conversions](https://docs.opencv.org/3.4/d8/d01/group__imgproc__color__conversions.html)
         - [Common OpenCV Methods](https://medium.com/analytics-vidhya/top-5-inevitable-methods-for-beginners-in-opencv-using-python-9ff8e7ddb5ae)
+        - [Managing Environments in Anaconda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)
     - attended CELS student social
 
 ### Week 3: 6/28–7/2
