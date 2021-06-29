@@ -7,6 +7,8 @@ Below are images generated using [OpenCV's Dense Optical Flow algorithm](https:/
 
 Here's what the RADAR reflectivity data looks like:
 
+{% include image.html url="https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_animation.gif", description="test" %}
+
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_animation.gif)
 *Figure 1.*
 
