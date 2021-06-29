@@ -75,7 +75,7 @@ Here's the dense optical flow from the five images in the above gif (Fig. 12):
 
 
 ## Observations
-- Fig. 4 appears to have less noise than Fig. 5 (?).
+- Fig. 4 appears to have less noise than Fig. 5 (?), suggesting the inclusion of the three other relfectivity data images produced a better model.
 - Fig. 4 and 9 appear relatively similar, suggesting little difference in the optical flow diagnositcs extractable from reflectivity and differential reflectivity data, respectively.
 - Fig. 11 and 13 appear very noisy, suggesting MDV may not be optimal for diagnosing optical flow.
 
