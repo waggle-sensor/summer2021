@@ -51,3 +51,39 @@
      - post-optimization based: network pruning/compression, quantization
    - Limited support for spartial-adaptive and system-adaptive
      - adptive to input sparsity and system profiling results
+
+## Updates June 28, 2021
+ - Pytorch quantizations on more models
+   - Works only for CPU, not GPU
+   - Get errors of quantized layers treated as a zero-op
+```
+Warning: module ConvReLU2d is treated as a zero-op.
+Warning: module Identity is treated as a zero-op.
+Warning: module Conv2d is treated as a zero-op.
+Warning: module ReLU is treated as a zero-op.
+Warning: module QFunctional is treated as a zero-op.
+Warning: module QuantizableBottleneck is treated as a zero-op.
+Warning: module LinearPackedParams is treated as a zero-op.
+Warning: module Linear is treated as a zero-op.
+Warning: module Quantize is treated as a zero-op.
+Warning: module DeQuantize is treated as a zero-op.
+Warning: module QuantizableResNet is treated as a zero-op.
+Computational complexity:       0.0 GMac
+Number of parameters:           0
+Traceback (most recent call last):
+  File "train_quant.py", line 108, in <module>
+    optimizer = optim.SGD(net.parameters(), lr=args.lr, momentum=0.9, weight_decay=5e-4)
+  File "/home/cc/venv-adnn/lib/python3.6/site-packages/torch/optim/sgd.py", line 68, in __init__
+    super(SGD, self).__init__(params, defaults)
+  File "/home/cc/venv-adnn/lib/python3.6/site-packages/torch/optim/optimizer.py", line 47, in __init__
+    raise ValueError("optimizer got an empty parameter list")
+ValueError: optimizer got an empty parameter list
+```
+ - How quantization-aware training works
+   - Fake quantization opeartions, first introduced in [paper](https://arxiv.org/pdf/1712.05877.pdf)
+   - Derivations for step function: Straight-through Estimator (STE)
+ - Quantization in TensorFlow
+   - [Example code](../codes/tf-quantization-example.py)
+   - [QKeras](https://github.com/google/qkeras)
+ - Paper's idea:
+   - An esemble framework with quantized models adpative to input sparsity and resource profiling

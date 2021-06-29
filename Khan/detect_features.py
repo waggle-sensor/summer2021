@@ -2,6 +2,10 @@ import statistics
 import cv2
 import numpy as np
 import math
+import pandas as pd
+from skimage import io
+import os
+from pathlib import Path
 
 def display(image_to_display):
     '''
@@ -49,7 +53,7 @@ def find_mean_hue(hsv_image):
     mean_angle = ((math.atan(y_mean / x_mean)) * 180) / math.pi
 
     # check quadrant
-    if ((x_mean < 0 and y_mean < 0) | (x_mean < 0 and y_mean > 0)):
+    if ((x_mean < 0 and y_mean < 0) or (x_mean < 0 and y_mean > 0)):
         mean_angle += 180
     elif (x_mean > 0 and y_mean < 0):
         mean_angle += 360
@@ -160,8 +164,6 @@ def find_straight_edge_density(image):
 
   # len(lines) will give you the number of lines
 
-  display(draw_image)
-
   '''
   TODO: After getting data set and running all the images throuugh this, 
   normalize straight edge density to be between [0, 1]
@@ -170,14 +172,13 @@ def find_straight_edge_density(image):
   '''
   return sum_length
 
-'''How much of the image is edges
-  (total num of edge pixels / total num of pixels) ----> confirm if this is the correct idea
 
-  Am I supposed to measure the length of the edges?
-  
-  Write more test cases so I can make sure this is accurate
-'''
 def find_edge_density(image):
+    '''
+    Computes how much of the image consists of edges
+    :param image:
+    :return: percentage of image that is made up of edges
+    '''
 
     edges_image = detect_edges(image, 100, 200)
 
@@ -206,22 +207,66 @@ def find_entropy(image):
 
     return entropy
 
-def main():
+def create_base_dataframe():
+    df = pd.read_excel(
+        r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\Images with Ratings\MIT_ImageRatings.xlsx')
+
+    df = df.rename(columns={"Hue": "Mean Hue"})
+    df = df.rename(columns={"Sat": "Mean Sat"})
+    df = df.rename(columns={"Lum": "Mean Value"})
+    df = df.rename(columns={"sdBright": "sdValue"})
+    del df['LRSymm']
+    del df['UDSymm']
+    del df['NSED']
+
+    return df
+
+def add_features():
     '''
      Computes features of images that would help measure visual disorder
-    :return:
+    :return: dataframe with computed features for each image in training data
     '''
+    df = create_base_dataframe()
 
-    file_path = 'images/image1.jpg'
+    rows_to_delete = []
 
-    image = cv2.imread(file_path, 1)    # hue --> [0, 180], sat/val --> [0, 255]
-    hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+    for i in range(len(df.head())):
+        image_name = df.loc[i].at["originalName"]
+        folder = "training_images/"
+        file_path = folder + image_name
 
-    find_mean_hsv(hsv_image)
-    find_standard_deviation_hsv(hsv_image)
-    find_edge_density(image)
-    find_straight_edge_density(image)
-    find_entropy(image)
+        my_file = Path(file_path)
+        if (my_file.is_file()):         # certain images exist in excel file but not in images folder
+            image = io.imread(file_path)
+            hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+
+            mean_hsv = find_mean_hsv(hsv_image)
+            standard_dev_hsv = find_standard_deviation_hsv(hsv_image)
+            edge_density = find_edge_density(image)
+            straight_edge_density = find_straight_edge_density(image)
+            entropy = find_entropy(image)
+
+            # replace values with the features that I computed
+            df.loc[i, 'Mean Hue'] = mean_hsv[0]
+            df.loc[i, 'Mean Sat'] = mean_hsv[1]
+            df.loc[i, 'Mean Value'] = mean_hsv[2]
+            df.loc[i, 'sdHue'] = standard_dev_hsv[0]
+            df.loc[i, 'sdSat'] = standard_dev_hsv[1]
+            df.loc[i, 'sdValue'] = standard_dev_hsv[2]
+            df.loc[i, 'ED'] = edge_density
+            df.loc[i, 'SED'] = straight_edge_density
+            df.loc[i, 'Entropy'] = entropy
+        else:
+            rows_to_delete.append(i)
+
+    # delete all the rows that did not have images associated with them
+    # that i could use to compute features
+    for i in range(len(rows_to_delete)):
+        df.drop(rows_to_delete[i])
+
+    print(df.columns[1:10])
+
+    return df
 
 if __name__ == '__main__':
-    main()
+    add_features()

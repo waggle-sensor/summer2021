@@ -470,4 +470,17 @@ ValueError: optimizer got an empty parameter list
 ```
  - [TensorFlow model optimization](https://www.tensorflow.org/model_optimization/guide/get_started)
    - Quantization aware training: [MNIST quantiztion example](codes/tf-quantization-example.py)
-   - 
+
+## Week 8 (June 28th to July 2nd)
+
+### Monday June 28, 2021
+#### Work Done:
+ - Have a meeting with Raj to discuss the progress of the project
+   - Quantization's idea and its usage in DNN
+   - The relationship of the summer project with PhD desertation research
+ - Have the regular ML meeting
+   - How quantization-aware training works
+   - The example of DNN model quantization in QKeras
+   - Next step
+     - implement some popular DNN models and evaluate the performance
+     - test on both Chameleon and Jetson NX to understand the dependency of QKeras
