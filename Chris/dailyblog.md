@@ -142,6 +142,14 @@ How is it week 4 already!?
   - weird install bug after make install(configure was fine)
   - Hopefully I can fix this tomorrow
 
+### Tuesday (6/29)
+- ECR meeting this morning
+  - follow up meeting on Thursday from 2-4pm
+- After about a day of troubleshooting I finallly got tau installed on the NX
+  - couldn't install pdt but that shouldn't be necessary
+  - auto.py and manual.py both work, meaning that auto and manual instrumentation of tau for python works
+  - pprof also works and parses the profile output
+  - Now to test my wrapper tomorrow morning(with my example test) then with object detector plugin
     
 
 
