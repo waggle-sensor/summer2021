@@ -54,6 +54,12 @@
 * Next trip to the arb I will need to deploy the last BAR-LT and the 3 Solar BAR devices
 
 ### Tuesday, June 29
+* Found the posts that the solar recorders will be mounted on
+* Communicated with Samantha about returning to Morton for deploying the rest of the devices
+* Worked on the node after the meeting with Michael and Valerie yesterday
+* The node is up and running, so now I can run some test code for the mic
+* Downloaded Inkscape and started playing around with it
+
 ### Wednesday, June 30
 ### Thursday, July 1
 ### Friday, July 2
