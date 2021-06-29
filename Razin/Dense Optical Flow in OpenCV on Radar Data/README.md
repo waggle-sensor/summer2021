@@ -7,7 +7,8 @@ Below are images generated using [OpenCV's Dense Optical Flow algorithm](https:/
 
 Here's what the RADAR reflectivity data looks like:
 
-![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_animation.gif)*Figure 1.*
+![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_animation.gif)
+*Figure 1.*
 
 Here's the dense optical flow from the five images in that .GIF:
 
@@ -29,14 +30,14 @@ Here's the dense optical flow from just the first two images in that .GIF:
 ![Fig. 5](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_cropped_two_opticalhsv.png)
 *Figure 5.*
 
-
+## Differential Reflectivity Data
 
 
 # Questions to Investigate
  - Will there be any practical difference in how we process LiDAR data compared to this RADAR data?
- - What's the significance (if any) of the particular colors in these dense optical flow images?
+ - What's the significance (if any) of the particular colors in these dense optical flow images? How should we interpret these colors? OpenCV gives little information about this, and their example is much more simple.
  - What is the most useful measurement/data type for diagnosing optical flow: reflectivity data, differential reflectivity data, or velocity data?
-    - What's the differnce between reflectivity data and differential reflectivity data?
+    - What's the differnce between reflectivity data and differential reflectivity data? "Differential Reflectivity is the logarithm ratio of the horizontally polarized reflectivity to the vertically polarized reflectivity."
  - How are these data (or rather, the images we generate from them) both well-suited (+) and ill-suited (-) for diagnosing optical flow?
     - +: there's a finite range of colors and each color has a pre-determined meaning/value
     - +: based on the above, there won't be issues of brightness in these shifting images 
