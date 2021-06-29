@@ -340,7 +340,7 @@ Good week. I mostly spent my time working on software issues, which was fun.
 * Worked on RPI Sanity tests for SAGE-883
 * Looked into GPG signature verification
 -------------
-## Week 6
+## Week 6, 6/21 to 6/25
 -------
 ### Monday, 6/21 (7 Hours worked)
 
@@ -410,5 +410,29 @@ I was a bit blocked today, as I was waiting for a node to be provisioned to me t
 **Today's technical work:**
 * Finished failure testing for SAGE-856, commited, and rebased code
 * Messed around with an edgeswitch. Very confusing : (
+
+https://dl.ubnt.com/guides/edgemax/EdgeSwitch_CLI_Command_Reference_UG.pdf
+
+-------------
+## Week 7: 6/28 to 7/2
+-------------
+### Monday, 6/28 (8 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum
+
+**Today's technical work:**
+* Spent the entirety of the day doing two rounds of code revisions for SAGE-856
+* very tired :( 
+
+-------------
+
+### Tuesday, 6/29 (8 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum
+* Met with Joe twice to merge SAGE-856 (LETS GO!!!!) and to discuss honeycomb design
+* Finally finished training
+
+**Today's technical work:**
+* Drew up some more designs for honeycomb after joe meeting
 
 -------------
