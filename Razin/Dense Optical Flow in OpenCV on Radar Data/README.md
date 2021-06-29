@@ -28,7 +28,14 @@ Here's the dense optical flow from just the first two images in that .GIF (Fig. 
 ## Differential Reflectivity Data
 
 Here's what the RADAR differential reflectivity data look like:
+![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/diff_ref_uncropped_animation.gif)
+*Figure 6.*
+
+Here're the same differential relectivity data shown above, just zoomed into the bottom left region, our area of interest: 
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/diff_reflectivity_animation.gif)
+*Figure 8.*
+
+
 
 # Questions to Investigate
  - Will there be any practical difference in how we process LiDAR data compared to this RADAR data?
