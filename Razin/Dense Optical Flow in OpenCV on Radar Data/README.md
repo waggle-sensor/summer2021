@@ -1,14 +1,29 @@
 (currently updating this file)
 
+# Dense Optical Flow 
+Below are images generated using [OpenCV's Dense Optical Flow algorithm](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html).
+
+## Reflectivity Data
+
+Here's what the RADAR reflectivity data looks like:
+
+![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/reflectivity_animation.gif)
+
+Here's the dense optical flow from the five images in that .GIF:
+
+![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_opticalhsv.png)
+
+Here's the dense optical flow from the five images in that .GIF:
+
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_cropped_opticalhsv.png)
 
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_cropped_two_opticalhsv.png)
 
-![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_opticalhsv.png)
 
-![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/reflectivity_animation.gif)
 
-### Questions to Investigate
+
+
+# Questions to Investigate
  - Will there be any practical difference in how we process LiDAR data compared to this RADAR data?
  - What's the significance (if any) of the particular colors in these dense optical flow images?
  - What is the most useful measurement/data type for diagnosing optical flow: reflectivity data, differential reflectivity data, or velocity data?
