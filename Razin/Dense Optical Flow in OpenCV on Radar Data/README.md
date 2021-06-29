@@ -35,7 +35,7 @@ Here's the dense optical flow from just the first two images in that .GIF (Fig. 
 
 # Questions to Investigate
  - Will there be any practical difference in how we process LiDAR data compared to this RADAR data?
- - What's the significance (if any) of the particular colors in these dense optical flow images? How should we interpret these colors? OpenCV gives little information about this, and their example is much more simple.
+ - What's the significance (if any) of the particular colors in these dense optical flow images? How should we interpret these colors? OpenCV gives little information about this, and their example is much more simple with just three distinct color regions.
  - What is the most useful measurement/data type for diagnosing optical flow: reflectivity data, differential reflectivity data, or velocity data?
     - What's the differnce between reflectivity data and differential reflectivity data? "Differential Reflectivity is the logarithm ratio of the horizontally polarized reflectivity to the vertically polarized reflectivity."
  - How are these data (or rather, the images we generate from them) both well-suited (+) and ill-suited (-) for diagnosing optical flow?
