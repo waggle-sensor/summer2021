@@ -50,6 +50,8 @@
 ### Monday, June 28
 * Met with Michael and Valerie about the node kit and discussed next steps for using the kit and documenting the setup of it
 * Prepared the BAR-LT devices for deployment later today
+* Went to Morton Arb and deployed most of the devices but could not get the last one set up because of storms
+* Next trip to the arb I will need to deploy the last BAR-LT and the 3 Solar BAR devices
 
 ### Tuesday, June 29
 ### Wednesday, June 30
