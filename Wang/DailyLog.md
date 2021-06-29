@@ -1,3 +1,12 @@
+# Week 6
+**June 28st**
+1. Completed bird_song_classification_v2
+2. Train sample dataset by using features from mfcc, mel, and fourier_tempgram 
+![Screen Shot 2021-06-28 at 11 41 23 PM](https://user-images.githubusercontent.com/44412313/123733928-648c9580-d86a-11eb-8278-c0f1a31f727a.png)
+3. Meet with Emily for update.
+
+
+
 # Week 5
 **June 21st**
 1. Finish converting the ogg files into wav.
@@ -24,6 +33,9 @@
 2. Neural Networks; SVM; KNN
 3. Ran the NN model with chroma
 
+**June 25th**
+1. Studied all the feature extraction tools under librosa library
+2. Build a few sample dataset with 3 and 10 bird species.
 
 # Week 4
 **June 14th**
