@@ -167,3 +167,4 @@
 
 ### Tuesday June 29, 2021 ###
 - Attended CV intern check-in.
+- Began taking notes on online learning methods.
