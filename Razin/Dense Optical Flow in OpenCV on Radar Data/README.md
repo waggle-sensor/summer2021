@@ -1,7 +1,7 @@
 (currently updating this file)
 
 # Dense Optical Flow 
-Below are images generated using [OpenCV's Dense Optical Flow algorithm](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html).
+Below are images generated from [OpenCV's Dense Optical Flow algorithm](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html).
 
 ## Reflectivity Data
 
