@@ -51,14 +51,17 @@ Here's what the RADAR velocity data look like:
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/vel__uncropped_animation.gif)
 *Figure 10.*
 
+Here's the dense optical flow from the five images in the above .GIF (Fig. 10):
+![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/vel_uncropped_output_opticalhsv.png)
+*Figure 11.*
 
-
-
-Here're the same velocity data shown above, just zoomed into the bottom region, our area of interest: 
+Here're the same velocity data shown above (Fig. 10), just zoomed into the bottom region, our area of interest: 
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/vel_animation.gif)
 *Figure 12.*
 
-
+Here's the dense optical flow from the five images in the above .GIF (Fig. 12):
+![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/vel_cropped_output_opticalhsv.png)
+*Figure 13.*
 
 
 # Questions to Investigate
