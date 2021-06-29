@@ -254,6 +254,7 @@ Updates:
     (1) [Fast line detector](https://docs.opencv.org/4.5.2/df/ded/group__ximgproc__fast__line__detector.html). 
     (2) [How to use OpenCV4's FastLineDetector in Python 3?](https://stackoverflow.com/questions/57017927/how-to-use-opencv4s-fastlinedetector-in-python-3). 
     (3) [A new fast line detection algorithm](https://ieeexplore.ieee.org/document/1627457)
+* Created database with images with varing features. Identified potential features: grass, snow, day, night, light, season, time.
  
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
@@ -274,14 +275,14 @@ To Do:
 
 ### June 25, 2021 (Day 19)
 Updates:
-* Continued optimizing the program. Results can be found [here]() comparing different results with and without blurring. 
-* Finalized the Jupyter Notebook. This can be found [here](). 
-* Created a separate Python program which can be ran quickly. I created fixed ROI regions, so it can be consistent for every image. This can be found [here](). The program is capable of detecting lines for a separate image with similar lighting and snow conditions. 
+* Continued optimizing the program. Results can be found [here](https://drive.google.com/drive/folders/1sPCrQWO7bUhgc-LEFQDKvdJ1INRbq5lp?usp=sharing) comparing different results with and without blurring. 
+* Finalized the Jupyter Notebook. This can be found [here](https://drive.google.com/drive/folders/1sPCrQWO7bUhgc-LEFQDKvdJ1INRbq5lp?usp=sharing). 
+* Created a separate Python program which can be ran quickly. I created fixed ROI regions, so it can be consistent for every image. This can be found [here](https://drive.google.com/drive/folders/1sPCrQWO7bUhgc-LEFQDKvdJ1INRbq5lp?usp=sharing). The program is capable of detecting lines for a separate image with similar lighting and snow conditions. 
 * Looked into feature extraction methods for images. One feature that can be extracted is color. That can be useful for identifying parameters. 
 * Source: [Color Identification using KMeans and OpenCV](https://www.kaggle.com/shubhanshugupta/color-identification-using-kmeans-and-opencv)
 
 To Do:
-* Continue studying and working on OpenCV tutorials.
+* Continue studying and working on OpenCV tutorials and project.
 
 <br />
 
@@ -293,11 +294,20 @@ To Do:
 ### June 28, 2021 (Day 20)
 Updates:
 * Organized files, images, and programs in desktop and Drive. Updated links on Logs. 
-* 
+* Worked with K-means algorithm from Friday to detect average color for images. The JN can be found [](). The results show that images with similar average hue were detected by the first line detection program created. However, changes in weather or lighting may affect the line detections, even with similar average hue. Images with different hue averages could not have lines detected.
+* I uploaded the results onto a PowerPoint, which can be found [here](https://drive.google.com/drive/folders/10WqOMgO-E2BctzvELRWiE6GrZ9vTzP2F?usp=sharing). This will be presented in tomorrow's CV meeting.
 
 To Do:
-* Continue studying and working on OpenCV tutorials.
+* Continue studying and working on OpenCV tutorials and project.
 
+<br />
+
+### June 29, 2021 (Day 21)
+Updates:
+* Meeting with Computer Vision Group. Discussed results found yesterday and improvements to be made for extracting features from images. Dividing the image into regions and using K-means may be one way to improve model.
+
+
+To Do:
 
 <!-- 
 https://github.com/dloperab/PyImageSearch-CV-DL-CrashCourse
