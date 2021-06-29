@@ -1,65 +1,84 @@
 # Dense Optical Flow 
-Below are images generated from [OpenCV's Dense Optical Flow algorithm](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html).
+Below are gifs of RADAR data (i.e., reflectivity, differential reflectivity, and mean doppler velocity data) and optical flow images generated from these gifs using [OpenCV's Dense Optical Flow algorithm](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html).
 
-### Reflectivity Data
+## Reflectivity Data
+
 
 Here's what the RADAR reflectivity data look like:
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_animation.gif)
 *Figure 1.*
 
+
 Here's the dense optical flow from the five images in that .GIF:
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_opticalhsv.png)
 *Figure 2.*
+
 
 Here're the same relectivity data shown above, just zoomed into the bottom region, our area of interest: 
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/reflectivity_animation.gif)
 *Figure 3.*
 
+
 Here's the dense optical flow from the five images in that .GIF (Fig. 3):
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_cropped_opticalhsv.png)
 *Figure 4.*
+
 
 Here's the dense optical flow from just the first two images in that .GIF (Fig. 3):
 ![Fig. 5](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_cropped_two_opticalhsv.png)
 *Figure 5.*
 
-Fig. 5 appears to have more noise than Fig. 4 (?).
 
-### Differential Reflectivity Data
+## Differential Reflectivity Data
+
 
 Here's what the RADAR differential reflectivity data look like:
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/diff_ref_uncropped_animation.gif)
 *Figure 6.*
 
+
 Here's the dense optical flow from the five images in the above .GIF (Fig. 6):
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/diff_ref_uncropped_output_opticalhsv.png)
 *Figure 7.*
+
 
 Here're the same differential relectivity data shown above, just zoomed into the bottom region, our area of interest: 
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/diff_reflectivity_animation.gif)
 *Figure 8.*
 
+
 Here's the dense optical flow from the five images in the above .GIF (Fig. 8):
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/diff_ref_cropped_output_opticalhsv.png)
 *Figure 9.*
 
-### Differential Data
+## Mean Doppler Velocity Data
+
 
 Here's what the RADAR velocity data look like:
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/vel__uncropped_animation.gif)
 *Figure 10.*
 
+
 Here's the dense optical flow from the five images in the above .GIF (Fig. 10):
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/vel_uncropped_output_opticalhsv.png)
 *Figure 11.*
+
 
 Here're the same velocity data shown above (Fig. 10), just zoomed into the bottom region, our area of interest: 
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/vel_animation.gif)
 *Figure 12.*
 
+
 Here's the dense optical flow from the five images in the above .GIF (Fig. 12):
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/vel_cropped_output_opticalhsv.png)
 *Figure 13.*
+
+
+## Observations
+- Fig. 4 appears to have less noise than Fig. 5 (?).
+- Fig. 4 and 9 appear relatively similar, suggesting little difference in the optical flow diagnositcs extractable from reflectivity and differential reflectivity data, respectively.
+- Fig. 11 and 13 appear very noisy, suggesting MDV may not be optimal for diagnosing optical flow.
+
 
 # Lucas-Kanade Optical Flow
 
