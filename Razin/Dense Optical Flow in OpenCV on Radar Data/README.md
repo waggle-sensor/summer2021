@@ -14,7 +14,7 @@ Here's the dense optical flow from the five images in that .GIF:
 *Figure 2.*
 
 
-Here're the same relectivity data shown above, just zoomed into the bottom region, our area of interest: 
+Here're the same relectivity data shown above (Fig. 1), just zoomed into the bottom region, our area of interest: 
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/reflectivity_animation.gif)
 *Figure 3.*
 
@@ -42,7 +42,7 @@ Here's the dense optical flow from the five images in the above .GIF (Fig. 6):
 *Figure 7.*
 
 
-Here're the same differential relectivity data shown above, just zoomed into the bottom region, our area of interest: 
+Here're the same differential relectivity data shown above (Fig. 6), just zoomed into the bottom region, our area of interest: 
 ![alt text](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/diff_reflectivity_animation.gif)
 *Figure 8.*
 
