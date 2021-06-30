@@ -429,4 +429,4 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * Attended EDU Weekly Seminar Series
 
 -Today's Technical Tasks
-* 
+* compared docker node-red instances and kubernetes node-red instances (or find third solutions) 
