@@ -61,5 +61,11 @@
 * Downloaded Inkscape and started playing around with it
 
 ### Wednesday, June 30
+* Watched the seminar about career paths in STEM
+* Went to lunch with people from the group and learned how to use the new vinyl cutting device
+* Set up the vinyl cutter at home to make sure it is running properly
+* Continued working with the node kit and got it running
+
+
 ### Thursday, July 1
 ### Friday, July 2
