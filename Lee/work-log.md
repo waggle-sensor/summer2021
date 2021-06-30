@@ -404,7 +404,8 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 ### Monday, 28th
 -Today's Non-Technical Tasks
 * Attended daily sage scrum meeting
-
+* Talked to my advisor for PhD program
+  
 -Today's Technical Tasks
 * testing each node-red instance in different environments (import/export with json format)
 
@@ -421,3 +422,11 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 -Today's Technical Tasks
 * Finally figured out the files not access error (each node needs to be instanced "individually")
 * Still testing each node (now currently working with only temp topic)
+
+  
+### Wednesday, 30th
+-Today's Non-Technical Tasks
+* Attended EDU Weekly Seminar Series
+
+-Today's Technical Tasks
+* 
