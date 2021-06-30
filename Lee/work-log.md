@@ -434,3 +434,5 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * compared docker node-red instances and kubernetes node-red instances (or find third solutions)
 * installed: ![image](https://user-images.githubusercontent.com/56851781/123992689-d6afc800-d999-11eb-8382-c17c2d6ba997.png)
 
+![image](https://user-images.githubusercontent.com/56851781/124016433-a6752300-d9b3-11eb-88c7-82c0e05dac41.png)
+  
