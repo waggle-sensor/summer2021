@@ -384,6 +384,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * Attended 2021 CELS Student Lecture
 * Attended daily sage scrum meeting
 * Attended Sean's tutorial on writing plugins (code) for the Waggle nodes
+* short meeting with Neal (asking some questions about JavaScript)
   
 -Today's Technical Tasks
 * Tested on SAGE endpoint-nodeRED instances hookup
@@ -427,6 +428,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 ### Wednesday, 30th
 -Today's Non-Technical Tasks
 * Attended EDU Weekly Seminar Series
+* Short meeting with PhD program advisor
 
 -Today's Technical Tasks
 * compared docker node-red instances and kubernetes node-red instances (or find third solutions) 
