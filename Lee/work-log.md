@@ -431,4 +431,6 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * Short meeting with PhD program advisor
 
 -Today's Technical Tasks
-* compared docker node-red instances and kubernetes node-red instances (or find third solutions) 
+* compared docker node-red instances and kubernetes node-red instances (or find third solutions)
+* installed: ![image](https://user-images.githubusercontent.com/56851781/123992689-d6afc800-d999-11eb-8382-c17c2d6ba997.png)
+
