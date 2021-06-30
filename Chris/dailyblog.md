@@ -151,5 +151,12 @@ How is it week 4 already!?
   - pprof also works and parses the profile output
   - Now to test my wrapper tomorrow morning(with my example test) then with object detector plugin
     
+### Wednesday (6/30)
+- my wrapper works on the nx
+  - tested with simple custom test
+  - not sure how to set it up with the docker container
+  - need to be able to build the container manaully, then should be as simple as changing the entrypoint in the dockerfile
+- wrote and pushed Tau setup and wrapper.py to custom branch on app_profile git repo
+
 
 
