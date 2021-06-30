@@ -5,7 +5,7 @@
 ### Monday, 24th
 -Today's Non-Technical Tasks
 * Attended ANL Orientation at 9AM (CST)
-* Joined the Slack
+* Joined Slack
 * Computer Request for CELS
 * Enrolled the required course in TMS
 * Read up the guidelines and instructions on Github
@@ -53,7 +53,7 @@
    2) Java with Agent and PAHO client
    3) MQTT Dash in Android Device
 * Checked my personal IoT project for growing plants
-   Ran on RPI, simple Node-RED design.
+   Ran on RPI, simple Node-RED design with GUI.
    Five DHT22 sensors were used and those data was sent to the HiveMQ cloud. (https://www.hivemq.com/mqtt-cloud-broker/)
 
 -Things to do
@@ -62,40 +62,46 @@
 
 ### Wednesday, 27th
 -Today's Non-Technical Tasks
-* Attended first team-meeting
+* Attended first team meeting
 * Emailed to Deneen (need to check tax/paycheck process)
+* Attended ANL social meeting at lunch time (virtual)
 
 -Today's Technical Tasks
-* Read up Sage: A distributed software-defined sensor network: https://github.com/sagecontinuum/sage
+* Read up Sage project overview: A distributed software-defined sensor network: https://github.com/sagecontinuum/sage
 * https://github.com/sagecontinuum/sage/blob/master/architecture_overview.md
 
 
 ### Thursday, 28th
 -Today's Non-Technical Tasks
-* Meeting with Joe and Wolfgang about my node-red json format
+* Meeting with Joe and Wolfgang about node-red endpoint
 * Attended daily meeting
+
+-Today's Technical Tasks
+* Read up/compared MQTT & HTTP request on node-red (should ask Joe about using MQTT protocol)
 
 ### Friday, 29th
 -Today's Non-Technical Tasks
 * Attended daily meeting
+* Short meeting with Josh (asking node-red endpoint at the cloud service)
 
--Today's Non-Technical Tasks
-* Read up: Running Node-RED locally - https://nodered.org/docs/getting-started/local
-* Simple node test with json formatting
+-Today's Technical Tasks
+* Read up Running Node-RED locally - https://nodered.org/docs/getting-started/local
+* Simple node test with json format
 
 ************************************************************
 
 ## 2st Week 06/01-06/04 (Main Goal: Node-RED)
 ### Tuesday, 1th
 -Today's Non-Technical Tasks
-* Checked the schedule of TMS
-* Set up Raspberry Pi and sensors for checking (RPI)
+* Completed one required course in TMS
+* Set up personal Raspberry Pi and DTH sensors
 * Discussion with Sean, Wolfgang, and Joe about filtered data in the SDR (finally figured out!)
-   (Feedback: In the cloud case, we only have the HTTP/JSON API. Because we can filter data using the API, we can still do something similar to subscribing to only specific kind of data). So, in current progress, MQTT is not required. (might be future plan)
+  (Feedback: In the cloud case, we only have the HTTP/JSON API. Because we can filter data using the API, we can still do something similar to subscribing to only specific kind of data). So, in current progress, MQTT is not required. (might be future plan)
 
 -Today's Technical Tasks
-* Use HTTP request to get data from a REST endpoint on Node-RED (External REST API  - https://restcountries.eu) - Success!!
-* Read the doc of REST API more. (Also check other relevant video as well)
+* Use HTTP request to get data from a REST endpoint on Node-RED (External REST API example: https://restcountries.eu) - Success!!
+* Read more the doc of REST API. (Also check other relevant video as well)
+
 -Things to do
 * Test the HTTP request again with SDR.
   1) Read up example query data from SDR using HTTP / JSON request
@@ -112,6 +118,7 @@
 -Today's Technical Tasks
 * Built up Email Notification from Node-RED: https://flows.nodered.org/node/node-red-node-email
   description: It is set up on the Raspberry Pi connected temperature sensors. If temp > 30, sent the alarm via email
+
 - Things to do
 * Read Slack API: https://flows.nodered.org/node/node-red-contrib-slack and Alarm Notification on Slack...
 
@@ -257,7 +264,7 @@ ENTRYPOINT java HelloWorld
 * and scripts can be placed in the <body> or in the <head>, but placing it at the bottom of the <body> recommended due to the display speed.
 * External JS has several advantages: seperates HTML and code, easier to read and maintain, and can speed up page loads. (full URL or specific folder either is ok.)
   
-  
+
 ### Tuesday, 15th
 -Today's Technical Tasks
 * Still learning JavaScript with same tutorials as yesterday's one.
@@ -371,6 +378,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * https://developer.ibm.com/ko/technologies/iot/
 * https://www.python2.net/questions-1144056.htm
   
+  
 ### Thursday, 24th
 -Today's Non-Technical Tasks
 * Attended 2021 CELS Student Lecture
@@ -379,6 +387,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   
 -Today's Technical Tasks
 * Tested on SAGE endpoint-nodeRED instances hookup
+  
   
 ### Friday, 25th
 -Today's Non-Technical Tasks
@@ -391,10 +400,24 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   
 ************************************************************
   
-## 6st Week 06/28-07/02 (Main Goal: Node-RED Deploy)
+## 6st Week 06/28-07/02 (Main Goal: Node-RED instance testing)
 ### Monday, 28th
 -Today's Non-Technical Tasks
-* 
-  
+* Attended daily sage scrum meeting
+
 -Today's Technical Tasks
-* https://nodered.org/docs/api/admin/
+* testing each node-red instance in different environments (import/export with json format)
+
+-Things to do
+* Found some errors when deploying instance, server replies permission denied and files not access (debugging required tomorrow)
+  
+![image](https://user-images.githubusercontent.com/56851781/123885555-acb7c080-d91b-11eb-8ed8-51664e44e492.png)
+
+  
+### Tuesday, 29th
+-Today's Non-Technical Tasks
+* Attended daily sage scrum meeting
+
+-Today's Technical Tasks
+* Finally figured out the files not access error (each node needs to be instanced "individually")
+* Still testing each node (now currently working with only temp topic)
