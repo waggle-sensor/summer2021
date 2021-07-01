@@ -205,6 +205,7 @@
 so that they are normalized.
 
 ### 6/30/2021 ###
+* Attended meeting 9 - 10 am
 * Still running into bugs when creating dataframe with computed features
     * standard deviation of hue, saturation, and value show up as 0 on saved excel file 
       with data even though when testing and printing out the standard deviation, it prints not 0.
@@ -220,4 +221,17 @@ so that they are normalized.
 * Debugged the issue that rows with files that did not have images correlated with them were not being
   deleted from dataframe
 * Was able to achieve a 63 percent accuracy, I am still working on getting accuracy higher
-*
+
+### 7/1/2021 ###
+* Attended meeting with CV team
+* Attended student connect meeting
+* normalized all data, however accuracy stayed the same
+* Made sure that I have an even number of samples in each classification
+  * Was a little confused about this because when I made the number of samples more
+    even from each classification, it accuracy went down
+* Try changing straight edge density and edge density computations
+* Found out that when I delete Mean Value, standard deviation of saturation and
+  standard deviation of value features, accuracy increases. When I delete edge
+  density and entropy accuracy does not change at all... so I probably need to check
+  those calculations.
+
