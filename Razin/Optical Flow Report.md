@@ -9,7 +9,7 @@ Dense optical flow fields are created using the `cv.calcOpticalFlowFarneback()` 
 |  |  |
 |---|---|
 | ![1](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_animation.gif) ***Figure 1.** RADAR reflectivity data.* |  ![2](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_opticalhsv.png) ***Figure 2.** Dense optical flow from the five images in the Fig. 1 gif.* |
-|![3](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/reflectivity_animation.gif) ***Figure 3.** Same relectivity data shown above (Fig. 1), just zoomed into the bottom region, our area of interest.* | ![4](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_cropped_opticalhsv.png) ***Figure 4.** Dense optical flow from the five images in the Fig. 3 gif.* |
+|![3](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/reflectivity_animation.gif) ***Figure 3.** Same relectivity data shown above (Fig. 1), just zoomed into the region less than 25 meters above the radar, our area of interest.* | ![4](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_cropped_opticalhsv.png) ***Figure 4.** Dense optical flow from the five images in the Fig. 3 gif.* |
 ||![5](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_cropped_two_opticalhsv.png) ***Figure 5.** Dense optical flow from just the first two images in the Fig. 3 gif.* |
 
 
@@ -19,7 +19,7 @@ Dense optical flow fields are created using the `cv.calcOpticalFlowFarneback()` 
 |  |  |
 |---|---|
 | ![6](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/diff_ref_uncropped_animation.gif) ***Figure 6.** RADAR differential reflectivity data.*| ![7](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/diff_ref_uncropped_output_opticalhsv.png) ***Figure 7.** Dense optical flow from the five images in the Fig. 6 gif.*|
-|![8](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/diff_reflectivity_animation.gif) ***Figure 8.** Same differential relectivity data shown above (Fig. 6), just zoomed into the bottom region, our area of interest.*| ![9](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/diff_ref_cropped_output_opticalhsv.png) ***Figure 9.** Dense optical flow from the five images in the Fig. 8 gif.*|
+|![8](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/diff_reflectivity_animation.gif) ***Figure 8.** Same differential relectivity data shown above (Fig. 6), just zoomed into the region less than 25 meters above the radar, our area of interest.*| ![9](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/diff_ref_cropped_output_opticalhsv.png) ***Figure 9.** Dense optical flow from the five images in the Fig. 8 gif.*|
 
 
 ## Mean Doppler Velocity Data
@@ -27,7 +27,7 @@ Dense optical flow fields are created using the `cv.calcOpticalFlowFarneback()` 
 |  |  |
 |---|---|
 |![10](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/vel__uncropped_animation.gif) ***Figure 10.** RADAR velocity data.*| ![11](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/vel_uncropped_output_opticalhsv.png) ***Figure 11.** Dense optical flow from the five images in the Fig. 10 gif.*|
-| ![12](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/vel_animation.gif) ***Figure 12.** Same velocity data shown above (Fig. 10), just zoomed into the bottom region, our area of interest.*| ![13](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/vel_cropped_output_opticalhsv.png) ***Figure 13.** Dense optical flow from the five images in the Fig. 12 gif.*|
+| ![12](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/vel_animation.gif) ***Figure 12.** Same velocity data shown above (Fig. 10), just zoomed into the region less than 25 meters above the radar, our area of interest.*| ![13](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/vel_cropped_output_opticalhsv.png) ***Figure 13.** Dense optical flow from the five images in the Fig. 12 gif.*|
 
 
 ## Observations
@@ -49,8 +49,8 @@ I began by using the same .avi video as those I used for the dense optical flow 
 
 |  |  |
 |---|---|
-|![14](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv_0b.png) ***Figure 14.** First attempt at Lucas-Kanade (LK) algorithm.* | ![15](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv_0.png) ***Figure 15.** First attempt at LK algorithm.*|
-|![16](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv.png) ***Figure 16.** Cropped first run at LK algorithm.*||
+|![14](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv_0b.png) ***Figure 14.** First attempt at Lucas-Kanade (LK) algorithm with reflectivity data.* | ![15](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv_0.png) ***Figure 15.** First attempt at LK algorithm with reflectivity data zoomed into the region less than 25 meters above the radar, our area of interest.*|
+|![16](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv.png) ***Figure 16.** Cropped, zoomed-in first run at LK algorithm.*||
 
 
 
