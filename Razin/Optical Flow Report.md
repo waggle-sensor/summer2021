@@ -4,6 +4,10 @@ Below are images of optical flow generated from RADAR data (i.e., reflectivity, 
 ## Reflectivity Data
 
 
+           | 
+:-------------------------:|:-------------------------:
+![](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_animation.gif)  |  ![](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_opticalhsv.png)
+
 Here's what the RADAR reflectivity data look like:
 ![](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_animation.gif)
 *Figure 1.*
