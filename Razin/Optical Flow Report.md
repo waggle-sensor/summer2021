@@ -83,8 +83,16 @@ Here's the dense optical flow from the five images in the above gif (Fig. 12):
 # Lucas-Kanade Optical Flow
 
 ## Reflectivity Data
+ Initial plots revealed like those used with the dense optical flow algorithm
+
+![alt](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv_0b.png)
+*Figure 14.*
+
+![alt](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv_0.png)
+*Figure 15.*
 
 ![alt](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv.png)
+*Figure 16.*
 
 
 # Questions to Investigate
