@@ -37,16 +37,15 @@ Dense optical flow fields are created using the `cv.calcOpticalFlowFarneback()` 
 
 
 # Lucas-Kanade Optical Flow
-Basic validation
 
+LK optical flow fields are created using the `cv.calcOpticalFlowPyrLK()` method. This algorithm is meant for sparser feature sets.
+I used a short clip of my pen moving across a white background to do some basic validation of my slightly modified LK algorithm:
 https://user-images.githubusercontent.com/78514700/124178018-ded53980-da65-11eb-8db9-e160cb82094d.mov
 
 
 
-
-
 ## Reflectivity Data
-I began by using the same .avi video as those I used for the dense optical flow algorithm. However, I quickly realized these plots were not well-suited to this algorithm (Fig. 14-15). In particular, all the starting point for the flow began on the plot boundaries, title, labels, or legend. I'm not sure why this is. 
+I began by using the same .avi video as those I used for the dense optical flow algorithm. However, I quickly realized these plots were not well-suited to this algorithm (Fig. 14-15). In particular, all the starting point for the flow began on the plot boundaries, title, labels, or legend. This likely has to do with the `cv.goodFeaturesToTrack()`method, which decides the points to track.
 
 |  |  |
 |---|---|
