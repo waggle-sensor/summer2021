@@ -83,7 +83,7 @@ Here's the dense optical flow from the five images in the above gif (Fig. 12):
 # Lucas-Kanade Optical Flow
 
 ## Reflectivity Data
- Initial plots revealed like those used with the dense optical flow algorithm
+I began by using the same .avi video as those I used for the dense optical flow algorithm. However, I quickly realized these plots were not well-suited to this algorithm (Fig. 14-15). In particular, all the starting point for the flow began on the plot boundaries, title, labels, or legend. I'm not sure why this is. 
 
 ![alt](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv_0b.png)
 *Figure 14.*
