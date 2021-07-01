@@ -45,3 +45,23 @@
           - also working on these generations for other the data, i.e., differential reflectivity and velocity, in addition to the reflectivity data
      - began working with code for method of [Lucas-Kanade Optical Flow in OpenCV](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html), OpenCV's first optical flow example 
    - looked into [difference between LiDAR and RADAR data](https://www.yellowscan-lidar.com/knowledge/lidar-vs-radar/)
+- Tuesday
+  - 
+- Wednesday
+  - worked on optimizing Lucas-Kanade optical flow models; roadblocks/issues include:
+    - 
+  - got more direction from Dr. Collis on work-arounds for Lucas-Kanade code
+     - zoom into plot more
+  - attended Outloud Public Lecture with presentations from Dr. Collis, Dr. Rotsch, Dr. Heitmann, and Dr. Kasthuri
+- Thursday
+  - lab meeting
+  - weekly lecture with Aleksandr Obabko
+  - (sharing progress, plots, code with team)
+  - updating documentation of process
+  - looking into [MatLab's optical flow algorithms](https://www.mathworks.com/discovery/optical-flow.html) and [Computer Vision Toolkit](https://www.mathworks.com/products/computer-vision.html)
+- Friday
+
+
+
+
+
