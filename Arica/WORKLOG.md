@@ -436,3 +436,30 @@ https://dl.ubnt.com/guides/edgemax/EdgeSwitch_CLI_Command_Reference_UG.pdf
 * Drew up some more designs for honeycomb after joe meeting
 
 -------------
+
+### Wednesday, 6/30 (8 Hours worked)
+**Today's non-technical work:**
+* Lead Scrum
+
+**Today's technical work:**
+* Wrote some code for the HC Client side
+* Modeled mock payload JSON
+
+
+Today was a bit of a slow day, as it was mostly in the repeating cycle of *write a little bit of code* -> *get spooked from large design choice* -> *stare at screen*. I think I can pull this project off, though.
+
+-------------
+
+### Thursday, 7/1 (8 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum
+* Met with Sean to discuss HC design choices and python specifics
+* Made my Student intro tile
+
+**Today's technical work:**
+* Wrote part of the extract_payload module for HC clientside
+* Started demo presentation for tomorrow, came up with idea for standardized HC verification / logging system. Thanks for the idea and help, Sean!
+
+Today's meeting with Sean really helped put my work into better perspective. Tomorrow, I'll meet with Yongho to discuss more of the camera updating code, and get a foothold on my first milestone. 
+
+-------------

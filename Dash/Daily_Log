@@ -32,4 +32,26 @@ Implemented the ASOS data into the Pytorch model
 Obtained 62% accuracy
 Continued to implement the regression model
 Investigated the possibility of calculating LCL 
-Read literature into forecasting LCL
+Read literature into forecasting LCL'
+
+June 28th:
+Downloaded ASOS Data(10 years worth of entries from an air force base in IL)
+Processed data and calculated LCL 
+Looked for ML algorithms
+
+June 29th
+Continued looking for ML algorithms
+Narrowed down the features to use for designing the model
+Visualized Data
+Looked over FLIRCamera
+
+June 30th
+Successfully tested 7 models and found one with 99% accuracy for both LCL pressure and temperature
+Analyzed model to make sure it wasn't a fluke
+
+July 1st:
+Attended clouds meeting
+Started processing thermal images
+Looking for best ML algorithm for analyzing the images
+Reviewed related literature
+

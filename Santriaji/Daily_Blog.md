@@ -64,3 +64,17 @@ Goal : Codesign profiling block with ECR Team (Week 2 and Week 3).
 - Running live monitor for plugin.
 - Designing the data buffer for plugin.
 - Writing presentation for ECR meeting.
+
+### Tuesday 06/29
+- ECR Meeting. Slides: https://docs.google.com/presentation/d/1cT0J9ZG8lGCgVt9Xz3aJyh_DDZ2vF2zCuJ7eM1_MQoQ/edit?usp=sharing
+- Build a simple live monitoring block with tegrastats, however there will be a problem to splitting and isolating the performance metrics. 
+
+### Wednesday 06/30
+- Lunch with team.
+- Found out that we can ignore the resource allocation and can succesfully schedule the DNNs if they are running sequentially. 
+- Based on this paper https://www.researchgate.net/profile/Zhe-Yang-62/publication/351348112_DeepRT_A_Soft_Real_Time_Scheduler_for_Computer_Vision_Applications_on_the_Edge/links/6092a53a92851c490fbb996f/DeepRT-A-Soft-Real-Time-Scheduler-for-Computer-Vision-Applications-on-the-Edge.pdf
+
+### Thursday 07/01
+- Meeting with ECR. Slides: https://docs.google.com/presentation/d/15NMMjdlLsyYLX8HQi8ZqNIiQkNedhJUy4pTkE0aS5LY/edit?usp=sharing
+- Found that the assumption of what I can control and suggest for the scientist may differ from the one that is planned.
+- To avoid misunderstood in assumption, I plan to write a really detail algorithm and design document such that we are in the same page.

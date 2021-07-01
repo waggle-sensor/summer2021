@@ -158,5 +158,26 @@ How is it week 4 already!?
   - need to be able to build the container manaully, then should be as simple as changing the entrypoint in the dockerfile
 - wrote and pushed Tau setup and wrapper.py to custom branch on app_profile git repo
 
+### Thursday (7/1)
+- Tried adding memory profiling to TAU tool
+  - Compiler errors and I'm not sure how to fix them, likely an include problem
+  - edited some file for TauUserEvent
+  - says no type
+- Reinstalled base version
+- Presented tool and wrapper in meeting with Yongho, Yomi, Luke, and Aji
+  - I have a better idea of the pipeline now
+  - Top objective for me is to begin getting high level stats because I have access to source code, Luke already seems to easily get CPU, GPU, and RAM
+- Attempted to run object-counter plugin through wrapper
+  - Yongho mentioned in the meeting that I should only need to modify the Dockerfile but that didn't seem to do anything
+    - I believe I need to build a new image with my changes to the dockerfile
+    - had to uninstall and reinstall docker to the latest version
+    - error: RUN sage-cli.py storage files download BUCKET_ID_MODEL coco_ssd_resnet50_300_fp32.pth --target /app/coco_ssd_resnet50_300_fp32 pth:                                                               
+        #10 1.656 EXCEPTION IN (/usr/local/bin/sage-cli.py, LINE 320 "sage_storage.downloadFile(host=ctx.obj['SAGE_STORE_URL'], token=ctx.obj['TOKEN'], bucketID=bucket_id, key=key,  target=target)"):            
+        #10 1.656 Invalid URL 'HOST/api/v1/objects/BUCKET_ID_MODEL/coco_ssd_resnet50_300_fp32.pth': No schema supplied. Perhaps you meant http://HOST/api/v1/objects/BUCKET_ID_MODEL/coco_ssd_resnet50_300_fp32.pth?
+        ------
+        error: failed to solve: rpc error: code = Unknown desc = executor failed running [/bin/sh -c sage-cli.py storage files download ${BUCKET_ID_MODEL} coco_ssd_resnet50_300_fp32.pth --target /app/coco_ssd_resnet50_300_fp32.pth]: exit code: 1
+        Makefile:8: recipe for target 'image' failed
+        make: *** [image] Error 1
+
 
 

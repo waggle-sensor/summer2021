@@ -68,4 +68,10 @@
 
 
 ### Thursday, July 1
+* Met with my student connects group and gave a summary of my project
+* Met with Raj about using the new vinyl cutting machine
+* Tested the cutter and played around with some settings to help when I start using it
+* Continure to work on the node kit using a monitor display
+
+
 ### Friday, July 2

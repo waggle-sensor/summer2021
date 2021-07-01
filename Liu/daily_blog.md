@@ -484,3 +484,18 @@ ValueError: optimizer got an empty parameter list
    - Next step
      - implement some popular DNN models and evaluate the performance
      - test on both Chameleon and Jetson NX to understand the dependency of QKeras
+  
+### Tuesday June 29, 2021
+#### Work Done:
+ - Try QKeras tutorial on handwritten recognition and object detection
+ - Try to deploy Qkeras on Jetson AGX/NX
+   - Dependency requires TensorFlow 2.5, which need Jetpack 4.5+
+   - Error in TensorFlow 1.15: no corresponding layers in the frozen model
+   - Try to use the quantization APIs in TF
+
+### Wednesday June 30, 2021
+#### Work Done:
+ - Try [TensorRT](https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html) on Jetson AGX/NX
+   - TensorRT provides both pruning and quantization for DNN models
+     - Float16 for using GPU
+     - Try TensorRT demos on github: https://github.com/jkjung-avt/tensorrt_demos#int8_and_dla
