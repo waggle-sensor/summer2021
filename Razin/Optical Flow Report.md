@@ -1,5 +1,6 @@
+Below are images of optical flow generated from RADAR data (i.e., reflectivity, differential reflectivity, and mean doppler velocity data) collected by the [CACTI campaign](https://www.arm.gov/research/campaigns/amf2018cacti) in Cordoba, Argentina. These optical flow images were generated using [OpenCV's](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html) Dense Optical Flow algorithm and Lucas-Kanade Method algorithm. Gifs of the original RADAR data are also included.
+
 # Dense Optical Flow 
-Below are images of optical flow generated from RADAR data (i.e., reflectivity, differential reflectivity, and mean doppler velocity data) collected by the [CACTI campaign](https://www.arm.gov/research/campaigns/amf2018cacti) in Cordoba, Argentina. These optical flow images were generated using [OpenCV's Dense Optical Flow algorithm](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html). Gifs of the original RADAR data are also included.
 
 ## Reflectivity Data
 
