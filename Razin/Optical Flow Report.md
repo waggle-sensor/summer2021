@@ -37,6 +37,11 @@ Dense optical flow fields are created using the `cv.calcOpticalFlowFarneback()` 
 
 
 # Lucas-Kanade Optical Flow
+Basic validation
+
+https://user-images.githubusercontent.com/78514700/124177671-61a9c480-da65-11eb-85cd-baca7f01914c.mov
+
+
 
 ## Reflectivity Data
 I began by using the same .avi video as those I used for the dense optical flow algorithm. However, I quickly realized these plots were not well-suited to this algorithm (Fig. 14-15). In particular, all the starting point for the flow began on the plot boundaries, title, labels, or legend. I'm not sure why this is. 
