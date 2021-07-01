@@ -101,6 +101,16 @@ class Test(unittest.TestCase):
 
         self.assertEqual(result, True)
 
+    def test_standard_deviation(self):
+
+        test = convert_file_to_image('training_images/sun_bcwykimfflvatirw.jpg')[0]
+
+        sd_test = find_standard_deviation_hsv(test)[2]
+
+        print("sd val test:", sd_test)
+
+        self.assertEqual(True, True)
+
     def test_SD_hue(self):
 
         hsv_test_image_red_green = convert_file_to_image('test_images/red_green.jpg')[0]
