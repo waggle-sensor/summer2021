@@ -135,5 +135,14 @@
 ### June 25
 - Fixed code for the time-height arrays with Bobby's help
     * Finally able to get a usable xarray dataset for the reflectivity, lat, lon, and height of the gates closest to a select site for x number of volume scans
-- Next week: make/clean up a few plots (xarray vs. pyart?), probably switch axis from sweeps to gate height, remove double sweeps at low levels due to SAILS
+- Next week: make/clean up a few plots, probably switch axis from sweeps to gate height, remove double sweeps at low levels due to SAILS
+
+## Week 5 
+### June 28
+
+
+### June 29
+
+
+### June 30
 

@@ -153,3 +153,18 @@
 ### Friday June 25, 2021 ###
 - Did some recommended reading (some great paper recommendations by Nicola!)
 - Pushed anomaly detection notebooks to a [waggle-sensor repository](https://github.com/waggle-sensor/anomaly-detection).
+- Began some refactoring work on the motion-detector plugin
+
+## Week 4 ##
+### Monday June 28, 2021 ###
+- Did some reading on adversarial autoencoders
+    * Through this reading, I haven't been convinced that imposing some kind of distribution for image encodings will
+      result in better prediction accuracy; this only seems useful for certain tasks like generating adversarial
+      examples of anomalies. This might be worth exploring, but I would like to talk to an expert about this first.
+- Refactored the [motion detector plugin](https://github.com/waggle-sensor/plugin-motion-detector) to publish data to SAGE.
+    * I may want to schedule a code review with Sean to discuss if there need to be changes to the way the plugin
+      publishes object data (particularly if we want to support multi-object tracking).
+
+### Tuesday June 29, 2021 ###
+- Attended CV intern check-in.
+- Began taking notes on online learning methods.

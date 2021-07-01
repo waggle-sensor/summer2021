@@ -41,7 +41,7 @@
   - continued working on optical flow code
      - uploaded images of Dense Optical Flow generations to GitHub
           - experimented with different "zooms" (how zoomed-in we are to areas of interest in radar scans) and different numbers of frames (optical from from just two consecutive radar images vs. five) 
-          - included readMe.txt with questions, thoughts
+          - included README.md with questions, thoughts
           - also working on these generations for other the data, i.e., differential reflectivity and velocity, in addition to the reflectivity data
      - began working with code for method of [Lucas-Kanade Optical Flow in OpenCV](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html), OpenCV's first optical flow example 
    - looked into [difference between LiDAR and RADAR data](https://www.yellowscan-lidar.com/knowledge/lidar-vs-radar/)

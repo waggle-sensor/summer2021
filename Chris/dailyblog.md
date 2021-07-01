@@ -124,6 +124,39 @@ For keeping records of progress.
 - Got access to NXs (thank you Yongho!)
   - setting up object counter plugin to begin experimenting with TAU on it
 
+## Week 4 (6/28 - 7/2)
+
+How is it week 4 already!?
+
+### Monday (6/28)
+- Troubleshooting and trial and error to setup object detector plugin on NX
+- Makefile didn't work
+- Pulling didn't work
+- Messaged Luke and Aji for help
+  - need to run playback server
+- Messaged Yongho
+  - config.json had to be changed on the nx
+- I can sucussfully run the object detector plugin docker image now! Ready to be profiled
+- Installing TAU
+  - everything is downloaded on NX
+  - weird install bug after make install(configure was fine)
+  - Hopefully I can fix this tomorrow
+
+### Tuesday (6/29)
+- ECR meeting this morning
+  - follow up meeting on Thursday from 2-4pm
+- After about a day of troubleshooting I finallly got tau installed on the NX
+  - couldn't install pdt but that shouldn't be necessary
+  - auto.py and manual.py both work, meaning that auto and manual instrumentation of tau for python works
+  - pprof also works and parses the profile output
+  - Now to test my wrapper tomorrow morning(with my example test) then with object detector plugin
     
+### Wednesday (6/30)
+- my wrapper works on the nx
+  - tested with simple custom test
+  - not sure how to set it up with the docker container
+  - need to be able to build the container manaully, then should be as simple as changing the entrypoint in the dockerfile
+- wrote and pushed Tau setup and wrapper.py to custom branch on app_profile git repo
+
 
 
