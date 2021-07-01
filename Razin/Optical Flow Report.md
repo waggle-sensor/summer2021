@@ -5,32 +5,11 @@ Below are images of optical flow generated from RADAR data (i.e., reflectivity, 
 
 |  |  |
 |---|---|
-| ![](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_animation.gif) *Figure 1. RADAR reflectivity data.* |  ![](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_opticalhsv.png) *Figure 2. Dense optical flow from the five images in the Fig. 1 gif.* |
-|![](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/reflectivity_animation.gif) *Figure 3. Here're the same relectivity data shown above (Fig. 1), just zoomed into the bottom region, our area of interest.* | ![](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_cropped_opticalhsv.png) *Figure 4. Here's the dense optical flow from the five images in the Fig. 3 gif.* |
+| ![1](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_animation.gif) *Figure 1. RADAR reflectivity data.* |  ![2](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_opticalhsv.png) *Figure 2. Dense optical flow from the five images in the Fig. 1 gif.* |
+|![3](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/reflectivity_animation.gif) *Figure 3. Here're the same relectivity data shown above (Fig. 1), just zoomed into the bottom region, our area of interest.* | ![4](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_cropped_opticalhsv.png) *Figure 4. Here's the dense optical flow from the five images in the Fig. 3 gif.* |
+|![5](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_cropped_two_opticalhsv.png)
+*Figure 5. Dense optical flow from just the first two images in the Fig. 3 gif.*| |
 
-Here's what the RADAR reflectivity data look like:
-![](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_animation.gif)
-*Figure 1.*
-
-
-Here's the dense optical flow from the five images in that gif:
-![](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_uncropped_opticalhsv.png)
-*Figure 2.*
-
-
-Here're the same relectivity data shown above (Fig. 1), just zoomed into the bottom region, our area of interest: 
-![](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/reflectivity_animation.gif)
-*Figure 3.*
-
-
-Here's the dense optical flow from the five images in the above gif (Fig. 3):
-![](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_cropped_opticalhsv.png)
-*Figure 4.*
-
-
-Here's the dense optical flow from just the first two images in the gif (Fig. 3):
-![Fig. 5](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Dense%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/ref_cropped_two_opticalhsv.png)
-*Figure 5.*
 
 
 ## Differential Reflectivity Data
