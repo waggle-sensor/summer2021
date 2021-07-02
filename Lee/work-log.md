@@ -4,9 +4,9 @@
 
 ### Monday, 24th
 -Today's Non-Technical Tasks
-* Attended ANL Orientation at 9AM (CST)
+* Attended first ANL orientation
 * Joined Slack
-* Computer Request for CELS
+* Set up computer request for CELS
 * Enrolled the required course in TMS
 * Read up the guidelines and instructions on Github
 
@@ -19,28 +19,24 @@
 -Today's Non-Technical Tasks
 * Meeting with Sean (Query into SDR)
 * Followed up simple tutorials of Github
-* Sign in MIRO / JIRA
+* Sign in MIRO and JIRA
   (I guess MIRO is for planning, and JIRA is for process management. I need to read the guidelines again this week, especially calculating team capacities.)
 
 -Today's Technical Tasks
-* Watched Docker tutorial videos and build up on my RPI / Mac OS
+* Read up Docker tutorials and installed on my RPI
 * Read Scrum Reference Card. Summary:
-
-  Agile: Software Developer Methodology (less document-oriented, practical code-oriented compared to Waterfall model)
-         Unlike previous methodologies that have been led through planning, agile method constantly creates prototypes with constant cycles,
-         modifies the needs of each time and develops a single large piece of software.
-  Scrum: Implementation of Agile Methodology
-         It gives priority to the features and improvements to be included in the solution.
-         It is based on object-oriented technology.
+* Agile: Software Developer Methodology (less document-oriented, practical code-oriented compared to Waterfall model). Unlike previous methodologies that have been led through planning, agile method constantly creates prototypes with constant cycles, modifies the needs of each time and develops a single large piece of software.
+* Scrum: Implementation of Agile Methodology. It gives priority to the features and improvements to be included in the solution. It is based on object-oriented technology.
          
          
 ### Wednesday, 26th
 -Today's Non-Technical Tasks
 * Double checked to complete I-9 and FNIS including all relevant tax forms 
 * Signed in https://getsmarter.io/ for weekly meeting (need to figure out how to use it)
+* First meeting with Joe, and confirm my tasks this week
 
 -Today's Technical Tasks
-* Watched the Node-RED demo video shared by Josh/relevant videos
+* Watched the Node-RED demo video shared by Josh/relevant videos and discussed about it with Wolfgang (next week goal maybe)
 * Set up RPI and remind my previous zipper robot project with RPI.
    The goal of my research was to develop an apparel system which integrates intelligent autonomous agents, human-based sensors, wireless network protocol,
    mobile application management system and a zipper robot.
@@ -59,6 +55,7 @@
 -Things to do
 * Set up HiveMQ cloud active states
 * Watch other Node-RED demo videos relevant SAGE project
+
 
 ### Wednesday, 27th
 -Today's Non-Technical Tasks
@@ -345,13 +342,14 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 -Today's Non-Technical Tasks
 * Attended presentation of goal for internship
 
-  -Today's Technical Tasks
+-Today's Technical Tasks
 * Learning docker from https://www.44bits.io/ko/post/why-should-i-use-docker-container
 * Basic concept: Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.
   Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.
 * Docker components: software, objects, and registries.
 * WHY used? Containers are technologies that run applications regardless of their environment. (do not need to go through the complex installation process that exists for each operating system.)
 * tested with simple tutorial: https://www.youtube.com/watch?v=hWPv9LMlme8&t=587s
+
 -Things to do: join to Kubernetes with Docker
 
   
