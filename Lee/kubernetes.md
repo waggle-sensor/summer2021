@@ -27,5 +27,5 @@
 
 * kubectl config current-context gives you the current context of what is configure for kubectl first.
 
-![image](https://user-images.githubusercontent.com/56851781/124333943-a025a900-db63-11eb-8c4f-213f9183b6ef.png)
+![image](https://user-images.githubusercontent.com/56851781/124334593-8e450580-db65-11eb-96c1-655d50e1916e.png)
 
