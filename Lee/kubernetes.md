@@ -8,7 +8,8 @@
 
 ### Kubernetes components
 * When you deploy Kubernetes, you get a cluster.
-
+* Here's the diagram of a Kubernetes cluster with all the components tied together.
+* 
 ![image](https://user-images.githubusercontent.com/56851781/124334240-791ba700-db64-11eb-9c9c-5d58acdb2ec8.png)
 
 
