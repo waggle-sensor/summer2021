@@ -52,3 +52,15 @@ Goal : Codesign profiling block with ECR Team (Week 2 and Week 3).
 - Read paper about Real Time System in Docker.
 - Attended plugin tutorial.
 - Decided to start the scheduler with batch and time sharing knobs.
+
+### Thursday 06/25
+- Setting up NX for the experiments.
+
+## Week 3 (06/28 - 07/02)
+Goal : Codesign profiling block with ECR Team (Week 2 and Week 3).
+
+### Monday 06/28
+- Running object pedestrian plugin.
+- Running live monitor for plugin.
+- Designing the data buffer for plugin.
+- Writing presentation for ECR meeting.
