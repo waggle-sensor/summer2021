@@ -159,12 +159,24 @@
 - EDU Weekly Seminar: Pathways to Science Career Panel
 - Made the required mini-presentation for the Student Connects meeting tomorrow
 - Asked Bobby for help dealing with the “nans” in xarray dataset creating the plotting issue with matplotlib
-    * One solution: create x amount of evenly spaced height bins for an array of size time by number of height bins. Will hold scan times and average reflectivity between 2 height bins
+    * One solution: create x amount of evenly spaced height bins for an array of size time by number of height bins. Array will hold scan times and the average reflectivity between 2 height bins
     * Code works for all the days and sets of scans I’ve tested thus far
 - Cleaned up the plots
 
 ### July 1 
 - Weekly Clouds/CV group meeting
-- Student Connects presentations 
-- 
+- Student Connects presentations
+- CELS Student Lecture Series
+- Looked into numpy.interp() and scipy.interpolate()
+    * Scott suggested it could be useful for the height axis
+    * Seems like it certainly could be useful because as VCP changes the heights of the gates will change and the number of sweeps in a scan can also change
+    * Can't figure out how I'd apply it to my code
+- xarray has interpolation functions too
+
+### July 2
+- Found a better way to get rid of the duplicate sweeps from SAILS
+    * I want the first of the sweeps (one has radial velocity and one does not)
+    * Tried selecting only the sweeps with radial velocity data first --> I suspect it won't work for all cases (SAILS) and it gives the second sweep for a given gate height so this didn't work
+    * Tried using the median of the elevation angles in each sweep to identify the unique sweeps and then extract_sweeps to get a radar object with only the unique sweeps (based on: https://gist.github.com/deeplycloudy/d5d4f137dd7496434e09f1fbc2122b0f). Tested it on a few sets of scans and it seems to works well. 
+- Still trying to figure out how to best use interpolation
 
