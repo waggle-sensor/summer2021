@@ -9,9 +9,13 @@
 ### Kubernetes components
 * When you deploy Kubernetes, you get a cluster.
 * Here's the diagram of a Kubernetes cluster with all the components tied together.
-* 
+
 ![image](https://user-images.githubusercontent.com/56851781/124334240-791ba700-db64-11eb-9c9c-5d58acdb2ec8.png)
 
+### Nodes
+* There are two main ways to have Nodes added to the API server:
+1) The kubelet on a node self-registers to the control plane
+2) You (or another human user) manually add a Node object
 
 ### Download through Docker descktop
 ![image](https://user-images.githubusercontent.com/56851781/124333701-052ccf00-db63-11eb-93a2-7782aa19732b.png)
