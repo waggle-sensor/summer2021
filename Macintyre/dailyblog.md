@@ -71,7 +71,10 @@
 * Met with my student connects group and gave a summary of my project
 * Met with Raj about using the new vinyl cutting machine
 * Tested the cutter and played around with some settings to help when I start using it
-* Continure to work on the node kit using a monitor display
+* Continued to work on the node kit using a monitor display
 
 
 ### Friday, July 2
+* Spent most of the day working on the node and getting it set up
+* I was able to get the node working and I also got the environment sensor working properly
+* I tried to set up the camera, but ran into a few problems so I switched to working on the microphone.
