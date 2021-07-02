@@ -242,6 +242,7 @@ To Do:
 
 ### June 23, 2021 (Day 17)
 Updates:
+* Attended seminar on 'Connecting to a Career Through LinkedIn' by Harrell Townsend.
 * Met with Nicole for one-on-one 'office hours,' since I felt very lost on project. We discussed the ROI/HoughP notebook. She helped me by clarifying what should be done next. I will be furthering my ROI model on images with varying features (i.e. snowing, cloudy, sunny, etc...), essentially testing different parameters and building the training set for the ML algorithm. CNN can be used later for determining snow cover. 
 * TLDR: We will be using ML rather than manual image labeling. DL can be easily applied later for snow detection.
 * The tentative project outline:
@@ -255,6 +256,7 @@ Updates:
     (2) [How to use OpenCV4's FastLineDetector in Python 3?](https://stackoverflow.com/questions/57017927/how-to-use-opencv4s-fastlinedetector-in-python-3). 
     (3) [A new fast line detection algorithm](https://ieeexplore.ieee.org/document/1627457)
 * Created database with images with varing features. Identified potential features: grass, snow, day, night, light, season, time.
+* Meeting with Student Connects Group. Presented 1-2 minute introduction to current research.
  
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
@@ -294,7 +296,7 @@ To Do:
 ### June 28, 2021 (Day 20)
 Updates:
 * Organized files, images, and programs in desktop and Drive. Updated links on Logs. 
-* Worked with K-means algorithm from Friday to detect average color for images. The JN can be found [](). The results show that images with similar average hue were detected by the first line detection program created. However, changes in weather or lighting may affect the line detections, even with similar average hue. Images with different hue averages could not have lines detected.
+* Worked with K-means algorithm from Friday to detect dominant color for images. The JN can be found [](). The results show that images with similar dominant hue were detected by the first line detection program created. However, changes in weather or lighting may affect the line detections, even with similar dominant hue. Images with different hue dominant could not have lines detected. The JN can be found [here](https://drive.google.com/drive/folders/10WqOMgO-E2BctzvELRWiE6GrZ9vTzP2F?usp=sharing).
 * I uploaded the results onto a PowerPoint, which can be found [here](https://drive.google.com/drive/folders/10WqOMgO-E2BctzvELRWiE6GrZ9vTzP2F?usp=sharing). This will be presented in tomorrow's CV meeting.
 
 To Do:
@@ -303,11 +305,56 @@ To Do:
 <br />
 
 ### June 29, 2021 (Day 21)
+
 Updates:
 * Meeting with Computer Vision Group. Discussed results found yesterday and improvements to be made for extracting features from images. Dividing the image into regions and using K-means may be one way to improve model.
+* Looked into 'chunking.' Colin sent me a [JN](https://github.com/waggle-sensor/anomaly-detection/blob/main/.ipynb_checkpoints/Anomaly%20Detection%20(PCA)-checkpoint.ipynb) on something he worked on with chunking/compression/PCA.
+* Image Chunking Sources:
+    (1) [How do you split a list into evenly sized chunks?](https://stackoverflow.com/questions/312443/how-do-you-split-a-list-into-evenly-sized-chunks)
+    (2) [Image Processing](https://examples.dask.org/applications/image-processing.html)
+    (3) [How to split image into small blocks, process on them and then join all the blocks together again?](https://answers.opencv.org/question/173852/how-to-split-image-into-small-blocks-process-on-them-and-then-join-all-the-blocks-together-again/)
+    (4) [Efficiently splitting an image into tiles in Python using NumPy](https://towardsdatascience.com/efficiently-splitting-an-image-into-tiles-in-python-using-numpy-d1bf0dd7b6f7)
+
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+
+<br />
+
+### June 30, 2021 (Day 22)
+
+Updates:
+* Attended seminar on 'Pathway to a Science Career Panel Seminar' by Dr. Kevin Brown.
+* Decided to test out ROIs for feature extractions before diving deeper into image chunking. The dominant color from each ROI will be extracted as a feature. 
+* Looked into ways to convert RGB data to usable categorical data. Found a way to convert RGB to labels by finding the closest color using Webcolors Python package. [Source](https://predictivehacks.com/how-to-use-rgb-codes-as-features-in-a-machine-learning-algorithm/).
+* Incorporated Webcolors function into the RGB Color/Feature Extraction program. 
+
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+* Find out how to save/read multiple images from a file onto Python.
+
+### July 1, 2021 (Day 23)
+
+Updates:
+* Found a way to easily load all images from a folder into a list using Glob Package. This will make the process of extracting features from multiple images easier and faster. [Source](https://stackoverflow.com/questions/30230592/loading-all-images-using-imread-from-a-given-folder).
+* Incorporated Glob function and Pandas into the RGB Color/Feature Extraction program. 
+* Acquired data from a smaller image dataset before moving to a larger image dataset (50 photos). The JN and the CSV file containing the extracted color labels for the larger dataset can be found [here](https://drive.google.com/drive/folders/10YVwwTP2-Gk79IVNf2VXBT-IOyueCAaH?usp=sharing). 
+* From the results, we can see that images containing similar color labels (through closest distance measure) exhibit similar lighting and weather. However, in some instances, two photos can have very similar color labels but drastically different weather and lighting. For instance, NEON.D19.HEAL.DP1.00042_2017_09_30_114505.jpg contains the labels 'dimgray', 'slategray', and 'dimgray.' There is snow on the ground and partly cloudy in the image. On the otherhand, NEON.D19.HEAL.DP1.00042_2017_09_01_060006.jpg contains the labels 'dimgray', 'gray', and 'dimgray.' There is grass and no snow in the photo. 
+* Because of this result, I decided that extracting colors from the ROIs are not enough. Thus, I decided to split the images into 4x4 chunks, extracting the color from each chunk. The JN and the CSV file containing the extracted color labels can be found [here](https://drive.google.com/drive/folders/10YVwwTP2-Gk79IVNf2VXBT-IOyueCAaH?usp=sharing). 
+
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+* Analyze the larger dataset. Find out how to classify data.
+
+### July 2, 2021 (Day 24)
+
+Updates:
 
 
 To Do:
+* Continue studying and working on OpenCV tutorials and project.
+
+
+
 
 <!-- 
 https://github.com/dloperab/PyImageSearch-CV-DL-CrashCourse
