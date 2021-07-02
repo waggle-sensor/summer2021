@@ -29,3 +29,8 @@
 
 ![image](https://user-images.githubusercontent.com/56851781/124334593-8e450580-db65-11eb-96c1-655d50e1916e.png)
 
+
+### GET commands
+* kubectl get <resource>
+
+![image](https://user-images.githubusercontent.com/56851781/124336355-b7689480-db6b-11eb-9f82-f05ea8d124fe.png)
