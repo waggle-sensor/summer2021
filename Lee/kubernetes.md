@@ -31,6 +31,6 @@
 
 
 ### GET commands
-* kubectl get <resource>
+* kubectl get resource
 
 ![image](https://user-images.githubusercontent.com/56851781/124336355-b7689480-db6b-11eb-9f82-f05ea8d124fe.png)
