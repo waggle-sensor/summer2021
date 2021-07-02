@@ -167,3 +167,16 @@
 
 ### Tuesday June 29, 2021 ###
 - Attended CV intern check-in.
+- Began taking notes on online learning methods.
+- Began doing some reading on attention-based machine learning models.
+    * I found DeepMind's video lecture on [Attention and Memory in Deep Learning](https://www.youtube.com/watch?v=AIiwuClvH6k) to be very informative.
+
+### Wednesday June 30, 2021 ###
+- Began implementation of a Variational Autoencoder for anomaly detection.
+- Read papers about Convolutional Variational Autoencoders
+    * The following paper using guided attention mechanisms seems to be a promising step forward: [Attention-Guided Anomaly Localization in Images (Venkataramanan et al.)](https://arxiv.org/pdf/1911.08616.pdf).
+    * The attention mechanism in the paper above is the [Grad-CAM algorithm](https://arxiv.org/pdf/1610.02391.pdf).
+
+### Thursday July 1, 2021 ###
+- Began training a Variational Autoencoder on the NEON Dataset
+    * I plan on benchmarking this model against the non-variational autoencoder.

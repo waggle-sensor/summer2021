@@ -4,9 +4,9 @@
 
 ### Monday, 24th
 -Today's Non-Technical Tasks
-* Attended ANL Orientation at 9AM (CST)
-* Joined the Slack
-* Computer Request for CELS
+* Attended first ANL orientation
+* Joined Slack
+* Set up computer request for CELS
 * Enrolled the required course in TMS
 * Read up the guidelines and instructions on Github
 
@@ -19,28 +19,24 @@
 -Today's Non-Technical Tasks
 * Meeting with Sean (Query into SDR)
 * Followed up simple tutorials of Github
-* Sign in MIRO / JIRA
+* Sign in MIRO and JIRA
   (I guess MIRO is for planning, and JIRA is for process management. I need to read the guidelines again this week, especially calculating team capacities.)
 
 -Today's Technical Tasks
-* Watched Docker tutorial videos and build up on my RPI / Mac OS
+* Read up Docker tutorials and installed on my RPI
 * Read Scrum Reference Card. Summary:
-
-  Agile: Software Developer Methodology (less document-oriented, practical code-oriented compared to Waterfall model)
-         Unlike previous methodologies that have been led through planning, agile method constantly creates prototypes with constant cycles,
-         modifies the needs of each time and develops a single large piece of software.
-  Scrum: Implementation of Agile Methodology
-         It gives priority to the features and improvements to be included in the solution.
-         It is based on object-oriented technology.
+* Agile: Software Developer Methodology (less document-oriented, practical code-oriented compared to Waterfall model). Unlike previous methodologies that have been led through planning, agile method constantly creates prototypes with constant cycles, modifies the needs of each time and develops a single large piece of software.
+* Scrum: Implementation of Agile Methodology. It gives priority to the features and improvements to be included in the solution. It is based on object-oriented technology.
          
          
 ### Wednesday, 26th
 -Today's Non-Technical Tasks
 * Double checked to complete I-9 and FNIS including all relevant tax forms 
 * Signed in https://getsmarter.io/ for weekly meeting (need to figure out how to use it)
+* First meeting with Joe, and confirm my tasks this week
 
 -Today's Technical Tasks
-* Watched the Node-RED demo video shared by Josh/relevant videos
+* Watched the Node-RED demo video shared by Josh/relevant videos and discussed about it with Wolfgang (next week goal maybe)
 * Set up RPI and remind my previous zipper robot project with RPI.
    The goal of my research was to develop an apparel system which integrates intelligent autonomous agents, human-based sensors, wireless network protocol,
    mobile application management system and a zipper robot.
@@ -53,49 +49,56 @@
    2) Java with Agent and PAHO client
    3) MQTT Dash in Android Device
 * Checked my personal IoT project for growing plants
-   Ran on RPI, simple Node-RED design.
+   Ran on RPI, simple Node-RED design with GUI.
    Five DHT22 sensors were used and those data was sent to the HiveMQ cloud. (https://www.hivemq.com/mqtt-cloud-broker/)
 
 -Things to do
 * Set up HiveMQ cloud active states
 * Watch other Node-RED demo videos relevant SAGE project
 
+
 ### Wednesday, 27th
 -Today's Non-Technical Tasks
-* Attended first team-meeting
+* Attended first team meeting
 * Emailed to Deneen (need to check tax/paycheck process)
+* Attended ANL social meeting at lunch time (virtual)
 
 -Today's Technical Tasks
-* Read up Sage: A distributed software-defined sensor network: https://github.com/sagecontinuum/sage
+* Read up Sage project overview: A distributed software-defined sensor network: https://github.com/sagecontinuum/sage
 * https://github.com/sagecontinuum/sage/blob/master/architecture_overview.md
 
 
 ### Thursday, 28th
 -Today's Non-Technical Tasks
-* Meeting with Joe and Wolfgang about my node-red json format
+* Meeting with Joe and Wolfgang about node-red endpoint
 * Attended daily meeting
+
+-Today's Technical Tasks
+* Read up/compared MQTT & HTTP request on node-red (should ask Joe about using MQTT protocol)
 
 ### Friday, 29th
 -Today's Non-Technical Tasks
 * Attended daily meeting
+* Short meeting with Josh (asking node-red endpoint at the cloud service)
 
--Today's Non-Technical Tasks
-* Read up: Running Node-RED locally - https://nodered.org/docs/getting-started/local
-* Simple node test with json formatting
+-Today's Technical Tasks
+* Read up Running Node-RED locally - https://nodered.org/docs/getting-started/local
+* Simple node test with json format
 
 ************************************************************
 
 ## 2st Week 06/01-06/04 (Main Goal: Node-RED)
 ### Tuesday, 1th
 -Today's Non-Technical Tasks
-* Checked the schedule of TMS
-* Set up Raspberry Pi and sensors for checking (RPI)
+* Completed one required course in TMS
+* Set up personal Raspberry Pi and DTH sensors
 * Discussion with Sean, Wolfgang, and Joe about filtered data in the SDR (finally figured out!)
-   (Feedback: In the cloud case, we only have the HTTP/JSON API. Because we can filter data using the API, we can still do something similar to subscribing to only specific kind of data). So, in current progress, MQTT is not required. (might be future plan)
+  (Feedback: In the cloud case, we only have the HTTP/JSON API. Because we can filter data using the API, we can still do something similar to subscribing to only specific kind of data). So, in current progress, MQTT is not required. (might be future plan)
 
 -Today's Technical Tasks
-* Use HTTP request to get data from a REST endpoint on Node-RED (External REST API  - https://restcountries.eu) - Success!!
-* Read the doc of REST API more. (Also check other relevant video as well)
+* Use HTTP request to get data from a REST endpoint on Node-RED (External REST API example: https://restcountries.eu) - Success!!
+* Read more the doc of REST API. (Also check other relevant video as well)
+
 -Things to do
 * Test the HTTP request again with SDR.
   1) Read up example query data from SDR using HTTP / JSON request
@@ -112,6 +115,7 @@
 -Today's Technical Tasks
 * Built up Email Notification from Node-RED: https://flows.nodered.org/node/node-red-node-email
   description: It is set up on the Raspberry Pi connected temperature sensors. If temp > 30, sent the alarm via email
+
 - Things to do
 * Read Slack API: https://flows.nodered.org/node/node-red-contrib-slack and Alarm Notification on Slack...
 
@@ -257,7 +261,7 @@ ENTRYPOINT java HelloWorld
 * and scripts can be placed in the <body> or in the <head>, but placing it at the bottom of the <body> recommended due to the display speed.
 * External JS has several advantages: seperates HTML and code, easier to read and maintain, and can speed up page loads. (full URL or specific folder either is ok.)
   
-  
+
 ### Tuesday, 15th
 -Today's Technical Tasks
 * Still learning JavaScript with same tutorials as yesterday's one.
@@ -338,13 +342,14 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 -Today's Non-Technical Tasks
 * Attended presentation of goal for internship
 
-  -Today's Technical Tasks
+-Today's Technical Tasks
 * Learning docker from https://www.44bits.io/ko/post/why-should-i-use-docker-container
 * Basic concept: Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.
   Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.
 * Docker components: software, objects, and registries.
 * WHY used? Containers are technologies that run applications regardless of their environment. (do not need to go through the complex installation process that exists for each operating system.)
 * tested with simple tutorial: https://www.youtube.com/watch?v=hWPv9LMlme8&t=587s
+
 -Things to do: join to Kubernetes with Docker
 
   
@@ -371,14 +376,17 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * https://developer.ibm.com/ko/technologies/iot/
 * https://www.python2.net/questions-1144056.htm
   
+  
 ### Thursday, 24th
 -Today's Non-Technical Tasks
 * Attended 2021 CELS Student Lecture
 * Attended daily sage scrum meeting
 * Attended Sean's tutorial on writing plugins (code) for the Waggle nodes
+* short meeting with Neal (asking some questions about JavaScript)
   
 -Today's Technical Tasks
 * Tested on SAGE endpoint-nodeRED instances hookup
+  
   
 ### Friday, 25th
 -Today's Non-Technical Tasks
@@ -391,10 +399,38 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   
 ************************************************************
   
-## 6st Week 06/28-07/02 (Main Goal: Node-RED Deploy)
+## 6st Week 06/28-07/02 (Main Goal: Node-RED instance testing)
 ### Monday, 28th
 -Today's Non-Technical Tasks
-* 
+* Attended daily sage scrum meeting
+* Talked to my advisor for PhD program
   
 -Today's Technical Tasks
-* https://nodered.org/docs/api/admin/
+* testing each node-red instance in different environments (import/export with json format)
+
+-Things to do
+* Found some errors when deploying instance, server replies permission denied and files not access (debugging required tomorrow)
+  
+![image](https://user-images.githubusercontent.com/56851781/123885555-acb7c080-d91b-11eb-8ed8-51664e44e492.png)
+
+  
+### Tuesday, 29th
+-Today's Non-Technical Tasks
+* Attended daily sage scrum meeting
+
+-Today's Technical Tasks
+* Finally figured out the files not access error (each node needs to be instanced "individually")
+* Still testing each node (now currently working with only temp topic)
+
+  
+### Wednesday, 30th
+-Today's Non-Technical Tasks
+* Attended EDU Weekly Seminar Series
+* Short meeting with PhD program advisor
+
+-Today's Technical Tasks
+* compared docker node-red instances and kubernetes node-red instances (or find third solutions)
+* installed: ![image](https://user-images.githubusercontent.com/56851781/123992689-d6afc800-d999-11eb-8382-c17c2d6ba997.png)
+
+![image](https://user-images.githubusercontent.com/56851781/124016433-a6752300-d9b3-11eb-88c7-82c0e05dac41.png)
+  

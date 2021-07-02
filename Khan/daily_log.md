@@ -192,6 +192,46 @@
 * Need to work on fixing accuracy of random forest, will check what accuracy is after using my own features too.
   * Should check that training images have some from each classifications
     
+### 6/29/2021 ###
+* Attended meeting with CV team
+* created new dataframe to input features
+* Replaced classifications to 3 different groups instead of 7, so I can start off small
+* Tried to compute features of all images --> was taking a long time
+  Therefore in the meanwhile I prepared more slides for the next presentation.
+* Ran into errors when computing straight edge density for some of the training images
+  Working on debugging errors
+* Ran into errors with some files not existing as images that I can use to compute features. 
+* After computing all features plan on normalizing the data, then computing features again
+so that they are normalized.
 
+### 6/30/2021 ###
+* Attended meeting 9 - 10 am
+* Still running into bugs when creating dataframe with computed features
+    * standard deviation of hue, saturation, and value show up as 0 on saved excel file 
+      with data even though when testing and printing out the standard deviation, it prints not 0.
+      All other features are put into the dataframe correctly.
+    * After lots of debugging found out the issue was that when I call the function to compute mean hsv
+      I change the values of hsv image which is then used in function for computing standard deviation
+      of image as well
+* Debugged the issue about when I tried to save all features into excel file again ran into a permission denied issue
+* Changed the way that I saving my dataframe into excel file so that it doesnt all save at once at the very
+  end but instead saves every couple of images so that if I run into an error again I do not need to start all over
+* Mean hue is also showing up as different 
+    * debugged it by using cv2.imread instead of io.imread
+* Debugged the issue that rows with files that did not have images correlated with them were not being
+  deleted from dataframe
+* Was able to achieve a 63 percent accuracy, I am still working on getting accuracy higher
 
+### 7/1/2021 ###
+* Attended meeting with CV team
+* Attended student connect meeting
+* normalized all data, however accuracy stayed the same
+* Made sure that I have an even number of samples in each classification
+  * Was a little confused about this because when I made the number of samples more
+    even from each classification, it accuracy went down
+* Try changing straight edge density and edge density computations
+* Found out that when I delete Mean Value, standard deviation of saturation and
+  standard deviation of value features, accuracy increases. When I delete edge
+  density and entropy accuracy does not change at all... so I probably need to check
+  those calculations.
 

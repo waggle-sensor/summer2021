@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in,footskip=0.25in]{geometry}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\author{Colin Burdine}
+\title{Online Learning Notes}
+\date{}
+
+
+% math macros:
+\newcommand{\bv}[1]{\ensuremath\mathbf{#1}}
+\newcommand{\loss}{\ensuremath\text{loss}}
+
+\begin{document}
+\maketitle
+
+\section{Papers}
+
+\subsection{Feedback Control for Online Training of Neural Networks \cite{zhao_feedback}}
+
+\begin{itemize}
+\item When performing online training of neural networks, there are several criterion that need to be considered:
+
+\begin{itemize}
+\item Is online training being used to ``calibrate" or ``augment" an existing model in the field, or will the model need to adapt to changing input distributions over time?
+
+\item How does one balance a model's ``exploration" versus ``exploitation" while still giving consistent predictions?
+
+\end{itemize}
+
+\item Intuitively, the hardest parameter to control in an online setting is the \textit{learning rate}. 
+
+\begin{itemize}
+\item Traditionally, the learning rate may be fixed or may vary with the training epoch.
+
+\item Popular varying strategies include using an \textit{exponential decay} (used in Keras) or using a per-parameter, moment-based estimation method such as ADAM \cite{kingma_adam}.
+\end{itemize}
+
+\item Zhao et al. seek to take a more conservative approach, using classical control theory to model the behavior of online training. In this framework, important qualities such as the stability of these methods can be analyzed.
+
+\item Zhao et al. propose three methods for selecting the learning rate: 
+
+\begin{itemize}
+\item \textbf{P-Control}:
+
+In this method, the learning rate is \textit{proportional} to the loss value:
+
+$$\eta_t = k_P\frac{\loss(t)}{\loss(0)}.$$
+
+From their benchmark, the recommended values are: $\eta_0 = k_P = 0.01$.\\
+
+\item \textbf{PD-Control}:
+
+In this method, incorporates a ``rate acceleration" term that decreases the learning rate slightly when the loss is \textit{decreasing}. This is a second-order approximation:
+
+
+$$\eta_t = \begin{cases} 
+\tilde{\eta_t} & \tilde{\eta_t} \ge 0 \\ 
+k_P\frac{\loss(t)}{\loss(0)} & \tilde{\eta_t} < 0 \end{cases}, $$
+$$\text{where}\quad \tilde{\eta_t} = k_P\frac{\loss(t)}{\loss(0)} - k_D\frac{(\loss(t) - \loss(t-1))}{\loss(0)}.$$
+
+From their benchmark, the recommended values are: $\eta_0 = k_P = 0.01$ and $k_D = 5k_P$.\\
+
+\item \textbf{E/PD-Control}:
+
+This control attempts to accelerate PD-control by incorporating an exponentially increasing learning rate at the beginning of each weight update cycle. This increase in $\eta_t$ lasts until the loss function starts to increase:
+
+\begin{enumerate}
+\item Until $\eta_t$ increases, set $\eta_t = 2\eta_{t-1}.$
+\item Then apply PD-Control.
+\end{enumerate}
+\end{itemize}
+
+\item Of the methods analyzed in this paper, E/PD control consistently performed the best. Other methods analyzed in this paper were \textit{exponential sine-wave decay} and \textit{Keras time-based decay}. However, no comparison was given for the performance of non-global learning optimizers like ADAM.
+
+\end{itemize}
+
+\subsection{A Unified Framework of Online Learning Algorithms for Training Recurrent Neural Networks \cite{marschall_unified_online}}
+
+\begin{itemize}
+\item Here
+\end{itemize}
+
+\subsection{Online Deep Learning: Learning Deep Neural Networks on the Fly \cite{sahoo_online}}
+
+\bibliographystyle{unsrt}
+\bibliography{online_learning}
+\end{document}

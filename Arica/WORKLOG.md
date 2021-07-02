@@ -340,7 +340,7 @@ Good week. I mostly spent my time working on software issues, which was fun.
 * Worked on RPI Sanity tests for SAGE-883
 * Looked into GPG signature verification
 -------------
-## Week 6
+## Week 6, 6/21 to 6/25
 -------
 ### Monday, 6/21 (7 Hours worked)
 
@@ -410,5 +410,56 @@ I was a bit blocked today, as I was waiting for a node to be provisioned to me t
 **Today's technical work:**
 * Finished failure testing for SAGE-856, commited, and rebased code
 * Messed around with an edgeswitch. Very confusing : (
+
+https://dl.ubnt.com/guides/edgemax/EdgeSwitch_CLI_Command_Reference_UG.pdf
+
+-------------
+## Week 7: 6/28 to 7/2
+-------------
+### Monday, 6/28 (8 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum
+
+**Today's technical work:**
+* Spent the entirety of the day doing two rounds of code revisions for SAGE-856
+* very tired :( 
+
+-------------
+
+### Tuesday, 6/29 (8 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum
+* Met with Joe twice to merge SAGE-856 (LETS GO!!!!) and to discuss honeycomb design
+* Finally finished training
+
+**Today's technical work:**
+* Drew up some more designs for honeycomb after joe meeting
+
+-------------
+
+### Wednesday, 6/30 (8 Hours worked)
+**Today's non-technical work:**
+* Lead Scrum
+
+**Today's technical work:**
+* Wrote some code for the HC Client side
+* Modeled mock payload JSON
+
+
+Today was a bit of a slow day, as it was mostly in the repeating cycle of *write a little bit of code* -> *get spooked from large design choice* -> *stare at screen*. I think I can pull this project off, though.
+
+-------------
+
+### Thursday, 7/1 (8 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum
+* Met with Sean to discuss HC design choices and python specifics
+* Made my Student intro tile
+
+**Today's technical work:**
+* Wrote part of the extract_payload module for HC clientside
+* Started demo presentation for tomorrow, came up with idea for standardized HC verification / logging system. Thanks for the idea and help, Sean!
+
+Today's meeting with Sean really helped put my work into better perspective. Tomorrow, I'll meet with Yongho to discuss more of the camera updating code, and get a foothold on my first milestone. 
 
 -------------
