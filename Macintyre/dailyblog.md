@@ -78,3 +78,12 @@
 * Spent most of the day working on the node and getting it set up
 * I was able to get the node working and I also got the environment sensor working properly
 * I tried to set up the camera, but ran into a few problems so I switched to working on the microphone.
+
+
+## Week 6
+### Monday, July 5
+### Tuesday, July 6
+### Wednesday, July 7
+### Thursday, July 8
+### Friday, July 9
+
