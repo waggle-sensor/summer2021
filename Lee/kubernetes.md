@@ -17,7 +17,8 @@
 1) The kubelet on a node self-registers to the control plane
 2) You (or another human user) manually add a Node object
 
-### Download through Docker descktop
+
+### Download through Docker desktop
 ![image](https://user-images.githubusercontent.com/56851781/124333701-052ccf00-db63-11eb-93a2-7782aa19732b.png)
 
 * Install and Set up Kubectl on Windows using curl: https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/
