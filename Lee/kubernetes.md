@@ -34,3 +34,10 @@
 * kubectl get resource
 
 ![image](https://user-images.githubusercontent.com/56851781/124336355-b7689480-db6b-11eb-9f82-f05ea8d124fe.png)
+
+
+### Describe command
+* kubectl describe resource name
+
+![image](https://user-images.githubusercontent.com/56851781/124336734-1da1e700-db6d-11eb-9732-a051304881b1.png)
+
