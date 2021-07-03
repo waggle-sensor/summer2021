@@ -18,17 +18,8 @@
 1. Runing the updatde feature extraction script and train on the saved results.
 
 **July 2nd**
-1. Clean up the feature extraction code and compare the results so far.
-model, number of species for training, feature extraction tool, train accuracy, test accuracy
-NN, 3, mfcc, [0.5681346654891968, 0.7380409836769104], [0.7334377765655518, 0.6454545259475708]
-NN, 3, mel, [0.34789538383483887, 0.892938494682312], [3.0826945304870605, 0.7454545497894287]
-NN, 3, features_fourier_tempogram, [1.0494314432144165, 0.4396355450153351], [1.0843347311019897, 0.3909091055393219]
-NN, 3, features_tempogram, [1.0447949171066284, 0.3735763132572174], [1.1262439489364624, 0.3181818127632141]
-NN, 10, mfcc, [1.3553979396820068, 0.5515418648719788], [1.8280216455459595, 0.4119718372821808]
-
-nn, 3, combined, , 0.8681818246841431
-nn, 3, combined with features_tempogram, ,0.8818181753158569
-svm, 3, , , 0.682
+1. Clean up the feature extraction code and compare the results so far
+<img width="1030" alt="Screen Shot 2021-07-03 at 7 32 54 AM" src="https://user-images.githubusercontent.com/44412313/124357560-009eff80-dbd1-11eb-94f4-aace0f388ca9.png">
 
 # Week 5
 **June 21st**
