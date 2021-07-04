@@ -31,8 +31,8 @@
 -Today's Technical Tasks
 * Read up Docker tutorials and installed on my RPI
 * Read Scrum Reference Card. Summary:
-* Agile: Software Developer Methodology (less document-oriented, practical code-oriented compared to Waterfall model). Unlike previous methodologies that have been led through planning, agile method constantly creates prototypes with constant cycles, modifies the needs of each time and develops a single large piece of software.
-* Scrum: Implementation of Agile Methodology. It gives priority to the features and improvements to be included in the solution. It is based on object-oriented technology.
+  * Agile: Software Developer Methodology (less document-oriented, practical code-oriented compared to Waterfall model). Unlike previous methodologies that have been led through planning, agile method constantly creates prototypes with constant cycles, modifies the needs of each time and develops a single large piece of software.
+  * Scrum: Implementation of Agile Methodology. It gives priority to the features and improvements to be included in the solution. It is based on object-oriented technology.
          
          
 ### Wednesday, 26th
