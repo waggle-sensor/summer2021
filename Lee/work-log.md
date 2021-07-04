@@ -434,3 +434,6 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 
 ![image](https://user-images.githubusercontent.com/56851781/124016433-a6752300-d9b3-11eb-88c7-82c0e05dac41.png)
   
+  
+  
+  DATA STRUCTURE
