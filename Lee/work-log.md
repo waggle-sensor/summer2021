@@ -86,6 +86,7 @@
 -Today's Non-Technical Tasks
 * Attended daily meeting
 * Short meeting with Josh (asking node-red endpoint at the cloud service)
+* Data structure review
 
 -Today's Technical Tasks
 * Read up Running Node-RED locally - https://nodered.org/docs/getting-started/local
