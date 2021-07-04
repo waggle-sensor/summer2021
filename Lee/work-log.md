@@ -10,7 +10,7 @@
 * Enrolled the required course in TMS
 
 -Today's Technical Tasks
-* Read up the SAGE project overview on Github: https://github.com/sagecontinuum/sage
+* Read up the SAGE project overview: https://github.com/sagecontinuum/sage
 * Read Scrum Reference Card share by Joe on Google drive
 * Read SAGE Agile Scrum Software Development Process
 
@@ -20,7 +20,7 @@
 * Meeting with Sean (Query into SDR)
 * Sign in MIRO and JIRA
   (I guess MIRO is for planning, and JIRA is for process management. I need to read the guidelines again this week, especially calculating team capacities.)
-* Followed up simple tutorials of Github
+* Followed up simple tutorials of Github: https://www.youtube.com/watch?v=tC8Xj_Bf8Fw&t=618s
 
 -Today's Technical Tasks
 * Read up Docker tutorials and installed on my RPI
