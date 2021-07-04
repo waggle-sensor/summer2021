@@ -18,10 +18,9 @@
 ### Tuesday, 25th
 -Today's Non-Technical Tasks
 * Meeting with Sean (Query into SDR)
-* Followed up simple tutorials of Github
-  1. 
 * Sign in MIRO and JIRA
   (I guess MIRO is for planning, and JIRA is for process management. I need to read the guidelines again this week, especially calculating team capacities.)
+* Followed up simple tutorials of Github
 
 -Today's Technical Tasks
 * Read up Docker tutorials and installed on my RPI
