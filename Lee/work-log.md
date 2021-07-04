@@ -8,10 +8,10 @@
 * Joined Slack
 * Set up computer request for CELS
 * Enrolled the required course in TMS
-* Read up the guidelines and instructions on Github
 
 -Today's Technical Tasks
-* Read Scrum Reference Card
+* Read up the SAGE project overview on Github: https://github.com/sagecontinuum/sage
+* Read Scrum Reference Card share by Joe on Google drive
 * Read SAGE Agile Scrum Software Development Process
 
 
@@ -19,6 +19,7 @@
 -Today's Non-Technical Tasks
 * Meeting with Sean (Query into SDR)
 * Followed up simple tutorials of Github
+  1. 
 * Sign in MIRO and JIRA
   (I guess MIRO is for planning, and JIRA is for process management. I need to read the guidelines again this week, especially calculating team capacities.)
 
