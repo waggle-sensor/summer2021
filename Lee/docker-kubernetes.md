@@ -1,6 +1,7 @@
 ### Docker Overview
 
 * Platform as a service products that use OS-level virtualization to deliver software in containers.
+* To fix environment disparity
 * Relevant Youtube link: https://www.youtube.com/watch?v=chnCcGCTyBg
 
 
