@@ -8,3 +8,7 @@ Week of 6/28
 - Downloading training dataset (labels and images)
 - Leased a Chameleon cloud
 - Find a way to convert xml files to jpg
+
+Week of 7/5
+- Continue to work on bee detector training
+  - troubleshooting issues of running training model
