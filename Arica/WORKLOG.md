@@ -481,3 +481,22 @@ Today's meeting with Sean really helped put my work into better perspective. Tom
 
 
 -------------
+## Week 7: 7/6 to 7/9
+--------
+### Tuesday, 7/6 (6 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum planning meeting
+* Wrote out basic honeycomb upgrade framework
+
+**Today's technical work:**
+* Made mock upgrade package following hc standards
+
+I had a bit of a headache today, so I took an extra two hours after work to rest. 
+
+**TODO:**
+* Make Smaller Jira tickets
+* Write hc code to run, check script validity
+* Design basic retry functionality
+ --------
+
