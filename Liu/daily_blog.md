@@ -499,3 +499,15 @@ ValueError: optimizer got an empty parameter list
    - TensorRT provides both pruning and quantization for DNN models
      - Float16 for using GPU
      - Try TensorRT demos on github: https://github.com/jkjung-avt/tensorrt_demos#int8_and_dla
+
+### Thursday July 1, 2021
+#### Work Done:
+ - Deploy TensorRT demo on Jetson AGX and Jetson NX
+   - Float 16, INT8 inference
+   - Jetson AGX/NX DLA
+   - Detailed setup and tutorials for demos: [TensorRT-Demo-Jetson](TensorRT-Demo-Jetson.md)
+
+### Friday July 2, 2021
+#### Work Done:
+ - Experiments with QKeras on Chameleon Cloud instance (x86-64 based)
+ - Experimens with TensorRT on Jetson AGX/NX to compare the Float16, INT8, w/o NVIDIA DLA
