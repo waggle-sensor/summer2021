@@ -1,6 +1,29 @@
+from threading import Thread
+from queue import Queue
 import numpy as np
 import cv2 as cv
+import time 
+def create_video_capture_queue(device, queue_size=30, fps=None, quiet=False):
+    frames = Queue(queue_size)
+    
 
+    def video_capture_worker():
+        capture = cv.VideoCapture(device)
+        next_cap = time.time()
+        current_time = next_cap
+        while capture.isOpened():
+            current_time = time.time()
+            ok, frame = capture.read()
+            if not ok and not quiet:
+                raise RuntimeError("failed to capture frame")
+            elif fps is None: 
+                frames.put(frame)
+            elif current_time >= next_cap:
+                frames.put(frame)
+                next_cap = current_time + 1./fps
+
+    Thread(target=video_capture_worker, daemon=True).start()
+    return frames
 cap = cv.VideoCapture(cv.samples.findFile("movieON20191121.mpg"))
 ret, frame1 = cap.read()
 prvs = cv.cvtColor(frame1,cv.COLOR_BGR2GRAY)
