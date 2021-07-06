@@ -1,4 +1,11 @@
-### Overview
+### Docker Overview
+
+* Platform as a service products that use OS-level virtualization to deliver software in containers.
+* To fix environment disparity
+* Relevant Youtube link: https://www.youtube.com/watch?v=chnCcGCTyBg
+
+
+### Kubernetes Overview
 
 * Open source container-orchestration system for automating computer application deployment, scaling, and management. In short, it is a tool to manage coontainers.
 * Relevant Youtube link: https://www.youtube.com/watch?v=S3FVcdZcZnA
