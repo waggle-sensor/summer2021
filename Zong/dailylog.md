@@ -61,11 +61,13 @@ Hello world
    -. . . what Sage could take from it 
    
 <h3>Thursday, July 1: </h3>
+
    -Started to read this novel "Don't make me Think" to help me with how the code works for data viz 
    -Had a meeting with Neal, got redirected for my next few days at work
    -Found out I need to practice more with Unix commands and opening files with the terminal 
    
 <h3> Friday, July 2: </h3>
+
    -Watched tutorial on Unix and got familar with basic commands (ls, cd, rm, etc, etc)
    -Created my own shortcut on the terminal to Github because I have been opening my files the inefficient way
    -Also played around on Github more because I lack experience with it 
