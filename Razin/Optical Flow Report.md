@@ -53,7 +53,7 @@ I began by using the same .avi video as those I used for the dense optical flow 
 
 `p0 = cv.goodFeaturesToTrack(cv.cvtColor(old_frame[0:200], cv.COLOR_BGR2GRAY), mask = cv.cvtColor(old_frame[0:200], cv.COLOR_BGR2GRAY), **feature_params)` (Fig. 20) and finally to: 
 
-`p0 = cv.goodFeaturesToTrack(cv.cvtColor(old_frame[0:420], cv.COLOR_BGR2GRAY), mask = cv.cvtColor(old_frame[0:420], cv.COLOR_BGR2GRAY), **feature_params)` (Fig. 21, same as Fig. 18).
+`p0 = cv.goodFeaturesToTrack(cv.cvtColor(old_frame[0:420], cv.COLOR_BGR2GRAY), mask = cv.cvtColor(old_frame[0:420], cv.COLOR_BGR2GRAY), **feature_params)` (Fig. 21, seemingly the same as Fig. 18).
  
 Fig. 19 appears to have yielded the best results. 
 
