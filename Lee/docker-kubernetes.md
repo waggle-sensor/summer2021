@@ -9,7 +9,11 @@
 
 
 ### Simple tutorial
+
+![image](https://user-images.githubusercontent.com/56851781/124818095-98d21700-df38-11eb-87ff-0af2aa27bb92.png)
+
 ![image](https://user-images.githubusercontent.com/56851781/124816276-4ee83180-df36-11eb-9fb8-94ed30fae2c6.png)
+
 * docker images
 * docker ps -a
 * docker rm containerID
