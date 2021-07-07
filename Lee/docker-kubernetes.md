@@ -8,6 +8,15 @@
 * Relevant Youtube link: https://www.youtube.com/watch?v=chnCcGCTyBg, https://www.youtube.com/watch?v=i7ABlHngi1Q&t=859s
 
 
+### Simple tutorial
+![image](https://user-images.githubusercontent.com/56851781/124816276-4ee83180-df36-11eb-9fb8-94ed30fae2c6.png)
+* docker images
+* docker ps -a
+* docker rm containerID
+* docker ps -a
+* docker exec -it containerID bash  (echo)
+
+
 ### Kubernetes Overview
 
 * Open source container-orchestration system for automating computer application deployment, scaling, and management. In short, it is a tool to manage coontainers.
