@@ -45,7 +45,7 @@ I used a short clip of my pen moving across a white background to do some basic 
 
 
 ## Reflectivity Data
-I began by using the same .avi video as those I used for the dense optical flow algorithm. However, I quickly realized these plots were not well-suited to this algorithm (Fig. 14-15). In particular, all the starting point for the flow began on the plot boundaries, title, labels, or legend. This likely has to do with the `cv.goodFeaturesToTrack()` method, which decides the points to track. So, I manually cropped the five images then re-ran the algorithm (Fig. 16-17). This yielded better results, as the points that were being tracked appeared to be register movement. However, they points were not in our region of interest, about 25 meters above the radar. So, I further cropped the images of the radar data (Fig. 18), to little improvement. I started seeing substantial improvement in tracking after adding a non-null `mask` input to the aforementioned `cv.goodFeaturesToTrack()` method, changing:
+I began by using the same .avi video as those I used for the dense optical flow algorithm. However, I quickly realized these plots were not well-suited to this algorithm (Fig. 14-15). In particular, all the starting point for the flow began on the plot boundaries, title, labels, or legend. This likely has to do with the `cv.goodFeaturesToTrack()` method, which decides the points to track. So, I manually cropped the five images then re-ran the algorithm (Fig. 16-17). This yielded better results, as the points that were being tracked appeared to be register movement. However, they points were not in our region of interest, about 25 meters above the radar. So, I further cropped the images of the radar data (Fig. 18), to little improvement. I started seeing substantial improvement in tracking after adding a non-null `mask` input, which specifies an optional region of interest for corner detection, to the aforementioned `cv.goodFeaturesToTrack()` method. Specifically, I changed the default:
 
 `p0 = cv.goodFeaturesToTrack(old_gray, mask = None, **feature_params)` (Fig. 18) to:
 
@@ -54,6 +54,8 @@ I began by using the same .avi video as those I used for the dense optical flow 
 `p0 = cv.goodFeaturesToTrack(cv.cvtColor(old_frame[0:200], cv.COLOR_BGR2GRAY), mask = cv.cvtColor(old_frame[0:200], cv.COLOR_BGR2GRAY), **feature_params)` (Fig. 20) and finally to: 
 
 `p0 = cv.goodFeaturesToTrack(cv.cvtColor(old_frame[0:420], cv.COLOR_BGR2GRAY), mask = cv.cvtColor(old_frame[0:420], cv.COLOR_BGR2GRAY), **feature_params)` (Fig. 21, same as Fig. 18).
+ 
+Fig. 19 appears to have yielded the best results. 
 
 |  |  |
 |---|---|
