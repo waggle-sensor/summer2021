@@ -2,7 +2,10 @@
 
 * Platform as a service products that use OS-level virtualization to deliver software in containers.
 * To fix environment disparity
-* Relevant Youtube link: https://www.youtube.com/watch?v=chnCcGCTyBg
+* Image: a blueprint of your container. (Instructions for building your container)
+* Snapshot: Image is made up of layers. Base layer(Debian etc), another layer(software files), add another one...
+* When your blueprint(image) is run, it is a container.
+* Relevant Youtube link: https://www.youtube.com/watch?v=chnCcGCTyBg, https://www.youtube.com/watch?v=i7ABlHngi1Q&t=859s
 
 
 ### Kubernetes Overview
