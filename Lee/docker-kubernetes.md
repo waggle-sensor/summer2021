@@ -87,7 +87,14 @@ Docker Pull Command: docker pull nodered/node-red or visit: https://hub.docker.c
 ![image](https://user-images.githubusercontent.com/56851781/124831525-595ff680-df49-11eb-8bfd-8ac4adb44a30.png)
 
 * localhost:1880 or http://127.0.0.1:1880
+
 ![image](https://user-images.githubusercontent.com/56851781/124831688-975d1a80-df49-11eb-9149-edf509626d88.png)
+
+* docker (re)start nodered
+* docker exec -it mynodered /bin/bash
+
+![image](https://user-images.githubusercontent.com/56851781/124832702-0edf7980-df4b-11eb-9fa8-094c2f5f5cdd.png)
+
 
 
 
