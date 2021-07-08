@@ -53,7 +53,7 @@ to:
 
 `p0 = cv.goodFeaturesToTrack(cv.cvtColor(old_frame[start:end], cv.COLOR_BGR2GRAY), mask = cv.cvtColor(old_frame[start:end], cv.COLOR_BGR2GRAY), **feature_params)`,
 
-where `start:end` specifies the range of height pixels where tracking corners are identified. Results for several LK algorthim runs with non-null masks are shown (Fig. 19-26), as are gifs of the most promising ones (Fig. 27-29). I toggled parameters, such as `qualityLevel` (Fig. 21-22), for the ShiTomasi corner detection, as well. For
+where `start:end` specifies the range of height pixels where tracking corners are identified. Results for several LK algorthim runs with non-null masks are shown (Fig. 19-26), as are gifs of the most promising ones (Fig. 27-30). I toggled parameters, such as `qualityLevel` (Fig. 21-22), for the ShiTomasi corner detection, as well.
 
 
  
@@ -68,6 +68,7 @@ where `start:end` specifies the range of height pixels where tracking corners ar
 |![24](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_output_opticalhsv_300_400.png))***Figure 24.** Mask = 300:400*| ![25](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_output_opticalhsv_300_420.png) ***Figure 25.** Mask = 300:420.*|
 |![26](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_output_opticalhsv_0_420.png)***Figure 26.** Mask = 0:420, the entire height of the images. This mask gives the same flow as shown in Fig. 18, which doesn't have a mask.*|![27](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_100_200.gif)***Figure 27.** Mask = 100:200.*|
 |![28](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_100_300.gif) ***Figure 29.** Mask = 100:300*|![29](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_300_400.gif) ***Figure 29.** Mask = 300:400*|
+|![30](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_300_420.gif)***Figure 30.** Mask = 300:420*||
 
 
 
