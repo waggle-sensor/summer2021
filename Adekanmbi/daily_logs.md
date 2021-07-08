@@ -123,8 +123,43 @@
 - Attended Student EDU Weekly seminar series 
 - Worked on implementing multi-platform build in Jenkins
 
+#### Thursday June 24, 2021 ####
+
+- Worked on implementing multi-platform build in Jenkins
+
+#### Friday June 25, 2021 ####
+
+- Testing and debugging Jenkins Application Test feature.
 
 
+
+### Week 5 ###
+
+------------
+
+#### Monday June 28, 2021 ####
+
+- Testing and debugging Jenkins Application Test feature..
+
+#### Tuesday June 29, 2021 ####
+
+- Testing and debugging Jenkins Application Test feature.
+
+#### Wednesday June 30, 2021 ####
+
+- Testing and debugging Jenkins Application Test feature.
+- Read through [Jenkins Handbook](https://www.jenkins.io/user-handbook.pdf) on building pipelines
+
+#### Thursday July 1, 2021 ####
+
+- Testing and debugging Jenkins Application Test feature..
+
+
+#### Friday July 2, 2021 ####
+
+-  Completed Testing and debugging Jenkins Application Test feature..
+ 
+ - Started working on Profiling pipeline in jenkins 
 
 
 

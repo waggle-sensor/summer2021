@@ -463,3 +463,40 @@ Today was a bit of a slow day, as it was mostly in the repeating cycle of *write
 Today's meeting with Sean really helped put my work into better perspective. Tomorrow, I'll meet with Yongho to discuss more of the camera updating code, and get a foothold on my first milestone. 
 
 -------------
+
+### Friday, 7/2 (7 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum
+* Met with Yongho to discuss cameras specifics 
+* Finished demo presentation outline
+
+**Today's technical work:**
+* Demo'd my presentation, it went well! 
+
+**TODO For next week:**
+* Look into process for messing with switches and how it relates to honeycomb
+* Discuss switch use cases
+* Start development of honeycomb framework and what scripts/criteria need to be met for a successful install
+* Make some Jira tickets  
+
+
+-------------
+## Week 7: 7/6 to 7/9
+--------
+### Tuesday, 7/6 (6 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum planning meeting
+* Wrote out basic honeycomb upgrade framework
+
+**Today's technical work:**
+* Made mock upgrade package following hc standards
+
+I had a bit of a headache today, so I took an extra two hours after work to rest. 
+
+**TODO:**
+* Make Smaller Jira tickets
+* Write hc code to run, check script validity
+* Design basic retry functionality
+ --------
+

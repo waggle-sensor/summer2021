@@ -71,7 +71,26 @@
 * Met with my student connects group and gave a summary of my project
 * Met with Raj about using the new vinyl cutting machine
 * Tested the cutter and played around with some settings to help when I start using it
-* Continure to work on the node kit using a monitor display
+* Continued to work on the node kit using a monitor display
 
 
 ### Friday, July 2
+* Spent most of the day working on the node and getting it set up
+* I was able to get the node working and I also got the environment sensor working properly
+* I tried to set up the camera, but ran into a few problems so I switched to working on the microphone.
+
+
+## Week 6
+### Tuesday, July 6
+* I spent most of the day working on some problems with the vinyl cutter machine
+* I finally switched what laptop I was working on so that I could continue cutting out codes
+
+### Wednesday, July 7
+* I watched a seminar about the deliverables for the internship
+* I went to a lunch with the group
+* I worked on the codes in Inkscape and continued to work on cutting them out 
+
+### Thursday, July 8
+
+### Friday, July 9
+
