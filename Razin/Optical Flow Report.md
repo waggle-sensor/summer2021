@@ -39,7 +39,8 @@ Dense optical flow fields are created using the `cv.calcOpticalFlowFarneback()` 
 # Lucas-Kanade Optical Flow
 
 LK optical flow fields are created using the `cv.calcOpticalFlowPyrLK()` method. This algorithm is meant for sparser feature sets.
-I used a short clip of my pen moving across a white background to do some basic validation of my slightly modified LK algorithm.
+I used a short clip of my pen moving across a white background to do some basic validation of my slightly modified LK algorithm:
+![mov](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK%20algo%20validation%20trimmed.mov)
 
 
 
