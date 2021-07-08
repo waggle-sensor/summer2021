@@ -124,6 +124,84 @@
 - Worked on implementing multi-platform build in Jenkins
 
 #### Thursday June 24, 2021 ####
+<<<<<<< Updated upstream
+=======
+
+- Worked on implementing multi-platform build in Jenkins
+
+#### Friday June 25, 2021 ####
+
+- Testing and debugging Jenkins Application Test feature.
+
+
+### Week 5 ###
+
+------------
+
+#### Monday June 28, 2021 ####
+
+- Testing and debugging Jenkins Application Test feature..
+
+#### Tuesday June 29, 2021 ####
+
+- Testing and debugging Jenkins Application Test feature.
+
+#### Wednesday June 30, 2021 ####
+
+- Testing and debugging Jenkins Application Test feature.
+- Read through [Jenkins Handbook](https://www.jenkins.io/user-handbook.pdf) on building pipelines
+
+#### Thursday July 1, 2021 ####
+
+- Testing and debugging Jenkins Application Test feature..
+
+
+#### Friday July 2, 2021 ####
+
+- Completed Testing and debugging Jenkins Application Test feature..
+
+- Started working on Profiling pipeline in Jenkins
+
+
+### Week 6 ###
+
+------------
+
+#### Tuesday July 6, 2021 ####
+
+- Presented and Discussed my work on Testing and Profiling.
+- Created the application testing diagram
+
+
+#### Wednesday July 7, 2021 ####
+
+- Created a PR for testing on ECR
+- Received a feedback to implement test-build loop in Jenkins
+
+#### Thursday July 8, 2021 ####
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> Stashed changes
 
 - Worked on implementing multi-platform build in Jenkins
 
@@ -173,4 +251,7 @@
 1. [Understanding Jenkins Pipeline](https://www.jenkins.io/doc/book/pipeline/)
 2. [Effective testing for machine learning systems](https://www.jeremyjordan.me/testing-ml/)
 3. [Docker Documentation](https://docs.docker.com/engine/reference/builder/)
+4. [ECR Application Testing flow diagram](https://drive.google.com/file/d/1rnv8dIyr29y6SvSCzZHq5Z-5J0xo3wlz/view?usp=sharing)
+5. [ECR Discussion](https://docs.google.com/document/d/135ZKehdaxrsKMNi4CTNVXJbzZDDNMD9sIFfVVf5NzMc/edit)
+
 
