@@ -226,3 +226,13 @@ How is it week 4 already!?
       - need to find a way to access profile output using docker cp
   - This is huge we can get the pipeline working now!
 
+  ### Thursday (7/8)
+
+  - Major dockerfile modifications
+  - profiling pipelines works
+    - make the image, run the container, get output, put output in volume
+    - see readme.md in application-profiling repo
+    - not seemless to setup but it will be once its running
+    - Hooray!
+  
+
