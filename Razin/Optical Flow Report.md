@@ -53,7 +53,7 @@ to:
 
 `p0 = cv.goodFeaturesToTrack(cv.cvtColor(old_frame[start:end], cv.COLOR_BGR2GRAY), mask = cv.cvtColor(old_frame[start:end], cv.COLOR_BGR2GRAY), **feature_params)`,
 
-where `start:end` specifies the range of height pixels where tracking corners are identified. Results for several LK algorthim runs with non-null masks are shown (Fig. 19-26), as are gifs of the most promising ones (Fig. 27-30). I toggled parameters, such as `qualityLevel` (Fig. 21-22), for the ShiTomasi corner detection, as well.
+where `start:end` specifies the range of height pixels where tracking corners are identified. Results for several LK algorthim runs with non-null masks are shown (Fig. 19-26), as are gifs of the most promising ones (Fig. 27-30). I toggled parameters, such as `qualityLevel` (Fig. 21-22), for the [Shi-Tomasi corner detection](https://docs.opencv.org/3.4/d8/dd8/tutorial_good_features_to_track.html), as well.
 
 
  
