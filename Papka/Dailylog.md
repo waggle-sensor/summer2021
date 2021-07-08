@@ -12,3 +12,5 @@ Week of 6/28
 Week of 7/5
 - Continue to work on bee detector training
   - troubleshooting issues of running training model
+      -seems to be an issue with the labelled images not matching what the training code is looking for
+
