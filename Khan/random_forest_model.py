@@ -48,7 +48,7 @@ def check_num_per_classification(df, train, test):
 
     '''
     
-        [1, 3)   --> 0    (most disorderly)
+        [1, 3) --> 0    (most disorderly)
         [3, 5) --> 1
         [5, 7) --> 2      (most orderly)
         
@@ -125,6 +125,7 @@ def create_random_forest():
     # categorize ratings
     df['Order'] = df['Order'].apply(categorize_ratings)
 
+    # normalize all values
     column_names = ['SED', 'Entropy', 'sdValue', 'sdSat', 'sdHue', 'Mean Value', 'Mean Hue', 'Mean Sat', 'ED']
 
     for i in range(len(column_names)):
@@ -133,9 +134,9 @@ def create_random_forest():
     # shuffle data set so that the training and test data can have a mix of all labels
     df = shuffle(df)
 
-    # assign 90 percent of the data as training data,
-    # assign 10 percent of the data for testing later
-    df['is_train'] = np.random.uniform(0, 1, len(df)) <= 0.95
+    # assign 80 percent of the data as training data,
+    # assign 20 percent of the data for testing later
+    df['is_train'] = np.random.uniform(0, 1, len(df)) <= 0.80
 
     # creating dataframes with test rows and training rows
     train = df[df['is_train'] == True]
@@ -151,11 +152,13 @@ def create_random_forest():
     # deleting sdValue increases accuracy
     # deleting sdSat increases accuracy even more
     # deleting mean value increases accuracy
+    #
 
-    del df['Mean Value']
-    del df['sdSat']
-    del df['sdValue']
-    features = df.columns[2:8]
+    # del df['Mean Value']
+    # del df['sdSat']
+    # del df['sdValue']
+    del df['ED']
+    features = df.columns[2:10]
     print(features)
 
     features_train = train[features]
@@ -164,14 +167,15 @@ def create_random_forest():
     labels_test = test['Order']
 
     # Creating a random forest classifier
-    # look up which parameters would be the best
-    model = RandomForestClassifier(n_estimators = 1000, max_features = 5, max_depth = 6, min_samples_leaf =3)
+    # look up which parameters would be the best (1000 , 5, 6, 3) max_features = 3
+    model = RandomForestClassifier(n_estimators = 1000, max_features = "log2", criterion = "entropy", min_samples_split = 6)
+        #n_estimators = 1000, max_features = 5, max_depth = 6, min_samples_leaf = 3, min_samples_split = 8)
 
     # Training the classifier
     model.fit(features_train, labels_train)
 
     accuracy = model.score(features_test, labels_test)
-    print(accuracy) # 76 percent accuracy
+    print(accuracy) # 81.46 percent accuracy
 
 def main():
     create_random_forest()

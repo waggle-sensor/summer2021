@@ -179,5 +179,50 @@ How is it week 4 already!?
         Makefile:8: recipe for target 'image' failed
         make: *** [image] Error 1
 
+### Friday (7/2)
 
+- Working on running the wrapper on the app within the object counter container
+- Tried editing the dockerfile and running
+  - I had a good feeling this would not work but wanted to try anyway
+- Tried rebuilding the image locally
+  - for the n-th time I still can do this, above output from yesterday is still as far as I've gotten
+- Found a way to change the entrypoint from the docker run command
+  - docker run --entrypoint "python3" options and stuff wrapper.py app.py more options
+  - docker run -ti --rm  --entrypoint "python3" --name objcounter -v /home/nvidia/data-config.json:/run/waggle/data-config.json --runtime nvidia --network host waggle/plugin-objectcounter:0.0.0 wrappertest.py app.py -stream bottom_image -object person -interval 1 
+  - This actually runs! (kinda)
+  - TAU doesn't exist in the container, so import errors when wrappertest starts
+  - working on importing tau into the container through docker cp and commit
+    - docker cp file tempcontainer/path
+    - docker commit tempcontainer image
+  - can use -e to environment variables
+- here but still errors. I probably have to install TAU into the container
+  - docker run -ti --rm -e PATH="/app/tau-2.30.1/arm64_linux/bin:$PATH" -e PYTHONPATH="/app/tau-2.30.1/arm64_linux/lib/bindings-python" --entrypoint "python3" --name objcounter -v /home/nvidia/data-config.json:/run/waggle/data-config.json --runtime nvidia --network host waggle/plugin-objectcounter:0.0.0 wrappertest.py app.py -stream bottom_image -object person -interval 1 
+
+  ## Week 5 (7/6-7/9)
+
+  ### Tuesday (7/6)
+  - docker run -ti --rm  --entrypoint "python3" --name objcounter -v /home/nvidia/data-config.json:/run/waggle/data-config.json -v /home/nvidia/Documents/tau-2.30.1:/app/tau --runtime nvidia --network host waggle/plugin-objectcounter:0.0.0 wrappertest.py app.py -stream bottom_image -object person -interval 1
+    - AttributeError: module 'tau' has no attribute 'run'
+  - docker run -ti --rm  --entrypoint "python3" --name objcounter -v /home/nvidia/data-config.json:/run/waggle/data-config.json -v /home/nvidia/Documents/tau-2.30.1:/app/tau -e "PYTHONPATH=/app/tau/arm64_linux/lib/bindings-python" --runtime nvidia --network host waggle/plugin-objectcounter:0.0.0 wrappertest.py app.py -stream bottom_image -object person -interval 1
+    - closer
+    - Traceback (most recent call last):
+      File "wrappertest.py", line 1, in <module>
+          import tau
+      File "/app/tau/arm64_linux/lib/bindings-python/tau.py", line 7, in <module>
+          import ctau_impl
+      ImportError: libbfd-2.24-system.so: cannot open shared object file: No such file or directory
+  
+  ### Wednesday (7/7)
+  - GREAT NEWS!
+    - I found a way to install tau and get it working within the container itself
+      - I set the entrypoint to bin/sh and configured from there after using volumes
+      - I have to manually set path and pythonpath
+      - and find all the appropriate libraries
+    - The tool once configures works automatically like it does locally
+    - outputs a profile.0.0.0 files and pprof parses it
+  - Some problems with this approach
+    - goes away when I close the container
+      - need to find a way to make the install persistant
+      - need to find a way to access profile output using docker cp
+  - This is huge we can get the pipeline working now!
 

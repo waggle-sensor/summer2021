@@ -1,8 +1,31 @@
+### Why Container important?
+
+![image](https://user-images.githubusercontent.com/56851781/124829190-4697f280-df46-11eb-9278-2aff17243b90.png)
+
+source from https://aws.amazon.com/ko/getting-started/hands-on/break-monolith-app-microservices-ecs-docker-ec2/
+
+
 ### Docker Overview
 
 * Platform as a service products that use OS-level virtualization to deliver software in containers.
 * To fix environment disparity
-* Relevant Youtube link: https://www.youtube.com/watch?v=chnCcGCTyBg
+* Image: a blueprint of your container. (Instructions for building your container)
+* Snapshot: Image is made up of layers. Base layer(Debian etc), another layer(software files), add another one...
+* When your blueprint(image) is run, it is a container.
+* Relevant Youtube link: https://www.youtube.com/watch?v=chnCcGCTyBg, https://www.youtube.com/watch?v=i7ABlHngi1Q&t=859s
+
+
+### Simple tutorial
+
+![image](https://user-images.githubusercontent.com/56851781/124818095-98d21700-df38-11eb-87ff-0af2aa27bb92.png)
+
+![image](https://user-images.githubusercontent.com/56851781/124816276-4ee83180-df36-11eb-9fb8-94ed30fae2c6.png)
+
+* docker images
+* docker ps -a
+* docker rm containerID
+* docker ps -a
+* docker exec -it containerID bash  (echo)
 
 
 ### Kubernetes Overview
@@ -54,5 +77,27 @@
 * In Kubernetes, json used to send API things, but Yaml recommended
 
 <img width="690" alt="Screen Shot 2021-07-06 at 11 27 51 AM" src="https://user-images.githubusercontent.com/56851781/124627135-4bc54680-de4d-11eb-9889-f4045b26c786.png">
+
+
+
+### Node-RED on Docker
+
+Docker Pull Command: docker pull nodered/node-red or visit: https://hub.docker.com/r/nodered/node-red
+
+![image](https://user-images.githubusercontent.com/56851781/124831525-595ff680-df49-11eb-8bfd-8ac4adb44a30.png)
+
+* localhost:1880 or http://127.0.0.1:1880
+
+![image](https://user-images.githubusercontent.com/56851781/124831688-975d1a80-df49-11eb-9149-edf509626d88.png)
+
+* docker (re)start nodered
+* docker exec -it mynodered /bin/bash
+
+![image](https://user-images.githubusercontent.com/56851781/124832702-0edf7980-df4b-11eb-9fa8-094c2f5f5cdd.png)
+
+![image](https://user-images.githubusercontent.com/56851781/124833540-561a3a00-df4c-11eb-8b98-4c79d3ae0645.png)
+
+* nodejs server deploy on Docker: https://ho1234c.github.io/2017/01/31/2017-01-31-docker-nodejs/index.html
+
 
 

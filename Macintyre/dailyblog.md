@@ -81,9 +81,16 @@
 
 
 ## Week 6
-### Monday, July 5
 ### Tuesday, July 6
+* I spent most of the day working on some problems with the vinyl cutter machine
+* I finally switched what laptop I was working on so that I could continue cutting out codes
+
 ### Wednesday, July 7
+* I watched a seminar about the deliverables for the internship
+* I went to a lunch with the group
+* I worked on the codes in Inkscape and continued to work on cutting them out 
+
 ### Thursday, July 8
+
 ### Friday, July 9
 
