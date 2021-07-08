@@ -511,3 +511,19 @@ ValueError: optimizer got an empty parameter list
 #### Work Done:
  - Experiments with QKeras on Chameleon Cloud instance (x86-64 based)
  - Experimens with TensorRT on Jetson AGX/NX to compare the Float16, INT8, w/o NVIDIA DLA
+
+## Week 9 (July 6 to July 9)
+
+### Tuesday July 6, 2021
+#### Work Done:
+ - Look into the tutorial about 8-bit DNN inference with TensorRT
+   - https://on-demand.gputechconf.com/gtc/2017/presentation/s7310-8-bit-inference-with-tensorrt.pdf
+   - Look the documents about NVIDIA DLA: http://nvdla.org/primer.html
+ - Set up environment on Chameleon Cloud
+   - the former instance is terminated so we need to set up environment from stratch
+
+### Wednesday July 7, 2021
+#### Work Done:
+ - Deploy and test [Jetson Inference](https://github.com/dusty-nv/jetson-inference) and [Jetson Benchmark](https://github.com/NVIDIA-AI-IOT/jetson_benchmarks) on Jetson AGX/NX
+   - support image classification, object detection, and semantic segmentation
+   - benchmark results: https://developer.nvidia.com/embedded/jetson-benchmarks
