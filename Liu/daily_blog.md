@@ -568,3 +568,27 @@ ValueError: optimizer got an empty parameter list
 | torch2trt.tests.torchvision.classification.mobilenet_v2 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 0.00E+00 | 128 | 2.66e+03 | 7.7 | 0.453 |
  - Results from [torchtrt](https://github.com/NVIDIA-AI-IOT/torch2trt) on Jetson AGX:
 
+| Name | Data Type | Input Shapes | torch2trt kwargs | Max Error | Throughput (PyTorch) | Throughput (TensorRT) | Latency (PyTorch) | Latency (TensorRT) |
+|------|-----------|--------------|------------------|-----------|----------------------|-----------------------|-------------------|--------------------|
+| torch2trt.tests.torchvision.classification.alexnet | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 1.14E-04 | 272 | 619 | 3.83 | 1.91 |
+| torch2trt.tests.torchvision.classification.squeezenet1_0 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 9.77E-04 | 98.7 | 812 | 9.72 | 1.54 |
+| torch2trt.tests.torchvision.classification.squeezenet1_1 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 4.88E-04 | 107 | 886 | 9.23 | 1.26 |
+| torch2trt.tests.torchvision.classification.resnet18 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 1.95E-02 | 105 | 527 | 9.7 | 2.22 |
+| torch2trt.tests.torchvision.classification.resnet34 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 1.25E-01 | 61.5 | 376 | 16.1 | 3 |
+| torch2trt.tests.torchvision.classification.resnet50 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 1.25E-01 | 44.2 | 328 | 22.7 | 3.56 |
+| torch2trt.tests.torchvision.classification.resnet101 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 0.00E+00 | 23.3 | 168 | 41.8 | 6.01 |
+| torch2trt.tests.torchvision.classification.resnet152 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 0.00E+00 | 17.4 | 81.7 | 56 | 9.41 |
+| torch2trt.tests.torchvision.classification.densenet121 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 9.77E-03 | 21.7 | 104 | 45.9 | 8 |
+| torch2trt.tests.torchvision.classification.densenet169 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 4.88E-03 | 15.9 | 58.2 | 59.3 | 15.7 |
+| torch2trt.tests.torchvision.classification.densenet201 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 1.27E-02 | 14 | 42.7 | 70 | 22.9 |
+| torch2trt.tests.torchvision.classification.densenet161 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 9.77E-03 | 18 | 58.1 | 54.9 | 14.9 |
+| torch2trt.tests.torchvision.classification.vgg11 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 2.62E-03 | 91.1 | 185 | 9.1 | 5.7 |
+| torch2trt.tests.torchvision.classification.vgg13 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 2.38E-03 | 91.3 | 155 | 11.1 | 6.8 |
+| torch2trt.tests.torchvision.classification.vgg16 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 2.96E-03 | 61.7 | 131 | 13.3 | 8.16 |
+| torch2trt.tests.torchvision.classification.vgg19 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 2.87E-03 | 39.9 | 115 | 15.7 | 9.18 |
+| torch2trt.tests.torchvision.classification.vgg11_bn | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 2.99E-03 | 87.1 | 187 | 9.45 | 5.6 |
+| torch2trt.tests.torchvision.classification.vgg13_bn | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 3.20E-03 | 77.3 | 140 | 13.6 | 8.54 |
+| torch2trt.tests.torchvision.classification.vgg16_bn | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 2.72E-03 | 62.2 | 113 | 18.4 | 8.25 |
+| torch2trt.tests.torchvision.classification.vgg19_bn | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 2.93E-03 | 54.5 | 104 | 17.1 | 9.56 |
+| torch2trt.tests.torchvision.classification.mobilenet_v2 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 0.00E+00 | 69.2 | 830 | 14.4 | 1.53 |
+
