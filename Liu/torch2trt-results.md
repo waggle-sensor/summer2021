@@ -58,3 +58,28 @@
 | mobilenet_v2 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 0.00E+00 | 69.2 | 830 | 14.4 | 1.53 |
 
 ### Precision with INT8:
+
+| Name | Data Type | Input Shapes | torch2trt kwargs | Max Error | Throughput (PyTorch) | Throughput (TensorRT) | Latency (PyTorch) | Latency (TensorRT) |
+|------|-----------|--------------|------------------|-----------|----------------------|-----------------------|-------------------|--------------------|
+| torch2trt.tests.torchvision.classification-int8.alexnet | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 1.50E-02 | 263 | 382 | 3.23 | 3.14 |
+| torch2trt.tests.torchvision.classification-int8.squeezenet1_0 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 3.69E+00 | 135 | 905 | 7.68 | 1.41 |
+| torch2trt.tests.torchvision.classification-int8.squeezenet1_1 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 2.60E+00 | 147 | 1.02e+03 | 6.67 | 1.25 |
+| torch2trt.tests.torchvision.classification-int8.resnet18 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 5.35E+00 | 145 | 869 | 7.2 | 1.36 |
+| torch2trt.tests.torchvision.classification-int8.resnet34 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 1.21E+02 | 83.9 | 591 | 12.3 | 2.23 |
+| torch2trt.tests.torchvision.classification-int8.resnet50 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 1.04E+02 | 60 | 371 | 16.6 | 2.76 |
+| torch2trt.tests.torchvision.classification-int8.resnet101 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 0.00E+00 | 30.2 | 260 | 31.9 | 4.01 |
+| torch2trt.tests.torchvision.classification-int8.resnet152 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 0.00E+00 | 21.5 | 169 | 46.6 | 6.07 |
+| torch2trt.tests.torchvision.classification-int8.densenet121 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 3.64E+00 | 25.5 | 133 | 38.7 | 6.48 |
+| torch2trt.tests.torchvision.classification-int8.densenet169 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 3.02E+00 | 16 | 72.1 | 61.4 | 13.7 |
+| torch2trt.tests.torchvision.classification-int8.densenet201 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 2.57E+00 | 14.7 | 44.3 | 66.1 | 18.8 |
+| torch2trt.tests.torchvision.classification-int8.densenet161 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 2.87E+00 | 18.6 | 58.1 | 53.2 | 14.8 |
+| torch2trt.tests.torchvision.classification-int8.vgg11 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 3.02E-01 | 112 | 163 | 9.28 | 6.47 |
+| torch2trt.tests.torchvision.classification-int8.vgg13 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 3.23E-01 | 89.6 | 151 | 11.2 | 6.95 |
+| torch2trt.tests.torchvision.classification-int8.vgg16 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 2.26E-01 | 71.5 | 132 | 13.5 | 7.76 |
+| torch2trt.tests.torchvision.classification-int8.vgg19 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 2.87E-01 | 59.6 | 129 | 18.8 | 10.1 |
+| torch2trt.tests.torchvision.classification-int8.vgg11_bn | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 3.11E-01 | 110 | 162 | 9.52 | 6.46 |
+| torch2trt.tests.torchvision.classification-int8.vgg13_bn | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 2.62E-01 | 77.5 | 150 | 11.8 | 7.15 |
+| torch2trt.tests.torchvision.classification-int8.vgg16_bn | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 1.98E-01 | 69.6 | 139 | 14.4 | 7.55 |
+| torch2trt.tests.torchvision.classification-int8.vgg19_bn | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 3.09E-01 | 60.7 | 128 | 16.9 | 8.16 |
+| torch2trt.tests.torchvision.classification-int8.mobilenet_v2 | float16 | [(1, 3, 224, 224)] | {'int8_mode': True} | 0.00E+00 | 70 | 1.01e+03 | 14 | 1.3 |
+
