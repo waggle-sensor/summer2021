@@ -527,3 +527,14 @@ ValueError: optimizer got an empty parameter list
  - Deploy and test [Jetson Inference](https://github.com/dusty-nv/jetson-inference) and [Jetson Benchmark](https://github.com/NVIDIA-AI-IOT/jetson_benchmarks) on Jetson AGX/NX
    - support image classification, object detection, and semantic segmentation
    - benchmark results: https://developer.nvidia.com/embedded/jetson-benchmarks
+
+### Thursday July 8, 2021
+#### Work Done:
+ - Install TensorRT on Chameleon instance based on the [TensorRT documentation](https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html#downloading)
+ - Study the design and usage of TensorRT based on offical tutorial
+   - slides: https://nvidia.github.io/TRTorch/
+   - key optimizations:
+     - Kernel fusion: combine kernels calls to imporve GPU utilization (vertically and horizontally)
+     - Precision calibration: full precision (FP32), half precision (FP16), INT8
+     - Kernel auto-tuning: select the optimal kernels based on parameter like batch size, filter-size, and input data size; based on target paltform
+   - In practice: trainied model -> converter -> optimized model
