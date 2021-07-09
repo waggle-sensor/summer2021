@@ -73,10 +73,11 @@
      - [simple flow algorithm](https://docs.opencv.org/4.4.0/d2/d84/group__optflow.html#gaf23c367519903ed2384e9532e43c7032)
      - [sparse robust local optical flow (RLOF) algorithm](https://docs.opencv.org/4.4.0/d2/d84/group__optflow.html#ga32ba4b0f6a21684d99d45f6bc470f480) 
 - Thursday
-  - lab meeting: shared work, discussed directions:
+  - lab meeting: shared work, discussed potential directions:
      - generate synthetic data from Gaussian function
      - test optical flow code for aperature problem reliability
-     - reach out to Jeremy
+     - reach out to Jeremy Cormer re reducing noise in data images for optimizing OF
+     - (plug-in/ECR contributions?)
   - worked on [filtering](https://arm-doe.github.io/pyart/notebooks/dealiasing_velocity.html) noise from data, re-running algorithms
   - attended Laboratory Director Panel Discussion 
   - attended Sean's plug-in office hour, reviewed plug-in set up
