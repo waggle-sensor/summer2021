@@ -69,6 +69,7 @@
   - worked with masking on plots some more
   - updated documentation of plots, coding process
 - Wednesday
+  - attended EDU Weekly Seminar on Creating Effective Oral and Poster Presentations by Dr. Bob Boomsma
   - learned about + began exploring [other optical flow algorithms offered by OpenCV](https://learnopencv.com/optical-flow-in-opencv/) for both sparse and dense flow, including:
      - [simple flow algorithm](https://docs.opencv.org/4.4.0/d2/d84/group__optflow.html#gaf23c367519903ed2384e9532e43c7032)
      - [sparse robust local optical flow (RLOF) algorithm](https://docs.opencv.org/4.4.0/d2/d84/group__optflow.html#ga32ba4b0f6a21684d99d45f6bc470f480) 
