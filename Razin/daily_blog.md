@@ -69,7 +69,9 @@
   - worked with masking on plots some more
   - updated documentation of plots, coding process
 - Wednesday
-  - learned about [other optical flow algorithms offered by OpenCV](https://learnopencv.com/optical-flow-in-opencv/) for both sparse and dense flow; began testing these out 
+  - learned about + began exploring [other optical flow algorithms offered by OpenCV](https://learnopencv.com/optical-flow-in-opencv/) for both sparse and dense flow, including:
+     - [simple flow algorithm](https://docs.opencv.org/4.4.0/d2/d84/group__optflow.html#gaf23c367519903ed2384e9532e43c7032)
+     - [sparse robust local optical flow (RLOF) algorithm](https://docs.opencv.org/4.4.0/d2/d84/group__optflow.html#ga32ba4b0f6a21684d99d45f6bc470f480) 
 - Thursday
   - lab meeting: shared work, discussed directions:
      - generate synthetic data from Gaussian function
@@ -81,8 +83,9 @@
 - Friday
   - (sharing progress, plots, code with team)
   - updated documentation of plots, coding process
-  - updated blog
   - begin synthesizing information for midpoint presentation (Monday, July 19) using Dr. Dunn's presentation template
+  - explored sample scanning data from [mini MPL system](https://www.dropletmeasurement.com/product/mini-mpl/) from Scott/Adam Slagel
+  - (updated blog)
 
 
 
