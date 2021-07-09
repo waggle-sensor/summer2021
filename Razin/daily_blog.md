@@ -46,7 +46,7 @@
      - began working with code for method of [Lucas-Kanade Optical Flow in OpenCV](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html), OpenCV's first optical flow example 
    - looked into [difference between LiDAR and RADAR data](https://www.yellowscan-lidar.com/knowledge/lidar-vs-radar/)
 - Tuesday
-  - 
+  - watched missed
 - Wednesday
   - worked on optimizing Lucas-Kanade optical flow models
   - got more direction from Dr. Collis on work-arounds for Lucas-Kanade code
@@ -82,6 +82,7 @@
   - (sharing progress, plots, code with team)
   - updated documentation of plots, coding process
   - updated blog
+  - begin synthesizing information for midpoint presentation (Monday, July 19) using Dr. Dunn's presentation template
 
 
 
