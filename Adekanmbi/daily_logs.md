@@ -2,8 +2,8 @@
 
 ### Project Goals ###
 
-- [ ] Create how to test app after docker build
-- [ ] Trigger app profiling per app/input
+- [X] Create how to test app after docker build
+- [X] Trigger app profiling per app/input
 - [ ] Send defined profile metric to scheduler
 - [ ] Integrate app profiler into ECR
 - [ ] Send App profile to scheduler
@@ -124,8 +124,7 @@
 - Worked on implementing multi-platform build in Jenkins
 
 #### Thursday June 24, 2021 ####
-<<<<<<< Updated upstream
-=======
+
 
 - Worked on implementing multi-platform build in Jenkins
 
@@ -180,67 +179,11 @@
 
 #### Thursday July 8, 2021 ####
 
+- Working on implementing a profiling endpoint
 
+#### Friday July 9, 2021 ####
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> Stashed changes
-
-- Worked on implementing multi-platform build in Jenkins
-
-#### Friday June 25, 2021 ####
-
-- Testing and debugging Jenkins Application Test feature.
-
-
-
-### Week 5 ###
-
-------------
-
-#### Monday June 28, 2021 ####
-
-- Testing and debugging Jenkins Application Test feature..
-
-#### Tuesday June 29, 2021 ####
-
-- Testing and debugging Jenkins Application Test feature.
-
-#### Wednesday June 30, 2021 ####
-
-- Testing and debugging Jenkins Application Test feature.
-- Read through [Jenkins Handbook](https://www.jenkins.io/user-handbook.pdf) on building pipelines
-
-#### Thursday July 1, 2021 ####
-
-- Testing and debugging Jenkins Application Test feature..
-
-
-#### Friday July 2, 2021 ####
-
--  Completed Testing and debugging Jenkins Application Test feature..
- 
- - Started working on Profiling pipeline in jenkins 
-
-
-
+- Completed test-build loop in Jenkins
 
 
 
