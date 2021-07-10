@@ -2,8 +2,8 @@
 
 ### Project Goals ###
 
-- [ ] Create how to test app after docker build
-- [ ] Trigger app profiling per app/input
+- [X] Create how to test app after docker build
+- [X] Trigger app profiling per app/input
 - [ ] Send defined profile metric to scheduler
 - [ ] Integrate app profiler into ECR
 - [ ] Send App profile to scheduler
@@ -124,8 +124,7 @@
 - Worked on implementing multi-platform build in Jenkins
 
 #### Thursday June 24, 2021 ####
-<<<<<<< Updated upstream
-=======
+
 
 - Worked on implementing multi-platform build in Jenkins
 
@@ -180,6 +179,11 @@
 
 #### Thursday July 8, 2021 ####
 
+- Working on implementing a profiling endpoint
+
+#### Friday July 9, 2021 ####
+
+- Completed test-build loop in Jenkins
 
 
 
@@ -200,8 +204,6 @@
 
 
 
-
->>>>>>> Stashed changes
 
 - Worked on implementing multi-platform build in Jenkins
 
