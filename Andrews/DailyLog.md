@@ -135,5 +135,36 @@
 ### June 25
 - Fixed code for the time-height arrays with Bobby's help
     * Finally able to get a usable xarray dataset for the reflectivity, lat, lon, and height of the gates closest to a select site for x number of volume scans
-- Next week: make/clean up a few plots (xarray vs. pyart?), probably switch axis from sweeps to gate height, remove double sweeps at low levels due to SAILS
+- Next week: make/clean up a few plots, probably switch axis from sweeps to gate height, remove double sweeps at low levels due to SAILS
+
+## Week 5 
+### June 28
+- Writing Coach Meeting: Writing a Scientific Research Paper
+- Changed nexrad code to allow for easier selection of times
+- Got my code to work for some groups of volume scans but not most of them
+    * Looked into dealing with different VCPs
+    * Any “nan” values in my Xarray dataset are causing most of the issues
+        Matplotlib won’t plot pcolormesh type plots if there are any nans
+        Almost all the groups of volume scans I’ve tested are producing at least a handful with my current code
+        Experimented with workarounds
+
+### June 29
+- Tested out a different way of grabbing radar data from AWS
+    * Thought it would fix an issue with certain radar scans and missing days but it turns out it had the same issues
+    * Sticking with the nexradaws library because it’s easy to use
+    * Note: the day we wanted to work with 11/21/19 doesn’t exist in the AWS nexrad bucket - looks like KVNX was down through 11/25/19
+- Rewrote the code to deal with the scans at the top of the hour ending in MDM as PyART cannot read them in
+
+### June 30
+- EDU Weekly Seminar: Pathways to Science Career Panel
+- Made the required mini-presentation for the Student Connects meeting tomorrow
+- Asked Bobby for help dealing with the “nans” in xarray dataset creating the plotting issue with matplotlib
+    * One solution: create x amount of evenly spaced height bins for an array of size time by number of height bins. Will hold scan times and average reflectivity between 2 height bins
+    * Code works for all the days and sets of scans I’ve tested thus far
+- Cleaned up the plots
+
+### July 1 
+- Weekly Clouds/CV group meeting
+- Student Connects presentations 
+- 
 

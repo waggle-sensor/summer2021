@@ -54,6 +54,24 @@
 * Next trip to the arb I will need to deploy the last BAR-LT and the 3 Solar BAR devices
 
 ### Tuesday, June 29
+* Found the posts that the solar recorders will be mounted on
+* Communicated with Samantha about returning to Morton for deploying the rest of the devices
+* Worked on the node after the meeting with Michael and Valerie yesterday
+* The node is up and running, so now I can run some test code for the mic
+* Downloaded Inkscape and started playing around with it
+
 ### Wednesday, June 30
+* Watched the seminar about career paths in STEM
+* Went to lunch with people from the group and learned how to use the new vinyl cutting device
+* Set up the vinyl cutter at home to make sure it is running properly
+* Continued working with the node kit and got it running
+
+
 ### Thursday, July 1
+* Met with my student connects group and gave a summary of my project
+* Met with Raj about using the new vinyl cutting machine
+* Tested the cutter and played around with some settings to help when I start using it
+* Continure to work on the node kit using a monitor display
+
+
 ### Friday, July 2
