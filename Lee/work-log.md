@@ -8,25 +8,31 @@
 * Joined Slack
 * Set up computer request for CELS
 * Enrolled the required course in TMS
-* Read up the guidelines and instructions on Github
 
 -Today's Technical Tasks
-* Read Scrum Reference Card
+* Read up the SAGE project overview: https://github.com/sagecontinuum/sage
+* Read Scrum Reference Card share by Joe on Google drive
 * Read SAGE Agile Scrum Software Development Process
 
 
 ### Tuesday, 25th
 -Today's Non-Technical Tasks
 * Meeting with Sean (Query into SDR)
-* Followed up simple tutorials of Github
 * Sign in MIRO and JIRA
   (I guess MIRO is for planning, and JIRA is for process management. I need to read the guidelines again this week, especially calculating team capacities.)
+* Followed up simple tutorials of Github: https://www.youtube.com/watch?v=tC8Xj_Bf8Fw&t=618s
+* Pull first before Push
+     * git pull origin master
+     * git status
+     * git add . (tracking)
+     * git commit -m "message" (commit)
+     * git push origin +master
 
 -Today's Technical Tasks
 * Read up Docker tutorials and installed on my RPI
 * Read Scrum Reference Card. Summary:
-* Agile: Software Developer Methodology (less document-oriented, practical code-oriented compared to Waterfall model). Unlike previous methodologies that have been led through planning, agile method constantly creates prototypes with constant cycles, modifies the needs of each time and develops a single large piece of software.
-* Scrum: Implementation of Agile Methodology. It gives priority to the features and improvements to be included in the solution. It is based on object-oriented technology.
+  * Agile: Software Developer Methodology (less document-oriented, practical code-oriented compared to Waterfall model). Unlike previous methodologies that have been led through planning, agile method constantly creates prototypes with constant cycles, modifies the needs of each time and develops a single large piece of software.
+  * Scrum: Implementation of Agile Methodology. It gives priority to the features and improvements to be included in the solution. It is based on object-oriented technology.
          
          
 ### Wednesday, 26th
@@ -80,6 +86,7 @@
 -Today's Non-Technical Tasks
 * Attended daily meeting
 * Short meeting with Josh (asking node-red endpoint at the cloud service)
+* Data structure review
 
 -Today's Technical Tasks
 * Read up Running Node-RED locally - https://nodered.org/docs/getting-started/local
@@ -434,3 +441,6 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 
 ![image](https://user-images.githubusercontent.com/56851781/124016433-a6752300-d9b3-11eb-88c7-82c0e05dac41.png)
   
+  
+  
+  DATA STRUCTURE

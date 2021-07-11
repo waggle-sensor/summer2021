@@ -46,22 +46,48 @@
      - began working with code for method of [Lucas-Kanade Optical Flow in OpenCV](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html), OpenCV's first optical flow example 
    - looked into [difference between LiDAR and RADAR data](https://www.yellowscan-lidar.com/knowledge/lidar-vs-radar/)
 - Tuesday
-  - f
+  - watched missed
 - Wednesday
-  - worked on optimizing Lucas-Kanade optical flow models; roadblocks/issues include:
-    - f
+  - worked on optimizing Lucas-Kanade optical flow models
   - got more direction from Dr. Collis on work-arounds for Lucas-Kanade code
      - zoom into plot more
   - attended Outloud Public Lecture with presentations from Dr. Collis, Dr. Rotsch, Dr. Heitmann, and Dr. Kasthuri
 - Thursday
   - lab meeting
   - weekly lecture with Aleksandr Obabko
-  - (sharing progress, plots, code with team)
-  - updating documentation of process
   - looking into [MatLab's optical flow algorithms](https://www.mathworks.com/discovery/optical-flow.html) and [Computer Vision Toolkit](https://www.mathworks.com/products/computer-vision.html)
+- Friday 
+  - toggled with plotting settings: masks (`goodFeaturesToTrack()`) and parameters for Shi-Tomasi Corner Detector (i.e., `qualityLevel`, `maxCorners`, `minDistance`, `blockSize`)
+     - figuring out mask data type, parameters; still confused about how the parameters exactly map to the masking effect
+     - still confused about `minDistance` and `blockSize` paramenters for Shi-Tomasi Corner Detector
+     - invesitgting [Shi-Tomasi Corner Detector & Good Features to Track](https://docs.opencv.org/master/d4/d8c/tutorial_py_shi_tomasi.html)
+
+
+### Week 4: 7/6–7/9
+- Tuesday
+  - watched [ISC2021 2nd International Machine-Learning Hardware Workshop](https://www.youtube.com/playlist?list=PLuCCH1wFmgiYtv43dBUDX5KpcxHKtDJew) lectures
+  - worked with masking on plots some more
+  - updated documentation of plots, coding process
+- Wednesday
+  - attended EDU Weekly Seminar on Creating Effective Oral and Poster Presentations by Dr. Bob Boomsma
+  - learned about + began exploring [other optical flow algorithms offered by OpenCV](https://learnopencv.com/optical-flow-in-opencv/) for both sparse and dense flow, including:
+     - [simple flow algorithm](https://docs.opencv.org/4.4.0/d2/d84/group__optflow.html#gaf23c367519903ed2384e9532e43c7032)
+     - [sparse robust local optical flow (RLOF) algorithm](https://docs.opencv.org/4.4.0/d2/d84/group__optflow.html#ga32ba4b0f6a21684d99d45f6bc470f480) 
+- Thursday
+  - lab meeting: shared work, discussed potential directions:
+     - generate synthetic data from Gaussian function
+     - test optical flow code for aperature problem reliability
+     - reach out to Jeremy Cormer re reducing noise in data images for optimizing OF
+     - (plug-in/ECR contributions?)
+  - worked on [filtering](https://arm-doe.github.io/pyart/notebooks/dealiasing_velocity.html) noise from data, re-running algorithms
+  - attended Laboratory Director Panel Discussion 
+  - attended Sean's plug-in office hour, reviewed plug-in set up
 - Friday
-
-
+  - (sharing progress, plots, code with team)
+  - updated documentation of plots, coding process
+  - begin synthesizing information for midpoint presentation (Monday, July 19) using Dr. Dunn's presentation template
+  - explored sample scanning data from [mini MPL system](https://www.dropletmeasurement.com/product/mini-mpl/) from Scott/Adam Slagel
+  - (updated blog)
 
 
 

@@ -463,3 +463,85 @@ Today was a bit of a slow day, as it was mostly in the repeating cycle of *write
 Today's meeting with Sean really helped put my work into better perspective. Tomorrow, I'll meet with Yongho to discuss more of the camera updating code, and get a foothold on my first milestone. 
 
 -------------
+
+### Friday, 7/2 (7 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum
+* Met with Yongho to discuss cameras specifics 
+* Finished demo presentation outline
+
+**Today's technical work:**
+* Demo'd my presentation, it went well! 
+
+**TODO For next week:**
+* Look into process for messing with switches and how it relates to honeycomb
+* Discuss switch use cases
+* Start development of honeycomb framework and what scripts/criteria need to be met for a successful install
+* Make some Jira tickets  
+
+
+-------------
+## Week 7: 7/6 to 7/9
+--------
+### Tuesday, 7/6 (6 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum planning meeting
+* Wrote out basic honeycomb upgrade framework
+
+**Today's technical work:**
+* Made mock upgrade package following hc standards
+
+I had a bit of a headache today, so I took an extra two hours after work to rest. 
+
+**TODO:**
+* Make Smaller Jira tickets
+* Write hc code to run, check script validity
+* Design basic retry functionality
+ --------
+
+### Wednesday, 7/7 (8 Hours worked)
+
+
+**Today's non-technical work:**
+* Attended SAGE lunch outing
+
+**Today's technical work:**
+* Learned how to integrate python with `journalctl`
+
+My productivity got thrown off by the lunch, and the hour+ of traveling that came with it. I didn't get as much done as I would have liked, but I still learned something.
+
+**TODO:**
+* Meet with Joe for switch use cases
+* Write out the most basic sequential upgrade script execution
+----------
+
+### Thursday, 7/8 (8 Hours worked)
+
+
+**Today's non-technical work:**
+* Sent email to HR about Uber reimbursement
+* Met with Joe to discuss basic switch use cases
+
+**Today's technical work:**
+* Had to reinstall ubuntu on my ANL computer to be safe 
+
+I had to reinstall ubuntu because I found some wacky activity in `journalctl`.
+
+----------
+### Friday, 7/9 (8 Hours worked)
+
+
+**Today's non-technical work:**
+* Attended Scrum
+* Researched how to get config off of a switch
+* Researched how to get config onto a switch
+
+**Today's technical work:**
+* I couldn't do any operations on the switch and node besides RO, so I tried to connect to the switch via scp, and tftp. I had no luck, though.
+* Wrote state_check for switch upgrade
+
+I had a good week. Didn't get a ton of work done, but a lot of important information was obtained, and I can probably get some efficient work done next week. 
+
+-------
+

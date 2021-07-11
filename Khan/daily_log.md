@@ -229,9 +229,37 @@ so that they are normalized.
 * Made sure that I have an even number of samples in each classification
   * Was a little confused about this because when I made the number of samples more
     even from each classification, it accuracy went down
-* Try changing straight edge density and edge density computations
+* TODO: Try changing straight edge density and edge density computations
 * Found out that when I delete Mean Value, standard deviation of saturation and
   standard deviation of value features, accuracy increases. When I delete edge
   density and entropy accuracy does not change at all... so I probably need to check
   those calculations.
 
+### 7/2/2021 ###
+* Experimented with adding, deleting, and changing different parameters 
+  in the random forest classifier such as criterion, max_depth, 
+  min_samples_split, min_samples_leaf, min_weight_fraction_leaf
+  max_features, max_leaf_nodes, min_impurity_decrease, min_impurity_split,
+  boostrap, oob_score, n_jobs, random_state, warm_start class_weight, ccp_alpha,
+  max_samples
+* created a random forest model that tests splitting orderly ratings into 5 differen
+  classifications
+  
+### 7/6/2021 ###
+* Attended meeting with CV team
+* Attended meeting with Robin Dombeck for midpoint visit
+
+### 7/7/2021 ###
+* Attended seminar on creating poster presentations and powerpoint presentations
+* Was able to increase accuracy of random forest model that has order ratings split into 
+  3 catergories to 81 percent by changing parameters on random forest classifier, and finding
+  out that the best way to increase accuracy was not deleting Mean Value, standard 
+  deviation of saturation and standard deviation of value features, I should just delete 
+  edge density.
+* I was able to increase accuracy from 51 to 56 percent for random forest classifier with
+  order ratings split into 5 catergories this way as well. Waiting on more data because it 
+  could help with increasing accuracy here.
+* Found that the feature that matters the most is Straight Edge Density, and the feature that
+  matters the least is Edge Density
+* TODO: Increase thresholds for edge density calculations so that it only detects thick edges 
+  so that I can increase accurac
