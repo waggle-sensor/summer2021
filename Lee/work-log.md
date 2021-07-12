@@ -442,5 +442,32 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 ![image](https://user-images.githubusercontent.com/56851781/124016433-a6752300-d9b3-11eb-88c7-82c0e05dac41.png)
   
   
+### Thursday, 1th
+-Today's Non-Technical Tasks
+* Attended daily sage scrum meeting
+
   
-  DATA STRUCTURE
+### Friday, 2th
+-Today's Non-Technical Tasks
+* Attended daily sage scrum demo
+  
+  
+### Tuesday, 6th
+-Today's Technical Tasks
+* running under Docker: https://nodered.org/docs/getting-started/docker
+* repository on Docker Hub: https://hub.docker.com/r/nodered/node-red/
+
+  
+### Wednesday, 7th
+-Today's Non-Technical Tasks
+* talked with Raj
+
+  
+### Thursday, 8th
+-Today's Technical Tasks
+* Learned how to manage docker container on Kubernetes
+  
+  
+### Friday, 9th
+-Today's Technical Tasks
+* 
