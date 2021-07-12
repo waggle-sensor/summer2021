@@ -457,6 +457,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * running under Docker: https://nodered.org/docs/getting-started/docker
 * repository on Docker Hub: https://hub.docker.com/r/nodered/node-red/
 * docker images: https://github.com/node-red/node-red-docker/tree/master/docker-custom
+* overview: https://github.com/node-red/node-red-docker/blob/master/README.md
 
   
 ### Wednesday, 7th
