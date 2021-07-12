@@ -73,9 +73,10 @@ Hello world
    - Also played around on Github more because I lack experience with it 
 
 <h3> Tuesday, July 6: </h3>
-   
+   <ul>
    -Edited my User Interface once again
    -I added a hover feature, so when you hover over a square, it shows the value that the square carries 
+   
   
 <h3> Wednesday, July 7: </h3>
    <ul>
