@@ -180,3 +180,40 @@
 ### Thursday July 1, 2021 ###
 - Began training a Variational Autoencoder on the NEON Dataset
     * I plan on benchmarking this model against the non-variational autoencoder.
+- Attended CV intern check-in
+
+### Friday July 2, 2021 ###
+- Finished Variational Autoencoder notebook
+    * This notebook can be found [here](https://github.com/waggle-sensor/anomaly-detection/blob/main/NEON%20CVAE.ipynb)
+    * Unfortunately, the varational autoencoder produced very blurry encoded output, which
+      after some investigating in the literature is quite common for VAEs, as they
+      can only encode a single independent feature per dimension. One way of addressing
+      this problem is the use of GANs, however, I don't think using GANs to fine-tune the
+      model would be a good idea, especially if the model is going to be modified to
+      train itself. GANs can create instabilities in the model due to feedback loops, which
+      I would like to avoid.
+
+## Week 5 ##
+### Tuesday July 6, 2021 ###
+- Attended CV intern check-in
+- Worked on fine-tuning the Attention-based CAE (notebook is [here](https://github.com/waggle-sensor/anomaly-detection/blob/main/NEON%20CAE%20with%20Grad-CAM%20Attention.ipynb))
+- Began reading papers on online model training (adaptive learning rate algorithms)
+
+### Wednesday July 7, 2021 ###
+- Began work on online simulator for autoencoder models
+- Did some "cleaning up" of the motion detector plugin code. 
+
+### Thursday July 8, 2021 ###
+- Attended CV intern check-in
+- Continued work on online simulator for autoencoder models
+
+### Friday July 9, 2021 ###
+- Worked on presentation materials for Monday's intern presentation
+
+## Week 6 ##
+- Attended Weekly Team Meeting (mini presentations)
+- Attended Waggle/SAGE meeting
+    * Presented my slides (links are below):
+    * [[Latex Source]]()
+    * [[Presentation Slides]]()
+- Continued work on online simulator
