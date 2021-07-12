@@ -544,4 +544,17 @@ I had to reinstall ubuntu because I found some wacky activity in `journalctl`.
 I had a good week. Didn't get a ton of work done, but a lot of important information was obtained, and I can probably get some efficient work done next week. 
 
 -------
+## Week 8: 7/11 to 7/16
+-------
+**Today's non-technical work:**
+* Presented my SAGE midpoint update
+* Met with Joe to discuss tftp and ftp server choices, and switch UI
+
+**Today's technical work:**
+* Researched usage of dnsmasq tftp server 
+* Researched using an ftp server for switch upgrades
+
+
+-------
+
 
