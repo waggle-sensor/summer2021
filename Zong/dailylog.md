@@ -72,3 +72,8 @@ Hello world
    - Created my own shortcut on the terminal to Github because I have been opening my files the inefficient way
    - Also played around on Github more because I lack experience with it 
 
+<h3> Tuesday, July 6: <
+   
+   -A
+  
+<h3> Wednesday, July 7: 
