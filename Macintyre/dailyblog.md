@@ -91,6 +91,31 @@
 * I worked on the codes in Inkscape and continued to work on cutting them out 
 
 ### Thursday, July 8
+* I worked on the Jetson Nano some more today
+* I also met with Raj and came up with a plan for Friday
+* I cut out the rest of the codes to be applied on the nodes
 
 ### Friday, July 9
+* I went to Surya first thing in the morning and applied the codes to all of the nodes that were there and needed new codes
+* I worked on cutting out the cover art for the nodes, but ran into some issues with the machine not being able to cut out the design precisely
+* I went to Morton and collected the batteries and SD cards from the audio recorders that are there
+* I also met Raj at Home Depot to give him the SD cards and get posts for the solar BAR devices
+
+
+## Week 7
+### Monday, July 12
+* I gave my midpoint presentation to the group and watched others present about their projects
+* I spent most of the afternoon working on the cover art for the nodes and trying to fix the problem that I was running into on Friday with the machine
+
+### Tuesday, July 13
+* I spent all day at the kayak and bike outing
+
+### Wednesday, July 14
+
+
+### Thursday, July 15
+
+
+### Friday, July 16
+
 
