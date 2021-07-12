@@ -88,9 +88,13 @@ Hello world
 </ul>
 
 <h3> Thursday, July 8: </h3>
-   - Added a legend to my heat table
-   - There are some issues with grabbing the color scheme from my previous lines of code
+<ul>
+   <li>Added a legend to my heat table</li>
+   <li> There are some issues with grabbing the color scheme from my previous lines of code </li>
+   </ul>
    
 <h3> Friday, July 9: </h3>
-   - Worked on fetching Waggle data 
+<ul>
+   <li> Worked on fetching Waggle data </li>
+   </ul>
 
