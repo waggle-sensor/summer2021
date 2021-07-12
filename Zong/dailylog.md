@@ -78,10 +78,12 @@ Hello world
    -I added a hover feature, so when you hover over a square, it shows the value that the square carries 
   
 <h3> Wednesday, July 7: </h3>
+   <ul>
    - Had a meeting with my mentor, Neal 
    - Went into the command line again to work on Github commands 
    - Learned status, add, commit, push 
    - Also found some issues with the big Waggle github folder
+   </ul>
 
 <h3> Thursday, July 8: </h3>
    - Added a legend to my heat table
