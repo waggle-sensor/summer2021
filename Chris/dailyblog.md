@@ -234,5 +234,21 @@ How is it week 4 already!?
     - see readme.md in application-profiling repo
     - not seemless to setup but it will be once its running
     - Hooray!
+
+### Friday (7/8)
+
+- Met with Luke to discuss my pipeline
+  - it works!
+- Planning to make a docker repo so someone can just use FROM in the dockerfile
+
+
+## Week 6 (7/12-7/16)
+
+- Working on building my own image using the waggle cuda plugin base
+- remember to us -ti to make it interactive
+- new simple dockerfile with entrypoint set to /bin/sh can open up to terminal
+  - great, I was a little worried that the plugin had the higher functionality, but this is plently to work with
+- I hope using FROM waggle/plugin-base:1.1.1-ml-cuda10.2-l4t won't break things if someone else is using it as well (like in objectcounter)
+  - I will have to test this, I assumed it would stack
   
 
