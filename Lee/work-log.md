@@ -472,4 +472,5 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   
 ### Friday, 9th
 -Today's Technical Tasks
-* 
+* The source from https://nodered.org/docs/getting-started/docker
+* Managing User Data: Once you have Node-RED running with Docker, we need to ensure any added nodes or flows are not lost if the container is destroyed. This user data can be persisted by mounting a data directory to a volume outside the container. This can either be done using a bind mount or a named data volume. Node-RED uses the /data directory inside the container to store user configuration data. (Don't know what it is)
