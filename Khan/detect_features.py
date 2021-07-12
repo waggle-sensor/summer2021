@@ -15,6 +15,10 @@ def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
                        truncate_sheet=False,
                        **to_excel_kwargs):
     """
+
+    Helper method taken from:
+    https://stackoverflow.com/questions/38074678/append-existing-excel-sheet-with-new-dataframe-using-python-pandas/38075046#38075046
+
     Append a DataFrame [df] to existing Excel file [filename]
     into [sheet_name] Sheet.
     If [filename] doesn't exist, then this function will create it.
@@ -192,6 +196,8 @@ def detect_edges(image, lower_threshold, upper_threshold):
 
     canny = cv2.Canny(image, lower_threshold, upper_threshold)
 
+    display(canny)
+
     return canny
 
 def find_straight_edge_density(image):
@@ -361,9 +367,6 @@ def add_features():
                        startrow=0)
     return df
 
-def normalize_data():
-    print("Normalize all data")
-
 def main():
     df = add_features()
 
@@ -376,7 +379,9 @@ def main():
      # save training data in excel file so that I only have to run this once
   #  df.to_excel(r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx',index = False)
 
-    normalize_data()
-
 if __name__ == '__main__':
-    main()
+    file_path = 'training_images/47644824_3ffc0d6af2_o.jpg'
+    image = cv2.imread(file_path, 1)
+
+    #main()
+    find_edge_density(image)

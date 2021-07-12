@@ -159,12 +159,86 @@
 - EDU Weekly Seminar: Pathways to Science Career Panel
 - Made the required mini-presentation for the Student Connects meeting tomorrow
 - Asked Bobby for help dealing with the “nans” in xarray dataset creating the plotting issue with matplotlib
-    * One solution: create x amount of evenly spaced height bins for an array of size time by number of height bins. Will hold scan times and average reflectivity between 2 height bins
+    * One solution: create x amount of evenly spaced height bins for an array of size time by number of height bins. Array will hold scan times and the average reflectivity between 2 height bins
     * Code works for all the days and sets of scans I’ve tested thus far
 - Cleaned up the plots
 
 ### July 1 
 - Weekly Clouds/CV group meeting
-- Student Connects presentations 
-- 
+- Student Connects presentations
+- CELS Student Lecture Series
+- Looked into numpy.interp() and scipy.interpolate()
+    * Scott suggested it could be useful for the height axis
+    * Seems like it certainly could be useful because as VCP changes the heights of the gates will change and the number of sweeps in a scan can also change
+    * Can't figure out how I'd apply it to my code
+- xarray has interpolation functions too
+
+### July 2
+- Found a better way to get rid of the duplicate sweeps from SAILS
+    * I want the first of the sweeps (one has radial velocity and one does not)
+    * Tried selecting only the sweeps with radial velocity data first --> I suspect it won't work for all cases (SAILS) and it gives the second sweep for a given gate height so this didn't work
+    * Tried using the median of the elevation angles in each sweep to identify the unique sweeps and then extract_sweeps to get a radar object with only the unique sweeps (based on: https://gist.github.com/deeplycloudy/d5d4f137dd7496434e09f1fbc2122b0f). Tested it on a few sets of scans and it seems to works well. 
+- Still trying to figure out how to best use interpolation
+
+## Week 6 
+### July 6 
+ - Testing to make sure everything in code works
+    * Nexradaws fails if there are tar files in amazon bucket
+    * Rewrote code without nexradaws library 
+    * Everything else seems to work
+ - Next steps:
+    * Still need to interpolate to a constant height 
+    * For the same pixel (lat/lon of sites) we want data from GOES
+    * Want to clean up and get code on the edge code repository (ECR)
+    * Looked into ECR plugin example on GitHub: https://github.com/waggle-sensor/plugin-numpy-example 
+- Mid-Point Visit with Student Connects leader
+
+### July 7 
+ - EDU Weekly Seminar: Creating Effective Oral & Poster Presentations
+ - Adjusted code for GOES 16 data from AWS to account for the fact that the default scan mode of the ABI changed in April 2019
+    * Now can grab both scan modes (and therefore dates pre April 2019) without issue
+ - Want level 1b data (not level 2)
+    * Channel 16 (13.3 microns) → 13 micron brightness temps 
+    * Channel 1 (0.47 microns) → albedo
+    * Channel 13 (10.3 microns) → clean IR temps at ~10 microns
+    * Level 1b data just gives us raw radiances, do we have to convert to something else (reflectance/brightness temp) or are we just using the raw values?
+ - The native ABI coordinates are East/West scanning angle and North/South elevation angle, both in radians relative to where the satellite is. We want lat/lon coordinates
+    * Working on convert to lat/lon so I can grab the pixel closest to the lat/lon of the two sites we’re interested in 
+    * 
+- Helpful satellite links for reference:
+    * https://www.goes-r.gov/downloads/resources/documents/Beginners_Guide_to_GOES-R_Series_Data.pdf 
+    * https://www.goes-r.gov/mission/ABI-bands-quick-info.html 
+
+### July 8 
+- Weekly Clouds and CV group meeting
+    * Want to grab a 10 x 10 array of pixels over the SGP site rather than a single pixel so maybe we can look at flow over the top
+- DOE Office of Science Seminar
+- Tutorial/office hours for plugin development/getting code on ECR
+    * Learned how to get code onto ECR (used the numpy example template on github) 
+    * Definitely want to make a plugin --> we want to collect data from GOES and NEXRAD at the nodes which can be input to ML codes (could be useful for ex. Seongha's recent work: https://www.osti.gov/biblio/1798308)
+    * Will try to edit the example with some of my code next week and ask questions
+
+### July 9 
+- Worked on converting the x,y coords to lat/lon
+- Tried converting using the equations given in: https://www.goes-r.gov/users/docs/PUG-L1b-vol3.pdf, then added lat/lon to the dataframe. Didn’t seem like there’s a straightforward way to select by lat/lon
+- Tried pyproj
+    * Made a map object for the geostationary projection and then transformed the           
+    * Coordinates to lat/lon. Lat/lon values really close to the above method
+- Tried using Cartopy
+    * For basic georeferenced plotting want geostationary projection
+    * To return a pixel value for a given lat/lon: https://stackoverflow.com/questions/66433948/get-nearest-pixel-value-from-satellite-image-using-latitude-longitude-coordinate 
+- Next week:
+    * Figure out lat/lon conversion so can select 10x10 pixels (do we want just the pixel values or the pixels themselves?)
+    * Work on getting radar code into ECR
+
+## Week 7 
+### July 12
+- Midpoint Presentations (round 1)
+- Writing Coach Meeting: Workshop for Writing Abstracts
+- Read Seongha's paper 
+- Read about Amazon S3
+- Trying to extract pixels/pixel values based on converted (lat/lon) coordinates
+    * 
+
+
 

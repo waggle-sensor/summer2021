@@ -55,3 +55,30 @@ Started processing thermal images
 Looking for best ML algorithm for analyzing the images
 Reviewed related literature
 
+July 2nd:
+Worked on linking the thermal images to the the arrays
+Created tensorflow model to predict the rgb array of images
+Got image- did not work
+Continuecd to try to work on it
+
+
+July 4rd
+Moved on from imaging- link for turning one into another was not clear
+Downloaded large set of images and asos data and started to process it
+
+July 5th
+Continued to process thermal image data into arrays
+Created image out of thermal data -  to tell which part of the given array was a tree, soil, sky or grass
+
+July 6th 
+Isolated useful parts of the asos data
+Started to create tensorflow model
+
+July 7th
+Continued to create tensorflow model
+Low accuracy for thermal image data
+
+July 8th 
+added asos data -  successful!
+narrowed down necessary paratemers to predict LCL
+
