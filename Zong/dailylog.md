@@ -79,11 +79,11 @@ Hello world
    
   
 <h3> Wednesday, July 7: </h3>
-   <ul>
-   - Had a meeting with my mentor, Neal 
-   - Went into the command line again to work on Github commands 
-   - Learned status, add, commit, push 
-   - Also found some issues with the big Waggle github folder
+<ul>
+   <li>Had a meeting with my mentor, Neal </li>
+   <li>Went into the command line again to work on Github commands </li>
+   <li> Learned status, add, commit, push </li>
+   <li>Also found some issues with the big Waggle github folder </li>
    </ul>
 
 <h3> Thursday, July 8: </h3>
