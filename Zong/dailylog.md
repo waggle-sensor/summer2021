@@ -96,5 +96,6 @@ Hello world
 <h3> Friday, July 9: </h3>
 <ul>
    <li> Worked on fetching Waggle data </li>
+   <li> It works with test code, but not the actual Waggle Data </li>
    </ul>
 
