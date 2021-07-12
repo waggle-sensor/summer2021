@@ -91,6 +91,7 @@ Hello world
 <ul>
    <li>Added a legend to my heat table</li>
    <li> There are some issues with grabbing the color scheme from my previous lines of code </li>
+   <li> Changed the color scheme </li>
    </ul>
    
 <h3> Friday, July 9: </h3>
