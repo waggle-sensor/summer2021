@@ -21,13 +21,11 @@ from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.callbacks import ModelCheckpoint
 import np_utils
 from sklearn.model_selection import train_test_split
-
 import types
 import functools
 from individual_feature import extract_features_mfcc, extract_features_mel, extract_features_fourier_tempogram, extract_features_tempogram, extract_features_chroma, extract_features_contrast, extract_features_tonnetzs
 
-
-#### Dependencies ####
+from waggle import plugin
 
 def copy_func(f):
     """Based on http://stackoverflow.com/a/6528148/190597 (Glenn Maynard)"""
