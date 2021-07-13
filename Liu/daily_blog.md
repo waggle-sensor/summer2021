@@ -592,3 +592,14 @@ ValueError: optimizer got an empty parameter list
 | vgg19_bn | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 2.93E-03 | 54.5 | 104 | 17.1 | 9.56 |
 | mobilenet_v2 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 0.00E+00 | 69.2 | 830 | 14.4 | 1.53 |
 
+## Week 10 (July 12 to July 16)
+### Monday July 12, 2021
+#### Work Done:
+ - Prepare for the presentation of the mid-term progress of the anytime DNN project
+ - Have a meeting with the ML team to discuss the progress and next steps
+ - Do some experiments to compare the size of original model and quantized model
+   - One observation is that the model size is not reduced as expected
+     - For example, for Resnet152: 
+       - FP32-based model size: 241.7MB
+       - FP16-based model size: 182.7MB
+       - INT8-based model size: 185.9MB
