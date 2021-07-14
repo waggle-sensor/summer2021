@@ -73,7 +73,7 @@ where `start:end` specifies the range of height pixels where tracking corners ar
 
 |  |  |
 |---|---|
-|![31](https://drive.google.com/file/d/1FPanTRr5pfqJtpEdwPconr4VG1dhdvdd/view?usp=sharing)***Figure 30.** Mask = 200:550, ref above 25*||
+|![31](https://drive.google.com/uc?export=view&id=1FPanTRr5pfqJtpEdwPconr4VG1dhdvdd)***Figure 30.** Mask = 200:550, ref above 25*||
 
 
 
