@@ -4,8 +4,14 @@
 2. Meet with Rick.
 
 **July 12th**
-1. Figured out the bug in svm model with tempogram feature
-2. Audo group meeting
+1. Figured out the bug in svm model with tempogram feature, added one line of code
+2. Meet with Emily
+
+**July 13th**
+1. CNN model is working with combination feature extraction
+2. CNN model is not working with the individual feature extraction yet.
+
+
 
 
 # Week 7
