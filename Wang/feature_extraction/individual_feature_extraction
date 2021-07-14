@@ -60,22 +60,25 @@ def extract_feature(file_name=None):
     fourier_tempograms = fourier_tempograms.real
     fourier_tempogram = np.mean(fourier_tempograms.T, axis=0)
 
-    # extracting mfccs, chroma, mel, contrast, fourier_tempogram
-    # if want to try other combinations, need to update the feature methods here
-    return mfccs,chroma,mel,contrast,fourier_tempogram
+    # when trying other combinations, change the methods here
+    return mfccs
 
 def parse_audio_files(parent_dir,file_ext='*.ogg'):
     sub_dirs = os.listdir(parent_dir)
     sub_dirs.sort()
-    features, labels = np.empty((0,380)), np.empty(0)
+    # when changing the method, the shape is also need to be changed
+    # mfcc:40; chroma: 12; mel: 128; contrast: 7; tonnetz: 6; tempogram: 384; fourier_tempogram: 193
+    features, labels = np.empty((0,40)), np.empty(0)
     for label, sub_dir in enumerate(sub_dirs):
         if os.path.isdir(os.path.join(parent_dir, sub_dir)):
             for fn in glob.glob(os.path.join(parent_dir, sub_dir, file_ext)):
-                try: mfccs, chroma, mel, contrast, fourier_tempogram = extract_feature(fn)
+                # when trying other combinations, change the methods here
+                try: mfccs = extract_feature(fn)
                 except Exception as e:
                     print("[Error] extract feature error in %s. %s" % (fn,e))
                     continue
-                ext_features = np.hstack([mfccs,chroma,mel,contrast,fourier_tempogram])
+                # when trying other combinations, change the methods here
+                ext_features = np.hstack([mfccs])
                 features = np.vstack([features,ext_features])
                 # labels = np.append(labels, fn.split('/')[1])
                 labels = np.append(labels, label)
@@ -86,9 +89,9 @@ def parse_predict_files(parent_dir,file_ext='*.ogg'):
     features = np.empty((0,193))
     filenames = []
     for fn in glob.glob(os.path.join(parent_dir, file_ext)):
-        mfccs, chroma, mel, contrast,fourier_tempogram = extract_feature(fn)
-        # if want to try other combinations, need to update the feature methods here
-        ext_features = np.hstack([mfccs,chroma,mel,contrast,fourier_tempogram])
+        # when trying other combinations, change the methods here
+        mfccs = extract_feature(fn)
+        ext_features = np.hstack([mfccs])
         features = np.vstack([features,ext_features])
         filenames.append(fn)
         print("extract %s features done" % fn)
@@ -96,13 +99,13 @@ def parse_predict_files(parent_dir,file_ext='*.ogg'):
 
 def main():
     # Get features and labels
-    features, labels = parse_audio_files('/Users/miawang/PycharmProjects/Summer2021/test_audio_3')
-    np.save('feat_with_fourier_tempogram.npy', features)
-    np.save('label_with_fourier_tempogram.npy', labels)
+    features, labels = parse_audio_files('test_audio_3')
+    np.save('feat_mfcc.npy', features)
+    np.save('label_mfcc.npy', labels)
 
     # Predict new
     features, filenames = parse_predict_files('predict')
-    np.save('predict_feat.npy', features)
-    np.save('predict_filenames.npy', filenames)
+    # np.save('predict_feat.npy', features)
+    # np.save('predict_filenames.npy', filenames)
 
 if __name__ == '__main__': main()

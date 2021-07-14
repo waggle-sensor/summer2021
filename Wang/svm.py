@@ -1,3 +1,5 @@
+# this script can extract features from selected feature extraction method
+# and train through a SVM model
 import IPython.display as ipd
 import numpy as np
 import pandas as pd

@@ -1,3 +1,6 @@
+# this script can extract features from selected feature extractio method
+# and then train the model
+
 import IPython.display as ipd
 import numpy as np
 import pandas as pd
