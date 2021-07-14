@@ -50,8 +50,9 @@ For all other interns we expect at the end of their internship:
 1. Oral presentation
 2. Abstract for General Audience (on github)
 3. A white paper OR a real publication. In either case the daily blog on github can serve as a basis for the content. 4-8 pages, please use the LaTeX template or the overleaf template. No Microsoft Word please.  [https://www.ieee.org/conferences/publishing/templates.html](https://www.ieee.org/conferences/publishing/templates.html)
-    
-In addition we would like that all students write a blog-style article about their work which will added to this list of science stories: [https://sagecontinuum.org/science/](https://sagecontinuum.org/science/)
+4. Blog-style science article 
+
+The blog-style articles will be added to this list of science stories: [https://sagecontinuum.org/science/](https://sagecontinuum.org/science/)
 
 Take a look at existing blog articles as examples and use the following points as a guidance:
 
