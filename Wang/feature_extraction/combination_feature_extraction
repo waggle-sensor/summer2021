@@ -86,6 +86,7 @@ def parse_predict_files(parent_dir,file_ext='*.ogg'):
     features = np.empty((0,193))
     filenames = []
     for fn in glob.glob(os.path.join(parent_dir, file_ext)):
+        # if want to try other combinations, need to update the feature methods here
         mfccs, chroma, mel, contrast,fourier_tempogram = extract_feature(fn)
         # if want to try other combinations, need to update the feature methods here
         ext_features = np.hstack([mfccs,chroma,mel,contrast,fourier_tempogram])
