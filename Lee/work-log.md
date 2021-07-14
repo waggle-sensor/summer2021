@@ -482,3 +482,18 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   
 -Today's Non-Technical Tasks
 * Meeting with abayomi (Jenkins: open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery. It is a server-based system that runs in servlet containers such as Apache Tomcat)
+
+
+### Tuesday, 13th
+- Enjoyed Get-Together Event!!!!!
+
+
+### Wednesday, 14th
+-Today's Non-Technical Tasks
+* Multiple instances, multiple users -> Jenkins???
+* CI (Continuous Integration): The practice of merging all developers' working copies to a shared mainline several times a day.
+* CD (Continuous Development): Software development process that encompasses multiple DevOps processes, including continuous integration, continuous testing, continuous delivery, and continuous deployment.
+* Jenkins: CI/CD service
+
+-Today's Technical Tasks
+* 
