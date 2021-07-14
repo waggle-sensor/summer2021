@@ -496,10 +496,10 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * Attended daily scrum meeting
 * Start writing the science articles (half done)
 * Prepare the research paper with IEEE format
-  
--Today's Technical Tasks
 * Meeting with Wolfgang
 * Meeting with Milos about multiple port number for node-red instances
+  
+-Today's Technical Tasks
 
   ![image](https://user-images.githubusercontent.com/56851781/125650483-cb12b4b0-5fe8-4d0e-bc06-91d96f51383c.png)
   
