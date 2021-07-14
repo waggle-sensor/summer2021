@@ -603,3 +603,9 @@ ValueError: optimizer got an empty parameter list
        - FP32-based model size: 241.7MB
        - FP16-based model size: 182.7MB
        - INT8-based model size: 185.9MB
+
+### Tuesday July 13, 2021
+#### Work Done:
+ - Train ensemble network based on [Ensemble-Pytorch](https://github.com/TorchEnsemble-Community/Ensemble-Pytorch)
+   - Image Classification CNN model on CIFAR10: classification_cifar10_cnn.py
+     - Fusion, Voting, Bagging, GradientBoosting, SnapshotEnsemble
