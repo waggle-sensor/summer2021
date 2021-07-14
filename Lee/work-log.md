@@ -497,5 +497,6 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 
 -Today's Technical Tasks
 * Meeting with Milos about multipl port number for node-red instances
-  ![image](https://user-images.githubusercontent.com/56851781/125649621-a5c47c15-0cf7-45ad-98a1-d50c5d52962f.png)
+  ![image](https://user-images.githubusercontent.com/56851781/125650483-cb12b4b0-5fe8-4d0e-bc06-91d96f51383c.png)
+
 
