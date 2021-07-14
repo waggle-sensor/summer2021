@@ -482,7 +482,10 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   
 -Today's Non-Technical Tasks
 * Meeting with abayomi (Jenkins: open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery. It is a server-based system that runs in servlet containers such as Apache Tomcat)
-
+* Multiple instances, multiple users -> Jenkins???
+* CI (Continuous Integration): The practice of merging all developers' working copies to a shared mainline several times a day.
+* CD (Continuous Development): Software development process that encompasses multiple DevOps processes, including continuous integration, continuous testing, continuous delivery, and continuous deployment.
+* Jenkins: CI/CD service
 
 ### Tuesday, 13th
 - Enjoyed Get-Together Event!!!!!
@@ -490,14 +493,19 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 
 ### Wednesday, 14th
 -Today's Non-Technical Tasks
-* Multiple instances, multiple users -> Jenkins???
-* CI (Continuous Integration): The practice of merging all developers' working copies to a shared mainline several times a day.
-* CD (Continuous Development): Software development process that encompasses multiple DevOps processes, including continuous integration, continuous testing, continuous delivery, and continuous deployment.
-* Jenkins: CI/CD service
-
+* Attended daily scrum meeting
+* Start writing the science articles (half done)
+* Prepare the research paper with IEEE format
+  
 -Today's Technical Tasks
+* Meeting with Wolfgang
 * Meeting with Milos about multiple port number for node-red instances
+
   ![image](https://user-images.githubusercontent.com/56851781/125650483-cb12b4b0-5fe8-4d0e-bc06-91d96f51383c.png)
-*
+  
+* It seemed like one of those ports already had a connection established with the service others were just listening. Listen port serves as an endpoint for communcation. They are listening but that does not necessarily mean they are working.
+* Docker hub also shows all port numbers (1880-1882) are used for node-red, but connection errors: need to do debug
+  
+ 
 
 
