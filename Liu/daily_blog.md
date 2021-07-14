@@ -609,3 +609,18 @@ ValueError: optimizer got an empty parameter list
  - Train ensemble network based on [Ensemble-Pytorch](https://github.com/TorchEnsemble-Community/Ensemble-Pytorch)
    - Image Classification CNN model on CIFAR10: classification_cifar10_cnn.py
      - Fusion, Voting, Bagging, GradientBoosting, SnapshotEnsemble
+
+### Wednesday July 14, 2021
+#### Work Done:
+ - Get results for training ensemble networks for image classification:
+```
+FusionClassifier | Testing Acc: 79.01 % | Training Time: 2367.75 s | Evaluating Time: 1.70 s
+
+VotingClassifier | Testing Acc: 78.48 % | Training Time: 11839.88 s | Evaluating Time: 1.50 s
+
+BaggingClassifier | Testing Acc: 77.30 % | Training Time: 12244.02 s | Evaluating Time: 1.50 s
+
+GradientBoostingClassifier | Testing Acc: 79.09 % | Training Time: 16477.36 s | Evaluating Time: 1.47 s
+
+SnapshotEnsembleClassifier | Testing Acc: 71.01 % | Training Time: 1202.86 s | Evaluating Time: 1.46 s
+```
