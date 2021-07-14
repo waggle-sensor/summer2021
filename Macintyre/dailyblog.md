@@ -111,7 +111,9 @@
 * I spent all day at the kayak and bike outing
 
 ### Wednesday, July 14
-
+* I watched the manditory weekly seminar in the morning
+* I went to Surya to examine the glue on the rain gauges and pack 4 nodes to be shipped out
+* I went to Morton Arb to put new SD cards and batteries into devices, and also to install 3 new devices
 
 ### Thursday, July 15
 
