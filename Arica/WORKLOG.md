@@ -569,3 +569,19 @@ I had a good week. Didn't get a ton of work done, but a lot of important informa
 * Finally got a config both on and off a switch 
 
 -------
+
+### Thursday, 7/15 (8 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum 
+* Met with Sean to discuss clean ways to update a switch
+
+**Today's technical work:**
+* Started honeycomb README file 
+* created autoexpect scripts to log in and get information about the switches
+
+**TODO:** 
+* change clibanner for switch to represent the config version number
+* write hc scripts for switch
+
+
+-------
