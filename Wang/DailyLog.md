@@ -3,14 +3,25 @@
 1. Debugging svm with tempogram feature
 2. Meet with Rick.
 
-**July 12th**
+**July 13th**
 1. Figured out the bug in svm model with tempogram feature, added one line of code
 2. Meet with Emily
 
-**July 13th**
-1. CNN model is working with combination feature extraction
-2. CNN model is not working with the individual feature extraction yet.
+**July 14th**
+1. CNN model is now working with both combination feature extraction and individual feature extraction
+2. Meet with Rick, and talked about mixing the current bird song bataset
 
+**July 15th**
+1. AI/ML group meeting
+2. Runing experiment for individual feature with CNN.
+3. Study the audio mixing tool, scaper
+4. Study the framwork for the polyphonic sound data.
+
+**July 16th**
+1. Meet with Seongha
+2. Runing experiment for individual feature with CNN.
+3. Study the audio mixing tool, scaper
+4. Study the framwork for the polyphonic sound data.
 
 
 
