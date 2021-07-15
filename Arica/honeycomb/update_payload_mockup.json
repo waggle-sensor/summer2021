@@ -1,0 +1,14 @@
+{
+    "timestamp" : "timestamp string",
+    "nodeID" : "nodeID string",
+    "flags" : [ "flag one", "flag two"], 
+    "updates" : [ 
+        {
+        "peripheral_id" : "cams",
+        "config_version" : "string of config version",
+        "download_link" : "link to download zip"
+
+        }
+    ]
+
+}

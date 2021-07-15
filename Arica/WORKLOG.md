@@ -500,3 +500,72 @@ I had a bit of a headache today, so I took an extra two hours after work to rest
 * Design basic retry functionality
  --------
 
+### Wednesday, 7/7 (8 Hours worked)
+
+
+**Today's non-technical work:**
+* Attended SAGE lunch outing
+
+**Today's technical work:**
+* Learned how to integrate python with `journalctl`
+
+My productivity got thrown off by the lunch, and the hour+ of traveling that came with it. I didn't get as much done as I would have liked, but I still learned something.
+
+**TODO:**
+* Meet with Joe for switch use cases
+* Write out the most basic sequential upgrade script execution
+----------
+
+### Thursday, 7/8 (8 Hours worked)
+
+
+**Today's non-technical work:**
+* Sent email to HR about Uber reimbursement
+* Met with Joe to discuss basic switch use cases
+
+**Today's technical work:**
+* Had to reinstall ubuntu on my ANL computer to be safe 
+
+I had to reinstall ubuntu because I found some wacky activity in `journalctl`.
+
+----------
+### Friday, 7/9 (8 Hours worked)
+
+
+**Today's non-technical work:**
+* Attended Scrum
+* Researched how to get config off of a switch
+* Researched how to get config onto a switch
+
+**Today's technical work:**
+* I couldn't do any operations on the switch and node besides RO, so I tried to connect to the switch via scp, and tftp. I had no luck, though.
+* Wrote state_check for switch upgrade
+
+I had a good week. Didn't get a ton of work done, but a lot of important information was obtained, and I can probably get some efficient work done next week. 
+
+-------
+## Week 8: 7/12 to 7/16
+-------
+### Monday, 7/12 (8 Hours worked)
+**Today's non-technical work:**
+* Presented my SAGE midpoint update
+* Met with Joe to discuss tftp and ftp server choices, and switch UI
+
+**Today's technical work:**
+* Researched usage of dnsmasq tftp server 
+* Researched using an ftp server for switch upgrades
+
+-------
+
+### Tuesday, 7/13
+**Today's non-technical work:**
+* Went kayaking with the team
+
+-------
+
+### Wednesday, 7/14 (8 Hours worked)
+**Today's technical work:**
+* Researched and set up FTP server properly
+* Finally got a config both on and off a switch 
+
+-------

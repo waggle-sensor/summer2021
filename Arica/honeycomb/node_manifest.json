@@ -1,0 +1,47 @@
+{
+    "connectivity": {
+        "wan0": {
+            "present": true
+        },
+        "wifi0": {
+            "present": false
+        },
+        "modem0": {
+            "present": false
+        }
+    },
+    "cameras": [
+        {
+            "orientation": "top",
+            "present": true,
+            "model": "XNV-8080R"
+	},
+        {
+            "orientation": "bottom",
+            "present": true,
+            "model": "XNV-8081Z"
+	},
+        {
+            "orientation": "left",
+            "present": false
+        },
+        {
+            "orientation": "right",
+            "present": false
+        }
+    ],
+    "shield": {
+        "present": true
+    },
+    "nxagent": {
+        "present": false
+    },
+    "psu": {
+        "ep_supply": {
+            "present": false
+        },
+        "ph_supply": {
+            "present": true
+        }
+    }
+}

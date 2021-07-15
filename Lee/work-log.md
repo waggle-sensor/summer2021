@@ -442,5 +442,70 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 ![image](https://user-images.githubusercontent.com/56851781/124016433-a6752300-d9b3-11eb-88c7-82c0e05dac41.png)
   
   
+### Thursday, 1th
+-Today's Non-Technical Tasks
+* Attended daily sage scrum meeting
+
   
-  DATA STRUCTURE
+### Friday, 2th
+-Today's Non-Technical Tasks
+* Attended daily sage scrum demo
+  
+  
+### Tuesday, 6th
+-Today's Technical Tasks
+* running under Docker: https://nodered.org/docs/getting-started/docker
+* repository on Docker Hub: https://hub.docker.com/r/nodered/node-red/
+* docker images: https://github.com/node-red/node-red-docker/tree/master/docker-custom
+* overview: https://github.com/node-red/node-red-docker/blob/master/README.md
+
+  
+### Wednesday, 7th
+-Today's Non-Technical Tasks
+* talked with Raj
+
+  
+### Thursday, 8th
+-Today's Technical Tasks
+* Learned how to manage docker container on Kubernetes
+  
+  
+### Friday, 9th
+-Today's Technical Tasks
+* The source from https://nodered.org/docs/getting-started/docker
+* Managing User Data: Once you have Node-RED running with Docker, we need to ensure any added nodes or flows are not lost if the container is destroyed. This user data can be persisted by mounting a data directory to a volume outside the container. This can either be done using a bind mount or a named data volume. Node-RED uses the /data directory inside the container to store user configuration data. (Don't know what it is)
+  
+
+### Monday, 12th
+-Today's Non-Technical Tasks
+* Attended mid-presentation (not sure why my laptop microphone/share the screen not working)
+  
+-Today's Non-Technical Tasks
+* Meeting with abayomi (Jenkins: open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery. It is a server-based system that runs in servlet containers such as Apache Tomcat)
+* Multiple instances, multiple users -> Jenkins???
+* CI (Continuous Integration): The practice of merging all developers' working copies to a shared mainline several times a day.
+* CD (Continuous Development): Software development process that encompasses multiple DevOps processes, including continuous integration, continuous testing, continuous delivery, and continuous deployment.
+* Jenkins: CI/CD service
+
+### Tuesday, 13th
+- Enjoyed Get-Together Event!!!!!
+
+
+### Wednesday, 14th
+-Today's Non-Technical Tasks
+* Attended daily scrum meeting
+* Start writing the science articles (half done)
+* Prepare the research paper with IEEE format
+* Meeting with Wolfgang
+* Meeting with Milos about multiple port number for node-red instances
+  
+-Today's Technical Tasks
+
+  ![image](https://user-images.githubusercontent.com/56851781/125650483-cb12b4b0-5fe8-4d0e-bc06-91d96f51383c.png)
+  
+* It seemed like one of those ports already had a connection established with the service others were just listening. Listen port serves as an endpoint for communcation. They are listening but that does not necessarily mean they are working.
+* Docker hub also shows all port numbers (1880-1882) are used for node-red, but connection errors: need to do debug
+  
+ 
+
+

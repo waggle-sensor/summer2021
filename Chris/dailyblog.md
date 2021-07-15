@@ -226,3 +226,36 @@ How is it week 4 already!?
       - need to find a way to access profile output using docker cp
   - This is huge we can get the pipeline working now!
 
+  ### Thursday (7/8)
+
+  - Major dockerfile modifications
+  - profiling pipelines works
+    - make the image, run the container, get output, put output in volume
+    - see readme.md in application-profiling repo
+    - not seemless to setup but it will be once its running
+    - Hooray!
+
+### Friday (7/8)
+
+- Met with Luke to discuss my pipeline
+  - it works!
+- Planning to make a docker repo so someone can just use FROM in the dockerfile
+
+
+## Week 6 (7/12-7/16)
+
+### Monday (7/12)
+
+- Working on building my own image using the waggle cuda plugin base
+- remember to us -ti to make it interactive
+- new simple dockerfile with entrypoint set to /bin/sh can open up to terminal
+  - great, I was a little worried that the plugin had the higher functionality, but this is plently to work with
+- I hope using FROM waggle/plugin-base:1.1.1-ml-cuda10.2-l4t won't break things if someone else is using it as well (like in objectcounter)
+  - I will have to test this, I assumed it would stack
+  
+### Tuesday (7/13)
+- Successfully built a new docker image with a fresh dockerfile that comes with tau for python setup and installed
+- created my own docker repo for this image
+  - can be pulled at chrispkraemer/tauprofiler:0.0.0
+- Tomorrow I will test if this can be layered with the base and/or the object plugin
+

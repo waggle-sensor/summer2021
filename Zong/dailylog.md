@@ -72,3 +72,31 @@ Hello world
    - Created my own shortcut on the terminal to Github because I have been opening my files the inefficient way
    - Also played around on Github more because I lack experience with it 
 
+<h3> Tuesday, July 6: </h3> 
+<ul>
+   <li>Edited my User Interface once again</li>
+   <li>I added a hover feature, so when you hover over a square, it shows the value that the square carries </li>
+   </ul>
+   
+  
+<h3> Wednesday, July 7: </h3>
+<ul>
+<li>Had a meeting with my mentor, Neal </li>
+<li>Went into the command line again to work on Github commands </li>
+<li> Learned status, add, commit, push </li>
+<li>Also found some issues with the big Waggle github folder </li>
+</ul>
+
+<h3> Thursday, July 8: </h3>
+<ul>
+   <li>Added a legend to my heat table</li>
+   <li> There are some issues with grabbing the color scheme from my previous lines of code </li>
+   <li> Changed the color scheme </li>
+   </ul>
+   
+<h3> Friday, July 9: </h3>
+<ul>
+   <li> Worked on fetching Waggle data </li>
+   <li> It works with test code, but not the actual Waggle Data </li>
+   </ul>
+

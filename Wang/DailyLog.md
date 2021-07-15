@@ -1,3 +1,40 @@
+# Week 8
+**July 12th**
+1. Debugging svm with tempogram feature
+2. Meet with Rick.
+
+**July 12th**
+1. Figured out the bug in svm model with tempogram feature, added one line of code
+2. Meet with Emily
+
+**July 13th**
+1. CNN model is working with combination feature extraction
+2. CNN model is not working with the individual feature extraction yet.
+
+
+
+
+# Week 7
+**July 6th**
+1. Audio tem meeting
+2. Training individual feature extraction method with svm.
+3. Study CNN model
+
+**July 7th**
+1. Training individual feature extraction method with svm.
+2. Study CNN model
+
+**July 8th**
+1. Debugging svm with tempogram feature
+
+**July 9th**
+1. CNN is overfitting. Trying to figure out why
+2. Meet with Sean
+
+**July 10th**
+1. Runing svm model with different feature extraction method
+![Screen Shot 2021-07-12 at 12 29 56 PM](https://user-images.githubusercontent.com/44412313/125323656-08ffe480-e30d-11eb-85cc-8efed66d5345.png)
+
 # Week 6
 **June 28th**
 1. Completed bird_song_classification_v2

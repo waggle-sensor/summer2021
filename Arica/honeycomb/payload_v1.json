@@ -1,0 +1,14 @@
+{
+    "timestamp" : "Thu Jul  1 09:24:36 CDT 2021",
+    "nodeID" : "Advaitha",
+    "flags" : [ "flag one", "flag two"], 
+    "updates" : [ 
+        {
+        "peripheral_id" : "cam1",
+        "config_version" : "string of config version",
+        "download_link" : "link to download zip"
+
+        }
+    ]
+
+}

@@ -17,7 +17,7 @@ We recommend these tutorials if you are new to git:
 - [https://guides.github.com/activities/hello-world/](https://guides.github.com/activities/hello-world/)
 - [https://www.youtube.com/watch?v=SWYqp7iY_Tc](https://www.youtube.com/watch?v=SWYqp7iY_Tc)
 
-Please do not add large files to git repositories if possible. Please ask your supervisor where to put them.
+Please do not add large files to git repositories if possible. Please ask your supervisor where to put them. Please do not clone a git repository in a directory that is synced with icloud or any other sync mechanism, as files might be deleted.
 
 ## Google Drive
 If you need to create documents, spreadsheets and share them, feel free to create a folder named per your lastname in our shared [Google Drive Summer2021](https://drive.google.com/drive/u/0/folders/1njZeZ_OMHzq_Boqq-nnEhC31kd1-coqr) and link to your GitHub files. Send us you google email address via slack, so we can share trhat folder with you.
@@ -50,8 +50,9 @@ For all other interns we expect at the end of their internship:
 1. Oral presentation
 2. Abstract for General Audience (on github)
 3. A white paper OR a real publication. In either case the daily blog on github can serve as a basis for the content. 4-8 pages, please use the LaTeX template or the overleaf template. No Microsoft Word please.  [https://www.ieee.org/conferences/publishing/templates.html](https://www.ieee.org/conferences/publishing/templates.html)
-    
-In addition we would like that all students write a blog-style article about their work which will added to this list of science stories: [https://sagecontinuum.org/science/](https://sagecontinuum.org/science/)
+4. Blog-style science article 
+
+The blog-style articles will be added to this list of science stories: [https://sagecontinuum.org/science/](https://sagecontinuum.org/science/)
 
 Take a look at existing blog articles as examples and use the following points as a guidance:
 

@@ -209,4 +209,36 @@
     * https://www.goes-r.gov/downloads/resources/documents/Beginners_Guide_to_GOES-R_Series_Data.pdf 
     * https://www.goes-r.gov/mission/ABI-bands-quick-info.html 
 
+### July 8 
+- Weekly Clouds and CV group meeting
+    * Want to grab a 10 x 10 array of pixels over the SGP site rather than a single pixel so maybe we can look at flow over the top
+- DOE Office of Science Seminar
+- Tutorial/office hours for plugin development/getting code on ECR
+    * Learned how to get code onto ECR (used the numpy example template on github) 
+    * Definitely want to make a plugin --> we want to collect data from GOES and NEXRAD at the nodes which can be input to ML codes (could be useful for ex. Seongha's recent work: https://www.osti.gov/biblio/1798308)
+    * Will try to edit the example with some of my code next week and ask questions
+
+### July 9 
+- Worked on converting the x,y coords to lat/lon
+- Tried converting using the equations given in: https://www.goes-r.gov/users/docs/PUG-L1b-vol3.pdf, then added lat/lon to the dataframe. Didn’t seem like there’s a straightforward way to select by lat/lon
+- Tried pyproj
+    * Made a map object for the geostationary projection and then transformed the           
+    * Coordinates to lat/lon. Lat/lon values really close to the above method
+- Tried using Cartopy
+    * For basic georeferenced plotting want geostationary projection
+    * To return a pixel value for a given lat/lon: https://stackoverflow.com/questions/66433948/get-nearest-pixel-value-from-satellite-image-using-latitude-longitude-coordinate 
+- Next week:
+    * Figure out lat/lon conversion so can select 10x10 pixels (do we want just the pixel values or the pixels themselves?)
+    * Work on getting radar code into ECR
+
+## Week 7 
+### July 12
+- Midpoint Presentations (round 1)
+- Writing Coach Meeting: Workshop for Writing Abstracts
+- Read Seongha's paper 
+- Read about Amazon S3
+- Trying to extract pixels/pixel values based on converted (lat/lon) coordinates
+    * 
+
+
 

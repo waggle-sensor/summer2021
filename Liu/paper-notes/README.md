@@ -87,3 +87,37 @@ ValueError: optimizer got an empty parameter list
    - [QKeras](https://github.com/google/qkeras)
  - Paper's idea:
    - An esemble framework with quantized models adpative to input sparsity and resource profiling
+
+## Update July 12, 2021
+ - QKeras's deployment on NVIDIA Jetson AGX/NX
+   - Dependency is hard to satisfy: tensorflow>=2.5.0rc0
+   - Not supported on Jetson board: https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform-release-notes/tf-jetson-rel.html#tf-jetson-rel
+ - TensorRT's strength
+   - GPU supported multiple precision
+   - support for majority of the ML frameworks
+ - TensorRT-based optimizations:
+   - Kernel fusion: combine kernels calls to imporve GPU utilization (vertically and horizontally)
+   - Precision calibration: full precision (FP32), half precision (FP16), INT8
+   - Kernel auto-tuning: select the optimal kernels based on parameter like batch size, filter-size, and input data size; based on target platform
+ - Results on Pytorch TensorRT conversion
+   - [torch2trt](https://github.com/NVIDIA-AI-IOT/torch2trt)
+   - [Experimental results](../torch2trt-results.md)
+
+```
+def torch2trt(module, 
+              inputs, 
+              input_names=None, 
+              output_names=None, 
+              log_level=trt.Logger.ERROR, 
+              max_batch_size=1,
+              fp16_mode=False, 
+              max_workspace_size=1<<25, 
+              strict_type_constraints=False, 
+              keep_network=True, 
+              int8_mode=False, 
+              int8_calib_dataset=None,
+              int8_calib_algorithm=DEFAULT_CALIBRATION_ALGORITHM,
+              int8_calib_batch_size=1,
+              use_onnx=False,
+              **kwargs)
+```
