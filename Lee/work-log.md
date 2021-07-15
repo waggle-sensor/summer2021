@@ -515,5 +515,11 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * It seems ok to run it with the specific port number (8880)
   ![image](https://user-images.githubusercontent.com/56851781/125834527-51dd4f19-2c77-4f39-87a9-3d8466819879.png)
 
+* So, just kept going the test
+  ![image](https://user-images.githubusercontent.com/56851781/125847340-c033857a-eb12-4688-8e1e-aade8a870ec8.png)
+
+  <img width="639" alt="1" src="https://user-images.githubusercontent.com/56851781/125847379-71400033-3c92-4bc5-b04a-8e48ad4e82a7.PNG">
+  
+  <img width="602" alt="2" src="https://user-images.githubusercontent.com/56851781/125847382-287bb2fa-56e8-4924-ba24-4d33475fd710.PNG">
 
 
