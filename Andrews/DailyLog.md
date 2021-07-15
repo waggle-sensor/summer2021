@@ -238,7 +238,26 @@
 - Read Seongha's paper 
 - Read about Amazon S3
 - Trying to extract pixels/pixel values based on converted (lat/lon) coordinates
-    * 
+    * Converted x,y satellite coords (in radians) to lat/lon using Cartopy
+ 
+ ### July 13
+ - Kayak event
+
+### July 14
+ - EDU Weekly Seminar: Science Innovations for a Circular Economy Initiative at Argonne
+ - TRACER Meeting
+ - Satellite code - select and download GOES 16 or 17 images by band/channel between the desired start and end time from AWS S3 
+    * Fixed time selection in satellite code, cleaned it up
+    * Made very similar script but with the option to download all 16 bands (ABI-L2-MCMIPC) rather than just one at a time 
+    * Made some basic georeferenced sat plots with cartopy
+    * Still stuck on extracting pixels around the SGP lat/lon
+
+### July 15
+ - CELS Student Lecture Series 
+ - Clouds/CV Meeting
+ - Started the powerpoint for Monday's midpoint presentation
+ - 
+
 
 
 
