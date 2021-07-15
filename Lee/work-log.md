@@ -500,12 +500,20 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * Meeting with Milos about multiple port number for node-red instances
   
 -Today's Technical Tasks
-
   ![image](https://user-images.githubusercontent.com/56851781/125650483-cb12b4b0-5fe8-4d0e-bc06-91d96f51383c.png)
   
 * It seemed like one of those ports already had a connection established with the service others were just listening. Listen port serves as an endpoint for communcation. They are listening but that does not necessarily mean they are working.
 * Docker hub also shows all port numbers (1880-1882) are used for node-red, but connection errors: need to do debug
   
- 
+  
+### Thursday, 15th
+-Today's Non-Technical Tasks
+* Attended daily scrum meeting
+* Attended CELS Technical Women meetup
+  
+-Today's Technical Tasks
+* It seems ok to run it with the specific port number (8880)
+  ![image](https://user-images.githubusercontent.com/56851781/125834527-51dd4f19-2c77-4f39-87a9-3d8466819879.png)
+
 
 
