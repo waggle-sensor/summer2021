@@ -259,3 +259,14 @@ How is it week 4 already!?
   - can be pulled at chrispkraemer/tauprofiler:0.0.0
 - Tomorrow I will test if this can be layered with the base and/or the object plugin
 
+### Wednesday (7/14)
+- Lots of bugs to sort though while layering
+  - also takes forever to build
+  - I have to build both the tauprofile image and object counter image each time I change the tauprofile dockerfile(in a significant way)
+
+
+### Thursday (7/15)
+- I was able to successfully layer my chrispkraemer/tauprofiler:0.0.0 image with the object counter plugin
+- the wrapper and app work
+- tomorrow I will test the shell script and make things as automated as possible
+
