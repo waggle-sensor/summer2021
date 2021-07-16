@@ -585,3 +585,12 @@ I had a good week. Didn't get a ton of work done, but a lot of important informa
 
 
 -------
+
+### Friday, 7/16 (5 Hours worked)
+
+**Today's technical work:**
+* Continued work on HC README
+* Changed switch config convention to change the clibanner to include the version number, allowing for clean state checks and install verifications
+
+
+-------
