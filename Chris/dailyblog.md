@@ -270,3 +270,11 @@ How is it week 4 already!?
 - the wrapper and app work
 - tomorrow I will test the shell script and make things as automated as possible
 
+### Friday (7/16)
+- Modified the tauprofiler image some more
+- working with object counter plugin
+- ok
+  - build the plugin with the makefile
+    - change dockerfile to be from chrispkraemer/tauprofiler:0.0.0 instead of base
+  - commands are the same except:
+    change entrypoint to "./tauprofiler.sh"
