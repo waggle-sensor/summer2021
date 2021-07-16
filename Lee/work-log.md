@@ -522,4 +522,9 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   
   <img width="602" alt="2" src="https://user-images.githubusercontent.com/56851781/125847382-287bb2fa-56e8-4924-ba24-4d33475fd710.PNG">
 
+### Friday, 16th
+-Today's Non-Technical Tasks
+* submitted the additional document to NW
 
+-Today's Technical Tasks
+* Continued work on creating multiple node-red on dockers with different portnumbers
