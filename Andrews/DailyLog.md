@@ -256,8 +256,17 @@
  - CELS Student Lecture Series 
  - Clouds/CV Meeting
  - Started the powerpoint for Monday's midpoint presentation
- - 
+ - Finally figured out a method to extract 10x10 grids (based on: https://github.com/blaylockbk/pyBKB_v3/blob/master/demo/Nearest_lat-lon_Grid.ipynb)
 
-
-
+### July 16 
+ - Worked on midpoint presentation PowerPoint for Monday
+ - Forecasting and meeting for TRACER
+ - Required SEC 160 TMS Training
+ - Next steps:
+    * Clean up the code for the grids
+    * Get code into ECR
+    * Work with Seongha to look at that day at the SGP
+    * Do optical flow on the data and compare it to what Matt is seeing
+        -> Does the motion we see from the ground match up with what we see with GOES? 
+ - Q: What GOES 16 band/bands would work best for optical flow?
 
