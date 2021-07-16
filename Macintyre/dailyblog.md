@@ -116,8 +116,29 @@
 * I went to Morton Arb to put new SD cards and batteries into devices, and also to install 3 new devices
 
 ### Thursday, July 15
-
+* I finished a new design for the node cover art by adding the small bridges
+* I tested a cut of the sage logo which worked well and would be easily repeatable
+* I met with Raj and then talked with him, Florent, and Yongho about moving the rest of the nodes from Surya to Argonne
+* I met with my student connect group
 
 ### Friday, July 16
+* I continued to work on the Inkscape files for the designs
+* I met with the Sage Edu group about possible projects that we could do using the Jetson Nano in the future
+
+
+## Week 8
+### Monday, July 19
+
+
+### Tuesday, July 20
+
+
+### Wednesday, July 21
+
+
+### Thursday, July 22
+
+
+### Friday, July 23
 
 
