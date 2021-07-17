@@ -624,3 +624,20 @@ GradientBoostingClassifier | Testing Acc: 79.09 % | Training Time: 16477.36 s | 
 
 SnapshotEnsembleClassifier | Testing Acc: 71.01 % | Training Time: 1202.86 s | Evaluating Time: 1.46 s
 ```
+
+### Thursday July 15, 2021
+#### Work Done:
+ - Test the code shared by Aji about the ALART project
+ - Learn the design and implementation of FasterRCNN object detection in Pytorch
+   - Github repo: https://github.com/WZMIAOMIAO/deep-learning-for-image-processing/tree/master/pytorch_object_detection/faster_rcnn
+   - RCNN, FastRCNN, FasterRCNN's development
+   - source code implamentation:
+     - backbone: resnet50_fpn, mobilenetv2
+     - RPN (Region Proposal Network)
+
+### Friday July 16, 2021
+#### Work Done:
+ - Learn the design and implementation of image classification in pytorch and tensorflow
+   - Github repo: https://github.com/WZMIAOMIAO/deep-learning-for-image-processing
+   - LeNet's design and implementation in pytorch
+   - AlexNet's structure and implementation in TensorFlow/Pytorch
