@@ -13,15 +13,20 @@
 
 **July 15th**
 1. AI/ML group meeting
-2. Runing experiment for individual feature with CNN.
+2. Runing experiment for individual feature with CNN
 3. Study the audio mixing tool, scaper
-4. Study the framwork for the polyphonic sound data.
+4. Study the framwork for the polyphonic sound data
 
 **July 16th**
 1. Meet with Seongha
-2. Runing experiment for individual feature with CNN.
+2. Runing experiment for individual feature with CNN
 3. Study the audio mixing tool, scaper
-4. Study the framwork for the polyphonic sound data.
+4. Study the framwork for the polyphonic sound data
+
+**July 17th**
+1. Study the scaper tutorial
+2. Try to make a mix dataset based on the 3 species sub-dataset
+3. Prepare for the presentation on Monday
 
 
 
