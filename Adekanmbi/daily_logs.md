@@ -187,6 +187,49 @@
 
 
 
+### Week 7 ###
+
+------------
+
+#### Monday July 12, 2021 ####
+
+- Mid-internship Presentation
+
+#### Tuesday July 13, 2021 ####
+
+- Worked in implementing API Endpoint to trigger app profiling
+
+#### Wednesday July 14, 2021 ####
+
+- Worked in implementing API Endpoint to trigger app profiling
+
+#### Thursday July 15, 2021 ####
+
+- Completed the API endpoint to trigger a Jenkins agent
+
+#### Friday July 16, 2021 ####
+
+- Working on connecting to the Nvidia NX through Jenkins
+- Working on Integrating Luke`s Jenkins Code in ECR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### Learning Resources and References ###
@@ -196,5 +239,7 @@
 3. [Docker Documentation](https://docs.docker.com/engine/reference/builder/)
 4. [ECR Application Testing flow diagram](https://drive.google.com/file/d/1rnv8dIyr29y6SvSCzZHq5Z-5J0xo3wlz/view?usp=sharing)
 5. [ECR Discussion](https://docs.google.com/document/d/135ZKehdaxrsKMNi4CTNVXJbzZDDNMD9sIFfVVf5NzMc/edit)
+6. [Mid Internship](https://docs.google.com/presentation/d/16kiERiqq-tQBJg4YgfQn4j4VF1rrl0aUIJVfkSNFwoo/edit?usp=sharing)
+
 
 
