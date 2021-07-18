@@ -641,3 +641,11 @@ SnapshotEnsembleClassifier | Testing Acc: 71.01 % | Training Time: 1202.86 s | E
    - Github repo: https://github.com/WZMIAOMIAO/deep-learning-for-image-processing
    - LeNet's design and implementation in pytorch
    - AlexNet's structure and implementation in TensorFlow/Pytorch
+ - Results for ensemble learning based on Resnet50:
+```
+2021-07-18 20:02:25,935 - INFO: FusionClassifier             | Testing Acc: 65.42 % | Training Time: 2233.73 s | Evaluating Time: 19.49 s
+2021-07-18 20:02:25,935 - INFO: VotingClassifier             | Testing Acc: 71.06 % | Training Time: 3123.60 s | Evaluating Time: 19.63 s
+2021-07-18 20:02:25,935 - INFO: BaggingClassifier            | Testing Acc: 67.01 % | Training Time: 2869.60 s | Evaluating Time: 19.51 s
+2021-07-18 20:02:25,935 - INFO: GradientBoostingClassifier   | Testing Acc: 60.38 % | Training Time: 11111.49 s | Evaluating Time: 19.93 s
+2021-07-18 20:02:25,935 - INFO: SnapshotEnsembleClassifier   | Testing Acc: 66.46 % | Training Time: 329.23 s | Evaluating Time: 19.74 s
+```
