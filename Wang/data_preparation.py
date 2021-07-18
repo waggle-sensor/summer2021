@@ -26,5 +26,5 @@ def convert_ogg(path):
 
 
 if __name__ == '__main__':
-    convert_ogg('data/train_short_audio')
+    convert_ogg('data/train_short_audio/')
 
