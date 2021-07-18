@@ -113,7 +113,7 @@ Hello world
    <li> Had a meeting with my mentor </li>
    </ul>
    
-<h3> Wednesday, July 14: <h3>
+<h3> Wednesday, July 14: </h3>
    <ul>
       <li> Fixed my axis for my heat table </li>
       <li> Now, when data is aggregated into the heat table, it will grab the dates and plot data points based on the dates </li>
