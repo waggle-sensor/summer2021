@@ -536,7 +536,8 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 ### Monday, 19th
 -Today's Non-Technical Tasks
 * Presented mid goal for internship
-
+* Updated the summer internship google drive
+  
 -Today's Technical Tasks
 * discussion about docker with yomi and luke
 * Figured out using docker port numbers for multiple instances... thanks yomi and luke...!!!
