@@ -436,6 +436,110 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+### July 12, 2021 (Day 29)
+Updates:
+* Presented Midpoint PowerPoint to entire group. The PowerPoint can be found [here](https://drive.google.com/drive/folders/1jrV_0i8QX6UwJtTfbUvFFpf6ocmNoIms?usp=sharing). 
+* Talked with Nicola on project progress and goals. Resinstated that we need to create labels for the poles, so having lines on the poles is not enough.
+* Ideally we want the lines to create a box around the poles. However, this may not be possible for two reasons: (1) the orientation of the poles makes it difficult to detect parallel lines, (2) the line detector views the pole as one large line. Somes results can be found [here](https://drive.google.com/drive/folders/1jrV_0i8QX6UwJtTfbUvFFpf6ocmNoIms?usp=sharing).
+* Looked into ways to improve object detection using edges and lines. Stumbled upon a paper which uses a technique involving contouring to identify utility poles. The paper 'Image Analysis-Based Automatic Utility Pole Detection for Remote Surveillance' can be found [here](https://ieeexplore-ieee-org.proxy.library.emory.edu/document/7371267). 
+* The author's approach can be described as followed: 
+    (1) Mean-shift segmentation (blob extraction)
+    (2) Quadrilateral extraction using noisy edges
+    (3) Shortlisting trapeziums
+    (4) Orientation-based clustering of trapezium
+    (5) Context based foreground detection
+* I think the authors' quadrilateral extraction may be most useful for my project. Will be helpful in finding and extrapolating poles due to noisy edges and backgrounds.
+
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+
+### July 13, 2021 (Day 30)
+Updates:
+* Developed JNs for contour detection. Since most contours are incomplete (due to noise), the minAreaRect() function is helpful in creating a box encompassing it. The function minAreaRect() was compared to results generated generated from boundRect().
+* Sources: 
+    (1) [Creating Bounding boxes and circles for contours](https://docs.opencv.org/4.5.2/da/d0c/tutorial_bounding_rects_circles.html)
+    (2) [Difference between “Edge Detection” and “Image Contours”](https://stackoverflow.com/questions/17103735/difference-between-edge-detection-and-image-contours#:~:text=if%20it%20helps%2C%20you%20can,need%20to%20be%20closed%20curves.)
+    (3) [Python opencv minAreaRect generates a minimal bounding rectangle](https://www.programmersought.com/article/3831529592/)
+    (4) [OpenCV Minimum Area Rectangle](https://theailearner.com/tag/cv2-minarearect/)
+    (5) [What is the output of minAreaRect(contours)](https://stackoverflow.com/questions/57967420/what-is-the-output-of-minarearectcontours)
+    (6) [Improve image segmentation to create a closed contour surrounding my object](https://stackoverflow.com/questions/54681136/improve-image-segmentation-to-create-a-closed-contour-surrounding-my-object)
+* Luckily, the work I done earlier dividing the images into groups based on dominant color did not go to waste. I still need to parameterize the contour methods and colors/lightings remain factors to consider.
+* The new algorithm involves detecting contours after performing Canny edge detection. One metric for finding the contour for the pole is to use the length of the contours as a metric and finding the maximum length.
+    (1) Change the image to grayscale.
+    (2) Implement blur filter.
+    (3) Implement canny transformation.
+    (4) Implement dilate transformation.
+    (5) Find contours.
+    (6) Determine if contours can be found. If yes, continue.
+        a) If no, return nothing End.
+    (7) Find contours and create minimum-area rectangle. 
+    (8) Determine if rectangle meets conditions (i.e., it actually detects the pole). 
+    If yes, continue.
+        a) If no, return nothing End.
+    (9) Pole detected and annotated. End.
+* The JNs for and the results from this algorithm can be found [here](https://drive.google.com/drive/folders/1BVH0TnKekx930N4GnlHSlkMW-xBiNKlw?usp=sharing).
+* Created OverLeaf for project report and shared with Nicola.
+
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+
+### July 14, 2021 (Day 31)
+Updates:
+* Attended seminar 'Special Presentation: Science Innovations for a Circular Economy Initiative at Argonne' by Dr. Massimilano Delferro.
+* Attended Writing Coach session on Writing Abstracts by Dr. Boomsma.
+* Attended student connects session.
+* Met with Nicola for Office Hours to discuss updates, results, and issues with latest contour method. 
+* Issues that should be addressed and resolved: (1) The leftmost pole cannot be detected properly because of the structure behind it. (2) There are objects (thermometers, shadows, etc) that may interfere with how the rectangle is formed. Some cases, as seen in results, the rectangles encapsulate the nearby objects. 
+* Looked into ways to improve contour detection. 
+* Sources: 
+    (1) [How to merge contours in opencv?](https://www.py4u.net/discuss/240811)
+    (2) [Improve rectangle contour detection in image using OpenCV](https://stackoverflow.com/questions/57125879/improve-rectangle-contour-detection-in-image-using-opencv)
+    (3) [https://stackoverflow.com/questions/42721213/python-opencv-extrapolating-the-largest-rectangle-off-of-a-set-of-contour-poin](https://stackoverflow.com/questions/42721213/python-opencv-extrapolating-the-largest-rectangle-off-of-a-set-of-contour-poin)
+* Google searches led me to think about ways to mute the background / enhance the foreground. Adaptive thresholding was a popular method, but parameterizing all of that would have been really cumbersome. Hence, I looked into the Otsu Binarization method. 
+* Sources: 
+    (1) [How to use the OTSU Threshold in opencv?](https://stackoverflow.com/questions/17141535/how-to-use-the-otsu-threshold-in-opencv)
+    (2) [Otsu thresholding — image binarization](https://hbyacademic.medium.com/otsu-thresholding-4337710dc519)
+* I implemented this into some JNs. The JNs and results can be found [here](https://drive.google.com/drive/folders/1inq1wUoJiNyAbh1tr-tUVJ02WmBMQr6l?usp=sharing). The algorithm is very similar to the Canny-Contour method except replacing the Canny portion.
+* Found a way to detect edges through Canny without parameters. [Source](https://www.pyimagesearch.com/2015/04/06/zero-parameter-automatic-canny-edge-detection-with-python-and-opencv/).
+
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+
+### July 15, 2021 (Day 32)
+Updates:
+* Created presentation and attended CV meeting. The PowerPoint can be found [here](https://drive.google.com/drive/folders/1ggGn8BYL7ohnxapO-o2qJCfECif_ca54?usp=sharing).
+* Looked into alternative ways of detecting contours, which led me to think about forms of image segmentation techniques. I was particularly interested on Means-shift segmentation (mentioned previously by paper) and K-means clustering segmentation (I was familiar with K-means). 
+* Sources: 
+    (1) [Tutorial 3: Image Segmentation](https://ai.stanford.edu/~syyeung/cvweb/tutorial3.html)
+    (2) [Object detection via color-based image segmentation using python](https://towardsdatascience.com/object-detection-via-color-based-image-segmentation-using-python-e9b7c72f0e11#:~:text=Contours,and%20object%20detection%20and%20recognition.)
+    (3) [To Do:Segmenting images and mean shift](http://luthuli.cs.uiuc.edu/~daf/courses/CS-498-DAF-PS/Segmentation.pdf)
+    (4) [Image Segmentation using K Means Clustering](https://www.geeksforgeeks.org/image-segmentation-using-k-means-clustering/)
+    (5) [Introduction to Image Segmentation with K-Means clustering](https://www.kdnuggets.com/2019/08/introduction-image-segmentation-k-means-clustering.html)
+* Developed a JN for K-means. The JN and results can be found [here](https://drive.google.com/drive/folders/1ggGn8BYL7ohnxapO-o2qJCfECif_ca54?usp=sharing).
+* Seongha shared me her [Git repository](https://github.com/waggle-sensor/solar-irradiance-estimation) for UNet. 
+* Sean shared me his [Git repository](https://github.com/seanshahkarami/neon-snow-dataset/tree/main/) on previous work for pole labeling. 
+
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+
+### July 16, 2021 (Day 33 + Weekend)
+Updates:
+* Worked on revamping and finalizing the pole detection algorithm. 
+* The proposed flowchart would look like this:
+    (1) Import Image
+    (2) Extract colors and label image (CANNY, OTSU, NONE).
+    (3) Based on labels, the labeled task will be performed on the image. (ex: if labeled 'CANNY,' the Canny-contour method will be performed on image.)
+    (4) If conditions are not met after the tasks have been performed, the image will be processed by K-Means method. 
+    (5) Return annotated image. End. 
+* Developed the conditions for filtering out poor pole detections. 
+* It appears dimgray, royal blue, and darkslate blue work best with Otsu-Contour, Steel Blue works best with Canny-Contour.
+* Attained a 68.9% accuracy using all photos from the NEON [repository](https://phenocam.sr.unh.edu/webcam/browse/NEON.D19.HEAL.DP1.00042/) from December 2017. 1958 poles were imported and 1350 were detected. Note there were some poles that appeared in images that were taken at night. The program and some results can be found [here](https://drive.google.com/drive/folders/1jPT3-r_vg5lbR1WBx13pHPu-ygEa0-DH?usp=sharing). The colors of the annotations are appropriately labeled: Red = Canny, Green = Kmeans, Blue = Otsu.
+
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+
+
+
 
 
 
