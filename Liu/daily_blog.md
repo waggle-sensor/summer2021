@@ -592,3 +592,60 @@ ValueError: optimizer got an empty parameter list
 | vgg19_bn | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 2.93E-03 | 54.5 | 104 | 17.1 | 9.56 |
 | mobilenet_v2 | float16 | [(1, 3, 224, 224)] | {'fp16_mode': True} | 0.00E+00 | 69.2 | 830 | 14.4 | 1.53 |
 
+## Week 10 (July 12 to July 16)
+### Monday July 12, 2021
+#### Work Done:
+ - Prepare for the presentation of the mid-term progress of the anytime DNN project
+ - Have a meeting with the ML team to discuss the progress and next steps
+ - Do some experiments to compare the size of original model and quantized model
+   - One observation is that the model size is not reduced as expected
+     - For example, for Resnet152: 
+       - FP32-based model size: 241.7MB
+       - FP16-based model size: 182.7MB
+       - INT8-based model size: 185.9MB
+
+### Tuesday July 13, 2021
+#### Work Done:
+ - Train ensemble network based on [Ensemble-Pytorch](https://github.com/TorchEnsemble-Community/Ensemble-Pytorch)
+   - Image Classification CNN model on CIFAR10: classification_cifar10_cnn.py
+     - Fusion, Voting, Bagging, GradientBoosting, SnapshotEnsemble
+
+### Wednesday July 14, 2021
+#### Work Done:
+ - Get results for training ensemble networks for image classification:
+```
+FusionClassifier | Testing Acc: 79.01 % | Training Time: 2367.75 s | Evaluating Time: 1.70 s
+
+VotingClassifier | Testing Acc: 78.48 % | Training Time: 11839.88 s | Evaluating Time: 1.50 s
+
+BaggingClassifier | Testing Acc: 77.30 % | Training Time: 12244.02 s | Evaluating Time: 1.50 s
+
+GradientBoostingClassifier | Testing Acc: 79.09 % | Training Time: 16477.36 s | Evaluating Time: 1.47 s
+
+SnapshotEnsembleClassifier | Testing Acc: 71.01 % | Training Time: 1202.86 s | Evaluating Time: 1.46 s
+```
+
+### Thursday July 15, 2021
+#### Work Done:
+ - Test the code shared by Aji about the ALART project
+ - Learn the design and implementation of FasterRCNN object detection in Pytorch
+   - Github repo: https://github.com/WZMIAOMIAO/deep-learning-for-image-processing/tree/master/pytorch_object_detection/faster_rcnn
+   - RCNN, FastRCNN, FasterRCNN's development
+   - source code implamentation:
+     - backbone: resnet50_fpn, mobilenetv2
+     - RPN (Region Proposal Network)
+
+### Friday July 16, 2021
+#### Work Done:
+ - Learn the design and implementation of image classification in pytorch and tensorflow
+   - Github repo: https://github.com/WZMIAOMIAO/deep-learning-for-image-processing
+   - LeNet's design and implementation in pytorch
+   - AlexNet's structure and implementation in TensorFlow/Pytorch
+ - Results for ensemble learning based on Resnet50:
+```
+2021-07-18 20:02:25,935 - INFO: FusionClassifier             | Testing Acc: 65.42 % | Training Time: 2233.73 s | Evaluating Time: 19.49 s
+2021-07-18 20:02:25,935 - INFO: VotingClassifier             | Testing Acc: 71.06 % | Training Time: 3123.60 s | Evaluating Time: 19.63 s
+2021-07-18 20:02:25,935 - INFO: BaggingClassifier            | Testing Acc: 67.01 % | Training Time: 2869.60 s | Evaluating Time: 19.51 s
+2021-07-18 20:02:25,935 - INFO: GradientBoostingClassifier   | Testing Acc: 60.38 % | Training Time: 11111.49 s | Evaluating Time: 19.93 s
+2021-07-18 20:02:25,935 - INFO: SnapshotEnsembleClassifier   | Testing Acc: 66.46 % | Training Time: 329.23 s | Evaluating Time: 19.74 s
+```

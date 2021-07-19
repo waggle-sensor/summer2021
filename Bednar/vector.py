@@ -45,8 +45,8 @@ while(1):
         cv.imwrite('opticalfb.png',frame2)
         cv.imwrite('opticalhsv.png',bgr)
     prvs = next
-    flow_tensor = cv.calcOpticalFlowFarneback( frame1, # last frame (in grayscale) 
-                                            frame2, # the current frame (in grayscale)
+    flow_tensor = cv.calcOpticalFlowFarneback( prvs, # last frame (in grayscale) 
+                                            next, # the current frame (in grayscale)
                                             None,
                                             0.5, # pyramid scale
                                             3,   # levels 
