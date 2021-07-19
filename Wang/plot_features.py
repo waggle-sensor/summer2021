@@ -64,17 +64,48 @@ def show_tonnetz(path):
 
 
 def show_tempogram(path):
-    librosa_audio, librosa_sample_rate = librosa.load(path, res_type='kaiser_fast')
+    y, sr = librosa.load(path)
+    onset_env = librosa.onset.onset_strength(y, sr=sr)
+    tempo = librosa.beat.tempo(onset_envelope=onset_env, sr=sr)
+
+    import scipy.stats
+    prior = scipy.stats.uniform(30, 300)  # uniform over 30-300 BPM
+    utempo = librosa.beat.tempo(onset_envelope=onset_env, sr=sr, prior=prior)
+
+    dtempo = librosa.beat.tempo(onset_envelope=onset_env, sr=sr, aggregate = None)
+    # Dynamic tempo with a proper log-normal prior
+    prior_lognorm = scipy.stats.lognorm(loc=np.log(120), scale=120, s=1)
+    dtempo_lognorm = librosa.beat.tempo(onset_envelope=onset_env, sr=sr, aggregate = None,prior = prior_lognorm)
+
+    # Convert to scalar
+    tempo = tempo.item()
+    utempo = utempo.item()
+    # Compute 2-second windowed autocorrelation
     hop_length = 512
-    oenv = librosa.onset.onset_strength(y=librosa_audio, sr=librosa_sample_rate, hop_length=hop_length)
-    tempogram = librosa.feature.tempogram(onset_envelope=oenv, sr=librosa_sample_rate,
-                                                           hop_length=hop_length)
-    plt.figure(figsize=(12, 4))
-    librosa.display.specshow(np.abs(tempogram), sr=librosa_sample_rate, hop_length=hop_length,
-                             x_axis = 'time', cmap = 'magma')
-    plt.title('tempogram')
-    plt.savefig('feature_plot/tempogram.png')
-    plt.show()
+    ac = librosa.autocorrelate(onset_env, 2 * sr // hop_length)
+    freqs = librosa.tempo_frequencies(len(ac), sr=sr, hop_length = hop_length)
+    # Plot on a BPM axis.  We skip the first (0-lag) bin.
+    fig, ax = plt.subplots()
+    ax.semilogx(freqs[1:], librosa.util.normalize(ac)[1:], label = 'Onset autocorrelation', basex = 2)
+    ax.axvline(tempo, 0, 1, alpha=0.75, linestyle='--', color='r', label = 'Tempo (default prior): {:.2f} BPM'.format(tempo))
+    ax.axvline(utempo, 0, 1, alpha=0.75, linestyle=':', color='g', label = 'Tempo (uniform prior): {:.2f} BPM'.format(utempo))
+    ax.set(xlabel='Tempo (BPM)', title='Static tempo estimation')
+    ax.grid(True)
+    ax.legend()
+    fig.savefig('tempogram.png')
+    fig.show()
+    # Plot dynamic tempo estimates over a tempogram
+    fig, ax = plt.subplots()
+    tg = librosa.feature.tempogram(onset_envelope=onset_env, sr=sr, hop_length = hop_length)
+    librosa.display.specshow(tg, x_axis='time', y_axis='tempo', cmap='magma', ax=ax)
+    ax.plot(librosa.times_like(dtempo), dtempo,color = 'c', linewidth = 1.5, label = 'Tempo estimate (default prior)')
+    ax.plot(librosa.times_like(dtempo_lognorm), dtempo_lognorm, color = 'c', linewidth = 1.5, linestyle = '--',
+            label = 'Tempo estimate (lognorm prior)')
+    ax.set(title='Dynamic tempo estimation')
+    ax.legend()
+    fig.savefig('dynamic_tempogram.png')
+    fig.show()
+
 
 def show_fourier_tempogram(path):
     librosa_audio, librosa_sample_rate = librosa.load(path, res_type='kaiser_fast')
@@ -86,21 +117,30 @@ def show_fourier_tempogram(path):
 
     # Compute the auto-correlation tempogram, unnormalized to make comparison easier
     ac_tempogram = librosa.feature.tempogram(onset_envelope=oenv, sr=librosa_sample_rate, hop_length = hop_length, norm = None)
+    fig, ax = plt.subplots(nrows=3, sharex=True)
+    ax[0].plot(librosa.times_like(oenv), oenv, label='Onset strength')
+    ax[0].legend(frameon=True)
+    ax[0].label_outer()
+    librosa.display.specshow(np.abs(fourier_tempogram), sr=librosa_sample_rate, hop_length=hop_length, x_axis = 'time', y_axis = 'fourier_tempo', cmap = 'magma',ax = ax[1])
+    ax[1].set(title='Fourier tempogram')
+    ax[1].label_outer()
+    librosa.display.specshow(ac_tempogram, sr=librosa_sample_rate, hop_length=hop_length,x_axis = 'time', y_axis = 'tempo', cmap = 'magma',ax = ax[2])
+    ax[2].set(title='Autocorrelation tempogram')
+
     plt.figure(figsize=(12, 4))
     librosa.display.specshow(np.abs(ac_tempogram), sr=librosa_sample_rate, hop_length=hop_length,
                              x_axis = 'time',cmap = 'magma')
-    plt.title('fourier_tempogram')
-    plt.savefig('feature_plot/fourier_tempogram.png')
-    plt.show()
+    fig.savefig('fourier_tempogram.png')
+    fig.show()
 
 if __name__ == '__main__':
-    show_chroma('test_audio_10/acafly/XC51408.ogg')
-    show_mel('test_audio_10/yerwar/XC138298.ogg')
-    show_mfcc('test_audio_10/acafly/XC51408.ogg')
-    show_contrast('test_audio_10/acafly/XC51408.ogg')
-    show_tonnetz('test_audio_10/acafly/XC51408.ogg')
+    # show_chroma('test_audio_10/acafly/XC51408.ogg')
+    # show_mel('test_audio_10/yerwar/XC138298.ogg')
+    # show_mfcc('test_audio_10/acafly/XC51408.ogg')
+    # show_contrast('test_audio_10/acafly/XC51408.ogg')
+    # show_tonnetz('test_audio_10/acafly/XC51408.ogg')
     show_tempogram('test_audio_10/acafly/XC51408.ogg')
-    show_fourier_tempogram('test_audio_10/acafly/XC51408.ogg')
+    # show_fourier_tempogram('test_audio_10/acafly/XC51408.ogg')
 
 
 
