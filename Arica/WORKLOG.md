@@ -594,3 +594,13 @@ I had a good week. Didn't get a ton of work done, but a lot of important informa
 
 
 -------
+## Week 9: 7/19 to 7/24
+-------
+
+### Monday, 7/19 (7 Hours worked)
+
+**Today's non-technical work:**
+* Attended Midpoint presentation round 2
+* My breaker node was down the whole day, so I started working on my White paper. 
+
+--------
