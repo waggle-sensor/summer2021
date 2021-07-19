@@ -1,4 +1,13 @@
 # Week 8
+**July 18th**
+1. Study scaper and follow the tutorial
+2. Made mixed audio clip on 3-species subdataset
+
+**July 19th**
+1. 2021 Summer Intern progress report presentation
+2. 
+
+# Week 8
 **July 12th**
 1. Debugging svm with tempogram feature
 2. Meet with Rick.
@@ -25,8 +34,13 @@
 
 **July 17th**
 1. Study the scaper tutorial
-2. Try to make a mix dataset based on the 3 species sub-dataset
-3. Prepare for the presentation on Monday
+2. Prepare for the presentation on Monday
+
+**July 1tth**
+1. Study the scaper tutorial
+2. Convert the ogg file to wave in order to make mixed polyphonic dataset on BirdCLEF
+3. Try to make a mix dataset based on the 3 species sub-dataset
+4. Prepare for the presentation on Monday
 
 
 
