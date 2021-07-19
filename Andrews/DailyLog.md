@@ -270,3 +270,9 @@
         -> Does the motion we see from the ground match up with what we see with GOES? 
  - Q: What GOES 16 band/bands would work best for optical flow?
 
+## Week 8 
+### July 19
+ - Practiced/gave midpoint presentation
+ - Required EVS Safety Orientation
+ - TRACER Meeting
+ - Cleaned up and tested the code for extracting the array of pixels
