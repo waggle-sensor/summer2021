@@ -40,24 +40,40 @@ Dense optical flow fields are created using the `cv.calcOpticalFlowFarneback()` 
 
 LK optical flow fields are created using the `cv.calcOpticalFlowPyrLK()` method. This algorithm is meant for sparser feature sets.
 I used a short clip of my pen moving across a white background to do some basic validation of my slightly modified LK algorithm:
-https://user-images.githubusercontent.com/78514700/124178018-ded53980-da65-11eb-8db9-e160cb82094d.mov
+![mov](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK%20algo%20validation%20trimmed.mov)
 
 
 
 ## Reflectivity Data
-I began by using the same .avi video as those I used for the dense optical flow algorithm. However, I quickly realized these plots were not well-suited to this algorithm (Fig. 14-15). In particular, all the starting point for the flow began on the plot boundaries, title, labels, or legend. This likely has to do with the `cv.goodFeaturesToTrack()` method, which decides the points to track. So, I manually cropped the five images then ran the algorithm (Fig. 16-17). This yielded better results, as the points that were being tracked appeared to be register movement. However, they points were not in our region of interest, about 25 meters above the radar. So, I further cropped the images of the radar data (Fig. 18). Then, I 
+I began by using the same .avi videos as those I used for the dense optical flow algorithm. However, I quickly realized the plots in these videos were not well-suited to this algorithm (Fig. 14-15). In particular, all the starting point for the flow began on the plot boundaries, title, labels, or legend. This likely has to do with the `cv.goodFeaturesToTrack()` method, which decides the points to track. So, I manually cropped the five images then re-ran the algorithm (Fig. 16-17). This yielded better results, as the points that were being tracked appeared to be register movement. However, the points were not in our region of interest, about 25 meters above the radar. So, I further cropped the images of the radar data (Fig. 18), to little improvement. I did start to see substantial improvement in tracking after adding a non-null `mask` parameter, which [specifies an optional region of interest](https://docs.opencv.org/3.4/dd/d1a/group__imgproc__feature.html#ga1d6bb77486c8f92d79c8793ad995d541) for corner detection, to the aforementioned `cv.goodFeaturesToTrack()` method. Specifically, I changed the default:
+
+`p0 = cv.goodFeaturesToTrack(old_gray, mask = None, **feature_params)` 
+
+to:
+
+`p0 = cv.goodFeaturesToTrack(cv.cvtColor(old_frame[start:end], cv.COLOR_BGR2GRAY), mask = cv.cvtColor(old_frame[start:end], cv.COLOR_BGR2GRAY), **feature_params)`,
+
+where `start:end` specifies the range of height pixels where tracking corners are identified. Results for several LK algorthim runs with non-null masks are shown (Fig. 19-26), as are gifs of the most promising ones (Fig. 27-30). I toggled parameters, such as `qualityLevel` (Fig. 21-22), for the [Shi-Tomasi corner detection](https://docs.opencv.org/3.4/d8/dd8/tutorial_good_features_to_track.html), as well.
+
+
+ 
 
 |  |  |
 |---|---|
-|![14](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv_0b.png) ***Figure 14.** First attempt at Lucas-Kanade (LK) algorithm with reflectivity data.* | ![15](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv_0.png) ***Figure 15.** First attempt at LK algorithm with reflectivity data zoomed into the region less than 25 meters above the radar, our area of interest.*|
-|![16](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv.png) ***Figure 16.** Cropped, zoomed-in first run at LK algorithm.*|![17](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_uncropped_cropped_output_opticalhsv_0.png) ***Figure 17.** Uncropped, zoomed-in first run at LK algorithm.*|
-
+|![14](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv_0b.png) ***Figure 14.** Preliminary attempt at Lucas-Kanade (LK) algorithm with reflectivity data.* | ![15](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv_0.png) ***Figure 15.** Preliminary attempt at LK algorithm with reflectivity data zoomed into the region less than 25 meters above the radar, our area of interest.*|
+|![16](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_uncropped_cropped_output_opticalhsv_0.png) ***Figure 16.** First run at LK algorithm on cropped images.*|![17](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_cropped_output_opticalhsv.png) ***Figure 17.** First run at LK algorithm on cropped, zoomed-in images.*|
+|![18](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_output_opticalhsv_2.png)  ***Figure 18.** Run at LK algorithm, recropped. Mask = None.* | ![19](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_output_opticalhsv_0_100.png) ***Figure 19.** Mask = 0:100.*|
+|![20](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_output_opticalhsv_100_200.png) ***Figure 20.** Mask = 100:200*| ![21](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_output_opticalhsv_100_300.png) ***Figure 21.** Mask = 100:300.*|
+|![22](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_output_opticalhsv_100_300_2.png) ***Figure 22.** Mask = 100:300; qualityLevel = 0.4 instead of default, 0.2.* |![23](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_output_opticalhsv_200_300.png) ***Figure 23.** Mask = 200:300.*|
+|![24](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_output_opticalhsv_300_400.png))***Figure 24.** Mask = 300:400*| ![25](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_output_opticalhsv_300_420.png) ***Figure 25.** Mask = 300:420.*|
+|![26](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_output_opticalhsv_0_420.png)***Figure 26.** Mask = 0:420, the entire height of the images. This mask gives the same flow as shown in Fig. 18, which doesn't have a mask.*|![27](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_100_200.gif)***Figure 27.** Mask = 100:200.*|
+|![28](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_100_300.gif) ***Figure 29.** Mask = 100:300*|![29](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_300_400.gif) ***Figure 29.** Mask = 300:400*|
+|![30](https://github.com/waggle-sensor/summer2021/blob/main/Razin/Lucas-Kanade%20Optical%20Flow%20in%20OpenCV%20on%20Radar%20Data/LK_vel_tripple_cropped_300_420.gif)***Figure 30.** Mask = 300:420*||
 
 
 
 # Questions to Investigate
- - Will there be any practical difference in how we process LiDAR data compared to this RADAR data?
- - What's the significance (if any) of the particular colors in these dense optical flow images? How should we interpret these colors? OpenCV gives little information about this, and their example is much more simple with just three distinct color regions.
+ - Will there be any practical difference in how we process LiDAR data compared to these RADAR data?
  - What is the most useful measurement/data type for diagnosing optical flow: reflectivity data, differential reflectivity data, or velocity data?
     - What's the differnce between reflectivity data and differential reflectivity data? "Differential Reflectivity is the logarithm ratio of the horizontally polarized reflectivity to the vertically polarized reflectivity."
  - How are these data (or rather, the images we generate from them) both well-suited (+) and ill-suited (-) for diagnosing optical flow?

@@ -159,12 +159,54 @@
 - EDU Weekly Seminar: Pathways to Science Career Panel
 - Made the required mini-presentation for the Student Connects meeting tomorrow
 - Asked Bobby for help dealing with the “nans” in xarray dataset creating the plotting issue with matplotlib
-    * One solution: create x amount of evenly spaced height bins for an array of size time by number of height bins. Will hold scan times and average reflectivity between 2 height bins
+    * One solution: create x amount of evenly spaced height bins for an array of size time by number of height bins. Array will hold scan times and the average reflectivity between 2 height bins
     * Code works for all the days and sets of scans I’ve tested thus far
 - Cleaned up the plots
 
 ### July 1 
 - Weekly Clouds/CV group meeting
-- Student Connects presentations 
-- 
+- Student Connects presentations
+- CELS Student Lecture Series
+- Looked into numpy.interp() and scipy.interpolate()
+    * Scott suggested it could be useful for the height axis
+    * Seems like it certainly could be useful because as VCP changes the heights of the gates will change and the number of sweeps in a scan can also change
+    * Can't figure out how I'd apply it to my code
+- xarray has interpolation functions too
+
+### July 2
+- Found a better way to get rid of the duplicate sweeps from SAILS
+    * I want the first of the sweeps (one has radial velocity and one does not)
+    * Tried selecting only the sweeps with radial velocity data first --> I suspect it won't work for all cases (SAILS) and it gives the second sweep for a given gate height so this didn't work
+    * Tried using the median of the elevation angles in each sweep to identify the unique sweeps and then extract_sweeps to get a radar object with only the unique sweeps (based on: https://gist.github.com/deeplycloudy/d5d4f137dd7496434e09f1fbc2122b0f). Tested it on a few sets of scans and it seems to works well. 
+- Still trying to figure out how to best use interpolation
+
+## Week 6 
+### July 6 
+ - Testing to make sure everything in code works
+    * Nexradaws fails if there are tar files in amazon bucket
+    * Rewrote code without nexradaws library 
+    * Everything else seems to work
+ - Next steps:
+    * Still need to interpolate to a constant height 
+    * For the same pixel (lat/lon of sites) we want data from GOES
+    * Want to clean up and get code on the edge code repository (ECR)
+    * Looked into ECR plugin example on GitHub: https://github.com/waggle-sensor/plugin-numpy-example 
+- Mid-Point Visit with Student Connects leader
+
+### July 7 
+ - EDU Weekly Seminar: Creating Effective Oral & Poster Presentations
+ - Adjusted code for GOES 16 data from AWS to account for the fact that the default scan mode of the ABI changed in April 2019
+    * Now can grab both scan modes (and therefore dates pre April 2019) without issue
+ - Want level 1b data (not level 2)
+    * Channel 16 (13.3 microns) → 13 micron brightness temps 
+    * Channel 1 (0.47 microns) → albedo
+    * Channel 13 (10.3 microns) → clean IR temps at ~10 microns
+    * Level 1b data just gives us raw radiances, do we have to convert to something else (reflectance/brightness temp) or are we just using the raw values?
+ - The native ABI coordinates are East/West scanning angle and North/South elevation angle, both in radians relative to where the satellite is. We want lat/lon coordinates
+    * Working on convert to lat/lon so I can grab the pixel closest to the lat/lon of the two sites we’re interested in 
+    * 
+- Helpful satellite links for reference:
+    * https://www.goes-r.gov/downloads/resources/documents/Beginners_Guide_to_GOES-R_Series_Data.pdf 
+    * https://www.goes-r.gov/mission/ABI-bands-quick-info.html 
+
 

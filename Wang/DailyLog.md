@@ -1,11 +1,25 @@
 # Week 6
-**June 28st**
+**June 28th**
 1. Completed bird_song_classification_v2
 2. Train sample dataset by using features from mfcc, mel, and fourier_tempgram 
 ![Screen Shot 2021-06-28 at 11 41 23 PM](https://user-images.githubusercontent.com/44412313/123733928-648c9580-d86a-11eb-8278-c0f1a31f727a.png)
 3. Meet with Emily for update.
 
+**June 29th**
+1. Meet with audio group team
+2. Meet with Rick
+3. Working on feature extraction code
 
+**June 30th**
+1. Working on the SVM model for classification
+2. Keep woking on feature extraction script that can save the features first
+
+**July 1st**
+1. Runing the updatde feature extraction script and train on the saved results.
+
+**July 2nd**
+1. Clean up the feature extraction code and compare the results so far
+<img width="1030" alt="Screen Shot 2021-07-03 at 7 32 54 AM" src="https://user-images.githubusercontent.com/44412313/124357560-009eff80-dbd1-11eb-94f4-aace0f388ca9.png">
 
 # Week 5
 **June 21st**
