@@ -2,6 +2,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.utils import shuffle
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 from detect_features import add_features
 from detect_features import append_df_to_excel
 
@@ -20,11 +21,11 @@ def categorize_ratings(rating):
         :return: new rating
     '''
 
-    if (rating >= 1 and rating < 4):
+    if (rating >= 1 and rating < 4.4):
         rating = 0
-    elif (rating >= 4 and rating < 6):
+    elif (rating >= 4.4 and rating < 5.3):
         rating = 1
-    elif (rating >= 6 and rating < 7):
+    elif (rating >= 5.3 and rating < 7):
         rating = 2
 
     return rating
@@ -67,7 +68,7 @@ def check_num_per_classification(df, train, test):
         one count: 21
         two_count: 29
         
-        63 percent accuracy
+        55 percent accuracy
     '''
 
     '''
@@ -91,7 +92,7 @@ def check_num_per_classification(df, train, test):
         one count: 42
         two_count: 7
         
-        73 percent accuracy  
+        81 percent accuracy  
     '''
 
     '''
@@ -114,7 +115,7 @@ def check_num_per_classification(df, train, test):
         one count: 26
         two_count: 15    
         
-        47 percent accuracy
+        54 percent accuracy
     '''
 
 
@@ -122,14 +123,21 @@ def create_random_forest():
     df = pd.read_excel(
         r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx')
 
+    # plt.hist(df['Order'], bins = 10)
+    # plt.show()
+
     # categorize ratings
     df['Order'] = df['Order'].apply(categorize_ratings)
+
+    plt.hist(df['Order'], bins = 3)
+    plt.show()
 
     # normalize all values
     column_names = ['SED', 'Entropy', 'sdValue', 'sdSat', 'sdHue', 'Mean Value', 'Mean Hue', 'Mean Sat', 'ED']
 
     for i in range(len(column_names)):
         df[column_names[i]] = (df[column_names[i]] - df[column_names[i]].min()) / (df[column_names[i]].max() - df[column_names[i]].min())
+
 
     # shuffle data set so that the training and test data can have a mix of all labels
     df = shuffle(df)
@@ -148,17 +156,7 @@ def create_random_forest():
 
     # create a list of the feature columns
 
-    # deleting edge density and entropy is making no difference
-    # deleting sdValue increases accuracy
-    # deleting sdSat increases accuracy even more
-    # deleting mean value increases accuracy
-    #
-
-    # del df['Mean Value']
-    # del df['sdSat']
-    # del df['sdValue']
-    del df['ED']
-    features = df.columns[2:10]
+    features = df.columns[2:11]
     print(features)
 
     features_train = train[features]
@@ -175,7 +173,7 @@ def create_random_forest():
     model.fit(features_train, labels_train)
 
     accuracy = model.score(features_test, labels_test)
-    print(accuracy) # 81.46 percent accuracy
+    print(accuracy) # 54 percent accuracy
 
 def main():
     create_random_forest()

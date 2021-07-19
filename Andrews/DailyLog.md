@@ -209,4 +209,64 @@
     * https://www.goes-r.gov/downloads/resources/documents/Beginners_Guide_to_GOES-R_Series_Data.pdf 
     * https://www.goes-r.gov/mission/ABI-bands-quick-info.html 
 
+### July 8 
+- Weekly Clouds and CV group meeting
+    * Want to grab a 10 x 10 array of pixels over the SGP site rather than a single pixel so maybe we can look at flow over the top
+- DOE Office of Science Seminar
+- Tutorial/office hours for plugin development/getting code on ECR
+    * Learned how to get code onto ECR (used the numpy example template on github) 
+    * Definitely want to make a plugin --> we want to collect data from GOES and NEXRAD at the nodes which can be input to ML codes (could be useful for ex. Seongha's recent work: https://www.osti.gov/biblio/1798308)
+    * Will try to edit the example with some of my code next week and ask questions
+
+### July 9 
+- Worked on converting the x,y coords to lat/lon
+- Tried converting using the equations given in: https://www.goes-r.gov/users/docs/PUG-L1b-vol3.pdf, then added lat/lon to the dataframe. Didn’t seem like there’s a straightforward way to select by lat/lon
+- Tried pyproj
+    * Made a map object for the geostationary projection and then transformed the           
+    * Coordinates to lat/lon. Lat/lon values really close to the above method
+- Tried using Cartopy
+    * For basic georeferenced plotting want geostationary projection
+    * To return a pixel value for a given lat/lon: https://stackoverflow.com/questions/66433948/get-nearest-pixel-value-from-satellite-image-using-latitude-longitude-coordinate 
+- Next week:
+    * Figure out lat/lon conversion so can select 10x10 pixels (do we want just the pixel values or the pixels themselves?)
+    * Work on getting radar code into ECR
+
+## Week 7 
+### July 12
+- Midpoint Presentations (round 1)
+- Writing Coach Meeting: Workshop for Writing Abstracts
+- Read Seongha's paper 
+- Read about Amazon S3
+- Trying to extract pixels/pixel values based on converted (lat/lon) coordinates
+    * Converted x,y satellite coords (in radians) to lat/lon using Cartopy
+ 
+ ### July 13
+ - Kayak event
+
+### July 14
+ - EDU Weekly Seminar: Science Innovations for a Circular Economy Initiative at Argonne
+ - TRACER Meeting
+ - Satellite code - select and download GOES 16 or 17 images by band/channel between the desired start and end time from AWS S3 
+    * Fixed time selection in satellite code, cleaned it up
+    * Made very similar script but with the option to download all 16 bands (ABI-L2-MCMIPC) rather than just one at a time 
+    * Made some basic georeferenced sat plots with cartopy
+    * Still stuck on extracting pixels around the SGP lat/lon
+
+### July 15
+ - CELS Student Lecture Series 
+ - Clouds/CV Meeting
+ - Started the powerpoint for Monday's midpoint presentation
+ - Finally figured out a method to extract 10x10 grids (based on: https://github.com/blaylockbk/pyBKB_v3/blob/master/demo/Nearest_lat-lon_Grid.ipynb)
+
+### July 16 
+ - Worked on midpoint presentation PowerPoint for Monday
+ - Forecasting and meeting for TRACER
+ - Required SEC 160 TMS Training
+ - Next steps:
+    * Clean up the code for the grids
+    * Get code into ECR
+    * Work with Seongha to look at that day at the SGP
+    * Do optical flow on the data and compare it to what Matt is seeing
+        -> Does the motion we see from the ground match up with what we see with GOES? 
+ - Q: What GOES 16 band/bands would work best for optical flow?
 

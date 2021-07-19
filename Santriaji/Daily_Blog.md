@@ -78,3 +78,20 @@ Goal : Codesign profiling block with ECR Team (Week 2 and Week 3).
 - Meeting with ECR. Slides: https://docs.google.com/presentation/d/15NMMjdlLsyYLX8HQi8ZqNIiQkNedhJUy4pTkE0aS5LY/edit?usp=sharing
 - Found that the assumption of what I can control and suggest for the scientist may differ from the one that is planned.
 - To avoid misunderstood in assumption, I plan to write a really detail algorithm and design document such that we are in the same page.
+
+## Week 4-5 (07/5 - 07/16)
+Goal : Writing the code for controlling the DNNs plugin.
+
+### Tuesday 07/05
+- Meeting with ECR.
+- Do profiling for object detection.
+
+### Wednesday 07/06
+- Meeting for controller.
+- Coding for controller.
+
+### Thursday 07/07
+- Coding for controller.
+
+### Friday 07/08
+- Coding for controller.

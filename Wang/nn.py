@@ -1,0 +1,136 @@
+# this script can extract features from selected feature extractio method
+# and then train the model
+
+import IPython.display as ipd
+import numpy as np
+import pandas as pd
+import librosa
+import librosa.display
+import matplotlib
+
+matplotlib.use('agg')
+import matplotlib.pyplot as plt
+from scipy.io import wavfile as wav
+import os
+from datetime import datetime
+
+from sklearn import metrics
+from sklearn.preprocessing import LabelEncoder
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten
+from tensorflow.keras.layers import Convolution2D, Conv2D, MaxPooling2D, GlobalAveragePooling2D
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.callbacks import ModelCheckpoint
+import np_utils
+from sklearn.model_selection import train_test_split
+import types
+import functools
+from individual_feature import extract_features_mfcc, extract_features_mel, extract_features_fourier_tempogram, extract_features_tempogram, extract_features_chroma, extract_features_contrast, extract_features_tonnetzs
+
+from waggle import plugin
+
+def copy_func(f):
+    """Based on http://stackoverflow.com/a/6528148/190597 (Glenn Maynard)"""
+    g = types.FunctionType(f.__code__, f.__globals__, name=f.__name__,
+                           argdefs=f.__defaults__,
+                           closure=f.__closure__)
+    g = functools.update_wrapper(g, f)
+    g.__kwdefaults__ = f.__kwdefaults__
+    return g
+
+
+def feature_extraction(extraction_method):
+    if not (extraction_method == "extract_features_mfcc" or extraction_method == "extract_features_mel" or extraction_method == "extract_features_fourier_tempogram"
+            or extraction_method == "extract_features_chroma" or extraction_method == "extract_features_tempogram" or extraction_method == "extract_features_contrast"
+            or extraction_method == "extract_features_tonnetzs"):
+        raise Exception("Please select a valid method")
+
+    if extraction_method == "extract_features_mfcc":
+        extraction = copy_func(extract_features_mfcc)
+    if extraction_method == "extract_features_mel":
+        extraction = copy_func(extract_features_mel)
+    if extraction_method == "extract_features_fourier_tempogram":
+        extraction = copy_func(extract_features_fourier_tempogram)
+    if extraction_method == "extract_features_chroma":
+        extraction = copy_func(extract_features_chroma)
+    if extraction_method == "extract_features_contrast":
+            extraction = copy_func(extract_features_contrast)
+    if extraction_method == "extract_features_tonnetzs":
+            extraction = copy_func(extract_features_tonnetzs)
+
+    features = []
+    # Set the path to the full BirdSound dataset
+    full_dataset_path = 'test_audio_3'
+    metadata = pd.read_csv('test_3.csv')
+    for index, row in metadata.iterrows():
+        file_name = os.path.join(os.path.abspath(full_dataset_path), str(row['primary_label']) + '/',
+                                 str(row['filename']))
+        class_label = row["primary_label"]
+        data = extraction(file_name)
+        features.append([data, class_label])
+        print('parsing' + file_name + '.')
+    return features
+
+
+def get_model_NN(config, output_size):
+    m = Sequential()
+    if config == "extract_features_mfcc":
+        # Construct model
+        m.add(Dense(256, input_shape=(40,)))
+    if config == "extract_features_mel":
+        # Construct model
+        m.add(Dense(256, input_shape=(128,)))
+    if config == "extract_features_fourier_tempogram":
+        m.add(Dense(256, input_shape=(193,)))
+    if config == "extract_features_chroma":
+        m.add(Dense(256, input_shape=(12,)))
+    if config == "extract_features_contrast":
+        m.add(Dense(256, input_shape=(7,)))
+    if config == "extract_features_tonnetzs":
+        m.add(Dense(256, input_shape=(6,)))
+    m.add(Activation('relu'))
+    m.add(Dropout(0.5))
+    m.add(Dense(256))
+    m.add(Activation('relu'))
+    m.add(Dropout(0.5))
+    m.add(Dense(output_size))
+    m.add(Activation('softmax'))
+    m.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer='adam')
+    return m
+
+
+if __name__ == '__main__':
+    input_features = feature_extraction(extraction_method="extract_features_tonnetzs")
+    # Convert into a Panda dataframe
+    features_df = pd.DataFrame(input_features, columns=['feature', 'class_label'])
+
+    # Convert features and corresponding classification labels into numpy arrays
+    X = np.asarray(features_df.feature.tolist())
+    y = np.asarray(features_df.class_label.tolist())
+
+    # Encode the classification labels
+    le = LabelEncoder()
+    yy = to_categorical(le.fit_transform(y))
+
+    # split the dataset
+    x_train, x_test, y_train, y_test = train_test_split(X, yy, test_size=0.2, random_state=42)
+
+    model = get_model_NN("extract_features_tonnetzs", output_size=yy.shape[1])
+
+    # Compile the model
+    num_epochs = 100
+    num_batch_size = 32
+    start = datetime.now()
+    model.fit(x_train, y_train, batch_size=num_batch_size, epochs=num_epochs, validation_data=(x_test, y_test),
+              verbose=1)
+    duration = datetime.now() - start
+    print("Training completed in time: ", duration)
+
+    score = model.evaluate(x_train, y_train, verbose=0)
+    print('train accuracy: {}'.format(score))
+    # experiment.log_metric("train_acc", score)
+
+    score = model.evaluate(x_test, y_test, verbose=0)
+    print('test accuracy: {}'.format(score))
+    # experiment.log_metric("val_acc", score)

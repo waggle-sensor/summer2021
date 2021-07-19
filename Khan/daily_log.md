@@ -242,8 +242,11 @@ so that they are normalized.
   max_features, max_leaf_nodes, min_impurity_decrease, min_impurity_split,
   boostrap, oob_score, n_jobs, random_state, warm_start class_weight, ccp_alpha,
   max_samples
-* created a random forest model that tests splitting orderly ratings into 5 differen
+* created a random forest model that tests splitting orderly ratings into 5 different
   classifications
+  
+--- 
+## Week 6 ##
   
 ### 7/6/2021 ###
 * Attended meeting with CV team
@@ -262,4 +265,62 @@ so that they are normalized.
 * Found that the feature that matters the most is Straight Edge Density, and the feature that
   matters the least is Edge Density
 * TODO: Increase thresholds for edge density calculations so that it only detects thick edges 
-  so that I can increase accurac
+  so that I can increase accuracy
+  
+### 7/8/2021 ### 
+* Attended meeting with CV team
+* Realized that model was overfitting because of the way that my data was split. Most of
+  the data was in the middle catergory meaning that the model was memorizing that
+  each image is most likely in the middle catergory. That is why my accuracy was up to
+  81 percent. However, actually accuracy is about ~55 percent.
+* Attended office hours about plug ins. Created a simple plug in and added it to ECR
+
+### 7/9/2021 ###
+* Prepared presentation for Monday
+* Created model that was split into 5 catergories, accuracy was much lower so decided
+  to stick with the 3 categories and try to increase that accuracy.
+
+----
+## Week 7 ##
+
+### 7/12/2021 ###
+* Practiced Presentation
+* Watched everyone's presentations and presented my own presentation  
+* Created histogram of data distrubted and found the out where I should
+  split data so that the model was not overfitting and the samples were 
+  evenly distributed -> accuracy: 56 percent
+
+### 7/13/2021 ###
+* All day event at Geneva 
+
+### 7/14/2021 ###
+* When I found out that deleting edge density increased accuracy -> that was when I was overfittting
+  the data. Now, when I am not overfitting the data anymore, deleting edge density made no difference
+  to the accuracy.
+  
+* When you 
+    * use all features  -> accuracy : 56.097
+    * delete Mean Hue   -> accuracy: 53.17   (goes down)
+    * delete Mean Sat   -> accuracy: 52.68   (goes down)
+    * delete Mean Value -> accuracy: 55.6    (goes down)
+    * delete sdHue      -> accuracy: 54.14   (goes down)
+    * delete sdSat      -> accuracy: 54.63   (goes down)
+    * delete sdValue    -> accuracy: 56.09   (goes down)
+    * delete Entropy    -> accuracy: 56.097  (goes down)
+    * delete ED         -> accuracy: 53.65   (goes down)
+    * delete SED        -> accuracy: 54.146  (goes down)
+    
+* Rank:
+    1) Mean Sat           (most important)
+    2) Mean Hue
+    3) ED
+    4) sdHue & SED
+    5) sdSat
+    6) Mean Value
+    7) sdValue & Entropy  (least important)
+ 
+* I shouldn't delete any features because they all matter to a certain extent
+  
+* Since the labels, the disorder ratings, were more opinions from people instead 
+  of a fact, I decided to try using an unsupervised machine learning model instead
+  because it would not use the labels.

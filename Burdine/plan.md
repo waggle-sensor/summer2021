@@ -180,3 +180,65 @@
 ### Thursday July 1, 2021 ###
 - Began training a Variational Autoencoder on the NEON Dataset
     * I plan on benchmarking this model against the non-variational autoencoder.
+- Attended CV intern check-in
+
+### Friday July 2, 2021 ###
+- Finished Variational Autoencoder notebook
+    * This notebook can be found [here](https://github.com/waggle-sensor/anomaly-detection/blob/main/NEON%20CVAE.ipynb)
+    * Unfortunately, the varational autoencoder produced very blurry encoded output, which
+      after some investigating in the literature is quite common for VAEs, as they
+      can only encode a single independent feature per dimension. One way of addressing
+      this problem is the use of GANs, however, I don't think using GANs to fine-tune the
+      model would be a good idea, especially if the model is going to be modified to
+      train itself. GANs can create instabilities in the model due to feedback loops, which
+      I would like to avoid.
+
+## Week 5 ##
+### Tuesday July 6, 2021 ###
+- Attended CV intern check-in
+- Worked on fine-tuning the Attention-based CAE (notebook is [here](https://github.com/waggle-sensor/anomaly-detection/blob/main/NEON%20CAE%20with%20Grad-CAM%20Attention.ipynb))
+- Began reading papers on online model training (adaptive learning rate algorithms)
+
+### Wednesday July 7, 2021 ###
+- Began work on online simulator for autoencoder models
+- Did some "cleaning up" of the motion detector plugin code. 
+
+### Thursday July 8, 2021 ###
+- Attended CV intern check-in
+- Continued work on online simulator for autoencoder models
+
+### Friday July 9, 2021 ###
+- Worked on presentation materials for Monday's intern presentation
+
+## Week 6 ##
+### Monday July 12, 2021 ###
+- Attended Weekly Team Meeting (mini presentations)
+- Attended Waggle/SAGE meeting
+    * Presented my slides (links are below):
+    * [[Latex Source]]()
+    * [[Presentation Slides]]()
+- Continued work on online simulator
+
+### Tuesday July 13, 2021 ###
+- Attended Waggle/Sage event
+
+### Wednesday July 14, 2021 ###
+- Continued work on online simulator
+    * Spent most of the morning trying to chase down a division error that was
+      giving different predictions in the simulator compared to the original model.
+- Began formatting a poster in Latex.
+
+### Thursday July 15, 2021 ###
+- Continued work on the online simulator (ran first simulation with a small number of 
+  buffered examples):
+    * My initial results were not great; the AUC indicated only a slight improvement
+      upon random guessing.
+    * Increasing the buffer size slightly increases the performance, so I expect that 
+      increasing it will eventually cause the results to converge to the model trained
+      on the full dataset. I may also experiment with multiple steps per example
+    * Another possibility worth exploring is the use of an adaptive gamma filter. I can modify the estimators found in [this paper](https://amstat.tandfonline.com/doi/abs/10.1080/00031305.2016.1209129) to use a moving average sum.
+
+### Friday July 16, 2021 ###
+- Ran another simulation (this time with greater buffer size) and obtained slightly larger AUC.
+- Began work on implementing an adaptive gamma filter to see if there are any performance gains
+- Continued work on my poster. 

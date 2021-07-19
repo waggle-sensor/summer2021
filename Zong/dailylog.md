@@ -72,3 +72,60 @@ Hello world
    - Created my own shortcut on the terminal to Github because I have been opening my files the inefficient way
    - Also played around on Github more because I lack experience with it 
 
+<h3> Tuesday, July 6: </h3> 
+<ul>
+   <li>Edited my User Interface once again</li>
+   <li>I added a hover feature, so when you hover over a square, it shows the value that the square carries </li>
+   </ul>
+   
+  
+<h3> Wednesday, July 7: </h3>
+<ul>
+<li>Had a meeting with my mentor, Neal </li>
+<li>Went into the command line again to work on Github commands </li>
+<li> Learned status, add, commit, push </li>
+<li>Also found some issues with the big Waggle github folder </li>
+</ul>
+
+<h3> Thursday, July 8: </h3>
+<ul>
+   <li>Added a legend to my heat table</li>
+   <li> There are some issues with grabbing the color scheme from my previous lines of code </li>
+   <li> Changed the color scheme </li>
+   </ul>
+   
+<h3> Friday, July 9: </h3>
+<ul>
+   <li> Worked on fetching Waggle data </li>
+   <li> It works with test code, but not the actual Waggle Data </li>
+   </ul>
+   
+<h3> Monday, July 12: </h3>
+<ul>
+   <li> Continued to work on trying to fetch the data </li>
+   <li> I looked into Ajax and other methods to fetch </li>
+   <li> I am struggling because none of them seem to be working </li>
+   </ul>
+   
+<h3> Tuesday, July 13: </h3>
+<ul>
+   <li> Tried to debug my code, but it still isn't working </li>
+   <li> Had a meeting with my mentor </li>
+   </ul>
+   
+<h3> Wednesday, July 14: </h3>
+   <ul>
+      <li> Fixed my axis for my heat table </li>
+      <li> Now, when data is aggregated into the heat table, it will grab the dates and plot data points based on the dates </li>
+   </ul>
+      
+<h3> Thursday, July 15: </h3>
+   <ul>
+      <li> Am in the process of convering Sean's code from python to javascript </li>
+      <li> I am running into issues because sometimes I can't differentiate between what functions are javascript and what are python </li> 
+   </ul>
+   
+<h3> Friday, July 16: </h3>
+   <ul> Continued to work on my aggregate data function </li> 
+   
+
