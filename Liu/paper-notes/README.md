@@ -128,8 +128,9 @@ def torch2trt(module,
  - Results from ensemble learning in pytorch: https://ensemble-pytorch.readthedocs.io/en/stable/introduction.html
    - Fusion, voting, bagging, gradient boosting, snapshot
    - Image classification on MNIST dataset
+   - Currently not support hetergerous classifier
 
- - LeNet with epoch=100:
+ - LeNet with epoch=100 and 10 classifier:
 ```
 FusionClassifier | Testing Acc: 79.01 % | Training Time: 2367.75 s | Evaluating Time: 1.70 s
 
@@ -142,7 +143,7 @@ GradientBoostingClassifier | Testing Acc: 79.09 % | Training Time: 16477.36 s | 
 SnapshotEnsembleClassifier | Testing Acc: 71.01 % | Training Time: 1202.86 s | Evaluating Time: 1.46 s
 ```
 
- - Resnet50 with epoch=10:
+ - Resnet50 with epoch=10 and 10 classifier:
 ```
 FusionClassifier             | Testing Acc: 65.42 % | Training Time: 2233.73 s | Evaluating Time: 19.49 s
 
