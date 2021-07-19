@@ -1,0 +1,240 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dreuw & Deselaer's Poster
+% LaTeX Template
+% Version 1.0 (11/04/13)
+%
+% Created by:
+% Philippe Dreuw and Thomas Deselaers
+% http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
+\usepackage{multirow}
+\usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter} % Use the beamerposter package for laying out the poster with a portrait orientation and an a0 paper size
+\usepackage{xcolor}
+\usetheme{Local} % Use the I6pd2 theme suplied with this template
+%\usepackage{extsizes}
+\usepackage[english]{babel} % English language/hyphenation
+
+\usepackage{amsmath,amsthm,amssymb,latexsym} % For including math equations, theorems, symbols, etc
+
+%\usepackage{times}\usefonttheme{professionalfonts}  % Uncomment to use Times as the main font
+%\usefonttheme[onlymath]{serif} % Uncomment to use a Serif font within math environments
+
+\boldmath % Use bold for everything within the math environment
+
+\usepackage{booktabs} % Top and bottom rules for tables
+
+\graphicspath{{figures/}} % Location of the graphics files
+
+\usecaptiontemplate{\small\structure{\insertcaptionname~\insertcaptionnumber: }\insertcaption} % A fix for figure numbering
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION 
+%----------------------------------------------------------------------------------------
+
+\title{\Huge Online Anomaly Localization in \\ Images at the Edge} % Poster title
+
+\author{Colin Burdine \qquad\quad \texttt{colin\_burdine1@baylor.edu}} % Author(s)
+
+\institute{SULI Intern $\mid$ Argonne National Laboratory $\mid$ MCS Division} % Institution(s)
+
+\titlelogo{figures/argonne_logo}
+
+%----------------------------------------------------------------------------------------
+%	FOOTER TEXT
+%----------------------------------------------------------------------------------------
+
+\newcommand{\leftfoot}{bit.do/poster-PDP093} % Left footer text
+
+\newcommand{\rightfoot}{PDP-093/SKPP/III/2018} % Right footer text
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\addtobeamertemplate{block end}{}{\vspace*{2ex}} % White space under blocks
+
+\begin{frame}[t] % The whole poster is enclosed in one beamer frame
+
+\begin{columns}[t] % The whole poster consists of two major columns, each of which can be subdivided further with another \begin{columns} block - the [t] argument aligns each column's content to the top
+
+\begin{column}{.02\textwidth}\end{column} % Empty spacer column
+
+\begin{column}{.465\textwidth} % The first column
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+            
+\begin{block}{Introduction - Background}
+\begin{itemize}
+\item Intro \\[4mm]
+
+\item \textit{Convolutional Autoencoders} (CAEs) are machine learning models commonly used for anomaly localization in images.  This research proposes a novel framework for deploying unsupervised convolutional autoencoders in an online edge computing setting.\\[4mm]
+
+\item There exist many mechanisms to improve unsupervised anomaly localization in the literature. We divide these mechanisms into two categories: \textit{regularizers} and \textit{false positive reducers}:\\[4mm]
+\begin{itemize}
+\item \textit{regularizers} help to avoid overfitting the training data, thereby allowing the model to generalize better on previously unseen images.
+
+\item \textit{False positive reducers} aim to ensure that an anomaly's deviation from the ``normal" data is statisticallly significant. In an unsupervised setting, they help to better distinguish between true anomalies and anomalies detected due to background noise.
+\end{itemize}
+
+\end{itemize}
+\end{block}
+
+%----------------------------------------------------------------------------------------
+%	METHODS
+%----------------------------------------------------------------------------------------
+
+\begin{block}{Methods}
+
+\begin{itemize}
+\item \textbf{Dataset}
+
+\bigskip
+\item \textbf {Model Architecture}\\[1cm]
+
+\begin{figure}
+\fbox{\includegraphics[scale=0.6]{figures/cae_diagram}}
+\caption{The proposed CAE architecture.}
+\end{figure}
+
+\bigskip
+\item \textbf{Attention Expansion}
+
+\item\textbf{Gamma Distribution Filter}\\[1cm]
+
+\begin{table}[h!]
+\caption{ RAW MATRIX OF ALTERNATIVES}
+\begin{center}
+
+ \begin{tabular}{||c| c c c c c||} 
+ \hline
+ Alternative & C1 & C2 & C3 & C4 & C5 \\ [0.5ex] 
+ \hline\hline
+ A1 & 9000	 & 713	 & 4.6 &	701 &	1 \\ 
+ \hline
+ A2 & 29000		 & 394		 & 3.9 &	0 &	1 \\
+ \hline
+ A3 & 12000		 & 370		 & 4.6	 &	646	 &	3 \\
+ \hline
+ A4 & 12000		 & 403		 & 4.7	 &	26	 &	2 \\
+  \hline
+ \end{tabular}
+\end{center}
+\end{table}
+\end{itemize}
+\end{block}
+
+%------------------------------------------------
+
+\end{column} % End of the first column
+\begin{column}{.03\textwidth}\end{column} % Empty spacer column
+ 
+\begin{column}{.465\textwidth} % The second column
+
+%------------------------------------------------
+%---
+
+%----------------------------------------------------------------------------------------
+%	RESULTS
+%----------------------------------------------------------------------------------------
+
+\begin{block}{Results: Implementation and Accuracy Evaluation}
+
+\begin{itemize}
+\item After accomplishing data pre-processing and implementation, Fig. 2 presents the interface of the personal recommender system.
+
+\begin{figure}
+\fbox{\includegraphics[scale=1.2]{figures/gamma_filter}}
+\fbox{\includegraphics[scale=1.2]{figures/gamma_filter_noise}}
+\caption{Distribution of the }
+\end{figure}
+
+\begin{itemize}
+\item Table 1 illustrates the normalized value matrix toward a Laundry Basket product at Shopee. There are at least ten sellers who sell the product with the same visual (type, brand and size) which will be processed by the Fuzzy-SAW method. 
+\item  The normalized result table is then multiplied by the weighting number. Out of the 120 types of ranking methods, we can take an example of the 1-2-3-4-5 ranking sequence for price attributes-location-reputation-sold product-support expeditions. Three consecutive sellers who get the highest score are A7-A9-A5.
+\end{itemize}
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{example-image-a}
+\caption{Alternative Matrix Calculation Results with 1Weight Matrix}
+\end{figure}
+
+\begin{itemize}
+\item This study employs an accuracy of the rank result calculation method. The accuracy is calculated based on the recommendations given by the system to data compared to the data given by respondents which is divided into data training to find the most optimum weight; and data testing in ratio of 4:1. 
+\item In the data testing, a random sample of products with various combination of attributes rank order is applied. Accuracy value of each product search result is defined if a target seller is found as the first recommendation result.
+\item Table 2 shows a sample of data testing that compares seller target to output from system. From the table, the accuracy of the correct amount of data can be calculated compared to the number of data testing.
+\item Attribute rank show the user preference respectively for price, location, number of sold product, seller reputation, and the number of expedition provider support. The accuracy generated by Fuzzy-SAW in this personal recommender system is 75\%.
+\end{itemize}
+
+\begin{table}[h!]
+\scriptsize
+\centering
+\caption{SAMPLE OF DATA TESTING}
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+\hline
+Product & Attribute Rank & Seller Target & Seller Result \\
+  \hline
+  \multirow{4}{4em}{Aceh Arabica Coffee} 
+  & 1-5-2-3-4 & Kopi Tubruk Indonesia & Kopi Tubruk Indonesia \\ 
+  & 1-2-3-4-5 & Q House of Coffee & Kopi Tubruk Indonesia \\ 
+  & 2-1-3-4-5 & Boenboen Coffee & Boenboen Coffee \\ 
+  & 3-1-2-4-5 & Kopi Tubruk Indonesia & Kopi Tubruk Indonesia \\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\end{itemize}
+
+
+\end{block}
+\begin{block}{Conclusions}
+
+\begin{itemize}
+
+\item From the results of accuracy and data from participants, the price attribute becomes the attribute that respondents were being considered the most, since it originally belongs to a product, while the other attributes belong to each merchant.  
+\item Some criteria ranking combinations produce the same sellers who are always ranked in the top-4 recommendations, one of the trigger factors because the values in almost all attributes are the most optimum number of each attribute type. 
+\end{itemize}
+
+\end{block}
+\end{column} % End of the second column
+
+\begin{column}{.015\textwidth}\end{column} % Empty spacer column
+
+\end{columns} % End of all the columns in the poster
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	CONCLUSION
+%----------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{columns}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\stretch{1}}}*{3}{c}@{}}
+\includegraphics[scale=0.8]{figures/doe_footer} & 
+{\color{white}
+\small\textbf{
+This research is funded by ... }
+} & \includegraphics[scale=1.0]{figures/argonne_footer} \\[6cm]
+\end{tabular*}
+\end{columns}
+\end{frame} % End of the enclosing frame
+\end{document}

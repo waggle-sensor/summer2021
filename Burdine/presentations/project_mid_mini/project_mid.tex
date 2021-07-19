@@ -1,0 +1,315 @@
+\documentclass[10pt]{beamer}
+
+%% Based on the original theme by Matthias Vogelgesang
+%% 		https://github.com/hsrmbeamertheme/hsrmbeamertheme
+%% Also Based on the UNC Charlotte theme by Benjamin Radford
+%% 		https://github.com/matze/mtheme
+%% This theme is licensed under a Creative Commons Atribution-ShareAlike 4.0 international license
+%% For more info, see http://creativecommons.org/licenses/by-sa/4.0/
+%%
+%% Source obtained from:
+%% https://www.overleaf.com/latex/templates/unc-charlotte-beamer-theme/rnwqwjmrnmsk
+
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\newcommand{\tabimg}[2]{\begin{tabular}{c}\includegraphics[scale=#2]{#1}\end{tabular}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Theme Adjustments %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{CanvasBG}{HTML}{FAFAFA}
+
+% Supporting Color Palette
+\definecolor{White}{HTML}{FFFFFF}
+\definecolor{WarmGray}{HTML}{696158}
+\definecolor{StoneGray}{HTML}{717C7D}
+\definecolor{DarkGreen}{HTML}{13381a}
+\definecolor{LightGreen}{HTML}{509E2F}
+\definecolor{BrightGold}{HTML}{F0CB00}
+\definecolor{Royal}{HTML}{72246C}
+\definecolor{Ocean}{HTML}{006BA6}
+\definecolor{Flash}{HTML}{B52555}
+\definecolor{Ruby}{HTML}{b50e0e}
+\definecolor{Citrus}{HTML}{FFB81C}
+\definecolor{Spring}{HTML}{CEDC00}
+\definecolor{Garden}{HTML}{B7CE95}
+\definecolor{Sand}{HTML}{F0E991}
+\definecolor{Bloom}{HTML}{F1E6B2}
+\definecolor{Clay}{HTML}{B7B09C}
+\definecolor{Steel}{HTML}{b7b5ba}
+\definecolor{Meteorite}{HTML}{404040}
+\definecolor{Cloud}{HTML}{BAC5B9}
+
+
+% Set colors here
+\setbeamercolor{frametitle}{bg=Meteorite}
+\setbeamercolor{progress bar}{bg=Steel, fg=Meteorite}
+\setbeamercolor{alerted text}{fg=Ruby}
+
+\setbeamercolor{block title}{bg=Meteorite, fg=White}
+\setbeamercolor{block title example}{bg=Ocean, fg=White}
+\setbeamercolor{block title alerted}{bg=Citrus, fg=White}
+\setbeamercolor{block body}{bg=CanvasBG}
+
+\metroset{titleformat=smallcaps, progressbar=foot}
+
+\makeatletter
+\setlength{\metropolis@progressinheadfoot@linewidth}{2pt}
+\setlength{\metropolis@titleseparator@linewidth}{2pt}
+\setlength{\metropolis@progressonsectionpage@linewidth}{2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Theme Adjustments %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title{Online Anomaly Localization in Images}
+\subtitle{Project Progress Update}
+\date{July 19, 2021}
+\author{Colin Burdine}
+\institute{SULI Intern, Hosted at Argonne National Laboratory}
+% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+\begin{document}
+
+\maketitle
+
+%\begin{frame}{Table of contents}
+%  \setbeamertemplate{section in toc}[sections numbered]
+%  \tableofcontents%[hideallsubsections]
+%\end{frame}
+
+%\section{Problem Statement Update}
+
+%\begin{frame}{About Myself}
+%\begin{center}
+%\includegraphics[scale=0.25]{figures/me}
+%\end{center}
+%\begin{itemize}
+%\item I am a recent graduate of Baylor University (Sic 'Em Bears!)
+%\item I majored in Mathematics and Computer Science.
+%\item I am currently working on my Master's at Baylor, doing research in the field of quantum computing.
+%\end{itemize}
+%\end{frame}
+
+%\begin{frame}{Problem Statement}
+%
+%\begin{itemize}
+%\item Over the past three to four decades, advances in computer vision systems and machine learning have enabled high-fidelity object detection, classification, and tracking.
+%
+%\item However, these computer vision models and methods are often quite complex and perform poorly on small computing devices.
+%
+%\pause 
+%\item This poses a challenge if we want to integrate these methods into an \alert{edge computing} system like Waggle:\\[4mm]
+%\begin{center}
+%\includegraphics[scale=0.4]{figures/waggle_devs}
+%\end{center}
+%
+%\end{itemize}
+%\end{frame}
+
+%\begin{frame}{Problem Statement}
+%
+%\begin{itemize}
+%\item Last time, I presented my work on a real-time motion detection Waggle plugin.
+%
+%\item Since then, I have shifted my attention toward the task of online anomaly detection.\\[4mm]
+%
+%\begin{alertblock}{Requirements and Constraints (Anomaly Detection)}
+%\begin{enumerate}
+%\item Must be able to detect large anomalies in a still image scene, with a low false positive rate.
+%
+%\item Must be able to detect multiple anomalies at once and identify their bounding box in the scene.
+%
+%\item Must be able to adapt to changes in the scene without human intervention and re-calibration.
+%\end{enumerate}
+%\end{alertblock}
+%
+%\end{itemize}
+%\end{frame}
+
+%\section{Proposed Methods}
+
+\begin{frame}{Problem Statement}
+\begin{itemize}
+\item \alert{Image anomaly localization} is the task of locating uncommon objects in an image, if they exist.
+
+\item Many existing anomaly detection models are unsupervised and offline, requiring large labeled datasets and human calibration to perform well \cite{wta_detection, attention_anomalies}.
+
+\item In this research, we propose an ``entirely self-taught" model that performs \alert{unsupervised online anomaly localization}.\\[4mm]
+
+
+\begin{exampleblock}{Dataset Used: NEON Phenocam (RMNP)}
+\begin{tabular}{cc}
+\tabimg{figures/RMNP}{0.075} & \tabimg{figures/RMNP_timeline}{0.26}
+\end{tabular}
+\end{exampleblock}
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Proposed Methods}
+\begin{itemize}
+
+\item My operating hypothesis is:\\ 
+\alert{\textit{Anomalies can be identified in images with the reconstruction error of a lossy image compression algorithm.}}\\[2cm]
+\end{itemize}
+
+
+\begin{exampleblock}{Example (JPEG-style compression)}
+\includegraphics[scale=0.3]{figures/jpeg_image}\includegraphics[scale=0.3]{figures/jpeg_compressed}\includegraphics[scale=0.3]{figures/jpeg_lossmap}
+\end{exampleblock}
+
+
+\end{frame}
+
+%\begin{frame}{Anomaly Detection (JPEG-style compression)}
+%
+%\begin{itemize}
+%
+%\item The first method I tried is a variant of JPEG compression.
+%
+%\item This method performs PCA on the discrete cosine transform of small ``chunks" of an image.
+%
+%\item Varying the sizes of these ``chunks" can yield different results.\\[1cm]
+%
+%\end{itemize}
+%\pause
+%
+%\begin{exampleblock}{Example (JPEG-style compression with vertical strips)}
+%\includegraphics[scale=0.3]{figures/jpeg_image}\includegraphics[scale=0.3]{figures/jpeg_compressed}\includegraphics[scale=0.3]{figures/jpeg_lossmap}
+%\end{exampleblock}
+%
+%\end{frame}
+
+\begin{frame}{Anomaly Detection (CAEs)}
+
+\begin{itemize}
+\item Convolutional Autoencoders (CAEs) are a machine learning model that \textit{learns} a low-dimensional representation of an image by compressing and then decompressing an image \cite{wta_detection, attention_anomalies}.\\[1cm]
+\end{itemize}
+
+\begin{exampleblock}{CAE Architecture}
+\begin{center}
+\includegraphics[scale=0.35]{figures/cae_diagram}
+\end{center}
+\end{exampleblock}
+
+\end{frame}
+
+%\begin{frame}{Dataset (NEON Phenocam Dataset)}
+%
+%\begin{itemize}
+%\item Although we would like to deploy this model on Waggle nodes, we did not have a large dataset of stillframe data.\\[2mm]
+%
+%\item To train an autoencoder model, I used NEON's extensive phenocam dataset:\\
+%(\texttt{https://www.neonscience.org/data-collection/phenocams})\\[2mm]
+%
+%\item As a validation test, I used photo editing software to manually insert anomalies of various sizes into the scene.\\[1cm]
+%\end{itemize}
+%
+%\begin{exampleblock}{Neon Phenocam Dataset Example (RMNP)}
+%\begin{tabular}{cc}
+%\tabimg{figures/RMNP}{0.06} & \tabimg{figures/RMNP_timeline}{0.26}
+%\end{tabular}
+%\end{exampleblock}
+%
+%\end{frame}
+
+%\begin{frame}{Anomaly Detection and Localization}
+%\begin{itemize}
+%\item In order to localize anomalies, I fitted the reconstruction loss (computed via MSE) to a per-pixel gamma distribution to account for background noise.
+%
+%\item Anomalies can then be localized using a ``per-pixel p-value test", with an estimated anomaly probability $\alpha$.
+%
+%\end{itemize}
+%
+%\begin{exampleblock}{Gamma Filter Example (NEON RMNP Dataset)}
+%\includegraphics[scale=0.4]{figures/gamma_filter}
+%\includegraphics[scale=0.4]{figures/gamma_filter_noise}
+%\end{exampleblock}
+%\end{frame}
+
+\begin{frame}{Applying Attention Expansion}
+
+%\begin{itemize}
+%\item To increase the true positive rate, we can induce an attention bias to the model by employing \textit{attention expansion loss}.\\[0.5cm]
+
+\begin{exampleblock}{Example: Attention Heatmaps \cite{grad_cam}}
+\begin{tabular}{c | c}
+\textbf{No Attention Expansion} & \textbf{Attention Expansion}\\
+\includegraphics[scale=0.155]{figures/acae_heatmaps_0} & \includegraphics[scale=0.14]{figures/acae_heatmaps}
+\end{tabular}
+\end{exampleblock}
+%\end{itemize}
+\end{frame}
+
+\begin{frame}{Results}
+\begin{exampleblock}{Examples: Detected Anomalies}
+\includegraphics[scale=0.16]{figures/anomalies}
+\end{exampleblock}
+
+\begin{exampleblock}{Online Anomaly Detection ROC Curve}
+\begin{tabular}{c | c}
+\textbf{No Attention Expansion} & \textbf{Attention Expansion}\\
+\includegraphics[scale=0.35]{figures/neon_cae_roc} & \includegraphics[scale=0.35]{figures/neon_acae_roc} \\
+Area under Curve:  0.6371 & Area under curve: 0.738 \\ 
+\end{tabular}
+\end{exampleblock}
+\end{frame}
+
+
+%\section{Future Work}
+%
+%
+%\begin{frame}{Future Work}
+%
+%
+%My current priorities for the anomaly detection model are:
+%
+%\begin{enumerate}
+%\item Integrate the plugin prototype with PyWaggle so that it can publish data to other plugins.
+%
+%\item Implement an online simulator that feeds the model camera data sequentially
+%
+%\item Implement mechanisms to allow for online training and calibration.
+%\end{enumerate}
+%
+%\end{frame}
+
+{\setbeamercolor{palette primary}{fg=White, bg=Meteorite}
+\begin{frame}[standout]
+  Questions?\\[2mm]
+  Reach out to me at:\ \texttt{cburdine@anl.gov}\\[1cm]
+  \small{My Daily Progress Log:
+  \href{https://github.com/waggle-sensor/summer2021/tree/main/Burdine}{https://github.com/waggle-sensor/summer2021/tree/main/Burdine}\\[6mm]
+  Anomaly Detection Notebook Repository:\\[2mm]
+  \href{https://github.com/waggle-sensor/anomaly-detection}{https://github.com/waggle-sensor/anomaly-detection}}
+\end{frame}}
+
+
+\begin{frame}[allowframebreaks]
+\frametitle{References}
+\bibliographystyle{amsalpha}
+\bibliography{project_mid}
+\end{frame}
+%
+%\appendix
+%
+%\section{Appendix}
+%
+%\begin{frame}{YOLOv1 Architecture}
+%\begin{center}
+%\includegraphics[scale=0.3]{figures/yolo_cnn}\\
+%(This image is from the original YOLO paper \cite{YOLO})
+%\end{center}
+%\end{frame}
+
+
+\end{document}
