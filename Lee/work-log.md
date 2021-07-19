@@ -451,6 +451,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 -Today's Non-Technical Tasks
 * Attended daily sage scrum demo
   
+************************************************************
   
 ### Tuesday, 6th
 -Today's Technical Tasks
@@ -475,7 +476,8 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * The source from https://nodered.org/docs/getting-started/docker
 * Managing User Data: Once you have Node-RED running with Docker, we need to ensure any added nodes or flows are not lost if the container is destroyed. This user data can be persisted by mounting a data directory to a volume outside the container. This can either be done using a bind mount or a named data volume. Node-RED uses the /data directory inside the container to store user configuration data. (Don't know what it is)
   
-
+************************************************************
+  
 ### Monday, 12th
 -Today's Non-Technical Tasks
 * Attended mid-presentation (not sure why my laptop microphone/share the screen not working)
@@ -528,3 +530,20 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 
 -Today's Technical Tasks
 * Continued work on creating multiple node-red on dockers with different portnumbers
+  
+  
+************************************************************
+### Monday, 19th
+-Today's Non-Technical Tasks
+* Presented mid goal for internship
+
+-Today's Technical Tasks
+* discussion about docker with yomi and luke
+* Figured out using docker port numbers for multiple instances... thanks yomi and luke...!!!
+  
+![image](https://user-images.githubusercontent.com/56851781/126231531-de1941a1-8f9e-4ed6-9693-ccaafa2eed70.png)
+
+![image](https://user-images.githubusercontent.com/56851781/126231565-0864bc43-1e94-45db-a2a1-f032ac748671.png)
+  
+  
+
