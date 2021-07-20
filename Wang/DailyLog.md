@@ -5,6 +5,12 @@
 
 **July 19th**
 1. 2021 Summer Intern progress report presentation
+2. Meet with Raj
+3. Meet with Rick
+4. Look for a way to combine audio clips according to their geographic location
+
+**July 20th**
+1. Audio group meeting
 2. 
 
 # Week 8
@@ -41,8 +47,6 @@
 2. Convert the ogg file to wave in order to make mixed polyphonic dataset on BirdCLEF
 3. Try to make a mix dataset based on the 3 species sub-dataset
 4. Prepare for the presentation on Monday
-
-
 
 # Week 7
 **July 6th**
