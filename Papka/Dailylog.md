@@ -21,5 +21,5 @@ Week of 7/12
 - Continue working on written tutorial for training the AI. 
 
 Week of 7/19
--This week I would like to try to finish training for the deeplab model 
-  -I am still trying to solve the issue of my ssh session timing out, I am going to try Tmux once the Chameleon machine is back online. 
+- This week I would like to try to finish training for the deeplab model 
+  - I am still trying to solve the issue of my ssh session timing out, I am going to try Tmux once the Chameleon machine is back online. 
