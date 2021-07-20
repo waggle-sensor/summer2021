@@ -604,3 +604,19 @@ I had a good week. Didn't get a ton of work done, but a lot of important informa
 * My breaker node was down the whole day, so I started working on my White paper. 
 
 --------
+### Tuesday, 7/20 (8 Hours worked)
+
+**Today's non-technical work:**
+* Met with Joe to catch up from his vacation lead
+
+**Today's technical work:**
+* Started planning out HC daemon
+* Researched outputting logs to `journalctl`
+* Created HC `systemd` service 
+* Created basic flask server
+
+TODO for tomorrow:
+* Furnish flask server according to state diagram
+* Organize HC repo
+
+--------
