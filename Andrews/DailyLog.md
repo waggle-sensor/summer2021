@@ -276,3 +276,16 @@
  - Required EVS Safety Orientation
  - TRACER Meeting
  - Cleaned up and tested the code for extracting the array of pixels
+
+### July 20
+July 20th
+ - Reading on optical flow: https://learnopencv.com/optical-flow-in-opencv/; Farneback: https://www.diva-portal.org/smash/get/diva2:273847/FULLTEXT01.pdf
+ - Finding/reading literature on optical flow on satellite data including:
+    * Deriving AMVs from Geostationary Satellite Images Using Optical Flow Algorithm Based on Polynomial Expansion: https://journals.ametsoc.org/view/journals/atot/33/8/jtech-d-16-0013_1.xml 
+        -- Used Farneback algorithm on Himawari-7; for cloud motion vectors used IR (5km spatial resolution, 30 minute temporal resolution)
+    * https://www.star.nesdis.noaa.gov/star/documents/meetings/2020JPSSGOES/Posters/B_23_Apke_GPGS_2020_Poster.pdf (research poster on applying optical flow to satellite data)
+    * General thoughts: Seems like people have used IR and/or visible bands to get cloud motion vectors). Band two has the highest resolution so I think I’ll try that first. From what I’ve seen in the literature so far, dense optical flow (DOF) seems to be the way to go. Other people have used Farneback with success so that’s where I’ll start algorithm-wise.  
+ - TRACER meeting
+ - Need multiple images/arrays for optical flow; trying to adjust code to account for that as currently it’s only working with one image 
+
+
