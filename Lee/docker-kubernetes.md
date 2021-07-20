@@ -13,10 +13,9 @@ source from https://aws.amazon.com/ko/getting-started/hands-on/break-monolith-ap
 * Snapshot: Image is made up of layers. Base layer(Debian etc), another layer(software files), add another one...
 * When your blueprint(image) is run, it is a container.
 * Relevant Youtube link: https://www.youtube.com/watch?v=chnCcGCTyBg, https://www.youtube.com/watch?v=i7ABlHngi1Q&t=859s
-* Quick Diagram
+* Docker flows
 
-![image](https://user-images.githubusercontent.com/56851781/126387770-8a264adf-d2e7-4389-a6ff-13df973c5ac7.png)
-
+![image](https://user-images.githubusercontent.com/56851781/126398634-cf4ee24e-2a36-4421-822d-c18e7e93a590.png)
 
 ![image](https://user-images.githubusercontent.com/56851781/126391893-3a69174f-52dc-4e14-923e-872af10898bd.png)
 
