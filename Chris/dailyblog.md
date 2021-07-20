@@ -278,3 +278,23 @@ How is it week 4 already!?
     - change dockerfile to be from chrispkraemer/tauprofiler:0.0.0 instead of base
   - commands are the same except:
     change entrypoint to "./tauprofiler.sh"
+
+
+## Week 7 (7/19-7/23)
+
+### Monday (7/19)
+
+- Midpoint presentation
+- Blocked by LCRC being down
+- Installing QEMU to emulate arm64/linux
+- Met with Raj to discuss internship progress and profiling
+
+### Tuesday (7/20)
+
+- ECR Profiling meeting
+  - Need to start working on paper
+  - literature review started
+  - Some type of profiling service built on docker containers that work like legos?
+- Reinstalling QEMU because the last one didn't work for some reason
+- LCRC still down
+- Need to make full Readme of pipeline
