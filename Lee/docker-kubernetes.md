@@ -13,6 +13,10 @@ source from https://aws.amazon.com/ko/getting-started/hands-on/break-monolith-ap
 * Snapshot: Image is made up of layers. Base layer(Debian etc), another layer(software files), add another one...
 * When your blueprint(image) is run, it is a container.
 * Relevant Youtube link: https://www.youtube.com/watch?v=chnCcGCTyBg, https://www.youtube.com/watch?v=i7ABlHngi1Q&t=859s
+* Quick Diagram
+![image](https://user-images.githubusercontent.com/56851781/126387770-8a264adf-d2e7-4389-a6ff-13df973c5ac7.png)
+
+* Docker daemon: it is a persistent background process that manages the containers on a single host. It is a self-sufficient runtime that manages Docker objects such as images, containers, network, and storage. By default, Docker daemon creates a non-networked Unix domain socket at /var/run/docker.
 
 
 ### Simple tutorial
