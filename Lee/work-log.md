@@ -554,4 +554,14 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   
 * port 1881 
 ![image](https://user-images.githubusercontent.com/56851781/126345201-faa24ba0-c168-4905-8256-372cbf4366e7.png)
+  
+  
+### Tuesday, 20th
+-Today's Non-Technical Tasks
+* Attended Chris thesis presentation (military UAV)
+* Meeting with Joe and updated my progress with him (really cool)
+
+-Today's Technical Tasks
+* Successfully managed Docker hub and node-red instances
+* Read documents about docker containers / deployment for each user
 
