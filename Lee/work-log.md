@@ -570,6 +570,8 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 -Today's Non-Technical Tasks
 * Attended EDU Weekly Seminar Series: How to Establish Your Personal Brand
 * Meeting with Brandon and Larry (Docker and VM)
+* Amazing meeting with Sean to talk about Docker port numbers (Thank you so much)
 * Still working on write papers with Korean students
   
 -Today's Technical Tasks
+* https://purdue-primo-prod.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=TN_cdi_ieee_primary_9239699&context=PC&vid=PURDUE&lang=en_US&search_scope=everything&adaptor=primo_central_multiple_fe&tab=default_tab&query=any,contains,nodered&facet=rtype,exclude,reviews,lk&facet=rtype,exclude,reference_entrys,lk
