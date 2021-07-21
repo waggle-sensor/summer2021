@@ -620,3 +620,17 @@ TODO for tomorrow:
 * Organize HC repo
 
 --------
+
+### Wednesday, 7/21 (7 Hours worked)
+
+**Today's technical work:**
+* Wrote out OOP python HC structure
+* Created `hc_manager` python class for HC daemon
+* Created `job` python class for HC daemon
+
+TODO for tomorrow:
+* Finish first iteration of `hc_manager` and `job` classes
+* Add /getState endpoint to server
+* have `job` class parse payload data and create object accordingly
+
+--------
