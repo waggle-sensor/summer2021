@@ -285,6 +285,17 @@
     * https://www.star.nesdis.noaa.gov/star/documents/meetings/2020JPSSGOES/Posters/B_23_Apke_GPGS_2020_Poster.pdf (research poster on applying optical flow to satellite data)
     * General thoughts: Seems like people have used IR and/or visible bands to get cloud motion vectors). Band two has the highest resolution so I think I’ll try that first. From what I’ve seen in the literature so far, dense optical flow (DOF) seems to be the way to go. Other people have used Farneback with success so that’s where I’ll start algorithm-wise.  
  - TRACER meeting
- - Next steps: make a video with a few images and try to feed that through Matt's code
+ - Made a video with a few images that I'll try to feed that through Matt's code
 
+### July 21
+ - EDU Weekly Seminar
+ - Student Connects meeting
+    * Need one slide (2 min) presentation for next week
+ - Writing Coach Meeting: Workshop on Oral and Poster Presentations
+ - Spent most of the day trying to get my video of 5 satellite images to work with Matt's optical flow code
+     * Mostly seems to work at this point, just need to figure out one error at the end 
+     * Eventually will play around with something other than the default Farneback algorithm parameters
+     * Also going to experiment with different sized images
+ - TRACER meeting
+ - 
 

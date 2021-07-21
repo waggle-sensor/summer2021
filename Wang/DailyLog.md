@@ -11,7 +11,11 @@
 
 **July 20th**
 1. Audio group meeting
-2. 
+2. Running experiments to extract featurs on 10-species dataset.
+
+**July 21st**
+1. Running experiments to extract featurs on 10-species dataset.
+2. Group the BirdCLEF training dataset according to the continents.
 
 # Week 8
 **July 12th**

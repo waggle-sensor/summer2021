@@ -46,7 +46,7 @@
      - began working with code for method of [Lucas-Kanade Optical Flow in OpenCV](https://docs.opencv.org/3.4/d4/dee/tutorial_optical_flow.html), OpenCV's first optical flow example 
    - looked into [difference between LiDAR and RADAR data](https://www.yellowscan-lidar.com/knowledge/lidar-vs-radar/)
 - Tuesday
-  - watched missed
+  - n/a
 - Wednesday
   - worked on optimizing Lucas-Kanade optical flow models
   - got more direction from Dr. Collis on work-arounds for Lucas-Kanade code
@@ -61,7 +61,6 @@
      - figuring out mask data type, parameters; still confused about how the parameters exactly map to the masking effect
      - still confused about `minDistance` and `blockSize` paramenters for Shi-Tomasi Corner Detector
      - invesitgting [Shi-Tomasi Corner Detector & Good Features to Track](https://docs.opencv.org/master/d4/d8c/tutorial_py_shi_tomasi.html)
-
 
 ### Week 4: 7/6–7/9
 - Tuesday
@@ -83,11 +82,49 @@
   - attended Laboratory Director Panel Discussion 
   - attended Sean's plug-in office hour, reviewed plug-in set up
 - Friday
-  - (sharing progress, plots, code with team)
   - updated documentation of plots, coding process
   - begin synthesizing information for midpoint presentation (Monday, July 19) using Dr. Dunn's presentation template
   - explored sample scanning data from [mini MPL system](https://www.dropletmeasurement.com/product/mini-mpl/) from Scott/Adam Slagel
-  - (updated blog)
 
+### Week 5: 7/12–7/16
+- Monday
+  - read "Prediction of Solar Irradiance and Photovoltaic Solar Energy Product Based on Cloud Coverage Estimation Using Machine Learning Methods" 
+- Tuesday
+  - continued reading "Prediction of Solar Irradiance and Photovoltaic Solar Energy Product Based on Cloud Coverage Estimation Using Machine Learning Methods"
+  - reviewed [SAGE deliverables](https://github.com/waggle-sensor/summer2021#deliverables)
+     - began planning for white paper, science article, abstract
+- Wednesday
+  - generated optical flow plots using alternative dense OpenCV algorithm, [calcOpticalFlowSparseToDense()](https://docs.opencv.org/master/d2/d84/group__optflow.html#gad6aa63f2703202806fe18dc1353b5f4b)
+     - looks pretty odd compared to createOptFlow_Farneback(), lots of noise
+- Thursday
+  - (no lab meeting)
+  - prepared mid-point presentation
+  - saught assistance from Zach for coding issues
+- Friday
+  - attend MCS Coffee Time
+  - prepared mid-point presentation 
+
+### Week 6: 7/19–7/23
+- Monday
+  - final edits to mid-point presentation (Dr. Collis' feedback)
+  - gave mid-point presentation, listened to other students' presentations
+  - updated presentation slides for NAISE presentation
+     - created visual aid for helping to interpret plots
+- Tuesday
+  - further explored MPL data; encountered issues with loading file type 
+     - https://github.com/peterkuma/mpl2nc
+     - https://nbviewer.jupyter.org/github/openradar/AMS-Short-Course-on-Open-Source-Radar-Software/blob/master/3_Basic_PyART.ipynb
+     - https://arm-doe.github.io/ACT/API/generated/act.io.read_sigma_mplv5.html
+- Wednesday
+  - attended EDU weekly seminar, "How to Establish Your Personal Brand," by Leslie Krohn
+  - upload code to ECR with [tutorial](https://github.com/waggle-sensor/plugin-numpy-example)
+  - figured out how to [convert from .mpl to .nc](https://github.com/peterkuma/mpl2nc)
+  - look into intersection of optical flow and ML
+  - look into extraction velocity information from optical flow plots 
+- Thursday
+  - lab meeting
+  - give NAISE mid-point presentation, listened to other students' presentations
+- Friday
+  - n/a
 
 
