@@ -649,3 +649,19 @@ SnapshotEnsembleClassifier | Testing Acc: 71.01 % | Training Time: 1202.86 s | E
 2021-07-18 20:02:25,935 - INFO: GradientBoostingClassifier   | Testing Acc: 60.38 % | Training Time: 11111.49 s | Evaluating Time: 19.93 s
 2021-07-18 20:02:25,935 - INFO: SnapshotEnsembleClassifier   | Testing Acc: 66.46 % | Training Time: 329.23 s | Evaluating Time: 19.74 s
 ```
+
+## Week 11 (July 19 to July 23) 
+### Monday July 19, 2021:
+#### Work Done:
+ - Have a meeting with ML team to discuss the progress
+   - TensorRT model structure and virtualization
+   - Ensemble learning methods and results
+     - Fusion, voting, bagging, gradient boosting, etc.
+     - LeNet, ResNet50
+   - Next step: 
+     - get heteregrous classifier-based ensembling learning
+     - integrate with TensorRT's quantization models
+
+### Tuesday July 20, 2021:
+#### Work Done:
+ - 
