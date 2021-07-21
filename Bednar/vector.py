@@ -44,8 +44,9 @@ while(1):
     elif k == ord('s'):
         cv.imwrite('opticalfb.png',frame2)
         cv.imwrite('opticalhsv.png',bgr)
-    pixel_y = 10
-    pixel_x = 15
+    Sx = 10
+    Sy = 15
     prvs = next
-    print(f'the velocity vector at pixel (y=10,x=15) is {flow[pixel_y,pixel_x]}')
+    print(f'the velocity vector at pixel (x=10,y=15) is {flow[round(Sx * 0.3),round(Sy * 0.5)]}')
 quit()
+
