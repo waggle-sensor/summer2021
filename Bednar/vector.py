@@ -44,18 +44,8 @@ while(1):
     elif k == ord('s'):
         cv.imwrite('opticalfb.png',frame2)
         cv.imwrite('opticalhsv.png',bgr)
-    prvs = next
-    flow_tensor = cv.calcOpticalFlowFarneback( prvs, # last frame (in grayscale) 
-                                            next, # the current frame (in grayscale)
-                                            None,
-                                            0.5, # pyramid scale
-                                            3,   # levels 
-                                            32,  # window size
-                                            3,   # iterations
-                                            5,   # polynomial degree
-                                            1.2, # polynomial std. dev.
-                                            0) 
     pixel_y = 10
     pixel_x = 15
-    print(f'the velocity vector at pixel (y=10,x=15) is {flow_tensor[pixel_y,pixel_x]}')
+    prvs = next
+    print(f'the velocity vector at pixel (y=10,x=15) is {flow[pixel_y,pixel_x]}')
 quit()
