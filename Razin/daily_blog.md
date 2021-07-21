@@ -117,6 +117,7 @@
 - Wednesday
   - attended EDU weekly seminar, "How to Establish Your Personal Brand," by Leslie Krohn
   - upload code to ECR with [tutorial](https://github.com/waggle-sensor/plugin-numpy-example)
+  - figured out how to [convert from .mpl to .nc](https://github.com/peterkuma/mpl2nc)
   - look into intersection of optical flow and ML
   - look into extraction velocity information from optical flow plots 
 - Thursday
