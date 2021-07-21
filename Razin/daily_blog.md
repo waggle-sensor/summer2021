@@ -90,8 +90,9 @@
 - Monday
   - read "Prediction of Solar Irradiance and Photovoltaic Solar Energy Product Based on Cloud Coverage Estimation Using Machine Learning Methods" 
 - Tuesday
+  - continued reading "Prediction of Solar Irradiance and Photovoltaic Solar Energy Product Based on Cloud Coverage Estimation Using Machine Learning Methods"
   - reviewed [SAGE deliverables](https://github.com/waggle-sensor/summer2021#deliverables)
-     - begin planning for white paper, science article, abstract
+     - began planning for white paper, science article, abstract
 - Wednesday
   - generated optical flow plots using alternative dense OpenCV algorithm, [calcOpticalFlowSparseToDense()](https://docs.opencv.org/master/d2/d84/group__optflow.html#gad6aa63f2703202806fe18dc1353b5f4b)
      - looks pretty odd compared to createOptFlow_Farneback(), lots of noise
