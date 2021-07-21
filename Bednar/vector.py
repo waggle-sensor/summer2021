@@ -3,6 +3,7 @@ from queue import Queue
 import numpy as np
 import cv2 as cv
 import time 
+
 def create_video_capture_queue(device, queue_size=30, fps=None, quiet=False):
     frames = Queue(queue_size)
     
@@ -44,9 +45,10 @@ while(1):
     elif k == ord('s'):
         cv.imwrite('opticalfb.png',frame2)
         cv.imwrite('opticalhsv.png',bgr)
-    Sx = 10
-    Sy = 15
+    pixel_y = 320
+    pixel_x = 192
+    #print(f'the velocity vector at pixel (y=10,x=15) is {flow[pixel_x,pixel_y]}')
     prvs = next
-    print(f'the velocity vector at pixel (x=10,y=15) is {flow[round(Sx * 0.3),round(Sy * 0.5)]}')
+    magnitude = np.linalg.norm(flow[pixel_x,pixel_y])
+    print(magnitude)
 quit()
-
