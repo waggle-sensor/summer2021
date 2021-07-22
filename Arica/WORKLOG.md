@@ -634,3 +634,22 @@ TODO for tomorrow:
 * have `job` class parse payload data and create object accordingly
 
 --------
+
+### Thursday, 7/22 (8 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum, was pretty lame
+* Met with Joe about HC client-side server questions
+
+**Today's technical work:**
+* Wrote out more of `job` class checks
+* Wrote more HC documentation
+* Wrote out more of the `/upgrade` client endpoint
+
+TODO for tomorrow:
+* Finish environment setup in the `/upgrade` endpoint
+* make env cleanup function 
+* migrate `/upgrade` endpoint utilities out to a module
+* (hopefully) finish the first basic flow of honeycomb ( get payload from `/upgrade`, assess, setup, add job, execute it(maybe not this one) )
+
+--------

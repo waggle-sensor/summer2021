@@ -1,0 +1,8 @@
+{
+
+	"node_id": "xyz",
+	"flags" : ["flag 1", "flag 2"],
+	"peripheral_name" : "dummy",
+	"config_version" : "1.0.1",
+	"config_link" : ""
+}
