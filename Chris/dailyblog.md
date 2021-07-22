@@ -298,3 +298,14 @@ How is it week 4 already!?
 - Reinstalling QEMU because the last one didn't work for some reason
 - LCRC still down
 - Need to make full Readme of pipeline
+
+### Wednesday (7/21)
+- Wasn't able to get much done because lcrc is still down
+- some literature review of profilers
+
+### Thursday (7/22)
+- LCRC down for half of the day
+- Modified chrispkraemer/tauprofiler to experiment with some live profiling
+- my idea is to use some tools already present -> top
+- just run the process in the background, get the id, run top, record, done
+  - unfortunately not as easy as I hoped
