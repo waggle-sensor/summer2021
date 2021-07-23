@@ -653,3 +653,22 @@ TODO for tomorrow:
 * (hopefully) finish the first basic flow of honeycomb ( get payload from `/upgrade`, assess, setup, add job, execute it(maybe not this one) )
 
 --------
+
+### Friday, 7/23 (8 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum
+* Met with Joe to talk HC Architecture
+
+**Today's technical work:**
+* Finished `/upgrade` endpoint
+* Tackled the concept of continuity across routes via flask app context
+* Made git repo for honeycomb 
+* Wrote `rsync` script so I can code on my IDE
+
+TODO for the coming monday:
+* Assess where I'm at in terms of HC development
+* Make /upgrade add real jobs to the `hc_manager` app instance
+* (Hopefully) achieve the minimum use case for honeycomb
+
+--------
