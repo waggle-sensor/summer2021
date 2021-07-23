@@ -293,9 +293,23 @@
     * Need one slide (2 min) presentation for next week
  - Writing Coach Meeting: Workshop on Oral and Poster Presentations
  - Spent most of the day trying to get my video of 5 satellite images to work with Matt's optical flow code
-     * Mostly seems to work at this point, just need to figure out one error at the end 
-     * Eventually will play around with something other than the default Farneback algorithm parameters
-     * Also going to experiment with different sized images
+     * Mostly seems to work at this point, just need to figure out one error at the end. However, most of the motion is at the edge of the images so I'd eventually like to play around with something other than the default Farneback algorithm parameters. Also going to experiment with different sized images and maybe different satellite bands.
  - TRACER meeting
- - 
+
+### June 22
+ - Clouds and CV meeting
+ - Got basic (incomplete for now) code into the plugin template; updated the Dockerfile, sage.yaml, requirements.txt. 
+      * The basic satellite plugin will download GOES 16 or 17 images between a start and an end time for a particular channel
+  - Selected a different time period (17:22-19:03Z) with more scattered clouds for dense OF because I think that’ll work better than the times I was testing it with originally (clouds were pretty stationary)
+ - Made a movie of those times and tried OF on band 2 (visible)
+    * Tried it on a couple different sized satellite images and it seems like the larger ones do a much better job of capturing the motion
+ - TRACER meeting
+
+### June 23 
+ - Working on the SULI deliverables (paper)
+ - Next week:
+    * More optical flow reading - look into adjusting parameters from defaults and how to get flow in real units rather than pixel units
+    * Final presentation for the Waggle group
+    * More work on deliverables
+
 
