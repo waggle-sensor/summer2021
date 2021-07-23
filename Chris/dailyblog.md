@@ -309,3 +309,13 @@ How is it week 4 already!?
 - my idea is to use some tools already present -> top
 - just run the process in the background, get the id, run top, record, done
   - unfortunately not as easy as I hoped
+
+### Friday (7/23)
+- Meeting with Luke, Yomi, Aji, and Yongho this morning
+  - discussed new test nodes
+  - apps in development
+  - live performance
+    - intrusive vs black box
+    - I may be able to help on the black box(?) side.
+  - So tau automatically instruments code. Maybe we can hijack this to do live profiling
+  - looking into the tau source code, python and c
