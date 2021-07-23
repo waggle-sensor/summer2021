@@ -664,4 +664,25 @@ SnapshotEnsembleClassifier | Testing Acc: 71.01 % | Training Time: 1202.86 s | E
 
 ### Tuesday July 20, 2021:
 #### Work Done:
+ - The GPU driver in the Chameleon instance crash after th outage
+   - try to solve the issue by installing the nvidia driver, but doesn't work
+   - start a new instance
+ - Work on ensemble hetergerous classifiers in pytorch
+
+### Wednesday July 21, 2021:
+#### Work Done:
+ - Go through the tutorial of ensemble methods in sklearn
+   - documentation: https://scikit-learn.org/stable/modules/ensemble.html
+   - averaging methods: bagging, forests of randomized trees
+   - boosting methods: adaBoost, gradient tree boosting
+
+### Thursday July 22, 2021:
+#### Work Done:
+ - Investage the lower bytes quantization implementation
+   - four/two/one bytes integer quantization
+ - Deploy ALARM code on Chameleon instance
+   - train sparse-resnet model
+   - model profiling
+
+### Friday July 23, 2021:
  - 
