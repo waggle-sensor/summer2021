@@ -309,6 +309,7 @@
  - Working on the SULI deliverables (paper)
  - Next week:
     * More optical flow reading - look into adjusting parameters from defaults and how to get flow in real units rather than pixel units
+    * Maybe try the Lucas-Kanade method or a mask to get better OF results 
     * Final presentation for the Waggle group
     * More work on deliverables
 
