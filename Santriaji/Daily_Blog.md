@@ -95,3 +95,17 @@ Goal : Writing the code for controlling the DNNs plugin.
 
 ### Friday 07/08
 - Coding for controller.
+
+### Monday 07/12
+- Meeting with ECR.
+- Do profiling for object detection.
+
+### Wednesday 07/14
+- Meeting for controller.
+- Coding for controller.
+
+### Thursday 07/15
+- Coding for controller.
+
+### Friday 07/16
+- Coding for controller.

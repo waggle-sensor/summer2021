@@ -121,3 +121,37 @@ def torch2trt(module,
               use_onnx=False,
               **kwargs)
 ```
+
+### Update July 19, 2021
+ - TensorRT model's structure and size
+   - unable to access the structure and virtualize: https://stackoverflow.com/questions/65705710/how-can-i-visualize-tensorrt-network-graph
+ - Results from ensemble learning in pytorch: https://ensemble-pytorch.readthedocs.io/en/stable/introduction.html
+   - Fusion, voting, bagging, gradient boosting, snapshot
+   - Image classification on MNIST dataset
+   - Currently not support hetergerous classifier
+
+ - LeNet with epoch=100 and 10 classifier:
+```
+FusionClassifier | Testing Acc: 79.01 % | Training Time: 2367.75 s | Evaluating Time: 1.70 s
+
+VotingClassifier | Testing Acc: 78.48 % | Training Time: 11839.88 s | Evaluating Time: 1.50 s
+
+BaggingClassifier | Testing Acc: 77.30 % | Training Time: 12244.02 s | Evaluating Time: 1.50 s
+
+GradientBoostingClassifier | Testing Acc: 79.09 % | Training Time: 16477.36 s | Evaluating Time: 1.47 s
+
+SnapshotEnsembleClassifier | Testing Acc: 71.01 % | Training Time: 1202.86 s | Evaluating Time: 1.46 s
+```
+
+ - Resnet50 with epoch=10 and 10 classifier:
+```
+FusionClassifier             | Testing Acc: 65.42 % | Training Time: 2233.73 s | Evaluating Time: 19.49 s
+
+VotingClassifier             | Testing Acc: 71.06 % | Training Time: 3123.60 s | Evaluating Time: 19.63 s
+
+BaggingClassifier            | Testing Acc: 67.01 % | Training Time: 2869.60 s | Evaluating Time: 19.51 s
+
+GradientBoostingClassifier   | Testing Acc: 60.38 % | Training Time: 11111.49 s | Evaluating Time: 19.93 s
+
+SnapshotEnsembleClassifier   | Testing Acc: 66.46 % | Training Time: 329.23 s | Evaluating Time: 19.74 s
+```
