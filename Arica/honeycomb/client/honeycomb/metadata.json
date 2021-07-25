@@ -1,0 +1,9 @@
+{
+    "upgrade_name" : "delta2",
+    "peripheral_name": "Ubiquiti Edgeswitch",
+    "config_version" : "1.0.1",
+    "retry_state_check" : 0,
+    "retry_install" : 0,
+    "retry_verify" : 0,
+    "force_install" : false
+}

@@ -19,3 +19,7 @@ Week of 7/12
    - The training dataset was then sorted into smaller sets that corresponded to size so that the code will be able to correctly match the images together to train. 
 - The session times out before the training can be completed so I need to find away around that
 - Continue working on written tutorial for training the AI. 
+
+Week of 7/19
+- This week I would like to try to finish training for the deeplab model 
+  - I am still trying to solve the issue of my ssh session timing out, I am going to try Tmux once the Chameleon machine is back online. 

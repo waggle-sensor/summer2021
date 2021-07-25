@@ -82,3 +82,39 @@ July 8th
 added asos data -  successful!
 narrowed down necessary paratemers to predict LCL
 
+July 9th
+Created tensorflow model tested on various features
+relative humidity, sea level pressure, wet bulb temperature most important
+95% overall accuracy
+e- 59% without the humidity
+2:33
+-84% without temperature -85% percent without pressure and 80% without wind
+2:34
+for reference just the thermal images had 64% accuracy (edited
+
+July 12th
+Re-processed all the thermal image data
+Got all 1500 images in array format
+
+July 13th
+Worked on making the Keras Functional model
+
+July 14th
+Completed Keras Functional Model just for LCL Pressure
+Got 99% explained variance score
+
+
+July 15th
+Attempted to make a similar model for LCL Temperature
+Failed to construct model(thermal images don't correlate)
+Used three features(relative humidity, sea level pressure, and wet bulb temperature) to get 99% accuracy using sequential model
+
+July 16th
+Discussed future steps w/ Jeremy
+Did further tests on the model(MAE, RMSE), unsued images
+
+
+July 19th
+Looked for irradiance data
+Gave presentation
+Worked on finding ASOS sites and processing data

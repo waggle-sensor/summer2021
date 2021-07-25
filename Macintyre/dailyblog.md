@@ -128,10 +128,13 @@
 
 ## Week 8
 ### Monday, July 19
-
+* I watched presentations for the rest of the interns
+* I cut out more of the Sage logos from the green vinyl sheets
+* I worked with the Jetson Nano to try and get the camera to send video to the nano
 
 ### Tuesday, July 20
-
+* I finished cutting out all of the Sage logos today
+* I worked more on the nano and looked into a question that Andrew had about the environment sensor
 
 ### Wednesday, July 21
 

@@ -3,6 +3,7 @@ from queue import Queue
 import numpy as np
 import cv2 as cv
 import time 
+
 def create_video_capture_queue(device, queue_size=30, fps=None, quiet=False):
     frames = Queue(queue_size)
     
@@ -44,18 +45,10 @@ while(1):
     elif k == ord('s'):
         cv.imwrite('opticalfb.png',frame2)
         cv.imwrite('opticalhsv.png',bgr)
+    pixel_y = 320
+    pixel_x = 192
+    #print(f'the velocity vector at pixel (y=10,x=15) is {flow[pixel_x,pixel_y]}')
     prvs = next
-    flow_tensor = cv.calcOpticalFlowFarneback( prvs, # last frame (in grayscale) 
-                                            next, # the current frame (in grayscale)
-                                            None,
-                                            0.5, # pyramid scale
-                                            3,   # levels 
-                                            32,  # window size
-                                            3,   # iterations
-                                            5,   # polynomial degree
-                                            1.2, # polynomial std. dev.
-                                            0) 
-    pixel_y = 10
-    pixel_x = 15
-    print(f'the velocity vector at pixel (y=10,x=15) is {flow_tensor[pixel_y,pixel_x]}')
+    magnitude = np.linalg.norm(flow[pixel_x,pixel_y])
+    print(magnitude)
 quit()
