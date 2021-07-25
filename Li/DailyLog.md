@@ -538,9 +538,58 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+### July 19, 2021 (Day 34)
+Updates:
+* Included function which masks the image. White pixels represent the pole is present. Black pixels represent the pole is not present. This will be useful for the CNN image segmentation. 
+* The .py code is available on [GitHub]() and will be updately consistently there. 
+* Created training set comprised of masked images. Some results from masking can be found [here](). 
+* Fixed bugs with pole detection algorithm. Added comments and improved readability of code.
+* Created PowerPoint for tomorrow's presentation. 
 
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
 
+### July 20, 2021 (Day 35)
+Updates:
+* Presented results to CV group. PowerPoint can be found [here]().
+* Worked with Seongha on running U-Net CNN for my training set. Was not able to run directly on my home laptop. So we resorted to using Docker. Was successful in training a dataset of 1350 masked images. 
+* Read and learned about [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597).
 
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+
+### July 21, 2021 (Day 36)
+Updates:
+* Attended seminar 
+* Took a break from grinding out code and worked on writing the final paper. Finished introduction and parts of methods.
+* Used Seongha's [paper](https://www.mdpi.com/2073-4433/12/3/395) and the earlier papers as guides for my writing. 
+* Needed images for the testing set, so I ran the pole detection algorithm on images from December 2018. The algorithm did not perform as well as it did on December 2017. This was probably due to the patchier snow/grass (perhaps not enough snow?). The results from the contouring and masking can be found [here]().
+* 1141 images were inputted, two poles from each image (2282 total), including images at night. 975 poles labeled* (42.7%)
+* Created PowerPoint for tomorrow's meeting.
+
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+
+### July 22, 2021 (Day 37)
+Updates:
+* Presented PowerPoint in CV meeting. PowerPoint can be found [here]().
+* Worked with Seongha in testing the UNet CNN. I only tried it on a handful of images since I have not optimized her code, but the testing was successful. The generated predictions were able to detect the poles in the testing images. Some results can be found [here]().
+* Attended Office Hours session with Sean to start initial stages of plug-in. Session was very productive and I was able to have some code written. Will need to ask Seongha for clarification on how to load the UNet model properly.  
+
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+
+### July 23, 2021 (Day 38 + Weekend)
+Updates:
+* Presented PowerPoint in CV meeting. PowerPoint can be found [here]().
+* Seongha showed me how to load the model correctly into the plugin. Encounter other issues that I will need to ask Sean.
+* Modified Seongha's testing code to be more suitable for the purpose of masking poles. 
+* Worked on the last portion of my project, which is the distance measurement. 
+* Developed program which can find the minimum white pixel of the pole. (1) Found a contour (pole) (2) Detect contour min.
+* Compiled more images of poles in the snow to create masks of. This would increase the diverity of the poles in the images and hopefully improve the model training (and testing).
+
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
 
 
 
