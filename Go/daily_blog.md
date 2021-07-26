@@ -169,6 +169,10 @@
 
 ### Week 7 7/26-8/1:
 ##### Monday:
+- Realized I have been pushing to the wrong fork of the repo (facepalm), ported everything to the right one
+- Looked into multi-channel emulation on sigle channel gateway; allows single channel gateways to jump rapidly through channels:
+ - can get the effects of a multi-channel gateway on a single channel
+ - May help bridge gaps between p2p approach and network approach
 
 
 
