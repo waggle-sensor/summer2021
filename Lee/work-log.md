@@ -596,7 +596,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 -Today's Technical Tasks
 * Node-RED GUI development
 
-- Things to do
+-Things to do
 * Need to change home address on Kronos System (personal info), cause moving out soon!!!
 
   
