@@ -1,0 +1,201 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in,footskip=0.25in]{geometry}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{float}
+
+\author{Colin Burdine $|$ Summer 2021 SULI Intern \\[6mm] Argonne National Laboratory, MCS Division}
+\title{Anomaly Localization in Images at the Edge }
+%\date{}
+
+\begin{document}
+\maketitle
+
+%========================= MACROS ===========================
+
+
+%======================== TITLE PAGE ========================
+
+
+\begin{abstract}
+In this paper we present a framework for both online and offline models that determine the locations of anomalies in images if they are present.  We present this framework with an emphasis on the use case of edge computing, in which the model is deployed on a small embedded device and makes predictions autonomously using data acquired by the device in the field. To identify anomalies, we use a variant of convolutional autoencoders and introduce novel techniques to increase model accuracy while minimizing the memory and computational resource requirements of the model. We evaluate our framework on an image dataset generated from the \textit{National Ecological Observatory Network} (NEON) phenology camera database.
+\end{abstract}
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{l r}
+\includegraphics[scale=0.08]{figures/doe_emblem} \qquad
+& \qquad\includegraphics[scale=0.5]{figures/argonne_logo} 
+\end{tabular}
+\end{center}
+\end{figure}
+
+\newpage
+
+%===================== TABLE OF CONTENTS ====================
+\tableofcontents
+\newpage
+
+%===================== INTRODUCTION ====================
+\section{Introduction}
+
+\subsection{Anomaly Localization}
+The task of anomaly localization is a difficult yet important problem in the area of computer vision. This task involves detecting if an image contains anomalies and then subsequently finding the region of the image containing the anomaly. It has applications in multiple disciplines, such as industrial quality control, surveillance, and environmental science. In an unsupervised online setting this is especially challenging, as it removes any influences of human calibration from the training process and thus constitutes a sort of "learning to learn" or meta-learning task. Many state-of-the-art unsupervised and semi-supervised anomaly localization methods employ deep learning, and have sometimes yielded results comparable to that of a fully supervised method (i.e. when anomaly detection is treated as a binary classification task) \cite{attention_anomalies}.\\
+
+Although state-of-the art methods have yielded impressive results, the underlying deep learning models require large datasets and can be computationally demanding to train. In particular, anomaly localization models such as \textit{variational autoencoders} (VAEs) require large samples to be taken from a parameterized distribution during the training process \cite{avb_model}. Furthermore, \textit{adversarial autoencoders} (AAEs) require an additional set of models to be trained (a generator and discriminator) and can be susceptible to training complications such as mode collapse \cite{kumar_mask_aae, avb_model}. In edge computing environments, especially where training and prediction are done autonomously, it is preferable to use models that require little to no human intervention to train, calibrate and deploy. In developing our framework for online anomaly localization, we attempt to adopt as much of the state-of-the art methodology as possible, but subject to the constraints of an edge computing environment.
+
+
+
+%===================== BACKGROUND ====================
+\section{Background}
+\subsection{Overview of Anomaly Detection}
+
+The task of anomaly detection is often interpreted as two-step procedure, in which a probability distribution is first discovered which best fits the data, and then anomalies are detected which have a relatively low likelihood in this distribution. For image data that is intrinsically feature-rich, discovering a probability distribution (say, $P(X)$) that best fits the data and generalizes well can difficult. A common method to address this problem is to produce a low-dimensional embedding of the data through some dimension-reducing transformation, $\tau: \mathcal{X} \rightarrow \mathcal{X}$, where $\mathcal{X}$ is the space of all input images. $\tau$ is often selected such  $\tau(X) \approx X$ for $X \in \mathcal{X}$ that are most probable. In other words, in regions where $P(X)$ is relatively high, $\tau(X)$ more closely resembles the identity function. From this property, we can see that $\tau$ is a sort of image compression algorithm optimized to compress images from the natural distribution $P(X)$ well, and others poorly. Thus, if we can quantify the compression loss of $X$ under $\tau$ (a common choice is the \textit{mean square error}: $\lVert X - \tau(X)\rVert^2 / |X|$), we can use the loss to compute a proportional estimate of the likelihood $P(X)$. If the compression loss is above some relatively high fixed threshold, we can expect that $P(X)$ is low, and $X$ can be flagged as an out-of-distribution anomaly. Otherwise, $X$ is considered to be in-distribution.\\
+
+The use of compression algorithms to identify anomalies is a common approach in literature, particularly when coupled with deep learning methods like autoencoders \cite{}. However, it can be shown that classical dimension reduction techniques, such as \textit{principle components analysis} (PCA) can be used to localize anomalies, particularly those that are identifiable by their channel-wise features in an image. PCA is a method that determines a set of orthogonal features that best explain the variance of a larger set of features. In Figure~\ref{fig:simple_pca} we give an example of how PCA can be applied to the RGB channels of an image to localize anomalies in a scene based on having an out-of-distribution color:
+
+\begin{figure}[H]
+\begin{center}
+\begin{tabular}{ccc}
+\includegraphics[scale=0.45]{figures/pca_image} & 
+\includegraphics[scale=0.45]{figures/pca_compressed} & 
+\includegraphics[scale=0.45]{figures/pca_lossmap} \\
+(a) & (b) & (c)
+\end{tabular}
+\end{center}
+\caption{An example in which we applied channel-wise PCA to an anomalous image (a) to obtain a compressed image (b). Computing the Euclidean channel-wise difference and applying a threshold, we obtain the loss map (c).}
+\label{fig:simple_pca}
+\end{figure}
+
+In Figure~\ref{fig:simple_pca}, we see that the PCA transformation that is fitted to \ref{fig:simple_pca}(a), retains the green and brown colors but discards the yellow colors. This results in the anomaly (a rubber duck) appearing in the reconstructed image as having a green hue. After computing the pixel-wise Euclidean distance between \ref{fig:simple_pca}(a) and \ref{fig:simple_pca}(b) and applying a threshold, we can then determine the anomaly's bounding box using a countour detection algorithm.\\
+
+Although classical methods like PCA can successfully localize anomalies based on color, they tend to do a poor job of localizing anomalies based on shape or location in the image. One way we can extract spatial features in an image is through the \textit{discrete cosine transform} (DCT), which is an invertible transformation that decomposes a 2D image as a sum of orthogonal cosine wave functions with discretely spaced wave periods. Indeed, traditional image compression algorithms such as the JPEG compression standard \cite{jpeg_standard} employ the DCT to extract the periodic spatial features in image. In Figure~\ref{fig:simple_jpeg} we demonstrate the effect of applying a JPEG-style compression algorithm on an image by applying the DCT, then PCA, and finally the inverse DCT to ``chunks" of an image. The results of this compression method are shown below for two chunk sizes: 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.4]{figures/jpeg_compression_figure}
+\end{center}
+\caption{An example of JPEG-style compression applied to a source image with vertical strip chunks (a) and small rectangular chunks (b). In method (a) an anomaly is detected, whereas in method (b) no anomaly is detected.}
+\label{fig:simple_jpeg}
+\end{figure}
+
+In Figure~\ref{fig:simple_jpeg} we can see that the accuracy of an anomaly detector is sensitive to the choice of the image chunk size, and thus more generally the choice of compression transformation. Though this only serves as an anecdotal example, it is reasonable to argue that classical methods like PCA will fail to work as robust anomaly detectors because they cannot capture non-linear, non-orthogonal features in images. 
+
+\subsection{Convolutional Autoencoders}
+
+Convolutional autoencoders are a type of deep learning model that can be used to compress image data into a lower-dimensional representation. Unlike classical methods, convolutional autoencoders are capable of extracting non-linear features images. This is accomplished through the use of convolutional filters and dense neural networks weights that are fitted to minimize the reconstruction loss of a set of images. Convolutional autoencoders are comprised of two parts: the convolutional layers (the ``encoder") and the deconvolutional layers (the ``decoder"). These parts are shown in Figure~\ref{fig:conv_autoencoder}:
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{figures/cae_concept_diagram}
+\end{center}
+\caption{The architecture of a convolutional autoencoder.}
+\label{fig:conv_autoencoder}
+\end{figure}
+
+
+
+%===================== METHODOLOGY ====================
+\section{Methodology}
+\subsection{Dataset}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.22]{figures/dataset_normal_samples} \\
+\end{center}
+\caption{Samples from the NEON RMNP site dataset, from May to June 2021.}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.22]{figures/dataset_anomaly_samples}
+\end{center}
+\caption{Samples of human-generated anomalous images with ground truth labels from the NEON RMNP site dataset.}
+\end{figure}
+
+\subsection{Model Architecture}
+
+\subsection{Attention Expansion}
+
+\subsection{Gamma Distribution Filter}
+
+\subsection{Online Training}
+%===================== RESULTS ====================
+\section{Experiments and Results}
+
+\subsection{Use of Gamma Distribution Filter}
+
+\subsection{Prediction Localization}
+
+\subsection{Impact of Attention Expansion}
+
+\subsection{Online Training Simulation}
+
+%===================== CONCLUSION ====================
+\section{Conclusion}
+
+\subsection{Summary of Work}
+
+\subsection{Future Direction of Work}
+%===================== ADDITIONAL CONTENT ====================
+%\section{Additional Work Performed}
+
+\pagebreak
+
+\section{Bibliography}
+\bibliography{writeup}
+\bibliographystyle{plain}
+\pagebreak
+
+%===================== APPENDICES ====================
+
+\appendix
+
+\section{Exponential Moving Gamma Distribution}
+In this section we will derive the estimators for an exponential moving gamma distribution for time series data.\\
+
+
+The probability density function of the gamma distribution with time-dependent shape and scale parameters $k(t)$ and $\theta(t)$ is given by:
+
+\begin{equation}
+f(x|\kappa(t), \theta(t)) = \frac{1}{\Gamma(\kappa(t))\theta(t)^{\kappa(t)}} x^{\kappa(t)-1}e^{-x/\theta(t)}
+\label{eqn:time_dependent_gamma}
+\end{equation}
+
+\noindent This distribution is a special case of the \textit{generalized gamma distribution} \label{eqn:time_dependent_general_gamma}, with time-independent parameter $\gamma(t) = 1$ as shown in \eqref{eqn:time_dependent_general_gamma}:
+
+\begin{equation}
+f(x|\kappa(t), \theta(t), \gamma(t)) = \frac{\gamma(t)}{\Gamma(\kappa(t))\theta(t)^{\kappa(t)\gamma(t)}} x^{\kappa(t)\gamma(t)-1}e^{-(x/\theta(t))^\gamma(t)}
+\end{equation}
+
+\noindent We wish to compute estimators for $\kappa(t)$ and $\theta(t)$ based on all preceding timeseries data points, $x_{i-1}, x_{i-2}, ....$ with exponentially decreasing weights $w_{i-1}(t), w_{i-2}(t), ...$ that decay with factor $\beta \in (0, 1)$ and sum to unity. This is satisfied by the recurrent weighting scheme given in \eqref{eqn:gamma_weights}:
+
+\begin{equation}
+w_{k}(t) = \beta w_{k}(t-1) = \beta w_{k-1}(t) \qquad\Rightarrow\qquad w_{k}(t) = (1-\beta)\beta^{(t-k)}
+\label{eqn:gamma_weights}
+\end{equation} 
+
+\noindent Assuming there are infinitely many preceding iid data points, we obtain the log likelihood function \eqref{eqn:time_dependent_gama_ll}:
+
+\begin{align}
+\log \mathcal{L} & = \sum_{n=1}^\infty w_{i-n}\log f(x_{i-n}|\kappa(t), \theta(t)) \nonumber\\
+& = \log \gamma(t) - \log\Gamma(\kappa(t)) - \kappa(t)\gamma(t)\log \theta(t) \nonumber \\ 
+& \qquad +\sum_{i=1}^\infty w_{i-n}(t)[(\gamma(t)\kappa(t) - 1)\log(x_{i-n}) - (x_{i-n}/\theta(t))^{\gamma(t)}]
+\label{eqn:time_dependent_gama_ll}
+\end{align}
+
+\noindent Maximizing $\log\mathcal{L}$ with respect to $\kappa(t)$, $\theta(t)$, $\gamma(t)$ gives us the system \eqref{eqn:gamma_sys_1}-\eqref{eqn:gamma_sys_3}
+
+\begin{align}
+0 = \dfrac{\partial \log\mathcal{L}}{\partial \kappa(t)} &= -\gamma(t)\log(\theta(t)) - \psi(\kappa(t)) + \sum_{n=1}^\infty \gamma w_{i-n}(t) \log(x_{i-n})  \label{eqn:gamma_sys_1}\\
+0 = \dfrac{\partial \log\mathcal{L}}{\partial \theta(t)} &= -\kappa(t) + \sum_{n=1}^\infty w_{i-n}(t) (x_{i-n}/\theta(t))^{\gamma(t)} \label{eqn:gamma_sys_2}\\
+0 = \dfrac{\partial \log\mathcal{L}}{\partial \gamma(t)} &= 1/\gamma(t) + \kappa(t)\sum_{n=1}^\infty w_{i-n}(t)\left[ \log(x_{i-n}/\theta(t)) + (x_{i-n}/\theta(t))^{\gamma(t)}\log(x_{i-n}/\theta(t)) \right] \label{eqn:gamma_sys_3}
+\end{align}
+
+\noindent where $\psi(x) = \Gamma'(x)/\Gamma(x)$ is the digamma function. Because $\psi(x)$ is known to intractable, this system admits no closed-form solution. However, it is known that a consistent, closed form estimator for the standard gamma distribution parameters, $\kappa(t)$ and $\theta(t)$ can be obtained by imposing that only \eqref{eqn:gamma_sys_2} and \eqref{eqn:gamma_sys_3} hold, and then fixing $\gamma(t) = 1$ \cite{gammapaper}. First, we 
+
+\section{Exponential Heap Sampling}
+
+\end{document}

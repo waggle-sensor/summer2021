@@ -241,4 +241,11 @@
 ### Friday July 16, 2021 ###
 - Ran another simulation (this time with greater buffer size) and obtained slightly larger AUC.
 - Began work on implementing an adaptive gamma filter to see if there are any performance gains
-- Continued work on my poster. 
+- Continued work on my poster.
+
+## Week 7 ##
+### Monday July 19, 2021 ###
+
+### Tuesday July 20, 2021 ###
+
+### Wednesday July 21, 2021 ###
