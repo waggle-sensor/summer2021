@@ -451,6 +451,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 -Today's Non-Technical Tasks
 * Attended daily sage scrum demo
   
+************************************************************
   
 ### Tuesday, 6th
 -Today's Technical Tasks
@@ -475,7 +476,8 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * The source from https://nodered.org/docs/getting-started/docker
 * Managing User Data: Once you have Node-RED running with Docker, we need to ensure any added nodes or flows are not lost if the container is destroyed. This user data can be persisted by mounting a data directory to a volume outside the container. This can either be done using a bind mount or a named data volume. Node-RED uses the /data directory inside the container to store user configuration data. (Don't know what it is)
   
-
+************************************************************
+  
 ### Monday, 12th
 -Today's Non-Technical Tasks
 * Attended mid-presentation (not sure why my laptop microphone/share the screen not working)
@@ -528,3 +530,93 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 
 -Today's Technical Tasks
 * Continued work on creating multiple node-red on dockers with different portnumbers
+  
+  
+************************************************************
+### Monday, 19th
+-Today's Non-Technical Tasks
+* Presented mid goal for internship
+* Updated the summer internship google drive
+  
+-Today's Technical Tasks
+* discussion about docker with yomi and luke
+* Figured out using docker port numbers for multiple instances... thanks yomi and luke...!!!
+  
+![image](https://user-images.githubusercontent.com/56851781/126231531-de1941a1-8f9e-4ed6-9693-ccaafa2eed70.png)
+
+![image](https://user-images.githubusercontent.com/56851781/126231565-0864bc43-1e94-45db-a2a1-f032ac748671.png)
+  
+![image](https://user-images.githubusercontent.com/56851781/126231623-5c4d1a82-6381-4e87-bd4f-469e7d87f064.png)
+* Even if those instances are created with different port numbers, these are already used, so it is just Listening, (but not what I want)
+  
+* port 1880 
+![image](https://user-images.githubusercontent.com/56851781/126345056-7f4630bb-714a-4efe-8e15-ff04b8c7f15b.png)
+  
+* port 1881 
+![image](https://user-images.githubusercontent.com/56851781/126345201-faa24ba0-c168-4905-8256-372cbf4366e7.png)
+  
+  
+### Tuesday, 20th
+-Today's Non-Technical Tasks
+* Attended Chris thesis presentation (military UAV)
+* Meeting with Joe and updated my progress with him (really cool)
+
+-Today's Technical Tasks
+* Successfully managed Docker hub and node-red instances
+* Read documents about docker containers / deployment for each user
+
+  
+### Wednesday, 21th
+-Today's Non-Technical Tasks
+* Attended EDU Weekly Seminar Series: How to Establish Your Personal Brand
+* Meeting with Brandon and Larry (Docker and VM)
+* Amazing meeting with Sean to talk about Docker port numbers (Thank you so much)
+* Still working on write papers with Korean students
+  
+-Today's Technical Tasks
+* https://purdue-primo-prod.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=TN_cdi_ieee_primary_9239699&context=PC&vid=PURDUE&lang=en_US&search_scope=everything&adaptor=primo_central_multiple_fe&tab=default_tab&query=any,contains,nodered&facet=rtype,exclude,reviews,lk&facet=rtype,exclude,reference_entrys,lk
+
+  
+### Thursday, 22th
+-Today's Non-Technical Tasks
+* Attended scrum
+* Meeting with Sean & Wolfgang to set up Docker-compose.yml
+* Demo/Presentation for writing paper (Node-RED and IoT Cloud service) with meeting with Korean students
+  
+-Today's Technical Tasks
+* Attended scrum
+* Meeting with Joe (future plans after internship and several things needed to be finished before internship)
+
+  
+### Friday, 23th
+-Today's Non-Technical Tasks
+* Attended scrum
+* Meeting with Branden for Docker Pull/Push discussion
+  
+-Today's Technical Tasks
+* Node-RED GUI development
+
+-Things to do
+* Need to change home address on Kronos System (personal info), cause moving out soon!!!
+
+  
+************************************************************
+### Monday, 26th
+-Today's Non-Technical Tasks
+* Seminar for Korean Students (930AM in EST)
+  
+-Today's Technical Tasks
+* Finally solved it out (IMAP, smtp.gmail.com)
+* Relevant resource: https://getemailservices.com/gmail-imap-settings/
+* Added alarm notification on Node-RED UI page
+  
+![image](https://user-images.githubusercontent.com/56851781/127035659-b8083fda-c683-468e-bc97-64f45abe5b19.png)
+  
+* Added multiple channels/Web-hook service from Node-RED to Slack 
+  
+![image](https://user-images.githubusercontent.com/56851781/127035795-29f89bc8-a4a4-426d-858d-4ad0daea4334.png)
+
+-Things to do:
+* Update ResearchGate
+* More research for this: ![image](https://user-images.githubusercontent.com/56851781/127054102-9b9b8ba1-6fee-450a-ad7b-3e70788f4463.png)
+
