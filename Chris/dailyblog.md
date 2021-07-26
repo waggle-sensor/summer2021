@@ -319,3 +319,13 @@ How is it week 4 already!?
     - I may be able to help on the black box(?) side.
   - So tau automatically instruments code. Maybe we can hijack this to do live profiling
   - looking into the tau source code, python and c
+
+## Week 8 (7/26-7/30)
+
+### Monday (7/26)
+- Modifing pytau.py and ctau_impl.c to auto instrument
+  - some successes and some things I'm still confused about
+  - I can add more pytau.trackmemoryhere() calls that add to the number of memory samples
+  - but it seems this only works at the very top level, not sure how the profiling works down the call tree
+  - I think this is where ctau_impl comes in (the start shows a rotating tree structure)
+  - Once I figure out where each function is being profiled, either in c or py, I'll be good
