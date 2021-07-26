@@ -9,7 +9,7 @@
 
 ## Post-Meeting Notes
 
-- My main goal is to implement live profiling to supplement Aji's edge controller. I will need to setup a Prometheus configuration on the NX that pulls metrics from each app using sockets. When the `live_metrics` module inits, the app will block until the socket connection to `live_metrics.sock` is established.
+- My main goal is to implement live profiling to supplement Aji's edge controller. I will need to setup a Prometheus configuration on the NX that pulls metrics from each app using sockets. When the `live_metrics` module inits, the app will block until the socket connection to `/app/live_metrics.sock` is established.
   - Prometheus Client and custom collector
     - Runs on node in container, collects metrics from unix sockets using a custom collector
     - Runs in its own container
