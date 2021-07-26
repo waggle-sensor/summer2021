@@ -618,3 +618,5 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 
 -Things to do:
 * Update ResearchGate
+* More research for this: ![image](https://user-images.githubusercontent.com/56851781/127054102-9b9b8ba1-6fee-450a-ad7b-3e70788f4463.png)
+
