@@ -155,3 +155,9 @@ GradientBoostingClassifier   | Testing Acc: 60.38 % | Training Time: 11111.49 s 
 
 SnapshotEnsembleClassifier   | Testing Acc: 66.46 % | Training Time: 329.23 s | Evaluating Time: 19.74 s
 ```
+
+### Update July 26, 2021
+ - Set up and train sparse resnet anytime DNN as a baseline
+   - accuracy results in [accuracy-dnn.log](anytime-dnn.log)
+ - Train and convert different models for image classification as TensorRT: resnet152, densenet121, vgg16_bn
+ - Try ensemble methods in [sklearn](https://scikit-learn.org/stable/modules/ensemble.html)
