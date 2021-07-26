@@ -187,6 +187,83 @@
 
 
 
+### Week 7 ###
+
+------------
+
+#### Monday July 12, 2021 ####
+
+- Mid-internship Presentation
+
+#### Tuesday July 13, 2021 ####
+
+- Worked in implementing API Endpoint to trigger app profiling
+
+#### Wednesday July 14, 2021 ####
+
+- Worked in implementing API Endpoint to trigger app profiling
+
+#### Thursday July 15, 2021 ####
+
+- Completed the API endpoint to trigger a Jenkins agent
+
+#### Friday July 16, 2021 ####
+
+- Working on connecting to the Nvidia NX through Jenkins
+- Working on Integrating Luke`s Jenkins Code in ECR
+
+
+### Week 8 ###
+
+------------
+#### Monday July 19, 2021 ####
+
+- Started Integration of Luke's Profiler into ECR
+
+#### Tuesday July 20, 2021 ####
+
+- Working in implementing API Endpoint to trigger app profiling
+
+#### Wednesday July 21, 2021 ####
+
+- Working in implementing API Endpoint to trigger app profiling
+
+#### Thursday July 22, 2021 ####
+
+- Completed and Test feature is merged in ECR
+
+#### Friday July 23, 2021 ####
+
+- Integrated Luke`s Jenkins Code in ECR.
+- Additional Things work on
+       1. Check if Jenkins can collect files ?
+	   2. Have the pipeline upload the results to ECR, only the pipeline know a the password to upload file (store using secret)
+       3. if profiling output is small enough to include in log file output (maybe base64)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### Learning Resources and References ###
@@ -196,5 +273,7 @@
 3. [Docker Documentation](https://docs.docker.com/engine/reference/builder/)
 4. [ECR Application Testing flow diagram](https://drive.google.com/file/d/1rnv8dIyr29y6SvSCzZHq5Z-5J0xo3wlz/view?usp=sharing)
 5. [ECR Discussion](https://docs.google.com/document/d/135ZKehdaxrsKMNi4CTNVXJbzZDDNMD9sIFfVVf5NzMc/edit)
+6. [Mid Internship](https://docs.google.com/presentation/d/16kiERiqq-tQBJg4YgfQn4j4VF1rrl0aUIJVfkSNFwoo/edit?usp=sharing)
+
 
 

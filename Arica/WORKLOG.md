@@ -569,3 +569,106 @@ I had a good week. Didn't get a ton of work done, but a lot of important informa
 * Finally got a config both on and off a switch 
 
 -------
+
+### Thursday, 7/15 (8 Hours worked)
+**Today's non-technical work:**
+* Attended Scrum 
+* Met with Sean to discuss clean ways to update a switch
+
+**Today's technical work:**
+* Started honeycomb README file 
+* created autoexpect scripts to log in and get information about the switches
+
+**TODO:** 
+* change clibanner for switch to represent the config version number
+* write hc scripts for switch
+
+
+-------
+
+### Friday, 7/16 (5 Hours worked)
+
+**Today's technical work:**
+* Continued work on HC README
+* Changed switch config convention to change the clibanner to include the version number, allowing for clean state checks and install verifications
+
+
+-------
+## Week 9: 7/19 to 7/24
+-------
+
+### Monday, 7/19 (7 Hours worked)
+
+**Today's non-technical work:**
+* Attended Midpoint presentation round 2
+* My breaker node was down the whole day, so I started working on my White paper. 
+
+--------
+### Tuesday, 7/20 (8 Hours worked)
+
+**Today's non-technical work:**
+* Met with Joe to catch up from his vacation lead
+
+**Today's technical work:**
+* Started planning out HC daemon
+* Researched outputting logs to `journalctl`
+* Created HC `systemd` service 
+* Created basic flask server
+
+TODO for tomorrow:
+* Furnish flask server according to state diagram
+* Organize HC repo
+
+--------
+
+### Wednesday, 7/21 (7 Hours worked)
+
+**Today's technical work:**
+* Wrote out OOP python HC structure
+* Created `hc_manager` python class for HC daemon
+* Created `job` python class for HC daemon
+
+TODO for tomorrow:
+* Finish first iteration of `hc_manager` and `job` classes
+* Add /getState endpoint to server
+* have `job` class parse payload data and create object accordingly
+
+--------
+
+### Thursday, 7/22 (8 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum, was pretty lame
+* Met with Joe about HC client-side server questions
+
+**Today's technical work:**
+* Wrote out more of `job` class checks
+* Wrote more HC documentation
+* Wrote out more of the `/upgrade` client endpoint
+
+TODO for tomorrow:
+* Finish environment setup in the `/upgrade` endpoint
+* make env cleanup function 
+* migrate `/upgrade` endpoint utilities out to a module
+* (hopefully) finish the first basic flow of honeycomb ( get payload from `/upgrade`, assess, setup, add job, execute it(maybe not this one) )
+
+--------
+
+### Friday, 7/23 (8 Hours worked)
+
+**Today's non-technical work:**
+* Attended Scrum
+* Met with Joe to talk HC Architecture
+
+**Today's technical work:**
+* Finished `/upgrade` endpoint
+* Tackled the concept of continuity across routes via flask app context
+* Made git repo for honeycomb 
+* Wrote `rsync` script so I can code on my IDE
+
+TODO for the coming monday:
+* Assess where I'm at in terms of HC development
+* Make /upgrade add real jobs to the `hc_manager` app instance
+* (Hopefully) achieve the minimum use case for honeycomb
+
+--------

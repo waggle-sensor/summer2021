@@ -18,4 +18,8 @@ Week of 7/12
 - The issues of the labelled images seems to have been solved. The images were not all the same size and the code used to produce the labelled images only created one size for the labels rather then it matching each image's size. 
    - The training dataset was then sorted into smaller sets that corresponded to size so that the code will be able to correctly match the images together to train. 
 - The session times out before the training can be completed so I need to find away around that
-- 
+- Continue working on written tutorial for training the AI. 
+
+Week of 7/19
+- This week I would like to try to finish training for the deeplab model 
+  - I am still trying to solve the issue of my ssh session timing out, I am going to try Tmux once the Chameleon machine is back online. 

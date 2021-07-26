@@ -1,0 +1,226 @@
+\ProvidesPackage{beamerthemeLocal}  % this style was created by Thomas Deselaers an Philippe Dreuw
+\usepackage{caption}
+\usepackage{changepage}
+
+\DeclareCaptionLabelFormat{mycaption}{\usebeamercolor[fg]{caption name}#1 #2. }
+\captionsetup[figure]{labelformat=mycaption, labelsep=none, labelfont=bf}
+\captionsetup[table]{labelformat=mycaption, labelsep=none, labelfont=bf}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\RequirePackage{tangocolors}
+% Defines the tango palette for use with LaTeX.
+%
+% Copyright 2006 by Patrick Pletscher <pat _at_ pletscher.org>
+%
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+
+% butter (yellowish)
+\definecolor{tabutter}{rgb}{0.98824, 0.91373, 0.30980}		% #fce94f
+\definecolor{ta2butter}{rgb}{0.92941, 0.83137, 0}		% #edd400
+\definecolor{ta3butter}{rgb}{0.76863, 0.62745, 0}		% #c4a000
+
+% orange
+\definecolor{taorange}{rgb}{0.98824, 0.68627, 0.24314}		% #fcaf3e
+\definecolor{ta2orange}{rgb}{0.96078, 0.47451, 0}		% #f57900
+\definecolor{ta3orange}{rgb}{0.80784, 0.36078, 0}		% #ce5c00
+
+% chocolate (brownish)
+\definecolor{tachocolate}{rgb}{0.91373, 0.72549, 0.43137}	% #e9b96e
+\definecolor{ta2chocolate}{rgb}{0.75686, 0.49020, 0.066667}	% #c17d11
+\definecolor{ta3chocolate}{rgb}{0.56078, 0.34902, 0.0078431}	% #8f5902
+
+% chameleon (greenish)
+\definecolor{tachameleon}{rgb}{0.54118, 0.88627, 0.20392}	% #8ae234
+\definecolor{ta2chameleon}{rgb}{0.45098, 0.82353, 0.086275}	% #73d216
+\definecolor{ta3chameleon}{rgb}{0.30588, 0.60392, 0.023529}	% #4e9a06
+
+% sky blue
+\definecolor{taskyblue}{rgb}{0.44706, 0.56078, 0.81176}		% #728fcf
+\definecolor{ta2skyblue}{rgb}{0.20392, 0.39608, 0.64314}	% #3465a4
+\definecolor{ta3skyblue}{rgb}{0.12549, 0.29020, 0.52941}	% #204a87
+\definecolor{ta4skyblue}{rgb}{0.006249, 0.1020, 0.38941}	
+
+% plum (violettish)
+\definecolor{taplum}{rgb}{0.67843, 0.49804, 0.65882}		% #ad7fa8
+\definecolor{ta2plum}{rgb}{0.45882, 0.31373, 0.48235}		% #75507b
+\definecolor{ta3plum}{rgb}{0.36078, 0.20784, 0.4}		% #5c3566
+
+% scarlet red
+\definecolor{tascarletred}{rgb}{0.93725, 0.16078, 0.16078}	% #ef2929
+\definecolor{ta2scarletred}{rgb}{0.8, 0, 0}			% #cc0000
+\definecolor{ta3scarletred}{rgb}{0.64314, 0, 0}			% #a40000
+
+% aluminium
+\definecolor{taaluminium}{rgb}{0.93333, 0.93333, 0.92549}	% #eeeeec
+\definecolor{ta2aluminium}{rgb}{0.82745, 0.84314, 0.81176}	% #d3d7cf
+\definecolor{ta3aluminium}{rgb}{0.72941, 0.74118, 0.71373}	% #babdb6
+
+% gray
+\definecolor{tagray}{rgb}{0.53333, 0.54118, 0.52157}		% #888a85
+\definecolor{ta2gray}{rgb}{0.33333, 0.34118, 0.32549}		% #555753
+\definecolor{ta3gray}{rgb}{0.18039, 0.20392, 0.21176}		% #2e3436
+
+\definecolor{tawhite}{rgb}{0.95, 0.95, 0.95}
+\definecolor{ta2white}{rgb}{0.90, 0.90, 0.90}
+
+\selectcolormodel{cmyk}
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamercolor{headline}{fg=tawhite,bg=black}
+\setbeamercolor{footline}{fg=tawhite, bg=ta3gray}
+\setbeamerfont{footline}{size=\large,series=\tt}
+\setbeamercolor{separation line}{bg=ta2skyblue}
+\setbeamercolor{title in headline}{fg=tawhite}
+\setbeamercolor{author in headline}{fg=ta2white}
+\setbeamercolor{institute in headline}{fg=ta2white}
+
+\setbeamercolor{framesubtitle}{fg=ta3orange, bg=ta2gray}
+\setbeamercolor{author in head/foot}{fg=tawhite, bg=black}
+\setbeamercolor{title in head/foot}{fg=tawhite, bg=black}
+
+\setbeamercolor*{normal text}{fg=tachameleon, bg=ta3gray}
+\setbeamercolor*{block body}{bg=ta2aluminium,fg=black}
+\setbeamercolor*{block title}{fg=tawhite,bg=ta2skyblue}
+\setbeamerfont{block title}{size=\large,series=\bf}
+\setbeamercolor{upper separation line head}{fg=ta2orange}
+
+\setbeamercolor*{example body}{fg=ta3aluminium,bg=black}
+\setbeamercolor*{example text}{fg=ta3aluminium,bg=black}
+\setbeamercolor*{example title}{bg=taorange,fg=ta2gray}
+
+\setbeamercolor{alerted text}{fg=ta3gray}
+
+\setbeamercolor{example text}{fg=taorange}
+\setbeamercolor{structure}{fg=ta3skyblue}
+
+\setbeamercolor{caption name}{fg=structure!70!black}
+
+\setbeamercolor{background canvas}{bg=ta4skyblue}
+
+
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+% macro workaround to allow for setting the title logo:
+\newcommand{\logosource}{example-image-c}
+\newcommand{\titlelogo}[1]{\renewcommand{\logosource}{#1}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{block begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[ht=4ex,dp=1ex,center,rounded=true,shadow=true,leftskip=1cm,colsep*=.75ex]{block title}%
+    \usebeamerfont*{block title}\insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[rounded=true,shadow=true,leftskip=1cm,colsep*=.75ex,sep=2ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+% apply left/right padding of text:
+\addtobeamertemplate{block begin}
+  {}
+  {
+     % separates paragraphs in a block
+   \setlength{\parskip}{10pt}%
+   \begin{adjustwidth}{2cm}{2cm}
+}
+\addtobeamertemplate{block end}
+  {\end{adjustwidth}%
+  }% Pads bottom of block
+  {} % Seperates blocks from each other
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{  
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+      \begin{column}{.02\paperwidth}
+      \end{column}
+      \begin{column}{.07\paperwidth}
+        \begin{center}
+          %\includegraphics[width=.6\linewidth]{logos/i6-hks44}
+        \end{center}
+        \vskip1ex
+      \end{column}
+      \begin{column}{.675\paperwidth}
+        \vskip4ex
+        \raggedleft
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
+        \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[1ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}
+      \end{column}
+      \begin{column}{.25\paperwidth}
+        \vskip1cm
+        \begin{center}
+          \includegraphics[width=.7\linewidth]{\logosource}
+        \end{center}
+        \vskip1.5cm
+      \end{column}
+      \begin{column}{.03\paperwidth}
+      \end{column}
+    \end{columns}
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+}
+
+%%  \setbeamertemplate{headline}{  
+%%    \leavevmode
+%%    \begin{beamercolorbox}[sep=0.5cm,wd=.8\paperwidth]{headline}
+%%      \usebeamercolor{title in headline}{\raggedleft\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
+%%      \usebeamercolor{author in headline}{\raggedleft\color{fg}\large{\insertauthor}\\[1ex]}
+%%      \usebeamercolor{institute in headline}{\raggedleft\color{fg}\large{\insertinstitute}\\[1ex]}     
+%%    \end{beamercolorbox}%
+%%    \begin{beamercolorbox}[wd=.2\paperwidth]{logo in headline}
+%%      \centering
+%%      \LARGE{LOGO}
+%%    \end{beamercolorbox}  
+
+
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+  
+  \leavevmode%
+  \begin{beamercolorbox}[ht=4ex,leftskip=1cm,rightskip=1cm]{author in head/foot}%
+    \texttt{http://www-i6.informatik.rwth-aachen.de}
+    \hfill
+    \texttt{<surname>@cs.rwth-aachen.de}
+    \vskip1ex
+  \end{beamercolorbox}
+  \vskip0pt%
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+    \rule{0pt}{2pt}
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Display a grid to help align images ... and it looks nice with this color scheme
+\beamertemplategridbackground[1cm]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<all>
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% TeX-master: "poster"
+%%% End: 

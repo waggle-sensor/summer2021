@@ -624,3 +624,65 @@ GradientBoostingClassifier | Testing Acc: 79.09 % | Training Time: 16477.36 s | 
 
 SnapshotEnsembleClassifier | Testing Acc: 71.01 % | Training Time: 1202.86 s | Evaluating Time: 1.46 s
 ```
+
+### Thursday July 15, 2021
+#### Work Done:
+ - Test the code shared by Aji about the ALART project
+ - Learn the design and implementation of FasterRCNN object detection in Pytorch
+   - Github repo: https://github.com/WZMIAOMIAO/deep-learning-for-image-processing/tree/master/pytorch_object_detection/faster_rcnn
+   - RCNN, FastRCNN, FasterRCNN's development
+   - source code implamentation:
+     - backbone: resnet50_fpn, mobilenetv2
+     - RPN (Region Proposal Network)
+
+### Friday July 16, 2021
+#### Work Done:
+ - Learn the design and implementation of image classification in pytorch and tensorflow
+   - Github repo: https://github.com/WZMIAOMIAO/deep-learning-for-image-processing
+   - LeNet's design and implementation in pytorch
+   - AlexNet's structure and implementation in TensorFlow/Pytorch
+ - Results for ensemble learning based on Resnet50:
+```
+2021-07-18 20:02:25,935 - INFO: FusionClassifier             | Testing Acc: 65.42 % | Training Time: 2233.73 s | Evaluating Time: 19.49 s
+2021-07-18 20:02:25,935 - INFO: VotingClassifier             | Testing Acc: 71.06 % | Training Time: 3123.60 s | Evaluating Time: 19.63 s
+2021-07-18 20:02:25,935 - INFO: BaggingClassifier            | Testing Acc: 67.01 % | Training Time: 2869.60 s | Evaluating Time: 19.51 s
+2021-07-18 20:02:25,935 - INFO: GradientBoostingClassifier   | Testing Acc: 60.38 % | Training Time: 11111.49 s | Evaluating Time: 19.93 s
+2021-07-18 20:02:25,935 - INFO: SnapshotEnsembleClassifier   | Testing Acc: 66.46 % | Training Time: 329.23 s | Evaluating Time: 19.74 s
+```
+
+## Week 11 (July 19 to July 23) 
+### Monday July 19, 2021:
+#### Work Done:
+ - Have a meeting with ML team to discuss the progress
+   - TensorRT model structure and virtualization
+   - Ensemble learning methods and results
+     - Fusion, voting, bagging, gradient boosting, etc.
+     - LeNet, ResNet50
+   - Next step: 
+     - get heteregrous classifier-based ensembling learning
+     - integrate with TensorRT's quantization models
+
+### Tuesday July 20, 2021:
+#### Work Done:
+ - The GPU driver in the Chameleon instance crash after th outage
+   - try to solve the issue by installing the nvidia driver, but doesn't work
+   - start a new instance
+ - Work on ensemble hetergerous classifiers in pytorch
+
+### Wednesday July 21, 2021:
+#### Work Done:
+ - Go through the tutorial of ensemble methods in sklearn
+   - documentation: https://scikit-learn.org/stable/modules/ensemble.html
+   - averaging methods: bagging, forests of randomized trees
+   - boosting methods: adaBoost, gradient tree boosting
+
+### Thursday July 22, 2021:
+#### Work Done:
+ - Investage the lower bytes quantization implementation
+   - four/two/one bytes integer quantization
+ - Deploy ALARM code on Chameleon instance
+   - train sparse-resnet model
+   - model profiling
+
+### Friday July 23, 2021:
+ - 

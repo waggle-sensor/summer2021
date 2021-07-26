@@ -211,9 +211,34 @@
 - Worked on presentation materials for Monday's intern presentation
 
 ## Week 6 ##
+### Monday July 12, 2021 ###
 - Attended Weekly Team Meeting (mini presentations)
 - Attended Waggle/SAGE meeting
     * Presented my slides (links are below):
     * [[Latex Source]]()
     * [[Presentation Slides]]()
 - Continued work on online simulator
+
+### Tuesday July 13, 2021 ###
+- Attended Waggle/Sage event
+
+### Wednesday July 14, 2021 ###
+- Continued work on online simulator
+    * Spent most of the morning trying to chase down a division error that was
+      giving different predictions in the simulator compared to the original model.
+- Began formatting a poster in Latex.
+
+### Thursday July 15, 2021 ###
+- Continued work on the online simulator (ran first simulation with a small number of 
+  buffered examples):
+    * My initial results were not great; the AUC indicated only a slight improvement
+      upon random guessing.
+    * Increasing the buffer size slightly increases the performance, so I expect that 
+      increasing it will eventually cause the results to converge to the model trained
+      on the full dataset. I may also experiment with multiple steps per example
+    * Another possibility worth exploring is the use of an adaptive gamma filter. I can modify the estimators found in [this paper](https://amstat.tandfonline.com/doi/abs/10.1080/00031305.2016.1209129) to use a moving average sum.
+
+### Friday July 16, 2021 ###
+- Ran another simulation (this time with greater buffer size) and obtained slightly larger AUC.
+- Began work on implementing an adaptive gamma filter to see if there are any performance gains
+- Continued work on my poster. 

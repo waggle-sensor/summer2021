@@ -451,6 +451,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 -Today's Non-Technical Tasks
 * Attended daily sage scrum demo
   
+************************************************************
   
 ### Tuesday, 6th
 -Today's Technical Tasks
@@ -475,7 +476,8 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * The source from https://nodered.org/docs/getting-started/docker
 * Managing User Data: Once you have Node-RED running with Docker, we need to ensure any added nodes or flows are not lost if the container is destroyed. This user data can be persisted by mounting a data directory to a volume outside the container. This can either be done using a bind mount or a named data volume. Node-RED uses the /data directory inside the container to store user configuration data. (Don't know what it is)
   
-
+************************************************************
+  
 ### Monday, 12th
 -Today's Non-Technical Tasks
 * Attended mid-presentation (not sure why my laptop microphone/share the screen not working)
@@ -500,12 +502,76 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * Meeting with Milos about multiple port number for node-red instances
   
 -Today's Technical Tasks
-
   ![image](https://user-images.githubusercontent.com/56851781/125650483-cb12b4b0-5fe8-4d0e-bc06-91d96f51383c.png)
   
 * It seemed like one of those ports already had a connection established with the service others were just listening. Listen port serves as an endpoint for communcation. They are listening but that does not necessarily mean they are working.
 * Docker hub also shows all port numbers (1880-1882) are used for node-red, but connection errors: need to do debug
   
- 
+  
+### Thursday, 15th
+-Today's Non-Technical Tasks
+* Attended daily scrum meeting
+* Attended CELS Technical Women meetup
+  
+-Today's Technical Tasks
+* It seems ok to run it with the specific port number (8880)
+  ![image](https://user-images.githubusercontent.com/56851781/125834527-51dd4f19-2c77-4f39-87a9-3d8466819879.png)
 
+* So, just kept going the test
+  ![image](https://user-images.githubusercontent.com/56851781/125847340-c033857a-eb12-4688-8e1e-aade8a870ec8.png)
 
+  <img width="639" alt="1" src="https://user-images.githubusercontent.com/56851781/125847379-71400033-3c92-4bc5-b04a-8e48ad4e82a7.PNG">
+  
+  <img width="602" alt="2" src="https://user-images.githubusercontent.com/56851781/125847382-287bb2fa-56e8-4924-ba24-4d33475fd710.PNG">
+
+### Friday, 16th
+-Today's Non-Technical Tasks
+* submitted the additional document to NW
+
+-Today's Technical Tasks
+* Continued work on creating multiple node-red on dockers with different portnumbers
+  
+  
+************************************************************
+### Monday, 19th
+-Today's Non-Technical Tasks
+* Presented mid goal for internship
+* Updated the summer internship google drive
+  
+-Today's Technical Tasks
+* discussion about docker with yomi and luke
+* Figured out using docker port numbers for multiple instances... thanks yomi and luke...!!!
+  
+![image](https://user-images.githubusercontent.com/56851781/126231531-de1941a1-8f9e-4ed6-9693-ccaafa2eed70.png)
+
+![image](https://user-images.githubusercontent.com/56851781/126231565-0864bc43-1e94-45db-a2a1-f032ac748671.png)
+  
+![image](https://user-images.githubusercontent.com/56851781/126231623-5c4d1a82-6381-4e87-bd4f-469e7d87f064.png)
+* Even if those instances are created with different port numbers, these are already used, so it is just Listening, (but not what I want)
+  
+* port 1880 
+![image](https://user-images.githubusercontent.com/56851781/126345056-7f4630bb-714a-4efe-8e15-ff04b8c7f15b.png)
+  
+* port 1881 
+![image](https://user-images.githubusercontent.com/56851781/126345201-faa24ba0-c168-4905-8256-372cbf4366e7.png)
+  
+  
+### Tuesday, 20th
+-Today's Non-Technical Tasks
+* Attended Chris thesis presentation (military UAV)
+* Meeting with Joe and updated my progress with him (really cool)
+
+-Today's Technical Tasks
+* Successfully managed Docker hub and node-red instances
+* Read documents about docker containers / deployment for each user
+
+  
+### Wednesday, 21th
+-Today's Non-Technical Tasks
+* Attended EDU Weekly Seminar Series: How to Establish Your Personal Brand
+* Meeting with Brandon and Larry (Docker and VM)
+* Amazing meeting with Sean to talk about Docker port numbers (Thank you so much)
+* Still working on write papers with Korean students
+  
+-Today's Technical Tasks
+* https://purdue-primo-prod.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=TN_cdi_ieee_primary_9239699&context=PC&vid=PURDUE&lang=en_US&search_scope=everything&adaptor=primo_central_multiple_fe&tab=default_tab&query=any,contains,nodered&facet=rtype,exclude,reviews,lk&facet=rtype,exclude,reference_entrys,lk

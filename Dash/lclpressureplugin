@@ -1,0 +1,16 @@
+from waggle import plugin
+
+import pandas as pd
+import numpy as np
+import tensorflow as tf
+
+plugin.init()
+##Get image array - image_array
+##Get Relative Humidity, Sea Level Pressure, and WetBulbTemperature - put in dataframe(df)
+model = tf.keras.models.load_model("C:/Users/anmo/theweb/thursdaythefifteenthmodel3.h5")
+dnn_model = tf.keras.models.load_model("C:/Users/anmol/theweb/antoherthursdaythefifteenth1model.h5")
+result = model.predict(image_array, df)
+result2 = dnn_model.predict(df)
+plugin.publish("LCL_Pressure", result)
+plugin.publish("LCL_Temperature", result2)
+

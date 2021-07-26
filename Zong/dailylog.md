@@ -99,4 +99,62 @@ Hello world
    <li> Worked on fetching Waggle data </li>
    <li> It works with test code, but not the actual Waggle Data </li>
    </ul>
+   
+<h3> Monday, July 12: </h3>
+<ul>
+   <li> Continued to work on trying to fetch the data </li>
+   <li> I looked into Ajax and other methods to fetch </li>
+   <li> I am struggling because none of them seem to be working </li>
+   </ul>
+   
+<h3> Tuesday, July 13: </h3>
+<ul>
+   <li> Tried to debug my code, but it still isn't working </li>
+   <li> Had a meeting with my mentor </li>
+   </ul>
+   
+<h3> Wednesday, July 14: </h3>
+   <ul>
+      <li> Fixed my axis for my heat table </li>
+      <li> Now, when data is aggregated into the heat table, it will grab the dates and plot data points based on the dates </li>
+   </ul>
+      
+<h3> Thursday, July 15: </h3>
+   <ul>
+      <li> Am in the process of convering Sean's code from python to javascript </li>
+      <li> I am running into issues because sometimes I can't differentiate between what functions are javascript and what are python </li> 
+   </ul>
+   
+<h3> Friday, July 16: </h3>
+   <ul> 
+   <li>Continued to work on my aggregate data function </li> 
+   <li> Also worked on my presentation </li>
+   </ul>
+   
+<h3> Monday, July 19: </h3>
+<ul>
+   <li> Delivered my presentation </li>
+   <li> Continued to do more work on my heat table by fixing the axis </li> 
+   <li> Sean developed a new data exporter, but it didn't work because the link was down </li>
+   </ul>
+   
+<h3> Tuesday, July 20: </h3>
+<ul>
+   <li> X-axis for my heat table should work now, the time line is monthly </li> 
+   <li> I am currently setting up my y-axis to display the individual plug-ins when the exporter link starts to work </li> 
+   </ul> 
+   
+<h3> Wednesday, July 21: </h3>
+<ul> 
+   <li> I am working on a desigining a JSON template so when the data arrives, it will go in JSON format </li> 
+   </ul> 
+   
+<h3> Thursday, July 22: </h3>
+<ul> 
+   <li> Data exporter is up </li> 
+   <li> Upated my README.md file for my heat table </li> 
+   <li> Took a look at Sean's new data exporter and am planning on using more parameters to extract the data </li> 
+   </ul>
+   
+   
 

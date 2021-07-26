@@ -1,18 +1,56 @@
 # Week 8
+**July 18th**
+1. Study scaper and follow the tutorial
+2. Made mixed audio clip on 3-species subdataset
+
+**July 19th**
+1. 2021 Summer Intern progress report presentation
+2. Meet with Raj
+3. Meet with Rick
+4. Look for a way to combine audio clips according to their geographic location
+
+**July 20th**
+1. Audio group meeting
+2. Running experiments to extract featurs on 10-species dataset.
+
+**July 21st**
+1. Running experiments to extract featurs on 10-species dataset.
+2. Group the BirdCLEF training dataset according to the continents.
+
+# Week 8
 **July 12th**
 1. Debugging svm with tempogram feature
 2. Meet with Rick.
 
-**July 12th**
+**July 13th**
 1. Figured out the bug in svm model with tempogram feature, added one line of code
 2. Meet with Emily
 
-**July 13th**
-1. CNN model is working with combination feature extraction
-2. CNN model is not working with the individual feature extraction yet.
+**July 14th**
+1. CNN model is now working with both combination feature extraction and individual feature extraction
+2. Meet with Rick, and talked about mixing the current bird song bataset
 
+**July 15th**
+1. AI/ML group meeting
+2. Runing experiment for individual feature with CNN
+3. Study the audio mixing tool, scaper
+4. Study the framwork for the polyphonic sound data
 
+**July 16th**
+1. Meet with Seongha
+2. Runing experiment for individual feature with CNN
+3. Study the audio mixing tool, scaper
+4. Study the framwork for the polyphonic sound data
 
+**July 17th**
+1. Study the scaper tutorial
+2. Prepare for the presentation on Monday
+
+**July 1tth**
+1. Study the scaper tutorial
+2. Convert the ogg file to wave in order to make mixed polyphonic dataset on BirdCLEF
+3. Try to make a mix dataset based on the 3 species sub-dataset
+4. Prepare for the presentation on Monday
 
 # Week 7
 **July 6th**
