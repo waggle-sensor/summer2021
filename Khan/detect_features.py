@@ -196,8 +196,6 @@ def detect_edges(image, lower_threshold, upper_threshold):
 
     canny = cv2.Canny(image, lower_threshold, upper_threshold)
 
-    display(canny)
-
     return canny
 
 def find_straight_edge_density(image):
@@ -313,22 +311,78 @@ def create_base_dataframe():
 
     return df
 
+# def add_features():
+#     '''
+#      Computes features of images that would help measure visual disorder
+#     :return: dataframe with computed features for each image in training data
+#     '''
+#     df = create_base_dataframe()
+#     df.to_excel(r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx', index=False)
+#
+#     rows_to_delete = []
+#
+#     for i in range(len(df)):
+#
+#         print(i)
+#
+#         image_name = df.loc[i].at["originalName"]
+#         folder = "training_images/"
+#         file_path = folder + image_name
+#
+#         my_file = Path(file_path)
+#         if (my_file.is_file()):         # certain images exist in excel file but not in images folder
+#             image = cv2.imread(file_path)
+#             hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+#
+#             mean_hsv = find_mean_hsv(hsv_image)
+#             standard_dev_hsv = find_standard_deviation_hsv(hsv_image)
+#             edge_density = find_edge_density(image)
+#             straight_edge_density = find_straight_edge_density(image)
+#             image = cv2.imread(file_path)
+#             entropy = find_entropy(image)
+#
+#             # replace values with the features that I computed
+#             df.loc[i, 'Mean Hue'] = mean_hsv[0]
+#             df.loc[i, 'Mean Sat'] = mean_hsv[1]
+#             df.loc[i, 'Mean Value'] = mean_hsv[2]
+#             df.loc[i, 'sdHue'] = standard_dev_hsv[0]
+#             df.loc[i, 'sdSat'] = standard_dev_hsv[1]
+#             df.loc[i, 'sdValue'] = standard_dev_hsv[2]
+#             df.loc[i, 'ED'] = edge_density
+#             df.loc[i, 'SED'] = straight_edge_density
+#             df.loc[i, 'Entropy'] = entropy
+#         else:
+#             rows_to_delete.append(i)
+#
+#         append_df_to_excel(r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx', df, startrow= 0)
+#
+#     # delete all the rows that did not have images associated with them
+#     # that i could use to compute features
+#     for i in range(len(rows_to_delete)):
+#         df.drop(labels=rows_to_delete[i], axis = 0, inplace = True)
+#
+#     append_df_to_excel(r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx', df,
+#                        startrow=0)
+#     return df
+
 def add_features():
     '''
      Computes features of images that would help measure visual disorder
     :return: dataframe with computed features for each image in training data
     '''
-    df = create_base_dataframe()
-    df.to_excel(r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx', index=False)
+
+    df = pd.read_excel(
+        r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\augmented_data.xlsx')
 
     rows_to_delete = []
 
-    for i in range(len(df)):
+
+    for i in range(1105, len(df)):
 
         print(i)
 
         image_name = df.loc[i].at["originalName"]
-        folder = "training_images/"
+        folder = "training_images/TFK/"
         file_path = folder + image_name
 
         my_file = Path(file_path)
@@ -380,8 +434,6 @@ def main():
   #  df.to_excel(r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx',index = False)
 
 if __name__ == '__main__':
-    file_path = 'training_images/47644824_3ffc0d6af2_o.jpg'
-    image = cv2.imread(file_path, 1)
-
-    #main()
-    find_edge_density(image)
+    main()
+    # file_path = 'training_images/47644824_3ffc0d6af2_o.jpg'
+    # image = cv2.imread(file_path, 1)
