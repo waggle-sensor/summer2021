@@ -174,7 +174,8 @@
  - can get the effects of a multi-channel gateway on a single channel
  - May help bridge gaps between p2p approach and network approach
 
-
-
 ##### Tuesday:
+- 3:00 PM meeting today with prof. Dunn and the rest of NAISE
+   - finishing up the last of the presentations
+   - talking about the end internship and final deliverables
 
