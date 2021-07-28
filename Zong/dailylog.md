@@ -166,7 +166,7 @@ Hello world
 <h3> Tuesday, July 27: </h3> 
 <ul> 
    <li> Looked at Sean's code </li> 
-   <li> Am writing a function called aggregate_data with panda to grab data and put it in JSON format <li> 
+   <li> Am writing a function called aggregate_data with panda to grab data and put it in JSON format </li> 
    <li> Gave a midpoint presentation for NAISE students, learned about the blog </li> 
    </ul> 
    
