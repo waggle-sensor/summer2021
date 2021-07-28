@@ -51,7 +51,3 @@
 - Futhermore you can also put the server on one raspberry pi as mentioned above
 
 
-
-## Unanswered questions:
-- What role does MQTT play in this kind of network?
-- Better understanding of energy harvesting. During the period of time when energy harvesting devices are active what is it capable of?
