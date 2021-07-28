@@ -619,4 +619,32 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 -Things to do:
 * Update ResearchGate
 * More research for this: ![image](https://user-images.githubusercontent.com/56851781/127054102-9b9b8ba1-6fee-450a-ad7b-3e70788f4463.png)
+  
+  
+### Tuesday, 27th
+-Today's Non-Technical Tasks
+* Meeting with Joe (split chunk of data. Related to links: https://discourse.nodered.org/t/split-the-string-into-separate-values/2818/5
+* But this has some problems: Split the string into separate values. I wanna get an object, not an indivitual split data....
+* Meeting with Neal and asked some questions about JavaScript:
+
+![image](https://user-images.githubusercontent.com/56851781/127383744-9edf5e75-38b6-4e35-b4a4-a12b320899c4.png)
+
+- Today's Techinical Tasks
+- Successfully split String to Obj
+* Edited one:
+![image](https://user-images.githubusercontent.com/56851781/127383888-37779d6e-afb2-4270-a092-d5f27d62b3da.png)
+
+* Finally it works!!!!!
+* I also got feedback from Neal about new code. Need to discuss about it with him tomorrow
+  
+
+### Wednesday, 28th
+-Today's Non-Technical Tasks
+* Attended scrum
+* Had a meeting with Joe and discuss about the SDR query for next steps (with funcx)
+* Attended final intern presentation
+  
+-Today's Technical Tasks
+* Testing Query from sdr obj
+  
 
