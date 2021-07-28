@@ -156,5 +156,22 @@ Hello world
    <li> Took a look at Sean's new data exporter and am planning on using more parameters to extract the data </li> 
    </ul>
    
+<h3> Monday, July 26: </h3> 
+<ul> 
+   <li> Changed the interface for my heat table </li>
+   <li> Now it displays JSON data instead of CSV data </li> 
+   <li> Car had issues, so I had to wait for it to get fixed at the shop and there was no wifi there </li> 
+      
+      </ul>
+      
+<h3> Tuesday, July 27: </h3> 
+<ul> 
+   <li> Looked at Sean's code </li> 
+   <li> Am writing a function called aggregate_data with panda to grab data and put it in JSON format <li> 
+   <li> Gave a midpoint presentation for NAISE students, learned about the blog </li> 
+   </ul> 
+   
+<h3> Wednesday, July 28: </h3> 
+
    
 
