@@ -161,8 +161,7 @@ Hello world
    <li> Changed the interface for my heat table </li>
    <li> Now it displays JSON data instead of CSV data </li> 
    <li> Car had issues, so I had to wait for it to get fixed at the shop and there was no wifi there </li> 
-      
-      </ul>
+   </ul>
       
 <h3> Tuesday, July 27: </h3> 
 <ul> 
