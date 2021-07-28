@@ -632,9 +632,9 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 - Today's Techinical Tasks
 - Successfully split String to Obj
 * Edited one:
-![image](https://user-images.githubusercontent.com/56851781/127383888-37779d6e-afb2-4270-a092-d5f27d62b3da.png)
+![image](https://user-images.githubusercontent.com/56851781/127385028-7e14c9e8-d7e7-4c30-8e3b-79179fda5cd0.png)
 
-* Finally it works!!!!!
+* Also slack alarm notification with multiple channels
 * I also got feedback from Neal about new code. Need to discuss about it with him tomorrow
   
 
