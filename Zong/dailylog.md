@@ -171,6 +171,10 @@ Hello world
    </ul> 
    
 <h3> Wednesday, July 28: </h3> 
+<ul> 
+   <li> Saw some final presentations! They did an amazing job </li> 
+   <li> Looked into this data reader called panda, that would make it easier to organize the data by plug-in </li> 
+   </ul> 
 
    
 
