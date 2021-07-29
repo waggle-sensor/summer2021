@@ -436,6 +436,14 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+<br />
+
+## Week 7 
+
+<br />
+
+
+
 ### July 12, 2021 (Day 29)
 Updates:
 * Presented Midpoint PowerPoint to entire group. The PowerPoint can be found [here](https://drive.google.com/drive/folders/1jrV_0i8QX6UwJtTfbUvFFpf6ocmNoIms?usp=sharing). 
@@ -533,16 +541,24 @@ Updates:
     (5) Return annotated image. End. 
 * Developed the conditions for filtering out poor pole detections. 
 * It appears dimgray, royal blue, and darkslate blue work best with Otsu-Contour, Steel Blue works best with Canny-Contour.
-* Attained a 68.9% accuracy using all photos from the NEON [repository](https://phenocam.sr.unh.edu/webcam/browse/NEON.D19.HEAL.DP1.00042/) from December 2017. 1958 poles were imported and 1350 were detected. Note there were some poles that appeared in images that were taken at night. The program and some results can be found [here](https://drive.google.com/drive/folders/1jPT3-r_vg5lbR1WBx13pHPu-ygEa0-DH?usp=sharing). The colors of the annotations are appropriately labeled: Red = Canny, Green = Kmeans, Blue = Otsu.
+* Attained a 68.9% accuracy using all photos from the NEON [repository](https://phenocam.sr.unh.edu/webcam/browse/NEON.D19.HEAL.DP1.00042/) from December 2017. 1958 poles were imported and 1350 were detected. Note there were some poles that appeared in images that were taken at night. The program and some results can be found [here](https://drive.google.com/drive/folders/1jPT3-r_vg5lbR1WBx13pHPu-ygEa0-DH?usp=sharing). The colors of the annotations are appropriately labeled: Red = Canny, Green = Kmeans, Blue = Otsu. *Ignore the names on the contour images... there was an error in the program with naming that had to be fixed.
 
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+<br />
+
+## Week 8 
+
+<br />
+
+
+
 ### July 19, 2021 (Day 34)
 Updates:
 * Included function which masks the image. White pixels represent the pole is present. Black pixels represent the pole is not present. This will be useful for the CNN image segmentation. 
-* The .py code is available on [GitHub]() and will be updately consistently there. 
-* Created training set comprised of masked images. Some results from masking can be found [here](). 
+* The .py code is available on [GitHub](https://github.com/waggle-sensor/summer2021/tree/main/Li/pole_extraction_algorithm) and will be updately consistently there. 
+* Created training set comprised of 1350 masked images from the pole detection algorithm. Samples of these images can be found in the results folder from 2021.07.16.
 * Fixed bugs with pole detection algorithm. Added comments and improved readability of code.
 * Created PowerPoint for tomorrow's presentation. 
 
@@ -551,7 +567,7 @@ To Do:
 
 ### July 20, 2021 (Day 35)
 Updates:
-* Presented results to CV group. PowerPoint can be found [here]().
+* Presented results to CV group. PowerPoint can be found [here](https://drive.google.com/drive/folders/16lsegCAwpMYxdfE9sN4FO3LkOmycTwgp?usp=sharing).
 * Worked with Seongha on running U-Net CNN for my training set. Was not able to run directly on my home laptop. So we resorted to using Docker. Was successful in training a dataset of 1350 masked images. 
 * Read and learned about [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597).
 
@@ -563,8 +579,8 @@ Updates:
 * Attended seminar 
 * Took a break from grinding out code and worked on writing the final paper. Finished introduction and parts of methods.
 * Used Seongha's [paper](https://www.mdpi.com/2073-4433/12/3/395) and the earlier papers as guides for my writing. 
-* Needed images for the testing set, so I ran the pole detection algorithm on images from December 2018. The algorithm did not perform as well as it did on December 2017. This was probably due to the patchier snow/grass (perhaps not enough snow?). The results from the contouring and masking can be found [here]().
-* 1141 images were inputted, two poles from each image (2282 total), including images at night. 975 poles labeled* (42.7%)
+* Needed images for the testing set, so I ran the pole detection algorithm on images from December 2018. The algorithm did not perform as well as it did on December 2017. This was probably due to the patchier snow/grass (perhaps not enough snow?). The results from the contouring and masking can be found [here](https://drive.google.com/drive/folders/1dY9kPMZOofkoJc5kzp3vQOK8BWiChIIM?usp=sharing).
+* 1141 images were inputted, two poles from each image (2282 total), including images at night. 975 poles labeled (42.7%) with false positives.
 * Created PowerPoint for tomorrow's meeting.
 
 To Do:
@@ -572,8 +588,8 @@ To Do:
 
 ### July 22, 2021 (Day 37)
 Updates:
-* Presented PowerPoint in CV meeting. PowerPoint can be found [here]().
-* Worked with Seongha in testing the UNet CNN. I only tried it on a handful of images since I have not optimized her code, but the testing was successful. The generated predictions were able to detect the poles in the testing images. Some results can be found [here]().
+* Presented PowerPoint in CV meeting. PowerPoint can be found [here](https://drive.google.com/drive/folders/1gvSs-eS7FzpGXEmyoWoj8tFw6msuTy_I?usp=sharing).
+* Worked with Seongha in testing the UNet CNN. I only tried it on a handful of images since I have not optimized her code, but the testing was successful. The generated predictions were able to detect the poles in the testing images. Some results can be found [here](https://drive.google.com/drive/folders/1d91j2u1Xeuxkxy2E-p7l1-P9MtC_g6S0?usp=sharing).
 * Attended Office Hours session with Sean to start initial stages of plug-in. Session was very productive and I was able to have some code written. Will need to ask Seongha for clarification on how to load the UNet model properly.  
 
 To Do:
@@ -581,7 +597,6 @@ To Do:
 
 ### July 23, 2021 (Day 38 + Weekend)
 Updates:
-* Presented PowerPoint in CV meeting. PowerPoint can be found [here]().
 * Seongha showed me how to load the model correctly into the plugin. Encounter other issues that I will need to ask Sean.
 * Modified Seongha's testing code to be more suitable for the purpose of masking poles. 
 * Worked on the last portion of my project, which is the distance measurement. 
@@ -590,6 +605,13 @@ Updates:
 
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
+
+<br />
+
+## Week 9 
+
+<br />
+
 
 
 
