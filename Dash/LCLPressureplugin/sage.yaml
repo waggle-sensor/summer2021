@@ -1,4 +1,4 @@
-name: "LCL-prediciton"
+name: "LCL-Pressure-prediction"
 description: "A plugin predicting the LCL Pressure and Temperature. "
 version : "0.1.0"
 source:
