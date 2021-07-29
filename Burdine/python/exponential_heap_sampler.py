@@ -92,13 +92,13 @@ def main():
 
     print('Mean retention time:', np.mean(heap_times))
     plt.figure()
-    plt.title(f'Distribution of EHQ retention times (N={es.max_len})')
+    plt.title(f'Distribution of EHS retention times (N={es.max_len})')
     plt.hist(heap_times, density=True)
     plt.show()
 
     print('Mean item age:', np.mean(heap_deltas))
     plt.figure()
-    plt.title(f'Distribution of age of EHQ items (N={es.max_len})')
+    plt.title(f'Distribution of age of EHS items (N={es.max_len})')
     plt.hist(heap_deltas, density=True)
     plt.show()
 if __name__ == '__main__':
