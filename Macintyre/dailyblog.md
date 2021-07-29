@@ -137,11 +137,30 @@
 * I worked more on the nano and looked into a question that Andrew had about the environment sensor
 
 ### Wednesday, July 21
-
+* I spent all day working on cutting out the vinyl sheets and in between cuts I worked with the Jetson nano
+* I finished cutting out the blue sheets that have the AOT logo on them
 
 ### Thursday, July 22
-
+* I spent all day completing some deliveries for Raj
 
 ### Friday, July 23
+* I worked on getting access to the audio files in LCRC
+* I worked with the nano before the meeting with the Sage Edu team
+* We met in the afternoon with Raj and Sean to discuss the future of that project, and Sean gave us some tips on how to use pywaggle on the nano
+
+## Week 9
+### Monday, July 26
+
+
+### Tuesday, July 27
+
+
+### Wednesday, July 28
+
+
+### Thursday, July 29
+
+
+### Friday, July 30
 
 

@@ -481,7 +481,7 @@ Today's meeting with Sean really helped put my work into better perspective. Tom
 
 
 -------------
-## Week 7: 7/6 to 7/9
+## Week 8: 7/6 to 7/9
 --------
 ### Tuesday, 7/6 (6 Hours worked)
 
@@ -544,7 +544,7 @@ I had to reinstall ubuntu because I found some wacky activity in `journalctl`.
 I had a good week. Didn't get a ton of work done, but a lot of important information was obtained, and I can probably get some efficient work done next week. 
 
 -------
-## Week 8: 7/12 to 7/16
+## Week 9: 7/12 to 7/16
 -------
 ### Monday, 7/12 (8 Hours worked)
 **Today's non-technical work:**
@@ -594,7 +594,7 @@ I had a good week. Didn't get a ton of work done, but a lot of important informa
 
 
 -------
-## Week 9: 7/19 to 7/24
+## Week 10: 7/19 to 7/24
 -------
 
 ### Monday, 7/19 (7 Hours worked)
@@ -672,3 +672,35 @@ TODO for the coming monday:
 * (Hopefully) achieve the minimum use case for honeycomb
 
 --------
+
+## Week 11: 6/26 to 6/30
+
+---------
+
+### Monday, 6/26 (8 Hours worked)
+
+**Today's technical work:**
+* Created Dummy HC upgrade for testing purposes 
+* Created `build_upgrade.sh` script for easy HC upgrade creation 
+* Reorganized `/upgrade` code into `hc_util` library 
+* Finished the `/upgrade` endpoint
+
+-----------
+
+### Tuesday, 6/27 (8 Hours worked)
+
+**Today's non-technical work:**
+* Met with Joe to briefly discuss Honeycomb progress
+
+**Today's technical work:**
+* Finished Checksum verification
+* Started connecting services to build basic HC use case 
+* Added file checks to `job` class 
+* Started `job` `state_check` execution code
+
+**TODO:**
+* Finish `state_check`, subprocess.run keeps freezing the thread and I can't figure why
+* Write `install`, `verify_install` code
+* Finish basic use case
+
+-----------

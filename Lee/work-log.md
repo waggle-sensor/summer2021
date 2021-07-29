@@ -575,3 +575,76 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   
 -Today's Technical Tasks
 * https://purdue-primo-prod.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=TN_cdi_ieee_primary_9239699&context=PC&vid=PURDUE&lang=en_US&search_scope=everything&adaptor=primo_central_multiple_fe&tab=default_tab&query=any,contains,nodered&facet=rtype,exclude,reviews,lk&facet=rtype,exclude,reference_entrys,lk
+
+  
+### Thursday, 22th
+-Today's Non-Technical Tasks
+* Attended scrum
+* Meeting with Sean & Wolfgang to set up Docker-compose.yml
+* Demo/Presentation for writing paper (Node-RED and IoT Cloud service) with meeting with Korean students
+  
+-Today's Technical Tasks
+* Attended scrum
+* Meeting with Joe (future plans after internship and several things needed to be finished before internship)
+
+  
+### Friday, 23th
+-Today's Non-Technical Tasks
+* Attended scrum
+* Meeting with Branden for Docker Pull/Push discussion
+  
+-Today's Technical Tasks
+* Node-RED GUI development
+
+-Things to do
+* Need to change home address on Kronos System (personal info), cause moving out soon!!!
+
+  
+************************************************************
+### Monday, 26th
+-Today's Non-Technical Tasks
+* Seminar for Korean Students (930AM in EST)
+  
+-Today's Technical Tasks
+* Finally solved it out (IMAP, smtp.gmail.com)
+* Relevant resource: https://getemailservices.com/gmail-imap-settings/
+* Added alarm notification on Node-RED UI page
+  
+![image](https://user-images.githubusercontent.com/56851781/127035659-b8083fda-c683-468e-bc97-64f45abe5b19.png)
+  
+* Added multiple channels/Web-hook service from Node-RED to Slack 
+  
+![image](https://user-images.githubusercontent.com/56851781/127035795-29f89bc8-a4a4-426d-858d-4ad0daea4334.png)
+
+-Things to do:
+* Update ResearchGate
+* More research for this: ![image](https://user-images.githubusercontent.com/56851781/127054102-9b9b8ba1-6fee-450a-ad7b-3e70788f4463.png)
+  
+  
+### Tuesday, 27th
+-Today's Non-Technical Tasks
+* Meeting with Joe (split chunk of data. Related to links: https://discourse.nodered.org/t/split-the-string-into-separate-values/2818/5
+* But this has some problems: Split the string into separate values. I wanna get an object, not an indivitual split data....
+* Meeting with Neal and asked some questions about JavaScript:
+
+![image](https://user-images.githubusercontent.com/56851781/127383744-9edf5e75-38b6-4e35-b4a4-a12b320899c4.png)
+
+- Today's Techinical Tasks
+- Successfully split String to Obj
+* Edited one:
+![image](https://user-images.githubusercontent.com/56851781/127385028-7e14c9e8-d7e7-4c30-8e3b-79179fda5cd0.png)
+
+* Also slack alarm notification with multiple channels
+* I also got feedback from Neal about new code. Need to discuss about it with him tomorrow
+  
+
+### Wednesday, 28th
+-Today's Non-Technical Tasks
+* Attended scrum
+* Had a meeting with Joe and discuss about the SDR query for next steps (with funcx)
+* Attended final intern presentation
+  
+-Today's Technical Tasks
+* Testing Query from sdr obj
+  
+

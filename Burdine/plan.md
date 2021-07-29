@@ -241,4 +241,39 @@
 ### Friday July 16, 2021 ###
 - Ran another simulation (this time with greater buffer size) and obtained slightly larger AUC.
 - Began work on implementing an adaptive gamma filter to see if there are any performance gains
-- Continued work on my poster. 
+- Continued work on my poster.
+
+## Week 7 ##
+### Monday July 19, 2021 ###
+- Attended Weekly Team Meeting (last of the mini-presentations).
+- Attended Waggle/SAGE meeting.
+- Continued work on my poster for Learning off the Lawn.
+- Did a bit of work on my final report.
+
+### Tuesday July 20, 2021 ###
+- Attended Weekly CV intern check-in
+- Continued work on running online simulations
+    * I have not been getting great results with the simulations, in part due to the fact that
+      I'm using a linear queue to buffer training examples, which means that the model is
+      "quick to learn but quick to forget", which may not be ideal.
+    * I may try to implement a queue structure with exponentially distributed retention times
+
+### Wednesday July 21, 2021 ###
+- Continued work on poster and report
+- Implemented Exponential Heap Sampler (see comments from previous day)
+
+### Thursday July 22, 2021 ###
+- Attended CV intern check-in
+- Ran another round of model simulations
+    * The exponential heap sampling strategy seems to work wonders! I'm getting results with an
+      AUROC only slightly less than the offline training results.
+
+### Friday July 23, 2021 ###
+- Finished first draft of poster
+- Continued work on final report; added illustrative figures.
+- Scheduled a round of simulations for the weekend to explore the effect of adjusting the
+  size of the EHS (example buffer)
+
+## Week 8 ##
+### Monday July 26, 2021 ###
+- Continued work on final report

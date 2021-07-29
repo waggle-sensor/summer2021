@@ -213,6 +213,40 @@
 - Working on Integrating Luke`s Jenkins Code in ECR
 
 
+### Week 8 ###
+
+------------
+#### Monday July 19, 2021 ####
+
+- Started Integration of Luke's Profiler into ECR
+
+#### Tuesday July 20, 2021 ####
+
+- Working in implementing API Endpoint to trigger app profiling
+
+#### Wednesday July 21, 2021 ####
+
+- Working in implementing API Endpoint to trigger app profiling
+
+#### Thursday July 22, 2021 ####
+
+- Completed and Test feature is merged in ECR
+
+#### Friday July 23, 2021 ####
+
+- Integrated Luke`s Jenkins Code in ECR.
+- Additional Things work on
+       1. Check if Jenkins can collect files ?
+	   2. Have the pipeline upload the results to ECR, only the pipeline know a the password to upload file (store using secret)
+       3. if profiling output is small enough to include in log file output (maybe base64)
+
+
+
+
+
+
+
+
 
 
 

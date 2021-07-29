@@ -23,6 +23,7 @@ def createGuassianMixtureModel():
         df[column_names[i]] = (df[column_names[i]] - df[column_names[i]].min()) / (df[column_names[i]].max() - df[column_names[i]].min())
 
     features = df.columns[2:11]
+    print(features)
     x = df[features]
 
     # n_componenets -> number of clusters
@@ -36,9 +37,12 @@ def createGuassianMixtureModel():
     # cluster_p = EM.predict_proba(x)
 
     print("Silhouette:", silhouette_score(x, cluster))  # 0.10 - 0.16 [0.15887342438101767]
+    #
+    aic_score = EM.aic(x)
+    print(aic_score)
 
-    df['cluster'] = cluster
-    print(ggplot(x, aes(x = "SED", y = "ED", color = "cluster")) + geom_point())
+    # df['cluster'] = cluster
+    # print(ggplot(x, aes(x = "Order", y = "Mean Hue", color = "cluster")) + geom_point())
 
     # 0.15887342438101767
 

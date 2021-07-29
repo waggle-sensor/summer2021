@@ -1,4 +1,16 @@
-# Week 8
+# Week 10
+**July 26th**
+1. Running experiments to extract featurs on 10-species dataset.
+2. Working on the Methodology section of the paper with Emily.
+3. Working on the Intro section of the paper with Rick.
+4. 
+**July 26th**
+1. Running experiments to extract featurs on 10-species dataset.
+2. Working on the plug-in document.
+3. Working on the Methodology section of the paper with Emily.
+
+
+# Week 9
 **July 18th**
 1. Study scaper and follow the tutorial
 2. Made mixed audio clip on 3-species subdataset
@@ -16,6 +28,10 @@
 **July 21st**
 1. Running experiments to extract featurs on 10-species dataset.
 2. Group the BirdCLEF training dataset according to the continents.
+
+**July 22nd**
+1. Running experiments to extract featurs on 10-species dataset.
+2. Study Cornell Bird papers
 
 # Week 8
 **July 12th**

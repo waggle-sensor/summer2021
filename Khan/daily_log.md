@@ -305,8 +305,8 @@ so that they are normalized.
     * delete Mean Value -> accuracy: 55.6    (goes down)
     * delete sdHue      -> accuracy: 54.14   (goes down)
     * delete sdSat      -> accuracy: 54.63   (goes down)
-    * delete sdValue    -> accuracy: 56.09   (goes down)
-    * delete Entropy    -> accuracy: 56.097  (goes down)
+    * delete sdValue    -> accuracy: 56.097  (stays about the same)
+    * delete Entropy    -> accuracy: 56.097  (stays about the same)
     * delete ED         -> accuracy: 53.65   (goes down)
     * delete SED        -> accuracy: 54.146  (goes down)
     
@@ -324,3 +324,61 @@ so that they are normalized.
 * Since the labels, the disorder ratings, were more opinions from people instead 
   of a fact, I decided to try using an unsupervised machine learning model instead
   because it would not use the labels.
+  
+### 7/15/2021 ###
+
+* Finished up Gaussian Mixture Model
+* Find correlation between features
+* Student connect meetings
+* Meeting with CV team
+* Attended cels womens meeting
+
+### 7/16/2021 ###
+* Found correlation between all the featues:
+    *![img_3.png](img_3.png)
+* Calculated AIC score for Gaussian Mixture model
+    * score: -13583.5174
+
+----
+
+## Week 8 ##
+
+### 7/19/2021 ###
+* Watched second half of midpoint presentations
+* Updated how I split Data points
+* Started research paper
+
+### 7/20/2021 ###
+* Attended meeting with CV team
+* Went through all other images and added
+  them to training data, now I have about 1275 images
+* Wrote some basic methods on augmenting images
+
+### 7/21/2021 ###
+* Attended seminar on how to build your own personal brand
+* Attended writing workshop about oral and poster presentation
+* Wrote code on creating new images from methods about augmenting images
+    * zoom and resize image
+    * crop part of image
+    * Added Noise
+    * Horizontal flip
+    * rotation
+    * decreasing/increasing brightness
+* Calculated accuracy with 1275 images --> 60 percent
+
+### 7/22/2021 ###
+* Attended meeting with CV team
+* Attended student connect meeting
+* Attended all hands on meeting about updates on the labs science and technoogy
+  leadership, operation excellence, and community of talent.
+* Went through plugin docs and made sure I understood everything 
+* Fixed issues with plugin failing to build  
+* Updated random forest model in plugin  
+* Attended plugin office hours
+
+### 7/23/2021 ###
+* Uploaded images that were augmented into data frame
+* Ran random forest again, and accuracy went up to 65 percent in 4 categories  
+* Worked on research paper
+
+
