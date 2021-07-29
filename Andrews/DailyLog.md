@@ -328,4 +328,13 @@
 
 ### June 28
 - EDU Weekly Seminar
+- Practiced/gave final presentation
+- Converted the magnitude of the motion output by optical flow to m/s to compare to actual observations at the SGP site
+    * Using the 18Z sounding out of Lamont, OK and the ceilometer at the ARM Central Facility
+    * Clouds base is around ~600-700 meters AGL on both; from sounding text/Skew-T it looks like winds are northerly at ~16 knots (~8.2 m/s) in 600-900 meter layer
+    * Optical flow is giving average speeds over the two hour (17-19Z) period of around 5.5 m/s. I'm using the 2 hour average because there's huge varability in the speed between consecutive images (<0.1 m/s to 40 m/s for some pixels). Also a lot of variability from pixel to pixel.
+    * Wind directions from optical flow are all over the place (at least directly over the site). 
+
+### June 29
+- Clouds/CV meeting
 - 
