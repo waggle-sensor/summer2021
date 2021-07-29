@@ -22,6 +22,11 @@
 - We could use a system like this as a preliminary blueprint for 
 
 ## Downlink
+- Downlink not truly supported on a point-to-point communication system. Current architecture is not robust enough to manage both uplink and downlink messages.
+    - message acknowledgement is possible however; but that is where the message-receiving capibilities end
+    - NOTE: always prioritize message uplink in this system due to the nature of intermittent computing on energy-harvesting devices.
+- Even with sever downlink is more limited than uplink due to very narrow bandwidth. I think it would be advantagous to only downlink messages when absolutely necessary and then code the needed behavior into the end node.
+- Consider an energy-harvesting sensor. During the time when the sensor is active, the sensor has to collect data, then transmit the data, then potentially listen for an acknowledgement, and then listen for a downlink.
 
 ## Security
 
@@ -30,17 +35,19 @@
 - ChirpStack gateway bridge: sits between packet forwarder and MQTT broker
     - Transforms the packet into data
     - Cloud platform integration
-- gateway bridge can go on the server level or be on every gateway, the latter being more secure
+- gateway bridge can go on the server level or be on every gateway, the latter being more secure. In a network with only one gateway it likely doesn't matter if it is on the gateway or the server however.
 - You can have the application and network servers on different computers or you can have it all on one
     - *** This does mean we could just transform the waggle node into both the network/application server
     - unfortunately this is easier said than done. We need to ensure that the other processes on the waggle node are not interrupted
+- GatewayOS:
+    - ChirpStack has a built in OS that runs on gateways that make it as easy as possible to start using a private network
+    - compatible with raspberry pi or a multitude of different shield/kit configurations
+    
 
 
 ### things that are different:
 - Gateways act just as message forwarders. There is no interpretation done at the gateway level since it is purely physical.
 - *** You can actually backhaul data through ethernet. In essence you could wrap the entire server in one device.
+- Futhermore you can also put the server on one raspberry pi as mentioned above
 
 
-
-## Questions:
-- What role does MQTT play in this kind of network?

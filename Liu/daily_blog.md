@@ -685,4 +685,14 @@ SnapshotEnsembleClassifier | Testing Acc: 71.01 % | Training Time: 1202.86 s | E
    - model profiling
 
 ### Friday July 23, 2021:
- - 
+ - Set up and train sparse resnet anytime DNN as a baseline
+   - accuracy results in [accuracy-dnn.log](anytime-dnn.log)
+ - Train and convert different models for image classification as TensorRT: resnet152, densenet121, vgg16_bn
+ - Try ensemble methods in [sklearn](https://scikit-learn.org/stable/modules/ensemble.html)
+
+## Week 12 (July 26 to July 30)
+
+### Monday July 26, 2021:
+ - Have weekly meeting with ML team and discuss the progress
+   - ensemble heterogerous models for one application using sklean
+   - quantization-aware training's example
