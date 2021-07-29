@@ -215,8 +215,12 @@
 - Attended Weekly Team Meeting (mini presentations)
 - Attended Waggle/SAGE meeting
     * Presented my slides (links are below):
-    * [[Latex Source]]()
-    * [[Presentation Slides]]()
+    * [[Repository]](presentations/project_mid_mini)
+    * [[Latex Source]](https://drive.google.com/file/d/1JGHjrSo89XXNTsmAvQ_ZSfhs5v78osoS/view?usp=sharing)
+    * [[Latex Source (shortened, with citations)]](https://drive.google.com/file/d/1CdYOMazhwp9g9iwR3MB1TmX0bLm1ombv/view?usp=sharing)
+    * [[Presentation Slides]](https://drive.google.com/file/d/1fca5hpkNccTm38JmPpm2Bl3h9kImJKpF/view?usp=sharing)
+    * [[Presentation Slides (shortened, with citations)]](https://drive.google.com/file/d/1hvLojrbzd3zwhVieYMOdWrdcFGw-sCrm/view?usp=sharing)
+
 - Continued work on online simulator
 
 ### Tuesday July 13, 2021 ###
@@ -277,3 +281,23 @@
 ## Week 8 ##
 ### Monday July 26, 2021 ###
 - Continued work on final report
+- Began work on converting the anomaly detection notebooks to an [anomaly detector Waggle plugin](https://github.com/waggle-sensor/plugin-anomaly-detector)
+
+### Tuesday July 27, 2021 ###
+- Attended CV intern check-in
+- Prepared slides for final internship presentation
+- Continued work on final report
+
+### Wednesday July 28, 2021 ###
+- Attended Waggle/SAGE meeting
+    * Presented my slides (see the links below):
+    * [[Repository]](presentations/project_final)
+    * [[Latex Source]](https://drive.google.com/file/d/1Flit_8G_R2h4DCRW-aRdOI6inF91_i4R/view?usp=sharing)
+    * [[Presentation Slides]](https://drive.google.com/file/d/1BcULMe_OlN44df3t8Y27k-qjCutuvayH/view?usp=sharing)
+- Continued work on converting anomaly detection code into a waggle plugin
+
+### Thursday July 29, 2021 ###
+- Attended CV intern check-in
+- Uploaded presentation slides to google drive folder
+- Deployed draft version of anomaly detection Waggle plugin
+- Continued work on final report.
