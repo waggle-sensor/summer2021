@@ -1,4 +1,4 @@
-## Week 1 
+## Week 1: First Week 
 
 <br />
 
@@ -65,7 +65,7 @@ Thoughts:
 
 <br />
 
-## Week 2 
+## Week 2: Learning OpenCV 
 
 <br />
 
@@ -130,14 +130,14 @@ To Do:
 
 <br />
 
-## Week 3 
+## Week 3: Learning OpenCV  
 
 <br />
 
 
 ### June 14, 2021 (Day 10)
 Updates:
-* Meeting with entire group. Presented introdutory research project [PowerPoint](https://drive.google.com/drive/folders/1k9J21eadIv8XXBE6BPbYZGX86StaYNdX?usp=sharing).
+* Meeting with entire group. Presented introductory research project [PowerPoint](https://drive.google.com/drive/folders/1k9J21eadIv8XXBE6BPbYZGX86StaYNdX?usp=sharing).
 * Completed OpenCV YT tutorials up to 24.
 * Topics Covered: Image Pyramid (21), Image Blending (22), Find and Draw Contours (23), Motion Detection and Tracking with Contours (24).
 
@@ -200,7 +200,7 @@ To Do:
 Updates:
 * Finished [Jupyter Notebook](https://drive.google.com/drive/folders/1mxQ1gy5yxggR_cSxEcwic3UQj3heDHjZ?usp=sharing) for creating ROIs in each image and detecting three poles via Canny/Hough methods.
 * PyImageSearch Computer Vision and Deep Learning Crash Course, [Day 2: OpenCV Tutorial: A Guide to Learn OpenCV](https://www.pyimagesearch.com/2018/07/19/opencv-tutorial-a-guide-to-learn-opencv/).
-* Read [journal](https://www.ipol.im/pub/art/2012/gjmr-lsd/article.pdf) shared by Nicole on a more efficient line detection method: Line Segment Detector (LSD). 
+* Read [journal](https://www.ipol.im/pub/art/2012/gjmr-lsd/article.pdf) shared by Nicola on a more efficient line detection method: Line Segment Detector (LSD). 
 
 To Do:
 * Continue studying and working on OpenCV tutorials.
@@ -208,7 +208,7 @@ To Do:
 
 <br />
 
-## Week 4 
+## Week 4: Line Detection for Snow Rods
 
 <br />
 
@@ -233,7 +233,7 @@ Updates:
 * Sources:
     (1) [Yolo v3 TensorFlow 2](https://www.youtube.com/playlist?list=PLbMO9c_jUD473OgrKYYMLRMEz-XZjG--n). 
     (2) [Getting Started with CVAT - Annotation for Computer Vision](https://blog.roboflow.com/cvat/). 
-* Installed TensorNets and looked into the JNs on YOLOV3 sent by Colin. 
+* Installed TensorNets and looked into the JNs on YOLOV3 sent by Colin. The JNs can be found [here](https://drive.google.com/drive/folders/1YeVMBhJsXxq6vf4H_Aih-QoapwaWhnxW?usp=sharing).
 
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
@@ -288,7 +288,7 @@ To Do:
 
 <br />
 
-## Week 5 
+## Week 5: Extracting Color as a Feature to Improve Parameterization 
 
 <br />
 
@@ -296,7 +296,7 @@ To Do:
 ### June 28, 2021 (Day 20)
 Updates:
 * Organized files, images, and programs in desktop and Drive. Updated links on Logs. 
-* Worked with K-means algorithm from Friday to detect dominant color for images. The JN can be found [](). The results show that images with similar dominant hue were detected by the first line detection program created. However, changes in weather or lighting may affect the line detections, even with similar dominant hue. Images with different hue dominant could not have lines detected. The JN can be found [here](https://drive.google.com/drive/folders/10WqOMgO-E2BctzvELRWiE6GrZ9vTzP2F?usp=sharing).
+* Worked with K-means algorithm from Friday to detect dominant color for images. The JN can be found [here](https://drive.google.com/drive/folders/10WqOMgO-E2BctzvELRWiE6GrZ9vTzP2F?usp=sharing). The results show that images with similar dominant hue were detected by the first line detection program created. However, changes in weather or lighting may affect the line detections, even with similar dominant hue. Images with different hue dominant could not have lines detected. The JN can be found [here](https://drive.google.com/drive/folders/10WqOMgO-E2BctzvELRWiE6GrZ9vTzP2F?usp=sharing).
 * I uploaded the results onto a PowerPoint, which can be found [here](https://drive.google.com/drive/folders/10WqOMgO-E2BctzvELRWiE6GrZ9vTzP2F?usp=sharing). This will be presented in tomorrow's CV meeting.
 
 To Do:
@@ -359,7 +359,7 @@ To Do:
 
 <br />
 
-## Week 6 
+## Week 6: Creating Programs Capable of Line Detection Among Different Conditions/Parameters
 
 <br />
 
@@ -404,7 +404,7 @@ See the JNs for examples on his these are applied [here](https://drive.google.co
         (2) Run the canny trackbar method to determine canny parameters.
         (3) Assume the parameters for blurring as (1,1) and the iterations for dilation and erosion as 1.
         (4) Run the line detection program. Redo step 3 by adjusting each of the parameters. Repeat until lines are detected. 
-* Lines were detected for dimgray, royalblue, and steelblue images. The JNs and sample results can be found [here](https://drive.google.com/drive/folders/1U5mALmj5rIvw-5iQEtOwAOP6eC754IiR?usp=sharing).
+* Lines were detected for dimgray, royalblue, and steelblue images. The JNs and sample results can be found in the JNs.
 * Created and finished presentation of results for Thursday, which can be found [here](https://drive.google.com/drive/folders/1-oNN3Vg3TZgLzT34YXynW1c1hrGq4ccf?usp=sharing).
 
 To Do:
@@ -436,9 +436,12 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+
+
+
 <br />
 
-## Week 7 
+## Week 7: 
 
 <br />
 
@@ -541,7 +544,9 @@ Updates:
     (5) Return annotated image. End. 
 * Developed the conditions for filtering out poor pole detections. 
 * It appears dimgray, royal blue, and darkslate blue work best with Otsu-Contour, Steel Blue works best with Canny-Contour.
-* Attained a 68.9% accuracy using all photos from the NEON [repository](https://phenocam.sr.unh.edu/webcam/browse/NEON.D19.HEAL.DP1.00042/) from December 2017. 1958 poles were imported and 1350 were detected. Note there were some poles that appeared in images that were taken at night. The program and some results can be found [here](https://drive.google.com/drive/folders/1jPT3-r_vg5lbR1WBx13pHPu-ygEa0-DH?usp=sharing). The colors of the annotations are appropriately labeled: Red = Canny, Green = Kmeans, Blue = Otsu. *Ignore the names on the contour images... there was an error in the program with naming that had to be fixed.
+* Attained a 68.9% accuracy using all photos from the NEON [repository](https://phenocam.sr.unh.edu/webcam/browse/NEON.D19.HEAL.DP1.00042/) from December 2017. 1958 poles were imported and 1350 were detected. Note there were some poles that appeared in images that were taken at night. The program and some results can be found [here](https://drive.google.com/drive/folders/1jPT3-r_vg5lbR1WBx13pHPu-ygEa0-DH?usp=sharing). The colors of the annotations are appropriately labeled: Red = Canny, Green = Kmeans, Blue = Otsu. 
+* Ignore the 'canny' on all of the contour images. Not all the images were processed with Canny-Contour. This is an error in the code. 
+* Note: the leftmost pole was not cropped and inputted into algorithm as it would achieve very poor segmentation due to the structure in the background.
 
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
@@ -553,14 +558,14 @@ To Do:
 <br />
 
 
-
 ### July 19, 2021 (Day 34)
 Updates:
-* Included function which masks the image. White pixels represent the pole is present. Black pixels represent the pole is not present. This will be useful for the CNN image segmentation. 
+* Included function which masks the image in the pole detection code. White pixels represent the pole is present. Black pixels represent the pole is not present. This will be useful for the CNN image segmentation. 
 * The .py code is available on [GitHub](https://github.com/waggle-sensor/summer2021/tree/main/Li/pole_extraction_algorithm) and will be updately consistently there. 
-* Created training set comprised of 1350 masked images from the pole detection algorithm. Samples of these images can be found in the results folder from 2021.07.16.
+* Used the labeled images from Day 33 as the training set for the U-Net model. Samples of these images can be found in the results folder from 2021.07.16. The complete training data will be found in a compressed folder.
 * Fixed bugs with pole detection algorithm. Added comments and improved readability of code.
 * Created PowerPoint for tomorrow's presentation. 
+* Note: I call the algorithm by a lot of names: pole detection, pole extraction, pole labeling... they indicate the same program. 
 
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
@@ -568,19 +573,26 @@ To Do:
 ### July 20, 2021 (Day 35)
 Updates:
 * Presented results to CV group. PowerPoint can be found [here](https://drive.google.com/drive/folders/16lsegCAwpMYxdfE9sN4FO3LkOmycTwgp?usp=sharing).
-* Worked with Seongha on running U-Net CNN for my training set. Was not able to run directly on my home laptop. So we resorted to using Docker. Was successful in training a dataset of 1350 masked images. 
-* Read and learned about [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597).
+* Worked with Seongha on running U-Net CNN for my training set. Was not able to run directly on my home laptop, so we resorted to using Docker. Was successful in training a dataset of 1350 masked images. 
+* Checkpoints generated from training were saved to be used as models for testing.
+* The testing model only has images and labels as inputs. I asked Seongha how we can measure/determine scores like accuracy. We may have to resort to examining the pixel differences or visually checking them out.
+* Read and learned about the U-Net Model.
+* Sources:  
+    (1) [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)
+    (2) [Understanding Semantic Segmentation with UNET](https://towardsdatascience.com/understanding-semantic-segmentation-with-unet-6be4f42d4b47)
+    (3) [U-Net](https://towardsdatascience.com/understanding-semantic-segmentation-with-unet-6be4f42d4b47)
 
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
 ### July 21, 2021 (Day 36)
 Updates:
-* Attended seminar 
+* Attended seminar 'How to Establish Your Personal Brand' by Leslie Krohn.
+* Attended student connects session.
 * Took a break from grinding out code and worked on writing the final paper. Finished introduction and parts of methods.
-* Used Seongha's [paper](https://www.mdpi.com/2073-4433/12/3/395) and the earlier papers as guides for my writing. 
-* Needed images for the testing set, so I ran the pole detection algorithm on images from December 2018. The algorithm did not perform as well as it did on December 2017. This was probably due to the patchier snow/grass (perhaps not enough snow?). The results from the contouring and masking can be found [here](https://drive.google.com/drive/folders/1dY9kPMZOofkoJc5kzp3vQOK8BWiChIIM?usp=sharing).
-* 1141 images were inputted, two poles from each image (2282 total), including images at night. 975 poles labeled (42.7%) with false positives.
+* Used Seongha's [paper](https://www.mdpi.com/2073-4433/12/3/395) and the earlier [papers](https://github.com/waggle-sensor/summer2021/tree/main/Li/Readings) as guides for my writing. 
+* Needed images for the testing set, so I ran the pole detection algorithm on images from December 2018. The algorithm did not perform as well as it did on December 2017. This was probably due to the patchier snow/grass (perhaps not enough snow?). The results from the contouring and masking can be found [here](https://drive.google.com/drive/folders/1dY9kPMZOofkoJc5kzp3vQOK8BWiChIIM?usp=sharing). 1141 images were inputted, two poles from each image (2282 total), including images at night. 975 poles labeled (42.7%) with false positives. 
+* The images and labels from this run will be used for the testing.
 * Created PowerPoint for tomorrow's meeting.
 
 To Do:
@@ -589,7 +601,8 @@ To Do:
 ### July 22, 2021 (Day 37)
 Updates:
 * Presented PowerPoint in CV meeting. PowerPoint can be found [here](https://drive.google.com/drive/folders/1gvSs-eS7FzpGXEmyoWoj8tFw6msuTy_I?usp=sharing).
-* Worked with Seongha in testing the UNet CNN. I only tried it on a handful of images since I have not optimized her code, but the testing was successful. The generated predictions were able to detect the poles in the testing images. Some results can be found [here](https://drive.google.com/drive/folders/1d91j2u1Xeuxkxy2E-p7l1-P9MtC_g6S0?usp=sharing).
+* Worked with Seongha in testing the UNet CNN. I only tried it on a handful of images since I have not optimized her code, but the testing was successful. The generated predictions were able to detect the poles in the testing images. Some results can be found [here](https://drive.google.com/drive/folders/1gvSs-eS7FzpGXEmyoWoj8tFw6msuTy_I?usp=sharing).
+* The U-Net code for training and test is available on [GitHub](xxxxxxx) and will be updately consistently there. Additional logs and generated checkpoints will also be saved there, too.
 * Attended Office Hours session with Sean to start initial stages of plug-in. Session was very productive and I was able to have some code written. Will need to ask Seongha for clarification on how to load the UNet model properly.  
 
 To Do:
@@ -598,10 +611,11 @@ To Do:
 ### July 23, 2021 (Day 38 + Weekend)
 Updates:
 * Seongha showed me how to load the model correctly into the plugin. Encounter other issues that I will need to ask Sean.
-* Modified Seongha's testing code to be more suitable for the purpose of masking poles. 
+* Modified Seongha's testing code to be more suitable for the purpose of masking poles. The updates can be found on GitHub. 
 * Worked on the last portion of my project, which is the distance measurement. 
-* Developed program which can find the minimum white pixel of the pole. (1) Found a contour (pole) (2) Detect contour min.
-* Compiled more images of poles in the snow to create masks of. This would increase the diverity of the poles in the images and hopefully improve the model training (and testing).
+* Developed small program which can find the minimum white pixel of the pole. (1) Found a contour (pole) (2) Detect contour min. This can be found [here](https://drive.google.com/drive/folders/1d91j2u1Xeuxkxy2E-p7l1-P9MtC_g6S0?usp=sharing).
+* Compiled more images of poles in the snow to create masks of. Images were taken from the same NEON database from winters of 2017/2018 and 2018/2019. This would increase the diverity of the poles in the images and hopefully improve the model training (and ultimately testing. About 4000 images were collected.
+* Worked on final report.
 
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
@@ -612,7 +626,60 @@ To Do:
 
 <br />
 
+### July 26, 2021 (Day 39)
+Updates:
+* Will be dedicating most of this week to finalizing the deliverables.
+* Collected 1000 images to be run through the pole extraction algorithm. The labels and images will be used as the new training data. The new training data can be found [here](xxxxxxx) in a compressed folder.
+* A larger assortment of images were run through pole extraction algorithms from the winters of 2017/2018 and 2018/2019. This was to generate cropped images and labels (for comparison).
+* 450 randomly selected cropped images will be used as the testing set. The new testing data can be found [here](xxxxxxx) in a compressed folder.
+* Finished one draft of the paper, not including the results, discussion, and abstract. Will be doing revisions throughout the week.
 
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+
+### July 27, 2021 (Day 40)
+Updates:
+* Discussed updates during CV group meeting.
+* Created a small tutorial pdf for how to submit a blog draft on the Sage site per request of Raj.
+* Fixed a small bug with naming the contour image files in the pole extraction algorithm. Updated version should be available on GitHub.
+* Ran the testing set using the model. Results can be found [here](xxxxxxx).
+* The results were overall very good. The model tends to not overestimate compared with the pole extraction algorithm. Additionally, it was able to detect the rods at times where the algorithm fails. Weaknesses of the model occur when the images have poor visibility or high noise. 
+* Started working on presentation for group meeting tomorrow.
+* Did first round of major edits in the final report. 
+
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+
+### July 28, 2021 (Day 41)
+Updates:
+* Attended seminar 'Open Q&A on Deliverables/Learning Off the Lawn Overview'.
+* Finalized PowerPoint for today's presentation. The PowerPoint can be found [here](https://drive.google.com/drive/folders/1Kz2cSS5V6bX5rmeW7YFT_LrsUN9Xp5Ms?usp=sharing).
+* Presented my final presentation in front of the group. 
+* Will be modifying this a bit for the actual SULI presentation next week.
+
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+
+### July 29, 2021 (Day 42)
+Updates:
+* Will be cleaning up and making sure all links are updated and files are properly uploaded onto Google Drive/GitHub.
+* 
+
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+
+### July 30, 2021 (Day 43)
+Updates:
+* 
+
+To Do:
+* Continue studying and working on OpenCV tutorials and project.
+
+<br />
+
+## Week 10: Final Week
+
+<br />
 
 
 <!-- 
