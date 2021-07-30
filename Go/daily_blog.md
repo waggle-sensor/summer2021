@@ -178,4 +178,17 @@
 - 3:00 PM meeting today with prof. Dunn and the rest of NAISE
    - finishing up the last of the presentations
    - talking about the end internship and final deliverables
+- Began outlining and drafting blog post; due by next week but want most of it done by Thursday or Friday
+
+##### Wednesday:
+- 2-4PM: Final presentation meetings for the first half of the summer interns
+- Worked on preparing presentation/blog post/final paper:
+- Finished off most of blog
+- Developing block diagrams and flow charts for use
+
+##### Thursday:
+- Meeting with Raj. Discussed:
+   - LoRa architecture
+   - Purchasing gateways for me to experiment with
+   - Steps going forward
 

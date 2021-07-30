@@ -47,7 +47,7 @@ while(1):
         cv.imwrite('opticalhsv.png',bgr)
     pixel_y = 320
     pixel_x = 192
-    #print(f'the velocity vector at pixel (y=10,x=15) is {flow[pixel_x,pixel_y]}')
+    #print(f'the velocity vector at pixel (y=10,x=15) is {flow[pixel_x,pixel_y]}'
     prvs = next
     magnitude = np.linalg.norm(flow[pixel_x,pixel_y])
     print(magnitude)
