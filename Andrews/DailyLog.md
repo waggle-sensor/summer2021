@@ -337,4 +337,8 @@
 
 ### June 29
 - Clouds/CV meeting
-- 
+- CLeaned up most code/wrote as functions
+- Finished optical flow results. Ended up averaging the motions per pixel over the length of the video. Values range from 3.5 m/s to 8.3 m/s (average of 5.85 m/s) in the 5 by 5 km region over the site. At the pixel directly over the site the average speed is 5.8 m/s. 
+
+### June 30
+- Working on deliverables
