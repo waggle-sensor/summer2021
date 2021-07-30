@@ -46,7 +46,7 @@
 
 \title{\Huge Online Anomaly Localization in \\ Images at the Edge} % Poster title
 
-\author{Colin Burdine \qquad\quad \texttt{colin\_burdine1@baylor.edu}} % Author(s)
+\author{Colin Burdine \hspace{1cm} (\texttt{cburdine@baylor.edu})} % Author(s)
 
 \institute{SULI Intern $\mid$ Argonne National Laboratory $\mid$ MCS Division} % Institution(s)
 
@@ -59,6 +59,13 @@
 \newcommand{\leftfoot}{bit.do/poster-PDP093} % Left footer text
 
 \newcommand{\rightfoot}{PDP-093/SKPP/III/2018} % Right footer text
+
+%----------------------------------------------------------------------------------------
+%   ADDITIONAL MACROS:
+%----------------------------------------------------------------------------------------
+
+\newcommand{\tabimg}[2]{\begin{tabular}{c}\includegraphics[scale=#2]{#1}\end{tabular}}
+\newcommand{\boxtabimg}[2]{\begin{tabular}{c}\fbox{\includegraphics[scale=#2]{#1}}\end{tabular}}
 
 %----------------------------------------------------------------------------------------
 
@@ -78,21 +85,30 @@
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
             
-\begin{block}{Introduction - Background}
+\begin{block}{Introduction and Background}
 \begin{itemize}
-\item Intro \\[4mm]
+\item \textit{Image anomaly localization} is the task of locating uncommon objects in an image, if they exist.
+
+\begin{itemize}
+\item Many existing anomaly detection models are semi-supervised and offline, requiring large labeled datasets and human calibration to perform well.
+
+\item In this research, we propose a novel ``self-taught" model that performs \textit{unsupervised online anomaly localization.}
+\end{itemize}
 
 \item \textit{Convolutional Autoencoders} (CAEs) are machine learning models commonly used for anomaly localization in images.  This research proposes a novel framework for deploying unsupervised convolutional autoencoders in an online edge computing setting.\\[4mm]
 
-\item There exist many mechanisms to improve unsupervised anomaly localization in the literature. We divide these mechanisms into two categories: \textit{regularizers} and \textit{false positive reducers}:\\[4mm]
-\begin{itemize}
-\item \textit{regularizers} help to avoid overfitting the training data, thereby allowing the model to generalize better on previously unseen images.
-
-\item \textit{False positive reducers} aim to ensure that an anomaly's deviation from the ``normal" data is statisticallly significant. In an unsupervised setting, they help to better distinguish between true anomalies and anomalies detected due to background noise.
-\end{itemize}
-
+%\begin{itemize}
+%
+%\item There exist many mechanisms to improve unsupervised anomaly localization in the literature. We divide these mechanisms into two categories: \textit{regularizers} and \textit{false positive reducers}:\\[4mm]
+%
+%\item \textit{regularizers} help to avoid overfitting the training data, thereby allowing the model to generalize better on previously unseen images.
+%
+%\item \textit{False positive reducers} aim to ensure that an anomaly's deviation from the ``normal" data is statisticallly significant. In an unsupervised setting, they help to better distinguish between true anomalies and anomalies detected due to background noise.
+%
+%\end{itemize}
 \end{itemize}
 \end{block}
+
 
 %----------------------------------------------------------------------------------------
 %	METHODS
@@ -102,39 +118,57 @@
 
 \begin{itemize}
 \item \textbf{Dataset}
+\begin{itemize}
+\item We used the NEON Phenocam dataset for Rocky Mountain National Park \\ (site \texttt{NEON.D10.RMNP.DP1.00033}) for the set of ``normal" images.\\
+\begin{itemize}
+\item The images were taken in the interval of May 1, 2021 to June 1, 2021.
+\item ``Anomaly" images were added manually, using photo editing software.\\[6mm]
+\end{itemize}
+\end{itemize}
+%\begin{figure}
+%\includegraphics[scale=1.4]{figures/RMNP_timeline}
+%\caption{A timeline of the anomalies added to the NEON RMNP Dataset.\qquad\qquad~}
+%\end{figure}
 
 \bigskip
 \item \textbf {Model Architecture}\\[1cm]
 
 \begin{figure}
 \fbox{\includegraphics[scale=0.6]{figures/cae_diagram}}
-\caption{The proposed CAE architecture.}
+\caption{Our proposed Convolutional Autoencoder model.}
 \end{figure}
 
 \bigskip
 \item \textbf{Attention Expansion}
 
-\item\textbf{Gamma Distribution Filter}\\[1cm]
+\begin{itemize}
+\item As a form of regularization, we applied \textit{attention expansion loss}, which penalizes the model for making the latent features sensitive to small regions of the input image.
 
-\begin{table}[h!]
-\caption{ RAW MATRIX OF ALTERNATIVES}
-\begin{center}
+\item For each image $\mathbf{X}$ we computed an attention map $\mathbf{A_X}$ using the Grad-CAM algorithm, which packpropagates the latent features to the last convolutional layer in the encoder.
 
- \begin{tabular}{||c| c c c c c||} 
- \hline
- Alternative & C1 & C2 & C3 & C4 & C5 \\ [0.5ex] 
- \hline\hline
- A1 & 9000	 & 713	 & 4.6 &	701 &	1 \\ 
- \hline
- A2 & 29000		 & 394		 & 3.9 &	0 &	1 \\
- \hline
- A3 & 12000		 & 370		 & 4.6	 &	646	 &	3 \\
- \hline
- A4 & 12000		 & 403		 & 4.7	 &	26	 &	2 \\
-  \hline
- \end{tabular}
-\end{center}
-\end{table}
+\item During training, the loss function we used for a reconstructed image $\widetilde{X}$ was
+$$\text{loss} = \text{mean}[(\mathbf{X} - \widetilde{\mathbf{X}})^2] + w_{AE} \cdot \text{mean}[(1 - \mathbf{A_X})^2],$$
+where the means are taken across all channels and pixels. We empirically selected the attention expansion weight $w_{AE} = $ 0.005.\\[6mm]
+\end{itemize}
+
+\item\textbf{Gamma Distribution Filter}
+
+\begin{itemize}
+\item To localize anomalies, we proposed a novel method which fitted the mean square error loss $(x_p)$ of each pixel to a \textit{exponential moving gamma distribution}, so that $x_p \sim \Gamma(\kappa_p(t), \theta_p(t))$ with time-dependent gamma parameters $\kappa_p(t), \theta_p(t)$.
+
+\item To determine if a pixel is part of an anomaly, we performed a ``per-pixel p-value test" for a given approximate anomaly probability $\alpha$ close to 0.
+
+\item This gamma distribution filter accounts for background noise in images, while also only requiring a constant number of parameters to be stored per pixel, making it ideal for edge computing systems with limited memory.\\[6mm]
+\end{itemize}
+
+\item\textbf{Simulated Online Training}
+\begin{itemize}
+\item Training of the model was divided into a \textit{calibration} and \textit{simulated online} phase.
+
+\item In the \textit{calibration phase}, the model is trained on a small set of 100 training examples to avoid an initial high false positive rate. The parameters of the gamma distribution filter are also set.
+
+\item After calibration, the model is deployed in a \textit{simulated online} phase where the model is given each sequential image in the dataset. For each image, the model performs small weight updates and small updates to the gamma distribution filter parameters. All detected anomalies are recorded during this phase.
+\end{itemize}
 \end{itemize}
 \end{block}
 
@@ -152,52 +186,52 @@
 %	RESULTS
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Results: Implementation and Accuracy Evaluation}
+\begin{block}{Results}
 
 \begin{itemize}
-\item After accomplishing data pre-processing and implementation, Fig. 2 presents the interface of the personal recommender system.
+\item\textbf{Use of the Gamma Distribution Filter}\\[6mm]
 
 \begin{figure}
 \fbox{\includegraphics[scale=1.2]{figures/gamma_filter}}
 \fbox{\includegraphics[scale=1.2]{figures/gamma_filter_noise}}
-\caption{Distribution of the }
+\caption{Distribution of the mean reconstruction loss (left) and estimated \\
+background noise in the form of a log-variance map (right).}
 \end{figure}
 
 \begin{itemize}
-\item Table 1 illustrates the normalized value matrix toward a Laundry Basket product at Shopee. There are at least ten sellers who sell the product with the same visual (type, brand and size) which will be processed by the Fuzzy-SAW method. 
-\item  The normalized result table is then multiplied by the weighting number. Out of the 120 types of ranking methods, we can take an example of the 1-2-3-4-5 ranking sequence for price attributes-location-reputation-sold product-support expeditions. Three consecutive sellers who get the highest score are A7-A9-A5.
+\item As illustrated in Figure 2, we observed that the reconstruction loss is best fitted by a gamma distribution, which justifies the use of the gamma distribution filter.
+
+\item We also observed from the background noise map that some parts of the image vary more than others due to noise in the reconstruction loss. We verified that accounting for the background noise gives more robust predictions.\\[6mm]
+
 \end{itemize}
+\item\textbf{Prediction Localization}
+\begin{figure}
+
+\begin{itemize}
+\item As shown in Figure 3, our model obtained qualitatively good anomaly localization. The bounding boxes shown were computed to enclose the contours of the anomalous pixels that were output from the gamma distribution filter.\\[6mm]
+\end{itemize}
+\includegraphics[scale=0.7]{figures/anomalies}
+\caption{Examples of \textit{true positive} predictions generated by the model.\qquad\quad~}
+\end{figure}
+
+\item \textbf{Accuracy and Impact of Attention Expansion}\\[6mm]
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{example-image-a}
-\caption{Alternative Matrix Calculation Results with 1Weight Matrix}
-\end{figure}
-
-\begin{itemize}
-\item This study employs an accuracy of the rank result calculation method. The accuracy is calculated based on the recommendations given by the system to data compared to the data given by respondents which is divided into data training to find the most optimum weight; and data testing in ratio of 4:1. 
-\item In the data testing, a random sample of products with various combination of attributes rank order is applied. Accuracy value of each product search result is defined if a target seller is found as the first recommendation result.
-\item Table 2 shows a sample of data testing that compares seller target to output from system. From the table, the accuracy of the correct amount of data can be calculated compared to the number of data testing.
-\item Attribute rank show the user preference respectively for price, location, number of sold product, seller reputation, and the number of expedition provider support. The accuracy generated by Fuzzy-SAW in this personal recommender system is 75\%.
-\end{itemize}
-
-\begin{table}[h!]
 \scriptsize
-\centering
-\caption{SAMPLE OF DATA TESTING}
 \begin{center}
-\begin{tabular}{ |c|c|c|c| } 
-\hline
-Product & Attribute Rank & Seller Target & Seller Result \\
-  \hline
-  \multirow{4}{4em}{Aceh Arabica Coffee} 
-  & 1-5-2-3-4 & Kopi Tubruk Indonesia & Kopi Tubruk Indonesia \\ 
-  & 1-2-3-4-5 & Q House of Coffee & Kopi Tubruk Indonesia \\ 
-  & 2-1-3-4-5 & Boenboen Coffee & Boenboen Coffee \\ 
-  & 3-1-2-4-5 & Kopi Tubruk Indonesia & Kopi Tubruk Indonesia \\
-  \hline
+\begin{tabular}{c c | c}
+ & \normalsize{No Attention Expansion} & \normalsize{Attention Expansion}\\
+\begin{tabular}{l}(a)\end{tabular} 
+  & \begin{tabular}{c}\includegraphics[scale=0.45]{figures/acae_heatmaps_0}\end{tabular}
+  & \begin{tabular}{c}\includegraphics[scale=0.40]{figures/acae_heatmaps}\end{tabular} \\
+\begin{tabular}{l}(b)\end{tabular}
+ & \begin{tabular}{c}\includegraphics[scale=1.06]{figures/neon_cae_roc}\end{tabular} 
+ & \begin{tabular}{c}\includegraphics[scale=1.06]{figures/neon_acae_roc}\end{tabular} \\
+ & \textbf{Area under Curve:  0.6371} & \textbf{Area under curve: 0.738} \\ 
 \end{tabular}
+\caption{Comparison of example attention maps (a) and ROC Curves (b) \\ with and without attention expansion.}
 \end{center}
-\end{table}
+\end{figure}
 
 \end{itemize}
 
@@ -207,8 +241,9 @@ Product & Attribute Rank & Seller Target & Seller Result \\
 
 \begin{itemize}
 
-\item From the results of accuracy and data from participants, the price attribute becomes the attribute that respondents were being considered the most, since it originally belongs to a product, while the other attributes belong to each merchant.  
-\item Some criteria ranking combinations produce the same sellers who are always ranked in the top-4 recommendations, one of the trigger factors because the values in almost all attributes are the most optimum number of each attribute type. 
+\item Anomaly localization, especially in an unsupervised online setting is a difficult task and requires a careful choice of model to perform well.
+\item Despite this, we achieved a reasonable amount of success with an online CAE using novel techniques such as a gamma distribution fitler, as well as recently discovered techniques such as attention expansion. These techniques yielded an AUROC of 0.738.
+\item We hope that future work can be done to improve upon the accuracy of this model in an unsupervised online setting.\\[2mm]
 \end{itemize}
 
 \end{block}
@@ -227,13 +262,22 @@ Product & Attribute Rank & Seller Target & Seller Result \\
 
 %----------------------------------------------------------------------------------------
 
+
+\begin{tabular}{l c r }
+\includegraphics[scale=0.16]{figures/doe_footer} & 
+\hspace{50cm} & 
+\includegraphics[scale=0.15]{figures/argonne_footer}\\[2mm]
+\end{tabular}
 \begin{columns}
+
+
 \begin{tabular*}{\columnwidth}{@{\extracolsep{\stretch{1}}}*{3}{c}@{}}
 \includegraphics[scale=0.8]{figures/doe_footer} & 
-{\color{white}
-\small\textbf{
-This research is funded by ... }
-} & \includegraphics[scale=1.0]{figures/argonne_footer} \\[6cm]
+%{\color{white}
+%\small\textbf{
+%This research is funded by ... }
+%}
+& \includegraphics[scale=1.0]{figures/argonne_footer} \\[6cm]
 \end{tabular*}
 \end{columns}
 \end{frame} % End of the enclosing frame
