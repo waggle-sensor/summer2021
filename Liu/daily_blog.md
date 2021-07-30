@@ -696,3 +696,15 @@ SnapshotEnsembleClassifier | Testing Acc: 71.01 % | Training Time: 1202.86 s | E
  - Have weekly meeting with ML team and discuss the progress
    - ensemble heterogerous models for one application using sklean
    - quantization-aware training's example
+
+### Tuesday July 27, 2021:
+ - Experiments with quantization model in TensorRT
+   - Five models converted from FP32 to INT8
+   - calibration with validation dataset
+ - Ensemble hetegerous quantization models with MLP
+
+### Wednesday July 28, 2021:
+ - Train the MLP network to get ensemble results based on quantized DNN models
+ - Prepare for the final presentation
+
+### Thursday July 29, 2021:

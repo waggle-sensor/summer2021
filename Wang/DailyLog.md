@@ -3,12 +3,20 @@
 1. Running experiments to extract featurs on 10-species dataset.
 2. Working on the Methodology section of the paper with Emily.
 3. Working on the Intro section of the paper with Rick.
-4. 
+
 **July 26th**
 1. Running experiments to extract featurs on 10-species dataset.
 2. Working on the plug-in document.
 3. Working on the Methodology section of the paper with Emily.
 
+**July 27th**
+1. Running experiments to extract featurs on 10-species dataset.
+2. Finished the intro section of the paper.
+
+**July 28th**
+1. Running experiments to extract featurs on 10-species dataset.
+2. Working on the methodology section of the paper.
+3. Working on the plug-in document.
 
 # Week 9
 **July 18th**

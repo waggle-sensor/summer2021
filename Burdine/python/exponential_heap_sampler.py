@@ -25,13 +25,10 @@ class ExponentialHeapSampler():
             self.items[self.front_idx] = item    
         self.front_idx += 1        
 
-        #print(self)
-        
         # perform promotion (if necessary)
         if self.front_idx >= self.max_len:
             self._promote()
             self.front_idx = self.max_len//2
-            #print('-->', self)    
 
     def addget(self,item):
         
@@ -44,13 +41,10 @@ class ExponentialHeapSampler():
             self.items[self.front_idx] = item
         self.front_idx += 1    
 
-        #print(self)
-        
         # perform promotion (if necessary):
         if self.front_idx >= self.max_len:
             self._promote()
             self.front_idx = self.max_len//2
-            #print('-->', self)  
         return ret        
 
     def _promote(self):
@@ -92,13 +86,13 @@ def main():
 
     print('Mean retention time:', np.mean(heap_times))
     plt.figure()
-    plt.title(f'Distribution of EHQ retention times (N={es.max_len})')
+    plt.title(f'Distribution of EHS retention times (N={es.max_len})')
     plt.hist(heap_times, density=True)
     plt.show()
 
     print('Mean item age:', np.mean(heap_deltas))
     plt.figure()
-    plt.title(f'Distribution of age of EHQ items (N={es.max_len})')
+    plt.title(f'Distribution of age of EHS items (N={es.max_len})')
     plt.hist(heap_deltas, density=True)
     plt.show()
 if __name__ == '__main__':
