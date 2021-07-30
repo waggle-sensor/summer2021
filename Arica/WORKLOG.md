@@ -702,5 +702,32 @@ TODO for the coming monday:
 * Finish `state_check`, subprocess.run keeps freezing the thread and I can't figure why
 * Write `install`, `verify_install` code
 * Finish basic use case
+* Make a copy of honeycomb service file in the repo
+-----------
 
+### Wednesday, 6/28 (8 Hours worked)
+
+**Today's non-technical work:**
+* Attended first round of final student presentations
+
+**Today's technical work:**
+* fixed `subprocess.run()` freezing
+* Finally got the first iteration of honeycomb to work!!!!!!
+* Wrote more documentation
+
+**TODO:**
+* Make image of HC state diagram
+* Meet with Joe tomorrow for code review
+-----------
+### Thursday, 6/29 (8 Hours worked)
+
+**Today's non-technical work:**
+* Met with Joe for vode review 
+* Made HC State diagram in Miro 
+
+**Today's technical work:**
+* Fixed a million things in HC from code review
+
+**TODO:**
+* Check notes for final TODO on HC
 -----------
