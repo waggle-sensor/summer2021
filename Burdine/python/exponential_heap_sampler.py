@@ -25,13 +25,10 @@ class ExponentialHeapSampler():
             self.items[self.front_idx] = item    
         self.front_idx += 1        
 
-        #print(self)
-        
         # perform promotion (if necessary)
         if self.front_idx >= self.max_len:
             self._promote()
             self.front_idx = self.max_len//2
-            #print('-->', self)    
 
     def addget(self,item):
         
@@ -44,13 +41,10 @@ class ExponentialHeapSampler():
             self.items[self.front_idx] = item
         self.front_idx += 1    
 
-        #print(self)
-        
         # perform promotion (if necessary):
         if self.front_idx >= self.max_len:
             self._promote()
             self.front_idx = self.max_len//2
-            #print('-->', self)  
         return ret        
 
     def _promote(self):
