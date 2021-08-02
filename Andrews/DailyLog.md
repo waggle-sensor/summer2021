@@ -342,3 +342,17 @@
 
 ### June 30
 - Working on deliverables
+
+## Week 10
+### August 2
+- Finished draft of the paper over the weekend
+- Finished final powerpoint for Learning Off the Lawn presentation
+- Uploaded final powerpoint and a recording of the presentation
+- Wrote the 3 required abstracts (paper, general audience, presentation)
+- To do:
+    * More paper edits
+    * Format references
+    * Write the blog for Sage site
+    * Update ECR meta folder
+    * Clean up radar code and get it into ECR
+    * Final presentation & peer review paper
