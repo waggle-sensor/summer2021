@@ -191,4 +191,10 @@
    - LoRa architecture
    - Purchasing gateways for me to experiment with
    - Steps going forward
+- Developing demos for the P2P system
+
+##### Friday:
+- Continue developing a P2P network demo
+- Block diagrams for all 3 main models: Public, private,P2P
+- 
 
