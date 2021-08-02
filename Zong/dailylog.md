@@ -187,7 +187,11 @@ Hello world
    <li> Still felt really ill. Went to urgent care. They told me I have a UTI and a sinus infection </li> 
    </ul> 
    
-   
+<h3> Monday, August 2: </h3> 
+<ul>
+   <li> I worked on my student blog that I couldn't finish last week because of my infections </li> 
+   <li> I am also very drowsy from my medication and not feeling well still </li>
+   </ul>
 
    
 
