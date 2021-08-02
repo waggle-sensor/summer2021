@@ -441,7 +441,7 @@ To Do:
 
 <br />
 
-## Week 7: 
+## Week 7: Contour Detection
 
 <br />
 
@@ -553,7 +553,7 @@ To Do:
 
 <br />
 
-## Week 8 
+## Week 8: U-Net Training and Testing 
 
 <br />
 
@@ -561,7 +561,7 @@ To Do:
 ### July 19, 2021 (Day 34)
 Updates:
 * Included function which masks the image in the pole detection code. White pixels represent the pole is present. Black pixels represent the pole is not present. This will be useful for the CNN image segmentation. 
-* The .py code is available on [GitHub](https://github.com/waggle-sensor/summer2021/tree/main/Li/pole_extraction_algorithm) and will be updately consistently there. 
+* The .py code is available on [GitHub](https://github.com/waggle-sensor/summer2021/tree/main/Li/project_code/pole_extraction_algorithm) and will be updately consistently there. 
 * Used the labeled images from Day 33 as the training set for the U-Net model. Samples of these images can be found in the results folder from 2021.07.16. The complete training data will be found in a compressed folder.
 * Fixed bugs with pole detection algorithm. Added comments and improved readability of code.
 * Created PowerPoint for tomorrow's presentation. 
@@ -602,7 +602,7 @@ To Do:
 Updates:
 * Presented PowerPoint in CV meeting. PowerPoint can be found [here](https://drive.google.com/drive/folders/1gvSs-eS7FzpGXEmyoWoj8tFw6msuTy_I?usp=sharing).
 * Worked with Seongha in testing the UNet CNN. I only tried it on a handful of images since I have not optimized her code, but the testing was successful. The generated predictions were able to detect the poles in the testing images. Some results can be found [here](https://drive.google.com/drive/folders/1gvSs-eS7FzpGXEmyoWoj8tFw6msuTy_I?usp=sharing).
-* The U-Net code for training and test is available on [GitHub](xxxxxxx) and will be updately consistently there. Additional logs and generated checkpoints will also be saved there, too.
+* The U-Net code for training [GitHub](https://github.com/waggle-sensor/summer2021/tree/main/Li/project_code/unet_training) and [testing](https://github.com/waggle-sensor/summer2021/tree/main/Li/project_code/unet_testing) can be found on GitHub and will be updately consistently there. Additional logs and generated checkpoints will also be saved there, too.
 * Attended Office Hours session with Sean to start initial stages of plug-in. Session was very productive and I was able to have some code written. Will need to ask Seongha for clarification on how to load the UNet model properly.  
 
 To Do:
@@ -622,16 +622,16 @@ To Do:
 
 <br />
 
-## Week 9 
+## Week 9: More Testing and Wrapping Up 
 
 <br />
 
 ### July 26, 2021 (Day 39)
 Updates:
 * Will be dedicating most of this week to finalizing the deliverables.
-* Collected 1000 images to be run through the pole extraction algorithm. The labels and images will be used as the new training data. The new training data can be found [here](xxxxxxx) in a compressed folder.
+* Collected 1000 images to be run through the pole extraction algorithm. The labels and images will be used as the new training data. The new training data can be found [here](https://drive.google.com/drive/folders/1Va5ZwZXbx-t6TaKRWfD0FRe6twkRqNYt?usp=sharing) in a compressed folder.
 * A larger assortment of images were run through pole extraction algorithms from the winters of 2017/2018 and 2018/2019. This was to generate cropped images and labels (for comparison).
-* 450 randomly selected cropped images will be used as the testing set. The new testing data can be found [here](xxxxxxx) in a compressed folder.
+* 450 randomly selected cropped images will be used as the testing set. The new testing data can be found [here](https://drive.google.com/drive/folders/1Va5ZwZXbx-t6TaKRWfD0FRe6twkRqNYt?usp=sharing) in a compressed folder.
 * Finished one draft of the paper, not including the results, discussion, and abstract. Will be doing revisions throughout the week.
 
 To Do:
@@ -642,7 +642,7 @@ Updates:
 * Discussed updates during CV group meeting.
 * Created a small tutorial pdf for how to submit a blog draft on the Sage site per request of Raj.
 * Fixed a small bug with naming the contour image files in the pole extraction algorithm. Updated version should be available on GitHub.
-* Ran the testing set using the model. Results can be found [here](xxxxxxx).
+* Ran the testing set using the model. Results can be found [here](https://drive.google.com/drive/folders/1Va5ZwZXbx-t6TaKRWfD0FRe6twkRqNYt?usp=sharing).
 * The results were overall very good. The model tends to not overestimate compared with the pole extraction algorithm. Additionally, it was able to detect the rods at times where the algorithm fails. Weaknesses of the model occur when the images have poor visibility or high noise. 
 * Started working on presentation for group meeting tomorrow.
 * Did first round of major edits in the final report. 
@@ -662,18 +662,25 @@ To Do:
 
 ### July 29, 2021 (Day 42)
 Updates:
-* Will be cleaning up and making sure all links are updated and files are properly uploaded onto Google Drive/GitHub.
-* 
+* Attended brief meeting with CV group.
+* Cleaned up and made sure all links in Daily Log are updated and files are properly uploaded onto Google Drive/GitHub.
+* Figured out how to create references on OverLeaf. Overcame one annoying bug stemming from one citation of a .pdf file. 
 
 To Do:
-* Continue studying and working on OpenCV tutorials and project.
+* Clean up work. 
+* Finish deliverables.
 
 ### July 30, 2021 (Day 43)
 Updates:
-* 
+* Wanted to find a way to calculate some form of accuracy metric for the UNet model. Found a site which explained the differnet metrics [here](https://www.jeremyjordan.me/evaluating-image-segmentation-models/).
+* Created a dataset of 100 good labeled images (no overestimations, 'perfect') for the ground truth and their corresponding U-Net predictions as the predicted images
+* Developed small program for calculating mIoU. Can be found on GitHub [here](https://github.com/waggle-sensor/summer2021/tree/main/Li/project_code/validation).
+* The mIoU score was 0.565. 
+* Finished most of the paper on Overleaf, including figures and citations. Need abstract.
 
 To Do:
-* Continue studying and working on OpenCV tutorials and project.
+* Clean up work. 
+* Finish deliverables.
 
 <br />
 
