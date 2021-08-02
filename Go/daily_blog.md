@@ -183,5 +183,12 @@
 ##### Wednesday:
 - 2-4PM: Final presentation meetings for the first half of the summer interns
 - Worked on preparing presentation/blog post/final paper:
-   - 
+- Finished off most of blog
+- Developing block diagrams and flow charts for use
+
+##### Thursday:
+- Meeting with Raj. Discussed:
+   - LoRa architecture
+   - Purchasing gateways for me to experiment with
+   - Steps going forward
 

@@ -43,7 +43,7 @@ In this paper we present a framework for both online and offline models that det
 \section{Introduction}
 
 \subsection{Anomaly Localization}
-The task of anomaly localization is a difficult yet important problem in the area of computer vision. This task involves detecting if an image contains anomalies and then subsequently finding the region of the image containing the anomaly. It has applications in multiple disciplines, such as industrial quality control, surveillance, and environmental science. In an unsupervised online setting this is especially challenging, as it removes any influences of human calibration from the training process and thus constitutes a sort of "learning to learn" or meta-learning task. Many state-of-the-art unsupervised and semi-supervised anomaly localization methods employ deep learning, and have sometimes yielded results comparable to that of a fully supervised method (i.e. when anomaly detection is treated as a binary classification task) \cite{attention_anomalies}.\\
+The task of anomaly localization is a difficult yet important problem in the area of computer vision. This task involves detecting if an image contains anomalies and then subsequently finding the region of the image containing the anomaly. It has applications in multiple disciplines, such as industrial quality control \cite{}, surveillance \cite{}, and environmental science \cite{}. In an unsupervised online setting this is especially challenging, as it removes any influences of human calibration from the training process and thus constitutes a sort of "learning to learn" or meta-learning task. Many state-of-the-art unsupervised and semi-supervised anomaly localization methods employ deep learning, and have sometimes yielded results comparable to that of a fully supervised method (i.e. when anomaly detection is treated as a binary classification task) \cite{attention_anomalies}.\\
 
 Although state-of-the art methods have yielded impressive results, the underlying deep learning models require large datasets and can be computationally demanding to train. In particular, anomaly localization models such as \textit{variational autoencoders} (VAEs) require large samples to be taken from a parameterized distribution during the training process \cite{avb_model}. Furthermore, \textit{adversarial autoencoders} (AAEs) require an additional set of models to be trained (a generator and discriminator) and can be susceptible to training complications such as mode collapse \cite{kumar_mask_aae, avb_model}. In edge computing environments, especially where training and prediction are done autonomously, it is preferable to use models that require little to no human intervention to train, calibrate and deploy. In developing our framework for online anomaly localization, we attempt to adopt as much of the state-of-the art methodology as possible, but subject to the constraints of an edge computing environment.
 
@@ -53,7 +53,7 @@ Although state-of-the art methods have yielded impressive results, the underlyin
 \section{Background}
 \subsection{Overview of Anomaly Detection}
 
-The task of anomaly detection is often interpreted as two-step procedure, in which a probability distribution is first discovered which best fits the data, and then anomalies are detected which have a relatively low likelihood in this distribution. For image data that is intrinsically feature-rich, discovering a probability distribution (say, $P(X)$) that best fits the data and generalizes well can difficult. A common method to address this problem is to produce a low-dimensional embedding of the data through some dimension-reducing transformation, $\tau: \mathcal{X} \rightarrow \mathcal{X}$, where $\mathcal{X}$ is the space of all input images. $\tau$ is often selected such  $\tau(X) \approx X$ for $X \in \mathcal{X}$ that are most probable. In other words, in regions where $P(X)$ is relatively high, $\tau(X)$ more closely resembles the identity function. From this property, we can see that $\tau$ is a sort of image compression algorithm optimized to compress images from the natural distribution $P(X)$ well, and others poorly. Thus, if we can quantify the compression loss of $X$ under $\tau$ (a common choice is the \textit{mean square error}: $\lVert X - \tau(X)\rVert^2 / |X|$), we can use the loss to compute a proportional estimate of the likelihood $P(X)$. If the compression loss is above some relatively high fixed threshold, we can expect that $P(X)$ is low, and $X$ can be flagged as an out-of-distribution anomaly. Otherwise, $X$ is considered to be in-distribution.\\
+The task of anomaly detection is often interpreted as two-step procedure, in which a probability distribution is first discovered which best fits the data, and then anomalies are detected which have a relatively low likelihood in this distribution. For image data that is intrinsically feature-rich, discovering a probability distribution (say, $P(X)$) that best fits the data and generalizes well can difficult. A common method to address this problem is to produce a low-dimensional embedding of the data through some dimension-reducing transformation, $\tau: \mathcal{X} \rightarrow \mathcal{X}$, where $\mathcal{X}$ is the space of all input images. $\tau$ is often selected such  $\tau(X) \approx X$ for $X \in \mathcal{X}$ that are most probable. In other words, in regions where $P(X)$ is relatively high, $\tau(X)$ more closely resembles the identity function. From this property, we can see that $\tau$ is a sort of image compression algorithm optimized to compress images from the natural distribution $P(X)$ well, and others poorly. This means that if we can quantify the compression loss of $X$ under $\tau$ (typically computed by the \textit{mean square error}: $\lVert X - \tau(X)\rVert^2 / |X|$), we can use the loss to compute a proportional estimate of the likelihood $P(X)$. If the compression loss is above some relatively high fixed threshold, we can expect that $P(X)$ is low, and $X$ can be flagged as an out-of-distribution anomaly. Otherwise, $X$ is considered to be in-distribution.\\
 
 The use of compression algorithms to identify anomalies is a common approach in literature, particularly when coupled with deep learning methods like autoencoders \cite{}. However, it can be shown that classical dimension reduction techniques, such as \textit{principle components analysis} (PCA) can be used to localize anomalies, particularly those that are identifiable by their channel-wise features in an image. PCA is a method that determines a set of orthogonal features that best explain the variance of a larger set of features. In Figure~\ref{fig:simple_pca} we give an example of how PCA can be applied to the RGB channels of an image to localize anomalies in a scene based on having an out-of-distribution color:
 
@@ -86,7 +86,7 @@ In Figure~\ref{fig:simple_jpeg} we can see that the accuracy of an anomaly detec
 
 \subsection{Convolutional Autoencoders}
 
-Convolutional autoencoders are a type of deep learning model that can be used to compress image data into a lower-dimensional representation. Unlike classical methods, convolutional autoencoders are capable of extracting non-linear features images. This is accomplished through the use of convolutional filters and dense neural networks weights that are fitted to minimize the reconstruction loss of a set of images. Convolutional autoencoders are comprised of two parts: the convolutional layers (the ``encoder") and the deconvolutional layers (the ``decoder"). These parts are shown in Figure~\ref{fig:conv_autoencoder}:
+Convolutional autoencoders are a type of deep learning model that can be used to compress image data into a lower-dimensional representation. Unlike classical methods, convolutional autoencoders are capable of extracting robust non-linear features from images. This is accomplished through the use of convolutional filters and dense neural networks with weights that are fitted to minimize the reconstruction loss of a set of images. Convolutional autoencoders are comprised of two parts: the convolutional layers (the ``encoder") and the deconvolutional layers (the ``decoder"). These parts are shown in Figure~\ref{fig:conv_autoencoder}:
 
 \begin{figure}[H]
 \begin{center}
@@ -96,26 +96,62 @@ Convolutional autoencoders are a type of deep learning model that can be used to
 \label{fig:conv_autoencoder}
 \end{figure}
 
+By adjusting the number of latent features, we can control the amount of information about an input image $X$ that is preserved by the encoder. Once the latent features are extracted, the decoder will then use these features to produce a reconstruction of the original image, $\hat{X} = \tau(X)$, that minimizes some loss function on a set of training data. The most common loss function used is the \textit{mean square error} (MSE) given in \eqref{eqn:loss_mse}:
 
+\begin{equation}
+L_{MSE}(X) = \frac{1}{|X|}\sum_{i=1}^{|X|}  (x_i - \hat{x}_i)^2
+\label{eqn:loss_mse}
+\end{equation}
+
+where the summation in \eqref{eqn:loss_mse} is carried out across all corresponding elements and channels $x_i$ in $X$. Once the loss function $L_{MSE}$ is used to train the model, anomalies can be localized by computing the reconstruction loss map, which is the pixel-wise reconstruction mean square error computed across channels only. As shown in Figure~\ref{fig:cae_output_example}, trained convolutional autoencoders are capable of reducing images down to relatively few features with minimal reconstruction loss:
+
+\begin{figure}[H]
+\begin{center}
+\begin{tabular}{c c c}
+\includegraphics[scale=0.45]{figures/cae_img_x} & 
+\includegraphics[scale=0.45]{figures/cae_img_xhat} &
+\includegraphics[scale=0.45]{figures/cae_img_lossmap} \\
+(a) & (b) & (c)
+\end{tabular}
+\end{center}
+\label{fig:cae_output_example}
+\caption{An example of a trained convolutional autoencoder with 64 latent features compressing an original image (a) to produce a reconstructed image (b), resulting in the loss map (c).}
+\end{figure}
 
 %===================== METHODOLOGY ====================
 \section{Methodology}
 \subsection{Dataset}
+
+To evaluate the performance of the model we proposed in this paper, we augmented an existing open-access phenology camera database provided by the \textit{National Ecological Observatory Network} (NEON) \cite{neon_dataset}. Sequences of images were downloaded from NEON's phenocam dataset for the Rocky Mountain National Park site (NEON.D10.RMNP.DP1.00033) spanning the time intervals from May 1 to June 1 2021. The particular site and time interval was selected due to the diversity of lighting and weather conditions. The images were taken from a still mounted camera at 15 minute intervals during daylight hours. Samples from the dataset are given in Figure~\ref{fig:neon_samples}:
+
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.22]{figures/dataset_normal_samples} \\
 \end{center}
 \caption{Samples from the NEON RMNP site dataset, from May to June 2021.}
+\label{fig:neon_samples}
 \end{figure}
+
+Since no anomalies were detected in this dataset through manual inspection, these images served as the ``normal" data used in this paper. Randomly selected images were removed from this dataset and anomalies were added using photo editing software. Ground truth bounding box labels were also added by hand. In total the dataset consisted of 2012 ``normal" images and 8 ``anomaly" images with bounding box labels. Samples from the ``anomaly" images are given in Figure~\ref{fig:neon_anomaly_samples}:
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.22]{figures/dataset_anomaly_samples}
 \end{center}
 \caption{Samples of human-generated anomalous images with ground truth labels from the NEON RMNP site dataset.}
+\label{fig:neon_anomaly_samples}
 \end{figure}
 
 \subsection{Model Architecture}
+
+The model we propose in this paper is an extension of a traditional convolutional autoencoder. The image inputs to the autoencoder were resized to 960 pixels high by 1280 pixels wide with standard RGB channels. 64 latent features were used.
+
+\begin{figure}[H]
+\includegraphics[scale=0.3]{figures/cae_diagram}
+\caption{Our proposed model architecture.}
+\label{fig:cae_diagram}
+\end{figure}
+
 
 \subsection{Attention Expansion}
 
