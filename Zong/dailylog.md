@@ -179,18 +179,17 @@ Hello world
 <h3> Thursday, July 29: </h3> 
 <ul> 
    <li> Went to a coffee chat in the morning with Rick Stevens </li> 
-   <li> Felt really ill, so I got covid tested and rested for the day </li> 
+   <li> N/A </li>
    </ul> 
    
 <h3> Friday, July 30: </h3> 
 <ul>
-   <li> Still felt really ill. Went to urgent care. They told me I have a UTI and a sinus infection </li> 
+   <li> N/A</li> 
    </ul> 
    
 <h3> Monday, August 2: </h3> 
 <ul>
-   <li> I worked on my student blog that I couldn't finish last week because of my infections </li> 
-   <li> I am also very drowsy from my medication and not feeling well still </li>
+   <li> I worked on my student blog that I couldn't finish </li>
    </ul>
 
    
