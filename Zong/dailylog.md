@@ -175,6 +175,19 @@ Hello world
    <li> Saw some final presentations! They did an amazing job </li> 
    <li> Looked into this data reader called panda, that would make it easier to organize the data by plug-in </li> 
    </ul> 
+   
+<h3> Thursday, July 29: </h3> 
+<ul> 
+   <li> Went to a coffee chat in the morning with Rick Stevens </li> 
+   <li> Felt really ill, so I got covid tested and rested for the day </li> 
+   </ul> 
+   
+<h3> Friday, July 30: </h3> 
+<ul>
+   <li> Still felt really ill. Went to urgent care. They told me I have a UTI and a sinus infection </li> 
+   </ul> 
+   
+   
 
    
 
