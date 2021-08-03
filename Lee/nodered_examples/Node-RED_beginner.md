@@ -144,10 +144,9 @@ npm i node-red-dashboard
 ```
 
 
-
 - Dropdown nodes
 
-![image](https://user-images.githubusercontent.com/56851781/128054655-b7a0d48c-e079-4022-a23c-5609462b841c.png)
+![image](https://user-images.githubusercontent.com/56851781/128055255-15e10d07-5b2b-4397-be5b-98e5dfd506c8.png)
 
 
 - Single selection example flows
