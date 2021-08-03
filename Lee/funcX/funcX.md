@@ -4,6 +4,7 @@
 - It does not hold resources in volatile memory; computing is rather done in short bursts with the results persisted to storage. When an app is not in use, there are no computing resources allocated to the app. Pricing is based on the actual amount of resources consumed by an application.
 - It can be a form of utility computing. "Serverless" is a misnomer in the sense that servers are still used by cloud service providers to execute code for developers.
 - However, developers of serverless applications are not concerned with capacity planning, configuration, management, maintenance, fault tolerance, or scaling of containers, VMs, or physical servers.
+- In summary, serverless is not backend with no server, serverless backend without server management.
 
 
 ### FaaS (Function as a Service)
@@ -39,8 +40,8 @@ curl https://api2.funcx.org/v2/version
 
 - The funcX endpoint software is available on PyPI and a `default endpoint` can be configured and started as follows. 
 
-<p align="left">
-<img width="802" alt="Screen Shot 2021-08-03 at 5 49 50 PM" src="https://user-images.githubusercontent.com/56851781/128090997-37a0f992-3c8e-4efb-8def-af6081f1ab10.png">
+<p align="center">
+<img width="516" alt="Screen Shot 2021-08-03 at 6 04 14 PM" src="https://user-images.githubusercontent.com/56851781/128092394-5e5c50d4-3405-48a7-9d79-c371061921ea.png">
 </p>
 
 - Initialized: The endpoint has been created, but not started following configuration and is not registered with the funcx service.
