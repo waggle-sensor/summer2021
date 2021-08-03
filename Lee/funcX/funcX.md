@@ -45,6 +45,6 @@ curl https://api2.funcx.org/v2/version
 </p>
 
 - Initialized: The endpoint has been created, but not started following configuration and is not registered with the funcx service.
-- Running: The endpoint is active and available for executing functions.
+- Running: The endpoint is active and available for executing functions. (The image above both are currently running.)
 - Stopped: The endpoint was stopped by the user. It is not running and therefore, cannot service any functions. It can be started again without issues.
 - Disconnected: The endpoint disconnected unexpectedly. It is not running and therefore, cannot service any functions. Starting this endpoint will first invoke necessary endpoint cleanup, since it was not stopped correctly previously.
