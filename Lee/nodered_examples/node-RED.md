@@ -5,7 +5,19 @@
 * can continue executing and functioning, as long as there is data to work on and destination for the output.
 * generally runs in less elapsed time than conventional programs, and make optimal use of many processors on a machine, with no special programming required to achieve this. 
 
+![image](https://user-images.githubusercontent.com/56851781/128030672-8a387152-234a-4775-b2d3-dee2f92ddad0.png)
+![image](https://user-images.githubusercontent.com/56851781/128030729-adc73010-77bb-439a-84be-01d8f40a9643.png)
 
+* There are several main space of Node-RED: Palette (Searching nodes), Workspace, and Sidebar. 
+1) You can find basic nodes on Palette. The palette contains all of the nodes that are installed and available to use. You have to install the specific package such as Slack nodes through Node-RED menu -> “Manage Pallete” -> “Install” -> slack nodes (for example).
+2) The main workspace is where flows are developed by dragging nodes from the palette and wiring them together. The workspace has a row of tabs along the top; one for each flow and any subflows that have been opened.
+3) The sidebar contains panels that provide a number of useful tools within the editor.
+    Information - view information about nodes and their help
+    Debug - view messages passed to Debug nodes
+    Configuration Nodes - manage configuration nodes
+    Context data - view the contents of context
+    Also, some nodes contribute their own sidebar panels, such as node-red-dashboard.
+    
 ## 6 core Nodes: inject, debug, function, change, switch, and template.
 * Each Node offers different functionality, which can range from a simple debug node to be able to see what's going on in your flow.
 
