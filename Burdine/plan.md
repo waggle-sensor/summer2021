@@ -301,3 +301,16 @@
 - Uploaded presentation slides to google drive folder
 - Deployed draft version of anomaly detection Waggle plugin
 - Continued work on final report.
+
+### Friday July 30, 2021 ###
+- Finished slide revisions for LOTL presentation
+- Continued work on final report
+
+
+## Week 9 ##
+### Monday August 2, 2021 ###
+- Continued work on final report
+- Recorded audio presentation and finished supplemental poster for LOTL
+
+### Tuesday August 3, 2021 ###
+- Continued work on final report

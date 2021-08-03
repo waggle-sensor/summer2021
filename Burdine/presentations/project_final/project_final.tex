@@ -70,11 +70,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\title{Online Anomaly Localization in Images}
+\title{Online Anomaly Localization in Images at the Edge}
 \subtitle{Project Report}
-\date{July 28, 2021}
+\date{August 4, 2021}
 \author{Colin Burdine}
-\institute{SULI Intern $|$ Argonne National Laboratory}
+\institute{SULI Intern $|$ Argonne National Laboratory \\[2mm] Learning Off The Lawn 2021}
 \titlegraphic{\vspace{7.5cm}
 \includegraphics[height=1.0cm]{figures/doe_footer}\hspace{2.2cm}
 \includegraphics[height=1.1cm]{figures/argonne_footer}
@@ -89,23 +89,40 @@
 %\tableofcontents%[hideallsubsections]
 %\end{frame}
 
-\section{Background}
+\section{Introduction}
 
-%\begin{frame}{About Myself}
-%\begin{center}
-%\includegraphics[scale=0.25]{figures/me}
-%\end{center}
-%\begin{itemize}
-%\item I am a recent graduate of Baylor University (Sic 'Em Bears!)
-%\item I majored in Mathematics and Computer Science.
-%\item I am currently working on my Master's at Baylor, doing research in the field of quantum computing.
-%\end{itemize}
-%\end{frame}
+\begin{frame}{About Myself}
+\begin{center}
+\includegraphics[scale=0.25]{figures/me}
+\end{center}
+\begin{itemize}
+\item I am a recent graduate of Baylor University (Sic 'Em Bears!)
+\item I majored in Mathematics and Computer Science.
+\item I am currently working on my Master's at Baylor, doing research in the field of quantum computing.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{My Work This Summer}
+\begin{itemize}
+\item I have been working in the MCS division on the \textit{SAGE} project, which is providing cyberinfrastructure for edge computing AI systems.
+
+\item I have been working with the \textit{Waggle} software stack,  an open source platform for autonomous sensor networks.\\[2mm]
+
+\begin{itemize}
+\item Waggle software is helping provide data-driven solutions in many scientific domains, ranging from wildfire management to traffic monitoring.
+\end{itemize}
+\end{itemize}
+\begin{center}
+\includegraphics[scale=0.5]{figures/sage}\includegraphics[scale=0.38]{figures/waggle2}
+\end{center}
+\end{frame}
+
+\section{Background}
 
 \begin{frame}{Problem Statement}
 
 \begin{itemize}
-\item Over the past three to four decades, advances in computer vision systems and machine learning have enabled high-fidelity object detection, classification, and tracking.
+\item Over the past few decades, advances in computer vision systems and machine learning have enabled high-fidelity object detection, classification, and tracking.
 
 \item However, these computer vision models are often quite complex and perform poorly on small computing devices.
 
@@ -357,7 +374,7 @@ Area under Curve:  0.637 & Area under curve: 0.738 \\
 
 \begin{exampleblock}{False Negative Examples}
 
-\includegraphics[scale=0.4]{figures/visual_confusion_matrix/FN_1}\includegraphics[scale=0.4]{figures/visual_confusion_matrix/FN_2}
+\includegraphics[scale=0.4]{figures/visual_confusion_matrix/FN_examples}
 
 \end{exampleblock}
 
@@ -371,7 +388,11 @@ Area under Curve:  0.637 & Area under curve: 0.738 \\
 
 \item If this work were continued, more model types should be explored that can better localize small anomalies in the scene.\\[2mm]
 
-\item I am currently in the process of making this model available as a Waggle plugin on the ECR.
+\item This anomaly detection model and a general-purpose motion detection system that I wrote are both available as open-source Waggle plugins that anyone can use or extend:\\[4mm]
+
+\begin{center}
+\includegraphics[scale=0.3]{figures/plugins}
+\end{center}
 
 \end{itemize}
 \end{frame}
@@ -396,7 +417,8 @@ Area under Curve:  0.637 & Area under curve: 0.738 \\
 
 {\setbeamercolor{palette primary}{fg=White, bg=Meteorite}
 \begin{frame}[standout]
-  Questions?\\[8mm]
+  Questions?\\[2mm]
+  Contact me: \texttt{colin\_burdine1@baylor.edu}\\[6mm]
 %  Reach out to me at:\ \texttt{cburdine@anl.gov}\\[1cm]
   \small{My Daily Progress Log:
   \href{https://github.com/waggle-sensor/summer2021/tree/main/Burdine}{https://github.com/waggle-sensor/summer2021/tree/main/Burdine}\\[6mm]

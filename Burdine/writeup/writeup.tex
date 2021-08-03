@@ -86,7 +86,7 @@ In Figure~\ref{fig:simple_jpeg} we can see that the accuracy of an anomaly detec
 
 \subsection{Convolutional Autoencoders}
 
-Convolutional autoencoders are a type of deep learning model that can be used to compress image data into a lower-dimensional representation. Unlike classical methods, convolutional autoencoders are capable of extracting robust non-linear features from images. This is accomplished through the use of convolutional filters and dense neural networks with weights that are fitted to minimize the reconstruction loss of a set of images. Convolutional autoencoders are comprised of two parts: the convolutional layers (the ``encoder") and the deconvolutional layers (the ``decoder"). These parts are shown in Figure~\ref{fig:conv_autoencoder}:
+Convolutional autoencoders (CAEs) are a type of deep learning model that can be used to compress image data into a lower-dimensional representation. Unlike classical methods, CAEs are capable of extracting robust non-linear features from images. This is accomplished through the use of convolutional filters and dense neural networks with weights that are fitted to minimize the reconstruction loss of a set of images. CAEs are comprised of two parts: the convolutional layers (the ``encoder") and the deconvolutional layers (the ``decoder"). These parts are shown in Figure~\ref{fig:conv_autoencoder}:
 
 \begin{figure}[H]
 \begin{center}
@@ -103,7 +103,7 @@ L_{MSE}(X) = \frac{1}{|X|}\sum_{i=1}^{|X|}  (x_i - \hat{x}_i)^2
 \label{eqn:loss_mse}
 \end{equation}
 
-where the summation in \eqref{eqn:loss_mse} is carried out across all corresponding elements and channels $x_i$ in $X$. Once the loss function $L_{MSE}$ is used to train the model, anomalies can be localized by computing the reconstruction loss map, which is the pixel-wise reconstruction mean square error computed across channels only. As shown in Figure~\ref{fig:cae_output_example}, trained convolutional autoencoders are capable of reducing images down to relatively few features with minimal reconstruction loss:
+where the summation in \eqref{eqn:loss_mse} is carried out across all corresponding elements and channels $x_i$ in $X$. Once the loss function $L_{MSE}$ is used to train the model, anomalies can be localized by computing the reconstruction loss map, which is the pixel-wise reconstruction mean square error computed across channels only. As shown in Figure~\ref{fig:cae_output_example}, trained CAEs are capable of reducing images down to relatively few features with minimal reconstruction loss:
 
 \begin{figure}[H]
 \begin{center}
@@ -115,7 +115,7 @@ where the summation in \eqref{eqn:loss_mse} is carried out across all correspond
 \end{tabular}
 \end{center}
 \label{fig:cae_output_example}
-\caption{An example of a trained convolutional autoencoder with 64 latent features compressing an original image (a) to produce a reconstructed image (b), resulting in the loss map (c).}
+\caption{An example of a trained CAE with 64 latent features compressing an original image (a) to produce a reconstructed image (b), resulting in the loss map (c).}
 \end{figure}
 
 %===================== METHODOLOGY ====================
@@ -144,7 +144,9 @@ Since no anomalies were detected in this dataset through manual inspection, thes
 
 \subsection{Model Architecture}
 
-The model we propose in this paper is an extension of a traditional convolutional autoencoder. The image inputs to the autoencoder were resized to 960 pixels high by 1280 pixels wide with standard RGB channels. 64 latent features were used.
+The model we propose in this paper is an extension of a traditional CAE. The image inputs to the autoencoder were resized to 960 pixels high by 1280 pixels wide with RGB channels. 64 latent features were extracted from the last convolutional layer with a fully connected layer. The convolutional autoencoder was implemented using the Keras layers API as a part of the Tensorflow Python framework. Leaky ReLU activation functions were used between layers due to their computational efficiency. The full implementation details of this model are given in Appendix~\ref{appendix:cae}.\\
+
+To improve upon the performance of a stand-alone autoencoder, we incorporated two mechanisms. The first is the use of attention expansion loss (as proposed in the CAVGA model by Venkataramanan et al.) as a form of regularization \cite{attention_anomalies}. The second mechanism we proposed is the use of a Gamma distribution filter to reduce false positive predictions. We propose this filter as a memory efficient alternative method of accounting for noise in the reconstruction error. In Figure~\ref{fig:cae_diagram} we illustrate how these two mechanisms are integrated into a traditional CAE architecture:
 
 \begin{figure}[H]
 \includegraphics[scale=0.3]{figures/cae_diagram}
@@ -152,20 +154,103 @@ The model we propose in this paper is an extension of a traditional convolutiona
 \label{fig:cae_diagram}
 \end{figure}
 
-
 \subsection{Attention Expansion}
+
+In the literature, it has been shown that attention-based mechanisms can significantly improve the accuracy of machine learning models, particularly in the fields of computer vision and natural language processing \cite{attention_iayn,image_transformers}. These mechanisms have also been employed with great success in the problem of anomaly detection \cite{attention_song, attention_anomalies}. In our model, we employed attention expansion loss, which penalizes the model for making the latent representation of the data sensitive to changes in small regions of the image.  The sensitivity of the latent data with respect to the input image cam be estimated through computing an attention map, which can be calculated from the output of the last convolutional layer of the encoder and the gradients of this last layer with respect to the latent features. The formula used to compute the attention map is the Grad-CAM algorithm (proposed by Selvaraju et al.) \cite{grad_cam}. With respect to the output of the filters $A^\ell$ of the last convolutional layer, the Grad-CAM attention map for all latent features $z_1, ..., z_n$ is given by \eqref{eqn:grad_cam}:
+
+\begin{equation}
+M_{\text{Grad-CAM}}(X) = \text{ReLU}\left[ \frac{1}{Z}\sum_{\ell} \left(\sum_{(i,j)}\sum_{k} \dfrac{\partial z_{k}}{\partial A^\ell_{(i,j)}} \right) A^\ell(X) \right]
+\label{eqn:grad_cam}
+\end{equation}
+
+\noindent In \eqref{eqn:grad_cam}, $Z$ is a normalizing constant, computed as the product of the number of filters, the number of elements in each $A^\ell$, and the number of latent features. Using the attention map $M_{\text{Grad-CAM}}$, we encourage the model to have an evenly distributed map by minimizing the attention expansion loss given by \eqref{eqn:loss_ae}:
+
+\begin{equation}
+L_{AE}(X) = \frac{1}{N_m}\sum_{i=1}^{N_m} (1 - [M_{\text{Grad-CAM}}(X)]_i)^2\qquad (\text{where } N_m = |M_{\text{Grad-CAM}}(X)|)
+\label{eqn:loss_ae}
+\end{equation}
+
+\noindent As the total loss function for the autoencoder, we used a weighted combination of the MSE loss and the attention expansion loss in \eqref{eqn:loss_weighted_total}, where we empirically selected $w_{MSE} = 1$ and $w_{AE} = 0.005$:
+
+\begin{equation}
+L(X) = w_{MSE}L_{MSE}(X) + w_{AE}L_{AE}(X)
+\label{eqn:loss_weighted_total}
+\end{equation}
+
+As mentioned earlier, the purpose of attention expansion is to reduce the sensitivity of the latent features with respect to small regions of the input image. The loss function $L_{AE}$ in \eqref{eqn:loss_ae} ensures that the attention map corresponding to an encoded image us uniformly distributed and thus not sensitive to changes in color in relatively small regions of the image. The effect of applying attention expansion is illustrated below in Figure~\ref{fig:attention_expansion}:
+
+\begin{figure}[H]
+\begin{tabular}{c c}
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{figures/acae_heatmaps_0}\\[2mm]
+\end{tabular} & \begin{tabular}{c}
+\includegraphics[scale=0.225]{figures/acae_heatmaps}
+\end{tabular}\\
+(a) & (b) 
+\end{tabular}
+\caption{A comparison of the attention maps ($M_{\text{Grad-CAM}}(X)$) obtained without attention expansion (a) and with attention expansion (b). For illustration purposes, the maps are scaled up and overlaid on top of the input images ($X$).}
+\label{fig:attention_expansion}
+\end{figure}
+
+In Figure~\ref{fig:attention_expansion}(a) we see that the model is attending more to the sharp edges in the scene (the mountain horizon and building rooftops) and less to other regions of the scene (the trees, ground, and sky). After applying attention expansion, we see in Figure~\ref{fig:attention_expansion}(b) that the model attends evenly more to the scene as a whole instead of just attending to the sharp edges.
 
 \subsection{Gamma Distribution Filter}
 
+While it is possible to detect anomalies by finding the regions of an image where the reconstruction loss is above a certain threshold, this naive method is prone to flag regions of an image as anomalous that have a higher variance due to natural reconstruction noise. A better approach than the naive scheme is to flag regions of the image that have a reconstruction loss that is statistically higher than normal for their respective locations the image. To quantify the statistical significance of this deviation, we shall assume by the central limit theorem that for a given image $X$, the reconstructed image $\hat{X}$ follows a multivariate Gaussian distribution. In particular, we shall assume this distribution has mean $X$ and covariance matrix $\mathbf{\Sigma}$ that is independent of $X$. Then, the (normalized) likelihood of observing $\hat{X}$ is given by \eqref{eqn:gauss_likelihood}:
+
+\begin{equation}
+\mathcal{L}(\hat{X}) = \frac{1}{\sqrt{(2\pi)^{|X|} \det(\mathbf{\Sigma})}}\exp\left(-\frac{1}{2}(\hat{X} - X)^T\mathbf{\Sigma}^{-1}(\hat{X} - X)\right)
+\label{eqn:gauss_likelihood}
+\end{equation}
+
+In \eqref{eqn:gauss_likelihood}, it is common to assume each pixel of $X$ is independent, thus the matrix $\mathbf{\Sigma}$ is a sparse matrix that only accounts for correlations among the channels of each individual pixel. If each pixel is treated independently, the anomaly can also be localized by flagging each pixel as ``normal" or ``anomalous" based on whether or not the corresponding likelihood is below a specified value. To reduce the complexity of computing this likelihood in \eqref{eqn:gauss_likelihood}, it is common to use an equivalent threshold value for to the negative exponent component of \eqref{eqn:gauss_likelihood}, which is the square Mahalanobis distance between pixels. This distance given by \eqref{eqn:mahalanobis}:
+
+\begin{equation}
+d(\hat{X}_{(i,j)}, X_{(i,j)}) = (\hat{X}_{(i,j)} - X_{(i,j)})^T\mathbf{\Sigma}^{-1}_{(i,j)}(\hat{X}_{(i,j)} - X_{(i,j)})
+\label{eqn:mahalanobis}
+\end{equation}
+
+Whenever $d(\hat{X}_{(i,j)} | X_{(i,j)})$ exceeds some specified threshold, the corresponding pixel $(i,j)$ is flagged as an anomaly. While the square Mahalanobis distance can account for the correlations among the channel values, it requires the computation of a correlation matrix $\mathbf{\Sigma}_{(i,j)}$ for each pixel, which can be costly for models with large numbers of pixels and channels. To address this problem we propose the gamma distribution filter, which requires only two parameters to be stored per pixel and is more suitable for an edge computing environment.\\
+
+The gamma distribution filter fits the mean square error of each pixel in the reconstructed image to a gamma distribution with shape parameter $\kappa$ and scale parameter $\theta$. The probability density function of this distribution is given in \eqref{eqn:gamma}:
+
+\begin{equation}
+f(x|\kappa,\theta) = \frac{1}{\Gamma(\kappa)\theta^\kappa}x^{\kappa - 1}e^{-x / 2}
+\label{eqn:gamma}
+\end{equation}
+
+As before, if we assume that each reconstructed pixel $\hat{X}_{(i,j)}$ is normally distributed with mean $X_{(i,j)}$, then \eqref{eqn:mahalanobis} follows a chi-square distribution with degrees of freedom $\nu$ equal to the number of channels $\ell = |\hat{X}_{(i,j)}|$. Since chi-square distributions are special cases of the gamma distribution, we also see that \eqref{eqn:mahalanobis} follows a gamma distribution with shape parameter $\kappa = \ell/2$ and scale parameter $\theta = 2$. This relationship is summarized in \eqref{eqn:gamma_relations}:
+
+\begin{equation}
+d(\hat{X}_{(i,j)}, X_{(i,j)})\quad \sim\quad \chi^{2}(\nu = \ell)\quad \equiv \quad \Gamma(\kappa = \ell/2, \theta = 2)
+\label{eqn:gamma_relations}
+\end{equation}
+
+\noindent Solving \eqref{eqn:gamma_relations} for a form approximately equal to the mean square error, we obtain \eqref{eqn:gamma_relations_2}:
+
+
+
+\begin{equation}
+\frac{1}{\ell}\left[(\hat{X}_{(i,j)} - X_{(i,j)})^T\left(\frac{1}{\text{tr}(\mathbf{\Sigma})}\mathbf{\Sigma}\right)^{-1}(\hat{X}_{(i,j)} - X_{(i,j)})\right] \quad \sim\quad \Gamma\left(\kappa = \frac{\ell}{2}, \theta = \frac{2\text{tr}(\mathbf{\Sigma})}{\ell}\right)
+\label{eqn:gamma_relations_2} 
+\end{equation}
+
+We remark that the scaled covariance matrix $(1/\text{tr}(\mathbf{\Sigma}))\mathbf{\Sigma}$ has a trace of $1$ and thus corresponds to a Gaussian distribution such that $\mathbb{E}[\lVert X - \mathbb{E}[X] \rVert^2] = 1$. In the case where $\mathbf{\Sigma}$ is constant diagonal, this matrix equals the identity, which mean the MSE of $\hat{X}$ exactly follows the gamma distribution characterized by \eqref{eqn:gamma_relations_2}. In the cases where $\mathbf{\Sigma}$ is more complex, we claim that the gamma distribution still serves as a good approximation.\\
+
+To determine if a pixel is part of an anomaly, the previous mean square errors of the pixel are fitted to a gamma distribution. Then, the area under the probability density function \eqref{eqn:gamma} to the right of the newly observed observed error is computed. If this area is less than a specified tolerance $\alpha \in [0,1]$, then the pixel is considered part of an anomaly. Otherwise, the pixel is considered to be normal. Once this process is applied to all pixels in the image, a contour detection algorithm is applied to the anomalous pixels and the bounding boxes larger than 20 pixels in area are extracted.
+
 \subsection{Online Training}
+
+Most machine learning models trained through backpropagation are done so in an offline setting, in which the entire training dataset is made available prior to the model making inferences. When a model learns in an online setting, data is made available to the model through a sequential stream, and predictions are often made in tandem with the learning process.
+
 %===================== RESULTS ====================
 \section{Experiments and Results}
+
+\subsection{Impact of Attention Expansion}
 
 \subsection{Use of Gamma Distribution Filter}
 
 \subsection{Prediction Localization}
-
-\subsection{Impact of Attention Expansion}
 
 \subsection{Online Training Simulation}
 
@@ -230,8 +315,93 @@ w_{k}(t) = \beta w_{k}(t-1) = \beta w_{k-1}(t) \qquad\Rightarrow\qquad w_{k}(t) 
 0 = \dfrac{\partial \log\mathcal{L}}{\partial \gamma(t)} &= 1/\gamma(t) + \kappa(t)\sum_{n=1}^\infty w_{i-n}(t)\left[ \log(x_{i-n}/\theta(t)) + (x_{i-n}/\theta(t))^{\gamma(t)}\log(x_{i-n}/\theta(t)) \right] \label{eqn:gamma_sys_3}
 \end{align}
 
-\noindent where $\psi(x) = \Gamma'(x)/\Gamma(x)$ is the digamma function. Because $\psi(x)$ is known to intractable, this system admits no closed-form solution. However, it is known that a consistent, closed form estimator for the standard gamma distribution parameters, $\kappa(t)$ and $\theta(t)$ can be obtained by imposing that only \eqref{eqn:gamma_sys_2} and \eqref{eqn:gamma_sys_3} hold, and then fixing $\gamma(t) = 1$ \cite{gammapaper}. First, we 
+\noindent where $\psi(x) = \Gamma'(x)/\Gamma(x)$ is the digamma function. Because $\psi(x)$ is known to intractable, this system admits no closed-form solution. However, it is known that a consistent, closed form estimator for the standard gamma distribution parameters, $\kappa(t)$ and $\theta(t)$ can be obtained by imposing that only \eqref{eqn:gamma_sys_2} and \eqref{eqn:gamma_sys_3} hold, and then fixing $\gamma(t) = 1$ \cite{gammapaper}. 
 
 \section{Exponential Heap Sampling}
+
+\section{Notes on CAE Model Architecture}\label{appendix:cae}
+
+\begin{verbatim}
+Model: "conv_encoder"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 480, 640, 16)      5824      
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 240, 320, 16)      0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 240, 320, 32)      4640      
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 120, 160, 32)      0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 120, 160, 48)      1584      
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 120, 160, 48)      20784     
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 60, 80, 48)        0         
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 60, 80, 64)        3136      
+_________________________________________________________________
+last_conv_layer (Conv2D)     (None, 60, 80, 64)        36928     
+=================================================================
+Total params: 72,896
+Trainable params: 72,896
+Non-trainable params: 0
+_________________________________________________________________
+\end{verbatim}
+
+\begin{verbatim}
+Model: "latent_encoder"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+max_pooling2d_3 (MaxPooling2 (None, 30, 40, 64)        0         
+_________________________________________________________________
+flatten (Flatten)            (None, 76800)             0         
+_________________________________________________________________
+dense (Dense)                (None, 64)                4915264   
+=================================================================
+Total params: 4,915,264
+Trainable params: 4,915,264
+Non-trainable params: 0
+_________________________________________________________________
+\end{verbatim}
+
+\begin{verbatim}
+Model: "decoder"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense_1 (Dense)              (None, 76800)             4992000   
+_________________________________________________________________
+reshape (Reshape)            (None, 30, 40, 64)        0         
+_________________________________________________________________
+up_sampling2d (UpSampling2D) (None, 60, 80, 64)        0         
+_________________________________________________________________
+conv2d_transpose (Conv2DTran (None, 60, 80, 64)        36928     
+_________________________________________________________________
+conv2d_transpose_1 (Conv2DTr (None, 60, 80, 64)        4160      
+_________________________________________________________________
+up_sampling2d_1 (UpSampling2 (None, 120, 160, 64)      0         
+_________________________________________________________________
+conv2d_transpose_2 (Conv2DTr (None, 120, 160, 48)      27696     
+_________________________________________________________________
+conv2d_transpose_3 (Conv2DTr (None, 120, 160, 48)      2352      
+_________________________________________________________________
+up_sampling2d_2 (UpSampling2 (None, 240, 320, 48)      0         
+_________________________________________________________________
+conv2d_transpose_4 (Conv2DTr (None, 240, 320, 32)      13856     
+_________________________________________________________________
+up_sampling2d_3 (UpSampling2 (None, 480, 640, 32)      0         
+_________________________________________________________________
+conv2d_transpose_5 (Conv2DTr (None, 960, 1280, 16)     61968     
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 960, 1280, 3)      51        
+=================================================================
+Total params: 5,139,011
+Trainable params: 5,139,011
+Non-trainable params: 0
+_________________________________________________________________
+\end{verbatim}
 
 \end{document}
