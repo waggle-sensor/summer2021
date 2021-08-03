@@ -91,22 +91,22 @@
 
 ## sub-flow
 
-* All from the one source, want to change all in the Subflows-Selection to Subflow
+- All from the one source, want to change all in the Subflows-Selection to Subflow
 
 ![image](https://user-images.githubusercontent.com/56851781/122114092-e43d4d80-cdf0-11eb-8431-b25f25301a56.png)
 
 
 ## context, flow and global
 
-* 3 different levels to set/modify persistent variables with the range of their access is referred to as variable scope.
+- 3 different levels to set/modify persistent variables with the range of their access is referred to as variable scope.
 
 ![image](https://user-images.githubusercontent.com/56851781/122116772-01bfe680-cdf4-11eb-8083-0b03d3bb09bf.png)
 
-* to fix "undefined", can increase the scope of count by going into the function and changing 'context' to 'flow'
+- to fix "undefined", can increase the scope of count by going into the function and changing 'context' to 'flow'
 
 ![image](https://user-images.githubusercontent.com/56851781/122117136-814db580-cdf4-11eb-94d0-4e2194dc3631.png)
 
-* while these global variables are universally accessible, some applications may be better off using a link node to share data between flows. (cause link nodes not only share variables but also trigger different flows across projects in a sequences predictable way.) 
+- while these global variables are universally accessible, some applications may be better off using a link node to share data between flows. (cause link nodes not only share variables but also trigger different flows across projects in a sequences predictable way.) 
 
 ![image](https://user-images.githubusercontent.com/56851781/122117817-52840f00-cdf5-11eb-8888-89f795e5fbcc.png)
 ![image](https://user-images.githubusercontent.com/56851781/122118684-4d738f80-cdf6-11eb-9094-d3952a2e88ea.png)
@@ -114,21 +114,21 @@
 
 ## Node-RED Dashboard
 
-* To install the stable version use the Menu - Manage palette option and search for node-red-dashboard, or run the following command in your Node-RED user directory - typically `~/.node-red`:
+- To install the stable version use the Menu - Manage palette option and search for node-red-dashboard, or run the following command in your Node-RED user directory - typically `~/.node-red`:
 
 ```
 npm i node-red-dashboard
 ```
 
-![image](https://user-images.githubusercontent.com/56851781/128036961-151b081a-c6e2-49ea-a687-158dbe597be6.png)
+![image](https://user-images.githubusercontent.com/56851781/128056645-13389dc6-9ebe-4332-bf8c-61b2f87d0972.png)
 
+#### Form and Text nodes
 
-- Slack & Email & UI Notification node example flows
+- Restcountries API are used to get countries dataset from https://restcountries.eu/rest/v2. It includes the countries name, their languages, population, and capital and so on. But my goal this testing was that when I enter the capital, then country name pops up, which is filtered data by using its API service. In the http request node, when the url is attched, debug(msg.payload) and country (format) will show the output.
 
-```
-[{"id":"4b8f1d79.27e954","type":"inject","z":"82f46bd8.467668","name":"temp 10","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"10","payloadType":"str","x":112,"y":1990,"wires":[["23e2ef5.8a1771"]]},{"id":"db7b3e57.e3613","type":"inject","z":"82f46bd8.467668","name":"temp 20","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"20","payloadType":"str","x":112,"y":2030,"wires":[["23e2ef5.8a1771"]]},{"id":"a3030668.4bd6f8","type":"inject","z":"82f46bd8.467668","name":"temp 30","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"30","payloadType":"str","x":113,"y":2069,"wires":[["23e2ef5.8a1771"]]},{"id":"23e2ef5.8a1771","type":"function","z":"82f46bd8.467668","name":"Trigger Alarm","func":"var payload = msg.payload;\nvar alarm = context.get(\"alarm\");\nif (typeof alarm == \"undefined\")\n    alarm = false;\n    \nif (payload > 20 && !alarm)\n{\n    alarm = true;\n    msg.alarm = 1;\n    context.set(\"alarm\", alarm);\n    return msg;\n}\n\nif (payload == 20 && alarm)\n{\n    alarm = false;\n    msg.alarm = 0;\n    context.set(\"alarm\", alarm);\n    return msg;\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":353,"y":2030,"wires":[["8963954.4dec768","1eaec228.eef2ee"]]},{"id":"8963954.4dec768","type":"debug","z":"82f46bd8.467668","name":"Object_complete msg","active":true,"tosidebar":true,"console":true,"tostatus":false,"complete":"true","targetType":"full","statusVal":"","statusType":"auto","x":793,"y":2030,"wires":[]},{"id":"1eaec228.eef2ee","type":"function","z":"82f46bd8.467668","name":"","func":"var temp = msg.payload;\nmsg.to = \"waylove9393@gmail.com\";\nmsg.from = \"noreply@gmail.com\";\n\nvar date = new Date();\nvar message =\"\";\nif(msg.alarm)\n{\n    msg.topic = \"High Temperature Alarm. Warning!\";\n    message = \" Temp = \";\n}\n\nelse\n\n{\n   msg.topic = \"Normal Temperature.\";\n    message = \" Temp = \";\n}\n\nmsg.payload = \"time:\" + date + message + msg.payload;\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":543,"y":2110,"wires":[["8963954.4dec768","9e2c72ad.8bbe6","57a4183f.e53a38","36c7c7ff.68cba8"]]},{"id":"d6162180.878da","type":"comment","z":"82f46bd8.467668","name":"Slack & Email & UI Notification","info":"Slack node:\n- In order to use module to interact with the Slack API, slack nodes must be installed.\n- Slack webhook is required as well (on Slack channel)\n\nEmail node:\n- If you are accessing GMail you may need to either enable an application password, or enable less secure access via your Google account settings.\n\nUI notificatio node:\n- It shows msg.payload as a popup notification or OK / Cancel dialog message on the user interface of Node-RED.","x":157,"y":1944,"wires":[]},{"id":"9e2c72ad.8bbe6","type":"slack","z":"82f46bd8.467668","name":"Minji","channelURL":"https://hooks.slack.com/services/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","username":"Minji","emojiIcon":"","channel":"","x":733,"y":2190,"wires":[]},{"id":"57a4183f.e53a38","type":"e-mail","z":"82f46bd8.467668","server":"smtp.gmail.com","port":"465","secure":true,"tls":false,"name":"waylove9393@gmail.com","dname":"","x":793,"y":2250,"wires":[]},{"id":"36c7c7ff.68cba8","type":"ui_toast","z":"82f46bd8.467668","position":"top right","displayTime":"3","highlight":"","sendall":true,"outputs":0,"ok":"OK","cancel":"","raw":false,"topic":"","name":"UI_notification","x":762,"y":2310,"wires":[]},{"id":"5616ae6f.946b7","type":"comment","z":"82f46bd8.467668","name":"Slack Notification","info":"","x":999,"y":2190,"wires":[]},{"id":"8c2dffda.6d1e6","type":"comment","z":"82f46bd8.467668","name":"Email Notification","info":"","x":999,"y":2250,"wires":[]},{"id":"c06c0634.ee0968","type":"comment","z":"82f46bd8.467668","name":"Node-RED UI Notification","info":"","x":1029,"y":2310,"wires":[]}]`
-```
+![image](https://user-images.githubusercontent.com/56851781/128057498-c7a8784f-e21b-4386-8960-654c8ab9d9f9.png)
 
+![image](https://user-images.githubusercontent.com/56851781/128057622-ac7ece62-6531-4a28-8b52-39a78a5b2946.png)
 
 - HTTP rest endpoint node example flows
 
@@ -136,7 +136,7 @@ npm i node-red-dashboard
 [{"id":"db9e7c6a.4b89f","type":"comment","z":"82f46bd8.467668","name":"HTTP rest endpoint","info":"- This example shows how http node works, and Node-RED UI display the simple output by using: https://restcountries.eu/.\n- API ENDPOINTS: Below are described the REST endpoints available that you can use to search for countries\n- ALL: https://restcountries.eu/rest/v2/all\n- NAME (Search by country name): It can be the native name or partial name: https://restcountries.eu/rest/v2/name/Japan\n- CAPITAL CITY (Search by capital city): https://restcountries.eu/rest/v2/capital/tallinn\n","x":110,"y":2440,"wires":[]},{"id":"5078d948.5ccca8","type":"inject","z":"82f46bd8.467668","name":"inject (topic)","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"seoul","payload":"","payloadType":"date","x":113,"y":2489,"wires":[["5b92ffa1.8cabd"]]},{"id":"5b92ffa1.8cabd","type":"http request","z":"82f46bd8.467668","name":"","method":"GET","ret":"txt","paytoqs":"ignore","url":"https://restcountries.eu/rest/v2/capital/{{{payload.capital}}}","tls":"","persist":false,"proxy":"","authType":"","x":350,"y":2489,"wires":[["c633e15a.b8222"]]},{"id":"c633e15a.b8222","type":"json","z":"82f46bd8.467668","name":"","property":"payload","action":"","pretty":false,"x":557,"y":2489,"wires":[["862a7ce1.89a2d","309e0077.b7a8e"]]},{"id":"862a7ce1.89a2d","type":"ui_text","z":"82f46bd8.467668","group":"c2acba82.9fc5f8","order":2,"width":0,"height":0,"name":"UI_country","label":"Country","format":"{{msg.payload[0].name}}","layout":"row-spread","x":591,"y":2590,"wires":[]},{"id":"57d01a30.3b7f54","type":"ui_form","z":"82f46bd8.467668","name":"UI_capital","label":"","group":"c2acba82.9fc5f8","order":1,"width":0,"height":0,"options":[{"label":"Capital","value":"capital","type":"text","required":true,"rows":null}],"formValue":{"capital":""},"payload":"","submit":"submit","cancel":"cancel","topic":"topic","topicType":"msg","splitLayout":"","x":361,"y":2590,"wires":[["5b92ffa1.8cabd"]]},{"id":"309e0077.b7a8e","type":"debug","z":"82f46bd8.467668","name":"Object_complete msg","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","targetType":"msg","statusVal":"","statusType":"auto","x":782,"y":2489,"wires":[]},{"id":"c2acba82.9fc5f8","type":"ui_group","name":"Country data","tab":"de7b5a03.92383","order":1,"disp":true,"width":"6","collapse":false},{"id":"de7b5a03.92383","type":"ui_tab","name":"HTTP REST data","icon":"dashboard","disabled":false,"hidden":false}]
 ```
 
-#### Guage and Chart
+#### Guage and Chart nodes
 
 - DHT sensor data from RPI
 
@@ -144,13 +144,16 @@ npm i node-red-dashboard
   
  ![image](https://user-images.githubusercontent.com/56851781/122779792-3a404400-d27c-11eb-88b5-8427b24df7ea.png)
   
-* If you want to get real time data every 1 second, change like this:
+- If you want to get real time data every 1 second, change like this:
+
   ![image](https://user-images.githubusercontent.com/56851781/122779945-5c39c680-d27c-11eb-8a28-860ff4fc4b6d.png)
  
-* You can see on the debug node for example, {"_msgid":"63bb3921.ad62e8","topic":"rpi-dht22","payload":"28.00","humidity":"81.00","isValid":true,"errors":0,"location":"DHT","sensorid":"dht11"}, which means that need to change "payload" to "msg.payload = msg.payload and return msg;" in the temp function nodes as shown like this:
+- You can see on the debug node for example, {"_msgid":"63bb3921.ad62e8","topic":"rpi-dht22","payload":"28.00","humidity":"81.00","isValid":true,"errors":0,"location":"DHT","sensorid":"dht11"}, which means that need to change "payload" to "msg.payload = msg.payload and return msg;" in the temp function nodes as shown like this:
+
 ![image](https://user-images.githubusercontent.com/56851781/122780611-fef24500-d27c-11eb-8cc3-712e4d2b1e75.png)
   
-* You also able to check the output on terminal as well as the debug node + UI (hostIPAddress with ui, e.g. http://192.168.1.53:1880/ui)
+- You also able to check the output on terminal as well as the debug node + UI (hostIP Address and portnumber with ui, e.g. http://192.168.1.53:1880/ui)
+
 ![image](https://user-images.githubusercontent.com/56851781/122780019-6f4c9680-d27c-11eb-99d9-b45d86bb5adb.png)
 ![image](https://user-images.githubusercontent.com/56851781/122780452-d9fdd200-d27c-11eb-8664-b6f74379acb1.png)
 
@@ -176,4 +179,13 @@ npm i node-red-dashboard
 
 ```
 [{"id":"556f4546.273c4c","type":"ui_dropdown","z":"82f46bd8.467668","name":"","label":"","tooltip":"","place":"Select option","group":"f4ddc713.cb9a58","order":3,"width":0,"height":0,"passthru":true,"multiple":true,"options":[{"label":"","value":"apple","type":"str"},{"label":"","value":"orange","type":"str"},{"label":"","value":"banana","type":"str"},{"label":"","value":"watermelon","type":"str"}],"payload":"","topic":"","topicType":"str","x":480,"y":3500,"wires":[["c48ac5e6.296c58","175116b2.e63bc9"]]},{"id":"bd5917ae.fdd068","type":"inject","z":"82f46bd8.467668","name":"","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"","payloadType":"date","x":100,"y":3500,"wires":[["8b2532c6.9b03"]]},{"id":"8b2532c6.9b03","type":"change","z":"82f46bd8.467668","name":"","rules":[{"t":"set","p":"options","pt":"msg","to":"[\"name1\", \"name2\",\"name3\",\"name4\"]","tot":"json"}],"action":"","property":"","from":"","to":"","reg":false,"x":300,"y":3500,"wires":[["556f4546.273c4c"]]},{"id":"c48ac5e6.296c58","type":"ui_button","z":"82f46bd8.467668","name":"","group":"f4ddc713.cb9a58","order":4,"width":0,"height":0,"passthru":false,"label":"button","tooltip":"","color":"","bgcolor":"","icon":"","payload":"Thank you!","payloadType":"str","topic":"topic","topicType":"msg","x":690,"y":3500,"wires":[["9749ca89.8d9698"]]},{"id":"175116b2.e63bc9","type":"debug","z":"82f46bd8.467668","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"true","targetType":"full","statusVal":"","statusType":"auto","x":690,"y":3540,"wires":[]},{"id":"9749ca89.8d9698","type":"ui_toast","z":"82f46bd8.467668","position":"top right","displayTime":"3","highlight":"black","sendall":true,"outputs":0,"ok":"OK","cancel":"","raw":false,"topic":"Successfully Deployed (multiple choice)","name":"","x":940,"y":3500,"wires":[]},{"id":"286a1751.bcac68","type":"comment","z":"82f46bd8.467668","name":"Dropdown node (multiple choice)","info":"- This flow shows two values (temperature and humidity) from DHT sensor attached Raspberry Pi in real time.\n- If it is not connected to RPi, \"TypeError: failed to initialize\" returns.\n- In the temperature function, it is required to change: msg.tem_payload = msg.payload","x":147,"y":3455,"wires":[]},{"id":"f4ddc713.cb9a58","type":"ui_group","name":"Basic UI","tab":"a8a4ad86.b9dd4","order":1,"disp":true,"width":"6","collapse":false},{"id":"a8a4ad86.b9dd4","type":"ui_tab","name":"Basic UI","icon":"dashboard","disabled":false,"hidden":false}]
+```
+
+
+#### Slack & Email & UI Notification node
+- 
+- example flows
+
+```
+[{"id":"4b8f1d79.27e954","type":"inject","z":"82f46bd8.467668","name":"temp 10","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"10","payloadType":"str","x":112,"y":1990,"wires":[["23e2ef5.8a1771"]]},{"id":"db7b3e57.e3613","type":"inject","z":"82f46bd8.467668","name":"temp 20","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"20","payloadType":"str","x":112,"y":2030,"wires":[["23e2ef5.8a1771"]]},{"id":"a3030668.4bd6f8","type":"inject","z":"82f46bd8.467668","name":"temp 30","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"30","payloadType":"str","x":113,"y":2069,"wires":[["23e2ef5.8a1771"]]},{"id":"23e2ef5.8a1771","type":"function","z":"82f46bd8.467668","name":"Trigger Alarm","func":"var payload = msg.payload;\nvar alarm = context.get(\"alarm\");\nif (typeof alarm == \"undefined\")\n    alarm = false;\n    \nif (payload > 20 && !alarm)\n{\n    alarm = true;\n    msg.alarm = 1;\n    context.set(\"alarm\", alarm);\n    return msg;\n}\n\nif (payload == 20 && alarm)\n{\n    alarm = false;\n    msg.alarm = 0;\n    context.set(\"alarm\", alarm);\n    return msg;\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":353,"y":2030,"wires":[["8963954.4dec768","1eaec228.eef2ee"]]},{"id":"8963954.4dec768","type":"debug","z":"82f46bd8.467668","name":"Object_complete msg","active":true,"tosidebar":true,"console":true,"tostatus":false,"complete":"true","targetType":"full","statusVal":"","statusType":"auto","x":793,"y":2030,"wires":[]},{"id":"1eaec228.eef2ee","type":"function","z":"82f46bd8.467668","name":"","func":"var temp = msg.payload;\nmsg.to = \"waylove9393@gmail.com\";\nmsg.from = \"noreply@gmail.com\";\n\nvar date = new Date();\nvar message =\"\";\nif(msg.alarm)\n{\n    msg.topic = \"High Temperature Alarm. Warning!\";\n    message = \" Temp = \";\n}\n\nelse\n\n{\n   msg.topic = \"Normal Temperature.\";\n    message = \" Temp = \";\n}\n\nmsg.payload = \"time:\" + date + message + msg.payload;\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":543,"y":2110,"wires":[["8963954.4dec768","9e2c72ad.8bbe6","57a4183f.e53a38","36c7c7ff.68cba8"]]},{"id":"d6162180.878da","type":"comment","z":"82f46bd8.467668","name":"Slack & Email & UI Notification","info":"Slack node:\n- In order to use module to interact with the Slack API, slack nodes must be installed.\n- Slack webhook is required as well (on Slack channel)\n\nEmail node:\n- If you are accessing GMail you may need to either enable an application password, or enable less secure access via your Google account settings.\n\nUI notificatio node:\n- It shows msg.payload as a popup notification or OK / Cancel dialog message on the user interface of Node-RED.","x":157,"y":1944,"wires":[]},{"id":"9e2c72ad.8bbe6","type":"slack","z":"82f46bd8.467668","name":"Minji","channelURL":"https://hooks.slack.com/services/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","username":"Minji","emojiIcon":"","channel":"","x":733,"y":2190,"wires":[]},{"id":"57a4183f.e53a38","type":"e-mail","z":"82f46bd8.467668","server":"smtp.gmail.com","port":"465","secure":true,"tls":false,"name":"waylove9393@gmail.com","dname":"","x":793,"y":2250,"wires":[]},{"id":"36c7c7ff.68cba8","type":"ui_toast","z":"82f46bd8.467668","position":"top right","displayTime":"3","highlight":"","sendall":true,"outputs":0,"ok":"OK","cancel":"","raw":false,"topic":"","name":"UI_notification","x":762,"y":2310,"wires":[]},{"id":"5616ae6f.946b7","type":"comment","z":"82f46bd8.467668","name":"Slack Notification","info":"","x":999,"y":2190,"wires":[]},{"id":"8c2dffda.6d1e6","type":"comment","z":"82f46bd8.467668","name":"Email Notification","info":"","x":999,"y":2250,"wires":[]},{"id":"c06c0634.ee0968","type":"comment","z":"82f46bd8.467668","name":"Node-RED UI Notification","info":"","x":1029,"y":2310,"wires":[]}]`
 ```
