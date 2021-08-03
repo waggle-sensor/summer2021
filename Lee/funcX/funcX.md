@@ -16,4 +16,23 @@
 - Reference: https://funcx.readthedocs.io/_/downloads/en/latest/pdf/
 
 #### 1. Installation
+
+- Python3.6+ 
+```
+python3 --version
+```
+- To check if your endpoint/client have network access and can connect to the funcX service, run
+```
+curl https://api2.funcx.org/v2/version
+```
+- This returns a version string, "0.3.1"
+
+#### 2. Deploying an endpoint
+
+```
+ python3 -m pip install funcx_endpoint
+ funcx-endpoint configure
+ funcx-endpoint start <ENDPOINT_NAME>
+```
+
 <img width="802" alt="Screen Shot 2021-08-03 at 5 49 50 PM" src="https://user-images.githubusercontent.com/56851781/128090997-37a0f992-3c8e-4efb-8def-af6081f1ab10.png">
