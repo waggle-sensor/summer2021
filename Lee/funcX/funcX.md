@@ -38,7 +38,10 @@ curl https://api2.funcx.org/v2/version
 #### 3. Listing endpoints
 
 - The funcX endpoint software is available on PyPI and a `default endpoint` can be configured and started as follows. 
+
+<p align="center">
 <img width="802" alt="Screen Shot 2021-08-03 at 5 49 50 PM" src="https://user-images.githubusercontent.com/56851781/128090997-37a0f992-3c8e-4efb-8def-af6081f1ab10.png">
+</p>
 
 - Initialized: The endpoint has been created, but not started following configuration and is not registered with the funcx service.
 - Running: The endpoint is active and available for executing functions.
