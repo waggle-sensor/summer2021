@@ -18,10 +18,10 @@
     Context data - view the contents of context
     Also, some nodes contribute their own sidebar panels, such as node-red-dashboard.
     
-## 6 core Nodes: inject, debug, function, change, switch, and template.
-* Each Node offers different functionality, which can range from a simple debug node to be able to see what's going on in your flow.
+## 6 core nodes: inject, debug, function, change, switch, and template.
+* Each node offers different functionality, which can range from a simple debug node to be able to see what's going on in your flow.
 
-1. Inject Node literally, is to manual trigger, which is input.
+1. Inject node literally, is to manual trigger, which is input.
 2. On the other hands, debug, is output. This node can be used to display messages.payload from the flow by default.
 3. Change node can be used to modify a message’s properties and set context properties without having to resort to a Function node. (relatively limited in what it can do and is not designed to loop or make complex logical decisions. Alternative: Function node)
 
@@ -89,14 +89,14 @@
 ```
 
 
-## sub-flow
+## Sub-flow
 
 - All from the one source, want to change all in the Subflows-Selection to Subflow
 
 ![image](https://user-images.githubusercontent.com/56851781/122114092-e43d4d80-cdf0-11eb-8431-b25f25301a56.png)
 
 
-## context, flow and global
+## Context, Flow and Global
 
 - 3 different levels to set/modify persistent variables with the range of their access is referred to as variable scope.
 
@@ -152,7 +152,7 @@ npm i node-red-dashboard
 
 ![image](https://user-images.githubusercontent.com/56851781/122780611-fef24500-d27c-11eb-8cc3-712e4d2b1e75.png)
   
-- You also able to check the output on terminal as well as the debug sidebar.
+- You are able to check the output on terminal as well as the debug sidebar.
 
 ![image](https://user-images.githubusercontent.com/56851781/122780019-6f4c9680-d27c-11eb-99d9-b45d86bb5adb.png)
 ![image](https://user-images.githubusercontent.com/56851781/122780452-d9fdd200-d27c-11eb-8664-b6f74379acb1.png)
