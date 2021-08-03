@@ -175,6 +175,22 @@ Hello world
    <li> Saw some final presentations! They did an amazing job </li> 
    <li> Looked into this data reader called panda, that would make it easier to organize the data by plug-in </li> 
    </ul> 
+   
+<h3> Thursday, July 29: </h3> 
+<ul> 
+   <li> Went to a coffee chat in the morning with Rick Stevens </li> 
+   <li> N/A </li>
+   </ul> 
+   
+<h3> Friday, July 30: </h3> 
+<ul>
+   <li> N/A</li> 
+   </ul> 
+   
+<h3> Monday, August 2: </h3> 
+<ul>
+   <li> I worked on my student blog that I couldn't finish </li>
+   </ul>
 
    
 

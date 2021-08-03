@@ -191,4 +191,18 @@
    - LoRa architecture
    - Purchasing gateways for me to experiment with
    - Steps going forward
+- Developing demos for the P2P system
+
+##### Friday:
+- Continue developing a P2P network demo
+- Block diagrams for all 3 main models: Public, private,P2P
+- Continue writing
+- P2P hopping experiment
+
+### Week 8 8/2-8/8:
+##### Monday:
+- Gateway hopping research (extending range by having messages hop from gateway to gateway)
+- https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8755136
+
+
 

@@ -722,7 +722,7 @@ TODO for the coming monday:
 ### Thursday, 6/29 (8 Hours worked)
 
 **Today's non-technical work:**
-* Met with Joe for vode review 
+* Met with Joe for code review 
 * Made HC State diagram in Miro 
 
 **Today's technical work:**
@@ -731,3 +731,25 @@ TODO for the coming monday:
 **TODO:**
 * Check notes for final TODO on HC
 -----------
+
+### Friday, 6/30 (8 Hours worked)
+
+**Today's technical work:**
+* Restructured HC to take only a filename instead of an entire payload
+* Made a honeycomb update to modify a file version, a simple proof of concept
+
+**TODO:**
+* Write all of my deliverables
+* Wrote docs on Thursday / Friday
+-----------
+
+## Week 12: 8/2 to 8/6
+
+------------
+
+### Monday, 8/2 (8 Hours worked)
+
+**Today's non-technical work:**
+* Wrote first third of white paper
+
+-------------
