@@ -14,7 +14,9 @@
 - FuncX endpoints are user-managed and may be configured on a wide range of resources from laptops and scientific instruments through to supercomputers. The funcX endpoint can be configured to execute functions locally (i.e., using multiple processes) or on connected computing resources (i.e., by provisioning and managing compute nodes from a batch scheduler or cloud API).
 - FuncX implements a reliable fire-and-forget execution model. After invoking a function, a user can close their laptop and rely on funcX to manage the execution and store the results. funcX securely communicates with remote endpoints, waits for resources to become available, and can even retry execution upon failure. funcX stores results (or errors) in the cloud-hosted service until they are retrieved by the user.
 
-- Reference: https://funcx.readthedocs.io/_/downloads/en/latest/pdf/
+- Reference:
+- https://funcx.readthedocs.io/_/downloads/en/latest/pdf/
+- https://labs.globus.org/pubs/Elias_MDML_2020.pdf
 
 #### 1. Installation
 
