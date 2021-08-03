@@ -644,7 +644,10 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 -Today's Technical Tasks
 * Testing Query from sdr obj and string files
 * funcX testing with Python modules
-* Got some feedback from Neal,  
+* Got some feedback from Neal and changed codes
+ 1) `Object.keys(temp).length` could (and really should) just be `temp.length`.
+ 2) It is best practice to use either `var`, `let`, or `const` for variable declarations.
+ 3) 6 new lines of code could just be a `.filter()` that is tacked on directly after the `.map()`.
   
 ### Thursday, 29th
 -Today's Non-Technical Tasks
@@ -653,7 +656,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * Attended weekly demo for IITP meeting
 
 -Today's Technical Tasks
-* Change the query measurement:
+* Change the query measurement (Thanks Neal!):
 ```
   curl -H 'Content-Type: application/json' https://sdr.sagecontinuum.org/api/v1/query -d '
 {
