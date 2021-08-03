@@ -103,7 +103,7 @@
 
 * To install the stable version use the Menu - Manage palette option and search for node-red-dashboard, or run the following command in your Node-RED user directory - typically `~/.node-red`:
 
-`npm i node-red-dashboard`
+``npm i node-red-dashboard``
 
 ![image](https://user-images.githubusercontent.com/56851781/128036961-151b081a-c6e2-49ea-a687-158dbe597be6.png)
 
