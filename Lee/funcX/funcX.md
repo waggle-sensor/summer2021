@@ -15,5 +15,5 @@
 
 - Reference: https://funcx.readthedocs.io/_/downloads/en/latest/pdf/
 
-### FuncX list
+#### 1. Installation
 <img width="802" alt="Screen Shot 2021-08-03 at 5 49 50 PM" src="https://user-images.githubusercontent.com/56851781/128090997-37a0f992-3c8e-4efb-8def-af6081f1ab10.png">
