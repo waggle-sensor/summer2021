@@ -753,3 +753,18 @@ TODO for the coming monday:
 * Wrote first third of white paper
 
 -------------
+
+### Tuesday, 8/3 (8 Hours worked)
+
+**Today's non-technical work:**
+* Wrote most of the rest of white paper 
+* Wrote abstract, now on github 
+
+TODO: 
+* Write blog article
+* Add all references to paper
+* Fill in citations on paper 
+* Write acknowledgements
+* Proofread
+
+-------------
