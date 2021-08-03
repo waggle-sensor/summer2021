@@ -77,7 +77,8 @@
 
 
 ## sub-flow
-* (all from the one source, want to change all in the Subflows-Selection to Subflow)
+
+* All from the one source, want to change all in the Subflows-Selection to Subflow
 
 ![image](https://user-images.githubusercontent.com/56851781/122114092-e43d4d80-cdf0-11eb-8431-b25f25301a56.png)
 
@@ -96,6 +97,13 @@
 
 ![image](https://user-images.githubusercontent.com/56851781/122117817-52840f00-cdf5-11eb-8888-89f795e5fbcc.png)
 ![image](https://user-images.githubusercontent.com/56851781/122118684-4d738f80-cdf6-11eb-9094-d3952a2e88ea.png)
+
+
+## Node-RED Dashboard
+
+* To install the stable version use the Menu - Manage palette option and search for node-red-dashboard, or run the following command in your Node-RED user directory - typically ~/.node-red:
+
+npm i node-red-dashboard
 
 
 ## Tutorials https://nodered.org/docs/tutorials/
