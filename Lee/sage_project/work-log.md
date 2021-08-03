@@ -151,7 +151,7 @@
   * The Template node can be used to generate text using a message’s properties to fill out a template.
 
   Note. my RPI is set up (turn on) and my laptop is used with my RPI IP address/port number - http://192.168.20.15:1880/ and http://192.168.20.15:1880/ui
-  ## 1. Http Rest endpoint
+  ##### 1. Http Rest endpoint
   Restcountries API are used to get countries dataset from https://restcountries.eu/rest/v2.
   It includes the countries name, their languages, population, and capital and so on. But my goal this testing was that when I enter the capital, then country name pops up, which is filtered data by using its API service.
   In the http request node, when the url is attched, debug(msg.payload) and country (format) will show the output.
@@ -161,7 +161,7 @@
   Node-RED UI shows the result of country. (X case sensitive)
   ![image](https://user-images.githubusercontent.com/56851781/121046031-e580d180-c783-11eb-9664-38107ed29cb6.png)
 
-  ## 2. Alarm notification (email and slack)
+  ##### 2. Alarm notification (email and slack)
   When temperature value is higher than 20, In this case, temp 30 buttom, for example, and click the temp trigger, I could get HIGH Temperature Alarm. Warning sign as well as debug notification. If I click the temp 20, which is normal temperature, it sent normal temperature notification to my gmail. Of course, other email address is also possible to be used.
 
   ![image](https://user-images.githubusercontent.com/56851781/121046438-fe898280-c783-11eb-9489-7d856bab4e00.png)
@@ -231,15 +231,17 @@ FROM alpine
 WORKDIR /root/hello-world
 COPY HelloWorld.java /root/hello-world
 
+```
 // Install JDK
 RUN apk add openjdk8
 ENV JAVA_HOME /usr/lib/jvm/java-1.8-oepnjdk
 ENV PATH $PATH:$JAVA_HOME/bin
+```
 
-// Compile HelloWorld
-RUN javac HelloWorld.java
+`// Compile HelloWorld`
+`RUN javac HelloWorld.java`
 
-ENTRYPOINT java HelloWorld
+`ENTRYPOINT java HelloWorld`
 
 
 ### Friday, 11th
@@ -316,22 +318,14 @@ ENTRYPOINT java HelloWorld
 * Presentation Contents 1: DHT sensor read (real time data) from RPI on Node-RED
   
   ![image](https://user-images.githubusercontent.com/56851781/122779792-3a404400-d27c-11eb-88b5-8427b24df7ea.png)
-  
-* if you want to get real time data every 1 second, change like this:
-  ![image](https://user-images.githubusercontent.com/56851781/122779945-5c39c680-d27c-11eb-8a28-860ff4fc4b6d.png)
- 
-* You can see on the debug node for example, {"_msgid":"63bb3921.ad62e8","topic":"rpi-dht22","payload":"28.00","humidity":"81.00","isValid":true,"errors":0,"location":"DHT","sensorid":"dht11"}, which means that need to change "payload" to "msg.payload = msg.payload and return msg;" in the temp function nodes as shown like this:
-![image](https://user-images.githubusercontent.com/56851781/122780611-fef24500-d27c-11eb-8cc3-712e4d2b1e75.png)
-  
-* can check the output on terminal as well as the debug node + UI (e. hostIPAddress with ui http://192.168.1.53:1880/ui)
-![image](https://user-images.githubusercontent.com/56851781/122780019-6f4c9680-d27c-11eb-99d9-b45d86bb5adb.png)
-![image](https://user-images.githubusercontent.com/56851781/122780452-d9fdd200-d27c-11eb-8664-b6f74379acb1.png)
 
 * Presentation Contents 2: Query SDR on Node-RED
-* Trouble: Accessing and Querying SDR no problem on the terminal like this:![image](https://user-images.githubusercontent.com/56851781/122793311-0c153100-d289-11eb-814f-c3d49d6c64c4.png) but couldn't get access to do that on Node-RED. The issue was that everything sent to ignore, so http request ignores everything from inject,
-which is EOF, end of file, that is specifially what they gave me back. which means, this works.
+* Trouble: Accessing and Querying SDR no problem on the terminal like this:
+
+![image](https://user-images.githubusercontent.com/56851781/122793311-0c153100-d289-11eb-814f-c3d49d6c64c4.png) but couldn't get access to do that on Node-RED. The issue was that everything sent to ignore, so http request ignores everything from inject, which is EOF, end of file, that is specifially what they gave me back. which means, this works.
   
-  ![image](https://user-images.githubusercontent.com/56851781/122794063-d9b80380-d289-11eb-8dc9-6800135f6792.png)
+![image](https://user-images.githubusercontent.com/56851781/122794063-d9b80380-d289-11eb-8dc9-6800135f6792.png)
+ 
 * payload should be changed from ignore(default) to "Sent as the body of the requst. Also changed JSON formatting in inject node like this:
   ![image](https://user-images.githubusercontent.com/56851781/122794204-010ed080-d28a-11eb-9f8b-874d16a51b00.png)
 
@@ -460,7 +454,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   
 ### Wednesday, 7th
 -Today's Non-Technical Tasks
-* talked with Raj
+* Meeting with Raj
 
   
 ### Thursday, 8th
