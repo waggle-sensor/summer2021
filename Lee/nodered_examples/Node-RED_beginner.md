@@ -205,6 +205,12 @@ npm i node-red-dashboard
 - Email node: If you are accessing GMail, you may need to either enable an application password, or enable less secure access via your Google account settings.
 - UI notificatio node: It shows msg.payload as a popup notification or OK / Cancel dialog message on the user interface of Node-RED.
 
+![image](https://user-images.githubusercontent.com/56851781/128064178-45670cc8-26b8-4128-b75c-04dc50cb6826.png)
+
+![image](https://user-images.githubusercontent.com/56851781/128064216-030ce99d-8494-4aff-8b0a-8e358a810885.png)
+
+![image](https://user-images.githubusercontent.com/56851781/128063925-7d02cd89-a1af-4c31-b7b3-c6a7e069659e.png)
+
 - example flows
 
 ```
