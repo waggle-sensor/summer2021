@@ -35,4 +35,16 @@ curl https://api2.funcx.org/v2/version
  funcx-endpoint start <ENDPOINT_NAME>
 ```
 
+#### 3. Listing endpoints
+
 <img width="802" alt="Screen Shot 2021-08-03 at 5 49 50 PM" src="https://user-images.githubusercontent.com/56851781/128090997-37a0f992-3c8e-4efb-8def-af6081f1ab10.png">
+
+• Initialized: The endpoint has been created, but not started following configuration and is not registered with the
+funcx service.
+• Running: The endpoint is active and available for executing functions.
+• Stopped: The endpoint was stopped by the user. It is not running and therefore, cannot service any functions.
+It can be started again without issues.
+• Disconnected: The endpoint disconnected unexpectedly. It is not running and therefore, cannot service any
+functions. Starting this endpoint will first invoke necessary endpoint cleanup, since it was not stopped correctly
+previously
+
