@@ -315,9 +315,6 @@ ENTRYPOINT java HelloWorld
 * Complete basic JavaScript W3school tutorials.
 * Presentation Contents 1: DHT sensor read (real time data) from RPI on Node-RED
   
-  ![KakaoTalk_20210621_102635621_011](https://user-images.githubusercontent.com/56851781/122781041-6c9e7100-d27d-11eb-910f-3e7a8ac8cf53.jpg) ![KakaoTalk_20210621_102635621](https://user-images.githubusercontent.com/56851781/122781078-76c06f80-d27d-11eb-9bbe-879e6e1be648.jpg)
-  ![image](https://user-images.githubusercontent.com/56851781/122780732-1c271380-d27d-11eb-870e-a97903cc6037.png)
-  
   ![image](https://user-images.githubusercontent.com/56851781/122779792-3a404400-d27c-11eb-88b5-8427b24df7ea.png)
   
 * if you want to get real time data every 1 second, change like this:
@@ -636,7 +633,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 
 * Also slack alarm notification with multiple channels
 * I also got feedback from Neal about new code. Need to discuss about it with him tomorrow
-  
+* funcX set up on MacOS
 
 ### Wednesday, 28th
 -Today's Non-Technical Tasks
@@ -645,6 +642,41 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * Attended final intern presentation
   
 -Today's Technical Tasks
-* Testing Query from sdr obj
+* Testing Query from sdr obj and string files
+* funcX testing with Python modules
+* Got some feedback from Neal,  
   
+### Thursday, 29th
+-Today's Non-Technical Tasks
+* Attended scrum
+* Still writing paper with Korean/Purdue students
+* Attended weekly demo for IITP meeting
 
+-Today's Technical Tasks
+* Change the query measurement:
+```
+  curl -H 'Content-Type: application/json' https://sdr.sagecontinuum.org/api/v1/query -d '
+{
+    "start": "-1h",
+    "filter": {
+        "plugin": "plugin-metsense:0.*",
+        "name": "iio.*"
+    }
+}
+```
+
+### Friday, 30th
+-Today's Non-Technical Tasks
+* Attended Demo
+  
+-Today's Technical Tasks
+* T
+  
+  
+************************************************************
+### Monday, 2th
+-Today's Non-Technical Tasks
+* Attended scrum
+  
+-Today's Technical Tasks
+*
