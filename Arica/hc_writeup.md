@@ -33,7 +33,21 @@ The aforementioned scripts are executed sequentially, and require the success of
 
 ### Honeycomb OS versioning system
 
+An overarching goal of Honeycomb is to abstract the concept of a 'peripheral'. An invaluable potential feature of Honeycomb would be to upgrade the state or version of the current WaggleOS image that Wild SAGE nodes run on. To do so, we must define the idea of a 'peripheral' as simply a set of files, features, or devices that can be configured and versioned.
+
+## Fault Tolerance
+
+A preliminary round of research was done to gain knowledge on Fault Tolerance systems, and how they may be applicable to Wild SAGE nodes.
+
+Should a deployed node fail in the field, the personal &  financial cost of repairing it is great, and should be avoided at all cost. Thus, the need for a fault-tolerant operating system for all nodes is critical.
+
+Most importantly, the definition of a fault in this context should be clearly declared, as systems of any kind may have a wide variety of faults. For the purpose of SAGE, a fault is any critical error that prevents SAGE engineers from booting and establishing a reverse tunnel to the node. In conjunction with this flavor of fault tolerance is the topic of atomic upgrades and rollbacks, which often serve as a solution to a faulted system. 
+
+Currently, the Wild SAGE nodes utilize a single-layer Overlay(Citation) for a read-only volume, with all changes being made to a read-write volume elsewhere. This mechanism prevents any changes being made to critical parts of the filesystem, and allows for a 'factory reset' by wiping the read-write layer. 
+One of the most common ways to ensure fault tolerance in any arbitrary filesystem is to utilize a process called AB Booting(Citation). AB Booting requires two bootable drives A and B, with either one running some operating system(OS) at any time. Should the in-use drive be unable to boot, the other drive will run diagnostics, fix, re-flash the OS, or even boot on itself as a last resort. Wild SAGE nodes currently utilize AB booting as a final resort, but this approach may not be as effective if OS upgrades are applied in the future. Thus, a system for rolling back an operating system is necessary. 
+
+<!-- Put in some kind of list of the FT technologies  -->
+
+
 # Write about sanity check background 
 ## Write about sanity check work 
-
-# Write about fault tolerance background (import maybe?)
