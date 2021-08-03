@@ -124,7 +124,7 @@ npm i node-red-dashboard
 
 #### Form and Text nodes
 
-- Restcountries API are used to get countries dataset from https://restcountries.eu/rest/v2. It includes the countries name, their languages, population, and capital and so on. But my goal this testing was that when I enter the capital, then country name pops up, which is filtered data by using its API service. In the http request node, when the url is attched, debug(msg.payload) and country (format) will show the output.
+- Restcountries API are used to get countries dataset from https://restcountries.eu/rest/v2. It includes the countries name, their languages, population, and capital and so on. But the goal this experiment is that when a user enters the capital, country name pops up, which is filtered data by using its API service. In the http request node, when the url is attched, debug(msg.payload) and country (format) will show the output. It is not a case sensitive.
 
 ![image](https://user-images.githubusercontent.com/56851781/128057498-c7a8784f-e21b-4386-8960-654c8ab9d9f9.png)
 
@@ -138,7 +138,7 @@ npm i node-red-dashboard
 
 #### Guage and Chart nodes
 
-- DHT sensor data from RPI
+- This flows explains real-time monitoring of data from a single DHT sensor on a Webpage using Node-RED.
 
  ![image](https://user-images.githubusercontent.com/56851781/128055756-649caf15-2732-4cbe-a654-4cfec6eeba13.png)
   
@@ -148,13 +148,14 @@ npm i node-red-dashboard
 
   ![image](https://user-images.githubusercontent.com/56851781/122779945-5c39c680-d27c-11eb-8a28-860ff4fc4b6d.png)
  
-- You can see on the debug node for example, {"_msgid":"63bb3921.ad62e8","topic":"rpi-dht22","payload":"28.00","humidity":"81.00","isValid":true,"errors":0,"location":"DHT","sensorid":"dht11"}, which means that need to change "payload" to "msg.payload = msg.payload and return msg;" in the temp function nodes as shown like this:
+- You can see on the debug node for example, `{"_msgid":"63bb3921.ad62e8","topic":"rpi-dht22","payload":"28.00","humidity":"81.00","isValid":true,"errors":0,"location":"DHT","sensorid":"dht11"}`, which means that need to change "payload" to "msg.payload = msg.payload and return msg;" in the temp function nodes as shown like this:
 
 ![image](https://user-images.githubusercontent.com/56851781/122780611-fef24500-d27c-11eb-8cc3-712e4d2b1e75.png)
   
-- You also able to check the output on terminal as well as the debug node + UI (hostIP Address and portnumber with ui, e.g. http://192.168.1.53:1880/ui)
+- You also able to check the output on terminal as well as the debug sidebar.
 
 ![image](https://user-images.githubusercontent.com/56851781/122780019-6f4c9680-d27c-11eb-99d9-b45d86bb5adb.png)
+
 ![image](https://user-images.githubusercontent.com/56851781/122780452-d9fdd200-d27c-11eb-8664-b6f74379acb1.png)
 
 - Example flows
