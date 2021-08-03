@@ -236,12 +236,12 @@
 
 - Integrated Luke`s Jenkins Code in ECR.
 - Additional Things work on
-       1. Check if Jenkins can collect files ?
 
-       2. Have the pipeline upload the results to ECR, only the pipeline know a the password to upload file (store using secret)
-       
-       3. if profiling output is small enough to include in log file output (maybe base64)
+       - Check if Jenkins can collect files ?
 
+       - Have the pipeline upload the results to ECR, only the pipeline know a the password to upload file (store using secret)
+
+       - if profiling output is small enough to include in log file output (maybe base64)
 
 
 ### Week 9 ###
