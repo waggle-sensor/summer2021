@@ -148,7 +148,7 @@ npm i node-red-dashboard
 
   ![image](https://user-images.githubusercontent.com/56851781/122779945-5c39c680-d27c-11eb-8a28-860ff4fc4b6d.png)
  
-- You can see on the debug node for example, `{"_msgid":"63bb3921.ad62e8","topic":"rpi-dht22","payload":"28.00","humidity":"81.00","isValid":true,"errors":0,"location":"DHT","sensorid":"dht11"}`, which means that need to change "payload" to "msg.payload = msg.payload and return msg;" in the temp function nodes as shown like this:
+- You can see on the debug node for example, `{"_msgid":"63bb3921.ad62e8","topic":"rpi-dht22","payload":"28.00","humidity":"81.00","isValid":true,"errors":0,"location":"DHT","sensorid":"dht11"}`, which means that need to change `"payload"` to `"msg.payload = msg.payload and return msg;"` in the temp function nodes as shown like this:
 
 ![image](https://user-images.githubusercontent.com/56851781/122780611-fef24500-d27c-11eb-8cc3-712e4d2b1e75.png)
   
@@ -200,7 +200,11 @@ npm i node-red-dashboard
 
 
 #### Slack & Email & UI Notification node
-- 
+
+- Slack node: In order to use module to interact with the Slack API, slack nodes must be installed. Also, Slack webhook is required as well (on Slack channel)
+- Email node: If you are accessing GMail, you may need to either enable an application password, or enable less secure access via your Google account settings.
+- UI notificatio node: It shows msg.payload as a popup notification or OK / Cancel dialog message on the user interface of Node-RED.
+
 - example flows
 
 ```
