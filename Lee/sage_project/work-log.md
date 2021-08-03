@@ -635,6 +635,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * I also got feedback from Neal about new code. Need to discuss about it with him tomorrow
 * funcX set up on MacOS
 
+  
 ### Wednesday, 28th
 -Today's Non-Technical Tasks
 * Attended scrum
@@ -648,6 +649,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
  1) `Object.keys(temp).length` could (and really should) just be `temp.length`.
  2) It is best practice to use either `var`, `let`, or `const` for variable declarations.
  3) 6 new lines of code could just be a `.filter()` that is tacked on directly after the `.map()`.
+  
   
 ### Thursday, 29th
 -Today's Non-Technical Tasks
@@ -667,14 +669,18 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
     }
 }
 ```
+* The reason above: it seems the metsense version number, name, and the measurement names have changed since those docs written.
 
+ 
 ### Friday, 30th
 -Today's Non-Technical Tasks
-* Attended Demo
+* Attended Demo, Presented Demo
+* Feedback from Yongho and Neal: What is the best way for users to use Node-RED? Assume that they don't know about Node-RED or JavaScript at all.
+* It should be VERY friendly user interface or include README file for Node-RED (detail description).
   
--Today's Technical Tasks
-* T
-  
+-Things to do:
+* This weekend the paper/science articles must be written.
+* Node-RED code cleaning, and upload Waggle github.  
   
 ************************************************************
 ### Monday, 2th
@@ -682,4 +688,3 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * Attended scrum
   
 -Today's Technical Tasks
-*
