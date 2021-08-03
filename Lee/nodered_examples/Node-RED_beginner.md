@@ -139,8 +139,7 @@ npm i node-red-dashboard
 
 - DHT data from RPI example flows
   
-  ![KakaoTalk_20210621_102635621_011](https://user-images.githubusercontent.com/56851781/122781041-6c9e7100-d27d-11eb-910f-3e7a8ac8cf53.jpg) ![KakaoTalk_20210621_102635621](https://user-images.githubusercontent.com/56851781/122781078-76c06f80-d27d-11eb-9bbe-879e6e1be648.jpg)
-  ![image](https://user-images.githubusercontent.com/56851781/122780732-1c271380-d27d-11eb-870e-a97903cc6037.png)
+ ![image](https://user-images.githubusercontent.com/56851781/128055756-649caf15-2732-4cbe-a654-4cfec6eeba13.png)
   
   ![image](https://user-images.githubusercontent.com/56851781/122779792-3a404400-d27c-11eb-88b5-8427b24df7ea.png)
   
