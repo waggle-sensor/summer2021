@@ -421,7 +421,7 @@ ENV PATH $PATH:$JAVA_HOME/bin
 * Still testing each node (now currently working with only temp topic)
 
   
-### Wednesday, 30th
+### Wednesday, 30th (BirthDay hehe)
 -Today's Non-Technical Tasks
 * Attended EDU Weekly Seminar Series
 * Short meeting with PhD program advisor
@@ -559,9 +559,10 @@ ENV PATH $PATH:$JAVA_HOME/bin
   
 ### Wednesday, 21th
 -Today's Non-Technical Tasks
+* Meeting with teams UAV Ground Scanning System: Human Detectionwith Deep Learning: Need to figure out local running GPU at KSQ building
 * Attended EDU Weekly Seminar Series: How to Establish Your Personal Brand
 * Meeting with Brandon and Larry (Docker and VM)
-* Amazing meeting with Sean to talk about Docker port numbers (Thank you so much)
+* Super nice meeting with Sean to talk about Docker port numbers (Thank you so much)
 * Still working on write papers with Korean students
   
 -Today's Technical Tasks
@@ -632,6 +633,7 @@ ENV PATH $PATH:$JAVA_HOME/bin
   
 ### Wednesday, 28th
 -Today's Non-Technical Tasks
+* Meeting with teams UAV Ground Scanning System: Human Detectionwith Deep Learning
 * Attended scrum
 * Had a meeting with Joe and discuss about the SDR query for next steps (with funcx)
 * Attended final intern presentation
@@ -687,13 +689,13 @@ ENV PATH $PATH:$JAVA_HOME/bin
 
 -Things to do:
 * Add all references to paper
-  
+
 ### Tuesday, 3th
 -Today's Non-Technical Tasks
-* Attended scrum
+* 
   
 -Today's Technical Tasks
-
+* 
   
 ### Wednesday, 4th
 -Today's Non-Technical Tasks
