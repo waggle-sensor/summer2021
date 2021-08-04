@@ -381,4 +381,65 @@ so that they are normalized.
 * Ran random forest again, and accuracy went up to 65 percent in 4 categories  
 * Worked on research paper
 
+---
+
+## Week 9
+
+### 7/26/2021 
+* Augmented ~1000 more images by reducing hue and value pixels by a
+  random amount between 0 and 5, increased saturation pixels by a 
+  random amount between 0 and 5. Increased brightness by a factor of 
+  1.2 and horizontal shifted the image.
+* By adding these images I had about ~3000 images and accuracy went
+  up to 71 percent when splitting into 3 categories and 65 percent
+  when splitting into 4 categories.
+
+### 7/27/2021
+* Attended meeting with cv team
+* Worked on research paper
+* Prepared presentation slides for final presenatation
+* Practiced presentation
+
+### 7/28/2021
+* Attended seminar about Learning Off the Lawn
+* Worked on research paper
+* Presented with Waggle group of my final presentation
+  and listened to other's final presentations
+  
+### 7/29/2021
+* Attended meeting with cv team
+* Prepared presentation slide for student connects meeting  
+* Attended student connects meeting
+
+### 7/30/2021
+* Spent most of day finishing first draft of research paper
+
+----
+
+## Week 10
+
+### 8/2/2021
+* Worked on shortening research paper to post on
+  Sage blog research report -- (later found out I dont need word limit so kept it long)
+* Finished abstract for SULI deliverable
+* Finished presentation slides
+* Finished recording of presentation
+* Finished abstract for presentation
+  
+### 8/3/2021
+* Attended meeting with cv team
+* Forgot to calculate features of images that I retrieved from Sage node, so I updated 
+  plugin so that I calculate all features of images I retrieve from sage node and it outputs
+  a prediction based on features. 
+  * Ran into problem with having different versions of opencv on summer2021 project and
+  on plugin
+
+### 8/4/2021 
+* Attended first day of learning off the lawn
+* Finished Peer Review paper and submitted it  
+* Updated ecr - meta folder in plugin with information on project
+* Cleaned up code in plugin and summer2021 project
+* Finished post - internship survey from Deliverables
+* Finished post - intenship survey from workday
+
 

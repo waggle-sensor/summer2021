@@ -3,13 +3,9 @@ import cv2
 import numpy as np
 import math
 import pandas as pd
-from skimage import io
-import os
 from pathlib import Path
-
 import os
 from openpyxl import load_workbook
-
 
 def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
                        truncate_sheet=False,
@@ -107,10 +103,9 @@ def display(image_to_display):
 
 def find_mean_hue(hsv_image):
     '''
-    Hue is in a circle [0, 180] because of this
-    convert hue angles to a set of vectors from polar to cartesian coordinates
+    Convert hue angles to a set of vectors from polar to cartesian coordinates
     after taking mean of those coordinates, convert back to polar form
-    :param hsv_image:
+    :param hsv_image: image in hsv format
     :return: mean hue
     '''
 
@@ -121,13 +116,11 @@ def find_mean_hue(hsv_image):
 
     for i in range(len(hsv_1D)):
 
-        # convert to a [0, 360] hue range
         hsv_1D[i] *= 2
 
         angle_x = math.radians(hsv_1D[i])
         angle_y = math.radians(hsv_1D[i])
 
-        # convert to rectangular cartesian coordinates
         x = math.cos(angle_x)
         y = math.sin(angle_y)
 
@@ -137,16 +130,13 @@ def find_mean_hue(hsv_image):
     x_mean = statistics.mean(x_list)
     y_mean = statistics.mean(y_list)
 
-    # convert back to polar coordinates
     mean_angle = ((math.atan(y_mean / x_mean)) * 180) / math.pi
 
-    # check quadrant
     if ((x_mean < 0 and y_mean < 0) or (x_mean < 0 and y_mean > 0)):
         mean_angle += 180
     elif (x_mean > 0 and y_mean < 0):
         mean_angle += 360
 
-    # convert back to hsv scale
     mean_hue = mean_angle / 2
 
     return mean_hue
@@ -154,16 +144,13 @@ def find_mean_hue(hsv_image):
 def find_mean_hsv(hsv_image):
     '''
     Computes the mean hue, saturation, and value of image given HSV image
-    :param hsv_image:
-    :return: mean hue, saturation, and value
+    :param hsv_image: image in hsv format
+    :return: mean hue, saturation, and value in list
     '''
 
-    # hsv_image[...,0] is all the values that represent the hue
-    # same for saturation and value
-
     mean_hue = find_mean_hue(hsv_image)
-    mean_sat = hsv_image[..., 1].mean() # a measure of how intense or pure the colors of the scene are on avg
-    mean_val = hsv_image[...,2].mean() # a measure of the avg luminance of a scene
+    mean_sat = hsv_image[..., 1].mean()
+    mean_val = hsv_image[...,2].mean()
 
     mean_hsv = [mean_hue, mean_sat, mean_val]
 
@@ -172,7 +159,7 @@ def find_mean_hsv(hsv_image):
 def find_standard_deviation_hsv(hsv_image):
     '''
     computed standard deviation of hsv in image
-    :param hsv_image:
+    :param hsv_image: image in hsv format
     :return: array of hsv standard deviation
     '''
 
@@ -188,12 +175,16 @@ def find_standard_deviation_hsv(hsv_image):
 
     return SD_hsv
 
-# When using canny edge detection you have to take into account the thresholds
 def detect_edges(image, lower_threshold, upper_threshold):
+    '''
+    Use canny edge detection to detect edges in an image
+    :param image: image whose edges are to be detected
+    :param lower_threshold: lower threshold for canny edge detector
+    :param upper_threshold: upper threshold for canny edge detector
+    :return: image with edges detected
+    '''
 
-    # use a blurring thing to reduce noise
     image = cv2.bilateralFilter(image, 9, 75, 75)
-
     canny = cv2.Canny(image, lower_threshold, upper_threshold)
 
     return canny
@@ -201,33 +192,18 @@ def detect_edges(image, lower_threshold, upper_threshold):
 def find_straight_edge_density(image):
   '''
   Find a measure of how many straight edges are in the scene image
-  uses Hough Line Transform method
-  :return: number of lines
+  using fast line detector method. Blur image while keeping edges
+  sharp using bilateral filter to reduce noise
+  :return: sum of straight lines
   '''
 
   gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-  # Guassian blur
-  # kernel = np.ones((5, 5), np.float32) / 25
-  # gray_image = cv2.filter2D(gray_image, -1, kernel)
-
-  # blur the image while keeping the edges sharp (bilateral filter)
   gray_image = cv2.bilateralFilter(gray_image, 9, 75, 75)
 
   fld = cv2.ximgproc.createFastLineDetector()
   lines = fld.detect(gray_image)
-  draw_image = fld.drawSegments(image, lines)
-
-  '''[
-      [[line 1]]
-      [line 2]]
-      print(...)
-  ]
-  
-  [line 1] ---> [xstart, ystart, xend, yend]
-  
-  so to find length use distance formula on every line segment and then add them together 
-  '''
+  draw_image = fld.drawSegments(image, lines) # can use to display image
 
   try:
     if len(lines) == 0:
@@ -244,35 +220,21 @@ def find_straight_edge_density(image):
 
       length_line_segment = math.sqrt(((x2 - x1) ** 2) +  ((y2 - y1) ** 2))
 
-      #if (length_line_segment > 50):        # ignore line segments that are very small
       sum_length += length_line_segment
-      # else:
-      #     lines[i][0][0] = 0
-      #     lines[i][0][1] = 0
-      #     lines[i][0][2] = 0
-      #     lines[i][0][3] = 0
 
-  # len(lines) will give you the number of lines
-
-  '''
-  TODO: After getting data set and running all the images throuugh this, 
-  normalize straight edge density to be between [0, 1]
-  1 -> high straight edge density
-  0 -> low straight edge density
-  '''
   return sum_length
 
 
 def find_edge_density(image):
     '''
     Computes how much of the image consists of edges
-    :param image:
+    :param image: BGR image whose edge density needs to be find
     :return: percentage of image that is made up of edges
     '''
 
     edges_image = detect_edges(image, 100, 200)
 
-    total_pixels = edges_image.shape[0] * edges_image.shape[1] # rows times columns
+    total_pixels = edges_image.shape[0] * edges_image.shape[1]
     white_pixels = cv2.countNonZero(edges_image)
 
     edge_density_percentage = (white_pixels / total_pixels) * 100
@@ -298,8 +260,12 @@ def find_entropy(image):
     return entropy
 
 def create_base_dataframe():
-    df = pd.read_excel(
-        r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\Images with Ratings\MIT_ImageRatings.xlsx')
+    '''
+    creates base dataframe to store data
+    :return: dataframe
+    '''
+
+    df = pd.read_excel(r'MIT_ImageRatings.xlsx')
 
     df = df.rename(columns={"Hue": "Mean Hue"})
     df = df.rename(columns={"Sat": "Mean Sat"})
@@ -311,82 +277,26 @@ def create_base_dataframe():
 
     return df
 
-# def add_features():
-#     '''
-#      Computes features of images that would help measure visual disorder
-#     :return: dataframe with computed features for each image in training data
-#     '''
-#     df = create_base_dataframe()
-#     df.to_excel(r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx', index=False)
-#
-#     rows_to_delete = []
-#
-#     for i in range(len(df)):
-#
-#         print(i)
-#
-#         image_name = df.loc[i].at["originalName"]
-#         folder = "training_images/"
-#         file_path = folder + image_name
-#
-#         my_file = Path(file_path)
-#         if (my_file.is_file()):         # certain images exist in excel file but not in images folder
-#             image = cv2.imread(file_path)
-#             hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-#
-#             mean_hsv = find_mean_hsv(hsv_image)
-#             standard_dev_hsv = find_standard_deviation_hsv(hsv_image)
-#             edge_density = find_edge_density(image)
-#             straight_edge_density = find_straight_edge_density(image)
-#             image = cv2.imread(file_path)
-#             entropy = find_entropy(image)
-#
-#             # replace values with the features that I computed
-#             df.loc[i, 'Mean Hue'] = mean_hsv[0]
-#             df.loc[i, 'Mean Sat'] = mean_hsv[1]
-#             df.loc[i, 'Mean Value'] = mean_hsv[2]
-#             df.loc[i, 'sdHue'] = standard_dev_hsv[0]
-#             df.loc[i, 'sdSat'] = standard_dev_hsv[1]
-#             df.loc[i, 'sdValue'] = standard_dev_hsv[2]
-#             df.loc[i, 'ED'] = edge_density
-#             df.loc[i, 'SED'] = straight_edge_density
-#             df.loc[i, 'Entropy'] = entropy
-#         else:
-#             rows_to_delete.append(i)
-#
-#         append_df_to_excel(r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx', df, startrow= 0)
-#
-#     # delete all the rows that did not have images associated with them
-#     # that i could use to compute features
-#     for i in range(len(rows_to_delete)):
-#         df.drop(labels=rows_to_delete[i], axis = 0, inplace = True)
-#
-#     append_df_to_excel(r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx', df,
-#                        startrow=0)
-#     return df
-
 def add_features():
     '''
      Computes features of images that would help measure visual disorder
     :return: dataframe with computed features for each image in training data
     '''
 
-    df = pd.read_excel(
-        r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\augmented_data.xlsx')
+    data_file_path = r'augmented_data.xlsx'
+    df = pd.read_excel(data_file_path)
 
     rows_to_delete = []
 
-
-    for i in range(1105, len(df)):
-
-        print(i)
+    start_row = 1105
+    for i in range(start_row, len(df)):
 
         image_name = df.loc[i].at["originalName"]
         folder = "training_images/TFK/"
         file_path = folder + image_name
 
         my_file = Path(file_path)
-        if (my_file.is_file()):         # certain images exist in excel file but not in images folder
+        if (my_file.is_file()):
             image = cv2.imread(file_path)
             hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
@@ -410,30 +320,12 @@ def add_features():
         else:
             rows_to_delete.append(i)
 
-        append_df_to_excel(r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx', df, startrow= 0)
+        append_df_to_excel(r'normalized_data.xlsx', df, startrow= 0)
 
     # delete all the rows that did not have images associated with them
-    # that i could use to compute features
     for i in range(len(rows_to_delete)):
         df.drop(labels=rows_to_delete[i], axis = 0, inplace = True)
 
-    append_df_to_excel(r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx', df,
-                       startrow=0)
+    append_df_to_excel(r'normalized_data.xlsx', df, startrow=0)
+
     return df
-
-def main():
-    df = add_features()
-
-    # --> 657
-    # file_path = 'training_images/sun_bulrjngzcxjvadqv.jpg'
-    # image = cv2.imread(file_path, 1)
-    # straight_edge_density = find_straight_edge_density(image)
-    # print(straight_edge_density)
-
-     # save training data in excel file so that I only have to run this once
-  #  df.to_excel(r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx',index = False)
-
-if __name__ == '__main__':
-    main()
-    # file_path = 'training_images/47644824_3ffc0d6af2_o.jpg'
-    # image = cv2.imread(file_path, 1)

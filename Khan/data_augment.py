@@ -125,9 +125,13 @@ def add_augmented_images_to_dataframe():
             image = brightness(image, 1.2)
             image = horizontal_shift(image, 0.5)
 
+
+            # change hsv
+            # zoom
+
             # horizontal shift,
             # change brightness
-            # change
+            # change hsv
 
             # once you do those image transformations, you have new image
 
@@ -159,11 +163,16 @@ def add_augmented_images_to_dataframe():
 
 
 def main():
-    # file_path = 'training_images/MIT_images/47644824_3ffc0d6af2_o.jpg'
-    # image = cv2.imread(file_path, 1)
-    #
-    # display(image)
-    add_augmented_images_to_dataframe()
+    file_path = 'training_images/MIT_images/47644824_3ffc0d6af2_o.jpg'
+    image = cv2.imread(file_path, 1)
+
+    image = random_noise(image)
+    # image = change_hsv(image)
+    # image = brightness(image, 1.2)
+    # image = zoom(image, 0.8)
+
+    display(image)
+    #add_augmented_images_to_dataframe()
 
 
 
