@@ -5,6 +5,8 @@
 * Each node has README.md files, which is available for everyone.
 * The main core nodes for SAGE project includes inject, http request, function and debug nodes as shown in example below.
 
+![image](https://user-images.githubusercontent.com/56851781/128259245-9fd5e4cc-159f-473e-abdc-4dd4b897e447.png)
+
 - Example flows
 
 ```
@@ -15,7 +17,7 @@
 - http request node sends HTTP requests and returns the response. If the url is set to example.com/{{{topic}}}, it will have the value of msg.topic automatically inserted. More details are available by clicking the help icon on the right side bar.
 - Debug node displays the output. Two options "msg.payload" and "complete msg object" are utilized.
 - function node is used to split, change the data type to help query measurement.
-- The description of each node can be found the node's comment below.
+
 
 ## template.
 * 
