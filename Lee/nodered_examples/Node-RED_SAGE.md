@@ -35,12 +35,11 @@
 - The following query will return all measurements with a name starting with sys in the 1 minute. It returns object from SDR (complete msg object in the debug node), but the payload is still string.
 
 - Once the output displays on debug sidebar, you can click the object. It includes `_msgid`, `payload`, `statusCode`, `headers`, `responseUrl` and `redirectList`.
-```
+
 - **Payload** is still string type.
 - **statusCode** 200" means that HTTP Status Code 200: The request has succeeded.
 - **headers** includes access-control-allow-origin, content-disposition, content-type, date, vary, transfer-encoding and x-node-red-request-node.
 - **responseUrl** is same as http request url.
-```
 
 - Example flows
 
