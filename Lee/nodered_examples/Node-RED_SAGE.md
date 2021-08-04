@@ -22,12 +22,26 @@
 
 ### All measurements with sys in the last hour
 
-![image](https://user-images.githubusercontent.com/56851781/128259769-e2325847-1d9d-4bc5-ad3d-b4e50c1bab12.png)
+- The following query returns all measurements with a name starting with sys in the last hour. It returns data, which is chunk of string type.
 
-- The following query will return all measurements with a name starting with sys in the last hour. It returns data, which is chunk of string type.
+![image](https://user-images.githubusercontent.com/56851781/128259769-e2325847-1d9d-4bc5-ad3d-b4e50c1bab12.png)
 
 - Example flows
 
 ```
 [{"id":"215a7363.8f1d9c","type":"inject","z":"f361ffeb.71386","name":"SDR_all_sys_1hour","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"start\":\"-1h\",\"filter\":{\"name\":\"sys.*\"}}","payloadType":"json","x":150,"y":400,"wires":[["b74bf483.dfa2e8"]]},{"id":"b74bf483.dfa2e8","type":"http request","z":"f361ffeb.71386","name":"Sage Data Repository","method":"GET","ret":"txt","paytoqs":"body","url":"https://sdr.sagecontinuum.org/api/v1/query{{{payload.value}}}","tls":"","persist":true,"proxy":"","authType":"basic","x":350,"y":440,"wires":[["83c7882c.28c248"]]},{"id":"83c7882c.28c248","type":"debug","z":"f361ffeb.71386","name":"String_payload (default)","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","targetType":"msg","statusVal":"","statusType":"auto","x":590,"y":400,"wires":[]},{"id":"c11b17eb.6dc728","type":"comment","z":"f361ffeb.71386","name":"All measurements with sys in the last hour","info":"The following query will return all measurements with a name starting with sys in the last hour.\nIt returns data, which is chunk of string type.\n\n- Reference\nhttps://github.com/waggle-sensor/waggle-beehive-v2/blob/main/docs/querying-measurements.md","x":200,"y":360,"wires":[]}]
+```
+
+- The following query will return all measurements with a name starting with sys in the 1 minute. It returns object from SDR (complete msg object in the debug node), but the payload is still string.
+
+- Once the output displays on debug sidebar, you can click the object. It includes `_msgid, payload, statusCode, headers, responseUrl and redirectList.`
+- Payload is still string type.
+- "statusCode: 200" means that HTTP Status Code 200: The request has succeeded.
+- headers includes access-control-allow-origin, content-disposition, content-type, date, vary, transfer-encoding and x-node-red-request-node.
+- responseUrl is same as http request url.
+
+- Example flows
+
+```
+[{"id":"4d0d0d47.df3a04","type":"inject","z":"f361ffeb.71386","name":"SDR_all_sys_1minute","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"start\":\"-1m\",\"filter\":{\"name\":\"sys.*\"}}","payloadType":"json","x":160,"y":600,"wires":[["a82434ec.73fc38"]]},{"id":"a82434ec.73fc38","type":"http request","z":"f361ffeb.71386","name":"Sage Data Repository","method":"GET","ret":"txt","paytoqs":"body","url":"https://sdr.sagecontinuum.org/api/v1/query","tls":"","persist":true,"proxy":"","authType":"basic","x":350,"y":640,"wires":[["a7918e5c.ecd9b"]]},{"id":"a7918e5c.ecd9b","type":"debug","z":"f361ffeb.71386","name":"Object_complete msg","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"true","targetType":"full","statusVal":"","statusType":"auto","x":580,"y":600,"wires":[]},{"id":"db2c3c11.1d53a","type":"comment","z":"f361ffeb.71386","name":"All measurements with sys in the last 1 minute","info":"The following query will return all measurements with a name starting with sys in the 1 minute.\nIt returns object from SDR (complete msg object in the debug node), but the payload is still string.\n\nOnce the output displays on debug sidebar, you can click the object. It includes _msgid, payload, statusCode, headers, responseUrl and redirectList.\n- Payload is still string type.\n- \"statusCode: 200\" means that HTTP Status Code 200: The request has succeeded.\n- headers includes access-control-allow-origin, content-disposition, content-type, date, vary, transfer-encoding and x-node-red-request-node.\n- responseUrl is same as http request url. \n\n\n- Reference\nhttps://github.com/waggle-sensor/waggle-beehive-v2/blob/main/docs/querying-measurements.md","x":210,"y":560,"wires":[]}]
 ```
