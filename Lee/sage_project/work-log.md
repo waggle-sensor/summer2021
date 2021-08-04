@@ -680,5 +680,23 @@ ENV PATH $PATH:$JAVA_HOME/bin
 ### Monday, 2th
 -Today's Non-Technical Tasks
 * Attended scrum
+* Read up MDML: https://labs.globus.org/pubs/Elias_MDML_2020.pdf to work on writing paper
+  
+-Today's Technical Tasks
+* Fininshed cleaning Node-RED code (Beginner part) and uploading at github
+
+-Things to do:
+* Add all references to paper
+  
+### Tuesday, 3th
+-Today's Non-Technical Tasks
+* Attended scrum
+  
+-Today's Technical Tasks
+
+  
+### Wednesday, 4th
+-Today's Non-Technical Tasks
+* Meeting with teams UAV Ground Scanning System: Human Detectionwith Deep Learning: Need to figure out local running GPU at KSQ building
   
 -Today's Technical Tasks
