@@ -37,7 +37,7 @@
 - Once the output displays on debug sidebar, you can click the object. It includes `_msgid`, `payload`, `statusCode`, `headers`, `responseUrl` and `redirectList`.
 
 - **Payload** is still string type.
-- **statusCode** 200" means that HTTP Status Code 200: The request has succeeded.
+- **statusCode** 200 means that the HTTP request has succeeded.
 - **headers** includes access-control-allow-origin, content-disposition, content-type, date, vary, transfer-encoding and x-node-red-request-node.
 - **responseUrl** is same as http request url.
 
