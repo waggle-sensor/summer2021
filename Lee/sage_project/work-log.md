@@ -708,4 +708,5 @@ ENV PATH $PATH:$JAVA_HOME/bin
 * `FILTER` Average 0.019943333354603965
 * `LOOP` Average 0.02598666658741422 (Slowest)
 * Reference: http://www.andygup.net/fastest-way-to-find-an-item-in-a-javascript-array/
-  
+* code ref: https://jsfiddle.net/agup/Y8SBL/10/
+* decription ref: https://developer.mozilla.org/en-US/docs/Web/API/Performance
