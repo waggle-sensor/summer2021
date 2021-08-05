@@ -371,3 +371,13 @@
     * Finish paper edits
     * Peer review
 
+### August 5
+- Learning Off the Lawn Day 2
+- Peer review
+- Formatted/organized references
+- More edits on paper
+- Submitted peer review, presentation, general audience abstract
+- Tomorrow: 
+    * Submit Sage blog
+    * Finish last paper edits and submit
+    * Give Jeremy everything to finish up ECR/plugins
