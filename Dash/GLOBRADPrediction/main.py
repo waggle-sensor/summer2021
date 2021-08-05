@@ -8,5 +8,5 @@ image_array = []
 met_data = []
 
 model = tf.keras.models.load_model(https://github.com/waggle-sensor/summer2021/blob/main/Dash/GLOBRADPrediction/wednesdaythefourth1.h5)
-ans  =model.predict([np.array(met_data),np.array(image_array)])
-plugin.publish(ans, "LCL_Pressure")
+ans  =model.predict([np.array(met_data)])
+plugin.publish(ans, "Global Solar Irradiance")
