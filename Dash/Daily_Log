@@ -118,3 +118,31 @@ July 19th
 Looked for irradiance data
 Gave presentation
 Worked on finding ASOS sites and processing data
+
+July 20th
+Got irradiance data from in-lab pyrometer
+Started to make tensorflow model
+
+July 21st
+Successfully created tensorflow model for NET RAD(96.5%)
+Successfully created tensorflow model for GLOB RAD(91.5%)
+Saved to github
+
+July 22nd
+Had clouds meeting
+Tried to replicate the tensorflow model for NET RAD
+July 23rd
+Kept improving on tensorflow model(92.5)
+started to design the pyrtorch model
+Created a GLOB RAD model
+July 26th
+Completed the pytorch model
+Low accuracy
+Attempts to fix it
+July 27th
+Try to fix the pytorch model 
+Try to recreate the tensorflow model again
+July 28th
+Working on creating the dockerfile
+Give presentation
+Watch presentations

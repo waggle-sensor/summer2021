@@ -298,11 +298,11 @@
 
 ### June 22
  - Clouds and CV meeting
- - Got basic (incomplete for now) code into the plugin template; updated the Dockerfile, sage.yaml, requirements.txt. 
+ - Got code into the ECR (not a working plugin yet); updated the Dockerfile, sage.yaml, requirements.txt. 
       * The basic satellite plugin will download GOES 16 or 17 images between a start and an end time for a particular channel
-  - Selected a different time period (17:22-19:03Z) with more scattered clouds for dense OF because I think that’ll work better than the times I was testing it with originally (clouds were pretty stationary)
+ - Selected a different time period (17:22-19:03Z) with more scattered clouds for dense OF because I think that’ll work better than the times I was testing it with originally (clouds were pretty stationary)
  - Made a movie of those times and tried OF on band 2 (visible)
-    * Tried it on a couple different sized satellite images and it seems like the larger ones do a much better job of capturing the motion
+    * Tried it on a couple different sized visible satellite images (5x5, 20x20, 80x80 km); it seems like the larger ones do a much better job of capturing the larger scale motion
  - TRACER meeting
 
 ### June 23 
@@ -313,4 +313,46 @@
     * Final presentation for the Waggle group
     * More work on deliverables
 
+## Week 9
+### June 26
+ - Got ARM ceilometer data and sounding data from Lamont, OK for 11/21/2019; will compare motion from optical flow to these observations
+ - Haven't found anything thus far on how to convert pixel units to m/s or knots
+    * (Magnitude in pixel units * length of pixel in meters) / time in seconds between images?
+ - Tried dense OF on IR for 17-19Z period
+    * Looks pretty similiar to dense OF on the larger
+ - More reading: https://journals.ametsoc.org/view/journals/atot/33/8/jtech-d-16-0013_1.xml#bib30, https://www.diva-portal.org/smash/get/diva2:273847/FULLTEXT01.pdf
 
+### June 27
+ - Made final presentation for Waggle/Sage group 
+ - Working on deliverables
+
+### June 28
+- EDU Weekly Seminar
+- Practiced/gave final presentation
+- Converted the magnitude of the motion output by optical flow to m/s to compare to actual observations at the SGP site
+    * Using the 18Z sounding out of Lamont, OK and the ceilometer at the ARM Central Facility
+    * Clouds base is around ~600-700 meters AGL on both; from sounding text/Skew-T it looks like winds are northerly at ~16 knots (~8.2 m/s) in 600-900 meter layer
+    * Optical flow is giving average speeds over the two hour (17-19Z) period of around 5.5 m/s. I'm using the 2 hour average because there's huge varability in the speed between consecutive images (<0.1 m/s to 40 m/s for some pixels). Also a lot of variability from pixel to pixel.
+    * Wind directions from optical flow are all over the place (at least directly over the site). 
+
+### June 29
+- Clouds/CV meeting
+- CLeaned up most code/wrote as functions
+- Finished optical flow results. Ended up averaging the motions per pixel over the length of the video. Values range from 3.5 m/s to 8.3 m/s (average of 5.85 m/s) in the 5 by 5 km region over the site. At the pixel directly over the site the average speed is 5.8 m/s. 
+
+### June 30
+- Working on deliverables
+
+## Week 10
+### August 2
+- Finished draft of the paper over the weekend
+- Finished final powerpoint for Learning Off the Lawn presentation
+- Uploaded final powerpoint and a recording of the presentation
+- Wrote the 3 required abstracts (paper, general audience, presentation)
+- To do:
+    * More paper edits
+    * Format references
+    * Write the blog for Sage site
+    * Update ECR meta folder
+    * Clean up radar code and get it into ECR
+    * Final presentation & peer review paper

@@ -23,3 +23,9 @@ Week of 7/12
 Week of 7/19
 - This week I would like to try to finish training for the deeplab model 
   - I am still trying to solve the issue of my ssh session timing out, I am going to try Tmux once the Chameleon machine is back online. 
+- My Chameleon machine had problems coming back after the power being turned off so I had to try to start over and now I cannot launch an instance
+
+Week of 7/26
+- I am still waiting for the Chameleon issue to be solved and/or a node to become available (hopefully beginning of next week)
+- I am going to begin working on my blog post for the Sage website. 
+- Also working on midpoint presentation for 8/11

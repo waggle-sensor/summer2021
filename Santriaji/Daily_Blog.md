@@ -109,3 +109,38 @@ Goal : Writing the code for controlling the DNNs plugin.
 
 ### Friday 07/16
 - Coding for controller.
+
+## Week 6 (07/19 - 07/23)
+Goal : Coding for anytime plugin.
+
+### Monday 07/19
+- Meeting with ECR.
+- Coding the plugin.
+
+### Tuesday 07/20
+- Meeting with ECR.
+- Coding the plugin.
+
+### Wednesday 07/21
+- Coding the plugin.
+
+### Thursday 07/22
+- Coding the plugin.
+- Meeting for controller.
+
+### Friday 07/23
+- Coding the plugin.
+
+### Monday 07/12
+- Meeting with ECR.
+- Do profiling for object detection.
+
+### Wednesday 07/14
+- Meeting for controller.
+- Coding for controller.
+
+### Thursday 07/15
+- Coding for controller.
+
+### Friday 07/16
+- Coding for controller.

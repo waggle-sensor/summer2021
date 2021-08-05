@@ -215,8 +215,12 @@
 - Attended Weekly Team Meeting (mini presentations)
 - Attended Waggle/SAGE meeting
     * Presented my slides (links are below):
-    * [[Latex Source]]()
-    * [[Presentation Slides]]()
+    * [[Repository]](presentations/project_mid_mini)
+    * [[Latex Source]](https://drive.google.com/file/d/1JGHjrSo89XXNTsmAvQ_ZSfhs5v78osoS/view?usp=sharing)
+    * [[Latex Source (shortened, with citations)]](https://drive.google.com/file/d/1CdYOMazhwp9g9iwR3MB1TmX0bLm1ombv/view?usp=sharing)
+    * [[Presentation Slides]](https://drive.google.com/file/d/1fca5hpkNccTm38JmPpm2Bl3h9kImJKpF/view?usp=sharing)
+    * [[Presentation Slides (shortened, with citations)]](https://drive.google.com/file/d/1hvLojrbzd3zwhVieYMOdWrdcFGw-sCrm/view?usp=sharing)
+
 - Continued work on online simulator
 
 ### Tuesday July 13, 2021 ###
@@ -241,4 +245,59 @@
 ### Friday July 16, 2021 ###
 - Ran another simulation (this time with greater buffer size) and obtained slightly larger AUC.
 - Began work on implementing an adaptive gamma filter to see if there are any performance gains
-- Continued work on my poster. 
+- Continued work on my poster.
+
+## Week 7 ##
+### Monday July 19, 2021 ###
+- Attended Weekly Team Meeting (last of the mini-presentations).
+- Attended Waggle/SAGE meeting.
+- Continued work on my poster for Learning off the Lawn.
+- Did a bit of work on my final report.
+
+### Tuesday July 20, 2021 ###
+- Attended Weekly CV intern check-in
+- Continued work on running online simulations
+    * I have not been getting great results with the simulations, in part due to the fact that
+      I'm using a linear queue to buffer training examples, which means that the model is
+      "quick to learn but quick to forget", which may not be ideal.
+    * I may try to implement a queue structure with exponentially distributed retention times
+
+### Wednesday July 21, 2021 ###
+- Continued work on poster and report
+- Implemented Exponential Heap Sampler (see comments from previous day)
+
+### Thursday July 22, 2021 ###
+- Attended CV intern check-in
+- Ran another round of model simulations
+    * The exponential heap sampling strategy seems to work wonders! I'm getting results with an
+      AUROC only slightly less than the offline training results.
+
+### Friday July 23, 2021 ###
+- Finished first draft of poster
+- Continued work on final report; added illustrative figures.
+- Scheduled a round of simulations for the weekend to explore the effect of adjusting the
+  size of the EHS (example buffer)
+
+## Week 8 ##
+### Monday July 26, 2021 ###
+- Continued work on final report
+- Began work on converting the anomaly detection notebooks to an [anomaly detector Waggle plugin](https://github.com/waggle-sensor/plugin-anomaly-detector)
+
+### Tuesday July 27, 2021 ###
+- Attended CV intern check-in
+- Prepared slides for final internship presentation
+- Continued work on final report
+
+### Wednesday July 28, 2021 ###
+- Attended Waggle/SAGE meeting
+    * Presented my slides (see the links below):
+    * [[Repository]](presentations/project_final)
+    * [[Latex Source]](https://drive.google.com/file/d/1Flit_8G_R2h4DCRW-aRdOI6inF91_i4R/view?usp=sharing)
+    * [[Presentation Slides]](https://drive.google.com/file/d/1BcULMe_OlN44df3t8Y27k-qjCutuvayH/view?usp=sharing)
+- Continued work on converting anomaly detection code into a waggle plugin
+
+### Thursday July 29, 2021 ###
+- Attended CV intern check-in
+- Uploaded presentation slides to google drive folder
+- Deployed draft version of anomaly detection Waggle plugin
+- Continued work on final report.
