@@ -692,13 +692,20 @@ ENV PATH $PATH:$JAVA_HOME/bin
 
 ### Tuesday, 3th
 -Today's Non-Technical Tasks
-* 
+* solved out kronos timecard issue
+* still uploading Node-RED code on Waggle Summer 2021 Github. Available at [Node-RED_Sage.md](https://github.com/waggle-sensor/summer2021/blob/main/Lee/nodered_examples/Node-RED_SAGE.md)
   
 -Today's Technical Tasks
-* 
+* still working on SDR querying UI issue
   
 ### Wednesday, 4th
 -Today's Non-Technical Tasks
 * Meeting with teams UAV Ground Scanning System: Human Detectionwith Deep Learning: Need to figure out local running GPU at KSQ building
+* Meeting with teams UAV ground detection and tracking systems: Tree detection and tracking change species and amount of tree
   
 -Today's Technical Tasks
+* change JavaScript code: .filter() instaed of using loops
+* `FILTER` Average 0.019943333354603965
+* `LOOP` Average 0.02598666658741422 (Slowest)
+* Reference: http://www.andygup.net/fastest-way-to-find-an-item-in-a-javascript-array/
+  
