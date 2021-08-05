@@ -1,1 +1,1 @@
-This folder:
+The goal of this project is the integration of Node-RED into the existing SAGE cloud computing platform and web portal. This file provides descriptions and several tutorials for node-red so that users can understand how Node-RED works with the Sage system. All code flows related to SDR querying are also available in this file.
