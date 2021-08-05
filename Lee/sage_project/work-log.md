@@ -21,12 +21,6 @@
 * Sign in MIRO and JIRA
   (I guess MIRO is for planning, and JIRA is for process management. I need to read the guidelines again this week, especially calculating team capacities.)
 * Followed up simple tutorials of Github: https://www.youtube.com/watch?v=tC8Xj_Bf8Fw&t=618s
-* Pull first before Push
-     * git pull origin master
-     * git status
-     * git add . (tracking)
-     * git commit -m "message" (commit)
-     * git push origin +master
 
 -Today's Technical Tasks
 * Read up Docker tutorials and installed on my RPI
