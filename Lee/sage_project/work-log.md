@@ -698,6 +698,9 @@ ENV PATH $PATH:$JAVA_HOME/bin
 -Today's Technical Tasks
 * still working on SDR querying UI issue
   
+  ![image](https://user-images.githubusercontent.com/56851781/128386145-3fec9fa6-df8d-400b-99de-9e1bd75f21ff.png)
+
+  
 ### Wednesday, 4th
 -Today's Non-Technical Tasks
 * Meeting with teams UAV Ground Scanning System: Human Detectionwith Deep Learning: Need to figure out local running GPU at KSQ building
@@ -710,3 +713,6 @@ ENV PATH $PATH:$JAVA_HOME/bin
 * Reference: http://www.andygup.net/fastest-way-to-find-an-item-in-a-javascript-array/
 * code ref: https://jsfiddle.net/agup/Y8SBL/10/
 * decription ref: https://developer.mozilla.org/en-US/docs/Web/API/Performance
+  
+  
+  
