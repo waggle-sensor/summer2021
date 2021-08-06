@@ -332,6 +332,8 @@ To Do:
 * Continue studying and working on OpenCV tutorials and project.
 * Find out how to save/read multiple images from a file onto Python.
 
+<br />
+
 ### July 1, 2021 (Day 23)
 
 Updates:
@@ -345,6 +347,8 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 * Analyze the larger dataset. Find out how to classify data.
+
+<br />
 
 ### July 2, 2021 (Day 24)
 
@@ -380,6 +384,8 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+<br />
+
 ### July 7, 2021 (Day 26)
 Updates:
 * Attended seminar on 'Creating Effective Oral and Poster Presentations' by Dr. Bob Boomsma.
@@ -410,6 +416,8 @@ See the JNs for examples on his these are applied [here](https://drive.google.co
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+<br />
+
 ### July 8, 2021 (Day 27)
 Updates:
 * Meeting with larger CV Group. Discussed progress for this week.
@@ -424,6 +432,8 @@ Updates:
 
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
+
+<br />
 
 ### July 9, 2021 (Day 28)
 Updates:
@@ -464,6 +474,8 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+<br />
+
 ### July 13, 2021 (Day 30)
 Updates:
 * Developed JNs for contour detection. Since most contours are incomplete (due to noise), the minAreaRect() function is helpful in creating a box encompassing it. The function minAreaRect() was compared to results generated generated from boundRect().
@@ -494,6 +506,8 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+<br />
+
 ### July 14, 2021 (Day 31)
 Updates:
 * Attended seminar 'Special Presentation: Science Innovations for a Circular Economy Initiative at Argonne' by Dr. Massimilano Delferro.
@@ -516,6 +530,8 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+<br />
+
 ### July 15, 2021 (Day 32)
 Updates:
 * Created presentation and attended CV meeting. The PowerPoint can be found [here](https://drive.google.com/drive/folders/1ggGn8BYL7ohnxapO-o2qJCfECif_ca54?usp=sharing).
@@ -532,6 +548,9 @@ Updates:
 
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
+
+<br />
+
 
 ### July 16, 2021 (Day 33 + Weekend)
 Updates:
@@ -570,6 +589,8 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+<br />
+
 ### July 20, 2021 (Day 35)
 Updates:
 * Presented results to CV group. PowerPoint can be found [here](https://drive.google.com/drive/folders/16lsegCAwpMYxdfE9sN4FO3LkOmycTwgp?usp=sharing).
@@ -585,6 +606,8 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+<br />
+
 ### July 21, 2021 (Day 36)
 Updates:
 * Attended seminar 'How to Establish Your Personal Brand' by Leslie Krohn.
@@ -598,6 +621,8 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+<br />
+
 ### July 22, 2021 (Day 37)
 Updates:
 * Presented PowerPoint in CV meeting. PowerPoint can be found [here](https://drive.google.com/drive/folders/1gvSs-eS7FzpGXEmyoWoj8tFw6msuTy_I?usp=sharing).
@@ -607,6 +632,8 @@ Updates:
 
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
+
+<br />
 
 ### July 23, 2021 (Day 38 + Weekend)
 Updates:
@@ -637,6 +664,8 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+<br />
+
 ### July 27, 2021 (Day 40)
 Updates:
 * Discussed updates during CV group meeting.
@@ -650,6 +679,8 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+<br />
+
 ### July 28, 2021 (Day 41)
 Updates:
 * Attended seminar 'Open Q&A on Deliverables/Learning Off the Lawn Overview'.
@@ -660,6 +691,8 @@ Updates:
 To Do:
 * Continue studying and working on OpenCV tutorials and project.
 
+<br />
+
 ### July 29, 2021 (Day 42)
 Updates:
 * Attended brief meeting with CV group.
@@ -669,6 +702,8 @@ Updates:
 To Do:
 * Clean up work. 
 * Finish deliverables.
+
+<br />
 
 ### July 30, 2021 (Day 43)
 Updates:
@@ -689,24 +724,64 @@ To Do:
 <br />
 
 
-<!-- 
-https://github.com/dloperab/PyImageSearch-CV-DL-CrashCourse
-[Day 1: Face detection with OpenCV and deep learning](https://www.pyimagesearch.com/2018/02/26/face-detection-with-opencv-and-deep-learning/)
-[Day 2: OpenCV Tutorial: A Guide to Learn OpenCV](https://www.pyimagesearch.com/2018/07/19/opencv-tutorial-a-guide-to-learn-opencv/)
-[Day 3: How to Build a Kick-Ass Mobile Document Scanner in Just 5 Minutes]()
-[Day 4: Bubble sheet multiple choice scanner and test grader using OMR, Python and OpenCV](https://www.pyimagesearch.com/2016/10/03/bubble-sheet-multiple-choice-scanner-and-test-grader-using-omr-python-and-opencv/)
-[Day 5: Ball Tracking with OpenCV](https://www.pyimagesearch.com/2015/09/14/ball-tracking-with-opencv/)
-[Day 6: Measuring size of objects in an image with OpenCV](https://www.pyimagesearch.com/2016/03/28/measuring-size-of-objects-in-an-image-with-opencv/)
-[Day 8: Facial landmarks with dlib, OpenCV, and Python](https://www.pyimagesearch.com/2017/04/03/facial-landmarks-dlib-opencv-python/)
-[Day 9: Eye blink detection with OpenCV, Python, and dlib](https://www.pyimagesearch.com/2017/04/24/eye-blink-detection-opencv-python-dlib/)
-[Day 10: Drowsiness detection with OpenCV](https://www.pyimagesearch.com/2017/05/08/drowsiness-detection-opencv/)
-[Day 12: A simple neural network with Python and Keras](https://www.pyimagesearch.com/2016/09/26/a-simple-neural-network-with-python-and-keras/)
-[Day 13: Deep Learning with OpenCV](https://www.pyimagesearch.com/2017/08/21/deep-learning-with-opencv/)
-[Day 14: How to (quickly) build a deep learning image dataset](https://www.pyimagesearch.com/2018/04/09/how-to-quickly-build-a-deep-learning-image-dataset/)
-[Day 15: Keras and Convolutional Neural Networks (CNNs)](https://www.pyimagesearch.com/2018/04/16/keras-and-convolutional-neural-networks-cnns/)
-[Day 16: Real-time object detection with deep learning and OpenCV](https://www.pyimagesearch.com/2017/09/18/real-time-object-detection-with-deep-learning-and-opencv/)
+### July 30, 2021 (Day 43)
+Updates:
+* Wanted to find a way to calculate some form of accuracy metric for the UNet model. Found a site which explained the differnet metrics [here](https://www.jeremyjordan.me/evaluating-image-segmentation-models/).
+* Created a dataset of 100 good labeled images (no overestimations, 'perfect') for the ground truth and their corresponding U-Net predictions as the predicted images
+* Developed small program for calculating mIoU. Can be found on GitHub [here](https://github.com/waggle-sensor/summer2021/tree/main/Li/project_code/validation).
+* The mIoU score was 0.565. 
+* Finished most of the paper on Overleaf, including figures and citations. Need abstract.
 
--->
+To Do:
+* Clean up work. 
+* Finish deliverables.
+
+<br />
+
+### August 2, 2021 (Day 44)
+Updates:
+* Finished abstract of final report.
+* Finished general abstract for SULI and Waggle submission. 
+
+
+<br />
+
+### August 3, 2021 (Day 45)
+Updates:
+* Finished abstract of final report.
+* Finished general abstract for SULI and Waggle submission. 
+* Final preparations before LOTL. 
+
+<br />
+
+### August 4, 2021 (Day 46)
+Updates:
+* Attended first day of LOTL, listened to presentations from Data Science and Learning room. 
+* Finished peer review deliverable for SULI.
+* Finished blog post for Sage page.
+* Finished IEEE paper for Waggle deliverable.
+* All the deliverables can be found in [here](https://drive.google.com/drive/u/1/folders/17H-9oy44mr7v-a8WKK2ZXEFDcvKK7BUk).
+
+<br />
+
+### August 5, 2021 (Day 47)
+Updates:
+* Attended second day of LOTL, presented my project in Math and Computer Science room. 
+* Submitted all SULI deliverables on WDTS.
+* Finished post-internship survey.
+* Extracted leftmost rods in images. Ran U-Net model to see what would happen. Turns out the model is able to detect these rods and not be confused by structure in the back. Perhaps running more images in trianing model would improve the results. The data and results can be found [here](https://drive.google.com/drive/folders/1WyXpXlkeGAPwjyLpctJHro0A_E49SdFU?usp=sharing).
+* Worked on ECR submission. I encountered error uploading results from model.
+
+<br />
+
+### August 6, 2021 (Day 48)
+Updates:
+* Uploaded plugin into ECR. 
+* Updated ecr git repo with 'ecr-meta' file. 
+* The git repo for the plugin can be found [here](https://github.com/waggle-sensor/plugin-pole-detector).
+* Cleaned up Git/Drive and commented on programs, making sure future contributors can understand what I worked on.
+
+
 
 <!-- ## Heading 2
 ### Heading 3

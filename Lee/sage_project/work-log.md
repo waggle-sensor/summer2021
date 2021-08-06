@@ -21,12 +21,6 @@
 * Sign in MIRO and JIRA
   (I guess MIRO is for planning, and JIRA is for process management. I need to read the guidelines again this week, especially calculating team capacities.)
 * Followed up simple tutorials of Github: https://www.youtube.com/watch?v=tC8Xj_Bf8Fw&t=618s
-* Pull first before Push
-     * git pull origin master
-     * git status
-     * git add . (tracking)
-     * git commit -m "message" (commit)
-     * git push origin +master
 
 -Today's Technical Tasks
 * Read up Docker tutorials and installed on my RPI
@@ -421,7 +415,7 @@ ENV PATH $PATH:$JAVA_HOME/bin
 * Still testing each node (now currently working with only temp topic)
 
   
-### Wednesday, 30th
+### Wednesday, 30th (BirthDay hehe)
 -Today's Non-Technical Tasks
 * Attended EDU Weekly Seminar Series
 * Short meeting with PhD program advisor
@@ -559,9 +553,10 @@ ENV PATH $PATH:$JAVA_HOME/bin
   
 ### Wednesday, 21th
 -Today's Non-Technical Tasks
+* Meeting with teams UAV Ground Scanning System: Human Detectionwith Deep Learning: Need to figure out local running GPU at KSQ building
 * Attended EDU Weekly Seminar Series: How to Establish Your Personal Brand
 * Meeting with Brandon and Larry (Docker and VM)
-* Amazing meeting with Sean to talk about Docker port numbers (Thank you so much)
+* Super nice meeting with Sean to talk about Docker port numbers (Thank you so much)
 * Still working on write papers with Korean students
   
 -Today's Technical Tasks
@@ -632,6 +627,7 @@ ENV PATH $PATH:$JAVA_HOME/bin
   
 ### Wednesday, 28th
 -Today's Non-Technical Tasks
+* Meeting with teams UAV Ground Scanning System: Human Detectionwith Deep Learning
 * Attended scrum
 * Had a meeting with Joe and discuss about the SDR query for next steps (with funcx)
 * Attended final intern presentation
@@ -680,5 +676,37 @@ ENV PATH $PATH:$JAVA_HOME/bin
 ### Monday, 2th
 -Today's Non-Technical Tasks
 * Attended scrum
+* Read up MDML: https://labs.globus.org/pubs/Elias_MDML_2020.pdf to work on writing paper
   
 -Today's Technical Tasks
+* Fininshed cleaning Node-RED code (Beginner part) and uploading at github
+
+-Things to do:
+* Add all references to paper
+
+### Tuesday, 3th
+-Today's Non-Technical Tasks
+* solved out kronos timecard issue
+* still uploading Node-RED code on Waggle Summer 2021 Github. Available at [Node-RED_Sage.md](https://github.com/waggle-sensor/summer2021/blob/main/Lee/nodered_examples/Node-RED_SAGE.md)
+  
+-Today's Technical Tasks
+* still working on SDR querying UI issue
+  
+  ![image](https://user-images.githubusercontent.com/56851781/128386145-3fec9fa6-df8d-400b-99de-9e1bd75f21ff.png)
+
+  
+### Wednesday, 4th
+-Today's Non-Technical Tasks
+* Meeting with teams UAV Ground Scanning System: Human Detectionwith Deep Learning: Need to figure out local running GPU at KSQ building
+* Meeting with teams UAV ground detection and tracking systems: Tree detection and tracking change species and amount of tree
+  
+-Today's Technical Tasks
+* change JavaScript code: .filter() instaed of using loops
+* `FILTER` Average 0.019943333354603965
+* `LOOP` Average 0.02598666658741422 (Slowest)
+* Reference: http://www.andygup.net/fastest-way-to-find-an-item-in-a-javascript-array/
+* code ref: https://jsfiddle.net/agup/Y8SBL/10/
+* decription ref: https://developer.mozilla.org/en-US/docs/Web/API/Performance
+  
+  
+  
