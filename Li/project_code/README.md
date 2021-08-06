@@ -26,9 +26,8 @@ Required modules:
 
 
 
-Here is a flow chart of the proposed algorithm. The third step has not been achieved, yet. 
+Here is a flow chart of the proposed algorithm. The third step has not been completed due to time constraints.
 
-
-![Flow Chart](./fig3.png=500)
+![Flow Chart](./fig3.png =500x)
 
 
