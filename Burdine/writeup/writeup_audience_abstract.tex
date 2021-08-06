@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in,footskip=0.25in]{geometry}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage[font=small,tableposition=top]{caption}
+\DeclareCaptionLabelFormat{andtable}{#1~#2  \&  \tablename~\thetable}
+
+\setcounter{table}{0}
+
+\author{Colin Burdine $|$ Summer 2021 SULI Intern \\[6mm] Argonne National Laboratory, MCS Division}
+\title{Anomaly Localization in Images at the Edge }
+\date{August 4, 2021}
+
+\begin{document}
+\maketitle
+
+%========================= MACROS ===========================
+
+
+%======================== TITLE PAGE ========================
+
+
+\begin{center}\textbf{General Audience Abstract}\end{center}
+
+In this paper we present a framework for both online and offline machine learning models that determine the locations of anomalies in images if they are present.  We present this framework with an emphasis on the use case of \textit{edge computing}, in which the model is deployed on a small embedded device and makes predictions autonomously using data acquired by the device in the field. To identify anomalies, we use a machine learning model called a \textit{convolutional autoencoder} and introduce some novel techniques to increase the accuracy of this model while minimizing its usage of memory and other computational resources. We also evaluate our framework on an image dataset generated from the \textit{National Ecological Observatory Network} (NEON) phenology camera database. This project serves as both a benchmark and a proof-of-concept that online unsupervised anomaly localization is feasible at the edge.
+
+\begin{figure}
+\begin{center}
+\begin{tabular}{l r}
+\includegraphics[scale=0.08]{figures/doe_emblem} \qquad
+& \qquad\includegraphics[scale=0.5]{figures/argonne_logo} 
+\end{tabular}
+\end{center}
+\end{figure}
+
+\end{document}

@@ -46,7 +46,7 @@
 
 \title{\Huge Online Anomaly Localization in \\ Images at the Edge} % Poster title
 
-\author{Colin Burdine \hspace{1cm} (\texttt{cburdine@baylor.edu})} % Author(s)
+\author{Colin Burdine \hspace{1cm} (\texttt{colin\_burdine1@baylor.edu})} % Author(s)
 
 \institute{SULI Intern $\mid$ Argonne National Laboratory $\mid$ MCS Division} % Institution(s)
 
@@ -156,9 +156,9 @@ where the means are taken across all channels and pixels. We empirically selecte
 \begin{itemize}
 \item To localize anomalies, we proposed a novel method which fitted the mean square error loss $(x_p)$ of each pixel to a \textit{exponential moving gamma distribution}, so that $x_p \sim \Gamma(\kappa_p(t), \theta_p(t))$ with time-dependent gamma parameters $\kappa_p(t), \theta_p(t)$.
 
-\item To determine if a pixel is part of an anomaly, we performed a ``per-pixel p-value test" for a given approximate anomaly probability $\alpha$ close to 0.
+\item To determine if a pixel is part of an anomaly, we performed a ``per-pixel p-value test" for a given approximate anomaly probability $\alpha$ close to 0. This helps to account for background noise.
 
-\item This gamma distribution filter accounts for background noise in images, while also only requiring a constant number of parameters to be stored per pixel, making it ideal for edge computing systems with limited memory.\\[6mm]
+%\item This gamma distribution filter accounts for background noise in images, while also only requiring a constant number of parameters to be stored per pixel, making it ideal for edge computing systems with limited memory.\\[6mm]
 \end{itemize}
 
 \item\textbf{Simulated Online Training}
@@ -167,9 +167,16 @@ where the means are taken across all channels and pixels. We empirically selecte
 
 \item In the \textit{calibration phase}, the model is trained on a small set of 100 training examples to avoid an initial high false positive rate. The parameters of the gamma distribution filter are also set.
 
-\item After calibration, the model is deployed in a \textit{simulated online} phase where the model is given each sequential image in the dataset. For each image, the model performs small weight updates and small updates to the gamma distribution filter parameters. All detected anomalies are recorded during this phase.
+\item After calibration, the model is deployed in a \textit{simulated online} phase where the model is given each sequential image in the dataset. For each image, the model performs small weight updates on a set of buffered images.
+
+\item The buffered images are retained using a data structure called an \textit{exponential heap sampler}, or EHQ. This structure has exponentially distributed retention times.\\[6mm]
 \end{itemize}
 \end{itemize}
+
+%\begin{figure}[H]
+%\includegraphics[scale=0.5]{figures/exponential_heap_sampler}
+%\end{figure}
+
 \end{block}
 
 %------------------------------------------------
@@ -192,29 +199,29 @@ where the means are taken across all channels and pixels. We empirically selecte
 \item\textbf{Use of the Gamma Distribution Filter}\\[6mm]
 
 \begin{figure}
-\fbox{\includegraphics[scale=1.2]{figures/gamma_filter}}
-\fbox{\includegraphics[scale=1.2]{figures/gamma_filter_noise}}
+\fbox{\includegraphics[scale=1.1]{figures/gamma_filter}}\qquad
+\fbox{\includegraphics[scale=1.1]{figures/gamma_filter_noise}}
 \caption{Distribution of the mean reconstruction loss (left) and estimated \\
 background noise in the form of a log-variance map (right).}
 \end{figure}
 
-\begin{itemize}
-\item As illustrated in Figure 2, we observed that the reconstruction loss is best fitted by a gamma distribution, which justifies the use of the gamma distribution filter.
-
-\item We also observed from the background noise map that some parts of the image vary more than others due to noise in the reconstruction loss. We verified that accounting for the background noise gives more robust predictions.\\[6mm]
-
-\end{itemize}
-\item\textbf{Prediction Localization}
+%\begin{itemize}
+%\item As illustrated in Figure 2, we observed that the reconstruction loss is best fitted by a gamma distribution, which justifies the use of the gamma distribution filter.
+%
+%\item We also observed from the background noise map that some parts of the image vary more than others due to noise in the reconstruction loss. We verified that accounting for the background noise gives more robust predictions.\\[6mm]
+%
+%\end{itemize}
+\item\textbf{Prediction Localization}\\[4mm]
 \begin{figure}
 
-\begin{itemize}
-\item As shown in Figure 3, our model obtained qualitatively good anomaly localization. The bounding boxes shown were computed to enclose the contours of the anomalous pixels that were output from the gamma distribution filter.\\[6mm]
-\end{itemize}
-\includegraphics[scale=0.7]{figures/anomalies}
+%\begin{itemize}
+%\item As shown in Figure 3, our model obtained qualitatively good anomaly localization. The bounding boxes shown were computed to enclose the contours of the anomalous pixels that were output from the gamma distribution filter.\\[6mm]
+%\end{itemize}
+\includegraphics[scale=0.6]{figures/anomalies}
 \caption{Examples of \textit{true positive} predictions generated by the model.\qquad\quad~}
 \end{figure}
 
-\item \textbf{Accuracy and Impact of Attention Expansion}\\[6mm]
+\item \textbf{Accuracy and Impact of Attention Expansion (Offline)}\\[6mm]
 
 \begin{figure}
 \scriptsize
@@ -232,6 +239,32 @@ background noise in the form of a log-variance map (right).}
 \caption{Comparison of example attention maps (a) and ROC Curves (b) \\ with and without attention expansion.}
 \end{center}
 \end{figure}
+\end{itemize}
+
+\begin{itemize}
+
+\item \textbf{Accuracy and Impact of EHQ Size (Online) }\\[2mm]
+
+\begin{figure}[H]
+\begin{tabular}{c c}
+\begin{tabular}{c}
+\includegraphics[scale=1.1]{figures/ehs_rocs}\qquad\qquad 
+\end{tabular} & \begin{tabular}{|c|c|}
+\hline
+\small\textbf{EHS Size} & \small\textbf{AUROC} \\
+\hline
+10 & 0.620 \\
+\textbf{20} & \textbf{0.677} \\
+40 & 0.633 \\
+60 & 0.632 \\
+\hline
+(Offline) & \textbf{0.738} \\
+\hline
+\end{tabular}
+\end{tabular}
+\caption{Plots of the Online ROC curves for varying Exponential Heap Sampler \\
+sizes (left) and a table of the areas under the curves (right).}
+\end{figure}
 
 \end{itemize}
 
@@ -240,12 +273,12 @@ background noise in the form of a log-variance map (right).}
 \begin{block}{Conclusions}
 
 \begin{itemize}
-
-\item Anomaly localization, especially in an unsupervised online setting is a difficult task and requires a careful choice of model to perform well.
-\item Despite this, we achieved a reasonable amount of success with an online CAE using novel techniques such as a gamma distribution fitler, as well as recently discovered techniques such as attention expansion. These techniques yielded an AUROC of 0.738.
+\small{
+\item Anomaly localization in an unsupervised online setting is a difficult task and requires a careful selection of the model to perform well.
+\item We achieved a reasonable amount of success with an online CAE (Figure 1). These techniques yielded an online AUROC of 0.677, which was close to the offline AUROC of 0.738.
 \item We hope that future work can be done to improve upon the accuracy of this model in an unsupervised online setting.\\[2mm]
+}
 \end{itemize}
-
 \end{block}
 \end{column} % End of the second column
 

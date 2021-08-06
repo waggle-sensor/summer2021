@@ -1,0 +1,9 @@
+name: "LCL-Pressure-prediction"
+description: "A plugin predicting the LCL Pressure and Temperature. "
+version : "0.1.0"
+source:
+  architectures :
+    - "linux/amd64"
+    - "linux/arm64"
+  url: "https://github.com/Dash/waggle-sesnor/summer2021/main/Dash/lclpressureplugin"
+  branch: "main"

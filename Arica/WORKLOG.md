@@ -768,3 +768,13 @@ TODO:
 * Proofread
 
 -------------
+
+### Wednesday, Thursday, Friday, 8/4-6 (8 Hours worked)
+ 
+* Finished all deliverables 
+* Finished my side of honeycomb and it's docs 
+* Said my goodbyes 
+
+Thank you SAGE for a great summer. I'll be back, don't you worry!!!!!!!
+
+-------------
