@@ -279,22 +279,23 @@ Completed profiling in Jenkins and storing results in sage-ecr_db
 
 - Created a Video presentation for Learning of the Lawn.
 
-#### Tuesday July 27, 2021 ####
+#### Tuesday August 3, 2021 ####
 
+- Demoed app profiling in ECR
 
+#### Wednesday August 4, 2021 ####
 
+- final presentation learning off the lawn
+- Created a PR profile code in [branch](https://github.com/sagecontinuum/sage-ecr/tree/profiling-feature-draft)
 
+#### Thursday August 5, 2021 ####
 
+- Completed profile documentation
+- Writing white paper
 
+#### Friday August 6, 2021 ####
 
-
-
-
-
-
-
-
-
+- last day meeting
 
 
 ### Learning Resources and References ###
@@ -305,6 +306,4 @@ Completed profiling in Jenkins and storing results in sage-ecr_db
 4. [ECR Application Testing flow diagram](https://drive.google.com/file/d/1rnv8dIyr29y6SvSCzZHq5Z-5J0xo3wlz/view?usp=sharing)
 5. [ECR Discussion](https://docs.google.com/document/d/135ZKehdaxrsKMNi4CTNVXJbzZDDNMD9sIFfVVf5NzMc/edit)
 6. [Mid Internship](https://docs.google.com/presentation/d/16kiERiqq-tQBJg4YgfQn4j4VF1rrl0aUIJVfkSNFwoo/edit?usp=sharing)
-
-
 
