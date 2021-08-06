@@ -29,6 +29,6 @@ Required modules:
 Here is a flow chart of the proposed algorithm. The third step has not been achieved, yet. 
 
 
-![Flow Chart](./fig3.png=100)
+![Flow Chart](./fig3.png=500)
 
 
