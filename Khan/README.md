@@ -3,7 +3,7 @@
 #### Author: Samaah Khan
 #### Collaborators: Dr. Nicola Ferrier
 
-## Description
+## Description / Abstract for General Audience
 The broken window theory suggests that disordered environments 
 are correlated with rule-breaking and social disorder. To aid 
 social scientists in studying this hypothesis, I created software 
