@@ -286,7 +286,7 @@ Completed profiling in Jenkins and storing results in sage-ecr_db
 #### Wednesday August 4, 2021 ####
 
 - final presentation learning off the lawn
-- Created a PR profile code in (branch)[https://github.com/sagecontinuum/sage-ecr/tree/profiling-feature-draft]
+- Created a PR profile code in [branch](https://github.com/sagecontinuum/sage-ecr/tree/profiling-feature-draft)
 
 #### Thursday August 5, 2021 ####
 
