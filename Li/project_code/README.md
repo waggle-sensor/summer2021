@@ -7,6 +7,9 @@ This section is dedicated to programs I worked on during the summer. A brief des
 * [unet_training](./unet_training): Trains U-Net model with labeled images.
 * [validation](./validation): Calculates mean Interception over Union (mIoU) score. 
 
+Here is a flow chart of the proposed algorithm. The third step has not been achieved, yet. 
+![Flow Chart](./SULI Algorithm 03.jpg)
+
 
 Required modules:
     cv2
