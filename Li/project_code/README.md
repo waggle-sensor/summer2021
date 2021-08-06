@@ -26,8 +26,7 @@ Required modules:
 
 
 
-Here is a flow chart of the proposed algorithm. The third step has not been completed due to time constraints.
+Below is a flow chart of the proposed algorithm. The first step is automatically generating labels for images. The second step is using labeled images to traing the U-Net model. The third step is calculating snow depth. As of August 6, 2021, steps one and two have been completed.
 
-![Flow Chart](./fig3.png =500x)
-
+![Flow Chart](./fig3.png )
 
