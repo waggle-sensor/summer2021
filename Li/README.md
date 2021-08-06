@@ -4,9 +4,9 @@ Greetings! My name is Jeffrey Li. I recently graduated from Emory University thi
 
 There are many components in this project, so it can be easy to get lost. However, I incorporated a README file in each section, with the hope of helping you find what you need. 
 
-* Readings: Readily available PDFs of literature I read or implemented into my project. 
-* project_code: Working Python programs!
-* DailyLog.md: Day-to-day journals documenting updates that occur when working on the project or other tasks during the internship.
+* [Readings](./Readings): Readily available PDFs of literature I read or implemented into my project. 
+* [project_code](./project_code): Working Python programs!
+* [DailyLog.md](./DailyLog.md): Day-to-day journals documenting updates that occur when working on the project or other tasks during the internship.
 
 Other useful links:
 * [Sage Site](https://sagecontinuum.org/science/snow-rod-segmentation): Small blog post on my work at Argonne. 
