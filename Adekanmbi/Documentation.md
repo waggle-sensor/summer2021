@@ -27,7 +27,7 @@ SageECR.Profiles
 
 app.add_url_rule('/profile/<string:namespace>/<string:repository>/<string:version>' view_func=Profile_build.as_view('profilebuildAPI'))
 
-class definition for profiling. [Using pluggable views] (https://flask.palletsprojects.com/en/2.0.x/views/#method-views-for-apis). The class consist of get and post functions that processes both the GET and POST request respectively.
+class definition for profiling. Using [pluggable](https://flask.palletsprojects.com/en/2.0.x/views/#method-views-for-apis). The class consist of get and post functions that processes both the GET and POST request respectively.
 
 def get - function retrieves the app information stored in ECR database returns a build information or error if app not found.
 def post - function calls profile_app function as well a returning build information
@@ -423,7 +423,8 @@ jenkinsfileTemplateProfile = '''
 
 1. Build ECR with command
 
-```./run.sh -d --build
+  ```
+    ./run.sh -d --build
   ```
 
 2. Follow [documentation](https://github.com/sagecontinuum/sage-ecr/blob/master/docs/api_spec.md) to submit app
