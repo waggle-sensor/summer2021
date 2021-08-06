@@ -1,6 +1,12 @@
 Documentation for the implementing of profiling in ECR
 
+#### API Endpoint to trigger profiling
 
+Use this to trigger a app profile build in Jenkins
+
+```
+curl -X POST ${ECR_API}/profile/sage/simple/1.0 -H "Authorization: sage token1"
+```
 
 #### Profile Database Schema
 
@@ -17,16 +23,14 @@ SageECR.Profiles
 | app_profile | VARCHAR(256) |
 | INDEX(id, namespace, name, version) |
 
-
-
 #### ecr_api.py 
-
-to trigger a app profile build in jenkins
-curl -X POST ${ECR_API}/profile/sage/simple/1.0 -H "Authorization: sage token1"
 
 app.add_url_rule('/profile/<string:namespace>/<string:repository>/<string:version>' view_func=Profile_build.as_view('profilebuildAPI'))
 
-api endpoint calls the profile_build method
+class definition for profiling. [Using pluggable views] (https://flask.palletsprojects.com/en/2.0.x/views/#method-views-for-apis). The class consist of get and post functions that processes both the GET and POST request respectively.
+
+def get - function retrieves the app information stored in ECR database returns a build information or error if app not found.
+def post - function calls profile_app function as well a returning build information
 
 ```
 class Profile_build(MethodView):
@@ -63,7 +67,8 @@ class Profile_build(MethodView):
 
 ```
 
-2. 
+2. def profile_app - function checks if there are any current Jenkins jobs and triggers a Jenkins job to build the required app.
+
 
 ```
 def profile_app(requestUser, isAdmin, namespace, repository, version, skip_image_push=False):
@@ -162,7 +167,7 @@ def profile_app(requestUser, isAdmin, namespace, repository, version, skip_image
 
 ### jenkins_server.py
 
-3. 
+3. def createProfileJob - function triggers a profiling Jenkins job, using the Jenkins template app spec information are passed.
 
 ```
  
@@ -342,11 +347,11 @@ def createPipelineJobConfig(jenkinsfile, displayName):
 
 ```
 
-
 ### config.py
 
-```
+jenkinsfileTemplateProfile - defines the Jenkins template used by the Jenkins job.
 
+```
 jenkinsfileTemplateProfile = '''
   node('master') {        
             stage ('Profile Build'){
@@ -414,15 +419,23 @@ jenkinsfileTemplateProfile = '''
 
 ```
 
+### How to run app profile
 
+1. Build ECR with command
 
+```./run.sh -d --build
+  ```
 
+2. Follow [documentation](https://github.com/sagecontinuum/sage-ecr/blob/master/docs/api_spec.md) to submit app
 
+3. Trigger app profile command
 
+```
+curl -X POST ${ECR_API}/profile/{namespace}/{name}/{version} -H "Authorization: sage token1"
+e.g curl -X POST ${ECR_API}/profile/sage/simple/1.0 -H "Authorization: sage token1"
+```
 
-
-
-### How to debug and verify database 
+### How to debug and verify database
 
 1. docker ps
 2. docker -ti exec "mysql container id" bash
@@ -430,4 +443,4 @@ jenkinsfileTemplateProfile = '''
 4. show databases;
 5. use SageECR;
 6. show tables;
-7. Select * From Apps;
+7. Select * From Profiles;
