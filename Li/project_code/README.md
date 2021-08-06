@@ -9,18 +9,18 @@ This section is dedicated to programs I worked on during the summer. A brief des
 
 
 Required modules:
-cv2
-glob
-time
-os
-sklearn
-collections
-webcolors
-torch
-tqdm
-argparse
-sys
-numpy
-torchvision
-PIL
-logging
+    cv2
+    glob
+    time
+    os
+    sklearn
+    collections
+    webcolors
+    torch
+    tqdm
+    argparse
+    sys
+    numpy
+    torchvision
+    PIL
+    logging
