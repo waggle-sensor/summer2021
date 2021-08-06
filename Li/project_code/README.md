@@ -8,7 +8,7 @@ This section is dedicated to programs I worked on during the summer. A brief des
 * [validation](./validation): Calculates mean Interception over Union (mIoU) score. 
 
 Here is a flow chart of the proposed algorithm. The third step has not been achieved, yet. 
-![Flow Chart](./SULI Algorithm 03.png)
+![Flow Chart](./fig1.png)
 
 
 Required modules:
