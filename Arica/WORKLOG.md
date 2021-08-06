@@ -742,3 +742,29 @@ TODO for the coming monday:
 * Write all of my deliverables
 * Wrote docs on Thursday / Friday
 -----------
+
+## Week 12: 8/2 to 8/6
+
+------------
+
+### Monday, 8/2 (8 Hours worked)
+
+**Today's non-technical work:**
+* Wrote first third of white paper
+
+-------------
+
+### Tuesday, 8/3 (8 Hours worked)
+
+**Today's non-technical work:**
+* Wrote most of the rest of white paper 
+* Wrote abstract, now on github 
+
+TODO: 
+* Write blog article
+* Add all references to paper
+* Fill in citations on paper 
+* Write acknowledgements
+* Proofread
+
+-------------

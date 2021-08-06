@@ -330,10 +330,10 @@
 - EDU Weekly Seminar
 - Practiced/gave final presentation
 - Converted the magnitude of the motion output by optical flow to m/s to compare to actual observations at the SGP site
-    * Using the 18Z sounding out of Lamont, OK and the ceilometer at the ARM Central Facility
-    * Clouds base is around ~600-700 meters AGL on both; from sounding text/Skew-T it looks like winds are northerly at ~16 knots (~8.2 m/s) in 600-900 meter layer
-    * Optical flow is giving average speeds over the two hour (17-19Z) period of around 5.5 m/s. I'm using the 2 hour average because there's huge varability in the speed between consecutive images (<0.1 m/s to 40 m/s for some pixels). Also a lot of variability from pixel to pixel.
-    * Wind directions from optical flow are all over the place (at least directly over the site). 
+    * Using the 18Z sounding out of Lamont, OK
+    * From Skew-T it looks like winds are between 5-10 m/s. Winds are out of the north in the cloud layer and out of west-southwest just above
+    * Optical flow is giving average speeds over the two hour (17-19Z) period of around 5.8 m/s. I'm using the 2 hour average because there's huge varability in the speed between consecutive images (<0.1 m/s to 40 m/s for some pixels). Also a lot of variability from pixel to pixel.
+    * Average wind direction from optical flow over 2 hour period is 127 degrees. Which appears to be WSW according to: https://stackoverflow.com/questions/41824305/what-is-the-reference-point-for-measuring-angles-in-opencv. Couldn't find any actual documentation on the reference point for direction.
 
 ### June 29
 - Clouds/CV meeting
@@ -342,3 +342,42 @@
 
 ### June 30
 - Working on deliverables
+
+## Week 10
+### August 2
+- Finished draft of the paper over the weekend
+- Finished final powerpoint for Learning Off the Lawn presentation
+- Uploaded final powerpoint and a recording of the presentation
+- Wrote the 3 required abstracts (paper, general audience, presentation)
+- To do:
+    * More paper edits
+    * Format references
+    * Write the blog for Sage site
+    * Update ECR meta folder
+    * Clean up radar code and get it into ECR
+    * Final presentation & peer review paper
+
+### August 3/4
+- Wrote/edited Sage blog
+- Edited all 3 abstracts which are done along with the powerpoint
+- Post internship survey on Workday
+- Post internship survey on on WDTS portal
+- Finished ecr-meta files for the satellite plugin
+- Cleaned up both versions of the radar code and the optical flow code
+- Attended and presented at Learning Off the Lawn Day 1
+- To do:
+    * Format references
+    * Post Sage blog
+    * Finish paper edits
+    * Peer review
+
+### August 5
+- Learning Off the Lawn Day 2
+- Peer review
+- Formatted/organized references
+- More edits on paper
+- Submitted peer review, presentation, general audience abstract
+- Tomorrow: 
+    * Submit Sage blog
+    * Finish last paper edits and submit
+    * Give Jeremy everything to finish up ECR/plugins

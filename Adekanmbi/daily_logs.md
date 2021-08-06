@@ -5,7 +5,7 @@
 - [X] Create how to test app after docker build
 - [X] Trigger app profiling per app/input
 - [ ] Send defined profile metric to scheduler
-- [ ] Integrate app profiler into ECR
+- [X] Integrate app profiler into ECR
 - [ ] Send App profile to scheduler
 
 ### Week 1 ###
@@ -236,34 +236,66 @@
 
 - Integrated Luke`s Jenkins Code in ECR.
 - Additional Things work on
-       1. Check if Jenkins can collect files ?
-	   2. Have the pipeline upload the results to ECR, only the pipeline know a the password to upload file (store using secret)
-       3. if profiling output is small enough to include in log file output (maybe base64)
+
+       - Check if Jenkins can collect files ?
+
+       - Have the pipeline upload the results to ECR, only the pipeline know a the password to upload file (store using secret)
+
+       - if profiling output is small enough to include in log file output (maybe base64)
+
+
+### Week 9 ###
+
+------------
+
+#### Monday July 26, 2021 ####
+
+- Debug of shared volume between Application and Jenkins directory to store profiling outputs. 
+
+#### Tuesday July 27, 2021 ####
+
+- Worked on final internship power point presentation  
+
+#### Wednesday July 28, 2021 ####
+
+- Final internship presentation on Sage: Edge Code Repository Application testing and profiling
+
+
+#### Thursday July 29, 2021 ####
+
+- Worked on integrating profiler in ECR
+
+#### Friday July 30, 2021 ####
+
+Completed profiling in Jenkins and storing results in sage-ecr_db 
 
 
 
+### Week 10 ###
 
+------------
 
+#### Monday August 2, 2021 ####
 
+- Created a Video presentation for Learning of the Lawn.
 
+#### Tuesday August 3, 2021 ####
 
+- Demoed app profiling in ECR
 
+#### Wednesday August 4, 2021 ####
 
+- final presentation learning off the lawn
+- Created a PR profile code in [branch](https://github.com/sagecontinuum/sage-ecr/tree/profiling-feature-draft)
 
+#### Thursday August 5, 2021 ####
 
+- Completed profile documentation
+- Writing white paper
 
+#### Friday August 6, 2021 ####
 
-
-
-
-
-
-
-
-
-
-
-
+- last day meeting
 
 
 ### Learning Resources and References ###
@@ -274,6 +306,4 @@
 4. [ECR Application Testing flow diagram](https://drive.google.com/file/d/1rnv8dIyr29y6SvSCzZHq5Z-5J0xo3wlz/view?usp=sharing)
 5. [ECR Discussion](https://docs.google.com/document/d/135ZKehdaxrsKMNi4CTNVXJbzZDDNMD9sIFfVVf5NzMc/edit)
 6. [Mid Internship](https://docs.google.com/presentation/d/16kiERiqq-tQBJg4YgfQn4j4VF1rrl0aUIJVfkSNFwoo/edit?usp=sharing)
-
-
 

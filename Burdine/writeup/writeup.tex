@@ -6,10 +6,14 @@
 \usepackage{enumitem}
 \usepackage{amsmath}
 \usepackage{float}
+\usepackage[font=small,tableposition=top]{caption}
+\DeclareCaptionLabelFormat{andtable}{#1~#2  \&  \tablename~\thetable}
+
+\setcounter{table}{0}
 
 \author{Colin Burdine $|$ Summer 2021 SULI Intern \\[6mm] Argonne National Laboratory, MCS Division}
 \title{Anomaly Localization in Images at the Edge }
-%\date{}
+\date{August 4, 2021}
 
 \begin{document}
 \maketitle
@@ -86,7 +90,7 @@ In Figure~\ref{fig:simple_jpeg} we can see that the accuracy of an anomaly detec
 
 \subsection{Convolutional Autoencoders}
 
-Convolutional autoencoders are a type of deep learning model that can be used to compress image data into a lower-dimensional representation. Unlike classical methods, convolutional autoencoders are capable of extracting robust non-linear features from images. This is accomplished through the use of convolutional filters and dense neural networks with weights that are fitted to minimize the reconstruction loss of a set of images. Convolutional autoencoders are comprised of two parts: the convolutional layers (the ``encoder") and the deconvolutional layers (the ``decoder"). These parts are shown in Figure~\ref{fig:conv_autoencoder}:
+Convolutional autoencoders (CAEs) are a type of deep learning model that can be used to compress image data into a lower-dimensional representation. Unlike classical methods, CAEs are capable of extracting robust non-linear features from images. This is accomplished through the use of convolutional filters and dense neural networks with weights that are fitted to minimize the reconstruction loss of a set of images. CAEs are comprised of two parts: the convolutional layers (the ``encoder") and the deconvolutional layers (the ``decoder"). These parts are shown in Figure~\ref{fig:conv_autoencoder}:
 
 \begin{figure}[H]
 \begin{center}
@@ -103,7 +107,7 @@ L_{MSE}(X) = \frac{1}{|X|}\sum_{i=1}^{|X|}  (x_i - \hat{x}_i)^2
 \label{eqn:loss_mse}
 \end{equation}
 
-where the summation in \eqref{eqn:loss_mse} is carried out across all corresponding elements and channels $x_i$ in $X$. Once the loss function $L_{MSE}$ is used to train the model, anomalies can be localized by computing the reconstruction loss map, which is the pixel-wise reconstruction mean square error computed across channels only. As shown in Figure~\ref{fig:cae_output_example}, trained convolutional autoencoders are capable of reducing images down to relatively few features with minimal reconstruction loss:
+where the summation in \eqref{eqn:loss_mse} is carried out across all corresponding elements and channels $x_i$ in $X$. Once the loss function $L_{MSE}$ is used to train the model, anomalies can be localized by computing the reconstruction loss map, which is the pixel-wise reconstruction mean square error computed across channels only. As shown in Figure~\ref{fig:cae_output_example}, trained CAEs are capable of reducing images down to relatively few features with minimal reconstruction loss:
 
 \begin{figure}[H]
 \begin{center}
@@ -115,7 +119,7 @@ where the summation in \eqref{eqn:loss_mse} is carried out across all correspond
 \end{tabular}
 \end{center}
 \label{fig:cae_output_example}
-\caption{An example of a trained convolutional autoencoder with 64 latent features compressing an original image (a) to produce a reconstructed image (b), resulting in the loss map (c).}
+\caption{An example of a trained CAE with 64 latent features compressing an original image (a) to produce a reconstructed image (b), resulting in the loss map (c).}
 \end{figure}
 
 %===================== METHODOLOGY ====================
@@ -144,7 +148,9 @@ Since no anomalies were detected in this dataset through manual inspection, thes
 
 \subsection{Model Architecture}
 
-The model we propose in this paper is an extension of a traditional convolutional autoencoder. The image inputs to the autoencoder were resized to 960 pixels high by 1280 pixels wide with standard RGB channels. 64 latent features were used.
+The model we propose in this paper is an extension of a traditional CAE. The image inputs to the autoencoder were resized to 960 pixels high by 1280 pixels wide with RGB channels. 64 latent features were extracted from the last convolutional layer with a fully connected layer. The convolutional autoencoder was implemented using the Keras layers API as a part of the Tensorflow Python framework. Leaky ReLU activation functions were used between layers due to their computational efficiency. The full implementation details of this model are given in Appendix~\ref{appendix:cae}.\\
+
+To improve upon the performance of a stand-alone autoencoder, we incorporated two mechanisms. The first is the use of attention expansion loss (as proposed in the CAVGA model by Venkataramanan et al.) as a form of regularization \cite{attention_anomalies}. The second mechanism we proposed is the use of a Gamma distribution filter to reduce false positive predictions. We propose this filter as a memory efficient alternative method of accounting for noise in the reconstruction error. In Figure~\ref{fig:cae_diagram} we illustrate how these two mechanisms are integrated into a traditional CAE architecture:
 
 \begin{figure}[H]
 \includegraphics[scale=0.3]{figures/cae_diagram}
@@ -152,34 +158,235 @@ The model we propose in this paper is an extension of a traditional convolutiona
 \label{fig:cae_diagram}
 \end{figure}
 
-
 \subsection{Attention Expansion}
+
+In the literature, it has been shown that attention-based mechanisms can significantly improve the accuracy of machine learning models, particularly in the fields of computer vision and natural language processing \cite{attention_iayn,image_transformers}. These mechanisms have also been employed with great success in the problem of anomaly detection \cite{attention_song, attention_anomalies}. In our model, we employed attention expansion loss, which penalizes the model for making the latent representation of the data sensitive to changes in small regions of the image.  The sensitivity of the latent data with respect to the input image cam be estimated through computing an attention map, which can be calculated from the output of the last convolutional layer of the encoder and the gradients of this last layer with respect to the latent features. The formula used to compute the attention map is the Grad-CAM algorithm (proposed by Selvaraju et al.) \cite{grad_cam}. With respect to the output of the filters $A^\ell$ of the last convolutional layer, the Grad-CAM attention map for all latent features $z_1, ..., z_n$ is given by \eqref{eqn:grad_cam}:
+
+\begin{equation}
+M_{\text{Grad-CAM}}(X) = \text{ReLU}\left[ \frac{1}{Z}\sum_{\ell} \left(\sum_{(i,j)}\sum_{k} \dfrac{\partial z_{k}}{\partial A^\ell_{(i,j)}} \right) A^\ell(X) \right]
+\label{eqn:grad_cam}
+\end{equation}
+
+\noindent In \eqref{eqn:grad_cam}, $Z$ is a normalizing constant, computed as the product of the number of filters, the number of elements in each $A^\ell$, and the number of latent features. Using the attention map $M_{\text{Grad-CAM}}$, we encourage the model to have an evenly distributed map by minimizing the attention expansion loss given by \eqref{eqn:loss_ae}:
+
+\begin{equation}
+L_{AE}(X) = \frac{1}{N_m}\sum_{i=1}^{N_m} (1 - [M_{\text{Grad-CAM}}(X)]_i)^2\qquad (\text{where } N_m = |M_{\text{Grad-CAM}}(X)|)
+\label{eqn:loss_ae}
+\end{equation}
+
+\noindent As the total loss function for the autoencoder, we used a weighted combination of the MSE loss and the attention expansion loss in \eqref{eqn:loss_weighted_total}, where we empirically selected $w_{MSE} = 1$ and $w_{AE} = 0.005$:
+
+\begin{equation}
+L(X) = w_{MSE}L_{MSE}(X) + w_{AE}L_{AE}(X)
+\label{eqn:loss_weighted_total}
+\end{equation}
+
+As mentioned earlier, the purpose of attention expansion is to reduce the sensitivity of the latent features with respect to small regions of the input image. The loss function $L_{AE}$ in \eqref{eqn:loss_ae} ensures that the attention map corresponding to an encoded image us uniformly distributed and thus not sensitive to changes in color in relatively small regions of the image. The effect of applying attention expansion is illustrated below in Figure~\ref{fig:attention_expansion}:
+
+\begin{figure}[H]
+\begin{tabular}{c c}
+\begin{tabular}{c}
+\includegraphics[scale=0.25]{figures/acae_heatmaps_0}\\[2mm]
+\end{tabular} & \begin{tabular}{c}
+\includegraphics[scale=0.225]{figures/acae_heatmaps}
+\end{tabular}\\
+(a) & (b) 
+\end{tabular}
+\caption{A comparison of the attention maps ($M_{\text{Grad-CAM}}(X)$) obtained without attention expansion (a) and with attention expansion (b). For illustration purposes, the maps are scaled up and overlaid on top of the input images ($X$).}
+\label{fig:attention_expansion}
+\end{figure}
+
+In Figure~\ref{fig:attention_expansion}(a) we see that the model is attending more to the sharp edges in the scene (the mountain horizon and building rooftops) and less to other regions of the scene (the trees, ground, and sky). After applying attention expansion, we see in Figure~\ref{fig:attention_expansion}(b) that the model attends evenly more to the scene as a whole instead of just attending to the sharp edges.
 
 \subsection{Gamma Distribution Filter}
 
+While it is possible to detect anomalies by finding the regions of an image where the reconstruction loss is above a certain threshold, this naive method is prone to flag regions of an image as anomalous that have a higher variance due to natural reconstruction noise. A better approach than the naive scheme is to flag regions of the image that have a reconstruction loss that is statistically higher than normal for their respective locations the image. To quantify the statistical significance of this deviation, we shall assume by the central limit theorem that for a given image $X$, the reconstructed image $\hat{X}$ follows a multivariate Gaussian distribution. In particular, we shall assume this distribution has mean $X$ and covariance matrix $\mathbf{\Sigma}$ that is independent of $X$. Then, the (normalized) likelihood of observing $\hat{X}$ is given by \eqref{eqn:gauss_likelihood}:
+
+\begin{equation}
+\mathcal{L}(\hat{X}) = \frac{1}{\sqrt{(2\pi)^{|X|} \det(\mathbf{\Sigma})}}\exp\left(-\frac{1}{2}(\hat{X} - X)^T\mathbf{\Sigma}^{-1}(\hat{X} - X)\right)
+\label{eqn:gauss_likelihood}
+\end{equation}
+
+In \eqref{eqn:gauss_likelihood}, it is common to assume each pixel of $X$ is independent, thus the matrix $\mathbf{\Sigma}$ is a sparse matrix that only accounts for correlations among the channels of each individual pixel. If each pixel is treated independently, the anomaly can also be localized by flagging each pixel as ``normal" or ``anomalous" based on whether or not the corresponding likelihood is below a specified value. To reduce the complexity of computing this likelihood in \eqref{eqn:gauss_likelihood}, it is common to use an equivalent threshold value for the negative exponent component of \eqref{eqn:gauss_likelihood}, which is known as the square Mahalanobis distance between pixels. This distance given by \eqref{eqn:mahalanobis}:
+
+\begin{equation}
+d(\hat{X}_{(i,j)}, X_{(i,j)}) = (\hat{X}_{(i,j)} - X_{(i,j)})^T\mathbf{\Sigma}^{-1}_{(i,j)}(\hat{X}_{(i,j)} - X_{(i,j)})
+\label{eqn:mahalanobis}
+\end{equation}
+
+In this case, whenever $d(\hat{X}_{(i,j)} | X_{(i,j)})$ exceeds some specified threshold, the corresponding pixel $(i,j)$ is flagged as an anomaly. While the square Mahalanobis distance can account for the correlations among the channel values, it requires the computation of a correlation matrix $\mathbf{\Sigma}_{(i,j)}$ for each pixel, which can be costly for models with large numbers of pixels and channels. To address this problem we propose the gamma distribution filter, which requires only two parameters to be stored per pixel and is more suitable for an edge computing environment.\\
+
+The gamma distribution filter fits the mean square error of each pixel in the reconstructed image to a gamma distribution with shape parameter $\kappa$ and scale parameter $\theta$. The probability density function of this distribution is given in \eqref{eqn:gamma}:
+
+\begin{equation}
+f(x|\kappa,\theta) = \frac{1}{\Gamma(\kappa)\theta^\kappa}x^{\kappa - 1}e^{-x / 2}
+\label{eqn:gamma}
+\end{equation}
+
+As before, if we assume that each reconstructed pixel $\hat{X}_{(i,j)}$ is normally distributed with mean $X_{(i,j)}$, then \eqref{eqn:mahalanobis} follows a chi-square distribution with degrees of freedom $\nu$ equal to the number of channels $\ell = |\hat{X}_{(i,j)}|$. Since chi-square distributions are special cases of the gamma distribution, we also see that \eqref{eqn:mahalanobis} follows a gamma distribution with shape parameter $\kappa = \ell/2$ and scale parameter $\theta = 2$. This relationship is summarized in \eqref{eqn:gamma_relations}:
+
+\begin{equation}
+d(\hat{X}_{(i,j)}, X_{(i,j)})\quad \sim\quad \chi^{2}(\nu = \ell)\quad \equiv \quad \Gamma(\kappa = \ell/2, \theta = 2)
+\label{eqn:gamma_relations}
+\end{equation}
+
+\noindent Solving \eqref{eqn:gamma_relations} for a form approximately equal to the mean square error, we obtain \eqref{eqn:gamma_relations_2}:
+
+
+
+\begin{equation}
+\frac{1}{\ell}\left[(\hat{X}_{(i,j)} - X_{(i,j)})^T\left(\frac{1}{\text{tr}(\mathbf{\Sigma})}\mathbf{\Sigma}\right)^{-1}(\hat{X}_{(i,j)} - X_{(i,j)})\right] \quad \sim\quad \Gamma\left(\kappa = \frac{\ell}{2}, \theta = \frac{2\text{tr}(\mathbf{\Sigma})}{\ell}\right)
+\label{eqn:gamma_relations_2} 
+\end{equation}
+
+We remark that the scaled covariance matrix $(1/\text{tr}(\mathbf{\Sigma}))\mathbf{\Sigma}$ has a trace of $1$ and thus corresponds to a Gaussian distribution such that $\mathbb{E}[\lVert X - \mathbb{E}[X] \rVert^2] = 1$. In the case where $\mathbf{\Sigma}$ is constant diagonal, this matrix equals the identity, which mean the MSE of $\hat{X}$ exactly follows the gamma distribution characterized by \eqref{eqn:gamma_relations_2}. In the cases where $\mathbf{\Sigma}$ is more complex, we claim that the gamma distribution still serves as a good approximation.\\
+
+To determine if a pixel is part of an anomaly, the previous mean square errors of the pixel are fitted to a gamma distribution. Then, the area under the probability density function \eqref{eqn:gamma} to the right of the newly observed observed error is computed. If this area is less than a specified tolerance $\alpha \in [0,1]$, then the pixel is considered part of an anomaly. Otherwise, the pixel is considered to be normal. Once this process is applied to all pixels in the image, a contour detection algorithm is applied to the anomalous pixels and the bounding boxes larger than 0.005 times the area of the scene are extracted. These bounding boxes are returned as the bounding boxes for all anomalies in the scene.
+
 \subsection{Online Training}
+
+Most machine learning models trained through backpropagation are done so in an offline setting, in which the entire training dataset is made available prior to the model making inferences. When a model learns in an online setting, data is made available to the model through a sequential stream, and predictions are often made in tandem with the learning process. One of the key challenges of online training is making the training process such that a model is capable of learning both stationary features and drifting features \cite{sahoo_online, zhao_feedback}. For example, if the learning rate of a model is set to decay exponentially, then the model will tend to learn to identify stationary (i.e. time-independent) features of the data. Conversely, if the model's learning rate is fixed, then the model will tend to learn to identify drifting features, which are only relevant within a short time neighborhood of the present. To maximize model accuracy and manage this trade-off between learning stationary and drifting features, some solutions have been proposed such as Hedge Backpropagation \cite{sahoo_online} and custom learning rate scheduling \cite{zhao_feedback}. In our proposed model, we incorporated some of these ideas and exposed parameters to allow for better management of this trade-off.\\
+
+Since we wanted the model to be able to adapt to sudden changes in the scene background, we did not decay the learning rate over time and did not employ any learning rate scheduling algorithms. Instead, we used Adam \cite{adam} to estimate the learning rate over time. We also used a past training example sampling strategy to ensure that the model would be able to adapt quickly to permanent changes in the image scene. This sampling strategy buffered a finite number of previously seen images using a data structure we propose called an \textit{exponential heap sampler} (EHS). An EHS ensures that the images retained in the buffer have ages that are exponentially distributed with decay rates inversely proportional to the EHS size. More information on this data structure is given in Appendix ~\ref{appendix:ehs}.\\
+
+Since we expect the background noise to change over time, we also allowed for the gamma distribution filters to change over time. This was accomplished by using an exponential moving gamma distribution, in which the time-dependent parameters $\kappa(t)$ and $\theta(t)$ were computed using estimators that are consistent under a weighting scheme in which the weight of a data point decays exponentially with rate $\beta$. This scheme weights more heavily the recent noise observed and less heavily the noise that was observed a long time ago. The formulas and derivations for these time-dependent parameters are given in Appendix~\ref{appendix:moving_gamma}. To make the model best adapt to changes in background noise, we empirically selected the inverse decay rate to be $\beta = 0.005$.\\
+
+The online training process is divided into two phases, a calibration phase and an online phase. The calibration phase exists to avoid the model initially having a high false positive rate. During this phase the model does not make any predictions; rather, it populates the EHS image buffer until it is full and then performs 20 training epochs to familiarize itself with the input scene. Once the calibration is finished the model enters the online phase. The steps of the online phase are summarized in Figure~\ref{fig:online_learning}:
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{figures/online_training_flowchart}
+\end{center}
+\caption{A flowchart summary of the online phase process.}
+\label{fig:online_learning}
+\end{figure}
+
+For each image that is processed during the online phase, the model adds the image to the EHS buffer, makes a prediction, and then performs a training step, which consists of iterating over each image buffered in the EHS and performing a weight update. As Figure~\ref{fig:online_learning} illustrates, the model performs a training step regardless of whether or not an anomaly is detected; however, it only updates the parameters of the gamma filter if the new image is not flagged as an anomaly. The autoencoder weights are updated on every step to prevent the model from continuously flagging a region of the scene that has permanently changed. The gamma filter is only updated upon seeing non-anomalous images, since the gamma filter only characterizes the random noise in non-anomalous images.\\
+
+
+
+
 %===================== RESULTS ====================
 \section{Experiments and Results}
 
 \subsection{Use of Gamma Distribution Filter}
 
-\subsection{Prediction Localization}
+The first set of simulations we performed validated the use of the gamma distribution filter as a viable fit for modeling the distribution of the mean square error in each pixel of the image. In Figure~\ref{fig:gamma_filter}(a), we plotted the distribution of the mean square error for a small subset of validation images and found that the gamma distribution approximation to the mean square error given in \eqref{eqn:gamma_relations_2} is indeed a reasonable fit, despite being a rough approximation:
+
+\begin{figure}[H]
+\begin{center}
+\begin{tabular}{c c}
+\includegraphics[scale=0.6]{figures/gamma_filter} & \includegraphics[scale=0.6]{figures/gamma_filter_noise} \\
+(a) & (b)
+\end{tabular}
+\end{center}
+
+\caption{A histogram plot of the distribution of the mean square error for a small subset of ``normal" data and the fitted gamma distribution (a). Also shown is the log variance map for this subset of ``normal" data (b).}
+\label{fig:gamma_filter}
+\end{figure}
+
+After fitting the mean square error for each pixel to a gamma distribution $\Gamma(\kappa_{(i,j)},\theta_{(i,j)})$ we computed the log-variance map shown in Figure~\ref{fig:gamma_filter}(b). In this visualization, the intensity of each pixel $(i,j)$ is given by $\log(\kappa_{(i,j)}\theta_{(i,j)}^2)$. We note that the areas of highest variance in the RMNP scene are the ground regions, since weather conditions like snow and rain tend to cause the greatest variation in color there. We conclude that the gamma distribution filter is a viable alternative to some of the other aforementioned methods of accounting for background noise, like the Mahalanobis distance.\\
 
 \subsection{Impact of Attention Expansion}
 
+We also performed some experiments to validate the usage of attention expansion. To employ attention expansion, we first compute an attention map $M_{\text{Grad-CAM}}$ according to \eqref{eqn:grad_cam} and then compute the attention expansion loss given by \eqref{eqn:loss_ae}. This attention expansion loss serves as one of the weighted components in the model loss given in equation \eqref{eqn:loss_weighted_total}. In the next experiment we performed, we compared the effect of training the model in an offline setting with and without attention expansion. In this experiment, the model was trained on 80\% of the data and validated on 20\% of the data. The model was then evaluated on the validation set for multiple values of $\alpha$ on the interval $[0,1]$. The \textit{receiver operator characteristic} (ROC) curves are plotted for these experiments in Figure~\ref{fig:attention_rocs}:
+
+\begin{figure}[H]
+\begin{center}
+\begin{tabular}{c | c}
+\textbf{No Attention Expansion (Offline)} & \textbf{Attention Expansion (Offline)}\\
+\includegraphics[scale=0.6]{figures/neon_cae_roc} & \includegraphics[scale=0.6]{figures/neon_acae_roc} \\
+Area under Curve:  0.637 & Area under curve: 0.738 \\ 
+\end{tabular}
+\end{center}
+
+\caption{ROC curves for offline model performance with and without attention expansion.}
+\label{fig:attention_rocs}
+\end{figure}
+
+In the ROC curve in Figure~\ref{fig:attention_rocs} where no attention expansion was applied, we can see that as the tolerance value $\alpha$ increases (causing  the TPR and FPR to increase), the TPR increases steeply and then plateaus. However, in the ROC curve where attention expansion was applied, the TPR increased gradually over time, resulting in an increase in area under the curve of approximately 0.1. While the model was able to detect many of the anomalies in the dataset for low values of $\alpha$, we see that the application of attention expansion as a form  of regularization helps to improve the TPR of the model in an offline setting.
+
 \subsection{Online Training Simulation}
+
+To evaluate the model in an online setting, we simulated the model being deployed in an online environment. During the calibration phase, the model was initially trained the first 50 images of the dataset, and the parameters of the gamma distribution filter were set according to an equally-weighted best fit to the mean square error reconstruction loss. During the online phase, the model was then given images sequentially. This experiment was conducted for several tolerance values $\alpha$ and four different EHS sizes. The results are summarized in Table~\ref{table:roc_stats}:
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| c | c c | c c | c c | c c |}
+\hline
+& \multicolumn{8}{c|}{EHS Size} \\
+$\alpha$ value & \multicolumn{2}{c}{N = 10} & \multicolumn{2}{c}{N = 20} & \multicolumn{2}{c}{N = 40} & \multicolumn{2}{c|}{N = 60}\\
+& TPR & FPR & TPR & FPR & TPR & FPR & TPR & FPR \\
+\hline
+0.0017  &  0.0000  &  0.0226  &  0.1429  &  0.0289  &  0.0000  &  0.0289  &  0.1429  &  0.0257 \\
+0.0060  &  0.1429  &  0.0389  &  0.1429  &  0.0452  &  0.1429  &  0.0441  &  0.1429  &  0.0425 \\
+0.0215  &  0.1429  &  0.0846  &  0.2857  &  0.1014  &  0.2857   &  0.0924  &  0.1429  &  0.0898 \\
+0.0774  & 0.4286  &  0.2679  &  \textbf{0.5714}  &  \textbf{0.2700}  &  \textbf{0.5714}  &  \textbf{0.2584}  &  \textbf{0.5714}  &  \textbf{0.2447} \\
+0.2783  &  0.8571  &  0.6870  &  0.8571  &  0.6896  &  0.7143  &  0.6549  &  0.7143  &  0.6255 \\
+\hline
+\end{tabular}\\[2mm]
+\end{center}
+\caption{ a summary of the \textit{true positive rate} (TPR) and the \textit{false positive rate} (FPR) for several values of $\alpha$ and various EHS sizes.}
+\label{table:roc_stats}
+\end{table}
+
+Based on the results in Table~\ref{table:roc_stats}, we found that the value of $\alpha = 0.0774$ was optimal for detecting anomalies in our dataset, since for EHS sizes greater than 10, the model consistently yielded a TPR greater than 0.5 and FPR less than 0.5. These statistics are shown in bold. We also see that as the EHS size increases, the TPR increases and the FPR decreases due to the larger set of examples with which the model is performing each update step. We note, however, that increasing the EHQ size increases the length of each training step proportionally. The ROC curves for the statistics in Table~\ref{table:roc_stats} are plotted below in Figure~\ref{fig:ehs_rocs} and Table~\ref{table:ehs_rocs}:
+
+\refstepcounter{table}{}\label{table:ehs_rocs}
+\begin{figure}[H]
+\begin{tabular}{c c}
+\begin{tabular}{c}
+\includegraphics[scale=0.7]{figures/ehs_rocs}
+\end{tabular} & \begin{tabular}{|c|c|}
+\hline
+\small\textbf{EHS Size} & \small\textbf{AUROC} \\
+\hline
+10 & 0.620 \\
+\textbf{20} & \textbf{0.677} \\
+40 & 0.633 \\
+60 & 0.632 \\
+\hline
+(Offline) & \textbf{0.738} \\
+\hline
+\end{tabular}
+\end{tabular}
+\captionsetup{labelformat=andtable}
+\caption{Online model simulation ROC curves for varying EHS sizes (left) and a table of areas under the ROC curves (right).}
+\label{fig:ehs_rocs}
+\end{figure}
+
+In Figure~\ref{fig:ehs_rocs} and Table~\ref{table:ehs_rocs}, we note that \textit{area under the ROC curve} (AUROC) is maximized when the EHS image buffer has a size of 20 images, yielding an area of $0.667$. This value is close to the area under the ROC curve of $0.738$ that we obtained for the offline model in Figure~\ref{fig:attention_rocs}. This demonstrates that in an online setting the model can attain accuracy close to that of the same model when deployed in an offline setting. Although AUROC was comparable for EHS sizes larger than 20 (and in fact the FPR decreased slightly as the EHS size increased according to Table~\ref{table:roc_stats}), we selected 20 as the optimal EHS size due to memory cost concerns. Since this model is intended to be used in an edge computing environment, we concluded that the slight decrease in the false positive rate was not worth the memory cost of increasing the EHS size beyond $N = 20$.
+
+\subsection{Prediction Localization}
+
+To illustrate the results of the model in either localizing or failing to localize the bounding boxes of anomalies, a visual confusion matrix with examples is given in Figure~\ref{fig:visual_confusion_matrix}:
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{figures/visual_confusion_matrix}
+\end{center}
+\caption{Visual confusion matrix of online anomaly localization model for $\alpha = 0.005$ and an EHS size of 20.}
+\label{fig:visual_confusion_matrix}
+\end{figure}
+
+Qualitatively, we see that the model was able to successfully localize large anomalies in the scene, such as an airplane and dark-colored smoke in the distance. However, the model was not successful in localizing small anomalies that blended in with the scene, as shown by the FP sector of Figure~\ref{fig:visual_confusion_matrix}. Furthermore, we note that the model had numerous false positives (shown in the FP region) due to causes such as variation in lighting from heavy cloud cover and water droplets on the camera lens.
 
 %===================== CONCLUSION ====================
 \section{Conclusion}
-
 \subsection{Summary of Work}
 
+In this paper we proposed an extension of a convolutional autoencoder that performs the task of online anomaly localization with a focus on deploying the model in an edge computing environment with limited computational an memory resources. This extension incorporated both attention expansion \cite{attention_anomalies,grad_cam} as a form of regularization and gamma distribution filters to increase model accuracy and minimize the resource requirements of the model. The model was evaluated through both online and offline on a sequence of sequential images from the open source NEON phenocam dataset. We found that simulating the model in an online environment yielded an AUROC of 0.667, which was comparable to the AUROC of 0.738 obtained in an offline simulation. However, we observed qualitatively that the model was unable to localize very small anomalies, and tended to perform poor when the scene contains unusual lighting and weather conditions.
+
 \subsection{Future Direction of Work}
+
+In comparison to state of the art methods for supervised anomaly detection, the model we proposed performs quite poorly, yielding an AUROC of 0.738 in an offline setting and 0.677 in an online setting. For example,the CAVGA model proposed by Venkataramanan et al. employs attention expansion in a supervised and semi-supervised setting to achieve an AUROC exceeding 0.9 \cite{attention_anomalies} on some benchmarking datasets. If this research were to be continued, a logical next step would be to evaluate our proposed framework on a well-known benchmark dataset and compare its accuracy to state of the art methods.\\
+
+Another direction of further inquiry would be in investigating other models that can localize small anomalies well. Recent interest in attention-driven networks such as image transformer models \cite{image_transformers} have shown that using attention as a method of anomaly localization (instead of just regularization) may be useful in helping with the localization of small anomalies in a large scene.\\
+
 %===================== ADDITIONAL CONTENT ====================
 %\section{Additional Work Performed}
 
 \pagebreak
-
 \section{Bibliography}
 \bibliography{writeup}
 \bibliographystyle{plain}
@@ -189,7 +396,8 @@ The model we propose in this paper is an extension of a traditional convolutiona
 
 \appendix
 
-\section{Exponential Moving Gamma Distribution}
+\section{Exponential Moving Gamma Distribution}\label{appendix:moving_gamma}
+
 In this section we will derive the estimators for an exponential moving gamma distribution for time series data.\\
 
 
@@ -227,11 +435,153 @@ w_{k}(t) = \beta w_{k}(t-1) = \beta w_{k-1}(t) \qquad\Rightarrow\qquad w_{k}(t) 
 \begin{align}
 0 = \dfrac{\partial \log\mathcal{L}}{\partial \kappa(t)} &= -\gamma(t)\log(\theta(t)) - \psi(\kappa(t)) + \sum_{n=1}^\infty \gamma w_{i-n}(t) \log(x_{i-n})  \label{eqn:gamma_sys_1}\\
 0 = \dfrac{\partial \log\mathcal{L}}{\partial \theta(t)} &= -\kappa(t) + \sum_{n=1}^\infty w_{i-n}(t) (x_{i-n}/\theta(t))^{\gamma(t)} \label{eqn:gamma_sys_2}\\
-0 = \dfrac{\partial \log\mathcal{L}}{\partial \gamma(t)} &= 1/\gamma(t) + \kappa(t)\sum_{n=1}^\infty w_{i-n}(t)\left[ \log(x_{i-n}/\theta(t)) + (x_{i-n}/\theta(t))^{\gamma(t)}\log(x_{i-n}/\theta(t)) \right] \label{eqn:gamma_sys_3}
+0 = \dfrac{\partial \log\mathcal{L}}{\partial \gamma(t)} &= \frac{1}{\gamma(t)} + \kappa(t)\sum_{n=1}^\infty w_{i-n}(t)\left[ \log(x_{i-n}/\theta(t)) + (x_{i-n}/\theta(t))^{\gamma(t)}\log(x_{i-n}/\theta(t)) \right] \label{eqn:gamma_sys_3}
 \end{align}
 
-\noindent where $\psi(x) = \Gamma'(x)/\Gamma(x)$ is the digamma function. Because $\psi(x)$ is known to intractable, this system admits no closed-form solution. However, it is known that a consistent, closed form estimator for the standard gamma distribution parameters, $\kappa(t)$ and $\theta(t)$ can be obtained by imposing that only \eqref{eqn:gamma_sys_2} and \eqref{eqn:gamma_sys_3} hold, and then fixing $\gamma(t) = 1$ \cite{gammapaper}. First, we 
+\noindent where $\psi(x) = \Gamma'(x)/\Gamma(x)$ is the digamma function. Because $\psi(x)$ is known to intractable, this system admits no closed-form solution. However, it is known (from Ye et al.) that a consistent, closed form estimator for the standard gamma distribution parameters, $\kappa(t)$ and $\theta(t)$ can be obtained by imposing that only \eqref{eqn:gamma_sys_2} and \eqref{eqn:gamma_sys_3} hold, and then fixing $\gamma(t) = 1$ \cite{gammapaper}. Following Ye et al's procedure, we first solve \eqref{eqn:gamma_sys_2} for $\kappa(t)$ to obtain \eqref{eqn:gamma_sys_2_solved}:
 
-\section{Exponential Heap Sampling}
+\begin{equation}
+\kappa(t) = \frac{1}{\theta(t)^{\gamma(t)}}\sum_{n=1}^\infty w_{i-n}(t) x_{i-n}^{\gamma(t)}
+\label{eqn:gamma_sys_2_solved}
+\end{equation}
+
+\noindent Substituting \eqref{eqn:gamma_sys_2_solved} into \eqref{eqn:gamma_sys_3} and solving for $\theta(t)$, we obtain \eqref{eqn:gamma_sys_3_solved}:
+
+\begin{equation}
+\theta(t) = \left[ \gamma(t)\sum_{n=1}^\infty w_{i-n}(t)x_{i-n}^{\gamma(t)}\log(x_{i-n}) - \gamma(t)\left(\sum_{n=1}^\infty w_{i-n}(t)\log(x_{i-n})\right)\left(\sum_{n=1}^\infty w_{i-n}(t)x_{i-n}^{\gamma(t)} \right)\right]^{1/\gamma(t)}
+\label{eqn:gamma_sys_3_solved}
+\end{equation}
+~\\
+\noindent Finally, fixing $\gamma(t) = 1$ in \eqref{eqn:gamma_sys_2_solved} and \eqref{eqn:gamma_sys_3_solved}, we obtain the consistent estimators \eqref{eqn:gamma_kappa_estimator} and \eqref{eqn:gamma_theta_estimator}:
+
+\begin{equation}
+\hat{\kappa(t)} = \frac{1}{\hat{\theta}(t)}\sum_{n=1}^\infty w_{i-n}(t)x_{i-n}
+\label{eqn:gamma_kappa_estimator}
+\end{equation}
+
+\begin{equation}
+\hat{\theta(t)} = \sum_{n=1}^\infty w_{i-n}(t)x_{i-n}\log(x_{i-n}) - \left(\sum_{n=1}^\infty w_{i-n}(t)\log(x_{i-n})\right)\left(\sum_{n=1}^\infty w_{i-n}(t)x_{i-n}\right)
+\label{eqn:gamma_theta_estimator}
+\end{equation}
+
+We observe that the estimators \eqref{eqn:gamma_kappa_estimator} and \eqref{eqn:gamma_theta_estimator} can be easily computed from the three summations in \eqref{eqn:gamma_sums} for index $i = t$:
+
+\begin{equation}
+\begin{cases}
+\quad S_1(t) = \sum_{n=1}^\infty w_{t-n}(t)x_{t-n} \\
+\quad S_2(t) = \sum_{n=1}^\infty w_{t-n}(t)\log(x_{t-n}) \\
+\quad S_3(t) = \sum_{n=1}^\infty w_{t-n}(t)x_{t-n}\log(x_{t-n}) 
+\end{cases}
+\label{eqn:gamma_sums}
+\end{equation}
+
+\noindent From the summation formulas in \eqref{eqn:gamma_sums} and the recurrence relation in \eqref{eqn:gamma_weights}, we obtain the following recurrent formulas for $\hat{\kappa}(t)$ and $\hat{\theta}(t)$ in \eqref{eqn:gamma_estimators_rec} and \eqref{ean:gamma_estimators_rec2}:
+
+
+\begin{equation}
+\hat{\kappa}(t) = \frac{S_1(t)}{\hat{\theta}(t)},\qquad \hat{\theta}(t) = S_3(t) - S_2(t)S_1(t)
+\label{eqn:gamma_estimators_rec}
+\end{equation}
+
+\begin{equation}
+\text{where}: \quad \begin{cases}
+\quad S_1(t) = (1-\beta)x_{t-1} + \beta S_1(t-1) ;\quad S_1(0) = 0\\
+\quad S_2(t) = (1-\beta)x_{t-1} + \beta S_2(t-1) ;\quad S_2(0) = 0 \\
+\quad S_3(t) = (1-\beta)x_{t-1} + \beta S_3(t-1) ;\quad S_3(0) = 0
+\end{cases}
+\label{eqn:gamma_estimators_rec2}
+\end{equation}
+
+We note that this recurrent scheme for estimating $\kappa(t)$ and $\theta(t)$ requires that only the value of the summation $S_1(t)$, $S_2(t)$, and $S_3(t)$ be remembered after each timestep.
+
+%\section{Exponential Heap Sampler}
+%(To be added soon)
+
+\section{Notes on CAE Model Architecture}\label{appendix:cae}
+
+The following is the output of the keras model \texttt{summary()} function:
+
+\begin{verbatim}
+Model: "conv_encoder"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 480, 640, 16)      5824      
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 240, 320, 16)      0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 240, 320, 32)      4640      
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 120, 160, 32)      0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 120, 160, 48)      1584      
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 120, 160, 48)      20784     
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 60, 80, 48)        0         
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 60, 80, 64)        3136      
+_________________________________________________________________
+last_conv_layer (Conv2D)     (None, 60, 80, 64)        36928     
+=================================================================
+Total params: 72,896
+Trainable params: 72,896
+Non-trainable params: 0
+_________________________________________________________________
+\end{verbatim}
+
+\begin{verbatim}
+Model: "latent_encoder"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+max_pooling2d_3 (MaxPooling2 (None, 30, 40, 64)        0         
+_________________________________________________________________
+flatten (Flatten)            (None, 76800)             0         
+_________________________________________________________________
+dense (Dense)                (None, 64)                4915264   
+=================================================================
+Total params: 4,915,264
+Trainable params: 4,915,264
+Non-trainable params: 0
+_________________________________________________________________
+\end{verbatim}
+
+\begin{verbatim}
+Model: "decoder"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense_1 (Dense)              (None, 76800)             4992000   
+_________________________________________________________________
+reshape (Reshape)            (None, 30, 40, 64)        0         
+_________________________________________________________________
+up_sampling2d (UpSampling2D) (None, 60, 80, 64)        0         
+_________________________________________________________________
+conv2d_transpose (Conv2DTran (None, 60, 80, 64)        36928     
+_________________________________________________________________
+conv2d_transpose_1 (Conv2DTr (None, 60, 80, 64)        4160      
+_________________________________________________________________
+up_sampling2d_1 (UpSampling2 (None, 120, 160, 64)      0         
+_________________________________________________________________
+conv2d_transpose_2 (Conv2DTr (None, 120, 160, 48)      27696     
+_________________________________________________________________
+conv2d_transpose_3 (Conv2DTr (None, 120, 160, 48)      2352      
+_________________________________________________________________
+up_sampling2d_2 (UpSampling2 (None, 240, 320, 48)      0         
+_________________________________________________________________
+conv2d_transpose_4 (Conv2DTr (None, 240, 320, 32)      13856     
+_________________________________________________________________
+up_sampling2d_3 (UpSampling2 (None, 480, 640, 32)      0         
+_________________________________________________________________
+conv2d_transpose_5 (Conv2DTr (None, 960, 1280, 16)     61968     
+_________________________________________________________________
+conv2d_5 (Conv2D)            (None, 960, 1280, 3)      51        
+=================================================================
+Total params: 5,139,011
+Trainable params: 5,139,011
+Non-trainable params: 0
+_________________________________________________________________
+\end{verbatim}
 
 \end{document}

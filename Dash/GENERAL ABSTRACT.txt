@@ -1,0 +1,12 @@
+I explored the creation and use of machine learning models to predict solar irradiance and lifted condensation level(LCL) from local weather data and thermal images. 
+The datasets were taken from the NCEI Local Climatological database, a pyrometer setup at Argonne National Laboratory, and a set of thermal images, also taken at 
+Argonne National Laboratory. Several models from Pytorch, Tensorflow,/Keras, and Scikit-learn were created in order to predict the LCL pressure and LCL temperature, 
+the two values that could be calculated, as well as the net irradiance(the amount of radiance that reaches the ground) and global irradiance(the total amount of irradiance). 
+For LCL pressure, the best performing model (accuracy=.997)was a Keras Functional(accuracy = .977) used the relative humidity, the sea level pressure, and the wet bulb 
+temperature along with the thermal images. For LCL temperature, the best performing model was a Keras Sequential model that only used relative humidity, sea level pressure, and
+wet bulb temperature. For net irradiance, the best performing model(accuracy=.948)used the data collected along with the pyrometer along with the thermal images, and the best 
+performing model for the global irradiance(accuracy=.925) took all the data. The models require very little data in order to calculate values that normally take specialized 
+equipment. In the future, thesecould potentially be integrated into a system in their respective areas of need in order to faster and more accurately compute needed 
+meteorological information. I hope you find this useful.
+
+

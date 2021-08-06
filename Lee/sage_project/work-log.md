@@ -21,12 +21,6 @@
 * Sign in MIRO and JIRA
   (I guess MIRO is for planning, and JIRA is for process management. I need to read the guidelines again this week, especially calculating team capacities.)
 * Followed up simple tutorials of Github: https://www.youtube.com/watch?v=tC8Xj_Bf8Fw&t=618s
-* Pull first before Push
-     * git pull origin master
-     * git status
-     * git add . (tracking)
-     * git commit -m "message" (commit)
-     * git push origin +master
 
 -Today's Technical Tasks
 * Read up Docker tutorials and installed on my RPI
@@ -151,7 +145,7 @@
   * The Template node can be used to generate text using a message’s properties to fill out a template.
 
   Note. my RPI is set up (turn on) and my laptop is used with my RPI IP address/port number - http://192.168.20.15:1880/ and http://192.168.20.15:1880/ui
-  ## 1. Http Rest endpoint
+  ##### 1. Http Rest endpoint
   Restcountries API are used to get countries dataset from https://restcountries.eu/rest/v2.
   It includes the countries name, their languages, population, and capital and so on. But my goal this testing was that when I enter the capital, then country name pops up, which is filtered data by using its API service.
   In the http request node, when the url is attched, debug(msg.payload) and country (format) will show the output.
@@ -161,7 +155,7 @@
   Node-RED UI shows the result of country. (X case sensitive)
   ![image](https://user-images.githubusercontent.com/56851781/121046031-e580d180-c783-11eb-9664-38107ed29cb6.png)
 
-  ## 2. Alarm notification (email and slack)
+  ##### 2. Alarm notification (email and slack)
   When temperature value is higher than 20, In this case, temp 30 buttom, for example, and click the temp trigger, I could get HIGH Temperature Alarm. Warning sign as well as debug notification. If I click the temp 20, which is normal temperature, it sent normal temperature notification to my gmail. Of course, other email address is also possible to be used.
 
   ![image](https://user-images.githubusercontent.com/56851781/121046438-fe898280-c783-11eb-9489-7d856bab4e00.png)
@@ -231,15 +225,17 @@ FROM alpine
 WORKDIR /root/hello-world
 COPY HelloWorld.java /root/hello-world
 
+```
 // Install JDK
 RUN apk add openjdk8
 ENV JAVA_HOME /usr/lib/jvm/java-1.8-oepnjdk
 ENV PATH $PATH:$JAVA_HOME/bin
+```
 
-// Compile HelloWorld
-RUN javac HelloWorld.java
+`// Compile HelloWorld`
+`RUN javac HelloWorld.java`
 
-ENTRYPOINT java HelloWorld
+`ENTRYPOINT java HelloWorld`
 
 
 ### Friday, 11th
@@ -315,26 +311,15 @@ ENTRYPOINT java HelloWorld
 * Complete basic JavaScript W3school tutorials.
 * Presentation Contents 1: DHT sensor read (real time data) from RPI on Node-RED
   
-  ![KakaoTalk_20210621_102635621_011](https://user-images.githubusercontent.com/56851781/122781041-6c9e7100-d27d-11eb-910f-3e7a8ac8cf53.jpg) ![KakaoTalk_20210621_102635621](https://user-images.githubusercontent.com/56851781/122781078-76c06f80-d27d-11eb-9bbe-879e6e1be648.jpg)
-  ![image](https://user-images.githubusercontent.com/56851781/122780732-1c271380-d27d-11eb-870e-a97903cc6037.png)
-  
   ![image](https://user-images.githubusercontent.com/56851781/122779792-3a404400-d27c-11eb-88b5-8427b24df7ea.png)
-  
-* if you want to get real time data every 1 second, change like this:
-  ![image](https://user-images.githubusercontent.com/56851781/122779945-5c39c680-d27c-11eb-8a28-860ff4fc4b6d.png)
- 
-* You can see on the debug node for example, {"_msgid":"63bb3921.ad62e8","topic":"rpi-dht22","payload":"28.00","humidity":"81.00","isValid":true,"errors":0,"location":"DHT","sensorid":"dht11"}, which means that need to change "payload" to "msg.payload = msg.payload and return msg;" in the temp function nodes as shown like this:
-![image](https://user-images.githubusercontent.com/56851781/122780611-fef24500-d27c-11eb-8cc3-712e4d2b1e75.png)
-  
-* can check the output on terminal as well as the debug node + UI (e. hostIPAddress with ui http://192.168.1.53:1880/ui)
-![image](https://user-images.githubusercontent.com/56851781/122780019-6f4c9680-d27c-11eb-99d9-b45d86bb5adb.png)
-![image](https://user-images.githubusercontent.com/56851781/122780452-d9fdd200-d27c-11eb-8664-b6f74379acb1.png)
 
 * Presentation Contents 2: Query SDR on Node-RED
-* Trouble: Accessing and Querying SDR no problem on the terminal like this:![image](https://user-images.githubusercontent.com/56851781/122793311-0c153100-d289-11eb-814f-c3d49d6c64c4.png) but couldn't get access to do that on Node-RED. The issue was that everything sent to ignore, so http request ignores everything from inject,
-which is EOF, end of file, that is specifially what they gave me back. which means, this works.
+* Trouble: Accessing and Querying SDR no problem on the terminal like this:
+
+![image](https://user-images.githubusercontent.com/56851781/122793311-0c153100-d289-11eb-814f-c3d49d6c64c4.png) but couldn't get access to do that on Node-RED. The issue was that everything sent to ignore, so http request ignores everything from inject, which is EOF, end of file, that is specifially what they gave me back. which means, this works.
   
-  ![image](https://user-images.githubusercontent.com/56851781/122794063-d9b80380-d289-11eb-8dc9-6800135f6792.png)
+![image](https://user-images.githubusercontent.com/56851781/122794063-d9b80380-d289-11eb-8dc9-6800135f6792.png)
+ 
 * payload should be changed from ignore(default) to "Sent as the body of the requst. Also changed JSON formatting in inject node like this:
   ![image](https://user-images.githubusercontent.com/56851781/122794204-010ed080-d28a-11eb-9f8b-874d16a51b00.png)
 
@@ -430,7 +415,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 * Still testing each node (now currently working with only temp topic)
 
   
-### Wednesday, 30th
+### Wednesday, 30th (BirthDay hehe)
 -Today's Non-Technical Tasks
 * Attended EDU Weekly Seminar Series
 * Short meeting with PhD program advisor
@@ -463,7 +448,7 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   
 ### Wednesday, 7th
 -Today's Non-Technical Tasks
-* talked with Raj
+* Meeting with Raj
 
   
 ### Thursday, 8th
@@ -568,9 +553,10 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
   
 ### Wednesday, 21th
 -Today's Non-Technical Tasks
+* Meeting with teams UAV Ground Scanning System: Human Detectionwith Deep Learning: Need to figure out local running GPU at KSQ building
 * Attended EDU Weekly Seminar Series: How to Establish Your Personal Brand
 * Meeting with Brandon and Larry (Docker and VM)
-* Amazing meeting with Sean to talk about Docker port numbers (Thank you so much)
+* Super nice meeting with Sean to talk about Docker port numbers (Thank you so much)
 * Still working on write papers with Korean students
   
 -Today's Technical Tasks
@@ -636,15 +622,91 @@ which is EOF, end of file, that is specifially what they gave me back. which mea
 
 * Also slack alarm notification with multiple channels
 * I also got feedback from Neal about new code. Need to discuss about it with him tomorrow
-  
+* funcX set up on MacOS
 
+  
 ### Wednesday, 28th
 -Today's Non-Technical Tasks
+* Meeting with teams UAV Ground Scanning System: Human Detectionwith Deep Learning
 * Attended scrum
 * Had a meeting with Joe and discuss about the SDR query for next steps (with funcx)
 * Attended final intern presentation
   
 -Today's Technical Tasks
-* Testing Query from sdr obj
+* Testing Query from sdr obj and string files
+* funcX testing with Python modules
+* Got some feedback from Neal and changed codes
+ 1) `Object.keys(temp).length` could (and really should) just be `temp.length`.
+ 2) It is best practice to use either `var`, `let`, or `const` for variable declarations.
+ 3) 6 new lines of code could just be a `.filter()` that is tacked on directly after the `.map()`.
   
+  
+### Thursday, 29th
+-Today's Non-Technical Tasks
+* Attended scrum
+* Still writing paper with Korean/Purdue students
+* Attended weekly demo for IITP meeting
 
+-Today's Technical Tasks
+* Change the query measurement (Thanks Neal!):
+```
+  curl -H 'Content-Type: application/json' https://sdr.sagecontinuum.org/api/v1/query -d '
+{
+    "start": "-1h",
+    "filter": {
+        "plugin": "plugin-metsense:0.*",
+        "name": "iio.*"
+    }
+}
+```
+* The reason above: it seems the metsense version number, name, and the measurement names have changed since those docs written.
+
+ 
+### Friday, 30th
+-Today's Non-Technical Tasks
+* Attended Demo, Presented Demo
+* Feedback from Yongho and Neal: What is the best way for users to use Node-RED? Assume that they don't know about Node-RED or JavaScript at all.
+* It should be VERY friendly user interface or include README file for Node-RED (detail description).
+  
+-Things to do:
+* This weekend the paper/science articles must be written.
+* Node-RED code cleaning, and upload Waggle github.  
+  
+************************************************************
+### Monday, 2th
+-Today's Non-Technical Tasks
+* Attended scrum
+* Read up MDML: https://labs.globus.org/pubs/Elias_MDML_2020.pdf to work on writing paper
+  
+-Today's Technical Tasks
+* Fininshed cleaning Node-RED code (Beginner part) and uploading at github
+
+-Things to do:
+* Add all references to paper
+
+### Tuesday, 3th
+-Today's Non-Technical Tasks
+* solved out kronos timecard issue
+* still uploading Node-RED code on Waggle Summer 2021 Github. Available at [Node-RED_Sage.md](https://github.com/waggle-sensor/summer2021/blob/main/Lee/nodered_examples/Node-RED_SAGE.md)
+  
+-Today's Technical Tasks
+* still working on SDR querying UI issue
+  
+  ![image](https://user-images.githubusercontent.com/56851781/128386145-3fec9fa6-df8d-400b-99de-9e1bd75f21ff.png)
+
+  
+### Wednesday, 4th
+-Today's Non-Technical Tasks
+* Meeting with teams UAV Ground Scanning System: Human Detectionwith Deep Learning: Need to figure out local running GPU at KSQ building
+* Meeting with teams UAV ground detection and tracking systems: Tree detection and tracking change species and amount of tree
+  
+-Today's Technical Tasks
+* change JavaScript code: .filter() instaed of using loops
+* `FILTER` Average 0.019943333354603965
+* `LOOP` Average 0.02598666658741422 (Slowest)
+* Reference: http://www.andygup.net/fastest-way-to-find-an-item-in-a-javascript-array/
+* code ref: https://jsfiddle.net/agup/Y8SBL/10/
+* decription ref: https://developer.mozilla.org/en-US/docs/Web/API/Performance
+  
+  
+  
