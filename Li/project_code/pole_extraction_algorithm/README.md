@@ -10,9 +10,9 @@ This program generates labels for images from [NEON.D19.HEAL.DP1.00042](https://
 
 Example Input: NEON.D19.HEAL.DP1.00042_2019_03_10_183006
 
-![Image](./NEON.D19.HEAL.DP1.00042_2019_03_10_183006.png )
+![Image](./NEON.D19.HEAL.DP1.00042_2019_03_10_183006.jpg )
 
 Example Output(s): NEON.D19.HEAL.DP1.00042_2019_03_10_183006
 Mid and Right
-![xxx](./NEON.D19.HEAL.DP1.00042_2019_03_10_183006.jpg_Mid_Mask.png )
-![x](./NEON.D19.HEAL.DP1.00042_2019_03_10_183006.jpg_Right_Mask.png )
+![Image](./NEON.D19.HEAL.DP1.00042_2019_03_10_183006.jpg_Mid_Mask.jpg )
+![Image](./NEON.D19.HEAL.DP1.00042_2019_03_10_183006.jpg_Right_Mask.jpg )
