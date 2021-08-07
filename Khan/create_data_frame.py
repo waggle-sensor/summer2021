@@ -1,10 +1,5 @@
-import statistics
 import cv2
-import numpy as np
-import math
 import pandas as pd
-from skimage import io
-import os
 from pathlib import Path
 import os
 from openpyxl import load_workbook
@@ -13,7 +8,12 @@ from detect_features import find_standard_deviation_hsv
 from detect_features import find_edge_density
 from detect_features import find_straight_edge_density
 from detect_features import find_entropy
-from detect_features import display
+from data_augment import brightness
+from data_augment import change_hsv
+from data_augment import horizontal_shift
+from data_augment import vertical_shift
+from data_augment import random_noise
+from data_augment import zoom
 
 
 def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
@@ -100,22 +100,63 @@ def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
     # save the workbook
     writer.save()
 
-
-def add_features():
+def add_augmented_images_to_dataframe(file_with_image_names, file_to_add_data):
     '''
      Computes features of images that would help measure visual disorder
     :return: dataframe with computed features for each image in training data
     '''
 
-    df = pd.read_excel(
-        r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx')
+    df = pd.read_excel(file_with_image_names)
+
+    for i in range(len(df)):
+
+        image_name = df.loc[i].at["originalName"]
+        folder = "training_images/MIT_images/"
+        file_path = folder + image_name
+
+        my_file = Path(file_path)
+        if (my_file.is_file()):
+            image = cv2.imread(file_path)
+
+            # pick data augmentations
+            image = change_hsv(image)
+            image = brightness(image, 1.2)
+            image = horizontal_shift(image, 0.5)
+
+            hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+
+            mean_hsv = find_mean_hsv(hsv_image)
+            standard_dev_hsv = find_standard_deviation_hsv(hsv_image)
+            edge_density = find_edge_density(image)
+            straight_edge_density = find_straight_edge_density(image)
+            image = cv2.imread(file_path)
+            entropy = find_entropy(image)
+
+            # replace values with the features that I computed
+            df.loc[i, 'Mean Hue'] = mean_hsv[0]
+            df.loc[i, 'Mean Sat'] = mean_hsv[1]
+            df.loc[i, 'Mean Value'] = mean_hsv[2]
+            df.loc[i, 'sdHue'] = standard_dev_hsv[0]
+            df.loc[i, 'sdSat'] = standard_dev_hsv[1]
+            df.loc[i, 'sdValue'] = standard_dev_hsv[2]
+            df.loc[i, 'ED'] = edge_density
+            df.loc[i, 'SED'] = straight_edge_density
+            df.loc[i, 'Entropy'] = entropy
+
+            append_df_to_excel(file_to_add_data,df,startrow=0)
+
+def add_features(file_with_image_names, file_to_add_data):
+    '''
+     Computes features of images that would help measure visual disorder
+    :return: dataframe with computed features for each image in training data
+    '''
+
+    df = pd.read_excel(file_with_image_names)
 
     rows_to_delete = []
 
-
-    for i in range(1105, len(df)):
-
-        print(i)
+    start_row = 1105
+    for i in range(start_row, len(df)):
 
         image_name = df.loc[i].at["originalName"]
         folder = "training_images/TFK/"
@@ -144,68 +185,20 @@ def add_features():
         df.loc[i, 'SED'] = straight_edge_density
         df.loc[i, 'Entropy'] = entropy
 
-
-        append_df_to_excel(r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx', df, startrow= 0)
+        append_df_to_excel(file_to_add_data, df, startrow=0)
 
     # delete all the rows that did not have images associated with them
-    # that i could use to compute features
+    for i in range(len(rows_to_delete)):
+        df.drop(labels=rows_to_delete[i], axis=0, inplace=True)
 
-    # append_df_to_excel(r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx', df,
-    #                    startrow=0)
+    append_df_to_excel(r'dataframes/normalized_data.xlsx', df, startrow=0)
+
     return df
 
-
-
-def add_additional_features():
-
-    # base dataframe with initial 1104 images and its features and order ratings
-    df = pd.read_excel(
-        r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx')
-
-    # add new image names to training data
-        # First iterate through all images and add it to dataframe
-
-
-    rows_to_delete = []
-
-    directory = 'training_images/TFK'
-
-    index = 1107
-    for image_name in os.listdir(directory):
-
-        file_path = directory + image_name
-
-        # print(index)
-        # image = cv2.imread(file_path)
-        # print(image_name)
-        # hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-
-        # mean_hsv = find_mean_hsv(hsv_image)
-        # standard_dev_hsv = find_standard_deviation_hsv(hsv_image)
-        # edge_density = find_edge_density(image)
-        # straight_edge_density = find_straight_edge_density(image)
-        # image = cv2.imread(file_path)
-        # entropy = find_entropy(image)
-        #
-        # df.loc[index, 'Mean Hue'] = mean_hsv[0]
-        # df.loc[index, 'Mean Sat'] = mean_hsv[1]
-        # df.loc[index, 'Mean Value'] = mean_hsv[2]
-        # df.loc[index, 'sdHue'] = standard_dev_hsv[0]
-        # df.loc[index, 'sdSat'] = standard_dev_hsv[1]
-        # df.loc[index, 'sdValue'] = standard_dev_hsv[2]
-        # df.loc[index, 'ED'] = edge_density
-        # df.loc[index, 'SED'] = straight_edge_density
-        # df.loc[index, 'Entropy'] = entropy
-        #
-        df.loc[index, 'originalName'] = image_name
-
-        index += 1
-        append_df_to_excel(r'C:\Users\SamaahMachine\Documents\Argonne\Images with Ratings\training_data.xlsx', df,
-                           startrow=0)
-
 def main():
-    #add_additional_features()
-    add_features()
+    file_with_image_names = r'example.xlsx'
+    file_to_add_data = r'example.xlsx'
+    add_features(file_with_image_names, file_to_add_data)
 
 if __name__ == '__main__':
     main()
