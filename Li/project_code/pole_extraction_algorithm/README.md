@@ -37,4 +37,4 @@ Below is the flow chart for labeling rods. (1) Color is extracted to group the i
 
 Here is a more detailed flowchart for each of the three image segmentation methods. A series of image processing techniques were used to improve robustness and coverage over a variety of images. 
 
-![Image](./figures/fig03.png )
+![Image](./figures/fig02.png )
