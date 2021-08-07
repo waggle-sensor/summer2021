@@ -19,7 +19,7 @@ Be sure to add/change directories inside main.py.
 
 Example Input: NEON.D19.HEAL.DP1.00042_2019_03_10_183006
 
-![Image](./NEON.D19.HEAL.DP1.00042_2019_03_10_183006.jpg )
+![Image](./figures/NEON.D19.HEAL.DP1.00042_2019_03_10_183006.jpg )
 
 Example Output(s): NEON.D19.HEAL.DP1.00042_2019_03_10_183006
 Mid and Right
