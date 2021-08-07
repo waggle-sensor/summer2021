@@ -12,3 +12,6 @@ Other useful links:
 * [Sage Site](https://sagecontinuum.org/science/snow-rod-segmentation): Small blog post on my work at Argonne. 
 * [Google Drive](https://drive.google.com/drive/folders/17bq1Bkhvm97tHgI4XMZW5_EyXvHYTIy3?usp=sharing): Lots of files can be found here including datasets, initial sample codes, and results. Need permission to access.
 * [Edge Code Respository Plug-in](https://github.com/waggle-sensor/plugin-pole-detector)
+
+
+Collaborators: Dr. Nicola Ferrier, Dr. Seongha Park, Dr. Sean Shahkarami
