@@ -14,5 +14,8 @@ Example Input: NEON.D19.HEAL.DP1.00042_2019_03_10_183006
 
 Example Output(s): NEON.D19.HEAL.DP1.00042_2019_03_10_183006
 Mid and Right
+
+<br />
+
 ![Image](./NEON.D19.HEAL.DP1.00042_2019_03_10_183006.jpg_Mid_Mask.jpg )
 ![Image](./NEON.D19.HEAL.DP1.00042_2019_03_10_183006.jpg_Right_Mask.jpg )
