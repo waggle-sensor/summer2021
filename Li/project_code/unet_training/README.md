@@ -16,8 +16,11 @@ Run on Docker.
     docker run -ti --rm -v [UNet Training Directory]:/storage -v [Images Directory]:/data/train/images -v [Labeled Images Directory]:/data/train/labels classicblue/pytorch_cv2
 
 After being redirected.
+
     cd storage
+
     pip3 install tensorboard
+    
     python3 main.py
 
 
