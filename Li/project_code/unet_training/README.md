@@ -7,6 +7,17 @@ The U-Net CNN is trained using labeled images generated from the automatic label
 
 ### How to Run
 
-    run main.py
+Download classicblue/pytorch_cv2.
 
-Be sure to add/change directories inside main.py.
+    docker pull classicblue/pytorch_cv2
+
+Run on Docker.
+
+    docker run -ti --rm -v [UNet Training Directory]:/storage -v [Images Directory]:/data/train/images -v [Labeled Images Directory]:/data/train/labels classicblue/pytorch_cv2
+
+After being redirected.
+    cd storage
+    pip3 install tensorboard
+    python3 main.py
+
+
