@@ -440,6 +440,18 @@ so that they are normalized.
 * Updated ecr - meta folder in plugin with information on project
 * Cleaned up code in plugin and summer2021 project
 * Finished post - internship survey from Deliverables
-* Finished post - intenship survey from workday
+* Finished post - internship survey from workday
 
+### 8/5/2021
+* Meeting with cv team
+* Second day of Learning off the lawn, presented
+* Edited paper
+* Writing Sage article
 
+### 8/6/2021 
+* Finished editing paper
+* Submitted all deliverables
+* Finished Sage blog post
+* Cleaned up all code from summer2021
+  * Added ReadME.md file
+* Finished Waggle deliverables

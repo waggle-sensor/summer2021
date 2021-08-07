@@ -1,5 +1,4 @@
 import cv2
-
 from detect_features import find_mean_hsv
 from detect_features import find_standard_deviation_hsv
 from detect_features import find_edge_density
@@ -15,12 +14,12 @@ def convert_file_to_image(file_path):
 
     return [hsv_image, test_image]
 
-# I am able to run test through command line, but not on pycharm, I need to fix that
-# run test through command line "python -m unittest test_features.py"
 class Test(unittest.TestCase):
+    '''
+    contains unit tests
+    run through command line "python -m unittest test_features.py"
+    '''
 
-    # Add more tests with different solid colors
-    # Generate a random x, y spot instead of picking it yourself randomly
     def test_mean_hue1(self):
         hsv_test_image = convert_file_to_image('test_images\Color-blue.jpg')[0]
 
@@ -89,7 +88,6 @@ class Test(unittest.TestCase):
         hsv_test_black_light_grey = convert_file_to_image('test_images/black_lightGrey.jpg')[0]
         hsv_test_black_dark_grey = convert_file_to_image('test_images/black_darkGrey.jpg')[0]
 
-        # I can compare SD instead of finding exact ones
         SD_val_high = find_standard_deviation_hsv(hsv_test_black_white)[2]
         SD_val_medium = find_standard_deviation_hsv(hsv_test_black_light_grey)[2]
         SD_val_low = find_standard_deviation_hsv(hsv_test_black_dark_grey)[2]
@@ -266,17 +264,3 @@ class Test(unittest.TestCase):
         entropy_zero = find_entropy(entropy_zero_image)
 
         self.assertEqual(entropy_zero, 0)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
