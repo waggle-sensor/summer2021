@@ -17,11 +17,11 @@ Be sure to add/change directories inside main.py.
 
 <br />
 
-Example Input: NEON.D19.HEAL.DP1.00042_2019_03_10_183006
+### Example Input: NEON.D19.HEAL.DP1.00042_2019_03_10_183006
 
 ![Image](./figures/NEON.D19.HEAL.DP1.00042_2019_03_10_183006.jpg )
 
-Example Output(s): NEON.D19.HEAL.DP1.00042_2019_03_10_183006
+Example Outputs: NEON.D19.HEAL.DP1.00042_2019_03_10_183006
 
 Labeled Images:
 
