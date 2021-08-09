@@ -180,7 +180,7 @@
 
 ### Week 9: 8/9–8/13 \[current\]
 - Monday
-  - prepare final presentation
+  - prepare final presentation 
   - work on white paper, blog
   - create crude animation to simulate RADAR/LiDAR data, barber pole problem
   - (NU IT workshop: Introduction to Machine Learning with Scikit-learn in Python)
