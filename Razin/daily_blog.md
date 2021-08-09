@@ -126,7 +126,9 @@
   - developed visual aids for better explaining RADAR data collection and plots
 - Friday
   - look into intersection of optical flow and ML
-    - [What is Optical Flow and why does it matter in deep learning](https://medium.com/swlh/what-is-optical-flow-and-why-does-it-matter-in-deep-learning-b3278bb205b5)
+    - [What is Optical Flow and why does it matter in deep learning](https://medium.com/swlh/what-is-optical-flow-and-why-does-it-matter-in-deep-learning-b3278bb205b5) 
+      - well-explained optical flow and convultional networks
+      - explore [flownet2-pytorch](https://github.com/NVIDIA/flownet2-pytorch), [datasets](https://lmb.informatik.uni-freiburg.de/resources/datasets/FlyingChairs.en.html) for computer vision pattern recognition
     - [RAFT: Optical Flow estimation using Deep Learning](https://learnopencv.com/optical-flow-using-deep-learning-raft/) (21/1/2021)
     - --> more colorful RADAR data/greater spread of RGB values** 
   - Got more direction from Dr. Collis on project 
@@ -150,6 +152,8 @@
 - Thursday
   - lab meeting
   - researched [LiDAR fields](https://www.arm.gov/publications/tech_reports/doe-sc-arm-tr-098.pdf) (meteriology)
+    - "Lidar measurements are, however, very effective at determining cloud structure of optically thin clouds and are more sensitive to smaller cloud particles than other ground-based profilers, such as radar. Strengths of this lidar sensitivity include the identification of clouds in the presence of large rain droplets, supercooled water clouds with small water droplets, and cold ice or mixed-phase clouds with low concentrations of small ice particles."
+    - afterpulse, deadtime, overlap are "unique for each MPL system and can change when a hardware component is changed or the optics of the lidar are adjusted."
     - nrb = normalized relative backscatter 
     - copol = circularly polarized
 - Friday
