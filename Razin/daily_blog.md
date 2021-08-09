@@ -117,14 +117,95 @@
      - https://arm-doe.github.io/ACT/API/generated/act.io.read_sigma_mplv5.html
 - Wednesday
   - attended EDU weekly seminar, "How to Establish Your Personal Brand," by Leslie Krohn
-  - upload code to ECR with [tutorial](https://github.com/waggle-sensor/plugin-numpy-example)
+  - looked into uploading code to ECR with [tutorial](https://github.com/waggle-sensor/plugin-numpy-example)
   - figured out how to [convert from .mpl to .nc](https://github.com/peterkuma/mpl2nc)
-  - look into intersection of optical flow and ML
-  - look into extraction velocity information from optical flow plots 
+  - look into extraction velocity information from optical flow plots (Matthew's vector.py file)
 - Thursday
   - lab meeting
   - give NAISE mid-point presentation, listened to other students' presentations
+  - developed visual aids for better explaining RADAR data collection and plots
+- Friday
+  - look into intersection of optical flow and ML
+    - [What is Optical Flow and why does it matter in deep learning](https://medium.com/swlh/what-is-optical-flow-and-why-does-it-matter-in-deep-learning-b3278bb205b5)
+    - [RAFT: Optical Flow estimation using Deep Learning](https://learnopencv.com/optical-flow-using-deep-learning-raft/) (21/1/2021)
+    - --> more colorful RADAR data/greater spread of RGB values** 
+  - Got more direction from Dr. Collis on project 
+
+### Week 7: 7/26–7/30
+- Monday
+  - worked on NAISE blog post
+  - investigate RAFT more
+- Tuesday
+  - NAISE meeting, finished up mid-point presentations
+  - worked on NAISE blog post
+  - researched generating synthetic RADAR data
+    - [Creating Synthetic Radar Imagery Using Convolutional Neural Networks](https://journals.ametsoc.org/view/journals/atot/35/12/jtech-d-18-0010.1.xml)
+    - [Sensor Fusion Using Synthetic Radar and Vision Data](https://www.mathworks.com/help/driving/ug/sensor-fusion-using-synthetic-radar-and-vision-data.html) (MathWorks, vehicle RADAR)
+- Wednesday
+  - researched cloud/aerosol classification from LiDAR/RADAR data
+    - [AEROSOL-CLOUD TARGET CLASSIFICATION IN HALO LIDAR/RADAR COLLOCATED MEASUREMENTS](https://www.epj-conferences.org/articles/epjconf/pdf/2020/13/epjconf_ilrc292020_08002.pdf)
+    - [Improving Spatial Coverage of Satellite Aerosol Classification Using a Random Forest Model](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjrqOz24KPyAhUKv54KHU_OA6AQFnoECAUQAw&url=https%3A%2F%2Fwww.mdpi.com%2F2072-4292%2F13%2F7%2F1268%2Fpdf&usg=AOvVaw2-HHbQ1mxPiLQPInJGoHyN)
+    - [A First Approach to Aerosol Classification Using Space-Borne Measurement Data: Machine Learning-Based Algorithm and Evaluation](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjrqOz24KPyAhUKv54KHU_OA6AQFnoECAwQAw&url=https%3A%2F%2Fwww.mdpi.com%2F2072-4292%2F13%2F4%2F609%2Fpdf&usg=AOvVaw25lZoIpjeXs8zYoCm0B9KZ)
+    - *What does optical flow see that we don't/can't?
+- Thursday
+  - lab meeting
+  - researched [LiDAR fields](https://www.arm.gov/publications/tech_reports/doe-sc-arm-tr-098.pdf) (meteriology)
+    - nrb = normalized relative backscatter 
+    - copol = circularly polarized
+- Friday
+  - researched technical meteriology of LiDAR/RADAR
+    - [ARM RADAR scan strategies](https://asr.science.energy.gov/meetings/stm/presentations/2012/scansradar.pdf) (e.g., rhi, vpt, ppi)
+    - [dual polarization RADAR](https://www.weather.gov/media/lmk/soo/Dual_Pol_Overview.pdf) (differential reflectivity)
+  - reached out to Zach for help with LiDAR data
+
+### Week 8: 8/2–8/6
+- Monday
+  - Got [ECR](https://github.com/waggle-sensor/plugin-radar-optical-flow) up with help of Dr. Gerlasch
+  - reached out to Clouds group for LiDAR help
+- Tuesday
+  - investigated pyart RADAR [documentations](https://arm-doe.github.io/pyart/notebooks/the_pyart_radar_object_and_indexing.html)
+- Wednesday
+  - watched final student presentations (part 1/2), reviewed presentations of 
+    - Amnol Dash: ML techniques with Pytorch, TensorFlow for linking (1) thermal and regular images and (2) ASOS data (e.g., wind speed/direction, visibility, humidity) and temperature
+    - Margo Andrews: dense, sparse optical flow on satellite images
+    - Matthew Bednar: extracting elocity info from optical flow, ceilometery data as validation (?)
+    - Colin Burdine: image anomaly localization
+- Thursday
+  - lab meeting
+  - got [vpt](https://arm-doe.github.io/pyart/API/generated/pyart.graph.RadarDisplay.plot_vpt.html#pyart.graph.RadarDisplay.plot_vpt) LiDAR plots working with help of Zach, Paytsar, Adam Theisen
+- Friday
+  - worked on generating LiDAR movies, applying optical flow to movies
+    - try to toggle color schemes of data images 
+  - [updating ECR documents](https://github.com/waggle-sensor/summer2021/tree/main/ecr)
+
+### Week 9: 8/9–8/13 \[current\]
+- Monday
+  - prepare final presentation
+  - work on white paper, blog
+  - create crude animation to simulate RADAR/LiDAR data, barber pole problem
+  - (NU IT workshop: Introduction to Machine Learning with Scikit-learn in Python)
+- Tuesday
+  - (NU IT workshop: Introduction to Machine Learning with Scikit-learn in Python)
+- Wednesday
+  - deliver final student presentation, listen to other students' presentations (part 2/2)
+  - NAISE meeting
+- Thursday
+  - lab meeting
 - Friday
   - n/a
 
-
+### Week 10: 8/16–8/20
+- Monday
+  - n/a
+- Tuesday
+  - n/a 
+- Wednesday
+  - final deliverables due to Google Drive folder
+    - white paper
+    - ECR
+    - daily blog
+    - final presentation slides
+- Thursday
+  - lab meeting
+- Friday
+  - n/a
