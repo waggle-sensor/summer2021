@@ -205,10 +205,11 @@
   - n/a 
 - Wednesday
   - final deliverables due to Google Drive folder
-    - white paper
+    - white paper (4–8 pages) using LaTex/overleaf [template](https://www.ieee.org/conferences/publishing/templates.html)
     - ECR
-    - daily blog
-    - final presentation slides
+    - blog-style science article (see [here](https://sagecontinuum.org/science/))
+    - final oral presentation, slides
+    - abstract for general audience
 - Thursday
   - lab meeting
 - Friday
