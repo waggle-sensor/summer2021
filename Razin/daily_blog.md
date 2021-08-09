@@ -154,6 +154,7 @@
   - researched [LiDAR fields](https://www.arm.gov/publications/tech_reports/doe-sc-arm-tr-098.pdf) (meteriology)
     - "Lidar measurements are, however, very effective at determining cloud structure of optically thin clouds and are more sensitive to smaller cloud particles than other ground-based profilers, such as radar. Strengths of this lidar sensitivity include the identification of clouds in the presence of large rain droplets, supercooled water clouds with small water droplets, and cold ice or mixed-phase clouds with low concentrations of small ice particles."
     - afterpulse, deadtime, overlap are "unique for each MPL system and can change when a hardware component is changed or the optics of the lidar are adjusted."
+    - "efforts have begun to develop a machine learning (ML) MPL cloud detection VAP data product that uses the data products produced by MPLCMASK as input. ... to pre-train a model to identify clouds from the lidar NRB and LDR images" --> see Cromwell and Flynn (2019)
     - nrb = normalized relative backscatter 
     - copol = circularly polarized
 - Friday
@@ -161,6 +162,7 @@
     - [ARM RADAR scan strategies](https://asr.science.energy.gov/meetings/stm/presentations/2012/scansradar.pdf) (e.g., rhi, vpt, ppi)
     - [dual polarization RADAR](https://www.weather.gov/media/lmk/soo/Dual_Pol_Overview.pdf) (differential reflectivity)
   - reached out to Zach for help with LiDAR data
+  - [Lidar Cloud Detection With Fully Convolutional Networks](https://www.researchgate.net/publication/331607418_Lidar_Cloud_Detection_With_Fully_Convolutional_Networksl) // accesible [here](https://arxiv.org/pdf/1805.00928.pdf)
 
 ### Week 8: 8/2–8/6
 - Monday
@@ -184,6 +186,7 @@
 
 ### Week 9: 8/9–8/13 \[current\]
 - Monday
+  - generate optical flow on LiDAR plots
   - prepare final presentation 
   - work on white paper, blog
   - create crude animation to simulate RADAR/LiDAR data, barber pole problem
