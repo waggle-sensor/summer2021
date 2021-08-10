@@ -188,14 +188,14 @@
 - Monday
   - generate optical flow on LiDAR plots
   - prepare final presentation 
-  - work on white paper, blog
-  - create crude animation to simulate RADAR/LiDAR data, barber pole problem
   - (NU IT workshop: Introduction to Machine Learning with Scikit-learn in Python)
 - Tuesday
+  - prepare final presentation
+  - create crude animation to simulate RADAR/LiDAR data, barber pole problem
   - (NU IT workshop: Introduction to Machine Learning with Scikit-learn in Python)
 - Wednesday
   - deliver final student presentation, listen to other students' presentations (part 2/2)
-  - NAISE meeting
+  - work on white paper, blog
 - Thursday
   - lab meeting
 - Friday
@@ -203,7 +203,7 @@
 
 ### Week 10: 8/16–8/20
 - Monday
-  - n/a
+  - Summer NAISE Student Symposium
 - Tuesday
   - n/a 
 - Wednesday
