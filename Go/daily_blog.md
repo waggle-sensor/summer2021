@@ -203,6 +203,59 @@
 ##### Monday:
 - Gateway hopping research (extending range by having messages hop from gateway to gateway)
 - https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8755136
+- More research as far as server layer on Raspberry Pi 4
+
+##### Tuesday:
+- Writing Paper
+- Starting Presentation for next week
+
+##### Wednesday:
+- More research and writing
+- Continue working on presentation
+- Prepared block diagrams for blog post(s)
+
+##### Thursdat:
+- Weekly meeting with Raj:
+   - Mainly discussed findings and network architecture with private LoRaWAN
+   - Talked about what's left to be done
+   - Reviewed order and plan if I don't get any gateways
+- Got approval for blog post
+- Did some revisions
+
+##### Friday:
+- continued same work as before
+- Quick meeting with Raj:
+   - went over final plan developed
+   - Talked about whether or not we can reformat the Nvidia Nano into the servers
+
+### Week 9 8/9-8/15:
+##### Monday:
+- Worked on paper
+- Reformatted Nvidia Nano, I think it's working? It's hard to tell:
+   - There are some import dependencies that the ChirpStack architecture needs
+   - Some of the Docker packages thew out warnings when I was installing but I'm not sure if that's affecting the performance
+   - Docker-compose was struggling in some parts
+- Spent most of the day trying to rework the gateways to work on ChirpStack, have not succeeded
+
+##### Tuesday:
+- Worked and finished final presentation
+- Worked more on the Server
+- Published first blog
+
+##### Wednesday:
+- Final presentation
+- Finish off whitepaper
+- LEFT TO DO:
+   - Revise whitepaper
+   - Finish general audience abstract and description
+   - Sage blog post
+   - If I can get a gateway, hopefully set it up
+
+
+##### Thursday:
+
+##### Friday:
+
 
 
 
