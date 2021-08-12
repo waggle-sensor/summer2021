@@ -684,6 +684,7 @@ ENV PATH $PATH:$JAVA_HOME/bin
 -Things to do:
 * Add all references to paper
 
+  
 ### Tuesday, 3th
 -Today's Non-Technical Tasks
 * solved out kronos timecard issue
@@ -701,12 +702,58 @@ ENV PATH $PATH:$JAVA_HOME/bin
 * Meeting with teams UAV ground detection and tracking systems: Tree detection and tracking change species and amount of tree
   
 -Today's Technical Tasks
-* change JavaScript code: .filter() instaed of using loops
+* change JavaScript code: .filter() instaed of using loops (huge!!!!!)
 * `FILTER` Average 0.019943333354603965
 * `LOOP` Average 0.02598666658741422 (Slowest)
 * Reference: http://www.andygup.net/fastest-way-to-find-an-item-in-a-javascript-array/
 * code ref: https://jsfiddle.net/agup/Y8SBL/10/
 * decription ref: https://developer.mozilla.org/en-US/docs/Web/API/Performance
+
+
+### Thursday, 5th
+-Today's Non-Technical Tasks
+* 
+  
+-Today's Technical Tasks
+* 
+  
+
+### Friday, 6th
+-Today's Non-Technical Tasks
+* 
+  
+-Today's Technical Tasks
+* 
   
   
+************************************************************
+### Monday, 2th
+-Today's Non-Technical Tasks
+* Attended scrum
   
+  
+### Tuesday, 10th
+-Today's Non-Technical Tasks
+* Meeting with Joe about my paper (his feedback: need more clear “User Interface” section. Also small type, and need more references such as FuncX, and SDR. Overall EXCELLENT job!)
+* Meeting with my advisor to publish this paper
+
+-Today's Technical Tasks
+* Edited some function node JavaScript code: map(), and filter()
+* Modified Node-RED Dashboard design
+  
+ 
+### Wednesday, 11th
+-Today's Non-Technical Tasks
+* Presented the final prsentation: Goal for internship
+* Finished up writing science article and it was uploaded
+
+
+### Thursday, 12th
+-Today's Non-Technical Tasks
+* Submitted the paper on Google drive
+* All checked final things to do
+* Meeting with Pete... would like to publish my paper after doing more research next semester this year!
+* Attended the scrum meeting to say good bye and thanks for everyone... my team they all were so warm and nice. (cried little bit...)
+  
+-Today's Technical Tasks
+* Still editing my Node-RED dashboard flows. (need to do more research Node-RED limitation)
