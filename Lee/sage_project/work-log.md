@@ -729,9 +729,11 @@ ENV PATH $PATH:$JAVA_HOME/bin
 ************************************************************
 ### Monday, 2th
 -Today's Non-Technical Tasks
-* Attended scrum
+* checked plagiarism for my paper and edited v2
+* Read relevant documents and paper about Node-RED streaming data: Real-time Querying and Monitoring of scientific experiments via IoT Sensors
+* Fundamental ML knowledge also required
   
-  
+
 ### Tuesday, 10th
 -Today's Non-Technical Tasks
 * Meeting with Joe about my paper (his feedback: need more clear “User Interface” section. Also small type, and need more references such as FuncX, and SDR. Overall EXCELLENT job!)
