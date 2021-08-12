@@ -752,7 +752,7 @@ ENV PATH $PATH:$JAVA_HOME/bin
 -Today's Non-Technical Tasks
 * Submitted the paper on Google drive
 * All checked final things to do
-* Meeting with Pete... would like to publish my paper after doing more research next semester this year!
+* Meeting with Pete... cause I would like to publish my paper after doing more research next semester for my PhD thesis topic
 * Attended the scrum meeting to say good bye and thanks for everyone... my team they all were so warm and nice. (cried little bit...)
   
 -Today's Technical Tasks
