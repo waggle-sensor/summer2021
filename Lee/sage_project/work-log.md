@@ -736,7 +736,7 @@ ENV PATH $PATH:$JAVA_HOME/bin
 
 ### Tuesday, 10th
 -Today's Non-Technical Tasks
-* Meeting with Joe about my paper (his feedback: need more clear “User Interface” section. Also small type, and need more references such as FuncX, and SDR. Overall EXCELLENT job!)
+* Meeting with Joe about my paper (his feedback: need more clear “User Interface” section. Also small typo, and need more references such as FuncX, and SDR. Overall EXCELLENT job!)
 * Meeting with my advisor to publish this paper
 
 -Today's Technical Tasks
