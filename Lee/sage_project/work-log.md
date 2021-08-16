@@ -712,18 +712,15 @@ ENV PATH $PATH:$JAVA_HOME/bin
 
 ### Thursday, 5th
 -Today's Non-Technical Tasks
-* 
+* contacted to Deneen to solve payment check problem
+* read up the Node-RED multiple instances documents... need more research
   
--Today's Technical Tasks
-* 
-  
-
 ### Friday, 6th
 -Today's Non-Technical Tasks
-* 
+* Prepared the final prsentation: Goal for internship
   
 -Today's Technical Tasks
-* 
+* Modified Node-RED Dashboard design, and function node code
   
   
 ************************************************************
@@ -761,3 +758,7 @@ ENV PATH $PATH:$JAVA_HOME/bin
 * Still editing my Node-RED dashboard flows. (need to do more research Node-RED limitation)
 
 -Things to do: ANL survey
+  
+  
+### Friday 13th
+* Final checked, and ALL done (deliverables, paper, daily log etc) ! Hope I can see you again soon.
