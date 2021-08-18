@@ -29,3 +29,10 @@ Week of 7/26
 - I am still waiting for the Chameleon issue to be solved and/or a node to become available (hopefully beginning of next week)
 - I am going to begin working on my blog post for the Sage website. 
 - Also working on midpoint presentation for 8/11
+
+Week of 8/2 and 8/9 
+- Finished up training and inference for the bee detector
+- was finally able to get a Chameleon lease so I could complete the bee detector
+
+Week of 8/16 
+- Worked on deliverables
