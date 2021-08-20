@@ -184,7 +184,7 @@
     - try to toggle color schemes of data images 
   - [updating ECR documents](https://github.com/waggle-sensor/summer2021/tree/main/ecr)
 
-### Week 9: 8/9–8/13 \[current\]
+### Week 9: 8/9–8/13 
 - Monday
   - generate optical flow on LiDAR plots
   - prepare final presentation 
@@ -197,23 +197,30 @@
   - deliver final student presentation, listen to other students' presentations (part 2/2)
   - work on white paper, blog
 - Thursday
-  - lab meeting
+  - no lab meeting
+  - work on white paper, blog
+    - figured out IEEE overleaf citation 
 - Friday
-  - n/a
+  - work on white paper, blog
+    - [Grand Challenges in Satellite Remote Sensing](https://www.frontiersin.org/articles/10.3389/frsen.2021.619818/full#B46) 
 
 ### Week 10: 8/16–8/20
 - Monday
-  - Summer NAISE Student Symposium
+  - practiced + presented: Summer NAISE Student Symposium
 - Tuesday
-  - n/a 
+  - work on white paper, blog
+    - [UN's Intergovernmental Panel on Climate Changes (IPCC)'s 2021 report](https://www.ipcc.ch/report/ar6/wg1/)
 - Wednesday
   - final deliverables due to Google Drive folder
     - white paper (4–8 pages) using LaTex/overleaf [template](https://www.ieee.org/conferences/publishing/templates.html)
     - ECR
     - blog-style science article (see [here](https://sagecontinuum.org/science/))
     - final oral presentation, slides
-    - abstract for general audience
+    - abstract for general audience (included in white paper)
 - Thursday
-  - lab meeting
+  - no lab meeting
+  - final work on white paper, blog
 - Friday
-  - n/a
+  - feedback on white paper, blog
+  - upload final materials to Drive
+  - ECR final uploads
